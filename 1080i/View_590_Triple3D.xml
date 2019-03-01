@@ -121,7 +121,7 @@
 			</control>
 			<control type="group">
 			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)</visible>
-				<control type="fixedlist" id="590">
+				<control type="wraplist" id="590">
 				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
 					<viewtype label="Triple 3D">list</viewtype>
 					<width>600</width>
@@ -134,7 +134,8 @@
 					<movement>2</movement>
 					<focusposition>1</focusposition>
 					<preloaditems>2</preloaditems>
-					<onleft>5909</onleft>
+					<onleft condition="!Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]">5919</onleft>
+					<onleft>80</onleft>
 					<onright condition="Container.Content(tvshows) + Control.IsVisible(5903)">5903</onright>
 					<onright condition="Container.Content(movies) | Container.Content(sets)">SetProperty(MediaMenu,True,home)</onright>
 					<onright condition="Container.Content(movies) | Container.Content(sets)">SetFocus(9050)</onright>
@@ -152,7 +153,7 @@
 								<colordiffuse>bbffffff</colordiffuse>
 							</control>
 							<control type="image">
-								<visible>Control.HasFocus(5903) | Control.HasFocus(5904)</visible>
+								<visible>Control.HasFocus(5903) | Control.HasFocus(5904) | Control.HasFocus(5919)</visible>
 								<width>496</width>
 								<height>278</height>
 								<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
@@ -777,7 +778,7 @@
 			<!-- Estudio -->
 			<control type="image" id="3838">
 				<include>FlagImage</include>
-				<texture>$VAR[studio]</texture>
+				<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 			</control>
 			<control type="label">
 				<width>155</width>
@@ -849,6 +850,14 @@
 								<aspectratio align="center">stretch</aspectratio>
 								<colordiffuse>bbffffff</colordiffuse>
 							</control>
+							<control type="image">
+								<visible>Control.HasFocus(5903)</visible>
+									<colordiffuse>65000000</colordiffuse>
+								<width>564</width>
+								<height>266</height>
+									<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
+									<aspectratio align="center">scale</aspectratio>
+								</control>
 							<control type="image">
 								<visible>Control.HasFocus(5904)</visible>
 								<width>564</width>
@@ -1029,6 +1038,14 @@
 								<aspectratio align="center">stretch</aspectratio>
 								<colordiffuse>bbffffff</colordiffuse>
 							</control>
+							<control type="image">
+								<visible>Control.HasFocus(5904)</visible>
+									<colordiffuse>65000000</colordiffuse>
+								<width>847</width>
+								<height>61</height>
+									<texture diffuse="tajo/mask47.png">tajo/solid_bg.png</texture>
+									<aspectratio align="center">stretch</aspectratio>
+								</control>
 							<control type="image">
 								<animation effect="fade" end="90" condition="true">Conditional</animation>
 								<top>1</top>
@@ -1361,58 +1378,6 @@
 				<onright>590</onright>
 				<visible allowhiddenfocus="true">Control.IsVisible(590) + Control.HasFocus(80)</visible>
 			</control>
-		</control>
-		<control type="panel" id="5909">
-			<visible>Control.IsVisible(590) + !Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]</visible>
-			<animation effect="slide" end="38,0" time="200">Focus</animation>
-			<animation effect="slide" end="-38,0" time="200">Unfocus</animation>
-			<animation effect="fade" end="70" condition="true">Conditional</animation>
-			<left>-41</left>
-			<top>48</top>
-			<width>40</width>
-			<height>1080</height>
-			<onright>590</onright>
-			<onleft>80</onleft>
-			<orientation>vertical</orientation>
-			<itemlayout height="36.4" width="36.4">
-				<control type="group">
-					<left>5</left>
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" end="15" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</control>
-			</itemlayout>
-			<focusedlayout height="36.4" width="36.4">
-				<control type="button">
-					<visible>false</visible>
-					<onfocus condition="!String.IsEmpty(Container(5909).ListItem.Property(NotAvailable)) + Container(5909).OnNext">Control.Move(5909,1)</onfocus>
-					<onfocus condition="!String.IsEmpty(Container(5909).ListItem.Property(NotAvailable)) + Container(5909).OnPrevious">Control.Move(5909,-1)</onfocus>
-				</control>
-				<control type="group">
-					<left>5</left>
-					<control type="image">
-						<visible>Control.HasFocus(5909)</visible>
-						<width>40</width>
-						<height>36</height>
-						<texture diffuse="tajo/mask47.png">tajo/backanism.gif</texture>
-						<aspectratio align="center">stretch</aspectratio>
-						<colordiffuse>ddffffff</colordiffuse>
-					</control>
-				</control>
-				<control type="label">
-					<left>5</left>
-					<align>center</align>
-					<font>titlesmall</font>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>white</textcolor>
-					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-				</control>
-			</focusedlayout>
-			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 		</control>
 	</include>
 </includes>

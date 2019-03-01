@@ -9,11 +9,9 @@
 	<include file="Includes_LiveTV_Views.xml" />
 	<include file="Includes_Backgrounds.xml" />
 	<include file="Includes_Widgets.xml" />
-	<include file="Includes_16x9.xml" />
 	<include file="Includes_VideoLyrics.xml" />
 	<include file="View_50_List.xml" />
-	<include file="View_51_InfoWall.xml" />
-	<include file="View_500_Wall.xml" />
+	<include file="View_592_Wall.xml" />
 	<include file="View_591_Triple3Dm.xml" />
 	<include file="View_595_Shelf3D.xml" />
 	<include file="View_598_Shelf3Dm.xml" />
@@ -36,14 +34,6 @@
 	<constant name="BackPanelIconsLeft">90</constant>
 	<constant name="BackPanelIconsWidth">1740</constant>
 	<constant name="ScrollbarIconsLeft">1797</constant>
-	<constant name="ViewInfoWallLeft">0</constant>
-	<constant name="BackPanelInfoWallWidth">1740</constant>
-	<constant name="BackPanelInfoWallSquareWidth">1640</constant>
-	<constant name="ViewInfoWallWidth">1000</constant>
-	<constant name="ViewInfoWallSquareWidth">900</constant>
-	<constant name="ScrollbarInfoWallLeft">104</constant>
-	<constant name="InfoPanelInfoWallLeft">1120</constant>
-	<constant name="InfoPanelInfoWallSquareLeft">1070</constant>
 	<constant name="ViewBannerWallTop">20</constant>
 	<constant name="ViewBannerWallLeft">0</constant>
 	<constant name="BackPanelBannerWallWidth">1740</constant>
@@ -68,6 +58,7 @@
 		<texturesliderbarfocus border="14,0,14,0">scrollbar_hbar_focus.png</texturesliderbarfocus>
 		<textureslidernib>scrollbar_nib.png</textureslidernib>
 		<textureslidernibfocus>scrollbar_nib.png</textureslidernibfocus>
+		<showonepage>false</showonepage>
 		<pulseonselect>false</pulseonselect>
 		<orientation>horizontal</orientation>
 	<colordiffuse>themecolor</colordiffuse>
@@ -807,7 +798,7 @@
 			<!-- Estudio -->
 			<control type="image" id="3738">
 				<include>FlagImage</include>
-				<texture>$VAR[studio]</texture>
+				<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 			</control>
 			<control type="label">
 				<width>155</width>
@@ -885,7 +876,7 @@
 			<control type="image">
 				<top>2</top>
 				<include>FlagImage2</include>
-				<texture>$VAR[studio]</texture>
+				<texture fallback="flags/studios/default-studio.png">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.Studio)</visible>
 			</control>
 			<control type="image">
@@ -911,7 +902,7 @@
 			<!-- Estudio -->
 			<control type="image" id="3748">
 				<include>FlagImage</include>
-				<texture>$VAR[studio]</texture>
+				<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 			</control>
 			<control type="label">
 				<width>155</width>

@@ -68,10 +68,8 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[536]</label>
-					<onclick>Container.SetViewMode(500)</onclick>
-					<visible>!Window.IsActive(eventlog) + !Window.IsActive(music) + !Window.IsActive(videos)</visible>
-					<visible>![Window.IsActive(pictures) + Container.Content(addons)]</visible>
-					<visible>!Window.IsActive(pvr)</visible>
+					<onclick>Container.SetViewMode(592)</onclick>
+					<visible>Window.IsActive(pictures)</visible>
 				</item>
 				<item>
 					<label>Shelf 3D</label>

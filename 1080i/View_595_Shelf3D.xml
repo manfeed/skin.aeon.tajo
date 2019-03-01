@@ -414,7 +414,7 @@
 				</control>
 			</control>
 			<control type="group">
-			<visible>Control.IsVisible(595) + !Control.HasFocus(5950)</visible>
+			<visible>Control.IsVisible(595) + !Control.HasFocus(5929)</visible>
 			<animation effect="fade" end="100" time="200">Visible</animation>
 			<animation effect="fade" end="0" time="200">Hidden</animation>
 			<top>56</top>
@@ -549,14 +549,14 @@
 				</control>
 			</control>
 			<include>Shelf3DFixedList</include>
-			<control type="scrollbar" id="80">
+			<control type="scrollbar" id="86">
 				<include>ScrollBar_Horizontal</include>
 				<left>285</left>
 				<top>1010</top>
 				<width>1350</width>
 				<onup>595</onup>
-				<ondown>5950</ondown>
-				<visible allowhiddenfocus="true">Control.IsVisible(595) + Control.HasFocus(80)</visible>
+				<ondown>595</ondown>
+				<visible allowhiddenfocus="true">Control.IsVisible(595) + Control.HasFocus(86)</visible>
 			</control>
 			<control type="image">
 				<animation effect="rotatey" center="auto" start="8" end="8" time="0" condition="true">Conditional</animation>
@@ -903,64 +903,6 @@
 				</control>
 			</control>
 		</control>
-		<control type="group">
-			<left>110</left>
-			<top>27</top>
-			<visible>Control.IsVisible(595) + !Container.Content(seasons) + !Container.Content(episodes) + String.Contains(Container.SortMethod,$LOCALIZE[369]) + !Container.Content(seasons)</visible>
-			<animation effect="slide" end="0,105" time="200">Focus</animation>
-			<animation effect="slide" end="0,-105" time="200">Unfocus</animation>
-			<control type="image">
-				<left>345</left>
-				<top>-133</top>
-				<width>2020</width>
-				<height>45</height>
-				<colordiffuse>themecolor</colordiffuse>
-				<animation effect="fade" end="80" condition="true">Conditional</animation>
-			</control>
-			<control type="panel" id="5950">
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
-				<left>-70</left>
-				<top>-132</top>
-				<width>1920</width>
-				<height>40</height>
-				<onup>SetProperty(MediaMenu,True,home)</onup>
-				<onup>SetFocus(9050)</onup>
-				<ondown>595</ondown>
-				<orientation>horizontal</orientation>
-				<itemlayout height="40" width="40">
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" end="15" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</itemlayout>
-				<focusedlayout height="40" width="40">
-					<control type="button">
-						<visible>false</visible>
-						<onfocus condition="!String.IsEmpty(Container(5950).ListItem.Property(NotAvailable)) + Container(5950).OnNext">Control.Move(5950,1)</onfocus>
-						<onfocus condition="!String.IsEmpty(Container(5950).ListItem.Property(NotAvailable)) + Container(5950).OnPrevious">Control.Move(5950,-1)</onfocus>
-					</control>
-						<control type="image">
-							<visible>Control.HasFocus(5950)</visible>
-							<width>40</width>
-							<height>40</height>
-							<texture diffuse="tajo/mask47.png">tajo/backanism.gif</texture>
-							<aspectratio align="center">stretch</aspectratio>
-							<colordiffuse>ddffffff</colordiffuse>
-						</control>
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" start="20" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</focusedlayout>
-				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>
-		</control>
 	</include>
 	<include name="Shelf3D_Content">
 		<viewtype label="Shelf 3D">list</viewtype>
@@ -968,15 +910,17 @@
 		<top>360</top>
 		<width>2100</width>
 		<height>1125</height>
-		<onup>5950</onup>
-		<ondown>80</ondown>
+		<onup>SetProperty(MediaMenu,True,home)</onup>
+		<onup>SetFocus(9050)</onup>
+		<ondown condition="!Container.Content(seasons) + !Container.Content(episodes) + String.Contains(Container.SortMethod,$LOCALIZE[369])">5929</ondown>
+		<ondown>86</ondown>
 		<orientation>horizontal</orientation>
 		<focusposition>5</focusposition>
 		<scrolltime tween="sine" easing="inout">500</scrolltime>
 		<preloaditems>2</preloaditems>
-		<pagecontrol>80</pagecontrol>
+		<pagecontrol>86</pagecontrol>
 		<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(80)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 		<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
 		<itemlayout width="270" height="434">
 			<control type="group">
@@ -1266,7 +1210,7 @@
 					<control type="image">
 						<left>14</left>
 						<top>502</top>
-						<texture>$VAR[studio]</texture>
+						<texture fallback="flags/studios/default-studio.png">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 						<colordiffuse>C9FFFFFF</colordiffuse>
 						<width>46</width>
 						<height>46</height>
@@ -1382,7 +1326,7 @@
 					<control type="image">
 						<left>14</left>
 						<top>566</top>
-						<texture flipy="true">$VAR[studio]</texture>
+						<texture flipy="true" fallback="flags/studios/default-studio.png">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 						<colordiffuse>25FFFFFF</colordiffuse>
 						<width>46</width>
 						<height>46</height>

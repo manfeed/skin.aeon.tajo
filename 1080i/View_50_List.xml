@@ -12,7 +12,6 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
@@ -48,7 +47,6 @@
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -124,7 +122,6 @@
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -811,7 +808,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="flags/studios/default-studio.png">$INFO[ListItem.Label,flags/studios/,.png]</texture>
+							<texture fallback="flags/studios/default-studio.png">$VAR[StudioIconVar]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default) + Container.Content(studios)</visible>
 						</control>
@@ -875,7 +872,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture fallback="flags/studios/default-studio.png">$INFO[ListItem.Label,flags/studios/,.png]</texture>
+							<texture fallback="flags/studios/default-studio.png">$VAR[StudioIconVar]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default) + Container.Content(studios)</visible>
 						</control>
 						<control type="image">
@@ -1145,7 +1142,6 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
@@ -1550,7 +1546,6 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
@@ -1720,7 +1715,6 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
@@ -1976,7 +1970,6 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
@@ -2202,7 +2195,6 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
@@ -2382,7 +2374,6 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">

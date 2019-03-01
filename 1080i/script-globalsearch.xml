@@ -5,7 +5,6 @@
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>SetProperty(Window.HasSettings,True,home)</onunload>
 	<views>50</views>
-	
 	<controls>
 		<include>CommonBackground</include>
 								<control type="image">
@@ -28,7 +27,6 @@
 		</control>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
-			<include>ViewAnimation</include>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
@@ -1093,8 +1091,8 @@
 				</control>
 				<control type="button" id="990">
 					<description>New Search Button</description>
-					<label>New Search</label>
-					<textwidth>255</textwidth>
+					<label>$LOCALIZE[19140]</label>
+					<textwidth>350</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="617">
@@ -1127,7 +1125,7 @@
 					<textwidth>352</textwidth>
 					<font>font13_title</font>
 					<include>ButtonCommonValues</include>
-					<label>Category</label>
+					<label>$LOCALIZE[21866]</label>
 					<enable>no</enable>
 					<disabledcolor>themecolor</disabledcolor>
 				</control>

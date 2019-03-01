@@ -178,7 +178,7 @@
 						<top>610</top>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>eeFFFFFF</colordiffuse>
-						<texture>$VAR[mediaicons_path]recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</texture>
+						<texture>$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</texture>
 					</control>
 					<control type="group">
 						<visible>Container.Content(artists) + !String.IsEmpty(ListItem.Artist) + Control.IsVisible(598)</visible>
@@ -461,7 +461,7 @@
 				</control>
 				</control>
 			<control type="group">
-			<visible>Control.IsVisible(598) + !Control.HasFocus(5980)</visible>
+			<visible>Control.IsVisible(598) + !Control.HasFocus(5929)</visible>
 			<animation effect="fade" end="100" time="200">Visible</animation>
 			<animation effect="fade" end="0" time="200">Hidden</animation>
 			<top>56</top>
@@ -510,15 +510,17 @@
 						<width>2250</width>
 						<onleft>598</onleft>
 						<onright>598</onright>
-						<onup>5980</onup>
+						<ondown condition="String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[558])">5929</ondown>
 						<ondown>86</ondown>
+						<onup>SetProperty(MediaMenu,True,home)</onup>
+				        <onup>SetFocus(9050)</onup>
 						<orientation>horizontal</orientation>
 						<focusposition>3</focusposition>
 						<scrolltime tween="sine" easing="inout">500</scrolltime>
 						<preloaditems>2</preloaditems>
 						<pagecontrol>86</pagecontrol>
 						<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
-						<animation effect="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out" condition="Control.HasFocus(86)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 						<itemlayout width="334" height="534">
 							<control type="group">
 								<left>150</left>
@@ -1016,7 +1018,7 @@
 					<top>125</top>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>eeFFFFFF</colordiffuse>
-					<texture>$VAR[mediaicons_path]recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</texture>
+					<texture>$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</texture>
 				</control>
 				<!--Contraportada artistas-->
 				<control type="group">
@@ -1586,51 +1588,6 @@
 			<visible>Control.IsVisible(598) + [String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[558])]</visible>
 			<animation effect="slide" end="0,137" time="200">Focus</animation>
 			<animation effect="slide" end="0,-137" time="200">Unfocus</animation>
-			<control type="panel" id="5980">
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
-				<left>-70</left>
-				<top>-132</top>
-				<width>1920</width>
-				<height>40</height>
-				<onup>SetProperty(MediaMenu,True,home)</onup>
-				<onup>SetFocus(9050)</onup>
-				<ondown>598</ondown>
-				<orientation>horizontal</orientation>
-				<itemlayout height="40" width="40">
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" end="15" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</itemlayout>
-				<focusedlayout height="40" width="40">
-					<control type="button">
-						<visible>false</visible>
-						<onfocus condition="!String.IsEmpty(Container(5980).ListItem.Property(NotAvailable)) + Container(5980).OnNext">Control.Move(5980,1)</onfocus>
-						<onfocus condition="!String.IsEmpty(Container(5980).ListItem.Property(NotAvailable)) + Container(5980).OnPrevious">Control.Move(5980,-1)</onfocus>
-					</control>
-					<control type="group">
-						<control type="image">
-							<visible>Control.HasFocus(5980)</visible>
-							<width>40</width>
-							<height>40</height>
-							<texture diffuse="tajo/mask47.png">tajo/backanism.gif</texture>
-							<aspectratio align="center">stretch</aspectratio>
-							<colordiffuse>ddffffff</colordiffuse>
-						</control>
-					</control>
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</focusedlayout>
-				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>
 		</control>
 	</include>
 </includes>

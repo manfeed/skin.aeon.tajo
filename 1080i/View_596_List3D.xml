@@ -189,7 +189,7 @@
 						<control type="image">
 							<left>14</left>
 							<top>502</top>
-							<texture>$VAR[studio]</texture>
+							<texture fallback="flags/studios/default-studio.png">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 							<colordiffuse>C9FFFFFF</colordiffuse>
 							<width>46</width>
 							<height>46</height>
@@ -717,7 +717,7 @@
 						<control type="image">
 							<left>14</left>
 							<top>566</top>
-							<texture flipy="true">$VAR[studio]</texture>
+							<texture flipy="true" fallback="flags/studios/default-studio.png">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 							<colordiffuse>25FFFFFF</colordiffuse>
 							<width>46</width>
 							<height>46</height>
@@ -853,11 +853,12 @@
 				<pagecontrol>80</pagecontrol>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>SetFocus(9050)</onleft>
-				<onright>5968</onright>
+				<onright condition="!Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]">5919</onright>
+				<onright>80</onright>
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" start="0,0" end="-45,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5968)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-55,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)</visible>
 				<itemlayout height="45">
 					<control type="image">
@@ -967,7 +968,6 @@
 					<include>Listfor3D</include>
 				</focusedlayout>
 			</control>
-			
 			<control type="group">
 			<visible>Control.HasFocus(596)</visible>
 			<animation effect="rotatey" center="auto" start="-5" end="-5" time="0" condition="true">Conditional</animation>
@@ -1009,55 +1009,6 @@
 				<label>/ $INFO[Container.NumItems]</label>
 			</control>
 		</control>
-			<control type="panel" id="5968">
-				<visible>Control.IsVisible(596) + !Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]</visible>
-				<animation effect="slide" end="-36,0" time="200">Focus</animation>
-				<animation effect="slide" end="36,0" time="200">Unfocus</animation>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
-				<left>1912</left>
-				<top>40</top>
-				<width>40</width>
-				<height>1080</height>
-				<onright>80</onright>
-				<onleft>596</onleft>
-				<orientation>vertical</orientation>
-				<itemlayout height="32" width="35">
-					<control type="group">
-						<control type="label">
-							<align>center</align>
-							<font>titlesmall</font>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>white</textcolor>
-							<animation effect="fade" end="15" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout height="32" width="35">
-					<control type="button">
-						<visible>false</visible>
-						<onfocus condition="!String.IsEmpty(Container(5968).ListItem.Property(NotAvailable)) + Container(5968).OnNext">Control.Move(5968,1)</onfocus>
-						<onfocus condition="!String.IsEmpty(Container(5968).ListItem.Property(NotAvailable)) + Container(5968).OnPrevious">Control.Move(5968,-1)</onfocus>
-					</control>
-					<control type="group">
-						<control type="image">
-							<visible>Control.HasFocus(5968)</visible>
-							<width>35</width>
-							<height>35</height>
-							<texture diffuse="tajo/mask47.png">tajo/backanism.gif</texture>
-							<aspectratio align="center">stretch</aspectratio>
-							<colordiffuse>ddffffff</colordiffuse>
-						</control>
-					</control>
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</focusedlayout>
-				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>
 				<control type="image">
 					<left>155</left>
 					<top>-45</top>
@@ -1088,6 +1039,7 @@
 				<focusedlayout />
 			</control>
 			<control type="label">
+				<animation effect="slide" start="0,0" end="-55,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<visible>ListItem.IsCollection + System.IdleTime(1)</visible>
 				<right>76</right>
 				<width>1470</width>
@@ -1102,6 +1054,7 @@
 				<label>[COLOR=themecolor]$LOCALIZE[515]: [/COLOR]$INFO[Container(59631).ListItemAbsolute(0).Genre]  |  [COLOR=themecolor]$LOCALIZE[342]: [/COLOR][B]$INFO[Container(59631).NumItems][/B]</label>
 			</control>
 			<control type="list" id="5963">
+				<animation effect="slide" start="0,0" end="-55,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 				<visible>System.IdleTime(3) + ListItem.IsCollection</visible>
 				<scrolltime tween="sine" easing="out">2200</scrolltime>
@@ -1141,6 +1094,7 @@
 				<content sortby="year" sortorder="ascending">$INFO[ListItem.FolderPath]</content>
 			</control>
 			<control type="grouplist">
+				<animation effect="slide" start="0,0" end="-55,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 				<visible>System.IdleTime(3) + !ListItem.IsCollection + !Container.Content(episodes)</visible>
 				<right>52</right>
@@ -1244,6 +1198,7 @@
 			</control>
 			</control>
 			<control type="textbox">
+				<animation effect="slide" start="0,0" end="-55,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 				<visible>System.IdleTime(3) + !ListItem.IsCollection + String.Contains(ListItem.DBTYPE,movie)</visible>
 				<left>1135</left>
@@ -1259,6 +1214,7 @@
 				<autoscroll delay="4500" time="2000" repeat="4000">!Skin.HasSetting(noallowscroll)</autoscroll>
 			</control>
 			<control type="textbox">
+					<animation effect="slide" start="0,0" end="-55,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 				<visible>System.IdleTime(3) + !ListItem.IsCollection + !String.Contains(ListItem.DBTYPE,movie)</visible>
 				<left>1135</left>
@@ -1357,7 +1313,7 @@
 				<left>20</left>
 				<visible>Container.Content(artists) + Integer.IsGreaterOrEqual(Container(5108).NumItems,1)</visible>
 				<control type="label">
-					<animation effect="slide" end="-45,0" condition="Control.HasFocus(80) | Control.HasFocus(5960)">Conditional</animation>
+					<animation effect="slide" end="-50,0" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 					<visible>Container.Content(artists) + !String.IsEmpty(ListItem.Property(Artist_Style)) + System.IdleTime(3)</visible>
 					<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 					<left>1075</left>
@@ -1373,7 +1329,7 @@
 					<label>$LOCALIZE[176]: [COLOR=FFFFFAF0]$INFO[ListItem.Property(Artist_Style)][/COLOR]</label>
 				</control>
 				<control type="label">
-					<animation effect="slide" end="-45,0" condition="Control.HasFocus(80) | Control.HasFocus(5960)">Conditional</animation>
+					<animation effect="slide" end="-50,0" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 					<visible>Container.Content(artists) + System.IdleTime(3)</visible>
 					<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 					<left>1660</left>
@@ -1392,7 +1348,7 @@
 			<control type="list" id="5108">
 				<visible>Container.Content(artists) + !String.IsEmpty(ListItem.Artist) + System.IdleTime(3)</visible>
 				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
-				<animation effect="slide" end="-45,0" condition="Control.HasFocus(80) | Control.HasFocus(5960)">Conditional</animation>
+				<animation effect="slide" end="-50,0" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<width>630</width>
 				<height>129</height>
 				<left>1253</left>
@@ -1433,7 +1389,7 @@
 			<control type="group">
 				<visible>[Container.Content(albums) + Integer.IsGreaterOrEqual(Container(5969).NumItems,1)] + System.IdleTime(3)</visible>
 				<control type="textbox">
-					<animation effect="slide" end="-45,0" condition="Control.HasFocus(80) | Control.HasFocus(5960)">Conditional</animation>
+					<animation effect="slide" end="-50,0" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 					<left>1253</left>
 					<top>217</top>
 					<height>40</height>
@@ -1449,7 +1405,7 @@
 			<control type="list" id="3647">
 				<visible>Container.Content(albums) + System.IdleTime(3)</visible>
 				<animation effect="fade" start="0" end="100" time="1000" reversible="false">Visible</animation>
-				<animation effect="slide" end="-45,0" condition="Control.HasFocus(80) | Control.HasFocus(5960)">Conditional</animation>
+				<animation effect="slide" end="-50,0" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<left>1153</left>
 				<top>260</top>
 				<width>730</width>
@@ -1493,11 +1449,12 @@
 				<pagecontrol>80</pagecontrol>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>SetFocus(9050)</onleft>
-				<onright>5960</onright>
+				<onright condition="!Container.Content(songs) + [String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[558])]">5919</onright>
+				<onright>80</onright>
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
-				<animation effect="slide" start="0,0" end="-45,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5960)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-50,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 				<itemlayout height="45" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs)">
 					<control type="image">
 						<left>0</left>
@@ -1736,55 +1693,6 @@
 					<include>Listfor3Dm</include>
 				</focusedlayout>
 			</control>
-			<control type="panel" id="5960">
-				<visible>!Container.Content(songs) + Control.IsVisible(596) + [String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[558])]</visible>
-				<animation effect="slide" end="-39,0" time="200">Focus</animation>
-				<animation effect="slide" end="39,0" time="200">Unfocus</animation>
-				<animation effect="fade" end="70" condition="true">Conditional</animation>
-				<left>1912</left>
-				<top>42</top>
-				<width>40</width>
-				<height>1080</height>
-				<onright>80</onright>
-				<onleft>596</onleft>
-				<orientation>vertical</orientation>
-				<itemlayout height="33.5" width="35">
-					<control type="group">
-						<control type="label">
-							<align>center</align>
-							<font>titlesmall</font>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>white</textcolor>
-							<animation effect="fade" end="15" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout height="33.5" width="35">
-					<control type="button">
-						<visible>false</visible>
-						<onfocus condition="!String.IsEmpty(Container(5960).ListItem.Property(NotAvailable)) + Container(5960).OnNext">Control.Move(5960,1)</onfocus>
-						<onfocus condition="!String.IsEmpty(Container(5960).ListItem.Property(NotAvailable)) + Container(5960).OnPrevious">Control.Move(5960,-1)</onfocus>
-					</control>
-					<control type="group">
-						<control type="image">
-							<visible>Control.HasFocus(5960)</visible>
-							<width>40</width>
-							<height>35</height>
-							<texture diffuse="tajo/mask47.png">tajo/backanism.gif</texture>
-							<aspectratio align="center">stretch</aspectratio>
-							<colordiffuse>ddffffff</colordiffuse>
-						</control>
-					</control>
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</focusedlayout>
-				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(596)</visible>
@@ -1933,7 +1841,7 @@
 					<top>125</top>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>ddFFFFFF</colordiffuse>
-					<texture>$VAR[mediaicons_path]recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</texture>
+					<texture>$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</texture>
 				</control>
 				<!--Contraportada artistas-->
 				<control type="group">

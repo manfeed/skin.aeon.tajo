@@ -64,138 +64,6 @@
 			<!-- view id = 597 -->
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(59)</visible>
-			<visible>!Window.IsActive(addoninformation)</visible>
-			<depth>MaxDepth</depth>
-			<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
-			<include>WindowOpenCloseAnimation</include>
-			<top>-30</top>
-			<control type="group">
-				<visible>Control.IsVisible(500)</visible>
-				<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(files) | Container.Content(musicvideos)]</visible>
-				<control type="group">
-					<left>90</left>
-					<top>1010</top>
-					<visible>![Control.IsVisible(56) | Control.IsVisible(55)]</visible>
-					<include>VisibleFadeAnimation</include>
-					<control type="label">
-						<right>640</right>
-						<height>48</height>
-						<font>font16_title_bold</font>
-						<scroll>true</scroll>
-						<label>$VAR[FloorLabelVar]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-					<control type="label">
-						<top>45</top>
-						<right>640</right>
-						<height>30</height>
-						<font>font13_title</font>
-						<label>$VAR[FloorSubLabelVar]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-				</control>
-				<control type="group">
-					<right>-80</right>
-					<top>1000</top>
-					<width>535</width>
-					<height>90</height>
-					<include>VisibleFadeAnimation</include>
-					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
-					<control type="group">
-						<left>-175</left>
-						<width>160</width>
-						<visible>!Skin.HasSetting(Disable.NextAired) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-						<control type="label">
-							<top>2</top>
-							<width>200</width>
-							<height>60</height>
-							<align>center</align>
-							<label>$INFO[Window(Home).Property(NextAired.NextDate)]</label>
-							<font>font16_title_bold</font>
-							<textcolor>grey</textcolor>
-						</control>
-						<control type="label">
-							<top>46</top>
-							<width>200</width>
-							<height>30</height>
-							<align>center</align>
-							<label>[LOWERCASE]$LOCALIZE[31010][/LOWERCASE]</label>
-							<font>font12</font>
-							<textcolor>grey</textcolor>
-						</control>
-					</control>
-					<control type="group">
-						<left>-175</left>
-						<width>160</width>
-						<visible>!Skin.HasSetting(Disable.NextAired) + IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-						<control type="label">
-							<top>2</top>
-							<width>200</width>
-							<height>60</height>
-							<align>center</align>
-							<label>$INFO[Window(Home).Property(NextAired.LatestDate)]</label>
-							<font>font16_title_bold</font>
-							<textcolor>grey</textcolor>
-						</control>
-						<control type="label">
-							<top>46</top>
-							<width>200</width>
-							<height>30</height>
-							<align>center</align>
-							<label>[LOWERCASE]$LOCALIZE[31011][/LOWERCASE]</label>
-							<font>font12</font>
-							<textcolor>grey</textcolor>
-						</control>
-					</control>
-					<control type="image">
-						<left>32</left>
-						<width>198</width>
-						<include>MediaFlagVars</include>
-						<texture fallback="flags/studios/default-studio.png">$VAR[StudioFlagPathVar]$INFO[ListItem.Studio,,.png]</texture>
-					</control>
-					<control type="image">
-						<left>230</left>
-						<include>MediaFlagVars</include>
-						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
-					</control>
-				</control>
-				<control type="group">
-					<right>110</right>
-					<top>1000</top>
-					<width>563</width>
-					<height>90</height>
-					<include>VisibleFadeAnimation</include>
-					<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
-					<control type="image">
-						<left>32</left>
-						<include>MediaFlagVars</include>
-						<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-					</control>
-					<control type="image">
-						<left>230</left>
-						<include>MediaFlagVars</include>
-						<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
-						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-					</control>
-					<control type="image">
-						<left>428</left>
-						<include>MediaFlagVars</include>
-						<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
-						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-					</control>
-				</control>
-			</control>
-			<control type="image">
-				<top>970</top>
-				<width>100%</width>
-				<height>140</height>
-				<texture border="1">gradient_floor.png</texture>
-			</control>
-		</control>
-		<control type="group">
 			<left>-440</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9050">
@@ -323,40 +191,126 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible allowhiddenfocus="true">Control.HasFocus(615)</visible>
-			<left>880</left>
-			<top>460</top>
-			<include>VisibleFadeAnimation</include>
-			<control type="button" id="615">
-				<description>Go to letter</description>
+		<visible>Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(597) | Control.IsVisible(596)</visible>
+		<visible allowhiddenfocus="true">Control.HasFocus(5919)</visible>
+			<animation effect="fade" start="0" end="90" time="1200">Visible</animation>
+			<animation effect="slide" end="2,-110" time="0" condition="Control.IsVisible(590)">Conditional</animation>
+			<animation effect="slide" end="1869,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+			<animation effect="slide" end="1869,12" time="0" condition="Control.IsVisible(594)">Conditional</animation>
+			<left>-5</left>
+			<top>470</top>
+			<control type="button" id="5919">
 				<include>HiddenObject</include>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<onleft>SetFocus(50)</onleft>
-				<onleft>Action(prevletter)</onleft>
-				<onleft>SetFocus(615)</onleft>
-				<onright>SetFocus(50)</onright>
-				<onright>Action(nextletter)</onright>
-				<onright>SetFocus(615)</onright>
+				<onleft condition="!Control.IsVisible(596)">80</onleft>
+				<onright condition="!Control.IsVisible(596)">50</onright>
+				<onleft condition="Control.IsVisible(596)">50</onleft>
+				<onright condition="Control.IsVisible(596)">80</onright>
+				<onup>SetFocus(50)</onup>
+				<onup>Action(prevletter)</onup>
+				<onup>SetFocus(5919)</onup>
+				<ondown>SetFocus(50)</ondown>
+				<ondown>Action(nextletter)</ondown>
+				<ondown>SetFocus(5919)</ondown>
 				<onclick>SetFocus(50)</onclick>
 				<onback>50</onback>
 			</control>
 			<control type="image">
-				<left>-84</left>
-				<top>-84</top>
-				<width>328</width>
-				<height>328</height>
-				<texture border="85">sortletter_back.png</texture>
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>-9</left>
+				<top>-64</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_v.gif</texture>
 			</control>
-			<control type="label">
-				<top>12</top>
-				<width>160</width>
+			<control type="image">
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>-9</left>
+				<top>110</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_vd.gif</texture>
+			</control>
+			<control type="image">
+			<animation effect="slide" end="-20,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+			<animation effect="slide" end="-14,0" time="0" condition="Control.IsVisible(594)">Conditional</animation>	
+			<animation effect="slide" end="-10,0" time="0" condition="Control.IsVisible(590)">Conditional</animation>	
+				<top>5</top>
+				<left>1</left>
+				<width>80</width>
+				<height>100</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+			</control>
+				<control type="label">
+				<animation effect="slide" end="-15,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+				<animation effect="slide" end="-9,0" time="0" condition="Control.IsVisible(594)">Conditional</animation>
+				<top>-5</top>
+				<left>-5</left>
+				<width>80</width>
 				<height>120</height>
 				<align>center</align>
 				<label>$INFO[ListItem.SortLetter]</label>
 				<textcolor>white</textcolor>
-				<font>font_MainMenu</font>
+				<font>font_MainMenu2</font>
+				</control>
+		</control>
+		<control type="group">
+		<visible>Control.IsVisible(595) | Control.IsVisible(593)</visible>
+		<visible allowhiddenfocus="true">Control.HasFocus(5929)</visible>
+						<animation effect="fade" start="0" end="90" time="1200">Visible</animation>
+			<animation effect="slide" end="-150,0" time="0" condition="Control.IsVisible(593)">Conditional</animation>
+			<animation effect="slide" end="1360,0" time="0" condition="Control.IsVisible(595)">Conditional</animation>
+			<left>310</left>
+			<top>980</top>
+			<control type="button" id="5929">
+				<include>HiddenObject</include>
+				<ondown>86</ondown>
+				<onup>50</onup>
+				<onleft>SetFocus(50)</onleft>
+				<onleft>Action(prevletter)</onleft>
+				<onleft>SetFocus(5929)</onleft>
+				<onright>SetFocus(50)</onright>
+				<onright>Action(nextletter)</onright>
+				<onright>SetFocus(5929)</onright>
+				<onclick>SetFocus(50)</onclick>
+				<onback>50</onback>
 			</control>
+			<control type="image">
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>-78</left>
+				<top>38</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_h.gif</texture>
+			</control>
+			<control type="image">
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>81</left>
+				<top>38</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_hd.gif</texture>
+			</control>
+			<control type="image">
+				<top>19</top>
+				<left>-9</left>
+				<width>86</width>
+				<height>100</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+			</control>
+				<control type="label">
+				<top>1</top>
+				<left>-5</left>
+				<width>80</width>
+				<height>120</height>
+				<align>center</align>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>white</textcolor>
+				<font>font_MainMenu2</font>
+				</control>
 		</control>
 	</controls>
 </window>

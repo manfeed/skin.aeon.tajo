@@ -30,7 +30,7 @@
 					<animation effect="slide" end="544,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(594).Column,0)">Conditional</animation>
 					<control type="image">
 						<visible>Control.IsVisible(594)</visible>
-						<left>728</left>
+						<left>724</left>
 						<top>178</top>
 						<width>545</width>
 						<height>120</height>
@@ -40,7 +40,7 @@
 					</control>
 					<control type="image">
 						<visible>Control.IsVisible(594)</visible>
-						<left>727</left>
+						<left>723</left>
 						<top>177</top>
 						<width>547</width>
 						<height>122</height>
@@ -51,13 +51,13 @@
 				</control>
 				<control type="panel" id="594">
 					<viewtype label="Banner3D">icon</viewtype>
-					<left>745</left>
+					<left>740</left>
 					<top>192</top>
 					<width>1130</width>
 					<height>854</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
-					<onright>5940</onright>
+					<onright condition="!Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]">5919</onright>
 					<scrolltime>300</scrolltime>
 					<orientation>vertical</orientation>
 					<preloaditems>2</preloaditems>
@@ -561,59 +561,6 @@
 				<font>Font_plot</font>
 				<label>/ $INFO[Container.NumItems]</label>
 			</control>
-		</control>
-		<control type="panel" id="5940">
-			<visible>Control.IsVisible(594) + !Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]</visible>
-			<animation effect="slide" end="-38,0" time="200">Focus</animation>
-			<animation effect="slide" end="38,0" time="200">Unfocus</animation>
-			<animation effect="rotatey" center="auto" start="6" end="6" time="0" condition="true">Conditional</animation>
-			<animation effect="fade" end="60" condition="true">Conditional</animation>
-			<left>1978</left>
-			<top>9</top>
-			<width>40</width>
-			<height>1080</height>
-			<onright>594</onright>
-			<onleft>594</onleft>
-			<orientation>vertical</orientation>
-			<itemlayout height="39" width="40">
-				<control type="group">
-					<left>1</left>
-					<control type="label">
-						<align>center</align>
-						<font>titlesmall</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white</textcolor>
-						<animation effect="fade" end="15" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</control>
-			</itemlayout>
-			<focusedlayout height="39" width="40">
-				<control type="button">
-					<visible>false</visible>
-					<onfocus condition="!String.IsEmpty(Container(5940).ListItem.Property(NotAvailable)) + Container(5940).OnNext">Control.Move(5940,1)</onfocus>
-					<onfocus condition="!String.IsEmpty(Container(5940).ListItem.Property(NotAvailable)) + Container(5940).OnPrevious">Control.Move(5940,-1)</onfocus>
-				</control>
-				<control type="group">
-					<left>5</left>
-					<control type="image">
-						<visible>Control.HasFocus(5940)</visible>
-						<width>40</width>
-						<height>40</height>
-						<texture diffuse="tajo/mask47.png">tajo/backanism.gif</texture>
-						<aspectratio align="center">stretch</aspectratio>
-						<colordiffuse>ddffffff</colordiffuse>
-					</control>
-				</control>
-				<control type="label">
-					<left>1</left>
-					<align>center</align>
-					<font>titlesmall</font>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>white</textcolor>
-					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-				</control>
-			</focusedlayout>
-			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 		</control>
 	</include>
 </includes>

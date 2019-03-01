@@ -37,7 +37,7 @@
 					<width>260</width>
 					<include>MediaFlagVars</include>
 					<bordersize>2</bordersize>
-					<texture fallback="flags/studios/default-studio.png">$VAR[StudioFlagPathVar]$INFO[VideoPlayer.Studio,,.png]</texture>
+					<texture fallback="flags/studios/default-studio.png">resource://resource.images.studios.white/$INFO[VideoPlayer.Studio,,.png]</texture>
 				</control>
 				<control type="image">
 					<width>320</width>
@@ -263,7 +263,7 @@
 						<width>260</width>
 						<include>MediaFlagVars</include>
 						<bordersize>2</bordersize>
-						<texture>$VAR[StudioFlagPathVar]$INFO[VideoPlayer.Studio,,.png]</texture>
+						<texture>resource://resource.images.studios.white/$INFO[VideoPlayer.Studio,,.png]</texture>
 					</control>
 					<control type="label">
 						<width>260</width>

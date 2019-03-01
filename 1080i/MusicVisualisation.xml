@@ -55,19 +55,12 @@
 			<fadetime>800</fadetime>
 			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 		</control>
-		<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
-		<!--control type="visualisation" id="2">
-			<description>visualisation</description>
-			<include>FullscreenDimensions</include>
-			<visible>Player.HasAudio + [String.IsEqual(Visualisation.Name,waveform) | String.Contains(Visualisation.Name,spectrum)]</visible>
-		</control-->
 		<control type="group">
 			<animation type="conditional" reversible="false" condition="true">
 				<effect type="rotatey" center="0,150" start="6" end="6" />
 				<effect type="zoom" center="0,200" start="93" end="93" />
 				<effect type="slide" end="0,-20" />
 			</animation>
-
 			<control type="image">
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
 				<left>-15</left>

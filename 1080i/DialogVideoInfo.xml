@@ -124,7 +124,7 @@
 							<width>198</width>
 							<include>MediaFlagVars</include>
 							<bordersize>2</bordersize>
-							<texture>$VAR[StudioFlagPathVar]$INFO[ListItem.Studio,,.png]</texture>
+							<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 						</control>
 						<control type="label">
 							<width>198</width>

@@ -7,8 +7,7 @@
 			<param name="windowOpen" value="!Window.Previous(SettingsCategory.xml)" />
 			<param name="windowClose" value="!Window.Next(SettingsCategory.xml)" />
 		</include>
-		
-				<control type="image">
+					<control type="image">
 				<left>-10</left>
 				<top>-10</top>
 				<width>1950</width>
@@ -235,16 +234,6 @@
 					<onup>9003</onup>
 					<ondown>9003</ondown>
 					<visible>Container(9000).HasFocus(3)</visible>
-					<control type="button" id="306">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[31150]</label>
-						<label2>[COLOR labelheader]$INFO[Skin.String(StudioLogos.name)][/COLOR]</label2>
-						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=StudioLogos&amp;type=resource.images.studios)</onclick>
-						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-					</control>
 					<control type="radiobutton" id="305">
 						<width>1316</width>
 						<height>90</height>

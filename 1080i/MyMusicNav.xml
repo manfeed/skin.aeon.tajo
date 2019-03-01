@@ -58,83 +58,6 @@
 			<!-- view id = 599 -->
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(55) | Control.IsVisible(54) | Control.IsVisible(52) | Control.IsVisible(500) | Control.IsVisible(57)</visible>
-			<visible>!Window.IsActive(addoninformation)</visible>
-			<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,806" start="0,0">WindowClose</animation>
-			<top>-30</top>
-			<control type="group">
-				<visible>Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(57)</visible>
-				<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
-				<control type="group">
-					<left>90</left>
-					<top>1010</top>
-					<visible>!Control.IsVisible(55)</visible>
-					<control type="label">
-						<right>680</right>
-						<height>48</height>
-						<font>font16_title_bold</font>
-						<textcolor>white</textcolor>
-						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-					<control type="label">
-						<right>680</right>
-						<top>45</top>
-						<height>30</height>
-						<font>font13_title</font>
-						<textcolor>white</textcolor>
-						<label>$VAR[FloorLabel2Var]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-				</control>
-				<control type="grouplist">
-					<right>80</right>
-					<top>1000</top>
-					<width>594</width>
-					<height>90</height>
-					<align>right</align>
-					<orientation>horizontal</orientation>
-					<visible>Container.Content(albums) | Container.Content(songs)</visible>
-					<control type="image">
-						<width>198</width>
-						<include>MediaFlagVars</include>
-						<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
-					</control>
-					<control type="image">
-						<width>198</width>
-						<include>MediaFlagVars</include>
-						<texture>$INFO[ListItem.UserRating,flags/rating/,.png]</texture>
-						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
-					</control>
-					<control type="image">
-						<width>198</width>
-						<include>MediaFlagVars</include>
-						<texture fallback="rating0.png">$INFO[ListItem.Rating,rating,.png]</texture>
-						<visible>String.IsEmpty(ListItem.UserRating)</visible>
-					</control>
-					<control type="label">
-						<width>198</width>
-						<height>90</height>
-						<align>center</align>
-						<label fallback="• • • •">$INFO[ListItem.Year]</label>
-						<font>font35_title_bold</font>
-						<textcolor>white</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-					<visible>!Control.IsVisible(55)</visible>
-					</control>
-				</control>
-			</control>
-			<control type="image">
-				<top>970</top>
-				<width>100%</width>
-				<height>140</height>
-				<texture border="1">gradient_floor.png</texture>
-			</control>
-		</control>
-		<control type="group">
 			<left>-440</left>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9050">
@@ -231,6 +154,149 @@
 					<visible>Player.HasMedia</visible>
 				</control>
 			</control>
+		</control>
+		<control type="group">
+		<visible>Control.IsVisible(591) | Control.IsVisible(597) | Control.IsVisible(596)</visible>
+		<visible allowhiddenfocus="true">Control.HasFocus(5919)</visible>
+			<animation effect="fade" start="0" end="90" time="1200">Visible</animation>
+			<animation effect="slide" end="0,-110" time="0" condition="Control.IsVisible(591)">Conditional</animation>
+			<animation effect="slide" end="1868,0" time="0" condition="Control.IsVisible(597)">Conditional</animation>
+			<animation effect="slide" end="1862,0" time="0" condition="Control.IsVisible(596)">Conditional</animation>
+			<left>-5</left>
+			<top>470</top>
+			<control type="button" id="5919">
+				<include>HiddenObject</include>
+				<onleft condition="!Control.IsVisible(596)">80</onleft>
+				<onright condition="!Control.IsVisible(596)">50</onright>
+				<onleft condition="Control.IsVisible(596)">50</onleft>
+				<onright condition="Control.IsVisible(596)">80</onright>
+				<onup>SetFocus(50)</onup>
+				<onup>Action(prevletter)</onup>
+				<onup>SetFocus(5919)</onup>
+				<ondown>SetFocus(50)</ondown>
+				<ondown>Action(nextletter)</ondown>
+				<ondown>SetFocus(5919)</ondown>
+				<onclick>SetFocus(50)</onclick>
+				<onback>50</onback>
+			</control>
+			<control type="image">
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>-9</left>
+				<top>-64</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_v.gif</texture>
+			</control>
+			<control type="image">
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>-9</left>
+				<top>110</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_vd.gif</texture>
+			</control>
+			<control type="image">
+			<animation effect="slide" end="-15,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+				<top>5</top>
+				<left>1</left>
+				<width>80</width>
+				<height>100</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+			</control>
+				<control type="label">
+				<visible>!String.StartsWith(ListItem.Label,*)</visible>
+				<animation effect="slide" end="-10,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+				<top>-5</top>
+				<left>-5</left>
+				<width>80</width>
+				<height>120</height>
+				<align>center</align>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>white</textcolor>
+				<font>font_MainMenu2</font>
+				</control>
+				<control type="label">
+				<visible>String.StartsWith(ListItem.Label,*)</visible>
+				<animation effect="slide" end="-10,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+				<top>-5</top>
+				<left>-5</left>
+				<width>80</width>
+				<height>120</height>
+				<align>center</align>
+				<label>#</label>
+				<textcolor>white</textcolor>
+				<font>font_MainMenu2</font>
+				</control>
+		</control>
+		<control type="group">
+		<visible>Control.IsVisible(598) | Control.IsVisible(599) | Control.IsVisible(593)</visible>
+		<visible allowhiddenfocus="true">Control.HasFocus(5929)</visible>
+			<animation effect="fade" start="0" end="90" time="1200">Visible</animation>
+			<animation effect="slide" end="-150,0" time="0" condition="Control.IsVisible(593)">Conditional</animation>
+			<left>310</left>
+			<top>980</top>
+			<control type="button" id="5929">
+				<include>HiddenObject</include>
+				<ondown>86</ondown>
+				<onup>50</onup>
+				<onleft>SetFocus(50)</onleft>
+				<onleft>Action(prevletter)</onleft>
+				<onleft>SetFocus(5929)</onleft>
+				<onright>SetFocus(50)</onright>
+				<onright>Action(nextletter)</onright>
+				<onright>SetFocus(5929)</onright>
+				<onclick>SetFocus(50)</onclick>
+				<onback>50</onback>
+			</control>
+			<control type="image">
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>-78</left>
+				<top>38</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_h.gif</texture>
+			</control>
+			<control type="image">
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<left>81</left>
+				<top>38</top>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">tajo/arrow_hd.gif</texture>
+			</control>
+			<control type="image">
+				<top>19</top>
+				<left>-9</left>
+				<width>86</width>
+				<height>100</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+			</control>
+				<control type="label">
+				<visible>!String.StartsWith(ListItem.Label,*)</visible>
+				<top>1</top>
+				<left>-5</left>
+				<width>80</width>
+				<height>120</height>
+				<align>center</align>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>white</textcolor>
+				<font>font_MainMenu2</font>
+				</control>
+				<control type="label">
+				<visible>String.StartsWith(ListItem.Label,*)</visible>
+				<top>1</top>
+				<left>-5</left>
+				<width>80</width>
+				<height>120</height>
+				<align>center</align>
+				<label>#</label>
+				<textcolor>white</textcolor>
+				<font>font_MainMenu2</font>
+				</control>
 		</control>
 	</controls>
 </window>

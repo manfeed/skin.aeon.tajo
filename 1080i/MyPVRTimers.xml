@@ -19,7 +19,6 @@
 			<description>Timers group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<include>WindowOpenCloseAnimation</include>
-			<include>ViewAnimation</include>
 			<left>100</left>
 			<top>-40</top>
 			<control type="list" id="50">

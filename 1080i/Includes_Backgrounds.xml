@@ -18,36 +18,6 @@
 				<include condition="!Skin.HasSetting(Disable.ShowBackgroundVis)+ !Window.IsActive(TVChannels) + !Window.IsActive(RadioChannels)">BackgroundVisualization</include>
 				<include condition="!Skin.HasSetting(Disable.ShowBackgroundVideo)+ !Window.IsActive(TVChannels) + !Window.IsActive(RadioChannels)">BackgroundVideo</include>
 			</control>
-			<control type="group">
-				<visible>![Window.IsActive(profiles) | Window.IsActive(systeminfo) | Window.IsActive(settings) | Window.IsActive(skinsettings) | Window.IsActive(systemsettings) | Window.IsActive(servicesettings) | Window.IsActive(pvrsettings) | Window.IsActive(gamesettings) | Window.IsActive(playersettings) | Window.IsActive(mediasettings) | Window.IsActive(interfacesettings)]</visible>
-				<visible>![Window.IsActive(home) | Window.IsActive(startup) | [Window.IsVisible(TVGuide) + Player.HasVideo]] | Window.IsActive(script-globalsearch-main.xml)</visible>
-				<include content="WindowOpenCloseAnimation">
-					<param name="windowOpen" value="$PARAM[windowOpen]" />
-					<param name="windowClose" value="$PARAM[windowClose]" />
-				</include>
-				<visible>![Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(59) | Control.IsVisible(501) | Control.IsVisible(502) | Control.IsVisible(503) | Control.IsVisible(598) | Control.IsVisible(599) | Control.IsVisible(597) | Control.IsVisible(596) | Control.IsVisible(595) | Control.IsVisible(594) | Control.IsVisible(593) | Control.IsVisible(590) | Control.IsVisible(591)]</visible>
-				<depth>MinDepth</depth>
-				<include>ViewAnimation</include>
-				<animation effect="slide" start="0,0" end="0,80" time="720" tween="cubic" easing="inout" condition="![[Control.IsVisible(52) + !Window.IsActive(systeminfo)] | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(500) | Control.IsVisible(57)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-20" time="720" tween="cubic" easing="inout" condition="[Control.IsVisible(58) | Control.IsVisible(510)]">Conditional</animation>
-				<control type="image">
-					<bottom>206</bottom>
-					<width>696</width>
-					<height>914</height>
-					<texture border="1">vignette.png</texture>
-					<visible>![Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57)]</visible>
-					<animation effect="slide" tween="cubic" time="720" start="-696" end="0,0">VisibleChange</animation>
-				</control>
-				<control type="image">
-					<right>0</right>
-					<bottom>206</bottom>
-					<width>696</width>
-					<height>914</height>
-					<texture flipx="true" border="1">vignette.png</texture>
-					<animation effect="slide" tween="cubic" time="720" start="696" end="0,0">VisibleChange</animation>
-					<visible>![Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57)]</visible>
-				</control>
-			</control>
 		</definition>
 	</include>
 	<include name="BackgroundVideo">
@@ -157,7 +127,6 @@
 			<colordiffuse>CCFFFFFF</colordiffuse>
 			<texture background="true">back.png</texture>
 			<visible>[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] | [[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] + System.HasActiveModalDialog]</visible>
-			<!-- <include>VisibleFadeAnimation</include> -->
 		</control>
 	</include>
 	<include name="TVShowNextAiredBackground">

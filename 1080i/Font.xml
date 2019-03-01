@@ -250,6 +250,11 @@
 			<size>80</size>
 		</font>
 		<font>
+			<name>font_MainMenu2</name>
+			<filename>The Bold Font.ttf</filename>
+			<size>70</size>
+		</font>
+		<font>
 			<name>Font_plot</name>
 			<filename>Kiye Sans.ttf</filename>
 			<size>28</size>

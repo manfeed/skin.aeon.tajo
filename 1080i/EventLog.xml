@@ -22,7 +22,6 @@
 			<!-- view id = 50 -->
 			<control type="group">
 				<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-				<include>ViewAnimation</include>
 				<control type="group">
 					<left>100</left>
 					<top>-40</top>

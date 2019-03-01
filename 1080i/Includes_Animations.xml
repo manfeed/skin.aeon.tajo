@@ -34,9 +34,6 @@
 		<animation effect="fade" time="100" delay="200">WindowOpen</animation>
 		<animation effect="fade" time="50">WindowClose</animation>
 	</include>
-	<include name="ViewAnimation">
-		<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">VisibleChange</animation>
-	</include>
 	<include name="WindowASViewAnimation">
 		<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
 		<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0">WindowClose</animation>

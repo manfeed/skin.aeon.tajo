@@ -7,7 +7,7 @@
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
 	<onunload>ClearProperty(Progams.Games,Home)</onunload>
-	<views>50,500</views>
+	<views>50</views>
 	<menucontrol>9051</menucontrol>
 	<controls>
 		<include>CommonBackground</include>
@@ -24,63 +24,7 @@
 			<include condition="!Skin.HasSetting(Enable.SlimList)">AddonList</include>
 			<include condition="Skin.HasSetting(Enable.SlimList)">SlimList</include>
 			<!-- view id = 50 -->
-			<include>AddonWall</include>
-			<!-- view id = 500 -->
 		</control>
-		<control type="group">
-			<visible>Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(500)</visible>
-			<visible>!Window.IsActive(addoninformation)</visible>
-			<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
-			<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,806" start="0,0">WindowClose</animation>
-			<top>-30</top>
-			<control type="group">
-				<visible>Control.IsVisible(500) | Control.IsVisible(57)</visible>
-				<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
-				<control type="group">
-					<left>90</left>
-					<top>1010</top>
-					<control type="label">
-						<right>680</right>
-						<height>48</height>
-						<font>font16_title_bold</font>
-						<textcolor>white</textcolor>
-						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-					<control type="label">
-						<top>45</top>
-						<right>330</right>
-						<height>30</height>
-						<font>font13_title</font>
-						<textcolor>white</textcolor>
-						<scroll>true</scroll>
-						<label>$INFO[ListItem.AddonSummary]</label>
-						<textoffsetx>30</textoffsetx>
-					</control>
-				</control>
-				<control type="label">
-					<top>1000</top>
-					<right>120</right>
-					<width>300</width>
-					<align>right</align>
-					<height>90</height>
-					<label>$INFO[ListItem.AddonVersion]</label>
-					<font>font35_title_bold</font>
-					<textcolor>white</textcolor>
-					<wrapmultiline>true</wrapmultiline>
-				</control>
-			</control>
-			<control type="image">
-				<top>970</top>
-				<width>100%</width>
-				<height>140</height>
-				<texture border="1">gradient_floor.png</texture>
-			</control>
-		</control>
-		
-		
 		<control type="group">
 			<left>-440</left>
 			<include>SideBladeLeft</include>
