@@ -9,6 +9,13 @@
 	<onunload>ClearProperty(Info.Artist,movieinformation)</onunload>
 	<onunload>ClearProperty(Info.DBType,movieinformation)</onunload>
 	<controls>
+				<control type="image">
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>510</width>
+			<height>510</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+			</control>
 		<control type="grouplist" id="90200">
 			<centerleft>50%</centerleft>
 			<width>510</width>
