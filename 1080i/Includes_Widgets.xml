@@ -2,6 +2,7 @@
 <includes>
 	<include name="HomeRecentlyAddedInfoAlt">
 		<control type="group" id="9004">
+		<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(Widget),13)</visible>
 			<animation effect="slide" tween="cubic" time="720" start="0,-800" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-800" start="0,0">WindowClose</animation>
@@ -101,6 +102,7 @@
 	<include name="HomeWidgetItem">
 		<control type="group">
 			<visible allowhiddenfocus="true">$PARAM[visible]</visible>
+			<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<animation type="Visible">
 				<effect type="rotatex" end="0" start="$PARAM[animationStart]" center="250,0" time="400" tween="sine" easing="inout" />
 				<effect type="fade" end="100" start="0" time="10" delay="200" />
@@ -219,6 +221,7 @@
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
 			<visible>[String.IsEqual(Container(9000).ListItem.Property(WidgetType),13) | String.IsEqual(Container(9000).ListItem.Property(WidgetType),1) | String.IsEqual(Container(9000).ListItem.Property(WidgetType),2) | String.IsEqual(Container(9000).ListItem.Property(WidgetType),4) | String.IsEqual(Container(9000).ListItem.Property(WidgetType),5)]</visible>
+			<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<visible>ControlGroup(9003).HasFocus()</visible>
@@ -712,7 +715,7 @@
 		<!-- Music Info -->
 		<control type="group">
 			<top>622</top>
-			<visible>Player.HasAudio + !String.Contains(Player.Filenameandpath,tajo_melodies) + !String.Contains(Player.Filenameandpath,theme.mp3)</visible>
+			<visible>Player.HasAudio + [Skin.HasSetting(melodyHome) + Window.IsActive(home)] + !String.Contains(Player.Filenameandpath,theme.mp3)</visible>
 			<include>VisibleFadeAnimation</include>
 			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0" condition="true">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0" condition="true">WindowClose</animation>
@@ -851,6 +854,7 @@
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<include>VisibleFadeAnimation</include>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetType),3)</visible>
+			<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<control type="image">
 				<width>100%</width>
 				<height>630</height>
@@ -1079,6 +1083,7 @@
 			<left>490r</left>
 			<top>200</top>
 			<visible>String.IsEqual(Container(9000).ListItem.Property(WidgetType),12)</visible>
+			<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<include>VisibleFadeAnimation</include>
 			<include>WindowOpenCloseAnimation</include>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
