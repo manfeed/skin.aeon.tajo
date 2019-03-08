@@ -68,6 +68,7 @@
 					<onup condition="![Control.IsVisible(9003) | Control.IsVisible(9004)]">9000</onup>
 					<ondown>9000</ondown>
 					<include condition="System.HasAddon(script.globalsearch)">HomeSearchButton</include>
+					<include condition="!System.HasAddon(script.globalsearch)">NoHomeSearchButton</include>
 					<control type="button" id="9021">
 						<label></label>
 						<textoffsetx>0</textoffsetx>
@@ -138,7 +139,7 @@
 					<visible>[Control.HasFocus(9000) | Control.HasFocus(9004) | Control.HasFocus(9003) | Control.HasFocus(9010)] + !Skin.HasSetting(showWidget)</visible>
 					<animation effect="fade" start="40" end="0" time="1200" pulse="true" condition="true">Conditional</animation>
 						<top>36</top>
-						<left>1888</left>
+						<left>1882</left>
 						<width>42</width>
 						<height>29</height>
 						<aspectratio aligny="bottom" align="left">keep</aspectratio>
@@ -160,7 +161,7 @@
 			</animation>
 			<animation type="WindowClose" reversible="false">
 				<effect type="fade" start="100" end="0" time="300" />
-				<effect type="zoom" start="100" end="130" center="CenterWidth,CenterHeight" time="300" tween="cubic" easing="in" />
+				<effect type="zoom" start="100" end="150" center="CenterWidth,CenterHeight" time="300" tween="cubic" easing="in" />
 			</animation>
 			<control type="group" id="9001">
 				<top>165</top>
