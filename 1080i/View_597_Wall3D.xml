@@ -383,39 +383,13 @@
 					<label>[COLOR=themecolor]$LOCALIZE[342]: [/COLOR][B]$INFO[Container(5977).NumItems][/B]</label>
 					<textcolor>FFFFFFFF</textcolor>
 				</control>
-				<control type="fadelabel" id="5780">
-					<top>-1000</top>
-					<width>1</width>
-					<height>1</height>
-					<info>ListItem.Art(clearlogo)</info>
-					<info>ListItem.Art(clearart)</info>
-					<info>ListItem.Art(clearlogo1)</info>
-					<info>ListItem.Art(clearart1)</info>
-					<info>ListItem.Art(clearlogo2)</info>
-					<info>ListItem.Art(clearart2)</info>
-					<randomize>false</randomize>
-					<pauseatend>4500</pauseatend>
-					<scroll>false</scroll>
-					<scrollout>false</scrollout>
-					<resetonlabelchange>true</resetonlabelchange>
-				</control>
 				<control type="image">
 					<left>300</left>
 					<top>235</top>
 					<width>250</width>
 					<height>150</height>
-					<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="multiimage">
-					<left>300</left>
-					<top>205</top>
-					<width>250</width>
-					<height>150</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<visible>!String.IsEmpty(ListItem.Art(clearart))</visible>
-					<imagepath background="true">$INFO[Control.GetLabel(5780)]</imagepath>
 				</control>
 				<control type="textbox">
 					<visible>ListItem.IsCollection</visible>
@@ -429,15 +403,63 @@
 					<autoscroll delay="4000" time="2000" repeat="4000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>
 				<control type="textbox">
-					<visible>!ListItem.IsCollection</visible>
+				<visible>[!System.IdleTime(3) | String.IsEmpty(Container(534).ListItemAbsolute(0).Label)] + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+				<fadetime>300</fadetime>
+				<font>Font_plot4</font>
+				<align>left</align>
+					<left>15</left>
+					<top>392</top>
+					<width>210</width>
+					<height>272</height>
+					<label>[B][COLOR themecolor]$LOCALIZE[206]:[/COLOR][/B][CR]$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label]</label>
+				</control>
+				<control type="textbox">
+					<visible>!ListItem.IsCollection + [!Skin.HasSetting(showCast) | !System.HasAddon(script.embuary.helper)]</visible>
 					<left>25</left>
 					<top>395</top>
-					<width>570</width>
+					<width>550</width>
 					<height>268</height>
 					<font>Font_plot</font>
 					<align>justify</align>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="6000" time="2000" repeat="6000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				</control>
+				<control type="textbox">
+					<visible>!ListItem.IsCollection + [Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)]</visible>
+					<left>235</left>
+					<top>395</top>
+					<width>360</width>
+					<height>268</height>
+					<font>Font_plot</font>
+					<align>justify</align>
+					<label>$VAR[value_plot]</label>
+					<autoscroll delay="4000" time="2000" repeat="4000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				</control>
+				<control type="group">
+				<visible>System.IdleTime(3) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+				<left>5</left>
+				<top>-15</top>
+				<control type="textbox">
+				<fadetime>300</fadetime>
+				<textcolor>themecolor</textcolor>
+				<font>Font_plot4</font>
+				<align>center</align>
+					<left>10</left>
+					<top>623</top>
+					<width>200</width>
+					<height>70</height>
+					<label>[B]$INFO[Container(534).ListItem.Label][/B]</label>
+				</control>
+				<control type="image">
+				<colordiffuse>DFffffff</colordiffuse>
+					<left>30</left>
+					<top>395</top>
+					<width>170</width>
+					<height>220</height>
+					<aspectratio alignx="left" aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
+				</control>
 				</control>
 				<include>IconsWall3D</include>
 			</control>

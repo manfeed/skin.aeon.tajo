@@ -516,6 +516,10 @@ msgctxt "#31180"
 msgid "Play local theme.mp3 when browsing Movies and Tvshows"
 msgstr "Reproducir theme.mp3 del usuario en Peliculas y Series"
 
+msgctxt "#31181"
+msgid "Display cast in video views"
+msgstr "Muestra el reparto en vistas de video"
+
 msgctxt "#31205"
 msgid "Lyrics Source"
 msgstr "Fuente para letras"

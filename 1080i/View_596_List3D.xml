@@ -18,6 +18,44 @@
 					<animation effect="fade" end="90" condition="true">Conditional</animation>
 				</control>
 			</control>
+			<control type="textbox">
+				<visible>System.IdleTime(3)</visible>
+				<visible>!ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+				<fadetime>300</fadetime>
+				<font>Font_plot4</font>
+				<align>left</align>
+					<left>900</left>
+					<top>181</top>
+					<width>230</width>
+					<height>213</height>
+					<label>$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label]</label>
+				</control>
+			<control type="group">
+				<visible>System.IdleTime(3) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+				<left>670</left>
+				<top>-270</top>
+				<control type="textbox">
+				<fadetime>300</fadetime>
+				<textcolor>themecolor</textcolor>
+				<font>Font_plot4</font>
+				<align>center</align>
+					<left>-70</left>
+					<top>632</top>
+					<width>290</width>
+					<height>35</height>
+					<label>$INFO[Container(534).ListItem.Label]</label>
+				</control>
+				<control type="image">
+				<colordiffuse>DFffffff</colordiffuse>
+					<left>20</left>
+					<top>417</top>
+					<width>170</width>
+					<height>210</height>
+					<aspectratio alignx="left" aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
+				</control>
+				</control>
 			<control type="group">
 				<visible>!Container.Content(episodes)</visible>
 				<animation effect="zoom" delay="0" center="auto" start="125" end="125" time="0" condition="true">Conditional</animation>
@@ -940,9 +978,9 @@
 					<control type="group">
 						<top>4</top>
 						<control type="label">
-							<left>77</left>
+							<left>227</left>
 							<top>-1</top>
-							<width>1190</width>
+							<width>1040</width>
 							<height>45</height>
 							<font>titleshelf</font>
 							<align>right</align>
@@ -952,9 +990,9 @@
 							<label>$VAR[value_videotitle]</label>
 						</control>
 						<control type="label">
-							<left>78</left>
+							<left>228</left>
 							<top>0</top>
-							<width>1190</width>
+							<width>1040</width>
 							<height>45</height>
 							<font>titleshelf</font>
 							<align>right</align>

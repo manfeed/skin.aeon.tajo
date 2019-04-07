@@ -703,7 +703,7 @@
 				</control>
 			</control>
 				<control type="textbox">
-				<visible>!ListItem.IsCollection</visible>
+				<visible>!ListItem.IsCollection + [!Skin.HasSetting(showCast) | !System.HasAddon(script.embuary.helper)]</visible>
 					<left>1040</left>
 					<top>650</top>
 					<width>810</width>
@@ -712,6 +712,53 @@
 					<align>justify</align>
 					<label>[B][COLOR themecolor]$VAR[value_ground17_label]:[/COLOR][/B] [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR][B][COLOR themecolor]    [CAPITALIZE]$VAR[value_ground11_label]:[/B][/COLOR] [/CAPITALIZE][COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR][CR][COLOR themecolor][B]$VAR[value_ground12_label]:[/B][/COLOR] [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR][B][COLOR themecolor]    $VAR[value_ground14_label]:[/B][/COLOR] [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR][CR][B][COLOR themecolor]$LOCALIZE[207]:[/B][/COLOR] $VAR[value_plot]</label>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+				</control>
+				<control type="textbox">
+				<visible>!ListItem.IsCollection + [Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)]</visible>
+					<left>1040</left>
+					<top>650</top>
+					<width>570</width>
+					<height>328</height>
+					<font>font13_title</font>
+					<align>justify</align>
+					<label>[B][COLOR themecolor]$VAR[value_ground17_label]:[/COLOR][/B] [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR][B][COLOR themecolor]    [CAPITALIZE]$VAR[value_ground11_label]:[/B][/COLOR] [/CAPITALIZE][COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR][CR][COLOR themecolor][B]$VAR[value_ground12_label]:[/B][/COLOR] [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR][B][COLOR themecolor]    $VAR[value_ground14_label]:[/B][/COLOR] [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR][CR][B][COLOR themecolor]$LOCALIZE[207]:[/B][/COLOR] $VAR[value_plot]</label>
+					<autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+				</control>
+				<control type="textbox">
+				<visible>[!System.IdleTime(3) | String.IsEmpty(Container(534).ListItemAbsolute(0).Label)] + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+				<fadetime>300</fadetime>
+				<font>font13_title</font>
+				<align>left</align>
+					<left>1648</left>
+					<top>650</top>
+					<width>240</width>
+					<height>328</height>
+					<label>[B][COLOR themecolor]$LOCALIZE[206]:[/COLOR][/B][CR]$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label]</label>
+				</control>
+				<control type="group">
+				<visible>System.IdleTime(3) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+				<left>630</left>
+				<control type="textbox">
+				<fadetime>300</fadetime>
+				<textcolor>themecolor</textcolor>
+				<font>Font_plot4</font>
+				<align>center</align>
+					<left>1005</left>
+					<top>940</top>
+					<width>220</width>
+					<height>70</height>
+					<label>[B]$INFO[Container(534).ListItem.Label][/B]</label>
+				</control>
+				<control type="image">
+					<left>1015</left>
+					<top>650</top>
+					<width>195</width>
+					<height>280</height>
+					<colordiffuse>DFffffff</colordiffuse>
+					<aspectratio alignx="left" aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
+				</control>
 				</control>
 					<control type="textbox">
 					<visible>ListItem.IsCollection</visible>

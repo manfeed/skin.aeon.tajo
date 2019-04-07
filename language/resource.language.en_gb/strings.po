@@ -804,6 +804,10 @@ msgctxt "#31180"
 msgid "Play local theme.mp3 when browsing Movies and Tvshows"
 msgstr ""
 
+msgctxt "#31181"
+msgid "Display cast in video views"
+msgstr ""
+
 msgctxt "#31205"
 msgid "Lyrics Source"
 msgstr ""
