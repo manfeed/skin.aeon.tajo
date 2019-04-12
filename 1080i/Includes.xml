@@ -84,7 +84,7 @@
 	</variable>
 	<include name="DisplayCast">
 				<control type="list" id="524">
-				<visible>!ListItem.IsCollection</visible>
+				<visible>!ListItem.IsCollection + !Container.Content(seasons)</visible>
 					<itemlayout>
 					</itemlayout>
 					<focusedlayout>
@@ -93,6 +93,8 @@
 				</control>
 	</include>
 	<include name="DisplayPngCast">
+				<control type="group">
+				<visible>System.IdleTime(1) + !ListItem.IsCollection + !Container.Content(seasons)</visible>
 				<control type="image" id="2440">
 					<include>HiddenObject</include>
 					<texture fallback="">$INFO[Container(524).ListItemAbsolute(0).Label,resource://resource.images.actorpngs/,.png]</texture>
@@ -326,7 +328,68 @@
 						<label2>$INFO[Container(524).ListItemAbsolute(24).Label,resource://resource.images.actorpngs/,.png]</label2>
 						<visible>!String.IsEmpty(Control.GetLabel(2464))</visible>
 						</item>
+						<item>
+						<label>[B][COLOR themecolor]$LOCALIZE[206]:[/B][/COLOR][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label][/COLOR]</label>
+						<label2>Cast</label2>
+						<visible>!Control.IsVisible(596)</visible>
+						</item>
 					</content>
+				</control>
+				</control>
+	</include>
+		<include name="DisplayChar">
+				<control type="group">
+				<visible>!ListItem.IsCollection + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)</visible>
+				<control type="list" id="5927">
+					<scrolltime>4000</scrolltime>
+					<autoscroll>true</autoscroll>
+					<itemlayout>
+					</itemlayout>
+					<focusedlayout>
+					</focusedlayout>
+					<content>
+						<item>
+						<label>$INFO[ListItem.Art(characterart)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart1)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart1))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart2)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart2))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart3)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart3))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart4)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart4))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart5)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart5))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart6)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart6))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart7)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart7))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart8)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart8))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(characterart9)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(characterart9))</visible>
+						</item>
+					</content>
+				</control>
 				</control>
 	</include>
 	<!-- Media Menu -->
