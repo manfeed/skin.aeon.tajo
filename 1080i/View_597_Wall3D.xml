@@ -1013,7 +1013,7 @@
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">2200</scrolltime>
 						<autoscroll>true</autoscroll>
-						<viewtype label="20">list</viewtype>
+						<viewtype label="Songs">list</viewtype>
 						<itemlayout width="510" height="28">
 							<control type="label">
 								<scroll>false</scroll>
@@ -1043,7 +1043,7 @@
 						<orientation>vertical</orientation>
 						<scrolltime tween="sine" easing="out">2200</scrolltime>
 						<autoscroll>true</autoscroll>
-						<viewtype label="20">list</viewtype>
+						<viewtype label="Songs">list</viewtype>
 						<itemlayout width="510" height="28">
 							<control type="label">
 								<scroll>false</scroll>
