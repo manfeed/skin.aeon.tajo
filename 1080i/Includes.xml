@@ -339,7 +339,7 @@
 	</include>
 		<include name="DisplayChar">
 				<control type="group">
-				<visible>!ListItem.IsCollection + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)</visible>
+				<visible>!ListItem.IsCollection</visible>
 				<control type="list" id="5927">
 					<scrolltime>4000</scrolltime>
 					<autoscroll>true</autoscroll>
@@ -387,6 +387,46 @@
 						<item>
 						<label>$INFO[ListItem.Art(characterart9)]</label>
 						<visible>!String.IsEmpty(ListItem.Art(characterart9))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart1)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart1))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart2)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart2))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart3)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart3))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart4)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart4))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart5)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart5))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart6)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart6))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart7)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart7))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart8)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart8))</visible>
+						</item>
+						<item>
+						<label>$INFO[ListItem.Art(tvshow.characterart9)]</label>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart9))</visible>
 						</item>
 					</content>
 				</control>

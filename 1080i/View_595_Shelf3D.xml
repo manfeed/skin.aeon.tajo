@@ -394,7 +394,7 @@
 			</control>
 				<control type="group">
 				<control type="image">
-				<animation effect="slide" end="-250,0" time="0" condition="!String.IsEmpty(ListItem.Art(characterart))">Conditional</animation>
+				<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
 					<left>1585</left>
 					<top>335</top>
 					<width>260</width>
@@ -405,6 +405,7 @@
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				</control>
 				<control type="image">
+				<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
 					<left>1585</left>
 					<top>335</top>
 					<width>260</width>
