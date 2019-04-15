@@ -557,8 +557,8 @@ msgid "Always show widgets"
 msgstr "Widgets siempre visibles"
 
 msgctxt "#31253"
-msgid "Choose user audio playlist *.m3u (max.5 songs)"
-msgstr "Lista de reproducción del usuario *.m3u (5 canciones máx.)"
+msgid "Choose user audio playlist *.m3u (max.10 songs)"
+msgstr "Lista de reproducción del usuario *.m3u (10 canciones máx.)"
 
 msgctxt "#31254"
 msgid "Clear user playlist (back to default)"
