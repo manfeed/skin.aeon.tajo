@@ -4,6 +4,14 @@
 		<value condition="Skin.String(melodyPlaylist)">$INFO[Skin.String(melodyPlaylist)]</value>
 		<value>special://skin/extras/inicial.m3u</value>
 	</variable>
+	<variable name="Wait_melodies">
+		<value condition="Control.HasFocus(9010)"></value>
+		<value>PlayMedia($VAR[Path_melodies],playoffset=$VAR[ThemeHome])</value>
+	</variable>
+	<variable name="Wait_melodies2">
+		<value condition="Control.HasFocus(9010)"></value>
+		<value>SetProperty(melodiesPlaying,True,home)</value>
+	</variable>
 	<variable name="GlobalBackgroundVar">
 		<value condition="!Window.IsActive(music) + !String.IsEmpty(ListItem.Art(fanart1)) + !Control.IsVisible(595)">$INFO[Control.GetLabel(4410)]</value>
 		<value condition="Window.IsActive(music) + !String.IsEmpty(ListItem.Art(fanart1)) + !Control.IsVisible(598) + !Control.IsVisible(599)">$INFO[Control.GetLabel(5874)]</value>

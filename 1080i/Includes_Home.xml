@@ -33,8 +33,9 @@
 		</itemlayout>
 		<focusedlayout height="100" width="640">
 			<control type="label">
+			<animation effect="zoom" center="200,40" start="100" end="135" time="300" delay="325" tween="sine" easing="out">Focus</animation>
+			<animation effect="zoom" center="200,40" start="100" end="135" time="300" tween="sine" easing="out">UnFocus</animation>
 			<scroll>false</scroll>
-				<include>AnimationMenu</include>
 				<animation effect="fade" end="40" condition="true">Conditional</animation>
 				<left>50</left>
 				<width>560</width>
@@ -45,8 +46,9 @@
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
+			<animation effect="zoom" center="200,40" start="100" end="135" time="300" delay="325" tween="sine" easing="out">Focus</animation>
+			<animation effect="zoom" center="200,40" start="100" end="135" time="300" tween="sine" easing="out">UnFocus</animation>
 			<scroll>false</scroll>
-				<include>AnimationMenu</include>
 				<left>50</left>
 				<width>560</width>
 				<height>90</height>

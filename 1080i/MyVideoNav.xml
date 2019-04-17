@@ -40,7 +40,7 @@
 			<include condition="Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)">DisplayCast</include>
 		</control>
 		<control type="group">
-			<include condition="Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper) + System.HasAddon(resource.images.actorpngs)">DisplayPngCast</include>
+			<include condition="Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper) + System.HasAddon(resource.images.actorart)">DisplayPngCast</include>
 		</control>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
