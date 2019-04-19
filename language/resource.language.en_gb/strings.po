@@ -1175,3 +1175,27 @@ msgstr ""
 msgctxt "#31964"
 msgid "NoTo"
 msgstr ""
+
+msgctxt "#31965"
+msgid "Setup main menu"
+msgstr ""
+
+msgctxt "#31966"
+msgid "Customize the main menu with widgets, backgrounds, submenus and statistics. Add your own custom main menu items."
+msgstr ""
+
+msgctxt "#31967"
+msgid "Options main menu"
+msgstr ""
+
+msgctxt "#31968"
+msgid "Customize melodies, the way of showing widgets and other options related to the main menu."
+msgstr ""
+
+msgctxt "#31969"
+msgid "General options"
+msgstr ""
+
+msgctxt "#31970"
+msgid "Setup of themes and cast for movies/tvshows, and other options."
+msgstr ""
