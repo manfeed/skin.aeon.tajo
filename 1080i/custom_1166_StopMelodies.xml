@@ -3,6 +3,7 @@
 	<onload>Stop</onload>
 	<onload>ClearProperty(melodiesPlaying,Home)</onload>
 	<visible>!String.IsEmpty(Window(home).Property(melodiesPlaying)) + [!Window.IsActive(home) | Pvr.IsPlayingTv | Pvr.IsPlayingRadio | Player.IsInternetStream | Window.IsActive(Favourites)]</visible>
-    <controls></controls>
+    <visible>!System.ScreenSaverActive</visible>
+	<controls></controls>
 </window>
 	

@@ -2,9 +2,9 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<menucontrol>9051</menucontrol>
-	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	
 	<onload>ClearProperty(MediaMenu,Home)</onload>
-	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	
 	<controls>
 		<include content="CommonBackground">
 			<param name="windowOpen" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(profiles)]" />
@@ -160,7 +160,7 @@
 					<item>
 						<label>31969</label>
 						<property name="description">31970</property>
-						<onclick>ActivateWindow(1167)</onclick>
+						<onclick>ActivateWindow(10035)</onclick>
 						<icon />
 					</item>
 					<item>
