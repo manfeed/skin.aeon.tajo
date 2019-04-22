@@ -17,7 +17,7 @@
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
 		</control>
 		<control type="group">
-			<top>200</top>
+			<top>100</top>
 			<left>-200</left>
 			<include content="WindowOpenCloseAnimation">
 				<param name="windowOpen" value="!Window.Previous(SettingsCategory.xml)" />
@@ -26,25 +26,11 @@
 			<control type="image">
 				<description>LOGO</description>
 				<left>250</left>
-				<top>-150</top>
+				<top>-90</top>
 				<width>356</width>
 				<height>120</height>
 				<aspectratio>keep</aspectratio>
 				<texture>aeon-tajo.png</texture>
-			</control>
-			<control type="textbox">
-				<description>description area</description>
-				<left>552</left>
-				<top>754</top>
-				<width>1256</width>
-				<height>120</height>
-				<font>font15_textbox</font>
-				<textcolor>grey2</textcolor>
-				<label>$VAR[SkinSettingsDescriptionVar]</label>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="0" tween="sine" easing="inout">Hidden</animation>
-				<visible>!Window.IsActive(1121)</visible>
 			</control>
 			<control type="group" id="9010">
 				<visible>!Window.IsActive(1121)</visible>
@@ -52,15 +38,70 @@
 				<control type="grouplist" id="9001">
 					<description>control area</description>
 					<left>522</left>
-					<top>32</top>
+					<top>42</top>
 					<width>1316</width>
-					<height>720</height>
+					<height>800</height>
 					<pagecontrol>60</pagecontrol>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<onup>9001</onup>
 					<ondown>9001</ondown>
-					<control type="radiobutton" id="199">
+					<control type="radiobutton" id="115">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31250</label>
+						<onclick>Skin.ToggleSetting(musicfullscreen)</onclick>
+						<selected>Skin.HasSetting(musicfullscreen)</selected>
+					</control>
+					<control type="radiobutton" id="116">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31180</label>
+						<onclick>Skin.ToggleSetting(playTheme)</onclick>
+						<selected>Skin.HasSetting(playTheme)</selected>
+					</control>
+					<control type="radiobutton" id="117">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31181</label>
+						<onclick>Skin.ToggleSetting(showCast)</onclick>
+						<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
+						<selected>Skin.HasSetting(showCast)</selected>
+					</control>
+					<control type="radiobutton" id="118">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31224</label>
+						<onclick>Skin.ToggleSetting(animatedposters)</onclick>
+						<selected>Skin.HasSetting(animatedposters)</selected>
+					</control>
+					<control type="radiobutton" id="119">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>20189</label>
+						<onclick>Skin.ToggleSetting(Enable.AutoScroll)</onclick>
+						<selected>Skin.HasSetting(Enable.AutoScroll)</selected>
+					</control>
+					<control type="radiobutton" id="120">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[31170]</label>
+						<onclick>Skin.ToggleSetting(Disable.Netflix.Pause)</onclick>
+						<selected>!Skin.HasSetting(Disable.Netflix.Pause)</selected>
+					</control>
+					<control type="radiobutton" id="121">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -69,7 +110,7 @@
 						<onclick>Skin.ToggleSetting(showWidget)</onclick>
 						<selected>Skin.HasSetting(showWidget)</selected>
 					</control>
-					<control type="radiobutton" id="116">
+					<control type="radiobutton" id="122">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -78,7 +119,7 @@
 						<onclick>Skin.ToggleSetting(melodyHome)</onclick>
 						<selected>Skin.HasSetting(melodyHome)</selected>
 					</control>
-					<control type="button" id="297">
+					<control type="button" id="123">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -88,7 +129,7 @@
 						<label2>[COLOR themecolor]$INFO[Skin.String(melodyPlaylist)][/COLOR]</label2>
 						<onclick>Skin.SetFile(melodyPlaylist,.m3u)</onclick>
 					</control>
-					<control type="button" id="298">
+					<control type="button" id="124">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -97,7 +138,7 @@
 						<visible>!Skin.HasSetting(melodyHome) + Skin.String(melodyPlaylist)</visible>
 						<onclick>Skin.Reset(melodyPlaylist)</onclick>
 					</control>
-					<control type="radiobutton" id="102">
+					<control type="radiobutton" id="125">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -106,7 +147,7 @@
 						<onclick>Skin.ToggleSetting(Disable.Musicinfo)</onclick>
 						<selected>!Skin.HasSetting(Disable.Musicinfo)</selected>
 					</control>
-					<control type="radiobutton" id="103">
+					<control type="radiobutton" id="126">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -115,7 +156,7 @@
 						<onclick>Skin.ToggleSetting(Disable.Videoinfo)</onclick>
 						<selected>!Skin.HasSetting(Disable.Videoinfo)</selected>
 					</control>
-					<control type="radiobutton" id="105">
+					<control type="radiobutton" id="127">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -127,6 +168,20 @@
 				</control>
 			</control>
 		</control>
+		<control type="scrollbar" id="60">
+				<left>1700</left>
+				<top>142</top>
+				<width>20</width>
+				<height>800</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<ondown>60</ondown>
+				<onup>60</onup>
+				<showonepage>false</showonepage>
+				<texturesliderbackground />
+				<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+				<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+			</control>
 	</controls>
 </window>
 	

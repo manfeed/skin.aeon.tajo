@@ -167,7 +167,6 @@
 			<font />
 			<visible>false</visible>
 		</control>
-		
 		<control type="group">
 			<left>-440</left>
 			<include>SideBladeLeft</include>

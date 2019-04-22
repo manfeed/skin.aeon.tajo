@@ -158,15 +158,15 @@
 						<icon />
 					</item>
 					<item>
-						<label>31967</label>
-						<property name="description">31968</property>
+						<label>31969</label>
+						<property name="description">31970</property>
 						<onclick>ActivateWindow(1167)</onclick>
 						<icon />
 					</item>
 					<item>
-						<label>31969</label>
-						<property name="description">31970</property>
-						<onclick>ActivateWindow(1168)</onclick>
+						<label>31967</label>
+						<property name="description">31968</property>
+						<onclick>ActivateWindow(1170)</onclick>
 						<icon />
 					</item>
 					<item>

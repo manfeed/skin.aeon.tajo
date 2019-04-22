@@ -64,6 +64,26 @@
 		<value condition="String.EndsWith(System.Time(hh:mm:ss),8)">9</value>
 		<value>10</value>
 	</variable>
+		<variable name="AddonStatusDescriptionVar">
+		<value condition="Control.HasFocus(100) | Control.HasFocus(101)">$LOCALIZE[31427]</value>
+		<value condition="Control.HasFocus(102) | Control.HasFocus(103)">$LOCALIZE[31429]</value>
+		<value condition="Control.HasFocus(104) | Control.HasFocus(105)">$LOCALIZE[31428]</value>
+		<value condition="Control.HasFocus(106) | Control.HasFocus(107)">$LOCALIZE[31430]</value>
+		<value condition="Control.HasFocus(108) | Control.HasFocus(109)">$LOCALIZE[31431]</value>
+		<value condition="Control.HasFocus(110) | Control.HasFocus(111)">$LOCALIZE[31434]</value>
+		<value condition="Control.HasFocus(200) | Control.HasFocus(201)">$LOCALIZE[31432]</value>
+		<value condition="Control.HasFocus(202) | Control.HasFocus(203)">$LOCALIZE[31474]</value>
+		<value condition="Control.HasFocus(204) | Control.HasFocus(205)">$LOCALIZE[31478]</value>
+		<value condition="Control.HasFocus(206) | Control.HasFocus(207)">$LOCALIZE[31473]</value>
+		<value condition="Control.HasFocus(208) | Control.HasFocus(209)">$LOCALIZE[31481]</value>
+		<value condition="Control.HasFocus(210) | Control.HasFocus(211)">$LOCALIZE[31110]</value>
+		<value condition="Control.HasFocus(212) | Control.HasFocus(213)">$LOCALIZE[31475]</value>
+		<value condition="Control.HasFocus(214) | Control.HasFocus(215)">$LOCALIZE[31477]</value>
+		<value condition="Control.HasFocus(216) | Control.HasFocus(217)">$LOCALIZE[31200]</value>
+		<value condition="Control.HasFocus(300) | Control.HasFocus(301)">$LOCALIZE[31476]</value>
+		<value condition="Control.HasFocus(302) | Control.HasFocus(303)">$LOCALIZE[31479]</value>
+		<value></value>
+	</variable>
 	<variable name="FallbackBackgroundOnClickVar">
 		<value condition="Container.Content(movies)">SetProperty(tajo.Temp,Movies.Fallback,home)</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">SetProperty(tajo.Temp,TVShows.Fallback,home)</value>
