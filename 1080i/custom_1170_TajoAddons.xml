@@ -367,21 +367,6 @@
 						<onclick>InstallAddon(plugin.program.autocompletion)</onclick>
 						<visible>!System.HasAddon(plugin.program.autocompletion)</visible>
 					</control>
-					<control type="button" id="304">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.skin.helper.service)]</label>
-						<label2>$INFO[System.AddonVersion(script.skin.helper.service),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]]</label2>
-						<onclick condition="!System.HasAddon(script.module.metadatautils)">InstallAddon(script.module.metadatautils)</onclick>
-						<onclick condition="System.HasAddon(script.module.metadatautils)">Addon.OpenSettings(script.module.metadatautils)</onclick>
-						<visible>System.HasAddon(script.skin.helper.service)</visible>
-					</control>
-					<control type="button" id="305">
-						<include>SettingsButtonCommonValues</include>
-						<label>script.skin.helper.service</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(script.skin.helper.service)</onclick>
-						<visible>!System.HasAddon(script.skin.helper.service)</visible>
-					</control>
 				</control>
 			</control>
 		</control>
