@@ -40,8 +40,7 @@
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
-			<include condition="!Skin.HasSetting(Enable.SlimList)">MusicList</include>
-			<include condition="Skin.HasSetting(Enable.SlimList)">SlimMusicList</include>
+			<include>MusicList</include>
 			<!-- view id = 50 -->
 			<include>ViewTriple3Dm</include>
 			<!-- view id = 591 -->

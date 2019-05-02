@@ -4,19 +4,58 @@
 	<include name="VideoList">
 		<control type="group">
 				<control type="image">
-					<left>-30</left>
-					<top>-30</top>
+					<left>-680</left>
+					<top>-70</top>
 					<width>2040</width>
 					<height>1277</height>
 					<texture background="true">black.png</texture>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
+<animation effect="rotatey" center="auto" start="6" end="6" time="0" condition="true">Conditional</animation>
+<animation effect="slide" center="auto" end="610,-30" time="0" condition="true">Conditional</animation>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
+			<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
+		<control type="label">
+				<align>center</align>
+				<left>228</left>
+				<top>-79</top>
+				<width>105</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot3</font>
+				<label>$INFO[System.Time(hh:mm)]</label>
+			</control>
+			<control type="label">
+				<align>right</align>
+				<left>10</left>
+				<top>-80</top>
+				<width>100</width>
+				<height>40</height>
+				<textcolor>themecolor</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>$INFO[Container.CurrentItem]</label>
+			</control>
+			<control type="label">
+				<align>left</align>
+				<left>118</left>
+				<top>-80</top>
+				<width>150</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>/ $INFO[Container.NumItems]</label>
+			</control>
+		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>
@@ -30,6 +69,13 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(movies)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -94,7 +140,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					</itemlayout>
@@ -102,7 +148,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -168,18 +214,25 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(episodes)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -189,7 +242,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -248,7 +301,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					</itemlayout>
@@ -256,7 +309,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -266,7 +319,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -275,7 +328,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -333,11 +386,18 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(tvshows)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
@@ -381,7 +441,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 						<control type="group">
@@ -391,7 +451,7 @@
 								<left>-18</left>
 								<width>100</width>
 								<height>120</height>
-								<font>font12_title</font>
+								<font>font15_title</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>themecolor</textcolor>
@@ -404,7 +464,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -450,7 +510,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 						<control type="group">
@@ -460,7 +520,7 @@
 								<left>-18</left>
 								<width>100</width>
 								<height>120</height>
-								<font>font12_title</font>
+								<font>font15_title</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>themecolor</textcolor>
@@ -470,13 +530,20 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(seasons)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -485,7 +552,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -512,7 +579,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 						<control type="group">
@@ -522,7 +589,7 @@
 								<left>-18</left>
 								<width>100</width>
 								<height>120</height>
-								<font>font12_title</font>
+								<font>font15_title</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>themecolor</textcolor>
@@ -535,7 +602,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -545,7 +612,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -554,7 +621,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -580,7 +647,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 						<control type="group">
@@ -590,7 +657,7 @@
 								<left>-18</left>
 								<width>100</width>
 								<height>120</height>
-								<font>font12_title</font>
+								<font>font15_title</font>
 								<align>center</align>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>themecolor</textcolor>
@@ -600,13 +667,20 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(addons)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -616,7 +690,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -654,7 +728,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -664,7 +738,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -673,7 +747,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -708,6 +782,13 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(videos)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="label">
 							<left>30</left>
 							<width>1040</width>
@@ -750,7 +831,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -792,13 +873,20 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(addons) | Container.Content(seasons) | Container.Content(videos)]">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default) + !Container.Content(studios)</visible>
 						</control>
@@ -818,7 +906,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -845,7 +933,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					</itemlayout>
@@ -853,7 +941,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -863,7 +951,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default) + !Container.Content(studios)</visible>
 						</control>
 						<control type="image">
@@ -881,7 +969,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -908,7 +996,7 @@
 						<width>85</width>
 						<height>85</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+						<texture diffuse="tajo/mask_cover3.png" colordiffuse="DDff0303">$VAR[watched_style]</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					</focusedlayout>
@@ -926,7 +1014,7 @@
 					<onright condition="Control.IsVisible(62) + !Control.IsVisible(8000)">62</onright>
 					<onright condition="Control.IsVisible(8000)">8000</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
@@ -938,10 +1026,27 @@
 				<visible>Container.Content(movies) | Container.Content(genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content() | Container.Content(files) | Container.Content(addons) </visible>
 				<include>VisibleFadeAnimation</include>
 				<control type="image">
+				<visible>!Container.Content(addons)</visible>
+				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="-1725,-10" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="77" time="0" condition="true">Conditional</animation>
 					<width>570</width>
 					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true" fallback="special://skin/extras/moviegenres/Default.jpg">$VAR[PosterVar]</texture>
+					<aspectratio aligny="bottom">scale</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true" fallback="special://skin/extras/moviegenres/Default.jpg">$VAR[PosterVar]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
+					<bordersize>30</bordersize>
+				</control>
+				<control type="image">
+				<visible>Container.Content(addons)</visible>
+				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="-1725,-10" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="77" time="0" condition="true">Conditional</animation>
+					<width>570</width>
+					<height>835</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true" fallback="special://skin/extras/moviegenres/Default.jpg">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
 					<bordersize>30</bordersize>
@@ -950,6 +1055,9 @@
 			<control type="group">
 				<left>1280</left>
 				<top>-40</top>
+				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="-1725,5" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="77" time="0" condition="true">Conditional</animation>
 				<visible>![Container.Content(movies) | Container.Content(genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content() | Container.Content(files) | Container.Content(addons)]</visible>
 				<include>VisibleFadeAnimation</include>
 				<control type="image">
@@ -957,7 +1065,7 @@
 					<width>570</width>
 					<height>348</height>
 					<aspectratio>scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordersize>32</bordersize>
 					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
@@ -1023,7 +1131,7 @@
 					<onright>SetProperty(MediaMenu,True,home)</onright>
 					<onright>SetFocus(9050)</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
@@ -1038,7 +1146,7 @@
 					<onright>SetProperty(MediaMenu,True,home)</onright>
 					<onright>SetFocus(9050)</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
@@ -1082,7 +1190,7 @@
 						<control type="image">
 							<width>506</width>
 							<height>60</height>
-							<texture border="5">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 						</control>
 						<control type="label">
 							<width>506</width>
@@ -1134,19 +1242,58 @@
 	<include name="MusicList">
 		<control type="group">
 				<control type="image">
-					<left>-30</left>
-					<top>-30</top>
+					<left>-680</left>
+					<top>-70</top>
 					<width>2040</width>
 					<height>1277</height>
 					<texture background="true">black.png</texture>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
+				<animation effect="rotatey" center="auto" start="6" end="6" time="0" condition="true">Conditional</animation>
+			<animation effect="slide" center="auto" end="610,-30" time="0" condition="true">Conditional</animation>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
+			<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
+		<control type="label">
+				<align>center</align>
+				<left>228</left>
+				<top>-79</top>
+				<width>105</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot3</font>
+				<label>$INFO[System.Time(hh:mm)]</label>
+			</control>
+			<control type="label">
+				<align>right</align>
+				<left>10</left>
+				<top>-80</top>
+				<width>100</width>
+				<height>40</height>
+				<textcolor>themecolor</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>$INFO[Container.CurrentItem]</label>
+			</control>
+			<control type="label">
+				<align>left</align>
+				<left>118</left>
+				<top>-80</top>
+				<width>150</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>/ $INFO[Container.NumItems]</label>
+			</control>
+		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>
@@ -1160,13 +1307,20 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>!Container.Content(songs) + String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -1176,7 +1330,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!Container.Content(songs) + !String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1227,7 +1381,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -1237,7 +1391,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>!Container.Content(songs) + String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -1246,7 +1400,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!Container.Content(songs) + !String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1294,13 +1448,20 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="Container.Content(addons)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -1310,7 +1471,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1348,7 +1509,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -1358,7 +1519,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -1367,7 +1528,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1402,13 +1563,20 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) | Container.Content(addons)]">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -1418,7 +1586,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1445,7 +1613,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -1455,7 +1623,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -1464,7 +1632,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1498,35 +1666,41 @@
 					<onleft>50</onleft>
 					<onright>9002</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
+				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="-1745,97" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="77" time="0" condition="true">Conditional</animation>
 				<left>1296</left>
 				<top>155</top>
 				<visible>!Container.Content(genres)</visible>
 				<control type="image">
-					<width>570</width>
-					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<width>520</width>
+					<height>520</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
 					<bordersize>30</bordersize>
 				</control>
 			</control>
 			<control type="group">
+				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="-1745,97" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="77" time="0" condition="true">Conditional</animation>
 				<left>1296</left>
 				<top>155</top>
 				<visible>Container.Content(genres)</visible>
 				<control type="image">
-					<width>570</width>
-					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true" fallback="special://skin/extras/musicgenres/Default.jpg">$INFO[ListItem.Label,special://skin/extras/musicgenres/,.jpg]</texture>
+					<width>520</width>
+					<height>520</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true" fallback="special://skin/extras/musicgenres/Default.jpg">$INFO[ListItem.Label,special://skin/extras/musicgenres/,.jpg]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
 					<bordersize>30</bordersize>
@@ -1538,19 +1712,58 @@
 	<include name="AddonList">
 		<control type="group">
 				<control type="image">
-					<left>-30</left>
-					<top>-30</top>
+					<left>-680</left>
+					<top>-70</top>
 					<width>2040</width>
 					<height>1277</height>
 					<texture background="true">black.png</texture>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
+				<animation effect="rotatey" center="auto" start="6" end="6" time="0" condition="true">Conditional</animation>
+<animation effect="slide" center="auto" end="610,-30" time="0" condition="true">Conditional</animation>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
+			<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
+		<control type="label">
+				<align>center</align>
+				<left>228</left>
+				<top>-79</top>
+				<width>105</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot3</font>
+				<label>$INFO[System.Time(hh:mm)]</label>
+			</control>
+			<control type="label">
+				<align>right</align>
+				<left>10</left>
+				<top>-80</top>
+				<width>100</width>
+				<height>40</height>
+				<textcolor>themecolor</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>$INFO[Container.CurrentItem]</label>
+			</control>
+			<control type="label">
+				<align>left</align>
+				<left>118</left>
+				<top>-80</top>
+				<width>150</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>/ $INFO[Container.NumItems]</label>
+			</control>
+		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>
@@ -1565,12 +1778,19 @@
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140">
 						<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
+						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -1580,7 +1800,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1618,7 +1838,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -1628,7 +1848,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -1637,7 +1857,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1682,7 +1902,7 @@
 					<onleft>50</onleft>
 					<onright>9002</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
@@ -1691,11 +1911,14 @@
 			<control type="group">
 				<left>1296</left>
 				<top>155</top>
+				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="-1765,-22" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="73" time="0" condition="true">Conditional</animation>
 				<control type="image">
 					<width>570</width>
 					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
 					<bordersize>30</bordersize>
@@ -1707,19 +1930,58 @@
 	<include name="PictureList">
 		<control type="group">
 				<control type="image">
-					<left>-30</left>
-					<top>-30</top>
+					<left>-680</left>
+					<top>-70</top>
 					<width>2040</width>
 					<height>1277</height>
 					<texture background="true">black.png</texture>
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
+				<animation effect="rotatey" center="auto" start="6" end="6" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="610,-30" time="0" condition="true">Conditional</animation>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
 			<centerleft>ListCenterleft</centerleft>
 			<width>100%</width>
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
+			<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
+		<control type="label">
+				<align>center</align>
+				<left>228</left>
+				<top>-79</top>
+				<width>105</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot3</font>
+				<label>$INFO[System.Time(hh:mm)]</label>
+			</control>
+			<control type="label">
+				<align>right</align>
+				<left>10</left>
+				<top>-80</top>
+				<width>100</width>
+				<height>40</height>
+				<textcolor>themecolor</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>$INFO[Container.CurrentItem]</label>
+			</control>
+			<control type="label">
+				<align>left</align>
+				<left>118</left>
+				<top>-80</top>
+				<width>150</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>/ $INFO[Container.NumItems]</label>
+			</control>
+		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>
@@ -1734,12 +1996,19 @@
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(addons)">
 						<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
+						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -1749,7 +2018,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1787,7 +2056,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -1797,7 +2066,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -1806,7 +2075,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1841,13 +2110,20 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="120" width="1140" condition="!Container.Content(addons)">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -1857,7 +2133,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1884,7 +2160,7 @@
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -1894,7 +2170,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -1903,7 +2179,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -1937,7 +2213,7 @@
 					<onleft>50</onleft>
 					<onright>9002</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
@@ -1946,529 +2222,14 @@
 			<control type="group">
 				<left>1296</left>
 				<top>155</top>
+				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" center="auto" end="-1765,-22" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="73" time="0" condition="true">Conditional</animation>
 				<control type="image">
 					<width>570</width>
 					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
-					<bordersize>30</bordersize>
-				</control>
-			</control>
-		</control>
-	</include>
-	<!-- Slim VideoList-->
-	<include name="SlimVideoList">
-		<control type="group">
-				<control type="image">
-					<left>-30</left>
-					<top>-30</top>
-					<width>2040</width>
-					<height>1277</height>
-					<texture background="true">black.png</texture>
-					<animation effect="fade" end="85" condition="true">Conditional</animation>
-				</control>
-			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<centerleft>ListCenterleft</centerleft>
-			<width>100%</width>
-			<control type="group">
-				<left>100</left>
-				<top>-40</top>
-				<control type="panel" id="50">
-					<top>180</top>
-					<width>1140</width>
-					<height>840</height>
-					<onleft>SetProperty(MediaMenu,True,home)</onleft>
-					<onleft>SetFocus(9050)</onleft>
-					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<itemlayout height="60" width="1140" condition="!Container.Content(addons)">
-						<control type="label">
-							<left>30</left>
-							<width>895</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="image">
-							<left>960</left>
-							<top>17</top>
-							<width>42</width>
-							<height>28</height>
-							<aspectratio>keep</aspectratio>
-							<texture>$VAR[UnFocusHDIndicator]</texture>
-							<colordiffuse>grey2</colordiffuse>
-							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
-						</control>
-						<control type="label">
-							<left>5</left>
-							<width>1060</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="image">
-							<left>1076</left>
-							<width>64</width>
-							<height>64</height>
-							<aspectratio>keep</aspectratio>
-							<texture>$VAR[ListItem.Overlay]</texture>
-						</control>
-						<control type="group">
-							<description>Unwatched episodes</description>
-							<left>1076</left>
-							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>
-							<control type="label">
-								<left>32</left>
-								<width>100</width>
-								<height>62</height>
-								<font>font12_title</font>
-								<align>center</align>
-								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textcolor>themecolor</textcolor>
-								<textoffsetx>18</textoffsetx>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-							</control>
-						</control>
-					</itemlayout>
-					<focusedlayout height="60" width="1140" condition="!Container.Content(addons)">
-						<control type="image">
-							<width>1140</width>
-							<height>60</height>
-							<texture border="4">listselect_fo.png</texture>
-							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>895</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="image">
-							<left>960</left>
-							<top>17</top>
-							<width>42</width>
-							<height>28</height>
-							<aspectratio>keep</aspectratio>
-							<texture>$VAR[UnFocusHDIndicator]</texture>
-							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating)</visible>
-						</control>
-						<control type="label">
-							<left>5</left>
-							<width>1060</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-						<control type="image">
-							<left>1076</left>
-							<width>64</width>
-							<height>64</height>
-							<aspectratio>keep</aspectratio>
-							<texture>$VAR[ListItem.Overlay]</texture>
-						</control>
-						<control type="group">
-							<description>Unwatched episodes</description>
-							<left>1076</left>
-							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>
-							<control type="label">
-								<left>32</left>
-								<width>100</width>
-								<height>62</height>
-								<textcolor>themecolor</textcolor>
-								<font>font12_title</font>
-								<align>center</align>
-								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textoffsetx>18</textoffsetx>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-							</control>
-						</control>
-					</focusedlayout>
-					<itemlayout height="60" width="1140" condition="Container.Content(addons)">
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="60" width="1140" condition="Container.Content(addons)">
-						<control type="image">
-							<width>1140</width>
-							<height>60</height>
-							<texture border="4">listselect_fo.png</texture>
-							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</focusedlayout>
-				</control>
-				<control type="scrollbar" id="60">
-					<left>1148</left>
-					<top>180</top>
-					<width>20</width>
-					<height>840</height>
-					<onup>60</onup>
-					<ondown>60</ondown>
-					<onleft>50</onleft>
-					<onright>SetProperty(MediaMenu,True,home)</onright>
-					<onright>SetFocus(9050)</onright>
-					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-				</control>
-			</control>
-			<control type="group">
-				<left>1296</left>
-				<top>155</top>
-				<control type="image">
-					<width>570</width>
-					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true">$VAR[PosterThumb]</texture>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
-					<bordersize>30</bordersize>
-				</control>
-			</control>
-		</control>
-	</include>
-	<!-- Slim MusicList-->
-	<include name="SlimMusicList">
-		<control type="group">
-				<control type="image">
-					<left>-30</left>
-					<top>-30</top>
-					<width>2040</width>
-					<height>1277</height>
-					<texture background="true">black.png</texture>
-					<animation effect="fade" end="85" condition="true">Conditional</animation>
-				</control>
-			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<centerleft>ListCenterleft</centerleft>
-			<width>100%</width>
-			<control type="group">
-				<left>100</left>
-				<top>-40</top>
-				<control type="panel" id="50">
-					<top>180</top>
-					<width>1140</width>
-					<height>840</height>
-					<onleft>SetProperty(MediaMenu,True,home)</onleft>
-					<onleft>SetFocus(9050)</onleft>
-					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<itemlayout height="60" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
-						<control type="image">
-							<left>5</left>
-							<top>5</top>
-							<width>180</width>
-							<height>50</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
-							<colordiffuse>grey3</colordiffuse>
-							<visible>!ListItem.IsParentFolder</visible>
-						</control>
-						<control type="label">
-							<left>200</left>
-							<width>900</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>210</left>
-							<width>900</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="60" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
-						<control type="image">
-							<width>1140</width>
-							<height>60</height>
-							<texture border="4">listselect_fo.png</texture>
-							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
-						</control>
-						<control type="image">
-							<left>5</left>
-							<top>5</top>
-							<width>180</width>
-							<height>50</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
-							<visible>!ListItem.IsParentFolder</visible>
-						</control>
-						<control type="label">
-							<left>200</left>
-							<width>900</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>210</left>
-							<width>900</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</focusedlayout>
-					<itemlayout height="60" width="1140" condition="![Container.Content(albums) | Container.Content(songs)]">
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="60" width="1140" condition="![Container.Content(albums) | Container.Content(songs)]">
-						<control type="image">
-							<width>1140</width>
-							<height>60</height>
-							<texture border="4">listselect_fo.png</texture>
-							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</focusedlayout>
-				</control>
-				<control type="scrollbar" id="60">
-					<left>1148</left>
-					<top>180</top>
-					<width>20</width>
-					<height>840</height>
-					<onup>60</onup>
-					<ondown>60</ondown>
-					<onleft>50</onleft>
-					<onright>SetProperty(MediaMenu,True,home)</onright>
-					<onright>SetFocus(9050)</onright>
-					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-				</control>
-			</control>
-			<control type="group">
-				<left>1296</left>
-				<top>155</top>
-				<control type="image">
-					<width>570</width>
-					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true">$VAR[PosterThumb]</texture>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
-					<bordersize>30</bordersize>
-				</control>
-			</control>
-		</control>
-	</include>
-	<!-- Slim List-->
-	<include name="SlimList">
-		<control type="group">
-				<control type="image">
-					<left>-30</left>
-					<top>-30</top>
-					<width>2040</width>
-					<height>1277</height>
-					<texture background="true">black.png</texture>
-					<animation effect="fade" end="85" condition="true">Conditional</animation>
-				</control>
-			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-			<centerleft>ListCenterleft</centerleft>
-			<width>100%</width>
-			<control type="group">
-				<left>100</left>
-				<top>-40</top>
-				<control type="panel" id="50">
-					<top>180</top>
-					<width>1140</width>
-					<height>840</height>
-					<onleft>SetProperty(MediaMenu,True,home)</onleft>
-					<onleft>SetFocus(9050)</onleft>
-					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
-					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
-					<scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<itemlayout height="60" width="1140">
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-							<visible>![String.IsEqual(ListItem.Label2,ListItem.Rating) + Skin.HasSetting(Enable.HideRatings)]</visible>
-						</control>
-					</itemlayout>
-					<focusedlayout height="60" width="1140">
-
-						<control type="image">
-							<width>1140</width>
-							<height>60</height>
-							<texture border="4">listselect_fo.png</texture>
-							<visible>Control.HasFocus(50)</visible>
-							<include>VisibleFadeAnimation</include>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>30</left>
-							<width>1080</width>
-							<height>60</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-							<visible>![String.IsEqual(ListItem.Label2,ListItem.Rating) + Skin.HasSetting(Enable.HideRatings)]</visible>
-						</control>
-					</focusedlayout>
-				</control>
-				<control type="scrollbar" id="60">
-					<left>1148</left>
-					<top>180</top>
-					<width>20</width>
-					<height>840</height>
-					<onup>60</onup>
-					<ondown>60</ondown>
-					<onleft>50</onleft>
-					<onright>SetProperty(MediaMenu,True,home)</onright>
-					<onright>SetFocus(9050)</onright>
-					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-				</control>
-			</control>
-			<control type="group">
-				<left>1296</left>
-				<top>155</top>
-				<control type="image">
-					<width>570</width>
-					<height>835</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture background="true">$VAR[PosterThumb]</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
 					<bordersize>30</bordersize>

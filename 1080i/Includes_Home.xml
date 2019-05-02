@@ -64,11 +64,6 @@
 		</focusedlayout>
 		<include>FallbackMenu</include>
 	</include>
-	<include name="MainMenuListFixed">
-		<control type="fixedlist" id="9000">
-			<include>MainMenuListContent</include>
-		</control>
-	</include>
 	<include name="MainMenuListWrapped">
 		<control type="wraplist" id="9000">
 			<include>MainMenuListContent</include>

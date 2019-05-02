@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1133" type="window">
 	<defaultcontrol always="true">50</defaultcontrol>
-	
 	<onload>ClearProperty(MediaMenu,Home)</onload>
-	
 	<controls>
 		<include>CommonBackground</include>
 						<control type="image">
@@ -20,8 +18,10 @@
 			<width>1856</width>
 			<centerleft>50%</centerleft>
 			<control type="group">
-				<left>50</left>
-				<top>-40</top>
+				<left>2</left>
+				<top>-60</top>
+				<animation effect="rotatey" center="auto" start="-3" end="-3" time="0" condition="true">Conditional</animation>
+				<animation effect="zoom" center="auto" end="92" time="0" condition="true">Conditional</animation>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>810</width>
@@ -35,13 +35,20 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="810">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<colordiffuse>grey2</colordiffuse>
 						</control>
 						<control type="label">
@@ -79,7 +86,7 @@
 						<control type="image">
 							<width>810</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -89,7 +96,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -183,24 +190,25 @@
 					</content>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>740</left>
+					<left>748</left>
 					<top>180</top>
-					<width>14</width>
+					<width>20</width>
 					<height>840</height>
 					<onup>60</onup>
 					<ondown>60</ondown>
 					<onleft>50</onleft>
 					<onright>51</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>
 			</control>
 			<control type="group">
-				<left>984</left>
-				<top>-40</top>
+				<left>1040</left>
+				<top>-60</top>
+				<animation effect="rotatey" center="auto" start="9" end="9" time="0" condition="true">Conditional</animation>
 				<control type="panel" id="51">
 					<top>180</top>
 					<width>810</width>
@@ -215,13 +223,20 @@
 					<pagecontrol>61</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="810">
+					<control type="image">
+						<left>-200</left>
+						<top>0</top>
+						<width>1400</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 						<control type="image">
 							<left>15</left>
 							<top>8</top>
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
@@ -231,7 +246,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -269,7 +284,7 @@
 						<control type="image">
 							<width>810</width>
 							<height>120</height>
-							<texture border="4">listselect_fo.png</texture>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
 							<visible>Control.HasFocus(51)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
@@ -279,7 +294,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="image">
@@ -288,7 +303,7 @@
 							<width>105</width>
 							<height>105</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
 							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
 						</control>
 						<control type="label">
@@ -325,16 +340,16 @@
 					<content target="$INFO[Container(50).ListItem.Property(AppsTarget)]" sortby="$INFO[Container(50).ListItem.Property(AppsSortBy)]" sortorder="descending">$INFO[Container(50).ListItem.Property(AppsContent)]</content>
 				</control>
 				<control type="scrollbar" id="61">
-					<left>810</left>
+					<left>835</left>
 					<top>180</top>
-					<width>14</width>
+					<width>20</width>
 					<height>840</height>
 					<onup>60</onup>
 					<ondown>60</ondown>
 					<onleft>51</onleft>
 					<onright>noop</onright>
 					<texturesliderbackground />
-					<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>

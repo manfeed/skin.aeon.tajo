@@ -1076,7 +1076,6 @@
 				<ondown>9050</ondown>
 				<onback>ClearProperty(MediaMenu,Home)</onback>
 				<onback>50</onback>
-				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1129)" reversible="true">conditional</animation>
 				<control type="button" id="203">
 					<description>View options</description>

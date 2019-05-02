@@ -19,8 +19,7 @@
 				</control>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
-			<include condition="!Skin.HasSetting(Enable.SlimList)">AddonList</include>
-			<include condition="Skin.HasSetting(Enable.SlimList)">SlimList</include>
+			<include>AddonList</include>
 			<!-- view id = 50 -->
 		</control>
 		<control type="group">

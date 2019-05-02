@@ -10,8 +10,7 @@
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
-			<include condition="!Skin.HasSetting(Enable.SlimList)">PictureList</include>
-			<include condition="Skin.HasSetting(Enable.SlimList)">SlimList</include>
+			<include>PictureList</include>
 			<!-- view id = 50 -->
 			<include>PictureWall</include>
 			<!-- view id = 592 -->

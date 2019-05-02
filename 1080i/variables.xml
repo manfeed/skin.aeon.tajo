@@ -204,17 +204,6 @@
 		<value>$INFO[VideoPlayer.VideoCodec]</value>
 	</variable>
 	<!-- InfoPanel -->
-	<variable name="InfoPanelDelayOnClickVar">
-		<value condition="String.IsEmpty(Skin.String(InfoPanel.Delay))">Skin.SetString(InfoPanel.Delay,2)</value>
-		<value condition="String.IsEqual(Skin.String(InfoPanel.Delay),2)">Skin.SetString(InfoPanel.Delay,3)</value>
-		<value condition="String.IsEqual(Skin.String(InfoPanel.Delay),3)">Skin.SetString(InfoPanel.Delay,4)</value>
-		<value condition="String.IsEqual(Skin.String(InfoPanel.Delay),4)">Skin.SetString(InfoPanel.Delay,5)</value>
-		<value condition="String.IsEqual(Skin.String(InfoPanel.Delay),5)">Skin.Reset(InfoPanel.Delay)</value>
-	</variable>
-	<variable name="InfoPanelDelayLocalizeVar">
-		<value condition="!String.IsEmpty(Skin.String(InfoPanel.Delay))">$INFO[Skin.String(InfoPanel.Delay),, $LOCALIZE[31090]]</value>
-		<value>$LOCALIZE[351]</value>
-	</variable>
 	<variable name="PosterThumbVar">
 		<value condition="!String.IsEmpty(Container.Art(season.poster))">$INFO[Container.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !Container.COntent(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
@@ -282,14 +271,6 @@
 		<value condition="Control.HasFocus(90016)">$LOCALIZE[31933]</value>
 		<value condition="Control.HasFocus(90017)">$LOCALIZE[31935]</value>
 		<value condition="Control.HasFocus(90020)">$LOCALIZE[31927]</value>
-	</variable>
-	<variable name="HorizontalListNavVar">
-		<value condition="Skin.HasSetting(HorizontalListNav)">$LOCALIZE[31005]</value>
-		<value>$LOCALIZE[571]</value>
-	</variable>
-	<variable name="SlimListSettingVar">
-		<value condition="Skin.HasSetting(Enable.SlimList)">$LOCALIZE[31095]</value>
-		<value>$LOCALIZE[571]</value>
 	</variable>
 	<variable name="WidgetListContent">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),2)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>

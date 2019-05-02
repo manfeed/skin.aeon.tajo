@@ -475,15 +475,6 @@
 			<texture>aeon-tajo.png</texture>
 		</control>
 	</include>
-	<include name="KioskModeButton">
-		<control type="button">
-			<description>Kiosk Mode button</description>
-			<include>ButtonCommonValues</include>
-			<label />
-			<onfocus>ClearProperty(MediaMenu,Home)</onfocus>
-			<onfocus>SetFocus(50)</onfocus>
-		</control>
-	</include>
 	<include name="MediaMenuTop">
 		<top>100</top>
 		<width>400</width>
@@ -498,7 +489,6 @@
 		<ondown>50</ondown>
 		<onback>ClearProperty(MediaMenu,Home)</onback>
 		<onback>50</onback>
-		<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1129)" reversible="true">conditional</animation>
 		<control type="button" id="200">
 			<label>31006</label>
@@ -553,7 +543,6 @@
 				<ondown>9050</ondown>
 				<onback>ClearProperty(MediaMenu,Home)</onback>
 				<onback>50</onback>
-				<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1129)" reversible="true">conditional</animation>
 				<control type="label" id="200">
 					<width>400</width>
@@ -704,7 +693,6 @@
 		<ondown>9050</ondown>
 		<onback>ClearProperty(MediaMenu,Home)</onback>
 		<onback>50</onback>
-		<include condition="Skin.HasSetting(KioskMode.Enabled)">KioskModeButton</include>
 		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1129)" reversible="true">conditional</animation>
 		<control type="label" id="200">
 			<width>400</width>
@@ -1326,6 +1314,39 @@
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+			</control>
+			<control type="label">
+				<align>right</align>
+				<left>1003</left>
+				<top>9</top>
+				<width>100</width>
+				<height>40</height>
+				<textcolor>themecolor</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>$INFO[Container.CurrentItem]</label>
+			</control>
+			<control type="label">
+				<align>left</align>
+				<left>1111</left>
+				<top>9</top>
+				<width>150</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot</font>
+				<label>/ $INFO[Container.NumItems]</label>
+			</control>
+			<control type="label">
+				<align>right</align>
+				<left>1208</left>
+				<top>9</top>
+				<width>105</width>
+				<height>40</height>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<font>Font_plot3</font>
+				<label>$INFO[System.Time(hh:mm)]</label>
 			</control>
 		</control>
 	</include>
