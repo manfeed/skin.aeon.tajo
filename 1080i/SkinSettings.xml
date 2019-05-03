@@ -252,6 +252,24 @@
 						<onclick>Skin.ToggleSetting(animatedposters)</onclick>
 						<selected>Skin.HasSetting(animatedposters)</selected>
 					</control>
+					<control type="radiobutton" id="120">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31182</label>
+						<onclick>Skin.ToggleSetting(noshow_Time)</onclick>
+						<selected>Skin.HasSetting(noshow_Time)</selected>
+					</control>
+					<control type="radiobutton" id="121">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31183</label>
+						<onclick>Skin.ToggleSetting(noshow_numItems)</onclick>
+						<selected>Skin.HasSetting(noshow_numItems)</selected>
+					</control>
 					<control type="radiobutton" id="200">
 						<width>1316</width>
 						<height>90</height>

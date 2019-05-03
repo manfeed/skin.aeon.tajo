@@ -1315,39 +1315,6 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
-			<control type="label">
-				<align>right</align>
-				<left>1003</left>
-				<top>9</top>
-				<width>100</width>
-				<height>40</height>
-				<textcolor>themecolor</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>$INFO[Container.CurrentItem]</label>
-			</control>
-			<control type="label">
-				<align>left</align>
-				<left>1111</left>
-				<top>9</top>
-				<width>150</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>/ $INFO[Container.NumItems]</label>
-			</control>
-			<control type="label">
-				<align>right</align>
-				<left>1208</left>
-				<top>9</top>
-				<width>105</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot3</font>
-				<label>$INFO[System.Time(hh:mm)]</label>
-			</control>
 		</control>
 	</include>
 	<include name="Carat_movie">

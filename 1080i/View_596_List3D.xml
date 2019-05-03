@@ -2650,47 +2650,6 @@
 				<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
 			</control>
 		</control>
-		<control type="group">
-			<visible>Control.HasFocus(596)</visible>
-			<animation effect="rotatey" center="auto" start="8" end="8" time="0" condition="true">Conditional</animation>
-			<animation effect="fade" end="100" time="200">Visible</animation>
-			<animation effect="fade" end="0" time="200">Hidden</animation>
-			<top>1066</top>
-			<left>1828</left>
-			<control type="label">
-				<align>right</align>
-				<left>98</left>
-				<top>-78</top>
-				<width>105</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot3</font>
-				<label>$INFO[System.Time(hh:mm)]</label>
-			</control>
-			<control type="label">
-				<align>right</align>
-				<left>-90</left>
-				<top>-80</top>
-				<width>100</width>
-				<height>40</height>
-				<textcolor>themecolor</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>$INFO[Container.CurrentItem]</label>
-			</control>
-			<control type="label">
-				<align>left</align>
-				<left>18</left>
-				<top>-80</top>
-				<width>150</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>/ $INFO[Container.NumItems]</label>
-			</control>
-		</control>
 		<control type="scrollbar" id="80">
 			<include>ScrollBar_Vertical</include>
 			<left>1875</left>

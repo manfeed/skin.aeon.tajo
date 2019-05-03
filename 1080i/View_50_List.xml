@@ -19,54 +19,19 @@
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
-			<control type="group">
-			<visible>Control.IsVisible(50)</visible>
-				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
-		<control type="label">
-				<align>center</align>
-				<left>228</left>
-				<top>-79</top>
-				<width>105</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot3</font>
-				<label>$INFO[System.Time(hh:mm)]</label>
-			</control>
-			<control type="label">
-				<align>right</align>
-				<left>10</left>
-				<top>-80</top>
-				<width>100</width>
-				<height>40</height>
-				<textcolor>themecolor</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>$INFO[Container.CurrentItem]</label>
-			</control>
-			<control type="label">
-				<align>left</align>
-				<left>118</left>
-				<top>-80</top>
-				<width>150</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>/ $INFO[Container.NumItems]</label>
-			</control>
-		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>
 					<height>840</height>
+					<animation effect="slide" end="-15,0" time="250" condition="Control.HasFocus(5919) | Control.HasFocus(80)">Conditional</animation>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
-					<onright>60</onright>
+					<onright condition="!Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]">5919</onright>
+					<onright>80</onright>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>80</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(movies)">
 					<control type="image">
@@ -1001,24 +966,15 @@
 					</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
-					<left>1148</left>
-					<top>180</top>
-					<width>20</width>
-					<height>840</height>
-					<onup>60</onup>
-					<ondown>60</ondown>
-					<onleft>50</onleft>
-					<onright condition="!Control.IsVisible(62) + !Control.IsVisible(8000)">SetProperty(MediaMenu,True,home)</onright>
-					<onright condition="!Control.IsVisible(62) + !Control.IsVisible(8000)">SetFocus(9050)</onright>
-					<onright condition="Control.IsVisible(62) + !Control.IsVisible(8000)">62</onright>
-					<onright condition="Control.IsVisible(8000)">8000</onright>
-					<texturesliderbackground />
-					<texturesliderbar colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
-					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-				</control>
+			<control type="scrollbar" id="80">
+				<include>ScrollBar_Vertical</include>
+				<left>1148</left>
+				<top>174</top>
+				<height>842</height>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(80)</visible>
+			</control>
 			</control>
 			<control type="group">
 				<left>1296</left>
@@ -1257,54 +1213,19 @@
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
-			<control type="group">
-			<visible>Control.IsVisible(50)</visible>
-				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
-		<control type="label">
-				<align>center</align>
-				<left>228</left>
-				<top>-79</top>
-				<width>105</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot3</font>
-				<label>$INFO[System.Time(hh:mm)]</label>
-			</control>
-			<control type="label">
-				<align>right</align>
-				<left>10</left>
-				<top>-80</top>
-				<width>100</width>
-				<height>40</height>
-				<textcolor>themecolor</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>$INFO[Container.CurrentItem]</label>
-			</control>
-			<control type="label">
-				<align>left</align>
-				<left>118</left>
-				<top>-80</top>
-				<width>150</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>/ $INFO[Container.NumItems]</label>
-			</control>
-		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>
 					<height>840</height>
+					<animation effect="slide" end="-22,0" time="250" condition="Control.HasFocus(5919) | Control.HasFocus(80)">Conditional</animation>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
-					<onright>60</onright>
+					<onright condition="!Container.Content(songs) + [String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[558])]">5919</onright>
+					<onright>80</onright>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>80</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout height="120" width="1140" condition="Container.Content(albums) | Container.Content(songs)">
 					<control type="image">
@@ -1656,7 +1577,16 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="80">
+				<include>ScrollBar_Vertical</include>
+				<left>1148</left>
+				<top>174</top>
+				<height>842</height>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(80)</visible>
+			</control>
+				<!--control type="scrollbar" id="60">
 					<left>1148</left>
 					<top>180</top>
 					<width>20</width>
@@ -1670,7 +1600,7 @@
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-				</control>
+				</control-->
 			</control>
 			<control type="group">
 				<animation effect="rotatey" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
@@ -1687,6 +1617,19 @@
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="40">dialogs/default/bg.png</bordertexture>
 					<bordersize>30</bordersize>
+				</control>
+				<control type="textbox">
+					<visible>![Container.Content(albums) + String.StartsWith(ListItem.Label,*)] | Container.Content(artists)</visible>
+					<left>8</left>
+					<top>592</top>
+					<width>510</width>
+					<height>150</height>
+					<aligny>top</aligny>
+					<align>center</align>
+					<font>titlemus2</font>
+					<label>$VAR[value_videotitle]</label>
+					<textcolor>themecolor</textcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
 			<control type="group">
@@ -1727,43 +1670,6 @@
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
-			<control type="group">
-			<visible>Control.IsVisible(50)</visible>
-				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
-		<control type="label">
-				<align>center</align>
-				<left>228</left>
-				<top>-79</top>
-				<width>105</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot3</font>
-				<label>$INFO[System.Time(hh:mm)]</label>
-			</control>
-			<control type="label">
-				<align>right</align>
-				<left>10</left>
-				<top>-80</top>
-				<width>100</width>
-				<height>40</height>
-				<textcolor>themecolor</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>$INFO[Container.CurrentItem]</label>
-			</control>
-			<control type="label">
-				<align>left</align>
-				<left>118</left>
-				<top>-80</top>
-				<width>150</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>/ $INFO[Container.NumItems]</label>
-			</control>
-		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>
@@ -1945,43 +1851,6 @@
 			<control type="group">
 				<left>100</left>
 				<top>-40</top>
-			<control type="group">
-			<visible>Control.IsVisible(50)</visible>
-				<animation effect="slide" center="auto" end="817,1130" time="0" condition="true">Conditional</animation>
-		<control type="label">
-				<align>center</align>
-				<left>228</left>
-				<top>-79</top>
-				<width>105</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot3</font>
-				<label>$INFO[System.Time(hh:mm)]</label>
-			</control>
-			<control type="label">
-				<align>right</align>
-				<left>10</left>
-				<top>-80</top>
-				<width>100</width>
-				<height>40</height>
-				<textcolor>themecolor</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>$INFO[Container.CurrentItem]</label>
-			</control>
-			<control type="label">
-				<align>left</align>
-				<left>118</left>
-				<top>-80</top>
-				<width>150</width>
-				<height>40</height>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<font>Font_plot</font>
-				<label>/ $INFO[Container.NumItems]</label>
-			</control>
-		</control>
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>1140</width>

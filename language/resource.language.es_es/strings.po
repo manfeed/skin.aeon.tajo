@@ -520,6 +520,14 @@ msgctxt "#31181"
 msgid "Display cast in video views"
 msgstr "Muestra el reparto en vistas de video"
 
+msgctxt "#31182"
+msgid "Hide current time in media views"
+msgstr "Oculta la hora en las vistas multimedia"
+
+msgctxt "#31183"
+msgid "Hide number of items in media views"
+msgstr "Oculta el número de elementos en vistas multimedia"
+
 msgctxt "#31200"
 msgid "The Image Resource Select Add-on is used to choose a Kodi resource image pack similiar to weather artwork and icons."
 msgstr "El Add-on de Recursos de Imagen se usa para escoger entre packs de imágenes similares a los iconos y la meteorología."
