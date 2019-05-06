@@ -901,6 +901,13 @@
 					<ondown>5903</ondown>
 					<focusedlayout height="266">
 						<control type="group">
+					<control type="image">
+						<left>-80</left>
+						<top>-2</top>
+						<width>648</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 							<control type="image">
 								<visible>Control.HasFocus(5903)</visible>
 								<width>564</width>
@@ -1081,6 +1088,13 @@
 					<focusposition>0</focusposition>
 					<viewtype label="Triple 3D">list</viewtype>
 					<focusedlayout height="61.5" condition="Container.Content(tvshows) + !System.IdleTime(2)">
+					<control type="image">
+						<left>-80</left>
+						<top>-2</top>
+						<width>915</width>
+						<height>3</height>
+						<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+					</control>
 							<control type="image">
 								<top>-500</top>
 								<left>-500</left>
