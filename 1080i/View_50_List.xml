@@ -1046,21 +1046,21 @@
 						<left>32</left>
 						<colordiffuse>grey2</colordiffuse>
 						<include>MediaFlagVars</include>
-						<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+						<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
 						<left>217</left>
 						<colordiffuse>grey2</colordiffuse>
 						<include>MediaFlagVars</include>
-						<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+						<texture>$VAR[audioc_1]</texture>
 						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="image">
 						<left>402</left>
 						<colordiffuse>grey2</colordiffuse>
 						<include>MediaFlagVars</include>
-						<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
+						<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					</control>
 				</control>
