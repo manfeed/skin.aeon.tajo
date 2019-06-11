@@ -1256,7 +1256,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="IconsList3D">
+	<include name="IconsMulti">
 		<control type="group">
 			<visible>!ListItem.IsCollection</visible>
 			<animation effect="rotatey" center="auto" start="7" end="7" time="0" condition="Control.IsVisible(596)">Conditional</animation>
@@ -1278,6 +1278,43 @@
 				<wrapmultiline>true</wrapmultiline>
 				<scroll>false</scroll>
 				<visible>String.IsEmpty(Control.GetLabel(3748))</visible>
+			</control>
+			<!-- Mpaa -->
+			<control type="image">
+				<left>156</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+			</control>
+			<!-- Codec de video -->
+			<control type="image">
+				<left>312</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+			</control>
+			<!-- Resolucao -->
+			<control type="image">
+				<left>462</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+			</control>
+			<!-- Aspecto -->
+			<control type="image">
+				<left>612</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+			</control>
+		</control>
+	</include>
+		<include name="IconsList3D">
+		<control type="group">
+			<visible>!ListItem.IsCollection</visible>
+			<animation effect="rotatey" center="auto" start="7" end="7" time="0" condition="Control.IsVisible(596)">Conditional</animation>
+			<left>52</left>
+			<top>970</top>
+			<!-- Estudio -->
+			<control type="image">
+				<include>FlagImage</include>
+				<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 			</control>
 			<!-- Mpaa -->
 			<control type="image">

@@ -676,7 +676,7 @@
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<left>22</left>
 					<top>-355</top>
-					<include>IconsList3D</include>
+					<include>IconsMulti</include>
 				</control>
 				<control type="group">
 					<control type="list" id="58631">
