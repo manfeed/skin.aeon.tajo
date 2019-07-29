@@ -121,7 +121,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<left>112</left>
+					<left>117</left>
 					<top>355</top>
 					<control type="grouplist">
 						<left>10</left>
@@ -187,7 +187,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<left>325</left>
+					<left>330</left>
 					<top>355</top>
 					<control type="grouplist">
 						<left>10</left>

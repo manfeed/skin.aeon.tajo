@@ -299,6 +299,11 @@
 			<size>21</size>
 		</font>
 		<font>
+			<name>fontMW</name>
+			<filename>Kiye Sans.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
 			<name>font12d</name>
 			<filename>Kiye Sans.ttf</filename>
 			<size>32</size>
@@ -550,7 +555,7 @@
 			<style>bold</style>
 			<size>30</size>
 		</font>
-		
+
 		<font>
 			<name>fontArial15</name>
 			<filename>Arial.ttf</filename>

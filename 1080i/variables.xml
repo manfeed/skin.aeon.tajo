@@ -937,36 +937,44 @@
 		<value condition="!String.IsEmpty(skin.string(resource.images.mediaicons.path)) + String.IsEqual(skin.string(resource.images.mediaicons.path),resource://resource.images.mediaicons.coloured/)">resource://resource.images.mediaicons.coloured/</value>
 	</variable>
 	<variable name="audiochannelstajo1">
-		<value condition="String.Contains(ListItem.Property(AudioChannels.1),1)">[B]1.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.1),2)">[B]2.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.1),5)">[B]5.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.1),6)">[B]5.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.1),7)">[B]6.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.1),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),1)">[B]1.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),2)">[B]2.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),4)">[B]4.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),5)">[B]5.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),6)">[B]5.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),7)">[B]6.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),10)">[B]9.1[/B]</value>
 	</variable>
 	<variable name="audiochannelstajo2">
-		<value condition="String.Contains(ListItem.Property(AudioChannels.2),1)">[B]1.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.2),2)">[B]2.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.2),5)">[B]5.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.2),6)">[B]5.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.2),7)">[B]6.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.2),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),1)">[B]1.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),2)">[B]2.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),4)">[B]4.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),5)">[B]5.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),6)">[B]5.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),7)">[B]6.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.2),10)">[B]9.1[/B]</value>
 	</variable>
 	<variable name="audiochannelstajo3">
-		<value condition="String.Contains(ListItem.Property(AudioChannels.3),1)">[B]1.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.3),2)">[B]2.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.3),5)">[B]5.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.3),6)">[B]5.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.3),7)">[B]6.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.3),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),1)">[B]1.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),2)">[B]2.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),4)">[B]4.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),5)">[B]5.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),6)">[B]5.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),7)">[B]6.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.3),10)">[B]9.1[/B]</value>
 	</variable>
 	<variable name="audiochannelstajo4">
-		<value condition="String.Contains(ListItem.Property(AudioChannels.4),1)">[B]1.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.4),2)">[B]2.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.4),5)">[B]5.0[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.4),6)">[B]5.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.4),7)">[B]6.1[/B]</value>
-		<value condition="String.Contains(ListItem.Property(AudioChannels.4),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),1)">[B]1.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),2)">[B]2.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),4)">[B]4.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),5)">[B]5.0[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),6)">[B]5.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),7)">[B]6.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),8)">[B]7.1[/B]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.4),10)">[B]9.1[/B]</value>
 	</variable>
 	<variable name="audioc_1">
 		<value>$VAR[mediaicons_path]audiocodec/$INFO[ListItem.Property(AudioCodec.1),,.png]</value>

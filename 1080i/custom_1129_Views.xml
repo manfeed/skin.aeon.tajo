@@ -150,6 +150,12 @@
 					<visible>Container.Content(albums) | Container.Content(artists)</visible>
 				</item>
 				<item>
+					<label>MultiWall</label>
+					<onclick>Container.SetViewMode(587)</onclick>
+					<visible>Window.IsActive(videos)</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]</visible>
+				</item>
+				<item>
 					<label>Banner 3D</label>
 					<onclick>Container.SetViewMode(594)</onclick>
 					<visible>Window.IsActive(videos)</visible>
