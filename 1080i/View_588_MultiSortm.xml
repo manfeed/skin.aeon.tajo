@@ -576,7 +576,7 @@
 						<font>Font_plot</font>
 						<scroll>true</scroll>
 						<scrollsuffix>  -  </scrollsuffix>
-						<label>$INFO[ListItem.Genre</label>
+						<label>$INFO[ListItem.Genre]</label>
 					</control>
 				</control>
 				<control type="group">

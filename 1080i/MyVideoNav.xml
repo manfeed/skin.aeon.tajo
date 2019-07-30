@@ -6,11 +6,11 @@
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onload>AlarmClock(AnimMulti2,SetProperty(AnimWall2,True,home),00:02,silent)</onload>
 	<onload condition="Control.IsVisible(589)">SetProperty(RowTitle,True,home)</onload>
-	<onload condition="String.Contains(Container.Viewmode,Shelf 3D) + !Integer.IsGreater(Container.CurrentItem,1) + String.IsEmpty(Window(home).Property(MediaMovie5))">SetFocus(595,4)</onload>
+	<onload condition="String.Contains(Container.Viewmode,Shelf 3D) + !Integer.IsGreater(Container.CurrentItem,1) + String.IsEmpty(Window(home).Property(MediaMovie5))">Control.Move(595,4)</onload>
 	<onload condition="Container.Content(movies)">SetProperty(MediaMovie5,True,home)</onload>
 	<onload condition="String.Contains(Container.Viewmode,MultiWall) + !Integer.IsGreater(Container.CurrentItem,1) + String.IsEmpty(Window(home).Property(MediaMovie7))">SetFocus(587,24)</onload>
 	<onload condition="Container.Content(movies)">SetProperty(MediaMovie7,True,home)</onload>
-	<onload condition="String.Contains(Container.Viewmode,List 3D) + !Integer.IsGreater(Container.CurrentItem,1) + String.IsEmpty(Window(home).Property(MediaMovie6))">SetFocus(596,2)</onload>
+	<onload condition="String.Contains(Container.Viewmode,List 3D) + !Integer.IsGreater(Container.CurrentItem,1) + String.IsEmpty(Window(home).Property(MediaMovie6))">Control.Move(596,2)</onload>
 	<onload condition="Container.Content(movies)">SetProperty(MediaMovie6,True,home)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + !Skin.HasSetting(Disable.NextAired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onunload>ClearProperty(RowTitle,Home)</onunload>
