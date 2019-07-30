@@ -287,6 +287,7 @@
 				</focusedlayout>
 			</control>
 			<control type="group">
+			<visible>Control.IsVisible(587)</visible>
 				<visible>!System.HasVisibleModalDialog</visible>
 				<visible>System.IdleTime(4) + !Integer.IsGreater(Container(587).Column,3)</visible>
 				<visible>String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
@@ -384,6 +385,7 @@
 				</control>	
 			</control>
 			<control type="group">
+			<visible>Control.IsVisible(587)</visible>
 				<visible>!System.HasVisibleModalDialog</visible>
 				<visible>String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
 				<visible>System.IdleTime(4) + Integer.IsGreater(Container(587).Column,3)</visible>
@@ -481,6 +483,7 @@
 				</control>	
 			</control>
 			<control type="textbox">
+			<visible>Control.IsVisible(587)</visible>
 				<visible>!System.HasVisibleModalDialog</visible>
 				<visible>System.IdleTime(4) + Integer.IsGreater(Container(587).Column,3)</visible>
 				<visible>ListItem.IsCollection + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
