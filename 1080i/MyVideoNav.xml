@@ -21,7 +21,7 @@
 	<onunload>ClearProperty(RowDate,Home)</onunload>
 	<onunload>ClearProperty(AnimWall2,Home)</onunload>
 	<controls>
-		<include condition="!Control.IsVisible(587)">CommonBackground</include>
+		<include>CommonBackground</include>
 		<control type="fadelabel" id="4410">
 			<top>-100</top>
 			<width>2560</width>

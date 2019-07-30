@@ -32,7 +32,8 @@
 			<top>-10</top>
 			<width>2040</width>
 			<height>1277</height>
-			<texture background="true">black.png</texture>
+			<texture colordiffuse="BBFFFFFF">black.png</texture>
+			<!-- <texture background="true">black.png</texture> -->
 		</control>
 		<control type="list" id="5975">
 			<visible>ListItem.IsCollection</visible>
@@ -287,7 +288,7 @@
 				</focusedlayout>
 			</control>
 			<control type="group">
-			<visible>Control.IsVisible(587)</visible>
+				<visible>Control.IsVisible(587)</visible>
 				<visible>!System.HasVisibleModalDialog</visible>
 				<visible>System.IdleTime(4) + !Integer.IsGreater(Container(587).Column,3)</visible>
 				<visible>String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
@@ -385,7 +386,7 @@
 				</control>	
 			</control>
 			<control type="group">
-			<visible>Control.IsVisible(587)</visible>
+				<visible>Control.IsVisible(587)</visible>
 				<visible>!System.HasVisibleModalDialog</visible>
 				<visible>String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
 				<visible>System.IdleTime(4) + Integer.IsGreater(Container(587).Column,3)</visible>
@@ -483,7 +484,7 @@
 				</control>	
 			</control>
 			<control type="textbox">
-			<visible>Control.IsVisible(587)</visible>
+				<visible>Control.IsVisible(587)</visible>
 				<visible>!System.HasVisibleModalDialog</visible>
 				<visible>System.IdleTime(4) + Integer.IsGreater(Container(587).Column,3)</visible>
 				<visible>ListItem.IsCollection + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
@@ -504,7 +505,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,15)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-238</param>
 						<param name="MWTopSt">660</param>
@@ -514,14 +515,17 @@
 						<param name="MWTim">2550</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">-238</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">248</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-16</param>
-					<param name="MWTim">2550</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">-238</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">248</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-16</param>
+						<param name="MWTim">2550</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">-238</param>
 					<param name="MWTopSt">0</param>
@@ -565,7 +569,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,14)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-478</param>
 						<param name="MWTopSt">660</param>
@@ -575,14 +579,17 @@
 						<param name="MWTim">2325</param>
 					</include>	
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">-478</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">488</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-15</param>
-					<param name="MWTim">2250</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">-478</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">488</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-15</param>
+						<param name="MWTim">2250</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">-478</param>
 					<param name="MWTopSt">0</param>
@@ -626,7 +633,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,13)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-718</param>
 						<param name="MWTopSt">660</param>
@@ -636,14 +643,17 @@
 						<param name="MWTim">2250</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">-718</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">728</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-14</param>
-					<param name="MWTim">2150</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">-718</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">728</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-14</param>
+						<param name="MWTim">2150</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">-718</param>
 					<param name="MWTopSt">0</param>
@@ -687,7 +697,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,12)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-958</param>
 						<param name="MWTopSt">660</param>
@@ -697,14 +707,17 @@
 						<param name="MWTim">2400</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">-958</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">968</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-13</param>
-					<param name="MWTim">2650</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">-958</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">968</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-13</param>
+						<param name="MWTim">2650</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">-958</param>
 					<param name="MWTopSt">0</param>
@@ -748,7 +761,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,3)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-1198</param>
 						<param name="MWTopSt">660</param>
@@ -758,14 +771,17 @@
 						<param name="MWTim">2500</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">-1198</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">1208</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-12</param>
-					<param name="MWTim">2350</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">-1198</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">1208</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-12</param>
+						<param name="MWTim">2350</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">-1198</param>
 					<param name="MWTopSt">0</param>
@@ -809,7 +825,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,2)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-1438</param>
 						<param name="MWTopSt">660</param>
@@ -819,14 +835,17 @@
 						<param name="MWTim">2600</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">-1438</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">1448</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-11</param>
-					<param name="MWTim">2450</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">-1438</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">1448</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-11</param>
+						<param name="MWTim">2450</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">-1438</param>
 					<param name="MWTopSt">0</param>
@@ -870,7 +889,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,1)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-1678</param>
 						<param name="MWTopSt">660</param>
@@ -880,14 +899,17 @@
 						<param name="MWTim">2300</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">-1678</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">1688</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-10</param>
-					<param name="MWTim">2650</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">-1678</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">1688</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-10</param>
+						<param name="MWTim">2650</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">-1678</param>
 					<param name="MWTopSt">0</param>
@@ -931,7 +953,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,0)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">242</param>
 						<param name="MWTopSt">660</param>
@@ -941,14 +963,17 @@
 						<param name="MWTim">2300</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">242</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">-232</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-18</param>
-					<param name="MWTim">2400</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">242</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">-232</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-18</param>
+						<param name="MWTim">2400</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">242</param>
 					<param name="MWTopSt">0</param>
@@ -992,7 +1017,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,1)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">482</param>
 						<param name="MWTopSt">660</param>
@@ -1002,14 +1027,17 @@
 						<param name="MWTim">2200</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">482</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">-472</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-19</param>
-					<param name="MWTim">2500</param>
-				</include>	
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">482</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">-472</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-19</param>
+						<param name="MWTim">2500</param>
+					</include>	
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">482</param>
 					<param name="MWTopSt">0</param>
@@ -1053,7 +1081,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,2)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">722</param>
 						<param name="MWTopSt">660</param>
@@ -1063,14 +1091,17 @@
 						<param name="MWTim">2425</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">722</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">-712</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-20</param>
-					<param name="MWTim">2600</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">722</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">-712</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-20</param>
+						<param name="MWTim">2600</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">722</param>
 					<param name="MWTopSt">0</param>
@@ -1114,7 +1145,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,3)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">962</param>
 						<param name="MWTopSt">660</param>
@@ -1124,14 +1155,17 @@
 						<param name="MWTim">2650</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">962</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">-952</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-21</param>
-					<param name="MWTim">2125</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">962</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">-952</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-21</param>
+						<param name="MWTim">2125</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">962</param>
 					<param name="MWTopSt">0</param>
@@ -1175,7 +1209,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,12)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">1202</param>
 						<param name="MWTopSt">660</param>
@@ -1185,14 +1219,17 @@
 						<param name="MWTim">2400</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">1202</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">-1192</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-22</param>
-					<param name="MWTim">2325</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">1202</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">-1192</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-22</param>
+						<param name="MWTim">2325</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">1202</param>
 					<param name="MWTopSt">0</param>
@@ -1236,7 +1273,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,13)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">1442</param>
 						<param name="MWTopSt">660</param>
@@ -1246,14 +1283,17 @@
 						<param name="MWTim">2500</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">1442</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">-1432</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-23</param>
-					<param name="MWTim">2450</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">1442</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">-1432</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-23</param>
+						<param name="MWTim">2450</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">1442</param>
 					<param name="MWTopSt">0</param>
@@ -1297,7 +1337,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,14)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">1682</param>
 						<param name="MWTopSt">660</param>
@@ -1307,14 +1347,17 @@
 						<param name="MWTim">2600</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">1682</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">-1672</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-24</param>
-					<param name="MWTim">2225</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">1682</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">-1672</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-24</param>
+						<param name="MWTim">2225</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">1682</param>
 					<param name="MWTopSt">0</param>
@@ -1357,7 +1400,7 @@
 			<control type="group">
 				<visible>Control.IsVisible(587)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2)</visible>
+					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">2</param>
 						<param name="MWTopSt">660</param>
@@ -1367,14 +1410,17 @@
 						<param name="MWTim">2400</param>
 					</include>
 				</control>
-				<include content="ForMWall">
-					<param name="MWLeftSt">2</param>
-					<param name="MWTopSt">330</param>
-					<param name="MWLeft">8</param>
-					<param name="MWTop">-310</param>
-					<param name="MWPos">-17</param>
-					<param name="MWTim">2600</param>
-				</include>
+				<control type="group">
+					<visible>!Integer.IsEqual(Container(587).Row,0)</visible>
+					<include content="ForMWall">
+						<param name="MWLeftSt">2</param>
+						<param name="MWTopSt">330</param>
+						<param name="MWLeft">8</param>
+						<param name="MWTop">-310</param>
+						<param name="MWPos">-17</param>
+						<param name="MWTim">2600</param>
+					</include>
+				</control>
 				<include content="ForMWall">
 					<param name="MWLeftSt">2</param>
 					<param name="MWTopSt">-330</param>
