@@ -33,7 +33,6 @@
 			<width>2040</width>
 			<height>1277</height>
 			<texture colordiffuse="BBFFFFFF">black.png</texture>
-			<!-- <texture background="true">black.png</texture> -->
 		</control>
 		<control type="list" id="5975">
 			<visible>ListItem.IsCollection</visible>
@@ -89,6 +88,7 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="240" height="330">
+					<include>Button_MW</include>
 					<control type="group">
 						<control type="image">
 							<visible>!String.IsEmpty(Window(Home).Property(AnimWall2))</visible>
@@ -1525,9 +1525,17 @@
 					<width>259</width>
 					<height>350</height>
 					<onleft>SetFocus(587)</onleft>
+					<onleft>Action(Left)</onleft>
 					<onup>SetFocus(587)</onup>
+					<onup>Action(Up)</onup>
+					<onup condition="Integer.IsGreater(Container(587).CurrentItem,34)">Action(Up)</onup>
+					<onup condition="Integer.IsGreater(Container(587).CurrentItem,34)">Action(Down)</onup>
 					<onright>SetFocus(587)</onright>
+					<onright>Action(Right)</onright>
 					<ondown>SetFocus(587)</ondown>
+					<ondown>Action(Down)</ondown>
+					<ondown condition="!String.IsEmpty(Container(587).ListItemNoWrap(34).Label">Action(Up)</ondown>
+					<ondown condition="!String.IsEmpty(Container(587).ListItemNoWrap(34).Label">Action(Down)</ondown>
 					<onclick>SetProperty(MediaMenu,True,home)</onclick>
 					<onclick>ClearProperty(AnimWall2,home)</onclick>
 					<onclick>SetFocus(9050)</onclick>

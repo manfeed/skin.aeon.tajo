@@ -77,6 +77,15 @@
 		<orientation>vertical</orientation>
 		<colordiffuse>themecolor</colordiffuse>
 	</include>
+	<include name="Button_MW">
+		<control type="button" id="5877">
+			<include>HiddenObject</include>
+			<onfocus condition="!Integer.IsGreater(Container(587).Row,0) + Integer.IsGreater(Container(587).CurrentItem,17)">Control.Move(587,-1)</onfocus>
+			<onfocus condition="!Integer.IsGreater(Container(587).Row,0) + Integer.IsGreater(Container(587).CurrentItem,17)">Control.Move(587,1)</onfocus>
+			<onfocus condition="Integer.IsGreater(Container(587).Row,1) + !String.IsEmpty(Container(587).ListItemNoWrap(17).Label">Control.Move(587,1)</onfocus>
+			<onfocus condition="Integer.IsGreater(Container(587).Row,1) + !String.IsEmpty(Container(587).ListItemNoWrap(17).Label">Control.Move(587,-1)</onfocus>
+		</control>
+	</include>
 	<include name="Res_brow">
 		<param name="left_res" default="0" />
 		<param name="width_res" default="0" />
