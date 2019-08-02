@@ -1,20 +1,20 @@
 <includes>
 	<include name="Animation_NewWallFloat">
-		<animation effect="slide" end="0,-330" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Row,1)">Conditional</animation>
-		<animation effect="slide" end="120,0" time="500" tween="cubic" easing="inout" condition="!Integer.IsGreater(Container(587).Column,0)">Conditional</animation>
-		<animation effect="slide" end="240,0" time="500" tween="cubic" easing="inout" condition="!Integer.IsGreater(Container(587).Column,4)">Conditional</animation>
-		<animation effect="slide" end="-240,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,5)">Conditional</animation>
-		<animation effect="slide" end="-240,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,6)">Conditional</animation>
-		<animation effect="slide" end="-240,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,7)">Conditional</animation>
-		<animation effect="slide" end="-240,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,8)">Conditional</animation>
-		<animation effect="slide" end="-240,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,9)">Conditional</animation>
-		<animation effect="slide" end="-240,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,10)">Conditional</animation>
-		<animation effect="slide" end="-240,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,11)">Conditional</animation>
-		<animation effect="slide" end="-120,0" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,15)">Conditional</animation>
+		<animation effect="slide" end="0,-330" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Row,1)">Conditional</animation>
+		<animation effect="slide" end="120,0" delay="100" time="500" tween="cubic" easing="inout" condition="!Integer.IsGreater(Container(587).Column,0)">Conditional</animation>
+		<animation effect="slide" end="240,0" delay="100" time="500" tween="cubic" easing="inout" condition="!Integer.IsGreater(Container(587).Column,4)">Conditional</animation>
+		<animation effect="slide" end="-240,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,5)">Conditional</animation>
+		<animation effect="slide" end="-240,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,6)">Conditional</animation>
+		<animation effect="slide" end="-240,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,7)">Conditional</animation>
+		<animation effect="slide" end="-240,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,8)">Conditional</animation>
+		<animation effect="slide" end="-240,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,9)">Conditional</animation>
+		<animation effect="slide" end="-240,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,10)">Conditional</animation>
+		<animation effect="slide" end="-240,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,11)">Conditional</animation>
+		<animation effect="slide" end="-120,0" delay="100" time="500" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(587).Column,15)">Conditional</animation>
 	</include>
 	<include name="Animation_NewWallFloat_2">
 		<animation effect="slide" end="0,330" condition="Integer.IsGreater(Container(587).Row,0)">Conditional</animation>
-		<animation effect="slide" end="0,330" condition="Integer.IsGreater(Container(587).Row,2)">Conditional</animation>
+		<animation effect="slide" end="0,330" condition="<visible>Integer.IsGreater(Container(587).Row,2)</visible>">Conditional</animation>
 		<animation effect="slide" end="120,0" condition="!Integer.IsGreater(Container(587).Column,0)">Conditional</animation>
 		<animation effect="slide" end="240,0" condition="Integer.IsGreater(Container(587).Column,0)">Conditional</animation>
 		<animation effect="slide" end="240,0" condition="Integer.IsGreater(Container(587).Column,1)">Conditional</animation>
@@ -120,12 +120,11 @@
 							<animation type="Conditional" reversible="false" condition="System.IdleTime(7) + !Integer.IsGreater(Container(587).Column,3)">
 								<effect type="slide" end="-253,0" time="600" tween="cubic" easing="inout"/>
 							</animation>
-							<left>60</left>
-							<top>30</top>
-							<width>175</width>
-							<height>269</height>
-							<texture diffuse="home.png">tajo/backani.gif</texture>
-							<aspectratio align="center">keep</aspectratio>
+							<left>70</left>
+							<top>100</top>
+							<width>145</width>
+							<height>120</height>
+							<texture diffuse="home.png">home.png</texture>
 						</control>
 						<control type="image">
 							<visible>System.IdleTime(5)</visible>
@@ -150,12 +149,11 @@
 							<animation type="Conditional" reversible="false" condition="System.IdleTime(7)">
 								<effect type="slide" end="-250,0" time="600" tween="cubic" easing="inout"/>
 							</animation>
-							<left>-670</left>
-							<top>30</top>
-							<width>175</width>
-							<height>269</height>
-							<texture diffuse="home.png">tajo/backani.gif</texture>
-							<aspectratio align="center">keep</aspectratio>
+							<left>-660</left>
+							<top>100</top>
+							<width>145</width>
+							<height>120</height>
+							<texture diffuse="home.png">home.png</texture>
 						</control>
 						<control type="image">
 							<visible>System.IdleTime(5)</visible>
@@ -180,12 +178,11 @@
 							<animation type="Conditional" reversible="false" condition="System.IdleTime(7)">
 								<effect type="slide" end="246,0" time="600" tween="cubic" easing="inout"/>
 							</animation>
-							<left>746</left>
-							<top>30</top>
-							<width>175</width>
-							<height>269</height>
-							<texture diffuse="home.png">tajo/backani.gif</texture>
-							<aspectratio align="center">keep</aspectratio>
+							<left>756</left>
+							<top>100</top>
+							<width>145</width>
+							<height>120</height>
+							<texture diffuse="home.png">home.png</texture>
 						</control>
 						<control type="image">
 							<visible>!String.IsEmpty(Window(Home).Property(AnimWall2))</visible>
@@ -334,13 +331,12 @@
 					<include>Animation_NewWallFloat_2</include>
 					<visible>System.IdleTime(7)</visible>
 					<visible>Integer.IsGreater(Container(587).Column,1)</visible>
-					<left>-195</left>
-					<top>40</top>
-					<width>175</width>
-					<height>269</height>
-					<animation effect="fade" start="0" end="100" delay="700" time="200">Visible</animation>
+					<left>-185</left>
+					<top>110</top>
+					<width>145</width>
+					<height>120</height>
+					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
 					<texture diffuse="home.png">tajo/backani.gif</texture>
-					<aspectratio align="center">keep</aspectratio>
 				</control>
 				<control type="textbox">
 					<include>Animation_NewWallFloat_2</include>
@@ -366,7 +362,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$VAR[value_plot]</label>
-					<autoscroll delay="5000" time="2000" repeat="5000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="textbox">
@@ -381,7 +377,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$INFO[Container(5975).ListItemAbsolute(0).Title][CR]$INFO[Container(5975).ListItemAbsolute(1).Title][CR]$INFO[Container(5975).ListItemAbsolute(2).Title][CR]$INFO[Container(5975).ListItemAbsolute(3).Title][CR]$INFO[Container(5975).ListItemAbsolute(4).Title][CR]$INFO[Container(5975).ListItemAbsolute(5).Title][CR]$INFO[Container(5975).ListItemAbsolute(6).Title][CR]$INFO[Container(5975).ListItemAbsolute(7).Title][CR]$INFO[Container(5975).ListItemAbsolute(8).Title][CR]$INFO[Container(5975).ListItemAbsolute(9).Title]</label>
-					<autoscroll delay="5000" time="2000" repeat="5000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>	
 			</control>
@@ -432,13 +428,12 @@
 					<include>Animation_NewWallFloat_2</include>
 					<visible>System.IdleTime(7)</visible>
 					<visible>!Integer.IsGreater(Container(587).Column,14)</visible>
-					<animation effect="fade" start="0" end="100" delay="700" time="200">Visible</animation>
-					<left>265</left>
-					<top>40</top>
-					<width>175</width>
-					<height>269</height>
+					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
+					<left>275</left>
+					<top>110</top>
+					<width>145</width>
+					<height>120</height>
 					<texture diffuse="home.png">tajo/backani.gif</texture>
-					<aspectratio align="center">keep</aspectratio>
 				</control>
 				<control type="textbox">
 					<include>Animation_NewWallFloat_2</include>
@@ -464,7 +459,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$VAR[value_plot]</label>
-					<autoscroll delay="5000" time="2000" repeat="5000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="textbox">
@@ -479,7 +474,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$INFO[Container(5975).ListItemAbsolute(0).Title][CR]$INFO[Container(5975).ListItemAbsolute(1).Title][CR]$INFO[Container(5975).ListItemAbsolute(2).Title][CR]$INFO[Container(5975).ListItemAbsolute(3).Title][CR]$INFO[Container(5975).ListItemAbsolute(4).Title][CR]$INFO[Container(5975).ListItemAbsolute(5).Title][CR]$INFO[Container(5975).ListItemAbsolute(6).Title][CR]$INFO[Container(5975).ListItemAbsolute(7).Title][CR]$INFO[Container(5975).ListItemAbsolute(8).Title][CR]$INFO[Container(5975).ListItemAbsolute(9).Title]</label>
-					<autoscroll delay="5000" time="2000" repeat="5000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>	
 			</control>
@@ -498,14 +493,14 @@
 				<height>170</height>
 				<font>Font_plot</font>
 				<label>$INFO[Container(5975).ListItemAbsolute(0).Title][CR]$INFO[Container(5975).ListItemAbsolute(1).Title][CR]$INFO[Container(5975).ListItemAbsolute(2).Title][CR]$INFO[Container(5975).ListItemAbsolute(3).Title][CR]$INFO[Container(5975).ListItemAbsolute(4).Title][CR]$INFO[Container(5975).ListItemAbsolute(5).Title][CR]$INFO[Container(5975).ListItemAbsolute(6).Title][CR]$INFO[Container(5975).ListItemAbsolute(7).Title][CR]$INFO[Container(5975).ListItemAbsolute(8).Title][CR]$INFO[Container(5975).ListItemAbsolute(9).Title]</label>
-				<autoscroll delay="5000" time="2000" repeat="5000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 				<textcolor>white</textcolor>
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,15)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-238</param>
 						<param name="MWTopSt">660</param>
@@ -569,7 +564,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,14)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-478</param>
 						<param name="MWTopSt">660</param>
@@ -633,7 +628,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,13)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-718</param>
 						<param name="MWTopSt">660</param>
@@ -697,7 +692,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,12)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-958</param>
 						<param name="MWTopSt">660</param>
@@ -761,7 +756,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,3)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-1198</param>
 						<param name="MWTopSt">660</param>
@@ -825,7 +820,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,2)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-1438</param>
 						<param name="MWTopSt">660</param>
@@ -889,7 +884,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>!Integer.IsGreater(Container(587).Column,1)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">-1678</param>
 						<param name="MWTopSt">660</param>
@@ -953,7 +948,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,0)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">242</param>
 						<param name="MWTopSt">660</param>
@@ -1017,7 +1012,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,1)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">482</param>
 						<param name="MWTopSt">660</param>
@@ -1081,7 +1076,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,2)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">722</param>
 						<param name="MWTopSt">660</param>
@@ -1145,7 +1140,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,3)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">962</param>
 						<param name="MWTopSt">660</param>
@@ -1209,7 +1204,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,12)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">1202</param>
 						<param name="MWTopSt">660</param>
@@ -1273,7 +1268,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,13)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">1442</param>
 						<param name="MWTopSt">660</param>
@@ -1337,7 +1332,7 @@
 				<visible>Control.IsVisible(587)</visible>
 				<visible>Integer.IsGreater(Container(587).Column,14)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">1682</param>
 						<param name="MWTopSt">660</param>
@@ -1400,7 +1395,7 @@
 			<control type="group">
 				<visible>Control.IsVisible(587)</visible>
 				<control type="group">
-					<visible>!Integer.IsEqual(Container(587).Row,2) + !Integer.IsEqual(Container(587).Row,0)</visible>
+					<visible>Integer.IsGreater(Container(587).Row,2)</visible>
 					<include content="ForMWall">
 						<param name="MWLeftSt">2</param>
 						<param name="MWTopSt">660</param>
@@ -1485,6 +1480,15 @@
 				</control>
 				<control type="image">
 					<visible>System.IdleTime(5)</visible>
+					<left>968</left>
+					<top>20</top>
+					<width>220</width>
+					<height>310</height>
+					<texture background="true">$INFO[Container(587).ListItemNoWrap(-17).Icon]</texture>
+					<aspectratio align="center">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<visible>System.IdleTime(5)</visible>
 					<top>349</top>
 					<left>1139</left>
 					<width>50</width>
@@ -1494,26 +1498,34 @@
 					<bordersize>1</bordersize>
 				</control>
 				<control type="image">
+					<visible>System.IdleTime(5)</visible>
+					<top>19</top>
+					<left>1139</left>
+					<width>50</width>
+					<height>50</height>
+					<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
+					<visible>String.IsEqual(Container(587).ListItemNoWrap(-17).Overlay,OverlayWatched.png)</visible>
+					<bordersize>1</bordersize>
+				</control>
+				<control type="image">
 					<visible>System.IdleTime(7)</visible>
 					<visible>Integer.IsGreater(Container(587).Column,14)</visible>
-					<animation effect="fade" start="0" end="100" delay="700" time="200">Visible</animation>
-					<left>38</left>
-					<top>370</top>
-					<width>175</width>
-					<height>269</height>
+					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
+					<left>48</left>
+					<top>440</top>
+					<width>145</width>
+					<height>120</height>
 					<texture diffuse="home.png">tajo/backani.gif</texture>
-					<aspectratio align="center">keep</aspectratio>
 				</control>
 				<control type="image">
 					<visible>System.IdleTime(7)</visible>
 					<visible>!Integer.IsGreater(Container(587).Column,1)</visible>
-					<animation effect="fade" start="0" end="100" delay="700" time="200">Visible</animation>
-					<left>1950</left>
-					<top>370</top>
-					<width>175</width>
-					<height>269</height>
+					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
+					<left>1960</left>
+					<top>440</top>
+					<width>145</width>
+					<height>120</height>
 					<texture diffuse="home.png">tajo/backani.gif</texture>
-					<aspectratio align="center">keep</aspectratio>
 				</control>
 				<control type="button" id="5875">
 					<visible>!System.HasVisibleModalDialog</visible>
@@ -1534,8 +1546,8 @@
 					<onright>Action(Right)</onright>
 					<ondown>SetFocus(587)</ondown>
 					<ondown>Action(Down)</ondown>
-					<ondown condition="!String.IsEmpty(Container(587).ListItemNoWrap(34).Label">Action(Up)</ondown>
-					<ondown condition="!String.IsEmpty(Container(587).ListItemNoWrap(34).Label">Action(Down)</ondown>
+					<ondown condition="!String.IsEmpty(Container(587).ListItemNoWrap(34).Label)">Action(Up)</ondown>
+					<ondown condition="!String.IsEmpty(Container(587).ListItemNoWrap(34).Label)">Action(Down)</ondown>
 					<onclick>SetProperty(MediaMenu,True,home)</onclick>
 					<onclick>ClearProperty(AnimWall2,home)</onclick>
 					<onclick>SetFocus(9050)</onclick>

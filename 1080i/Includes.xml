@@ -80,10 +80,11 @@
 	<include name="Button_MW">
 		<control type="button" id="5877">
 			<include>HiddenObject</include>
+			<onfocus condition="String.IsEmpty(Window(Home).Property(AnimWall2))">SetFocus(5877)</onfocus>
 			<onfocus condition="!Integer.IsGreater(Container(587).Row,0) + Integer.IsGreater(Container(587).CurrentItem,17)">Control.Move(587,-1)</onfocus>
 			<onfocus condition="!Integer.IsGreater(Container(587).Row,0) + Integer.IsGreater(Container(587).CurrentItem,17)">Control.Move(587,1)</onfocus>
-			<onfocus condition="Integer.IsGreater(Container(587).Row,1) + !String.IsEmpty(Container(587).ListItemNoWrap(17).Label">Control.Move(587,1)</onfocus>
-			<onfocus condition="Integer.IsGreater(Container(587).Row,1) + !String.IsEmpty(Container(587).ListItemNoWrap(17).Label">Control.Move(587,-1)</onfocus>
+			<onfocus condition="Integer.IsGreater(Container(587).Row,1) + !String.IsEmpty(Container(587).ListItemNoWrap(17).Label)">Control.Move(587,1)</onfocus>
+			<onfocus condition="Integer.IsGreater(Container(587).Row,1) + !String.IsEmpty(Container(587).ListItemNoWrap(17).Label)">Control.Move(587,-1)</onfocus>
 		</control>
 	</include>
 	<include name="Res_brow">
@@ -356,14 +357,19 @@
 		<height>1080</height>
 		<onright>ClearProperty(MediaMenu,Home)</onright>
 		<onright>AlarmClock(AnimMulti2,SetProperty(AnimWall2,True,home),00:02,silent)</onright>
+		<onright condition="Control.IsVisible(587)">AlarmClock(AnimMulti3,SetFocus(587),00:02,silent)</onright>
 		<onleft>ClearProperty(MediaMenu,Home)</onleft>
 		<onleft>AlarmClock(AnimMulti2,SetProperty(AnimWall2,True,home),00:02,silent)</onleft>
+		<onleft condition="Control.IsVisible(587)">AlarmClock(AnimMulti3,SetFocus(587),00:02,silent)</onleft>
 		<onup>ClearProperty(MediaMenu,Home)</onup>
 		<onup>AlarmClock(AnimMulti2,SetProperty(AnimWall2,True,home),00:02,silent)</onup>
+		<onup condition="Control.IsVisible(587)">AlarmClock(AnimMulti3,SetFocus(587),00:02,silent)</onup>
 		<ondown>ClearProperty(MediaMenu,Home)</ondown>
 		<ondown>AlarmClock(AnimMulti2,SetProperty(AnimWall2,True,home),00:02,silent)</ondown>
+		<ondown condition="Control.IsVisible(587)">AlarmClock(AnimMulti3,SetFocus(587),00:02,silent)</ondown>
 		<onback>ClearProperty(MediaMenu,Home)</onback>
 		<onback>AlarmClock(AnimMulti2,SetProperty(AnimWall2,True,home),00:02,silent)</onback>
+		<onback condition="Control.IsVisible(587)">AlarmClock(AnimMulti3,SetFocus(587),00:02,silent)</onback>
 		<onright>50</onright>
 		<onleft>50</onleft>
 		<onup>50</onup>
