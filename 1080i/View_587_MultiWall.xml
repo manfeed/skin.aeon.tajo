@@ -14,7 +14,7 @@
 	</include>
 	<include name="Animation_NewWallFloat_2">
 		<animation effect="slide" end="0,330" condition="Integer.IsGreater(Container(587).Row,0)">Conditional</animation>
-		<animation effect="slide" end="0,330" condition="<visible>Integer.IsGreater(Container(587).Row,2)</visible>">Conditional</animation>
+		<animation effect="slide" end="0,330" condition="Integer.IsGreater(Container(587).Row,2)">Conditional</animation>
 		<animation effect="slide" end="120,0" condition="!Integer.IsGreater(Container(587).Column,0)">Conditional</animation>
 		<animation effect="slide" end="240,0" condition="Integer.IsGreater(Container(587).Column,0)">Conditional</animation>
 		<animation effect="slide" end="240,0" condition="Integer.IsGreater(Container(587).Column,1)">Conditional</animation>
