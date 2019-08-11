@@ -362,7 +362,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$VAR[value_plot]</label>
-					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="10000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="textbox">
@@ -377,7 +377,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$INFO[Container(5975).ListItemAbsolute(0).Title][CR]$INFO[Container(5975).ListItemAbsolute(1).Title][CR]$INFO[Container(5975).ListItemAbsolute(2).Title][CR]$INFO[Container(5975).ListItemAbsolute(3).Title][CR]$INFO[Container(5975).ListItemAbsolute(4).Title][CR]$INFO[Container(5975).ListItemAbsolute(5).Title][CR]$INFO[Container(5975).ListItemAbsolute(6).Title][CR]$INFO[Container(5975).ListItemAbsolute(7).Title][CR]$INFO[Container(5975).ListItemAbsolute(8).Title][CR]$INFO[Container(5975).ListItemAbsolute(9).Title]</label>
-					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="10000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>	
 			</control>
@@ -459,7 +459,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$VAR[value_plot]</label>
-					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="10000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="textbox">
@@ -474,7 +474,7 @@
 					<height>170</height>
 					<font>Font_plot</font>
 					<label>$INFO[Container(5975).ListItemAbsolute(0).Title][CR]$INFO[Container(5975).ListItemAbsolute(1).Title][CR]$INFO[Container(5975).ListItemAbsolute(2).Title][CR]$INFO[Container(5975).ListItemAbsolute(3).Title][CR]$INFO[Container(5975).ListItemAbsolute(4).Title][CR]$INFO[Container(5975).ListItemAbsolute(5).Title][CR]$INFO[Container(5975).ListItemAbsolute(6).Title][CR]$INFO[Container(5975).ListItemAbsolute(7).Title][CR]$INFO[Container(5975).ListItemAbsolute(8).Title][CR]$INFO[Container(5975).ListItemAbsolute(9).Title]</label>
-					<autoscroll delay="5000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<autoscroll delay="10000" time="2500" repeat="2500">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<textcolor>white</textcolor>
 				</control>	
 			</control>
