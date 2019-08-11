@@ -961,7 +961,8 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-					<visible>!ListItem.IsCollection</visible>
+				<visible>[!ListItem.IsCollection + !Skin.HasSetting(extraposters)] | [!ListItem.IsCollection + Skin.HasSetting(extraposters) + String.IsEmpty(ListItem.Art(poster1))]</visible>
+					<!-- <visible>!ListItem.IsCollection</visible> -->
 					<!-- Poster lados reflejo -->
 					<left>-94</left>
 					<top>512</top>
