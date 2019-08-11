@@ -45,12 +45,15 @@
 			<label>$INFO[ListItem.Art(fanart8)]</label>
 			<label>$INFO[ListItem.Art(fanart9)]</label>
 		</control>
-		<include>DisplayChar</include>
 		<control type="group">
-			<include condition="Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)">DisplayCast</include>
-		</control>
-		<control type="group">
-			<include condition="Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper) + System.HasAddon(resource.images.actorart)">DisplayPngCast</include>
+			<visible>!Control.IsVisible(593) + !Control.IsVisible(587) + !Control.IsVisible(50)</visible>
+			<include>DisplayChar</include>
+			<control type="group">
+				<include condition="Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)">DisplayCast</include>
+			</control>
+			<control type="group">
+				<include condition="Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper) + System.HasAddon(resource.images.actorart)">DisplayPngCast</include>
+			</control>
 		</control>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>

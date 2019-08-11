@@ -990,6 +990,7 @@
 					<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$VAR[poster]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
+				<include condition="Skin.HasSetting(extraposters)">CharacPos</include>
 				<control type="image">
 					<left>115</left>
 					<top>168</top>

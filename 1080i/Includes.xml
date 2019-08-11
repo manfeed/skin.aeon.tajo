@@ -87,6 +87,275 @@
 			<onfocus condition="Integer.IsGreater(Container(587).Row,1) + !String.IsEmpty(Container(587).ListItemNoWrap(17).Label)">Control.Move(587,-1)</onfocus>
 		</control>
 	</include>
+	<include name="CharacPos">
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster10))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster3</param>
+			<param name="Charpos3">poster4</param>
+			<param name="Charpos4">poster5</param>
+			<param name="Charpos5">poster6</param>
+			<param name="Charpos6">poster7</param>
+			<param name="Charpos7">poster8</param>
+			<param name="Charpos8">poster9</param>
+			<param name="Charpos9">poster10</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster9)) + String.IsEmpty(ListItem.Art(poster10))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster3</param>
+			<param name="Charpos3">poster4</param>
+			<param name="Charpos4">poster5</param>
+			<param name="Charpos5">poster6</param>
+			<param name="Charpos6">poster7</param>
+			<param name="Charpos7">poster8</param>
+			<param name="Charpos8">poster9</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster8)) + String.IsEmpty(ListItem.Art(poster9))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster3</param>
+			<param name="Charpos3">poster4</param>
+			<param name="Charpos4">poster4</param>
+			<param name="Charpos5">poster5</param>
+			<param name="Charpos6">poster6</param>
+			<param name="Charpos7">poster7</param>
+			<param name="Charpos8">poster7</param>
+			<param name="Charpos9">poster8</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster7)) + String.IsEmpty(ListItem.Art(poster8))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster3</param>
+			<param name="Charpos3">poster3</param>
+			<param name="Charpos4">poster4</param>
+			<param name="Charpos5">poster5</param>
+			<param name="Charpos6">poster5</param>
+			<param name="Charpos7">poster6</param>
+			<param name="Charpos8">poster7</param>
+			<param name="Charpos9">poster7</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster6)) + String.IsEmpty(ListItem.Art(poster7))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster2</param>
+			<param name="Charpos3">poster3</param>
+			<param name="Charpos4">poster4</param>
+			<param name="Charpos5">poster4</param>
+			<param name="Charpos6">poster5</param>
+			<param name="Charpos7">poster5</param>
+			<param name="Charpos8">poster6</param>
+			<param name="Charpos9">poster6</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster5)) + String.IsEmpty(ListItem.Art(poster6))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster3</param>
+			<param name="Charpos3">poster4</param>
+			<param name="Charpos4">poster5</param>
+			<param name="Charpos6">poster2</param>
+			<param name="Charpos7">poster3</param>
+			<param name="Charpos8">poster4</param>
+			<param name="Charpos9">poster5</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster4)) + String.IsEmpty(ListItem.Art(poster5))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster3</param>
+			<param name="Charpos3">poster3</param>
+			<param name="Charpos4">poster4</param>
+			<param name="Charpos6">poster2</param>
+			<param name="Charpos7">poster2</param>
+			<param name="Charpos8">poster3</param>
+			<param name="Charpos9">poster4</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster3)) + String.IsEmpty(ListItem.Art(poster4))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos2">poster3</param>
+			<param name="Charpos4">poster2</param>
+			<param name="Charpos5">poster3</param>
+			<param name="Charpos7">poster2</param>
+			<param name="Charpos8">poster3</param>
+			<param name="Charpos9">poster3</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster2)) + String.IsEmpty(ListItem.Art(poster3))</visible>
+		<include content="Para_poster">
+			<param name="Charpos1">poster2</param>
+			<param name="Charpos3">poster2</param>
+			<param name="Charpos5">poster2</param>
+			<param name="Charpos7">poster2</param>
+			<param name="Charpos9">poster2</param>
+		</include>
+		</control>
+		<control type="group">
+		<visible>!String.IsEmpty(ListItem.Art(poster1)) + String.IsEmpty(ListItem.Art(poster2))</visible>
+		<control type="image">
+			<left>-94</left>
+			<top>168</top>
+			<width>250</width>
+			<height>339</height>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art(poster1)]</texture>
+			<aspectratio align="center">stretch</aspectratio>
+		</control>
+		</control>
+	</include>
+		<include name="Para_poster">
+		<param name="Charpos1" default="poster1"/>
+		<param name="Charpos2" default="poster1"/>
+		<param name="Charpos3" default="poster1"/>
+		<param name="Charpos4" default="poster1"/>
+		<param name="Charpos5" default="poster1"/>
+		<param name="Charpos6" default="poster1"/>
+		<param name="Charpos7" default="poster1"/>
+		<param name="Charpos8" default="poster1"/>
+		<param name="Charpos9" default="poster1"/>
+		<definition>
+		<control type="group">
+		<visible>Control.IsVisible(595) | Control.IsVisible(596)</visible>
+		<control type="image">
+			<left>-94</left>
+			<top>168</top>
+			<width>250</width>
+			<height>339</height>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art(poster1)]</texture>
+			<aspectratio align="center">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),00) | String.EndsWith(System.Time(hh:mm:ss),01) | String.EndsWith(System.Time(hh:mm:ss),02) | String.EndsWith(System.Time(hh:mm:ss),03) | String.EndsWith(System.Time(hh:mm:ss),04) | String.EndsWith(System.Time(hh:mm:ss),05) | String.EndsWith(System.Time(hh:mm:ss),06)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos1])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),06) | String.EndsWith(System.Time(hh:mm:ss),07) | String.EndsWith(System.Time(hh:mm:ss),08) | String.EndsWith(System.Time(hh:mm:ss),09) | String.EndsWith(System.Time(hh:mm:ss),10) | String.EndsWith(System.Time(hh:mm:ss),11) | String.EndsWith(System.Time(hh:mm:ss),12)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos2])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),12) | String.EndsWith(System.Time(hh:mm:ss),13) | String.EndsWith(System.Time(hh:mm:ss),14) | String.EndsWith(System.Time(hh:mm:ss),15) | String.EndsWith(System.Time(hh:mm:ss),16) | String.EndsWith(System.Time(hh:mm:ss),17) | String.EndsWith(System.Time(hh:mm:ss),18)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos3])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),18) | String.EndsWith(System.Time(hh:mm:ss),19) | String.EndsWith(System.Time(hh:mm:ss),20) | String.EndsWith(System.Time(hh:mm:ss),21) | String.EndsWith(System.Time(hh:mm:ss),22) | String.EndsWith(System.Time(hh:mm:ss),23) | String.EndsWith(System.Time(hh:mm:ss),24)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos4])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),24) | String.EndsWith(System.Time(hh:mm:ss),25) | String.EndsWith(System.Time(hh:mm:ss),26) | String.EndsWith(System.Time(hh:mm:ss),27) | String.EndsWith(System.Time(hh:mm:ss),28) | String.EndsWith(System.Time(hh:mm:ss),29) | String.EndsWith(System.Time(hh:mm:ss),30)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos5])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),30) | String.EndsWith(System.Time(hh:mm:ss),31) | String.EndsWith(System.Time(hh:mm:ss),32) | String.EndsWith(System.Time(hh:mm:ss),33) | String.EndsWith(System.Time(hh:mm:ss),34) | String.EndsWith(System.Time(hh:mm:ss),35) | String.EndsWith(System.Time(hh:mm:ss),36)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos6])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),36) | String.EndsWith(System.Time(hh:mm:ss),37) | String.EndsWith(System.Time(hh:mm:ss),38) | String.EndsWith(System.Time(hh:mm:ss),39) | String.EndsWith(System.Time(hh:mm:ss),40) | String.EndsWith(System.Time(hh:mm:ss),41) | String.EndsWith(System.Time(hh:mm:ss),42)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos7])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),42) | String.EndsWith(System.Time(hh:mm:ss),43) | String.EndsWith(System.Time(hh:mm:ss),44) | String.EndsWith(System.Time(hh:mm:ss),45) | String.EndsWith(System.Time(hh:mm:ss),46) | String.EndsWith(System.Time(hh:mm:ss),47) | String.EndsWith(System.Time(hh:mm:ss),48)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos8])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),48) | String.EndsWith(System.Time(hh:mm:ss),49) | String.EndsWith(System.Time(hh:mm:ss),50) | String.EndsWith(System.Time(hh:mm:ss),51) | String.EndsWith(System.Time(hh:mm:ss),52) | String.EndsWith(System.Time(hh:mm:ss),53) | String.EndsWith(System.Time(hh:mm:ss),54)</visible>
+			<include>Image_Char</include>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art($PARAM[Charpos9])]</texture>
+		</control>
+		</control>
+		<control type="group">
+		<visible>Control.IsVisible(597)</visible>
+		<control type="image">
+			<left>10</left>
+			<top>9</top>
+			<width>169</width>
+			<height>244</height>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster1)]</texture>
+			<aspectratio align="center">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),00) | String.EndsWith(System.Time(hh:mm:ss),01) | String.EndsWith(System.Time(hh:mm:ss),02) | String.EndsWith(System.Time(hh:mm:ss),03) | String.EndsWith(System.Time(hh:mm:ss),04) | String.EndsWith(System.Time(hh:mm:ss),05) | String.EndsWith(System.Time(hh:mm:ss),06)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos1])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),06) | String.EndsWith(System.Time(hh:mm:ss),07) | String.EndsWith(System.Time(hh:mm:ss),08) | String.EndsWith(System.Time(hh:mm:ss),09) | String.EndsWith(System.Time(hh:mm:ss),10) | String.EndsWith(System.Time(hh:mm:ss),11) | String.EndsWith(System.Time(hh:mm:ss),12)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos2])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),12) | String.EndsWith(System.Time(hh:mm:ss),13) | String.EndsWith(System.Time(hh:mm:ss),14) | String.EndsWith(System.Time(hh:mm:ss),15) | String.EndsWith(System.Time(hh:mm:ss),16) | String.EndsWith(System.Time(hh:mm:ss),17) | String.EndsWith(System.Time(hh:mm:ss),18)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos3])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),18) | String.EndsWith(System.Time(hh:mm:ss),19) | String.EndsWith(System.Time(hh:mm:ss),20) | String.EndsWith(System.Time(hh:mm:ss),21) | String.EndsWith(System.Time(hh:mm:ss),22) | String.EndsWith(System.Time(hh:mm:ss),23) | String.EndsWith(System.Time(hh:mm:ss),24)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos4])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),24) | String.EndsWith(System.Time(hh:mm:ss),25) | String.EndsWith(System.Time(hh:mm:ss),26) | String.EndsWith(System.Time(hh:mm:ss),27) | String.EndsWith(System.Time(hh:mm:ss),28) | String.EndsWith(System.Time(hh:mm:ss),29) | String.EndsWith(System.Time(hh:mm:ss),30)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos5])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),30) | String.EndsWith(System.Time(hh:mm:ss),31) | String.EndsWith(System.Time(hh:mm:ss),32) | String.EndsWith(System.Time(hh:mm:ss),33) | String.EndsWith(System.Time(hh:mm:ss),34) | String.EndsWith(System.Time(hh:mm:ss),35) | String.EndsWith(System.Time(hh:mm:ss),36)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos6])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),36) | String.EndsWith(System.Time(hh:mm:ss),37) | String.EndsWith(System.Time(hh:mm:ss),38) | String.EndsWith(System.Time(hh:mm:ss),39) | String.EndsWith(System.Time(hh:mm:ss),40) | String.EndsWith(System.Time(hh:mm:ss),41) | String.EndsWith(System.Time(hh:mm:ss),42)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos7])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),42) | String.EndsWith(System.Time(hh:mm:ss),43) | String.EndsWith(System.Time(hh:mm:ss),44) | String.EndsWith(System.Time(hh:mm:ss),45) | String.EndsWith(System.Time(hh:mm:ss),46) | String.EndsWith(System.Time(hh:mm:ss),47) | String.EndsWith(System.Time(hh:mm:ss),48)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos8])]</texture>
+		</control>
+		<control type="image">
+			<visible>String.EndsWith(System.Time(hh:mm:ss),48) | String.EndsWith(System.Time(hh:mm:ss),49) | String.EndsWith(System.Time(hh:mm:ss),50) | String.EndsWith(System.Time(hh:mm:ss),51) | String.EndsWith(System.Time(hh:mm:ss),52) | String.EndsWith(System.Time(hh:mm:ss),53) | String.EndsWith(System.Time(hh:mm:ss),54)</visible>
+			<include>Image_Char_597</include>
+			<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art($PARAM[Charpos9])]</texture>
+		</control>
+		</control>
+		</definition>
+	</include>
+	<include name="Image_Char">
+	<left>-94</left>
+	<top>168</top>
+	<width>250</width>
+	<height>339</height>
+	<aspectratio align="center">stretch</aspectratio>
+	</include>
+	<include name="Image_Char_597">
+	<left>10</left>
+	<top>9</top>
+	<width>169</width>
+	<height>244</height>
+	<aspectratio align="center">stretch</aspectratio>
+	</include>
 	<include name="Res_brow">
 		<param name="left_res" default="0" />
 		<param name="width_res" default="0" />
@@ -402,16 +671,6 @@
 			<label>31051</label>
 			<altlabel>31050</altlabel>
 			<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-		</control>
-		<control type="radiobutton" id="222">
-			<include>ButtonCommonValues</include>
-			<description>Animated posters</description>
-			<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-			<visible>!Control.IsVisible(587)</visible>
-			<width>412</width>
-			<label>31224</label>
-			<onclick>Skin.ToggleSetting(animatedposters)</onclick>
-			<selected>Skin.HasSetting(animatedposters)</selected>
 		</control>
 	</include>
 	<include name="PVRMediaMenu">
@@ -1255,7 +1514,6 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image">
-			<!-- Poster -->
 			<visible>!ListItem.IsCollection</visible>
 			<left>-94</left>
 			<top>168</top>
@@ -1264,6 +1522,7 @@
 			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$VAR[poster]</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
+		<include condition="Skin.HasSetting(extraposters)">CharacPos</include>
 		<control type="image">
 			<!-- Poster reflejo -->
 			<visible>ListItem.IsCollection</visible>
