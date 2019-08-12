@@ -207,14 +207,8 @@
 		</control>
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.Art(poster1)) + String.IsEmpty(ListItem.Art(poster2))</visible>
-			<control type="image">
-				<left>-94</left>
-				<top>168</top>
-				<width>250</width>
-				<height>339</height>
-				<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art(poster1)]</texture>
-				<aspectratio align="center">stretch</aspectratio>
-			</control>
+			<include content="Para_poster">
+			</include>
 		</control>
 	</include>
 	<include name="Para_poster">
@@ -231,12 +225,9 @@
 			<control type="group">
 				<visible>Control.IsVisible(595) | Control.IsVisible(596)</visible>
 				<control type="image">
-					<left>-94</left>
-					<top>168</top>
-					<width>250</width>
-					<height>339</height>
+					<visible>String.EndsWith(System.Time(hh:mm:ss),55) | String.EndsWith(System.Time(hh:mm:ss),56) | String.EndsWith(System.Time(hh:mm:ss),57) | String.EndsWith(System.Time(hh:mm:ss),58) | String.EndsWith(System.Time(hh:mm:ss),59)</visible>
+					<include>Image_Char</include>
 					<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$INFO[ListItem.Art(poster1)]</texture>
-					<aspectratio align="center">stretch</aspectratio>
 				</control>
 				<control type="image">
 					<visible>String.EndsWith(System.Time(hh:mm:ss),00) | String.EndsWith(System.Time(hh:mm:ss),01) | String.EndsWith(System.Time(hh:mm:ss),02) | String.EndsWith(System.Time(hh:mm:ss),03) | String.EndsWith(System.Time(hh:mm:ss),04) | String.EndsWith(System.Time(hh:mm:ss),05) | String.EndsWith(System.Time(hh:mm:ss),06)</visible>
@@ -336,14 +327,6 @@
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(597)</visible>
-				<!--control type="image">
-					<left>10</left>
-					<top>9</top>
-					<width>169</width>
-					<height>244</height>
-					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster1)]</texture>
-					<aspectratio align="center">stretch</aspectratio>
-				</control-->
 				<control type="image">
 					<visible>String.EndsWith(System.Time(hh:mm:ss),54) | String.EndsWith(System.Time(hh:mm:ss),55) | String.EndsWith(System.Time(hh:mm:ss),56) | String.EndsWith(System.Time(hh:mm:ss),57) | String.EndsWith(System.Time(hh:mm:ss),58) | String.EndsWith(System.Time(hh:mm:ss),59) | String.EndsWith(System.Time(hh:mm:ss),00)</visible>
 					<include>Image_Char_597</include>
@@ -465,7 +448,7 @@
 				</itemlayout>
 				<focusedlayout>
 				</focusedlayout>
-				<content>plugin://script.embuary.helper/?info=getresourceimages&addon=resource.images.actorart&string='$ESCINFO[Container(5951).ListItem.Cast]'</content>
+				<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.actorart&amp;string='$ESCINFO[Container(5951).ListItem.Cast]'</content>
 			</control>
 			<control type="list" id="534">
 				<scrolltime>4000</scrolltime>
@@ -1383,7 +1366,6 @@
 			<control type="image" id="3738">
 				<include>FlagImage</include>
 				<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
-				<!-- <texture>$INFO[Container(5962).ListItemAbsolute(0).Icon]</texture> -->
 			</control>
 			<control type="label">
 				<width>155</width>

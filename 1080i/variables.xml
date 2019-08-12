@@ -13,7 +13,7 @@
 		<value>SetProperty(melodiesPlaying,True,home)</value>
 	</variable>
 	<variable name="getDBIDcontent">
-		<value condition="!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)]">plugin://script.embuary.helper/?info=getbydbid&dbid=$INFO[ListItem.DBID]&type=$INFO[ListItem.DBType]</value>
+		<value condition="!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)]">plugin://script.embuary.helper/?info=getbydbid&amp;dbid=$INFO[ListItem.DBID]&amp;type=$INFO[ListItem.DBType]</value>
 		<value>-</value>
 	</variable>
 	<variable name="GlobalBackgroundVar">
