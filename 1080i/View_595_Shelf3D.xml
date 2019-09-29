@@ -109,9 +109,17 @@
 					<top>377</top>
 					<orientation>vertical</orientation>
 					<itemgap>12</itemgap>
-					<control type="textbox">
+					<control type="label">
 						<visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
-						<include>Shelf3DLabel_Fanart</include>
+						<height>30</height>
+						<width>510</width>
+						<font>Font_plot</font>
+						<aligny>top</aligny>
+						<align>left</align>
+						<textcolor>themecolor</textcolor>
+						<scroll>true</scroll>
+<scrollspeed>40</scrollspeed>
+<scrollsuffix>  -  </scrollsuffix>
 						<label>[B]$VAR[value_ground16_label]:[/B] [COLOR=FFFFFAF0]$VAR[value_ground16_value]    [/COLOR] [CAPITALIZE][B][LOWERCASE]$LOCALIZE[19081]:[/B][/LOWERCASE][/CAPITALIZE][COLOR=FFFFFAF0] $INFO[ListItem.EndTime][/COLOR]</label>
 					</control>
 					<control type="textbox">
@@ -127,63 +135,63 @@
 						<left>10</left>
 						<top>50</top>
 						<width>1000</width>
-					      <height>60</height>
-					<orientation>horizontal</orientation>
-					<itemgap>10</itemgap>
-					<control type="label">
-					<font>Font_plot</font>
-					<align>right</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>$VAR[audiochannelstajo1]</label>
-					</control>
-					<control type="image">
-					<width>80</width>
-					<height>60</height>
-					<aligny>center</aligny>
-					<texture>$VAR[audioc_1]</texture>
-					</control>
-					<control type="label">
-					<font>Font_plot</font>
-					<scroll>false</scroll>
-					<align>left</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.1)][/LOWERCASE]</label>
-					</control>
+						      <height>60</height>
+						<orientation>horizontal</orientation>
+						<itemgap>10</itemgap>
+						<control type="label">
+							<font>Font_plot</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>$VAR[audiochannelstajo1]</label>
+						</control>
+						<control type="image">
+							<width>80</width>
+							<height>60</height>
+							<aligny>center</aligny>
+							<texture>$VAR[audioc_1]</texture>
+						</control>
+						<control type="label">
+							<font>Font_plot</font>
+							<scroll>false</scroll>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.1)][/LOWERCASE]</label>
+						</control>
 					</control>
 					<control type="grouplist">
 						<left>10</left>
 						<top>87</top>
 						<width>1000</width>
-					      <height>60</height>
-					<orientation>horizontal</orientation>
-					<itemgap>10</itemgap>
-					<control type="label">
-					<font>Font_plot</font>
-					<align>right</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>$VAR[audiochannelstajo3]</label>
-					</control>
-					<control type="image">
-					<width>80</width>
-					<height>60</height>
-					<aligny>center</aligny>
-					<texture>$VAR[audioc_3]</texture>
-					</control>
-					<control type="label">
-					<font>Font_plot</font>
-					<scroll>false</scroll>
-					<align>left</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.3)][/LOWERCASE]</label>
-					</control>
+						      <height>60</height>
+						<orientation>horizontal</orientation>
+						<itemgap>10</itemgap>
+						<control type="label">
+							<font>Font_plot</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>$VAR[audiochannelstajo3]</label>
+						</control>
+						<control type="image">
+							<width>80</width>
+							<height>60</height>
+							<aligny>center</aligny>
+							<texture>$VAR[audioc_3]</texture>
+						</control>
+						<control type="label">
+							<font>Font_plot</font>
+							<scroll>false</scroll>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.3)][/LOWERCASE]</label>
+						</control>
 					</control>
 				</control>
 				<control type="group">
@@ -193,68 +201,68 @@
 						<left>10</left>
 						<top>50</top>
 						<width>1000</width>
-					      <height>60</height>
-					<orientation>horizontal</orientation>
-					<itemgap>10</itemgap>
-					<control type="label">
-					<font>Font_plot</font>
-					<align>right</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>$VAR[audiochannelstajo2]</label>
-					</control>
-					<control type="image">
-					<width>80</width>
-					<height>60</height>
-					<aligny>center</aligny>
-					<texture>$VAR[audioc_2]</texture>
-					</control>
-					<control type="label">
-					<font>Font_plot</font>
-					<scroll>false</scroll>
-					<align>left</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.2)][/LOWERCASE]</label>
-					</control>
+						      <height>60</height>
+						<orientation>horizontal</orientation>
+						<itemgap>10</itemgap>
+						<control type="label">
+							<font>Font_plot</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>$VAR[audiochannelstajo2]</label>
+						</control>
+						<control type="image">
+							<width>80</width>
+							<height>60</height>
+							<aligny>center</aligny>
+							<texture>$VAR[audioc_2]</texture>
+						</control>
+						<control type="label">
+							<font>Font_plot</font>
+							<scroll>false</scroll>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.2)][/LOWERCASE]</label>
+						</control>
 					</control>
 					<control type="grouplist">
 						<left>10</left>
 						<top>87</top>
 						<width>1000</width>
-					      <height>60</height>
-					<orientation>horizontal</orientation>
-					<itemgap>10</itemgap>
-					<control type="label">
-					<font>Font_plot</font>
-					<align>right</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>$VAR[audiochannelstajo4]</label>
-					</control>
-					<control type="image">
-					<width>80</width>
-					<height>60</height>
-					<aligny>center</aligny>
-					<texture>$VAR[audioc_4]</texture>
-					</control>
-					<control type="label">
-					<font>Font_plot</font>
-					<scroll>false</scroll>
-					<align>left</align>
-					<aligny>center</aligny>
-					<width>60</width>
-					<height>60</height>
-					<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.4)][/LOWERCASE]</label>
-					</control>
+						      <height>60</height>
+						<orientation>horizontal</orientation>
+						<itemgap>10</itemgap>
+						<control type="label">
+							<font>Font_plot</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>$VAR[audiochannelstajo4]</label>
+						</control>
+						<control type="image">
+							<width>80</width>
+							<height>60</height>
+							<aligny>center</aligny>
+							<texture>$VAR[audioc_4]</texture>
+						</control>
+						<control type="label">
+							<font>Font_plot</font>
+							<scroll>false</scroll>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width>60</width>
+							<height>60</height>
+							<label>[LOWERCASE]$INFO[ListItem.Property(AudioLanguage.4)][/LOWERCASE]</label>
+						</control>
 					</control>
 				</control>
 				<control type="textbox">
-				<visible>!ListItem.IsCollection + [!Skin.HasSetting(showCast) | !System.HasAddon(script.embuary.helper)]</visible>
-				<animation effect="fade" delay="250" time="250" reversible="false">Visible</animation>
+					<visible>!ListItem.IsCollection + [!Skin.HasSetting(showCast) | !System.HasAddon(script.embuary.helper)]</visible>
+					<animation effect="fade" delay="250" time="250" reversible="false">Visible</animation>
 					<left>577</left>
 					<top>126</top>
 					<width>660</width>
@@ -265,8 +273,8 @@
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
-				<visible>!ListItem.IsCollection + [Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)]</visible>
-				<animation effect="fade" delay="500" time="500" reversible="false">Visible</animation>
+					<visible>!ListItem.IsCollection + [Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)]</visible>
+					<animation effect="fade" delay="500" time="500" reversible="false">Visible</animation>
 					<left>577</left>
 					<top>126</top>
 					<width>450</width>
@@ -284,10 +292,10 @@
 					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(back)]</texture>
 				</control>
 				<control type="textbox">
-				<visible>[!System.IdleTime(3) | Integer.IsLess(Container(534).NumItems,2)] + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-				<fadetime>300</fadetime>
-				<font>Font_plot4</font>
-				<align>left</align>
+					<visible>[!System.IdleTime(3) | Integer.IsLess(Container(534).NumItems,2)] + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+					<fadetime>300</fadetime>
+					<font>Font_plot4</font>
+					<align>left</align>
 					<left>1068</left>
 					<top>127</top>
 					<width>220</width>
@@ -295,94 +303,94 @@
 					<label>[B][COLOR themecolor]$LOCALIZE[206]:[/COLOR][/B][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label][/COLOR]</label>
 				</control>
 				<control type="image">
-				<visible>Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+					<visible>Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 					<include>HiddenObject</include>
 					<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
 				</control>
 				<control type="group">
-				<control type="textbox">
-				<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-				<visible>!String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
-				<fadetime>200</fadetime>
-				<textcolor>themecolor</textcolor>
-				<font>Font_plot4</font>
-				<align>center</align>
-				<aligny>top</aligny>
-					<left>1055</left>
-					<top>415</top>
-					<width>220</width>
-					<height>80</height>
-					<label>[B]$INFO[Container(534).ListItem.Label][/B]</label>
-				</control>
-				<control type="textbox">
-				<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-				<visible>String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
-				<fadetime>200</fadetime>
-				<textcolor>themecolor</textcolor>
-				<font>Font_plot4</font>
-				<align>left</align>
-				<aligny>top</aligny>
-					<left>1068</left>
-					<top>127</top>
-					<width>220</width>
-					<height>332</height>
-					<label>$INFO[Container(534).ListItem.Label]</label>
-				</control>
-				<control type="image">
-				<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-					<left>1065</left>
-					<top>127</top>
-					<width>195</width>
-					<height>280</height>
-					<colordiffuse>DFffffff</colordiffuse>
-					<aspectratio alignx="left" aligny="bottom">keep</aspectratio>
-					<fadetime>200</fadetime>
-					<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
-				</control>
+					<control type="textbox">
+						<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+						<visible>!String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
+						<fadetime>200</fadetime>
+						<textcolor>themecolor</textcolor>
+						<font>Font_plot4</font>
+						<align>center</align>
+						<aligny>top</aligny>
+						<left>1055</left>
+						<top>415</top>
+						<width>220</width>
+						<height>80</height>
+						<label>[B]$INFO[Container(534).ListItem.Label][/B]</label>
+					</control>
+					<control type="textbox">
+						<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+						<visible>String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
+						<fadetime>200</fadetime>
+						<textcolor>themecolor</textcolor>
+						<font>Font_plot4</font>
+						<align>left</align>
+						<aligny>top</aligny>
+						<left>1068</left>
+						<top>127</top>
+						<width>220</width>
+						<height>332</height>
+						<label>$INFO[Container(534).ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
+						<left>1065</left>
+						<top>127</top>
+						<width>195</width>
+						<height>280</height>
+						<colordiffuse>DFffffff</colordiffuse>
+						<aspectratio alignx="left" aligny="bottom">keep</aspectratio>
+						<fadetime>200</fadetime>
+						<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
+					</control>
 				</control>
 				<control type="group">
-				<top>-15</top>
-				<left>35</left>
+					<top>-15</top>
+					<left>35</left>
+					<control type="image">
+						<left>1275</left>
+						<top>132</top>
+						<width>590</width>
+						<height>346</height>
+						<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
+						<aspectratio aligny="top">scale</aspectratio>
+						<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					</control>
+					<control type="multiimage">
+						<left>1275</left>
+						<top>132</top>
+						<width>590</width>
+						<height>346</height>
+						<aspectratio aligny="top">scale</aspectratio>
+						<fadetime>500</fadetime>
+						<visible>!String.IsEmpty(ListItem.Art(fanart1))</visible>
+						<imagepath background="true">$INFO[Control.GetLabel(4410)]</imagepath>
+					</control>
+					<control type="image">
+						<visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+						<left>1275</left>
+						<top>132</top>
+						<width>590</width>
+						<height>346</height>
+						<texture background="true">tajo/osd_black_bg.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<top>130</top>
+						<left>1272</left>
+						<width>596</width>
+						<height>350</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<colordiffuse>dd000000</colordiffuse>
+						<texture diffuse="tajo/mask_cover3.png">tajo/mask78.png</texture>
+					</control>
+				</control>
 				<control type="image">
-					<left>1275</left>
-					<top>132</top>
-					<width>590</width>
-					<height>346</height>
-					<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
-				</control>
-				<control type="multiimage">
-					<left>1275</left>
-					<top>132</top>
-					<width>590</width>
-					<height>346</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<fadetime>500</fadetime>
-					<visible>!String.IsEmpty(ListItem.Art(fanart1))</visible>
-					<imagepath background="true">$INFO[Control.GetLabel(4410)]</imagepath>
-				</control>
-				<control type="image">
-					<visible>!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-					<left>1275</left>
-					<top>132</top>
-					<width>590</width>
-					<height>346</height>
-					<texture background="true">tajo/osd_black_bg.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<top>130</top>
-					<left>1272</left>
-					<width>596</width>
-					<height>350</height>
-					<aspectratio align="center">stretch</aspectratio>
-					<colordiffuse>dd000000</colordiffuse>
-					<texture diffuse="tajo/mask_cover3.png">tajo/mask78.png</texture>
-				</control>
-				</control>
-				<control type="image">
-				<visible>!ListItem.IsCollection + System.IdleTime(1)</visible>
+					<visible>!ListItem.IsCollection + System.IdleTime(1)</visible>
 					<left>1605</left>
 					<top>300</top>
 					<width>280</width>
@@ -390,91 +398,91 @@
 					<fadetime>200</fadetime>
 					<colordiffuse>f1ffffff</colordiffuse>
 					<aspectratio aligny="bottom" align="center">keep</aspectratio>
-				<texture background="true">$INFO[Container(5927).ListItem.Label]</texture>
-			</control>
+					<texture background="true">$INFO[Container(5927).ListItem.Label]</texture>
+				</control>
 				<control type="group">
-				<control type="image">
-				<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
-					<left>1585</left>
-					<top>335</top>
-					<width>260</width>
-					<height>135</height>
-					<fadetime>250</fadetime>
-					<colordiffuse>ddffffff</colordiffuse>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-				</control>
-				<control type="image">
-				<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
-					<left>1585</left>
-					<top>335</top>
-					<width>260</width>
-					<height>135</height>
-					<fadetime>250</fadetime>
-					<colordiffuse>ddffffff</colordiffuse>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
-				</control>
-				<control type="image">
-				<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
-				<animation effect="slide" end="0,50" time="0" condition="ListItem.IsCollection | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
-					<left>25</left>
-					<top>140</top>
-					<width>520</width>
-					<height>220</height>
-					<fadetime>250</fadetime>
-					<colordiffuse>ddffffff</colordiffuse>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
-				</control>
-				<control type="image">
-				<animation effect="slide" end="0,50" time="0" condition="ListItem.IsCollection | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
-				<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
-					<left>25</left>
-					<top>140</top>
-					<width>520</width>
-					<height>220</height>
-					<fadetime>250</fadetime>
-					<colordiffuse>ddffffff</colordiffuse>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(tvshow.clearart)]</texture>
-				</control>
-				<control type="image">
-				<visible>!Container.Content(seasons) + String.IsEmpty(ListItem.Art(clearart))</visible>
-				<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
-					<left>50</left>
-					<top>140</top>
-					<width>450</width>
-					<height>220</height>
-					<colordiffuse>ddffffff</colordiffuse>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-				</control>
-				<control type="image">
-				<visible>Container.Content(seasons) + String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
-				<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
-					<left>50</left>
-					<top>140</top>
-					<width>450</width>
-					<height>220</height>
-					<colordiffuse>ddffffff</colordiffuse>
-					<aspectratio aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
-				</control>
-				<control type="label">
-				<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
-					<left>40</left>
-					<top>140</top>
-					<width>450</width>
-					<height>220</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$VAR[value_videotitle]</label>
-					<font>titleshelf3D</font>
-					<textcolor>white</textcolor>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-				</control>
+					<control type="image">
+						<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
+						<left>1585</left>
+						<top>335</top>
+						<width>260</width>
+						<height>135</height>
+						<fadetime>250</fadetime>
+						<colordiffuse>ddffffff</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+					</control>
+					<control type="image">
+						<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
+						<left>1585</left>
+						<top>335</top>
+						<width>260</width>
+						<height>135</height>
+						<fadetime>250</fadetime>
+						<colordiffuse>ddffffff</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+					</control>
+					<control type="image">
+						<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
+						<animation effect="slide" end="0,50" time="0" condition="ListItem.IsCollection | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+						<left>25</left>
+						<top>140</top>
+						<width>520</width>
+						<height>220</height>
+						<fadetime>250</fadetime>
+						<colordiffuse>ddffffff</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+					</control>
+					<control type="image">
+						<animation effect="slide" end="0,50" time="0" condition="ListItem.IsCollection | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+						<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
+						<left>25</left>
+						<top>140</top>
+						<width>520</width>
+						<height>220</height>
+						<fadetime>250</fadetime>
+						<colordiffuse>ddffffff</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(tvshow.clearart)]</texture>
+					</control>
+					<control type="image">
+						<visible>!Container.Content(seasons) + String.IsEmpty(ListItem.Art(clearart))</visible>
+						<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
+						<left>50</left>
+						<top>140</top>
+						<width>450</width>
+						<height>220</height>
+						<colordiffuse>ddffffff</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+					</control>
+					<control type="image">
+						<visible>Container.Content(seasons) + String.IsEmpty(ListItem.Art(tvshow.clearart))</visible>
+						<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
+						<left>50</left>
+						<top>140</top>
+						<width>450</width>
+						<height>220</height>
+						<colordiffuse>ddffffff</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+					</control>
+					<control type="label">
+						<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
+						<left>40</left>
+						<top>140</top>
+						<width>450</width>
+						<height>220</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[value_videotitle]</label>
+						<font>titleshelf3D</font>
+						<textcolor>white</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					</control>
 				</control>
 			</control>
 			<control type="group">
@@ -494,8 +502,8 @@
 						<textcolor>00ffffff</textcolor>
 					</control>
 					<control type="textbox">
-					<visible>!Container(2010).HasNext</visible>
-					<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
+						<visible>!Container(2010).HasNext</visible>
+						<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
 						<top>-16</top>
 						<left>58</left>
 						<align>right</align>
@@ -506,8 +514,8 @@
 						<textcolor>black</textcolor>
 					</control>
 					<control type="textbox">
-					<visible>!Container(2010).HasNext</visible>
-					<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
+						<visible>!Container(2010).HasNext</visible>
+						<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
 						<top>-15</top>
 						<left>59</left>
 						<align>right</align>
@@ -519,8 +527,8 @@
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="textbox" id="2011">
-					<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-					<visible>Container(2010).HasNext + !Container(2011).HasNext</visible>
+						<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
+						<visible>Container(2010).HasNext + !Container(2011).HasNext</visible>
 						<top>-8</top>
 						<left>59</left>
 						<align>right</align>
@@ -531,8 +539,8 @@
 						<textcolor>black</textcolor>
 					</control>
 					<control type="textbox">
-					<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
-					<visible>Container(2010).HasNext + !Container(2011).HasNext</visible>
+						<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
+						<visible>Container(2010).HasNext + !Container(2011).HasNext</visible>
 						<top>-7</top>
 						<left>60</left>
 						<align>right</align>
@@ -544,8 +552,8 @@
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="textbox">
-					<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-					<visible>Container(2011).HasNext</visible>
+						<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
+						<visible>Container(2011).HasNext</visible>
 						<top>-25</top>
 						<left>58</left>
 						<align>right</align>
@@ -557,8 +565,8 @@
 						<textcolor>black</textcolor>
 					</control>
 					<control type="textbox">
-					<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
-					<visible>Container(2011).HasNext</visible>
+						<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
+						<visible>Container(2011).HasNext</visible>
 						<top>-24</top>
 						<left>59</left>
 						<align>right</align>
@@ -961,7 +969,7 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-				<visible>[!ListItem.IsCollection + !Skin.HasSetting(extraposters)] | [!ListItem.IsCollection + Skin.HasSetting(extraposters) + String.IsEmpty(ListItem.Art(poster1))]</visible>
+					<visible>[!ListItem.IsCollection + !Skin.HasSetting(extraposters)] | [!ListItem.IsCollection + Skin.HasSetting(extraposters) + String.IsEmpty(ListItem.Art(poster1))]</visible>
 					<!-- <visible>!ListItem.IsCollection</visible> -->
 					<!-- Poster lados reflejo -->
 					<left>-94</left>
