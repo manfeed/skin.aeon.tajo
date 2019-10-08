@@ -67,8 +67,8 @@
 					<texture background="true">$INFO[Container(585).ListItem.Art(clearlogo)]</texture>
 				</control>
 				<control type="textbox">
-				<visible>!Player.Playing + String.IsEmpty(Container(585).ListItem.Art(clearlogo))</visible>
-				<animation effect="zoom" center="auto" end="135" time="0" condition="true">Conditional</animation>
+					<visible>!Player.Playing + String.IsEmpty(Container(585).ListItem.Art(clearlogo))</visible>
+					<animation effect="zoom" center="auto" end="135" time="0" condition="true">Conditional</animation>
 					<left>1390</left>
 					<top>700</top>
 					<width>410</width>
@@ -102,7 +102,7 @@
 						<focusedlayout height="60">
 							<control type="button" id="5858">
 								<include>HiddenObject</include>
-								<onfocus condition="String.IsEmpty(Window(Home).Property(MoveArtist))">SetFocus(5850,0,absolute)</onfocus>
+								<onfocus condition="String.IsEmpty(Window(Home).Property(MoveArtist))">SetFocus(5850,0,absolute)</onfocus>								
 							</control>
 							<control type="textbox">
 								<left>20</left>

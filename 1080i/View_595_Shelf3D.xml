@@ -45,68 +45,18 @@
 					<colordiffuse>dd000000</colordiffuse>
 					<texture diffuse="tajo/mask_cover3.png">tajo/mask82.png</texture>
 				</control>
-				<control type="textbox">
+				<control type="fixedlist" id="59030">
 					<visible>ListItem.IsCollection</visible>
-					<left>607</left>
-					<top>126</top>
-					<height>34</height>
-					<width>535</width>
-					<font>font13_title</font>
-					<aligny>top</aligny>
-					<align>left</align>
-					<label>[B][COLOR=themecolor]$LOCALIZE[515]: [/COLOR][/B]$INFO[Container(59030).ListItemAbsolute(0).Genre]</label>
-				</control>
-				<control type="textbox">
-					<visible>ListItem.IsCollection</visible>
-					<left>607</left>
-					<top>166</top>
-					<height>34</height>
-					<width>535</width>
-					<font>font13_title</font>
-					<aligny>top</aligny>
-					<align>left</align>
-					<label>[B][COLOR=themecolor]$LOCALIZE[342]: [/COLOR]$INFO[Container(59030).NumItems][/B]</label>
-				</control>
-				<control type="list" id="59030">
-					<visible>ListItem.IsCollection</visible>
-					<scrolltime tween="sine" easing="out">2200</scrolltime>
-					<autoscroll>true</autoscroll>
-					<left>607</left>
-					<top>206</top>
-					<height>246</height>
-					<width>565</width>
-					<itemlayout height="35">
-						<control type="label">
-							<left>0</left>
-							<top>0</top>
-							<height>35</height>
-							<width>564</width>
-							<align>left</align>
-							<scroll>false</scroll>
-							<font>Font_plot</font>
-							<textcolor>ffd4d4d4</textcolor>
-							<label>[B]- $INFO[ListItem.Label] [/B][$INFO[ListItem.Year]]</label>
-						</control>
+					<itemlayout>
 					</itemlayout>
-					<focusedlayout height="35">
-						<control type="label">
-							<left>0</left>
-							<top>0</top>
-							<height>35</height>
-							<width>564</width>
-							<align>left</align>
-							<scroll>false</scroll>
-							<font>Font_plot</font>
-							<textcolor>ffd4d4d4</textcolor>
-							<label>[B]- $INFO[ListItem.Label] [/B][$INFO[ListItem.Year]]</label>
-						</control>
+					<focusedlayout>
 					</focusedlayout>
 					<content sortby="year" sortorder="ascending">$INFO[ListItem.FolderPath]</content>
 				</control>
 				<control type="grouplist">
 					<visible>!ListItem.IsCollection</visible>
 					<left>45</left>
-					<top>377</top>
+					<top>382</top>
 					<orientation>vertical</orientation>
 					<itemgap>12</itemgap>
 					<control type="label">
@@ -118,8 +68,8 @@
 						<align>left</align>
 						<textcolor>themecolor</textcolor>
 						<scroll>true</scroll>
-<scrollspeed>40</scrollspeed>
-<scrollsuffix>  -  </scrollsuffix>
+						<scrollspeed>40</scrollspeed>
+						<scrollsuffix>  -  </scrollsuffix>
 						<label>[B]$VAR[value_ground16_label]:[/B] [COLOR=FFFFFAF0]$VAR[value_ground16_value]    [/COLOR] [CAPITALIZE][B][LOWERCASE]$LOCALIZE[19081]:[/B][/LOWERCASE][/CAPITALIZE][COLOR=FFFFFAF0] $INFO[ListItem.EndTime][/COLOR]</label>
 					</control>
 					<control type="textbox">
@@ -130,7 +80,7 @@
 				</control>
 				<control type="group">
 					<left>117</left>
-					<top>355</top>
+					<top>360</top>
 					<control type="grouplist">
 						<left>10</left>
 						<top>50</top>
@@ -149,7 +99,7 @@
 						<control type="image">
 							<width>80</width>
 							<height>60</height>
-							<aligny>center</aligny>
+							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture>$VAR[audioc_1]</texture>
 						</control>
 						<control type="label">
@@ -180,7 +130,7 @@
 						<control type="image">
 							<width>80</width>
 							<height>60</height>
-							<aligny>center</aligny>
+							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture>$VAR[audioc_3]</texture>
 						</control>
 						<control type="label">
@@ -196,7 +146,7 @@
 				</control>
 				<control type="group">
 					<left>330</left>
-					<top>355</top>
+					<top>360</top>
 					<control type="grouplist">
 						<left>10</left>
 						<top>50</top>
@@ -215,7 +165,7 @@
 						<control type="image">
 							<width>80</width>
 							<height>60</height>
-							<aligny>center</aligny>
+							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture>$VAR[audioc_2]</texture>
 						</control>
 						<control type="label">
@@ -246,7 +196,7 @@
 						<control type="image">
 							<width>80</width>
 							<height>60</height>
-							<aligny>center</aligny>
+							<aspectratio aligny="center" align="center">keep</aspectratio>
 							<texture>$VAR[audioc_4]</texture>
 						</control>
 						<control type="label">
@@ -295,11 +245,11 @@
 					<visible>[!System.IdleTime(3) | Integer.IsLess(Container(534).NumItems,2)] + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 					<fadetime>300</fadetime>
 					<font>Font_plot4</font>
-					<align>left</align>
-					<left>1068</left>
-					<top>127</top>
+					<align>center</align>
+					<left>1065</left>
+					<top>114</top>
 					<width>220</width>
-					<height>332</height>
+					<height>333</height>
 					<label>[B][COLOR themecolor]$LOCALIZE[206]:[/COLOR][/B][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label][/COLOR]</label>
 				</control>
 				<control type="image">
@@ -328,12 +278,12 @@
 						<fadetime>200</fadetime>
 						<textcolor>themecolor</textcolor>
 						<font>Font_plot4</font>
-						<align>left</align>
+						<align>center</align>
 						<aligny>top</aligny>
-						<left>1068</left>
-						<top>127</top>
+						<left>1065</left>
+						<top>114</top>
 						<width>220</width>
-						<height>332</height>
+						<height>333</height>
 						<label>$INFO[Container(534).ListItem.Label]</label>
 					</control>
 					<control type="image">
@@ -349,13 +299,14 @@
 					</control>
 				</control>
 				<control type="group">
-					<top>-15</top>
+					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59030).NumItems,6)]</visible>
+					<top>-18</top>
 					<left>35</left>
 					<control type="image">
 						<left>1275</left>
 						<top>132</top>
 						<width>590</width>
-						<height>346</height>
+						<height>336</height>
 						<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
 						<aspectratio aligny="top">scale</aspectratio>
 						<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
@@ -364,7 +315,7 @@
 						<left>1275</left>
 						<top>132</top>
 						<width>590</width>
-						<height>346</height>
+						<height>336</height>
 						<aspectratio aligny="top">scale</aspectratio>
 						<fadetime>500</fadetime>
 						<visible>!String.IsEmpty(ListItem.Art(fanart1))</visible>
@@ -375,7 +326,7 @@
 						<left>1275</left>
 						<top>132</top>
 						<width>590</width>
-						<height>346</height>
+						<height>336</height>
 						<texture background="true">tajo/osd_black_bg.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
@@ -383,7 +334,7 @@
 						<top>130</top>
 						<left>1272</left>
 						<width>596</width>
-						<height>350</height>
+						<height>340</height>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>dd000000</colordiffuse>
 						<texture diffuse="tajo/mask_cover3.png">tajo/mask78.png</texture>
@@ -400,29 +351,31 @@
 					<aspectratio aligny="bottom" align="center">keep</aspectratio>
 					<texture background="true">$INFO[Container(5927).ListItem.Label]</texture>
 				</control>
+				<control type="image">
+					<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
+					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59030).NumItems,6)]</visible>
+					<left>1585</left>
+					<top>335</top>
+					<width>260</width>
+					<height>135</height>
+					<fadetime>250</fadetime>
+					<colordiffuse>ddffffff</colordiffuse>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+				</control>
+				<control type="image">
+					<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
+					<left>1585</left>
+					<top>335</top>
+					<width>260</width>
+					<height>135</height>
+					<fadetime>250</fadetime>
+					<colordiffuse>ddffffff</colordiffuse>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+				</control>
 				<control type="group">
-					<control type="image">
-						<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
-						<left>1585</left>
-						<top>335</top>
-						<width>260</width>
-						<height>135</height>
-						<fadetime>250</fadetime>
-						<colordiffuse>ddffffff</colordiffuse>
-						<aspectratio aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-					</control>
-					<control type="image">
-						<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
-						<left>1585</left>
-						<top>335</top>
-						<width>260</width>
-						<height>135</height>
-						<fadetime>250</fadetime>
-						<colordiffuse>ddffffff</colordiffuse>
-						<aspectratio aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
-					</control>
+					<visible>[ListItem.IsCollection + !Integer.IsGreater(Container(59030).NumItems,4)] | [!ListItem.IsCollection + [!System.IdleTime(8) | String.IsEmpty(Container(577).ListItem.Label)]] | [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					<control type="image">
 						<animation effect="fade" delay="250" start="0" end="100" time="150">Visible</animation>
 						<animation effect="slide" end="0,50" time="0" condition="ListItem.IsCollection | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
@@ -482,6 +435,364 @@
 						<textcolor>white</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>System.IdleTime(6) + !ListItem.IsCollection + !Container.Content(tvshows) + !Container.Content(seasons)</visible>
+					<control type="list" id="5334">
+						<itemlayout>
+						</itemlayout>
+						<focusedlayout>
+						</focusedlayout>
+						<content>plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</content>
+					</control>
+					<control type="fixedlist" id="577">
+						<left>50</left>
+						<top>140</top>
+						<width>450</width>
+						<height>40</height>
+						<orientation>vertical</orientation>
+						<scrolltime tween="sine" easing="out">4000</scrolltime>
+						<autoscroll>true</autoscroll>
+						<itemlayout>
+						</itemlayout>
+						<focusedlayout>
+						</focusedlayout>
+						<content>
+							<item>
+								<label>$INFO[Container(5334).ListItemAbsolute(0).Art(poster)]</label>
+								<label2>$INFO[Container(5334).ListItemAbsolute(0).Label] [$INFO[Container(5334).ListItemAbsolute(0).Year]]</label2>
+								<property name="ClearA">$INFO[Container(5334).ListItemAbsolute(0).Art(clearart)]</property>
+								<property name="ClearL">$INFO[Container(5334).ListItemAbsolute(0).Art(clearlogo)]</property>
+								<visible>!String.IsEmpty(Container(5334).ListItemAbsolute(0).Label)</visible>
+							</item>
+							<item>
+								<label>$INFO[Container(5334).ListItemAbsolute(1).Art(poster)]</label>
+								<label2>$INFO[Container(5334).ListItemAbsolute(1).Label] [$INFO[Container(5334).ListItemAbsolute(1).Year]]</label2>
+								<property name="ClearA">$INFO[Container(5334).ListItemAbsolute(1).Art(clearart)]</property>
+								<property name="ClearL">$INFO[Container(5334).ListItemAbsolute(1).Art(clearlogo)]</property>
+								<visible>!String.IsEmpty(Container(5334).ListItemAbsolute(1).Label)</visible>
+							</item>					
+							<item>
+								<label>$INFO[Container(5334).ListItemAbsolute(2).Art(poster)]</label>
+								<label2>$INFO[Container(5334).ListItemAbsolute(2).Label] [$INFO[Container(5334).ListItemAbsolute(2).Year]]</label2>
+								<property name="ClearA">$INFO[Container(5334).ListItemAbsolute(2).Art(clearart)]</property>
+								<property name="ClearL">$INFO[Container(5334).ListItemAbsolute(2).Art(clearlogo)]</property>
+								<visible>!String.IsEmpty(Container(5334).ListItemAbsolute(2).Label)</visible>
+							</item>					
+							<item>
+								<label>$INFO[Container(5334).ListItemAbsolute(3).Art(poster)]</label>
+								<label2>$INFO[Container(5334).ListItemAbsolute(3).Label] [$INFO[Container(5334).ListItemAbsolute(3).Year]]</label2>
+								<property name="ClearA">$INFO[Container(5334).ListItemAbsolute(3).Art(clearart)]</property>
+								<property name="ClearL">$INFO[Container(5334).ListItemAbsolute(3).Art(clearlogo)]</property>
+								<visible>!String.IsEmpty(Container(5334).ListItemAbsolute(3).Label)</visible>
+							</item>					
+							<item>
+								<label>$INFO[Container(5334).ListItemAbsolute(4).Art(poster)]</label>
+								<label2>$INFO[Container(5334).ListItemAbsolute(4).Label] [$INFO[Container(5334).ListItemAbsolute(4).Year]]</label2>
+								<property name="ClearA">$INFO[Container(5334).ListItemAbsolute(4).Art(clearart)]</property>
+								<property name="ClearL">$INFO[Container(5334).ListItemAbsolute(4).Art(clearlogo)]</property>
+								<visible>!String.IsEmpty(Container(5334).ListItemAbsolute(4).Label)</visible>
+							</item>
+							<item>
+								<label></label>
+							</item>
+						</content>
+					</control>
+					<control type="group">
+						<visible>System.IdleTime(8) + !String.IsEmpty(Container(577).ListItem.Label)</visible>
+						<control type="image">
+							<left>340</left>
+							<top>127</top>
+							<width>175</width>
+							<height>240</height>
+							<fadetime>500</fadetime>
+							<colordiffuse>ddffffff</colordiffuse>
+							<aspectratio align="left" aligny="top">stretch</aspectratio>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(577).ListItem.Label]</texture>
+						</control>
+						<control type="image">
+							<left>339</left>
+							<top>126</top>
+							<width>177</width>
+							<height>242</height>
+							<fadetime>500</fadetime>
+							<aspectratio align="center">stretch</aspectratio>
+							<colordiffuse>dd000000</colordiffuse>
+							<texture diffuse="tajo/mask_cover3.png">tajo/mask82.png</texture>
+						</control>
+						<control type="label">
+							<left>43</left>
+							<top>131</top>
+							<width>280</width>
+							<height>50</height>
+							<font>Font_plot4</font>
+							<align>center</align>
+							<aligny>top</aligny>
+							<textcolor>themecolor</textcolor>
+							<label>[B]$LOCALIZE[31111]:[/B]</label>
+						</control>
+						<control type="textbox">
+							<left>43</left>
+							<top>165</top>
+							<width>280</width>
+							<height>100</height>
+							<font>Font_plot4</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[Container(577).ListItem.Label2]</label>
+						</control>
+						<control type="image">
+							<left>43</left>
+							<top>270</top>
+							<width>280</width>
+							<height>90</height>
+							<fadetime>500</fadetime>
+							<colordiffuse>ddffffff</colordiffuse>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+							<texture background="true">$INFO[Container(577).ListItem.Property(ClearA)]</texture>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(Container(577).ListItem.Property(ClearA))</visible>
+							<left>43</left>
+							<top>270</top>
+							<width>280</width>
+							<height>90</height>
+							<fadetime>500</fadetime>
+							<colordiffuse>ddffffff</colordiffuse>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+							<texture background="true">$INFO[Container(577).ListItem.Property(ClearL)]</texture>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<visible>ListItem.IsCollection</visible>
+					<control type="group">
+						<left>-286</left>
+						<animation effect="slide" end="90,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,9)">Conditional</animation>
+						<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,8)">Conditional</animation>
+						<animation effect="slide" end="260,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,7)">Conditional</animation>
+						<animation effect="slide" end="50,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,6)">Conditional</animation>
+						<animation effect="slide" end="140,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,5)">Conditional</animation>
+						<animation effect="slide" end="480,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,4)">Conditional</animation>
+						<animation effect="slide" end="565,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,3)">Conditional</animation>
+						<animation effect="slide" end="650,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,2)">Conditional</animation>
+						<animation effect="slide" end="760,0" time="0" condition="Integer.IsEqual(Container(59030).NumItems,1)">Conditional</animation>
+						<control type="group">
+							<top>-10</top>
+							<control type="image">
+								<left>340</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(0).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>525</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(1).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>710</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(2).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>895</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(3).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>1080</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(4).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>1265</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(5).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>1450</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(6).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>1635</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(7).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>1820</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(8).Icon]</texture>
+							</control>
+							<control type="image">
+								<left>2005</left>
+								<top>127</top>
+								<width>175</width>
+								<height>240</height>
+								<fadetime>500</fadetime>
+								<colordiffuse>ddffffff</colordiffuse>
+								<aspectratio align="left" aligny="top">stretch</aspectratio>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(9).Icon]</texture>
+							</control>
+						</control>
+						<control type="group">
+							<top>232</top>
+							<control type="textbox">
+								<left>340</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<label>$INFO[Container(59030).ListItemAbsolute(0).Label] [$INFO[Container(59030).ListItemAbsolute(0).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>525</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(1).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(1).Label] [$INFO[Container(59030).ListItemAbsolute(1).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>710</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(2).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(2).Label] [$INFO[Container(59030).ListItemAbsolute(2).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>895</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(3).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(3).Label] [$INFO[Container(59030).ListItemAbsolute(3).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>1080</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(4).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(4).Label] [$INFO[Container(59030).ListItemAbsolute(4).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>1265</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(5).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(5).Label] [$INFO[Container(59030).ListItemAbsolute(5).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>1450</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(6).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(6).Label] [$INFO[Container(59030).ListItemAbsolute(6).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>1635</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(7).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(7).Label] [$INFO[Container(59030).ListItemAbsolute(7).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>1820</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(8).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(8).Label] [$INFO[Container(59030).ListItemAbsolute(8).Year]]</label>
+							</control>
+							<control type="textbox">
+								<left>2005</left>
+								<top>127</top>
+								<width>175</width>
+								<height>125</height>
+								<font>Font_plot4</font>
+								<align>center</align>
+								<aligny>top</aligny>
+								<visible>!String.IsEmpty(Container(59030).ListItemAbsolute(9).Label)</visible>
+								<label>$INFO[Container(59030).ListItemAbsolute(9).Label] [$INFO[Container(59030).ListItemAbsolute(9).Year]]</label>
+							</control>
+						</control>
 					</control>
 				</control>
 			</control>
@@ -609,6 +920,17 @@
 				<colordiffuse>black</colordiffuse>
 			</control>
 			<include>IconsShelf3D</include>
+			<control type="textbox">
+				<visible>ListItem.IsCollection</visible>
+				<left>25</left>
+				<top>982</top>
+				<height>80</height>
+				<width>1015</width>
+				<font>font13_title</font>
+				<aligny>top</aligny>
+				<align>center</align>
+				<label>[B][COLOR=themecolor]$LOCALIZE[342]: [/COLOR]$INFO[Container(59030).NumItems][/B]      [B][COLOR=themecolor]$LOCALIZE[515]: [/COLOR][/B]$INFO[Container(59030).ListItemAbsolute(0).Genre]</label>
+			</control>
 		</control>
 		<control type="group">
 			<!--Trasera caja set-->
@@ -970,7 +1292,6 @@
 				</control>
 				<control type="image">
 					<visible>[!ListItem.IsCollection + !Skin.HasSetting(extraposters)] | [!ListItem.IsCollection + Skin.HasSetting(extraposters) + String.IsEmpty(ListItem.Art(poster1))]</visible>
-					<!-- <visible>!ListItem.IsCollection</visible> -->
 					<!-- Poster lados reflejo -->
 					<left>-94</left>
 					<top>512</top>
