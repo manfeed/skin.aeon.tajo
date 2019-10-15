@@ -462,7 +462,7 @@
 				<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.actorart&amp;string='$ESCINFO[Container(5951).ListItem.Cast]'</content>
 			</control>
 			<control type="list" id="534">
-				<scrolltime>4000</scrolltime>
+				<scrolltime>5000</scrolltime>
 				<autoscroll>true</autoscroll>
 				<itemlayout>
 				</itemlayout>
@@ -1103,23 +1103,6 @@
 					<texture background="true">$INFO[Container(587).ListItemNoWrap($PARAM[MWPos]).Icon]</texture>
 					<aspectratio aligny="bottom">stretch</aspectratio>
 				</control>
-				<control type="group">
-					<left>170</left>
-					<control type="image">
-						<animation type="Visible" reversible="false">
-							<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout" />
-							<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250" />
-						</animation>
-						<visible>!String.IsEmpty(Window(home).Property(MediaMovie9)) + String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu)) + String.IsEqual(Container(587).ListItemNoWrap($PARAM[MWPos]).Overlay,OverlayWatched.png)</visible>
-						<include>Animation_NewWallFloat_2</include>
-						<left>$PARAM[MWLeft]</left>
-						<top>$PARAM[MWTop]</top>
-						<width>50</width>
-						<height>50</height>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
-						<aspectratio aligny="bottom">stretch</aspectratio>
-					</control>
-				</control>
 			</control>
 		</definition>
 	</include>
@@ -1150,42 +1133,6 @@
 					<height>310</height>
 					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(586).ListItemNoWrap($PARAM[MWPos]).Icon]</texture>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-				</control>
-				<control type="group">
-					<left>170</left>
-					<control type="image">
-						<animation type="Visible" reversible="false">
-							<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout" />
-							<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250" />
-						</animation>
-						<visible>!String.IsEmpty(Window(home).Property(MediaMovie9)) + String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu)) + String.IsEqual(Container(586).ListItemNoWrap($PARAM[MWPos]).Overlay,OverlayWatched.png)</visible>
-						<include>Animation_NewWallFloat_23D</include>
-						<left>$PARAM[MWLeft]</left>
-						<top>$PARAM[MWTop]</top>
-						<width>50</width>
-						<height>50</height>
-						<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
-						<aspectratio aligny="bottom">stretch</aspectratio>
-					</control>
-				</control>
-				<control type="group">
-					<left>-2</left>
-					<top>-2</top>
-					<control type="image">
-						<animation type="Visible" reversible="false">
-							<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout" />
-							<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250" />
-						</animation>
-						<visible>!String.IsEmpty(Window(home).Property(MediaMovie9)) + String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu)) + !String.IsEmpty(Container(586).ListItemNoWrap($PARAM[MWPos]).Icon)</visible>
-						<include>Animation_NewWallFloat_23D</include>
-						<left>$PARAM[MWLeft]</left>
-						<top>$PARAM[MWTop]</top>
-						<width>224</width>
-						<height>314</height>
-						<colordiffuse>dd000000</colordiffuse>
-						<texture diffuse="tajo/mask_cover3.png">tajo/mask78.png</texture>
-						<aspectratio align="center">stretch</aspectratio>
-					</control>
 				</control>
 			</control>
 		</definition>

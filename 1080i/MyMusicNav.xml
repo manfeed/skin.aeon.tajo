@@ -9,7 +9,7 @@
 	<onunload>ClearProperty(RowAlbum,Home)</onunload>
 	<onunload>ClearProperty(RowDurationm,Home)</onunload>
 	<onunload>ClearProperty(RowArtist,Home)</onunload>
-	<onunload>ClearProperty(RowYear,Home)</onunload>
+	<onunload>ClearProperty(RowYearm,Home)</onunload>
 	<views>50,585,588,591,593,596,597,598,599</views>
 	<menucontrol>9051</menucontrol>
 	<controls>
