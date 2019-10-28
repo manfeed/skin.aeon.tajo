@@ -1094,7 +1094,7 @@
 						<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout" />
 						<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250" />
 					</animation>
-					<visible>String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
+					<visible>String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu)) + String.IsEmpty(Window(Home).Property(HideWall))</visible>
 					<include>Animation_NewWallFloat_2</include>
 					<left>$PARAM[MWLeft]</left>
 					<top>$PARAM[MWTop]</top>
@@ -1125,7 +1125,7 @@
 						<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout" />
 						<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250" />
 					</animation>
-					<visible>String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
+					<visible>String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu)) + String.IsEmpty(Window(Home).Property(HideWall))</visible>
 					<include>Animation_NewWallFloat_23D</include>
 					<left>$PARAM[MWLeft]</left>
 					<top>$PARAM[MWTop]</top>
@@ -1613,17 +1613,6 @@
 			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$VAR[poster]</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-		<include condition="Skin.HasSetting(extraposters)">CharacPos</include>
-		<control type="image">
-			<!-- Poster reflejo -->
-			<visible>ListItem.IsCollection</visible>
-			<left>-94</left>
-			<top>512</top>
-			<width>241</width>
-			<height>338</height>
-			<texture flipy="true" diffuse="tajo/shelf/reflect_box_overlay.png" background="true">$VAR[poster]</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
 		<control type="image">
 			<!-- Poster -->
 			<visible>ListItem.IsCollection</visible>
@@ -1632,6 +1621,17 @@
 			<width>240</width>
 			<height>339</height>
 			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">$VAR[poster]</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<include condition="Skin.HasSetting(extraposters)">CharacPos</include>
+		<control type="image">
+			<!-- Poster reflejo -->
+			<visible>[ListItem.IsCollection + !Skin.HasSetting(extraposters)] | [ListItem.IsCollection + Skin.HasSetting(extraposters) + String.IsEmpty(ListItem.Art(poster1))]</visible>
+			<left>-94</left>
+			<top>512</top>
+			<width>241</width>
+			<height>338</height>
+			<texture flipy="true" diffuse="tajo/shelf/reflect_box_overlay.png" background="true">$VAR[poster]</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image">

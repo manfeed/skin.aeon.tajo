@@ -4,6 +4,7 @@
 	<views>50,595,590,593,594,596,597,589,587,586</views>
 	<menucontrol>9051</menucontrol>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onload>ClearProperty(HideWall,home)</onload>
 	<onload>AlarmClock(AnimMulti2,SetProperty(AnimWall2,True,home),00:03,silent)</onload>
 	<onload condition="Control.IsVisible(587) | Control.IsVisible(586)">AlarmClock(AnimMulti3,SetFocus(587),00:03,silent)</onload>
 	<onload condition="Control.IsVisible(589)">SetProperty(RowTitle,True,home)</onload>

@@ -282,6 +282,7 @@
 				<visible>System.IdleTime(4)</visible>
 				<animation effect="slide" start="0,0" end="-950,0" time="0" condition="Integer.IsGreater(Container(586).Column,4)">Conditional</animation>
 				<visible>String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
+				<visible>String.IsEmpty(Window(Home).Property(HideWall))</visible>
 				<animation effect="fade" start="0" end="100" delay="500" time="200">Visible</animation>
 				<control type="image">
 					<visible>System.IdleTime(7) + !Integer.IsGreater(Container(586).Column,2)</visible>
@@ -628,7 +629,7 @@
 				<visible>Control.IsVisible(586)</visible>
 				<visible>!System.HasVisibleModalDialog</visible>
 				<visible>System.IdleTime(4) + Integer.IsGreater(Container(586).Column,3)</visible>
-				<visible>ListItem.IsCollection + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
+				<visible>ListItem.IsCollection + String.IsEmpty(Window(Home).Property(HideWall)) + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
 				<animation effect="fade" start="0" end="100" delay="500" time="200">Visible</animation>
 				<include>Animation_NewWallFloat_23D</include>
 				<top>124</top>
@@ -1673,6 +1674,7 @@
 					<ondown>Action(Down)</ondown>
 					<ondown condition="!String.IsEmpty(Container(586).ListItemNoWrap(34).Label)">Action(Up)</ondown>
 					<ondown condition="!String.IsEmpty(Container(586).ListItemNoWrap(34).Label)">Action(Down)</ondown>
+					<onclick>SetProperty(HideWall,True,home)</onclick>
 					<onclick>SetProperty(MediaMenu,True,home)</onclick>
 					<onclick>ClearProperty(AnimWall2,home)</onclick>
 					<onclick>SetFocus(9050)</onclick>
