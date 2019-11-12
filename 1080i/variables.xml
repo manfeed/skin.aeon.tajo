@@ -1015,10 +1015,6 @@
 	<variable name="audioc_4">
 		<value>$VAR[mediaicons_path]audiocodec/$INFO[ListItem.Property(AudioCodec.4),,.png]</value>
 	</variable>
-	<variable name="BannerThumb">
-		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable>
 	<variable name="poster">
 		<!-- Poster -->
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animatedposters)">$INFO[ListItem.Art(animatedposter)]</value>

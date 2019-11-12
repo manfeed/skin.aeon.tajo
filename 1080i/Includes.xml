@@ -1591,6 +1591,34 @@
 				<include>FlagImage</include>
 				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
+			<control type="group">
+				<visible>!ListItem.IsCollection + Control.IsVisible(596)</visible>
+				<left>784</left>
+				<top>15</top>
+				<width>450</width>
+				<height>50</height>
+				<control type="label">
+					<top>-10</top>
+					<width>70</width>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+				</control>
+				<control type="image">
+					<animation effect="fade" end="90" condition="true">Conditional</animation>
+					<top>-8</top>
+					<left>53</left>
+					<width>175</width>
+					<height>50</height>
+					<texture fallback="$VAR[styleratingstars,,0.png]">$VAR[styleratingstars]$INFO[ListItem.Rating,,.png]</texture>
+					<aspectratio align="left" aligny="center">stretch</aspectratio>
+					<colordiffuse>$VAR[colorratingstars]</colordiffuse>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
+				</control>
+			</control>
 		</control>
 	</include>
 	<include name="Carat_movie">
