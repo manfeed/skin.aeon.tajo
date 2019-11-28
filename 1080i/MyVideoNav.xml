@@ -28,7 +28,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="fadelabel" id="4410">
-			<visible>Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(597)</visible>
+			<visible>Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597)</visible>
 			<top>-100</top>
 			<width>2560</width>
 			<height>0</height>

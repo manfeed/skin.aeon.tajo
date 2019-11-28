@@ -280,6 +280,22 @@
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
 		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
+			<label>$LOCALIZE[589]</label>
+			<label2>Ítem de menú Común</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<thumb />
+			<property name="labelID">589</property>
+			<property name="defaultID">589</property>
+			<onclick>PlayerControl(PartyMode)</onclick>
+			<property name="path">PlayerControl(PartyMode)</property>
+			<property name="list">PlayerControl(PartyMode)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
 			<property name="mainmenuid">4</property>
@@ -1349,6 +1365,22 @@
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
 		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
+			<label>$LOCALIZE[589]</label>
+			<label2>Ítem de menú Común</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<thumb />
+			<property name="labelID">589</property>
+			<property name="defaultID">589</property>
+			<onclick>PlayerControl(PartyMode)</onclick>
+			<property name="path">PlayerControl(PartyMode)</property>
+			<property name="list">PlayerControl(PartyMode)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
 	</include>
 	<include name="skinshortcuts-group-alt-x3">
 		<item id="1">
@@ -1446,6 +1478,22 @@
 			<onclick>ActivateWindow(Music,musicdb://)</onclick>
 			<property name="path">ActivateWindow(Music,musicdb://)</property>
 			<property name="list">musicdb://</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
+			<label>$LOCALIZE[589]</label>
+			<label2>Ítem de menú Común</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<thumb />
+			<property name="labelID">589</property>
+			<property name="defaultID">589</property>
+			<onclick>PlayerControl(PartyMode)</onclick>
+			<property name="path">PlayerControl(PartyMode)</property>
+			<property name="list">PlayerControl(PartyMode)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x3)</visible>
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
