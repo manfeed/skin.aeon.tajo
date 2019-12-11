@@ -443,7 +443,7 @@
 			</itemlayout>
 			<focusedlayout>
 			</focusedlayout>
-			<content target="video">plugin://script.embuary.helper?info=getcast&amp;type=$INFO[ListItem.DBType]&amp;dbid=$INFO[ListItem.DBID]</content>
+			<content target="video">$VAR[getDBIDcontent2]</content>
 		</control>
 	</include>
 	<include name="DisplayPngCast">
@@ -469,6 +469,11 @@
 				<focusedlayout>
 				</focusedlayout>
 				<content>
+					<item>
+						<label>[B][COLOR themecolor]$LOCALIZE[206]:[/B][/COLOR][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label][/COLOR]</label>
+						<label2>Cast</label2>
+						<visible>!Control.IsVisible(596) + !Control.IsVisible(589)</visible>
+					</item>
 					<item>
 						<label>$INFO[Container(5952).ListItemAbsolute(0).Label]</label>
 						<label2>$INFO[Container(5952).ListItemAbsolute(0).Icon]</label2>
@@ -528,11 +533,6 @@
 						<label>$INFO[Container(5952).ListItemAbsolute(11).Label]</label>
 						<label2>$INFO[Container(5952).ListItemAbsolute(11).Icon]</label2>
 						<visible>!String.IsEmpty(Container(5952).ListItemAbsolute(11).Icon)</visible>
-					</item>
-					<item>
-						<label>[B][COLOR themecolor]$LOCALIZE[206]:[/B][/COLOR][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label][CR]$INFO[Container(524).ListItemAbsolute(1).Label][CR]$INFO[Container(524).ListItemAbsolute(2).Label][CR]$INFO[Container(524).ListItemAbsolute(3).Label][CR]$INFO[Container(524).ListItemAbsolute(4).Label][CR]$INFO[Container(524).ListItemAbsolute(5).Label][CR]$INFO[Container(524).ListItemAbsolute(6).Label][CR]$INFO[Container(524).ListItemAbsolute(7).Label][CR]$INFO[Container(524).ListItemAbsolute(8).Label][CR]$INFO[Container(524).ListItemAbsolute(9).Label][/COLOR]</label>
-						<label2>Cast</label2>
-						<visible>!Control.IsVisible(596) + !Control.IsVisible(589)</visible>
 					</item>
 				</content>
 			</control>
