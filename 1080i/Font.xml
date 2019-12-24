@@ -1055,8 +1055,9 @@
 		<!-- Normal Fonts -->
 		<font>
 			<name>font_MainMenu</name>
+			<style>bold</style>
 			<filename>Arialuni.ttf</filename>
-			<size>80</size>
+			<size>70</size>
 		</font>
 		<font>
 			<name>font_MainMenu2</name>
@@ -1196,7 +1197,8 @@
 		<font>
 			<name>titleartist</name>
 			<filename>Arialuni.ttf</filename>
-			<size>22</size>
+			<linespacing>0.70</linespacing>
+			<size>20</size>
 		</font>
 		<font>
 			<name>titlesmall</name>
@@ -1216,14 +1218,16 @@
 		</font>
 		<font>
 			<name>titlemus</name>
+			<style>uppercase</style>
 			<filename>Arialuni.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
 			<name>titlemus2</name>
+			<style>uppercase</style>
 			<filename>Arialuni.ttf</filename>
-			<linespacing>0.9</linespacing>
-			<size>44</size>
+			<linespacing>0.8</linespacing>
+			<size>36</size>
 		</font>
 		<font>
 			<name>titleshelf</name>
@@ -1267,9 +1271,10 @@
 		</font>
 		<font>
 			<name>titlemove2</name>
+			<style>uppercase</style>
 			<filename>Arialuni.ttf</filename>
 			<linespacing>0.8</linespacing>
-			<size>60</size>
+			<size>58</size>
 		</font>
 		<font>
 			<name>spiner</name>

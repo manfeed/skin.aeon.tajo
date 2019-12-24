@@ -340,7 +340,7 @@
 					<top>10</top>
 					<left>260</left>
 					<align>center</align>
-					<aligny>center</aligny>
+					<aligny>top</aligny>
 					<width>646</width>
 					<height>100</height>
 					<font>titleshelf</font>
