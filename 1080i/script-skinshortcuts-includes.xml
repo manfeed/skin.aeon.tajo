@@ -267,6 +267,22 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">3</property>
+			<label>$LOCALIZE[589]</label>
+			<label2>Ítem de menú Común</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<thumb />
+			<property name="labelID">589</property>
+			<property name="defaultID">589</property>
+			<onclick>PlayerControl(PartyMode)</onclick>
+			<property name="path">PlayerControl(PartyMode)</property>
+			<property name="list">PlayerControl(PartyMode)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
 			<label>$LOCALIZE[14022]</label>
 			<label2 />
 			<icon>DefaultShortcut.png</icon>
@@ -280,18 +296,34 @@
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">3</property>
-			<label>$LOCALIZE[589]</label>
-			<label2>Ítem de menú Común</label2>
-			<icon>DefaultMusicAlbums.png</icon>
+			<label>Actualizar</label>
+			<label2>Comando de Kodi</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<property name="labelID">589</property>
-			<property name="defaultID">589</property>
-			<onclick>PlayerControl(PartyMode)</onclick>
-			<property name="path">PlayerControl(PartyMode)</property>
-			<property name="list">PlayerControl(PartyMode)</property>
+			<property name="labelID">actualizar</property>
+			<property name="defaultID">32047</property>
+			<onclick>UpdateLibrary(music,,true)</onclick>
+			<property name="path">UpdateLibrary(music,,true)</property>
+			<property name="list">UpdateLibrary(music,,true)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<property name="mainmenuid">3</property>
+			<label>Limpiar</label>
+			<label2>Comando de Kodi</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">limpiar</property>
+			<property name="defaultID">32056</property>
+			<onclick>CleanLibrary(music,true)</onclick>
+			<property name="path">CleanLibrary(music,true)</property>
+			<property name="list">CleanLibrary(music,true)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
@@ -1400,6 +1432,22 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">3</property>
+			<label>$LOCALIZE[589]</label>
+			<label2>Ítem de menú Común</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<thumb />
+			<property name="labelID">589</property>
+			<property name="defaultID">589</property>
+			<onclick>PlayerControl(PartyMode)</onclick>
+			<property name="path">PlayerControl(PartyMode)</property>
+			<property name="list">PlayerControl(PartyMode)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
 			<label>$LOCALIZE[14022]</label>
 			<label2 />
 			<icon>DefaultShortcut.png</icon>
@@ -1413,18 +1461,34 @@
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">3</property>
-			<label>$LOCALIZE[589]</label>
-			<label2>Ítem de menú Común</label2>
-			<icon>DefaultMusicAlbums.png</icon>
+			<label>Actualizar</label>
+			<label2>Comando de Kodi</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<property name="labelID">589</property>
-			<property name="defaultID">589</property>
-			<onclick>PlayerControl(PartyMode)</onclick>
-			<property name="path">PlayerControl(PartyMode)</property>
-			<property name="list">PlayerControl(PartyMode)</property>
+			<property name="labelID">actualizar</property>
+			<property name="defaultID">32047</property>
+			<onclick>UpdateLibrary(music,,true)</onclick>
+			<property name="path">UpdateLibrary(music,,true)</property>
+			<property name="list">UpdateLibrary(music,,true)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<property name="mainmenuid">3</property>
+			<label>Limpiar</label>
+			<label2>Comando de Kodi</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">limpiar</property>
+			<property name="defaultID">32056</property>
+			<onclick>CleanLibrary(music,true)</onclick>
+			<property name="path">CleanLibrary(music,true)</property>
+			<property name="list">CleanLibrary(music,true)</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
@@ -1517,6 +1581,22 @@
 		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<property name="mainmenuid">3</property>
+			<label>$LOCALIZE[589]</label>
+			<label2>Ítem de menú Común</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<thumb />
+			<property name="labelID">589</property>
+			<property name="defaultID">589</property>
+			<onclick>PlayerControl(PartyMode)</onclick>
+			<property name="path">PlayerControl(PartyMode)</property>
+			<property name="list">PlayerControl(PartyMode)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">3</property>
 			<label>$LOCALIZE[14022]</label>
 			<label2 />
 			<icon>DefaultShortcut.png</icon>
@@ -1530,18 +1610,34 @@
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
 			<property name="mainmenuid">3</property>
-			<label>$LOCALIZE[589]</label>
-			<label2>Ítem de menú Común</label2>
-			<icon>DefaultMusicAlbums.png</icon>
+			<label>Actualizar</label>
+			<label2>Comando de Kodi</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<property name="labelID">589</property>
-			<property name="defaultID">589</property>
-			<onclick>PlayerControl(PartyMode)</onclick>
-			<property name="path">PlayerControl(PartyMode)</property>
-			<property name="list">PlayerControl(PartyMode)</property>
+			<property name="labelID">actualizar</property>
+			<property name="defaultID">32047</property>
+			<onclick>UpdateLibrary(music,,true)</onclick>
+			<property name="path">UpdateLibrary(music,,true)</property>
+			<property name="list">UpdateLibrary(music,,true)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x3)</visible>
+			<property name="group">x3</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUMBER[9]</property>
+			<property name="mainmenuid">3</property>
+			<label>Limpiar</label>
+			<label2>Comando de Kodi</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">limpiar</property>
+			<property name="defaultID">32056</property>
+			<onclick>CleanLibrary(music,true)</onclick>
+			<property name="path">CleanLibrary(music,true)</property>
+			<property name="list">CleanLibrary(music,true)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x3)</visible>
 			<property name="group">x3</property>
 			<property name="isSubmenu">True</property>

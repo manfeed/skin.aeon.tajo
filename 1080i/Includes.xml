@@ -1337,13 +1337,6 @@
 		<param name="leftr" />
 		<definition>
 			<control type="image">
-				<width>80</width>
-				<height>150</height>
-				<left>$PARAM[leftr]</left>
-				<colordiffuse>01FFFFFF</colordiffuse>
-				<texture>$INFO[Window(Visualisation).Property(Artistslideshow.$PARAM[orderr].SimilarThumb)]</texture>
-			</control>
-			<control type="image">
 				<width>75</width>
 				<height>75</height>
 				<left>$PARAM[leftr]</left>
