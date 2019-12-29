@@ -31,10 +31,6 @@
 				<scrollout>false</scrollout>
 				<resetonlabelchange>true</resetonlabelchange>
 			</control>
-			<!--control type="image">
-				<include>FullscreenDimensions</include>
-				<texture>special://skin/backgrounds/default_bg.png</texture>
-			</control-->
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<texture background="true">$INFO[Player.Art(artist.fanart)]</texture>
@@ -63,7 +59,7 @@
 				<fadetime>800</fadetime>
 				<loop>yes</loop>
 				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady))</visible>
 				<visible>String.IsEmpty(Player.Art(artist.fanart))</visible>
 			</control>
 			<control type="group">
