@@ -1030,7 +1030,7 @@
 	</variable>
 	<variable name="poster">
 		<!-- Poster -->
-		<value condition="!String.IsEmpty(ListItem.Art(animatedartist)) + Container.Content(artists)">$INFO[ListItem.Art(animatedartist)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(animatedthumb)) + Container.Content(artists)">$INFO[ListItem.Art(animatedthumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(animatedposters)">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [String.IsEqual(ListItem.Art(animatedposter), ) | !Skin.HasSetting(animatedposters)]">$INFO[ListItem.Art(poster)]</value>
 		<!-- Poster seriados -->
