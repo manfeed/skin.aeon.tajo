@@ -820,7 +820,7 @@
 						<top>365</top>
 						<width>777</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua2.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua2.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -850,7 +850,7 @@
 						<left>770</left>
 						<width>170</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua3.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua3.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -880,7 +880,7 @@
 						<left>940</left>
 						<width>150</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua3.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua3.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -910,7 +910,7 @@
 						<left>1080</left>
 						<width>260</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -940,7 +940,7 @@
 						<left>1340</left>
 						<width>250</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -970,7 +970,7 @@
 						<left>1590</left>
 						<width>328</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>

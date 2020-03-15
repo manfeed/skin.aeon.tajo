@@ -125,7 +125,7 @@
 								<visible>Control.HasFocus(591)</visible>
 								<width>496</width>
 								<height>278</height>
-								<texture diffuse="tajo/mask_cover3.png">tajo/backani.gif</texture>
+								<texture diffuse="tajo/mask_cover3.png">$VAR[Option_Back]</texture>
 								<aspectratio align="center">stretch</aspectratio>
 								<colordiffuse>bbffffff</colordiffuse>
 							</control>
@@ -133,7 +133,7 @@
 								<visible>Control.HasFocus(5910) | Control.HasFocus(5912) | Control.HasFocus(5919) | Control.HasFocus(80)</visible>
 								<width>496</width>
 								<height>278</height>
-								<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
+								<texture diffuse="tajo/recua.png">$VAR[Option_Back]</texture>
 								<aspectratio align="center">stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -332,7 +332,7 @@
 								<visible>Control.HasFocus(5910)</visible>
 								<width>564</width>
 								<height>266</height>
-								<texture diffuse="tajo/mask_cover3.png">tajo/backani.gif</texture>
+								<texture diffuse="tajo/mask_cover3.png">$VAR[Option_Back]</texture>
 								<aspectratio align="center">stretch</aspectratio>
 								<colordiffuse>bbffffff</colordiffuse>
 							</control>
@@ -348,7 +348,7 @@
 								<visible>Control.HasFocus(5912)</visible>
 								<width>564</width>
 								<height>266</height>
-								<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
+								<texture diffuse="tajo/recua.png">$VAR[Option_Back]</texture>
 								<aspectratio align="center">stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -530,7 +530,7 @@
 								<visible>Control.HasFocus(5912)</visible>
 								<width>847</width>
 								<height>61</height>
-								<texture diffuse="tajo/mask47.png">tajo/backani.gif</texture>
+								<texture diffuse="tajo/mask47.png">$VAR[Option_Back]</texture>
 								<aspectratio align="center">stretch</aspectratio>
 								<colordiffuse>bbffffff</colordiffuse>
 							</control>

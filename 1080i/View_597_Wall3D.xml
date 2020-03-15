@@ -27,7 +27,7 @@
 						<top>175</top>
 						<width>215</width>
 						<height>300</height>
-						<texture diffuse="tajo/mask_cover3.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/mask_cover3.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
@@ -510,7 +510,7 @@
 						<top>169</top>
 						<width>237</width>
 						<height>237</height>
-						<texture diffuse="tajo/mask_cover3.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/mask_cover3.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>ddFFFFFF</colordiffuse>
 					</control>
@@ -532,7 +532,7 @@
 						<top>167</top>
 						<width>237</width>
 						<height>237</height>
-						<texture diffuse="tajo/mask_circle.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/mask_circle.png">$VAR[Option_Back]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 						<colordiffuse>bbffffff</colordiffuse>
 					</control>

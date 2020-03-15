@@ -1383,3 +1383,7 @@ msgstr ""
 msgctxt "#31970"
 msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/tvshows and other options."
 msgstr ""
+
+msgctxt "#31971"
+msgid "Color for items selected"
+msgstr "Color for items selected"

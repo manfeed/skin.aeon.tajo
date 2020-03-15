@@ -34,7 +34,7 @@
 						<top>178</top>
 						<width>545</width>
 						<height>120</height>
-						<texture diffuse="tajo/mask_cover3.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/mask_cover3.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>ddFFFFFF</colordiffuse>
 					</control>

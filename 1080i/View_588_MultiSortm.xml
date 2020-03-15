@@ -643,7 +643,7 @@
 						<top>365</top>
 						<width>577</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua2.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua2.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -673,7 +673,7 @@
 						<left>570</left>
 						<width>450</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua2.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua2.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -703,7 +703,7 @@
 						<left>1020</left>
 						<width>500</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua2.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua2.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -723,7 +723,7 @@
 						<left>1520</left>
 						<width>100</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua3.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua3.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -743,7 +743,7 @@
 						<left>1620</left>
 						<width>170</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>
@@ -764,7 +764,7 @@
 						<left>1790</left>
 						<width>130</width>
 						<height>192</height>
-						<texture diffuse="tajo/recua.png">tajo/backani.gif</texture>
+						<texture diffuse="tajo/recua.png">$VAR[Option_Back]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>baffffff</colordiffuse>
 					</control>

@@ -380,17 +380,6 @@
 					<colordiffuse>ff0c6a6a</colordiffuse>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
-				<!--control type="image">
-					<include>Animation_NewWallFloat_2</include>
-					<visible>System.IdleTime(7)</visible>
-					<visible>Integer.IsGreater(Container(587).Column,1)</visible>
-					<left>-185</left>
-					<top>110</top>
-					<width>145</width>
-					<height>120</height>
-					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
-					<texture diffuse="home.png">tajo/backani.gif</texture>
-				</control-->
 				<control type="textbox">
 					<include>Animation_NewWallFloat_2</include>
 					<visible>System.IdleTime(7)</visible>
@@ -492,17 +481,6 @@
 					<colordiffuse>ff0c6a6a</colordiffuse>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
-				<!--control type="image">
-					<include>Animation_NewWallFloat_2</include>
-					<visible>System.IdleTime(7)</visible>
-					<visible>!Integer.IsGreater(Container(587).Column,14)</visible>
-					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
-					<left>275</left>
-					<top>110</top>
-					<width>145</width>
-					<height>120</height>
-					<texture diffuse="home.png">tajo/backani.gif</texture>
-				</control-->
 				<control type="textbox">
 					<include>Animation_NewWallFloat_2</include>
 					<visible>System.IdleTime(7)</visible>
@@ -1588,16 +1566,6 @@
 					<texture colordiffuse="DDff0303">$VAR[watched_style]</texture>
 					<visible>String.IsEqual(Container(587).ListItemNoWrap(-17).Overlay,OverlayWatched.png)</visible>
 				</control>
-				<!--control type="image">
-					<visible>System.IdleTime(7)</visible>
-					<visible>Integer.IsGreater(Container(587).Column,14)</visible>
-					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
-					<left>48</left>
-					<top>440</top>
-					<width>145</width>
-					<height>120</height>
-					<texture diffuse="home.png">tajo/backani.gif</texture>
-				</control-->
 				<control type="textbox">
 					<visible>System.IdleTime(7)</visible>
 					<visible>Integer.IsGreater(Container(587).Column,14)</visible>
@@ -1612,16 +1580,6 @@
 					<font>Font_plot</font>
 					<label>[B]$LOCALIZE[31401][/B]</label>
 				</control>
-				<!--control type="image">
-					<visible>System.IdleTime(7)</visible>
-					<visible>!Integer.IsGreater(Container(587).Column,1)</visible>
-					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
-					<left>1960</left>
-					<top>440</top>
-					<width>145</width>
-					<height>120</height>
-					<texture diffuse="home.png">tajo/backani.gif</texture>
-				</control-->
 				<control type="textbox">
 					<visible>System.IdleTime(7)</visible>
 					<visible>!Integer.IsGreater(Container(587).Column,1)</visible>
@@ -1667,9 +1625,9 @@
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 					<left>948</left>
 					<top>330</top>
-					<width>260</width>
+					<width>259</width>
 					<height>350</height>
-					<texture diffuse="bg2.png">tajo/backani.gif</texture>
+					<texture diffuse="bg2.png">$VAR[Option_Back]</texture>
 				</control>
 				<control type="image">
 					<visible>!System.IdleTime(7) | System.HasVisibleModalDialog</visible>

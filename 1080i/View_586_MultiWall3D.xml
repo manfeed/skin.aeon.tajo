@@ -333,7 +333,7 @@
 					<height>120</height>
 					<animation effect="slide" start="0,0" end="0,250" time="0" condition="Skin.HasSetting(showCast) + !ListItem.IsCollection">Conditional</animation>
 					<animation effect="fade" start="0" end="100" delay="800" time="500">Visible</animation>
-					<texture diffuse="home.png">tajo/backani.gif</texture>
+					<texture diffuse="home.png">$VAR[Option_Back]</texture>
 				</control-->
 				<control type="textbox">
 					<include>Animation_NewWallFloat_23D</include>
@@ -1685,7 +1685,7 @@
 					<top>330</top>
 					<width>260</width>
 					<height>350</height>
-					<texture diffuse="bg2.png">tajo/backani.gif</texture>
+					<texture diffuse="bg2.png">$VAR[Option_Back]</texture>
 				</control>
 				<control type="image">
 					<visible>!System.IdleTime(7) | System.HasVisibleModalDialog</visible>

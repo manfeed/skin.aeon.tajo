@@ -204,6 +204,15 @@
 						<selected>!Skin.HasSetting(Disable.FanartTitle)</selected>
 					</control>
 				</control>
+				<control type="image">
+					<left>1650</left>
+					<top>32</top>
+					<width>187</width>
+					<height>90</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$VAR[Option_Back]</texture>
+					<visible>Container(9000).HasFocus(2)</visible>
+				</control>
 				<control type="grouplist" id="9002">
 					<description>control area</description>
 					<left>522</left>
@@ -216,6 +225,20 @@
 					<onup>9002</onup>
 					<ondown>9002</ondown>
 					<visible>Container(9000).HasFocus(2)</visible>
+					<control type="button" id="113">
+						<label>31971</label>
+						<font>font15</font>
+						<width>1128</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<onclick condition="String.IsEmpty(skin.string(flat_back))">Skin.SetString(flat_back,1)</onclick>
+						<onclick condition="String.IsEqual(skin.string(flat_back),1)">Skin.SetString(flat_back,2)</onclick>
+						<onclick condition="String.IsEqual(skin.string(flat_back),2)">Skin.SetString(flat_back,3)</onclick>
+						<onclick condition="String.IsEqual(skin.string(flat_back),3)">Skin.SetString(flat_back,4)</onclick>
+						<onclick condition="String.IsEqual(skin.string(flat_back),4)">Skin.SetString(flat_back,5)</onclick>
+						<onclick condition="String.IsEqual(skin.string(flat_back),5)">Skin.SetString(flat_back,6)</onclick>
+						<onclick condition="String.IsEqual(skin.string(flat_back),6)">Skin.Reset(flat_back)</onclick>
+					</control>
 					<control type="radiobutton" id="115">
 						<width>1316</width>
 						<height>90</height>
