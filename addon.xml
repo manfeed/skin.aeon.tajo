@@ -1,6 +1,6 @@
-<addon id="skin.aeon.tajo" name="Aeon Tajo" provider-name="manfeed" version="2.4.7">
+<addon id="skin.aeon.tajo" name="Aeon Tajo" provider-name="manfeed" version="2.4.8">
 	<requires>
-		<import addon="xbmc.gui" version="5.15.0" />
+		<import addon="xbmc.gui" version="5.14.0" />
 		<import addon="script.grab.fanart" version="0.12.8" />
 		<import addon="script.skinshortcuts" version="0.4.5" />
 		<import addon="service.library.data.provider" version="0.0.7" />
