@@ -62,7 +62,7 @@
 					<control type="label">
 						<visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>
 						<height>30</height>
-						<width>510</width>
+						<width>513</width>
 						<font>Font_plot</font>
 						<aligny>top</aligny>
 						<align>left</align>
@@ -70,7 +70,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>40</scrollspeed>
 						<scrollsuffix>  -  </scrollsuffix>
-						<label>[B]$VAR[value_ground16_label]:[/B] [COLOR=FFFFFAF0]$VAR[value_ground16_value]    [/COLOR] [CAPITALIZE][B][LOWERCASE]$LOCALIZE[19081]:[/B][/LOWERCASE][/CAPITALIZE][COLOR=FFFFFAF0] $INFO[ListItem.EndTime][/COLOR]</label>
+						<label>[B]$VAR[value_ground16_label]:[/B] [COLOR=FFFFFAF0]$VAR[value_ground16_value]   [/COLOR] [CAPITALIZE][B][LOWERCASE]$LOCALIZE[19081]:[/B][/LOWERCASE][/CAPITALIZE][COLOR=FFFFFAF0] $INFO[ListItem.EndTime][/COLOR]</label>
 					</control>
 					<control type="textbox">
 						<visible>!Container.Content(tvshows) + !Container.Content(seasons)</visible>

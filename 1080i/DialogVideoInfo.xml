@@ -796,7 +796,7 @@
    						 <onclick>SetProperty(TextViewerHeader,$LOCALIZE[368],Home)</onclick>
    						 <onclick>SetProperty(TextViewerContent,$INFO[ListItem.Rating(imdb)]$INFO[ListItem.Votes(imdb), (, $LOCALIZE[205])],Home)</onclick>
    						 <onclick>ActivateWindow(1132)</onclick>
-    				<visible>!String.IsEqual(ListItem.Rating(imdb),0.0)</visible>
+					    <visible>!String.IsEmpty(ListItem.Rating(imdb))</visible>
 					</item>
 					<item>
 					    <label>$INFO[ListItem.Rating(themoviedb)]$INFO[ListItem.Votes(themoviedb), (, $LOCALIZE[205])]</label>
@@ -804,7 +804,7 @@
 					    <onclick>SetProperty(TextViewerHeader,$LOCALIZE[31120],Home)</onclick>
 					    <onclick>SetProperty(TextViewerContent,$INFO[ListItem.Rating(themoviedb)]$INFO[ListItem.Votes(themoviedb), (, $LOCALIZE[205])],Home)</onclick>
 					    <onclick>ActivateWindow(1132)</onclick>
-					    <visible>!String.IsEqual(ListItem.Rating(tmdb),0.0)</visible>
+					    <visible>!String.IsEmpty(ListItem.Rating(themoviedb))</visible>
 					</item>
 					<item>
 					    <label>$INFO[ListItem.Rating(metacritic)]$INFO[ListItem.Votes(metacritic), (, $LOCALIZE[31179])]</label>
@@ -812,7 +812,7 @@
 					    <onclick>SetProperty(TextViewerHeader,MetaCritic,Home)</onclick>
 					    <onclick>SetProperty(TextViewerContent,$INFO[ListItem.Rating(metacritic)]$INFO[ListItem.Votes(metacritic), (, $LOCALIZE[205])],Home)</onclick>
 					    <onclick>ActivateWindow(1132)</onclick>
-					    <visible>!String.IsEqual(ListItem.Rating(metacritic),0.0)</visible>
+					    <visible>!String.IsEmpty(ListItem.Rating(metacritic))</visible>
 					</item>
 					<item>
 					    <label>$INFO[ListItem.Rating(tomatometerallcritics)]$INFO[ListItem.Votes(tomatometerallcritics), (, Reviews)]</label>
@@ -820,7 +820,7 @@
 					    <onclick>SetProperty(TextViewerHeader,tomatometerallcritics,Home)</onclick>
 					    <onclick>SetProperty(TextViewerContent,$INFO[ListItem.Rating(tomatometerallcritics)]$INFO[ListItem.Votes(tomatometerallcritics), (, $LOCALIZE[205])],Home)</onclick>
 					    <onclick>ActivateWindow(1132)</onclick>
-					    <visible>!String.IsEqual(ListItem.Rating(tomatometerallcritics),0.0)</visible>
+					    <visible>!String.IsEmpty(ListItem.Rating(tomatometerallcritics))</visible>
 					</item>
 					<item>
 					    <label>$INFO[ListItem.Rating(tomatometerallaudience)]$INFO[ListItem.Votes(tomatometerallaudience), (, $LOCALIZE[205])]</label>
@@ -828,7 +828,7 @@
 					    <onclick>SetProperty(TextViewerHeader,tomatometerallaudience,Home)</onclick>
 					    <onclick>SetProperty(TextViewerContent,$INFO[ListItem.Rating(tomatometerallaudience)]$INFO[ListItem.Votes(tomatometerallaudience), (, $LOCALIZE[205])],Home)</onclick>
 					    <onclick>ActivateWindow(1132)</onclick>
-					    <visible>!String.IsEqual(ListItem.Rating(tomatometerallaudience),0.0)</visible>
+						<visible>!String.IsEmpty(ListItem.Rating(tomatometerallaudience))</visible>
 					</item>
 					<item>
 					    <label>$INFO[ListItem.Rating(tvdb)]$INFO[ListItem.Votes(tvdb), (, $LOCALIZE[205])]</label>
@@ -836,7 +836,7 @@
 					    <onclick>SetProperty(TextViewerHeader,tvdb,Home)</onclick>
 					    <onclick>SetProperty(TextViewerContent,$INFO[ListItem.Rating(tvdb)]$INFO[ListItem.Votes(tvdb), (, $LOCALIZE[205])],Home)</onclick>
 					    <onclick>ActivateWindow(1132)</onclick>
-					    <visible>!String.IsEqual(ListItem.Rating(tvdb),0.0)</visible>
+						<visible>!String.IsEmpty(ListItem.Rating(tvdb))</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Premiered]</label>
