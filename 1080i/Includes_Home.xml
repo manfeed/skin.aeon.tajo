@@ -522,20 +522,6 @@
 	</include>
 	<include name="HomeSubMenuTVShows">
 		<item>
-			<label>369</label>
-			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-			<icon />
-			<thumb />
-			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11) +!System.HasAddon(script.tv.show.next.aired)</visible>
-		</item>
-		<item>
-			<label>$ADDON[script.tv.show.next.aired 32019]</label>
-			<onclick>RunAddon(script.tv.show.next.aired,return)</onclick>
-			<icon />
-			<thumb />
-			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11) + System.HasAddon(script.tv.show.next.aired)</visible>
-		</item>
-		<item>
 			<label>575</label>
 			<onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,return)</onclick>
 			<icon />

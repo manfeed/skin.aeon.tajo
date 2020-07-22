@@ -76,7 +76,7 @@
 							<top>10</top>
 							<width>220</width>
 							<height>310</height>
-							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -117,7 +117,7 @@
 								<effect type="slide" end="-164,0" time="600" tween="cubic" easing="inout"/>
 							</animation>
 							<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-							<colordiffuse>ff0c6a6a</colordiffuse>
+							<colordiffuse>ff000000</colordiffuse>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<!--control type="image">
@@ -158,7 +158,7 @@
 								<effect type="slide" end="559,0" time="600" tween="cubic" easing="inout"/>
 							</animation>
 							<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-							<colordiffuse>ff0c6a6a</colordiffuse>
+							<colordiffuse>ff000000</colordiffuse>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -177,7 +177,7 @@
 								<effect type="slide" end="400,0" time="400"/>
 							</animation>
 							<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-							<colordiffuse>ff0c6a6a</colordiffuse>
+							<colordiffuse>ff000000</colordiffuse>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -196,7 +196,7 @@
 								<effect type="slide" end="230,0" time="300"/>
 							</animation>
 							<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-							<colordiffuse>ff0c6a6a</colordiffuse>
+							<colordiffuse>ff000000</colordiffuse>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -215,7 +215,7 @@
 								<effect type="slide" end="100,0" time="200"/>
 							</animation>
 							<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-							<colordiffuse>ff0c6a6a</colordiffuse>
+							<colordiffuse>ff000000</colordiffuse>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="group">
@@ -232,7 +232,7 @@
 								<width>967</width>
 								<height>230</height>
 								<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-								<colordiffuse>ff0c6a6a</colordiffuse>
+								<colordiffuse>ff000000</colordiffuse>
 								<aspectratio align="center">stretch</aspectratio>
 							</control>
 						</control>
@@ -250,7 +250,7 @@
 								<effect type="slide" end="0,175" time="300" tween="back" easing="out"/>
 							</animation>
 							<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-							<colordiffuse>ff0c6a6a</colordiffuse>
+							<colordiffuse>ff000000</colordiffuse>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -260,7 +260,7 @@
 							<top>10</top>
 							<width>220</width>
 							<height>310</height>
-							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 							<aspectratio align="center">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -293,7 +293,7 @@
 					<width>1210</width>
 					<height>512</height>
 					<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-					<colordiffuse>ff0c6a6a</colordiffuse>
+					<colordiffuse>ff000000</colordiffuse>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -306,7 +306,7 @@
 					<width>1193</width>
 					<height>512</height>
 					<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-					<colordiffuse>ff0c6a6a</colordiffuse>
+					<colordiffuse>ff000000</colordiffuse>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -318,7 +318,7 @@
 					<width>1209</width>
 					<height>512</height>
 					<texture diffuse="tajo/mask_cover3.png" background="true">white.jpg</texture>
-					<colordiffuse>ff0c6a6a</colordiffuse>
+					<colordiffuse>ff000000</colordiffuse>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
 				<!--control type="image">
@@ -1622,7 +1622,7 @@
 					<top>350</top>
 					<width>220</width>
 					<height>310</height>
-					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -1631,7 +1631,7 @@
 					<top>20</top>
 					<width>220</width>
 					<height>310</height>
-					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(586).ListItemNoWrap(-17).Icon]</texture>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(586).ListItemNoWrap(-17).Art(poster)]</texture>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -1655,8 +1655,8 @@
 				<control type="button" id="5865">
 					<visible>!System.HasVisibleModalDialog</visible>
 					<animation effect="fade" start="0" end="100" time="100">Visible</animation>
-					<texturefocus diffuse="tajo/mask_cover3.png" colordiffuse="ff0c6a6a">bg2.png</texturefocus>
-					<texturenofocus diffuse="tajo/mask_cover3.png" colordiffuse="ff0c6a6a">bg2.png</texturenofocus>
+					<texturefocus diffuse="tajo/mask_cover3.png" colordiffuse="ff000000">bg2.png</texturefocus>
+					<texturenofocus diffuse="tajo/mask_cover3.png" colordiffuse="ff000000">bg2.png</texturenofocus>
 					<left>948</left>
 					<top>331</top>
 					<width>259</width>

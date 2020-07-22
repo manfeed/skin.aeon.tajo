@@ -73,15 +73,6 @@
 						<font>font15</font>
 						<textcolor>labelheader</textcolor>
 						<scroll>true</scroll>
-						<label>$INFO[Window(Home).Property(NextAired.Status)]</label>
-						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.Status))</visible>
-					</control>
-					<control type="label">
-						<right>30</right>
-						<height>30</height>
-						<font>font15</font>
-						<textcolor>labelheader</textcolor>
-						<scroll>true</scroll>
 						<label>$INFO[ListItem.TvShowTitle]</label>
 						<visible>String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TvShowTitle)</visible>
 					</control>
@@ -141,28 +132,6 @@
 						<colordiffuse>grey</colordiffuse>
 						<include>MediaFlagVars</include>
 						<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
-					</control>
-					<control type="group">
-						<width>160</width>
-						<visible>![String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(Disable.NextAired)]</visible>
-						<control type="label">
-							<top>2</top>
-							<width>160</width>
-							<height>60</height>
-							<align>center</align>
-							<label>$INFO[ListItem.Duration(mins)]</label>
-							<font>font48_bold</font>
-							<textcolor>grey</textcolor>
-						</control>
-						<control type="label">
-							<top>52</top>
-							<width>160</width>
-							<height>30</height>
-							<align>center</align>
-							<label>[LOWERCASE]$LOCALIZE[12391][/LOWERCASE]</label>
-							<font>font12</font>
-							<textcolor>grey</textcolor>
-						</control>
 					</control>
 					<control type="group">
 						<visible>!String.IsEmpty(ListItem.Rating)</visible>
@@ -260,16 +229,6 @@
 						<label>$INFO[ListItem.Writer,[COLOR labelheader]$LOCALIZE[20417]:   [/COLOR]]</label>
 						<onclick condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Writer])</onclick>
 						<visible>!String.IsEmpty(ListItem.Writer)</visible>
-					</control>
-					<control type="button" id="30004">
-						<include>ButtonInfo</include>
-						<label>$INFO[Window(Home).Property(NextAired.NextDate),[COLOR labelheader]$LOCALIZE[31010]:   [/COLOR], - ]$INFO[Window(Home).Property(NextAired.NextNumber),, - ]$INFO[Window(Home).Property(NextAired.NextTitle)]</label>
-						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-					</control>
-					<control type="button" id="30005">
-						<include>ButtonInfo</include>
-						<label>$INFO[Window(Home).Property(NextAired.LatestDate),[COLOR labelheader]$LOCALIZE[31011]:   [/COLOR], - ]$INFO[Window(Home).Property(NextAired.LatestNumber),, - ]$INFO[Window(Home).Property(NextAired.LatestTitle)]</label>
-						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.LatestDate)) + String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 					</control>
 					<control type="button" id="30007">
 						<include>ButtonInfo</include>
@@ -869,14 +828,6 @@
 						<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Country],Home)</onclick>
 						<onclick>ActivateWindow(1132)</onclick>
 						<visible>!String.IsEmpty(ListItem.Country)</visible>
-					</item>
-					<item>
-						<label>$INFO[Window(Home).Property(NextAired.Country)]</label>
-						<label2>$LOCALIZE[574]:</label2>
-						<onclick>SetProperty(TextViewerHeader,$LOCALIZE[574],Home)</onclick>
-						<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Property(NextAired.Country)],Home)</onclick>
-						<onclick>ActivateWindow(1132)</onclick>
-						<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(Window(Home).Property(NextAired.Country))</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.DateAdded]</label>

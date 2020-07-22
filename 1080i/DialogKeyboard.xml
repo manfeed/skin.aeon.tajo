@@ -458,7 +458,6 @@
 					</control>
 				</control>
 			</control>
-			<include condition="System.HasAddon(plugin.program.autocompletion) + !Skin.HasSetting(Disable.Autocomplete)">ExtendedInfoAutoComplete</include>
 		</control>
 	</controls>
 </window>

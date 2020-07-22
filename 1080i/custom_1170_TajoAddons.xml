@@ -140,19 +140,6 @@
 						<onclick>InstallAddon(service.library.data.provider)</onclick>
 						<visible>!System.HasAddon(service.library.data.provider)</visible>
 					</control>
-					<control type="button" id="104">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.grab.fanart)]</label>
-						<label2>$INFO[System.AddonVersion(script.grab.fanart),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]]</label2>
-						<visible>System.HasAddon(script.grab.fanart)</visible>
-					</control>
-					<control type="button" id="105">
-						<include>SettingsButtonCommonValues</include>
-						<label>script.grab.fanart</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(script.grab.fanart)</onclick>
-						<visible>!System.HasAddon(script.grab.fanart)</visible>
-					</control>
 					<control type="button" id="106">
 						<include>SettingsButtonCommonValues</include>
 						<label>$INFO[System.AddonTitle(resource.images.studios.white)]</label>
@@ -178,19 +165,6 @@
 						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
 						<onclick>InstallAddon(resource.images.recordlabels.white)</onclick>
 						<visible>!System.HasAddon(resource.images.recordlabels.white)</visible>
-					</control>
-					<control type="button" id="110">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.check.theme)]</label>
-						<label2>$INFO[System.AddonVersion(script.check.theme),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]]</label2>
-						<visible>System.HasAddon(script.check.theme)</visible>
-					</control>
-					<control type="button" id="111">
-						<include>SettingsButtonCommonValues</include>
-						<label>script.check.theme</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(script.check.theme)</onclick>
-						<visible>!System.HasAddon(script.check.theme)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="9002">
@@ -288,20 +262,6 @@
 						<onclick>InstallAddon(service.upnext)</onclick>
 						<visible>!System.HasAddon(service.upnext)</visible>
 					</control>
-					<control type="button" id="212">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(context.trailer)]</label>
-						<label2>$INFO[System.AddonVersion(context.trailer),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]]</label2>
-						<onclick>Addon.OpenSettings(context.trailer)</onclick>
-						<visible>System.HasAddon(context.trailer)</visible>
-					</control>
-					<control type="button" id="213">
-						<include>SettingsButtonCommonValues</include>
-						<label>context.trailer</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(context.trailer)</onclick>
-						<visible>!System.HasAddon(context.trailer)</visible>
-					</control>
 					<control type="button" id="214">
 						<include>SettingsButtonCommonValues</include>
 						<label>$INFO[System.AddonTitle(resource.images.actorart)]</label>
@@ -342,30 +302,30 @@
 					<visible>Container(9000).HasFocus(3)</visible>
 					<control type="button" id="300">
 						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
-						<label2>$INFO[System.AddonVersion(script.tv.show.next.aired),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]]</label2>
-						<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
-						<visible>System.HasAddon(script.tv.show.next.aired)</visible>
+						<label>$INFO[System.AddonTitle(plugin.video.youtube)]</label>
+						<label2>$INFO[System.AddonVersion(plugin.video.youtube),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]]</label2>
+						<onclick>Addon.OpenSettings(plugin.video.youtube)</onclick>
+						<visible>System.HasAddon(plugin.video.youtube)</visible>
 					</control>
 					<control type="button" id="301">
 						<include>SettingsButtonCommonValues</include>
-						<label>script.tv.show.next.aired</label>
+						<label>plugin.video.youtube</label>
 						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(script.tv.show.next.aired)</onclick>
-						<visible>!System.HasAddon(script.tv.show.next.aired)</visible>
+						<onclick>InstallAddon(plugin.video.youtube)</onclick>
+						<visible>!System.HasAddon(plugin.video.youtube)</visible>
 					</control>
-					<control type="button" id="302">
+					<control type="button" id="110">
 						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(plugin.program.autocompletion)]</label>
-						<label2>$INFO[System.AddonVersion(plugin.program.autocompletion),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]]</label2>
-						<visible>System.HasAddon(plugin.program.autocompletion)</visible>
+						<label>$INFO[System.AddonTitle(script.check.theme)]</label>
+						<label2>$INFO[System.AddonVersion(script.check.theme),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]]</label2>
+						<visible>System.HasAddon(script.check.theme)</visible>
 					</control>
-					<control type="button" id="303">
+					<control type="button" id="111">
 						<include>SettingsButtonCommonValues</include>
-						<label>plugin.program.autocompletion</label>
+						<label>script.check.theme</label>
 						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(plugin.program.autocompletion)</onclick>
-						<visible>!System.HasAddon(plugin.program.autocompletion)</visible>
+						<onclick>InstallAddon(script.check.theme)</onclick>
+						<visible>!System.HasAddon(script.check.theme)</visible>
 					</control>
 				</control>
 			</control>

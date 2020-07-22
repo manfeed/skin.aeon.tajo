@@ -1219,31 +1219,4 @@
 			</control>
 		</control>
 	</include>
-	<include name="FanartTitle">
-		<control type="group">
-			<visible>!Player.HasVideo</visible>
-			<bottom>0</bottom>
-			<height>60</height>
-			<control type="label" id="9011">
-				<label>$VAR[FanartTitleVar]</label>
-				<include>HiddenObject</include>
-			</control>
-			<control type="button">
-				<width>auto</width>
-				<height>60</height>
-				<font>font10</font>
-				<textcolor>FFDFDFDF</textcolor>
-				<shadowcolor />
-				<aligny>top</aligny>
-				<textoffsetx>30</textoffsetx>
-				<textoffsety>5</textoffsety>
-				<label>$VAR[FanartTitleVar]</label>
-				<texturenofocus border="30,0,30,30">text_shadow.png</texturenofocus>
-				<visible>![ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] + !String.IsEmpty(Control.GetLabel(9011))</visible>
-				<include>VisibleFadeAnimation</include>
-				<animation effect="fade" time="600">WindowOpen</animation>
-				<animation effect="fade" time="600">WindowClose</animation>
-			</control>
-		</control>
-	</include>
 </includes>

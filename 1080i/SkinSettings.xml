@@ -194,15 +194,6 @@
 						<onclick>Skin.ToggleSetting(Disable.Videoinfo)</onclick>
 						<selected>!Skin.HasSetting(Disable.Videoinfo)</selected>
 					</control>
-					<control type="radiobutton" id="105">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>$LOCALIZE[31160]</label>
-						<onclick>Skin.ToggleSetting(Disable.FanartTitle)</onclick>
-						<selected>!Skin.HasSetting(Disable.FanartTitle)</selected>
-					</control>
 				</control>
 				<control type="image">
 					<left>1650</left>
@@ -239,15 +230,6 @@
 						<onclick condition="String.IsEqual(skin.string(flat_back),5)">Skin.SetString(flat_back,6)</onclick>
 						<onclick condition="String.IsEqual(skin.string(flat_back),6)">Skin.Reset(flat_back)</onclick>
 					</control>
-					<control type="radiobutton" id="115">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>31250</label>
-						<onclick>Skin.ToggleSetting(musicfullscreen)</onclick>
-						<selected>Skin.HasSetting(musicfullscreen)</selected>
-					</control>
 					<control type="radiobutton" id="117">
 						<width>1316</width>
 						<height>90</height>
@@ -256,6 +238,7 @@
 						<label>31180</label>
 						<onclick>Skin.ToggleSetting(playTheme)</onclick>
 						<selected>Skin.HasSetting(playTheme)</selected>
+						<visible>System.HasAddon(script.check.theme)</visible>
 					</control>
 					<control type="radiobutton" id="299">
 						<width>1316</width>

@@ -964,7 +964,7 @@
 								<left>10</left>
 								<width>170</width>
 								<height>238</height>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 								<aspectratio align="center">scale</aspectratio>
 							</control>
 							<control type="image">
@@ -1013,7 +1013,7 @@
 								<left>10</left>
 								<width>170</width>
 								<height>238</height>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster)]</texture>
 								<aspectratio align="center">scale</aspectratio>
 							</control>
 							<control type="image">

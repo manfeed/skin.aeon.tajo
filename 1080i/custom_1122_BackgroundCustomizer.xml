@@ -95,35 +95,35 @@
 					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
 					<onclick>Skin.SetString(ItemToEdit.MultiFanart,1)</onclick>
 					<onclick>Dialog.Close(1122)</onclick>
-					<visible>System.HasAddon(script.grab.fanart)</visible>
+					<visible>System.HasAddon(script.embuary.helper)</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[31063]</label>
 					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
 					<onclick>Skin.SetString(ItemToEdit.MultiFanart,2)</onclick>
 					<onclick>Dialog.Close(1122)</onclick>
-					<visible>System.HasAddon(script.grab.fanart)</visible>
+					<visible>System.HasAddon(script.embuary.helper)</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[31064]</label>
 					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
 					<onclick>Skin.SetString(ItemToEdit.MultiFanart,3)</onclick>
 					<onclick>Dialog.Close(1122)</onclick>
-					<visible>System.HasAddon(script.grab.fanart)</visible>
+					<visible>System.HasAddon(script.embuary.helper)</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[31065]</label>
 					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
 					<onclick>Skin.SetString(ItemToEdit.MultiFanart,4)</onclick>
 					<onclick>Dialog.Close(1122)</onclick>
-					<visible>System.HasAddon(script.grab.fanart)</visible>
+					<visible>System.HasAddon(script.embuary.helper)</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[31066]</label>
 					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
 					<onclick>Skin.SetString(ItemToEdit.MultiFanart,5)</onclick>
 					<onclick>Dialog.Close(1122)</onclick>
-					<visible>System.HasAddon(script.grab.fanart)</visible>
+					<visible>System.HasAddon(script.embuary.helper)</visible>
 				</item>
 				<item>
 					<label>$LOCALIZE[31028]: $LOCALIZE[31029]</label>

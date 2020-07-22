@@ -359,7 +359,7 @@
 					<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
 					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59030).NumItems,6)]</visible>
 					<left>1585</left>
-					<top>335</top>
+					<top>320</top>
 					<width>260</width>
 					<height>135</height>
 					<fadetime>250</fadetime>
@@ -370,7 +370,7 @@
 				<control type="image">
 					<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
 					<left>1585</left>
-					<top>335</top>
+					<top>320</top>
 					<width>260</width>
 					<height>135</height>
 					<fadetime>250</fadetime>
@@ -592,7 +592,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(0).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(0).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>525</left>
@@ -602,7 +602,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(1).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(1).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>710</left>
@@ -612,7 +612,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(2).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(2).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>895</left>
@@ -622,7 +622,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(3).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(3).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>1080</left>
@@ -632,7 +632,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(4).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(4).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>1265</left>
@@ -642,7 +642,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(5).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(5).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>1450</left>
@@ -652,7 +652,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(6).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(6).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>1635</left>
@@ -662,7 +662,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(7).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(7).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>1820</left>
@@ -672,7 +672,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(8).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(8).Art(poster)]</texture>
 							</control>
 							<control type="image">
 								<left>2005</left>
@@ -682,7 +682,7 @@
 								<fadetime>500</fadetime>
 								<colordiffuse>ddffffff</colordiffuse>
 								<aspectratio align="left" aligny="top">stretch</aspectratio>
-								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(9).Icon]</texture>
+								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(59030).ListItemAbsolute(9).Art(poster)]</texture>
 							</control>
 						</control>
 						<control type="group">
