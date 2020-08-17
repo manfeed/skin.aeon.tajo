@@ -1491,6 +1491,11 @@
 						</control>
 					</itemlayout>
 					<focusedlayout condition="[!System.IdleTime(3) + Container.Content(artists)] | String.StartsWith(ListItem.Label,*) | [Container.Content(artists) + !Integer.IsGreaterOrEqual(Container(5108).NumItems,1)]" height="52">
+							<control type="button" id="5960">
+								<include>HiddenObject</include>
+								<onfocus condition="!String.IsEmpty(Window(Home).Property(MoveArtist))">ClearProperty(MoveArtist,Home)</onfocus>
+								<onfocus condition="!String.IsEmpty(Window(Home).Property(Act_img))">ClearProperty(Act_img,home)</onfocus>
+							</control>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>

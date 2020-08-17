@@ -206,14 +206,6 @@
 								<icon>osd/buttons/OSDStopFO.png</icon>
 								<onclick>Stop</onclick>
 							</item>
-							<!--item id="2108">
-								<description>Settings button</description>
-								<label>$LOCALIZE[5]</label>
-								<icon>osd/buttons/OSDSettingsFO.png</icon>
-								<onclick>SetProperty(settingslist_content,games,home)</onclick>
-								<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
-								<onclick>ActivateWindow(1101)</onclick>
-							</item-->
 						</content>
 						<pagecontrol>2200</pagecontrol>
 					</control>
