@@ -12,6 +12,7 @@
 			<include content="HomeWidgetItem">
 				<param name="visible" value="String.IsEmpty(Window(Home).Property(HomeWidget))" />
 				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31328]" />
 				<param name="listId" value="8005" />
 				<param name="onUp1" value="8001" />
 				<param name="onUp2" value="SetProperty(HomeWidget,1,Home)" />
@@ -23,6 +24,7 @@
 			<include content="HomeWidgetItem" condition="System.HasAddon(service.library.data.provider)">
 				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),1)" />
 				<param name="animationStart" value="-180" />
+				<param name="wTitle" value="$LOCALIZE[31031]" />
 				<param name="listId" value="8001" />
 				<param name="onUp1" value="8002" />
 				<param name="onUp2" value="SetProperty(HomeWidget,2,Home)" />
@@ -34,6 +36,7 @@
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
 				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),2)" />
 				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31987]" />
 				<param name="listId" value="8002" />
 				<param name="onUp1" value="8003" />
 				<param name="onUp2" value="SetProperty(HomeWidget,3,Home)" />
@@ -45,6 +48,7 @@
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
 				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),3)" />
 				<param name="animationStart" value="-180" />
+				<param name="wTitle" value="$LOCALIZE[31989]" />
 				<param name="listId" value="8003" />
 				<param name="onUp1" value="8004" />
 				<param name="onUp2" value="SetProperty(HomeWidget,4,Home)" />
@@ -56,6 +60,7 @@
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
 				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),4)" />
 				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31988]" />
 				<param name="listId" value="8004" />
 				<param name="onUp1" value="8006" />
 				<param name="onUp2" value="SetProperty(HomeWidget,5,Home)" />
@@ -67,17 +72,19 @@
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
 				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),5)" />
 				<param name="animationStart" value="-180" />
+				<param name="wTitle" value="$LOCALIZE[31985]" />
 				<param name="listId" value="8006" />
 				<param name="onUp1" value="8007" />
 				<param name="onUp2" value="SetProperty(HomeWidget,6,Home)" />
 				<param name="onDown1" value="8004" />
 				<param name="onDown2" value="SetProperty(HomeWidget,4,Home)" />
 				<param name="contentTarget" value="" />
-				<param name="contentPath" value="plugin://script.embuary.info/movie/now_playing" />
+				<param name="contentPath" value="plugin://script.embuary.info/movie/trending" />
 			</include>
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
 				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),6)" />
 				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31986]" />
 				<param name="listId" value="8007" />
 				<param name="onDown1" value="8006" />
 				<param name="onDown2" value="SetProperty(HomeWidget,5,Home)" />
@@ -98,17 +105,39 @@
 				<effect type="rotatex" start="0" end="$PARAM[animationStart]" center="250,0" time="400" tween="sine" easing="inout" />
 				<effect type="fade" start="100" end="0" time="10" delay="200" />
 			</animation>
+			<control type="textbox">
+					<visible>Control.HasFocus($PARAM[listId])</visible>
+					<top>-20</top>
+					<left>MultiWidgetBackPanelLeft</left>
+				<right>MultiWidgetBackPanelRight</right>
+					<height>90</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font14t</font>
+					<label>[B]$VAR[Title_Diag][/B]</label>
+			</control>
+			<control type="textbox">
+					<visible>Control.HasFocus($PARAM[listId])</visible>
+					<top>429</top>
+				<left>MultiWidgetBackPanelLeft</left>
+				<right>MultiWidgetBackPanelRight</right>
+					<height>60</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font13_title</font>
+					<label>[B]$PARAM[wTitle][/B]</label>
+			</control>
 			<control type="image">
 				<description>background image</description>
 				<left>MultiWidgetBackPanelLeft</left>
 				<right>MultiWidgetBackPanelRight</right>
-				<top>43</top>
+				<top>23</top>
 				<height>402</height>
 				<texture border="40">dialogs/default/bg.png</texture>
 			</control>
 			<control type="panel" id="$PARAM[listId]">
 				<left>MultiWidgetLeft</left>
-				<top>57</top>
+				<top>37</top>
 				<right>MultiWidgetRight</right>
 				<height>370</height>
 				<onup>$PARAM[onUp2]</onup>
