@@ -272,12 +272,6 @@
 			<size>28</size>
 		</font>
 		<font>
-			<name>Font_subtitle</name>
-			<filename>Kiye Sans.ttf</filename>
-			<linespacing>0.9</linespacing>
-			<size>30</size>
-		</font>
-		<font>
 			<name>font13_title</name>
 			<filename>Kiye Sans.ttf</filename>
 			<size>30</size>
@@ -302,11 +296,6 @@
 			<name>font10t</name>
 			<filename>Kiye Sans.ttf</filename>
 			<size>21</size>
-		</font>
-		<font>
-			<name>fontMW</name>
-			<filename>Kiye Sans.ttf</filename>
-			<size>18</size>
 		</font>
 		<font>
 			<name>font12d</name>
@@ -606,12 +595,6 @@
 			<linespacing>1.4</linespacing>
 		</font>
 		<font>
-			<name>font15_textbox2</name>
-			<filename>Kiye Sans.ttf</filename>
-			<size>35</size>
-			<linespacing>1.7</linespacing>
-		</font>
-		<font>
 			<name>font14</name>
 			<filename>Kiye Sans.ttf</filename>
 			<size>33</size>
@@ -750,13 +733,6 @@
 			<size>35</size>
 		</font>
 		<font>
-			<name>font15_titleb</name>
-			<filename>Kiye Sans.ttf</filename>
-			<linespacing>0.85</linespacing>
-			<style>uppercase</style>
-			<size>35</size>
-		</font>
-		<font>
 			<name>font16_title</name>
 			<filename>Kiye Sans.ttf</filename>
 			<style>uppercase</style>
@@ -778,12 +754,6 @@
 			<name>font30_title</name>
 			<filename>Kiye Sans.ttf</filename>
 			<style>uppercase</style>
-			<size>45</size>
-		</font>
-		<font>
-			<name>font30_title_bold</name>
-			<filename>Kiye Sans.ttf</filename>
-			<style>uppercase bold</style>
 			<size>45</size>
 		</font>
 		<font>
@@ -1105,12 +1075,6 @@
 			<size>28</size>
 		</font>
 		<font>
-			<name>Font_subtitle</name>
-			<filename>Arialuni.ttf</filename>
-			<linespacing>0.9</linespacing>
-			<size>30</size>
-		</font>
-		<font>
 			<name>font13_title</name>
 			<filename>Arialuni.ttf</filename>
 			<size>30</size>
@@ -1135,11 +1099,6 @@
 			<name>font10t</name>
 			<filename>Arialuni.ttf</filename>
 			<size>21</size>
-		</font>
-		<font>
-			<name>fontMW</name>
-			<filename>Arialuni.ttf</filename>
-			<size>18</size>
 		</font>
 		<font>
 			<name>font12d</name>
@@ -1447,12 +1406,6 @@
 			<linespacing>1.4</linespacing>
 		</font>
 		<font>
-			<name>font15_textbox2</name>
-			<filename>Arialuni.ttf</filename>
-			<size>35</size>
-			<linespacing>1.7</linespacing>
-		</font>
-		<font>
 			<name>font14</name>
 			<filename>Arialuni.ttf</filename>
 			<size>33</size>
@@ -1579,13 +1532,6 @@
 			<size>35</size>
 		</font>
 		<font>
-			<name>font15_titleb</name>
-			<filename>Arialuni.ttf</filename>
-			<linespacing>0.85</linespacing>
-			<style>uppercase</style>
-			<size>35</size>
-		</font>
-		<font>
 			<name>font16_title</name>
 			<filename>Arialuni.ttf</filename>
 			<style>uppercase</style>
@@ -1607,12 +1553,6 @@
 			<name>font30_title</name>
 			<filename>Arialuni.ttf</filename>
 			<style>uppercase</style>
-			<size>45</size>
-		</font>
-		<font>
-			<name>font30_title_bold</name>
-			<filename>Arialuni.ttf</filename>
-			<style>uppercase bold</style>
 			<size>45</size>
 		</font>
 		<font>

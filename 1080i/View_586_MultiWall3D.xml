@@ -445,7 +445,6 @@
 							<control type="textbox">
 								<visible>System.IdleTime(10) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 								<visible>!String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
-								<fadetime>200</fadetime>
 								<font>Font_plot4</font>
 								<align>center</align>
 								<aligny>top</aligny>
@@ -458,7 +457,6 @@
 							<control type="textbox">
 								<visible>System.IdleTime(10) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 								<visible>String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
-								<fadetime>200</fadetime>
 								<font>Font_plot4</font>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -476,7 +474,7 @@
 								<width>195</width>
 								<height>280</height>
 								<colordiffuse>DFffffff</colordiffuse>
-								<aspectratio alignx="center" aligny="bottom">keep</aspectratio>
+								<aspectratio align="center" aligny="bottom">keep</aspectratio>
 								<fadetime>200</fadetime>
 								<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
 							</control>

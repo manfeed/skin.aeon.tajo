@@ -40,10 +40,6 @@
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="PosterThumb">
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable>
 	<variable name="Option_Back">
 		<value condition="String.IsEqual(Skin.String(flat_back),1)">tajo/yellow.jpg</value>
 		<value condition="String.IsEqual(Skin.String(flat_back),2)">tajo/backani.gif</value>
@@ -144,11 +140,6 @@
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90014)">$LOCALIZE[31115]$INFO[Container(90014).NumItems, [COLOR grey](,)[/COLOR]]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90016)">$LOCALIZE[33054]$INFO[Container(90016).NumItems, [COLOR grey](,)[/COLOR]]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,movie) + ControlGroup(90001).HasFocus(90017)">$INFO[ListItem.Set]$INFO[Container(90017).NumItems, [COLOR grey](,)[/COLOR]]</value>
-	</variable>
-	<variable name="VideoInfoDetailsImageVar">
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Art(discart)]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.Art(clearart)]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Art(tvshow.clearart)]</value>
 	</variable>
 	<variable name="WidgetFanartVar">
 		<value condition="!String.IsEmpty(Container(8000).ListItem.Art(fanart)) + Control.HasFocus(8000)">$INFO[Container(8000).ListItem.Art(fanart)]</value>
@@ -317,17 +308,6 @@
 		<value condition="System.GetBool(videolibrary.showunwatchedplots)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.Plot]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
-	<variable name="SourceFlagVar">
-		<value condition="[String.Contains(ListItem.filename,PDTV) | String.Contains(ListItem.filename,sdtv) | String.Contains(ListItem.filename,sd tv)]">sdtv</value>
-		<value condition="[String.Contains(ListItem.Filename,hdtv) | String.Contains(ListItem.Filename,hd tv)]">hdtv</value>
-		<value condition="[String.Contains(ListItem.Filename,hddvd) | String.Contains(ListItem.Filename,hd-dvd)]">hddvd</value>
-		<value condition="ListItem.IsStereoscopic">bluray3d</value>
-		<value condition="[String.Contains(ListItem.Filename,bluray) | String.Contains(ListItem.Filename,blu-ray) | String.Contains(ListItem.Filename,bdrip) | String.Contains(ListItem.Filename,brrip)]">bluray</value>
-		<value condition="String.Contains(ListItem.Filename,dvb)">dvb</value>
-		<value condition="String.Contains(ListItem.Filename,web-dl)">web-dl</value>
-		<value condition="String.Contains(ListItem.Filename,dvd) | String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)">dvd</value>
-		<value>$INFO[ListItem.VideoCodec]</value>
-	</variable>
 	<variable name="VideoSourceFlagVar">
 		<value condition="[String.Contains(Player.Filenameandpath,PDTV) | String.Contains(Player.Filenameandpath,sdtv)]">sdtv</value>
 		<value condition="String.Contains(Player.Filenameandpath,hdtv)">hdtv</value>
@@ -466,52 +446,6 @@
 		<value condition="!String.IsEmpty(Container(8000).ListItem.Art(tvshow.poster))">$INFO[Container(8000).ListItem.Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8000).ListItem.Icon]</value>
 	</variable>
-	<variable name="RatingFlagVar">
-		<value condition="String.Contains(ListItem.mpaa,Russian:0) | String.Contains(ListItem.mpaa,RU:0) | String.IsEqual(ListItem.mpaa,RUS:0)">flags/mpaa/RU_0.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Russian:6) | String.Contains(ListItem.mpaa,RU:6) | String.IsEqual(ListItem.mpaa,RUS:6)">flags/mpaa/RU_6.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Russian:12) | String.Contains(ListItem.mpaa,RU:12) | String.IsEqual(ListItem.mpaa,RUS:12)">flags/mpaa/RU_12.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Russian:16) | String.Contains(ListItem.mpaa,RU:16) | String.IsEqual(ListItem.mpaa,RUS:16)">flags/mpaa/RU_16.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Russian:18) | String.Contains(ListItem.mpaa,RU:18) | String.IsEqual(ListItem.mpaa,RUS:18)">flags/mpaa/RU_18.png</value>
-		<value condition="String.Contains(ListItem.mpaa,US:G) | String.Contains(ListItem.mpaa,USA:G) | String.Contains(ListItem.mpaa,Rated G)">flags/mpaa/G.png</value>
-		<value condition="String.Contains(ListItem.mpaa,PG-13)">flags/mpaa/PG-13.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Rated PG) | String.IsEqual(ListItem.Mpaa,PG)">flags/mpaa/PG.png</value>
-		<value condition="String.Contains(ListItem.mpaa,US:R) | String.Contains(ListItem.mpaa,USA:R) | String.Contains(ListItem.mpaa,Rated R) | String.IsEqual(ListItem.mpaa,R)">flags/mpaa/R.png</value>
-		<value condition="String.Contains(ListItem.mpaa,US:NC-17)| String.Contains(ListItem.mpaa,USA:NC-17)| String.Contains(ListItem.mpaa,Rated NC-17)">flags/mpaa/NC-17.png</value>
-		<value condition="String.Contains(ListItem.mpaa,UK:U)">flags/mpaa/BBFC_U_Certificate_UK.png</value>
-		<value condition="String.Contains(ListItem.mpaa,UK:PG)">flags/mpaa/BBFC_PG_Certificate_UK.png</value>
-		<value condition="String.Contains(ListItem.mpaa,UK:12A)">flags/mpaa/BBFC_12A_Certificate_UK.png</value>
-		<value condition="String.Contains(ListItem.mpaa,UK:12)">flags/mpaa/BBFC_12_Certificate_UK.png</value>
-		<value condition="String.Contains(ListItem.mpaa,UK:15)">flags/mpaa/BBFC_15_Certificate_UK.png</value>
-		<value condition="String.Contains(ListItem.mpaa,UK:18)">flags/mpaa/BBFC_18_Certificate_UK.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:0) | String.Contains(ListItem.mpaa,ab 0) | String.IsEqual(ListItem.mpaa,0) | String.Contains(ListItem.mpaa,FSK 0) | String.Contains(ListItem.mpaa,Rated 0)">flags/mpaa/FSK-0.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:16) | String.Contains(ListItem.mpaa,ab 16) | String.IsEqual(ListItem.mpaa,16) | String.Contains(ListItem.mpaa,FSK 16) | String.Contains(ListItem.mpaa,Rated 16)">flags/mpaa/FSK-16.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:6)| String.Contains(ListItem.mpaa,ab 6) | String.IsEqual(ListItem.mpaa,6) | String.Contains(ListItem.mpaa,Rated 6)">flags/mpaa/FSK-6.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:12) | String.Contains(ListItem.mpaa,ab 12) | String.IsEqual(ListItem.mpaa,12) | String.Contains(ListItem.mpaa,FSK 12) | String.Contains(ListItem.mpaa,Rated 12)">flags/mpaa/FSK-12.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Germany:18) | String.Contains(ListItem.mpaa,ab 18) | String.IsEqual(ListItem.mpaa,18) | String.Contains(ListItem.mpaa,FSK 18) | String.Contains(ListItem.mpaa,Rated 18)">flags/mpaa/FSK-18.png</value>
-		<value condition="String.Contains(ListItem.mpaa,besorolás alatt)">flags/mpaa/HU_BA.png</value>
-		<value condition="String.Contains(ListItem.mpaa,korhatárra való tekintett nélkül megtekintetheto)">flags/mpaa/HU_KN.png</value>
-		<value condition="String.Contains(ListItem.mpaa,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">flags/mpaa/HU_12.png</value>
-		<value condition="String.Contains(ListItem.mpaa,16 éven aluliak számára nem ajánlott)">flags/mpaa/HU_16.png</value>
-		<value condition="String.Contains(ListItem.mpaa,18 éven aluliak számára nem ajánlott)">flags/mpaa/HU_18.png</value>
-		<value condition="String.Contains(ListItem.mpaa,France:U) | String.Contains(ListItem.mpaa,Tout public) | String.Contains(ListItem.mpaa,Tous publics)">flags/mpaa/csaU.png</value>
-		<value condition="String.Contains(ListItem.mpaa,France:10) | String.Contains(ListItem.mpaa,Interdit aux moins de 10 ans) | String.Contains(ListItem.mpaa,des propos ou des images peuvent heurter)">flags/mpaa/csa10.png</value>
-		<value condition="String.Contains(ListItem.mpaa,France:12) | String.Contains(ListItem.mpaa,Interdit aux moins de 12 ans)">flags/mpaa/csa12.png</value>
-		<value condition="String.Contains(ListItem.mpaa,France:16) | String.Contains(ListItem.mpaa,Interdit aux moins de 16 ans)">flags/mpaa/csa16.png</value>
-		<value condition="String.Contains(ListItem.mpaa,France:18) | String.Contains(ListItem.mpaa,Interdit aux moins de 18 ans)">flags/mpaa/csa18.png</value>
-		<value condition="String.Contains(ListItem.mpaa,전체)">flags/mpaa/KR_Certificate_All.png</value>
-		<value condition="String.Contains(ListItem.mpaa,12세)">flags/mpaa/KR_Certificate_12.png</value>
-		<value condition="String.Contains(ListItem.mpaa,15세)">flags/mpaa/KR_Certificate_15.png</value>
-		<value condition="String.Contains(ListItem.mpaa,불가)">flags/mpaa/KR_Certificate_18.png</value>
-		<value condition="String.Contains(ListItem.mpaa,제한)">flags/mpaa/KR_Certificate_R.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Brazil:Livre) | String.Contains(ListItem.mpaa,Livre)">flags/mpaa/MPAA_Brazil_Livre.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Brazil:10) | String.Contains(ListItem.mpaa,10 anos)">flags/mpaa/MPAA_Brazil_10.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Brazil:12) | String.Contains(ListItem.mpaa,12 anos)">flags/mpaa/MPAA_Brazil_12.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Brazil:14) | String.Contains(ListItem.mpaa,14 anos)">flags/mpaa/MPAA_Brazil_14.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Brazil:16) | String.Contains(ListItem.mpaa,16 anos)">flags/mpaa/MPAA_Brazil_16.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Brazil:18) | String.Contains(ListItem.mpaa,18 anos)">flags/mpaa/MPAA_Brazil_18.png</value>
-		<value condition="String.Contains(ListItem.mpaa,Australia:)">$INFO[ListItem.MPAA,flags/mpaa/australia_,.png]</value>
-		<value>$INFO[ListItem.MPAA,flags/mpaa/,.png]</value>
-	</variable>
 	<variable name="VideoRatingFlagVar">
 		<value condition="String.Contains(VideoPlayer.mpaa,Russian:0) | String.Contains(VideoPlayer.mpaa,RU:0) | String.IsEqual(VideoPlayer.mpaa,RUS:0)">flags/mpaa/RU_0.png</value>
 		<value condition="String.Contains(VideoPlayer.mpaa,Russian:6) | String.Contains(VideoPlayer.mpaa,RU:6) | String.IsEqual(VideoPlayer.mpaa,RUS:6)">flags/mpaa/RU_6.png</value>
@@ -621,19 +555,9 @@
 		<value condition="!String.IsEmpty(Skin.String(weathericons.ext))">$INFO[Skin.String(weathericons.ext)]</value>
 		<value>.png</value>
 	</variable>
-	<variable name="DSPManagerHelpTextVar">
-		<value condition="Control.HasFocus(20)">$INFO[Container(20).ListItem.Property(Description)]</value>
-		<value condition="Control.HasFocus(21)">$INFO[Container(21).ListItem.Property(Description)]</value>
-		<value condition="Control.HasFocus(9000)">$INFO[Container(9000).ListItem.Label2]</value>
-		<value>$LOCALIZE[15020]</value>
-	</variable>
 	<variable name="VideoHWDecoderVar">
 		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[19074]</value>
 		<value>$LOCALIZE[31172]</value>
-	</variable>
-	<variable name="SimilarShowsIDVar">
-		<value condition="String.IsEqual(ListItem.DBType,episode)">name=$INFO[ListItem.TvShowTitle]</value>
-		<value>dbid=$INFO[ListItem.DBID]</value>
 	</variable>
 	<variable name="ListSortByVar">
 		<value condition="Container.Content(tags)">title</value>

@@ -34,7 +34,6 @@
 				<visible>System.IdleTime(3)</visible>
 				<visible>!ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 				<visible>!Container.Content(episodes)</visible>
-				<fadetime>300</fadetime>
 				<font>Font_plot4</font>
 				<align>left</align>
 				<left>910</left>
@@ -55,12 +54,11 @@
 					<top>447</top>
 					<width>170</width>
 					<height>188</height>
-					<aspectratio alignx="left" aligny="bottom">keep</aspectratio>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>					
 				</control>
 				<control type="textbox">
-					<fadetime>300</fadetime>
 					<textcolor>themecolor</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<font>Font_plot4</font>

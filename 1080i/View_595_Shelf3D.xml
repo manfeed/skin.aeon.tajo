@@ -245,7 +245,6 @@
 				<control type="textbox">
 					<visible>[!System.IdleTime(3) | Integer.IsLess(Container(534).NumItems,2)] + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 					<visible>!Container.Content(seasons)</visible>
-					<fadetime>300</fadetime>
 					<font>Font_plot4</font>
 					<align>center</align>
 					<left>1065</left>
@@ -265,7 +264,6 @@
 					<control type="textbox">
 						<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 						<visible>!String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
-						<fadetime>200</fadetime>
 						<textcolor>themecolor</textcolor>
 						<font>Font_plot4</font>
 						<align>center</align>
@@ -279,7 +277,6 @@
 					<control type="textbox">
 						<visible>System.IdleTime(3) + Integer.IsGreater(Container(534).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
 						<visible>String.IsEqual(Container(534).ListItem.Label2,Cast)</visible>
-						<fadetime>200</fadetime>
 						<textcolor>themecolor</textcolor>
 						<font>Font_plot4</font>
 						<align>center</align>
@@ -297,7 +294,7 @@
 						<width>195</width>
 						<height>280</height>
 						<colordiffuse>DFffffff</colordiffuse>
-						<aspectratio alignx="left" aligny="bottom">keep</aspectratio>
+						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<fadetime>200</fadetime>
 						<texture background="true">$INFO[Container(534).ListItem.Label2]</texture>
 					</control>

@@ -437,7 +437,6 @@
 						<itemlayout width="700" height="72">
 							<control type="textbox">
 								<font>font15set</font>
-								<scroll>false</scroll>
 								<left>1</left>
 								<height>72</height>
 								<aligny>center</aligny>
@@ -447,7 +446,6 @@
 						<focusedlayout width="700" height="72">
 							<control type="textbox">
 								<font>font15set</font>
-								<scroll>false</scroll>
 								<left>1</left>
 								<height>72</height>
 								<aligny>center</aligny>

@@ -73,7 +73,6 @@
 					<top>700</top>
 					<width>410</width>
 					<height>250</height>
-					<fadetime>200</fadetime>
 					<font>titleshelf</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -252,7 +251,6 @@
 								</control>
 								<control type="textbox">
 									<visible>String.Contains(ListItem.Label,black.png)</visible>
-									<fadetime>400</fadetime>
 									<top>165</top>
 									<width>300</width>
 									<height>105</height>
@@ -452,7 +450,6 @@
 								</control>
 								<control type="textbox">
 									<visible>String.Contains(ListItem.Label,black.png)</visible>
-									<fadetime>400</fadetime>
 									<top>165</top>
 									<width>300</width>
 									<height>105</height>
@@ -580,7 +577,6 @@
 									<align>center</align>
 									<aligny>center</aligny>
 									<textcolor>white</textcolor>
-									<fadetime>400</fadetime>
 									<shadowcolor>black</shadowcolor>
 									<label>$INFO[Control.GetLabel(5488)]</label>
 								</control>
@@ -697,7 +693,6 @@
 								</control>
 								<control type="textbox">
 									<visible>String.Contains(ListItem.Label,black.png)</visible>
-									<fadetime>400</fadetime>
 									<top>165</top>
 									<width>300</width>
 									<height>105</height>
@@ -759,7 +754,6 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>fontDiscog</font>
-						<scroll>true</scroll>
 						<label>[B]$INFO[Container(5850).ListItem.Label][COLOR=white]   $INFO[Container(5850).ListItem.Year][/COLOR][/B]</label>
 						<textcolor>themecolor</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -879,7 +873,6 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>fontDiscog</font>
-						<scroll>true</scroll>
 						<label>[B]$LOCALIZE[132]: [/B][COLOR=FFFFFAF0][B]$INFO[Container(5366).NumItems][/B][/COLOR]</label>
 						<textcolor>themecolor</textcolor>
 						<shadowcolor>black</shadowcolor>
