@@ -1355,3 +1355,7 @@ msgstr "Series populares"
 msgctxt "#31994"
 msgid "Discover Shows"
 msgstr "Series por descubrir"
+
+msgctxt "#31995"
+msgid "3D view"
+msgstr "Vista 3D"

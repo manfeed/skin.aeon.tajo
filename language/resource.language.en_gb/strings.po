@@ -1479,3 +1479,7 @@ msgstr ""
 msgctxt "#31994"
 msgid "Discover Shows"
 msgstr ""
+
+msgctxt "#31995"
+msgid "3D view"
+msgstr ""
