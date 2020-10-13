@@ -25,7 +25,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="list" id="6952">
-			<visible>!ListItem.IsCollection + System.IdleTime(1)</visible>
+			<visible>!ListItem.IsCollection</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
 			<itemlayout>

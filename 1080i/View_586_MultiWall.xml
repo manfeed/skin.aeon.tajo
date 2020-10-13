@@ -477,7 +477,7 @@
 					<width>646</width>
 					<height>120</height>
 					<font>titleshelf</font>
-					<label>$VAR[value_videotitle]</label>
+					<label>$VAR[value_title]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>

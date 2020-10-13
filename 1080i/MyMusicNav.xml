@@ -198,7 +198,7 @@
 			<top>80</top>
 			<left>70</left>
 			<control type="grouplist">
-			<animation effect="slide" end="1828,0" time="0" condition="Control.IsVisible(585)">Conditional</animation>
+			<animation effect="slide" end="1820,0" time="0" condition="Control.IsVisible(585)">Conditional</animation>
 				<visible>!Skin.HasSetting(noshow_Time)</visible>
 				<left>-52</left>
 				<top>-80</top>
@@ -290,7 +290,7 @@
 			<animation effect="slide" end="1025,0" time="0" condition="Control.IsVisible(588) + String.IsEqual(Container.SortMethod,$LOCALIZE[558])">Conditional</animation>
 			<animation effect="slide" end="1868,20" time="0" condition="Control.IsVisible(597)">Conditional</animation>
 			<animation effect="slide" end="1850,5" time="0" condition="Control.IsVisible(50)">Conditional</animation>
-			<animation effect="slide" end="1862,0" time="0" condition="Control.IsVisible(596)">Conditional</animation>
+			<animation effect="slide" end="1864,0" time="0" condition="Control.IsVisible(596)">Conditional</animation>
 			<left>-5</left>
 			<top>470</top>
 			<control type="button" id="5919">
@@ -312,7 +312,7 @@
 			</control>
 			<control type="image">
 				<animation effect="fade" end="70" condition="true">Conditional</animation>
-				<left>-9</left>
+				<left>-7</left>
 				<top>-64</top>
 				<width>65</width>
 				<height>65</height>
@@ -321,7 +321,7 @@
 			</control>
 			<control type="image">
 				<animation effect="fade" end="70" condition="true">Conditional</animation>
-				<left>-9</left>
+				<left>-7</left>
 				<top>110</top>
 				<width>65</width>
 				<height>65</height>

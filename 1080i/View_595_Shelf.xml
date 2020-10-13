@@ -644,7 +644,7 @@
 						<width>1040</width>
 						<height>60</height>
 						<font>titletest</font>
-						<label>12345 12345 $VAR[value_videotitle]</label>
+						<label>12345 12345 $VAR[value_title]</label>
 						<textcolor>00ffffff</textcolor>
 					</control>
 					<control type="textbox">
@@ -656,7 +656,7 @@
 						<width>1040</width>
 						<height>100</height>
 						<font>titlelist</font>
-						<label>$VAR[value_videotitle]</label>
+						<label>$VAR[value_title]</label>
 						<textcolor>black</textcolor>
 					</control>
 					<control type="textbox">
@@ -668,7 +668,7 @@
 						<width>1040</width>
 						<height>100</height>
 						<font>titlelist</font>
-						<label>$VAR[value_videotitle]</label>
+						<label>$VAR[value_title]</label>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="textbox" id="2011">
@@ -680,7 +680,7 @@
 						<width>1040</width>
 						<height>70</height>
 						<font>titlemove</font>
-						<label>$VAR[value_videotitle]</label>
+						<label>$VAR[value_title]</label>
 						<textcolor>black</textcolor>
 					</control>
 					<control type="textbox">
@@ -692,7 +692,7 @@
 						<width>1040</width>
 						<height>70</height>
 						<font>titlemove</font>
-						<label>$VAR[value_videotitle]</label>
+						<label>$VAR[value_title]</label>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="textbox">
@@ -705,7 +705,7 @@
 						<width>1040</width>
 						<height>110</height>
 						<font>titleshelf</font>
-						<label>$VAR[value_videotitle]</label>
+						<label>$VAR[value_title]</label>
 						<textcolor>black</textcolor>
 					</control>
 					<control type="textbox">
@@ -718,7 +718,7 @@
 						<width>1040</width>
 						<height>110</height>
 						<font>titleshelf</font>
-						<label>$VAR[value_videotitle]</label>
+						<label>$VAR[value_title]</label>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
@@ -1040,7 +1040,7 @@
 				<scrollspeed>1</scrollspeed>
 				<animation effect="rotate" delay="5000" center="auto" start="90" end="90" time="800" condition="true">Conditional</animation>
 				<font>spiner</font>
-				<label>$VAR[value_videotitle]</label>
+				<label>$VAR[value_title]</label>
 				<textcolor>white</textcolor>
 			</control>
 			<!--Trasera caja set reflejo-->
@@ -1491,7 +1491,7 @@
 						<scrollspeed>1</scrollspeed>
 						<animation effect="rotate" delay="5000" center="auto" start="90" end="90" time="800" condition="true">Conditional</animation>
 						<font>spiner</font>
-						<label>$VAR[value_videotitle]</label>
+						<label>$VAR[value_title]</label>
 						<textcolor>white</textcolor>
 					</control>
 					<control type="image">

@@ -881,7 +881,7 @@
 		<value condition="Integer.IsGreater(Container(5904).ListItem.Rating,8.9)">FFb40080</value>
 	</variable>
 	<variable name="videocodec">
-		<value condition="String.IsEmpty(ListItem.VideoCodec)">$VAR[mediaicons_path]videocodec/stream.png</value>
+		<value condition="String.IsEmpty(ListItem.VideoCodec) + !String.IsEqual(ListItem.DBTYPE,tvshow) + !Container.Content(seasons)">$VAR[mediaicons_path]videocodec/stream.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,.3dbd.) | String.Contains(ListItem.Filenameandpath,.3d.)">$VAR[mediaicons_path]videocodec/3dbd.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,4k)">$VAR[mediaicons_path]videocodec/4k.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,bluray) | String.Contains(ListItem.Filenameandpath,blu-ray) | String.Contains(ListItem.Filenameandpath,bdrip)">$VAR[mediaicons_path]videocodec/bluray.png</value>
@@ -960,7 +960,7 @@
 		<value condition="Container.Content(files)">$INFO[ListItem.Plot]$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
-	<variable name="value_videotitle">
+	<variable name="value_title">
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="value_audiotitle">
