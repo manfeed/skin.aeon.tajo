@@ -11,7 +11,7 @@
 				<top>-100</top>
 				<width>2200</width>
 				<height>1300</height>
-				<animation effect="fade" end="65" condition="true">Conditional</animation>
+				<animation effect="fade" end="55" condition="true">Conditional</animation>
 				<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
 				<aspectratio align="center">stretch</aspectratio>
 				<colordiffuse>black</colordiffuse>
@@ -433,8 +433,16 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</control>
+					<control type="videowindow" id="3499">
+						<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
+						<left>1068</left>
+						<top>30</top>
+						<width>820</width>
+						<height>480</height>
+					</control>
 					<control type="group">
 						<control type="group">
+							<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEqual(ListItem.FileExtension,strm)">Conditional</animation>
 							<left>30</left>
 							<control type="image">
 								<left>1038</left>
@@ -1138,23 +1146,23 @@
 				<top>125</top>
 				<control type="textbox">
 					<visible>!Skin.HasSetting(showCast) | !System.HasAddon(script.embuary.helper)</visible>
-					<left>40</left>
+					<left>-41</left>
 					<top>600</top>
-					<width>635</width>
+					<width>714</width>
 					<height>305</height>
 					<font>font28b</font>
-					<align>right</align>
+					<align>justify</align>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="6000" time="2000" repeat="6000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>Skin.HasSetting(showCast) + System.HasAddon(script.embuary.helper)</visible>
-					<left>1</left>
+					<left>-41</left>
 					<top>600</top>
-					<width>460</width>
+					<width>500</width>
 					<height>305</height>
 					<font>font28b</font>
-					<align>right</align>
+					<align>justify</align>
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="4000" time="2000" repeat="4000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>

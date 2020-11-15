@@ -128,6 +128,14 @@
 							<textcolor>themecolor</textcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>10</width>
+							<height>65</height>
+							<aspectratio align="center">stretch</aspectratio>
+							<texture diffuse="tajo/mask_cover3.png">tajo/$VAR[GlobalCaseVarTajo]</texture>
+						</control>
 						<control type="textbox">
 							<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[345])</visible>
 							<top>6</top>
@@ -259,7 +267,7 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="image">
-							<left>1</left>
+							<left>0</left>
 							<top>2</top>
 							<width>50</width>
 							<height>50</height>
@@ -762,6 +770,16 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</control>
+				<control type="image">
+					<visible>!System.IdleTime(6) | Control.HasFocus(80) | Control.HasFocus(5919)</visible>
+					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
+					<left>0</left>
+					<top>365</top>
+					<width>10</width>
+					<height>193</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png">tajo/$VAR[GlobalCaseVarTajo]</texture>
+				</control>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 					<control type="image">
@@ -1186,8 +1204,18 @@
 					</control>
 				</control>
 				<control type="image">
+					<visible>System.IdleTime(6) + !Control.HasFocus(80) + !Control.HasFocus(5919)</visible>
 					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
-					<left>1</left>
+					<left>0</left>
+					<top>365</top>
+					<width>10</width>
+					<height>328</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png">tajo/$VAR[GlobalCaseVarTajo]</texture>
+				</control>
+				<control type="image">
+					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
+					<left>0</left>
 					<top>367</top>
 					<width>50</width>
 					<height>50</height>

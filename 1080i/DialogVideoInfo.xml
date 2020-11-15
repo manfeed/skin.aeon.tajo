@@ -488,7 +488,7 @@
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
 						<itemlayout height="87" width="1198" condition="Integer.IsLess(Container(300).NumItems,5)">
 							<control type="textbox">
-								<left>2</left>
+								<left>10</left>
 								<width>1190</width>
 								<height>87</height>
 								<aligny>top</aligny>
@@ -508,7 +508,7 @@
 								<include>VisibleFadeAnimation</include>
 							</control>
 							<control type="textbox">
-								<left>2</left>
+								<left>10</left>
 								<width>1190</width>
 								<height>87</height>
 								<aligny>top</aligny>
@@ -523,7 +523,7 @@
 						</focusedlayout>
 						<itemlayout height="87" width="599" condition="Integer.IsGreater(Container(300).NumItems,4)">
 							<control type="textbox">
-								<left>2</left>
+								<left>10</left>
 								<width>590</width>
 								<height>87</height>
 								<font>font15d</font>
@@ -543,7 +543,7 @@
 								<include>VisibleFadeAnimation</include>
 							</control>
 							<control type="textbox">
-								<left>2</left>
+								<left>10</left>
 								<width>590</width>
 								<height>87</height>
 								<aligny>top</aligny>
@@ -642,10 +642,10 @@
 				</control>
 					<control type="group">
 						<left>4</left>
-						<top>520</top>
+						<top>527</top>
 						<control type="button">
 							<width>36</width>
-							<height>20</height>
+							<height>15</height>
 							<colordiffuse>88ffffff</colordiffuse>
 							<texturefocus>tajo/arrow_h.gif</texturefocus>
 							<texturenofocus>tajo/arrow_h.gif</texturenofocus>
@@ -655,7 +655,7 @@
 						<control type="button">
 							<left>1160</left>
 							<width>36</width>
-							<height>20</height>
+							<height>15</height>
 							<colordiffuse>88ffffff</colordiffuse>
 							<texturefocus>tajo/arrow_hd.gif</texturefocus>
 							<texturenofocus>tajo/arrow_hd.gif</texturenofocus>

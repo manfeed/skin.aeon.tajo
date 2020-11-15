@@ -200,6 +200,8 @@
 				<visible>Control.IsVisible(594)</visible>
 				<left>118</left>
 				<top>134</top>
+				<control type="group">
+				<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEqual(ListItem.FileExtension,strm)">Conditional</animation>
 				<control type="image">
 					<left>20</left>
 					<top>15</top>
@@ -226,6 +228,14 @@
 					<height>335</height>
 					<texture background="true">tajo/osd_black_bg.png</texture>
 					<aspectratio>stretch</aspectratio>
+				</control>
+				</control>
+				<control type="videowindow" id="3734">
+					<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
+					<left>20</left>
+					<top>15</top>
+					<width>555</width>
+					<height>335</height>
 				</control>
 				<control type="textbox">
 					<visible>!ListItem.IsCollection + [!Skin.HasSetting(showCast) | !System.HasAddon(script.embuary.helper)]</visible>
@@ -434,6 +444,7 @@
 						<textcolor>FFFFFFFF</textcolor>
 					</control>
 					<control type="image">
+					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEqual(ListItem.FileExtension,strm)">Conditional</animation>
 						<left>300</left>
 						<top>170</top>
 						<width>250</width>

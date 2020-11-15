@@ -467,6 +467,13 @@
 			<size>69</size>
 		</font>
 		<font>
+			<name>titlelist3</name>
+			<filename>Montserrat.ttf</filename>
+			<style>uppercase</style>
+			<size>69</size>
+			<linespacing>0.85</linespacing>
+		</font>
+		<font>
 			<name>titlefanart</name>
 			<filename>Montserrat.ttf</filename>
 			<style>uppercase</style>
@@ -1276,6 +1283,12 @@
 			<name>titlelist2</name>
 			<filename>Arialuni.ttf</filename>
 			<size>80</size>
+		</font>
+		<font>
+			<name>titlelist3</name>
+			<filename>Arialuni.ttf</filename>
+			<size>80</size>
+			<linespacing>0.9</linespacing>
 		</font>
 		<font>
 			<name>titlefanart</name>

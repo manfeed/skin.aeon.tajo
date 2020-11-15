@@ -176,6 +176,15 @@
 						<visible>!Skin.HasSetting(melodyHome) + Skin.String(melodyPlaylist)</visible>
 						<onclick>Skin.Reset(melodyPlaylist)</onclick>
 					</control>
+					<control type="radiobutton" id="115">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31999</label>
+						<onclick>Skin.ToggleSetting(ScreensaverNetflix)</onclick>
+						<selected>Skin.HasSetting(ScreensaverNetflix)</selected>
+					</control>
 					<control type="radiobutton" id="102">
 						<width>1316</width>
 						<height>90</height>
@@ -240,6 +249,15 @@
 						<onclick>Skin.ToggleSetting(playTheme)</onclick>
 						<selected>Skin.HasSetting(playTheme)</selected>
 						<visible>System.HasAddon(script.embuary.helper)</visible>
+					</control>
+					<control type="radiobutton" id="227">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32001</label>
+						<onclick>Skin.ToggleSetting(playTrailer)</onclick>
+						<selected>Skin.HasSetting(playTrailer)</selected>
 					</control>
 					<control type="radiobutton" id="119">
 						<width>1316</width>

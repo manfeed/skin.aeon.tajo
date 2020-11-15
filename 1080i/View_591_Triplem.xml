@@ -461,12 +461,12 @@
 				<left>1175</left>
 				<top>125</top>
 				<control type="textbox">
-					<left>40</left>
+					<left>-40</left>
 					<top>625</top>
-					<width>635</width>
+					<width>715</width>
 					<height>305</height>
 					<font>font28b</font>
-					<align>right</align>
+					<align>justify</align>
 					<label>$INFO[ListItem.Property(Artist_Description)]</label>
 					<visible>!String.IsEmpty(ListItem.Property(Artist_Description))</visible>
 					<autoscroll delay="6000" time="2000" repeat="6000">!Skin.HasSetting(noallowscroll)</autoscroll>
@@ -529,10 +529,10 @@
 						</control>
 					</control>
 					<control type="textbox">
-						<left>15</left>
-						<top>503</top>
-						<width>660</width>
-						<height>80</height>
+						<left>-40</left>
+						<top>509</top>
+						<width>715</width>
+						<height>72</height>
 						<align>right</align>
 						<aligny>top</aligny>
 						<font>font28b</font>
