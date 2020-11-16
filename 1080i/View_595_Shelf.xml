@@ -280,7 +280,7 @@
 				</control>
 				<control type="group">
 					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59631).NumItems,6)]</visible>
-					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(ListItem.Path,plugin)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
 					<top>-18</top>
 					<left>35</left>
 					<control type="image">
@@ -314,7 +314,7 @@
 				</control>
 				<control type="image">
 					<visible>!ListItem.IsCollection + System.IdleTime(1)</visible>
-					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(ListItem.Path,plugin)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
 					<left>1605</left>
 					<top>300</top>
 					<width>280</width>
@@ -326,8 +326,8 @@
 				</control>
 				<control type="image">
 					<animation effect="slide" end="-250,0" time="0" condition="Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
-					<animation effect="slide" end="0,140" delay="600" time="500" reversible="false" tween="sine" easing="out" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(ListItem.Path,plugin) + !Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
-					<animation effect="slide" end="250,140" delay="600" time="500" reversible="false" tween="sine" easing="out" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(ListItem.Path,plugin) + Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
+					<animation effect="slide" end="0,140" delay="600" time="500" reversible="false" tween="sine" easing="out" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3) + !Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
+					<animation effect="slide" end="250,140" delay="600" time="500" reversible="false" tween="sine" easing="out" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3) + Integer.IsGreater(Container(5927).NumItems,0)">Conditional</animation>
 					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59631).NumItems,6)]</visible>
 					<left>1585</left>
 					<top>320</top>

@@ -1387,3 +1387,15 @@ msgstr "Reproducir automáticamente trailers de películas en vistas de vídeo"
 msgctxt "#32002"
 msgid "Plays the movie trailer automatically in a window after some seconds when browsing through movie views"
 msgstr "Al navegar en las vistas de películas reproduce en una ventana el trailer de la película automáticamente al transcurrir unos segundos"
+
+msgctxt "#32003"
+msgid "All devices"
+msgstr "Todos los equipos"
+
+msgctxt "#32004"
+msgid "Powerful devices"
+msgstr "Equipos potentes"
+
+msgctxt "#32005"
+msgid "Most powerful devices"
+msgstr "Equipos más potentes"

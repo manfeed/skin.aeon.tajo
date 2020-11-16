@@ -129,10 +129,10 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>10</width>
-							<height>65</height>
+							<left>771</left>
+							<top>2</top>
+							<width>4</width>
+							<height>63</height>
 							<aspectratio align="center">stretch</aspectratio>
 							<texture diffuse="tajo/mask_cover3.png">tajo/$VAR[GlobalCaseVarTajo]</texture>
 						</control>
@@ -292,7 +292,7 @@
 					<visible>System.IdleTime(6) + !Control.HasFocus(80) + !Control.HasFocus(5919)</visible>
 					<top>2</top>
 					<control type="label">
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<width>750</width>
@@ -302,7 +302,7 @@
 					</control>
 					<control type="label">
 						<left>764</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>170</width>
@@ -312,7 +312,7 @@
 					</control>
 					<control type="label">
 						<left>920</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>190</width>
@@ -322,7 +322,7 @@
 					</control>
 					<control type="label">
 						<left>1080</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>260</width>
@@ -332,7 +332,7 @@
 					</control>
 					<control type="label">
 						<left>1319</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>290</width>
@@ -342,7 +342,7 @@
 					</control>
 					<control type="label">
 						<left>1580</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>330</width>
@@ -770,16 +770,6 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</control>
-				<control type="image">
-					<visible>!System.IdleTime(6) | Control.HasFocus(80) | Control.HasFocus(5919)</visible>
-					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
-					<left>0</left>
-					<top>365</top>
-					<width>10</width>
-					<height>193</height>
-					<aspectratio align="center">stretch</aspectratio>
-					<texture diffuse="tajo/mask_cover3.png">tajo/$VAR[GlobalCaseVarTajo]</texture>
-				</control>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 					<control type="image">
@@ -969,7 +959,7 @@
 					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 					<visible>!System.IdleTime(6) | Control.HasFocus(80) | Control.HasFocus(5919)</visible>
 					<control type="label">
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<width>750</width>
@@ -979,7 +969,7 @@
 					</control>
 					<control type="label">
 						<left>764</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>170</width>
@@ -989,7 +979,7 @@
 					</control>
 					<control type="label">
 						<left>920</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>190</width>
@@ -999,7 +989,7 @@
 					</control>
 					<control type="label">
 						<left>1080</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>260</width>
@@ -1009,7 +999,7 @@
 					</control>
 					<control type="label">
 						<left>1319</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>290</width>
@@ -1019,7 +1009,7 @@
 					</control>
 					<control type="label">
 						<left>1580</left>
-						<font>font13_title</font>
+						<font>Font_plot</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<width>330</width>
@@ -1204,12 +1194,22 @@
 					</control>
 				</control>
 				<control type="image">
+					<visible>!System.IdleTime(6) | Control.HasFocus(80) | Control.HasFocus(5919)</visible>
+					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
+					<left>771</left>
+					<top>365</top>
+					<width>4</width>
+					<height>192</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png">tajo/$VAR[GlobalCaseVarTajo]</texture>
+				</control>
+				<control type="image">
 					<visible>System.IdleTime(6) + !Control.HasFocus(80) + !Control.HasFocus(5919)</visible>
 					<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80) | Control.HasFocus(5919)">Conditional</animation>
 					<left>0</left>
-					<top>365</top>
-					<width>10</width>
-					<height>328</height>
+					<top>367</top>
+					<width>6</width>
+					<height>325</height>
 					<aspectratio align="center">stretch</aspectratio>
 					<texture diffuse="tajo/mask_cover3.png">tajo/$VAR[GlobalCaseVarTajo]</texture>
 				</control>

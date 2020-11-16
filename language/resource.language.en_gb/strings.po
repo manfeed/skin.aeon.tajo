@@ -1511,3 +1511,15 @@ msgstr ""
 msgctxt "#32002"
 msgid "Plays the movie trailer automatically in a window after some seconds when browsing through movie views"
 msgstr ""
+
+msgctxt "#32003"
+msgid "All devices"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Powerful devices"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Most powerful devices"
+msgstr ""

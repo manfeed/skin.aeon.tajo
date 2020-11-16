@@ -1142,7 +1142,7 @@
 				</focusedlayout>
 			</control>
 			<control type="image">
-			<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(ListItem.Path,plugin)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
 				<left>155</left>
 				<top>-5</top>
 				<width>350</width>
