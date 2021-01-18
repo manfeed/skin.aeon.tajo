@@ -1408,3 +1408,11 @@ msgstr " - Después de 5 segundos"
 msgctxt "#32007"
 msgid " - Delay 12 seconds"
 msgstr " - Después de 12 segundos"
+
+msgctxt "#32008"
+msgid "Info view 2"
+msgstr "Vista info 2"
+
+msgctxt "#32009"
+msgid "Info view 1"
+msgstr "Vista info 1"
