@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-02-07 19:09+0000\n"
+"PO-Revision-Date: 2021-02-28 08:28+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Arabic (Saudi Arabia) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/ar_sa/>\n"
 "Language: ar_sa\n"
@@ -901,7 +901,7 @@ msgstr ""
 
 msgctxt "#31410"
 msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "تكوين إعدادات الخدمة [B/][CR][CR] إعداد التحكم بـKodi عبر UPnP و HTTP. نكوين مشاركة ملف [CR] تمكن Zeroconf. تكوين التشغيل الحي"
+msgstr "[B]تكوين إعدادات الخدمة [/B][CR][CR] إعداد التحكم بـKodi عبر UPnP و HTTP. نكوين مشاركة ملف [CR] تمكن Zeroconf. تكوين التشغيل الحي"
 
 # empty string with id 31411
 msgctxt "#31412"
