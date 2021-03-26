@@ -259,6 +259,7 @@
 				</control>
 			</control>
 			<control type="label">
+				<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 				<left>25</left>
 				<top>966</top>
 				<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !String.IsEqual(ListItem.DBTYPE,set)</visible>
@@ -274,6 +275,7 @@
 				<label>[B]$VAR[value_ground16_label]:[/B] [COLOR=FFFFFAF0]$VAR[value_ground16_value]   [/COLOR] [CR][CAPITALIZE][B][LOWERCASE]$LOCALIZE[19081]:[/B][/LOWERCASE][/CAPITALIZE][COLOR=FFFFFAF0] $INFO[ListItem.EndTime][/COLOR]</label>
 			</control>
 			<control type="group">
+				<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 				<animation effect="slide" end="0,22" time="0" condition="String.IsEmpty(ListItem.Property(AudioCodec.3))">Conditional</animation>
 				<left>337</left>
 				<top>906</top>
@@ -346,6 +348,7 @@
 			<control type="group">
 				<left>557</left>
 				<top>906</top>
+				<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 				<animation effect="slide" end="0,22" time="0" condition="String.IsEmpty(ListItem.Property(AudioCodec.4))">Conditional</animation>
 				<control type="grouplist">
 					<left>10</left>

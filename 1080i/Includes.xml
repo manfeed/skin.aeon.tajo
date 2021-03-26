@@ -1881,6 +1881,7 @@
 	</include>
 	<include name="IconsFlix">
 		<control type="group">
+		<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 			<visible>!ListItem.IsCollection</visible>
 			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
 			<left>770</left>

@@ -874,6 +874,7 @@
 			<visible allowhiddenfocus="true">Control.HasFocus(5929)</visible>
 			<animation effect="fade" start="0" end="90" time="1200">Visible</animation>
 			<animation effect="slide" end="-150,0" time="0" condition="Control.IsVisible(593)">Conditional</animation>
+			<animation effect="slide" end="80,0" time="0" condition="Control.IsVisible(587)">Conditional</animation>
 			<animation effect="slide" end="1360,0" time="0" condition="Control.IsVisible(595) | Control.IsVisible(587)">Conditional</animation>
 			<left>310</left>
 			<top>980</top>
