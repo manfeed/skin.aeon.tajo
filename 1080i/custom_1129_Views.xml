@@ -97,6 +97,12 @@
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]</visible>
 				</item>
 				<item>
+					<label>Flix</label>
+					<onclick>Container.SetViewMode(587)</onclick>
+					<visible>Window.IsActive(videos)</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]</visible>
+				</item>
+				<item>
 					<label>Shelf</label>
 					<onclick>Container.SetViewMode(598)</onclick>
 					<visible>Window.IsActive(music)</visible>

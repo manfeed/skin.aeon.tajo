@@ -83,7 +83,7 @@
 	</variable>
 	<variable name="GlobalBackgroundVar">
 		<value condition="!Window.IsActive(music) + !String.IsEmpty(ListItem.Art(fanart1)) + !Control.IsVisible(595) + !Control.IsVisible(586) + !Control.IsVisible(589)">$INFO[Control.GetLabel(4410)]</value>
-		<value condition="Window.IsActive(music) + !String.IsEmpty(ListItem.Art(fanart1)) + !Control.IsVisible(598) + !Control.IsVisible(599)">$INFO[Control.GetLabel(5874)]</value>
+		<value condition="Window.IsActive(music) + !String.IsEmpty(ListItem.Art(fanart1)) + !Control.IsVisible(598) + !Control.IsVisible(599)">$INFO[Control.GetLabel(5864)]</value>
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) ">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(set.fanart))">$INFO[Container.Art(set.fanart)]</value>
 		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>

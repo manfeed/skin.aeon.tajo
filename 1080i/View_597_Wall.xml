@@ -711,7 +711,7 @@
 					<height>300</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>650</fadetime>
-					<imagepath background="true">$INFO[Control.GetLabel(5874)]</imagepath>
+					<imagepath background="true">$INFO[Control.GetLabel(5864)]</imagepath>
 				</control>
 				<control type="image">
 					<visible>!String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(ListItem.Art(artist.fanart)) | !String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(artist.fanart1))</visible>

@@ -183,7 +183,7 @@
 							<height>327</height>
 							<aspectratio aligny="top">scale</aspectratio>
 							<fadetime>500</fadetime>
-							<imagepath background="true">$INFO[Control.GetLabel(5874)]</imagepath>
+							<imagepath background="true">$INFO[Control.GetLabel(5864)]</imagepath>
 						</control>
 						<control type="image">
 							<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">

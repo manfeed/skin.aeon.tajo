@@ -375,7 +375,7 @@
 								<height>350</height>
 								<aspectratio aligny="top">scale</aspectratio>
 								<fadetime>500</fadetime>
-								<imagepath diffuse="tajo/mask_cover3.png" background="true">$INFO[Control.GetLabel(5874)]</imagepath>
+								<imagepath diffuse="tajo/mask_cover3.png" background="true">$INFO[Control.GetLabel(5864)]</imagepath>
 							</control>
 							<control type="image">
 								<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">

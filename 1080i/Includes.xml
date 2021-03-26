@@ -15,6 +15,7 @@
 	<include file="View_592_Wall.xml"/>
 	<include file="View_591_Triplem.xml"/>
 	<include file="View_595_Shelf.xml"/>
+	<include file="View_587_Flix.xml"/>
 	<include file="View_598_Shelfm.xml"/>
 	<include file="View_599_Magazine.xml"/>
 	<include file="View_597_Wall.xml"/>
@@ -1849,6 +1850,75 @@
 			<!-- Rating -->
 			<control type="group">
 				<left>890</left>
+				<width>450</width>
+				<height>50</height>
+				<top>12</top>
+				<control type="image">
+					<animation effect="fade" end="90" condition="true">Conditional</animation>
+					<top>-2</top>
+					<left>32</left>
+					<width>190</width>
+					<height>50</height>
+					<texture fallback="$VAR[styleratingstars,,0.png]">$VAR[styleratingstars]$INFO[ListItem.Rating,,.png]</texture>
+					<aspectratio align="left" aligny="center">stretch</aspectratio>
+					<colordiffuse>$VAR[colorratingstars]</colordiffuse>
+					<visible>!String.IsEqual(ListItem.Label,..)</visible>
+				</control>
+				<control type="label">
+					<top>-5</top>
+					<left>-25</left>
+					<width>70</width>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font15_bold</font>
+					<label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="IconsFlix">
+		<control type="group">
+			<visible>!ListItem.IsCollection</visible>
+			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<left>770</left>
+			<top>975</top>
+			<!-- Estudio -->
+			<control type="image" id="3738">
+				<visible>!Container(587).OnScrollNext + !Container(587).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<include>FlagImage</include>
+				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
+			</control>
+			<!-- Mpaa -->
+			<control type="image">
+				<left>161</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+			</control>
+			<!-- Codec de video -->
+			<control type="image">
+				<left>322</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+			</control>
+			<!-- Resolucao -->
+			<control type="image">
+				<left>477</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+			</control>
+			<!-- Aspecto -->
+			<control type="image">
+				<left>632</left>
+				<include>FlagImage</include>
+				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+			</control>
+			<!-- Rating -->
+			<control type="group">
+				<left>815</left>
 				<width>450</width>
 				<height>50</height>
 				<top>12</top>

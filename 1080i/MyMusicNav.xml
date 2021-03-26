@@ -13,7 +13,7 @@
 	<views>50,585,588,591,593,596,597,598,599</views>
 	<menucontrol>9051</menucontrol>
 	<controls>
-		<control type="fadelabel" id="5874">
+		<control type="fadelabel" id="5864">
 			<top>-1000</top>
 			<width>1</width>
 			<height>1</height>
