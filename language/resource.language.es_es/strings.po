@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-03-27 22:53+0000\n"
+"PO-Revision-Date: 2021-03-27 23:13+0000\n"
 "Last-Translator: manfeed <manfuen@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/es_es/>\n"
 "Language: es_es\n"
@@ -749,9 +749,10 @@ msgctxt "#31183"
 msgid "Hide number of items in media views"
 msgstr "Oculta el número de elementos en vistas multimedia"
 
+# empty strings from id 31184 to 31199
 msgctxt "#31200"
-msgid "The Image Resource Select Add-on is used to choose a Kodi resource image pack similiar to weather artwork and icons."
-msgstr "Se usa para escoger entre diferentes packs de imágenes de iconos y de la meteorología."
+msgid "Is used to choose among different Kodi resource image pack to weather artwork and icons."
+msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics Source"
@@ -934,8 +935,8 @@ msgid "Resource image addon for displaying the default white recording label ico
 msgstr "Add-on de recursos de imagen para mostrar los iconos blancos de sello discográfico en la skin."
 
 msgctxt "#31432"
-msgid "Extended Info provides numerous Widget options from different sources (Trakt, TMDb) and extended cast and crew metadata."
-msgstr "Provee numerosas opciones para los Widgets y metadatos extendidos del reparto y equipo."
+msgid "Provides numerous Widget options and extended cast and crew metadata."
+msgstr ""
 
 msgctxt "#31433"
 msgid "Skin Info Service is used to display movie set information throughout the skin."
@@ -966,12 +967,12 @@ msgid "Play Trailer makes possible to play movie trailers through a context menu
 msgstr "Play Trailer permite reproducir trailers de películas a través del menú de opciones. "
 
 msgctxt "#31476"
-msgid "TV - Show Next Aired provides information of previous and next to air episodes in your library. It also provides a TV Guide for the next week or two."
-msgstr "Permite el uso de Youtube para reproducir trailers y otros vídeos."
+msgid "Allows the use of Youtube to play trailers and other videos."
+msgstr ""
 
 msgctxt "#31477"
-msgid "Actor PNG's resource provides cast actor images to be shown in video views."
-msgstr "Provee imágenes de algunas actrices del reparto para mostrarse en vistas de vídeo."
+msgid "Provides some cast actress images to be shown in video views."
+msgstr ""
 
 msgctxt "#31478"
 msgid "Artist Slideshow is used to display artist fanart for both the home screen and during fullscreen music playback."
@@ -1416,3 +1417,19 @@ msgstr "Vista info 2"
 msgctxt "#32009"
 msgid "Info view 1"
 msgstr "Vista info 1"
+
+#~ msgctxt "#31200"
+#~ msgid "The Image Resource Select Add-on is used to choose a Kodi resource image pack similiar to weather artwork and icons."
+#~ msgstr "Se usa para escoger entre diferentes packs de imágenes de iconos y de la meteorología."
+
+#~ msgctxt "#31432"
+#~ msgid "Extended Info provides numerous Widget options from different sources (Trakt, TMDb) and extended cast and crew metadata."
+#~ msgstr "Provee numerosas opciones para los Widgets y metadatos extendidos del reparto y equipo."
+
+#~ msgctxt "#31476"
+#~ msgid "TV - Show Next Aired provides information of previous and next to air episodes in your library. It also provides a TV Guide for the next week or two."
+#~ msgstr "Permite el uso de Youtube para reproducir trailers y otros vídeos."
+
+#~ msgctxt "#31477"
+#~ msgid "Actor PNG's resource provides cast actor images to be shown in video views."
+#~ msgstr "Provee imágenes de algunas actrices del reparto para mostrarse en vistas de vídeo."
