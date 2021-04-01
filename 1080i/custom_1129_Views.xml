@@ -109,6 +109,12 @@
 					<visible>Container.Content(albums) | Container.Content(artists)</visible>
 				</item>
 				<item>
+					<label>MusicFlix</label>
+					<onclick>Container.SetViewMode(584)</onclick>
+					<visible>Window.IsActive(music)</visible>
+					<visible>Container.Content(albums) | Container.Content(artists)</visible>
+				</item>
+				<item>
 					<label>Magazine</label>
 					<onclick>Container.SetViewMode(599)</onclick>
 					<visible>Window.IsActive(music)</visible>

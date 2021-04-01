@@ -17,6 +17,7 @@
 	<include file="View_595_Shelf.xml"/>
 	<include file="View_587_Flix.xml"/>
 	<include file="View_598_Shelfm.xml"/>
+	<include file="View_584_MusicFlix.xml"/>
 	<include file="View_599_Magazine.xml"/>
 	<include file="View_597_Wall.xml"/>
 	<include file="View_594_Banner.xml"/>
