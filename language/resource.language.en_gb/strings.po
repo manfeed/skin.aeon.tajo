@@ -1539,3 +1539,11 @@ msgstr ""
 msgctxt "#32009"
 msgid "Info view 1"
 msgstr ""
+
+msgctxt "#32010"
+msgid "Play automatically songs while browsing music"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Plays automatically songs belonging to the current artist or album when browsing through music views"
+msgstr ""

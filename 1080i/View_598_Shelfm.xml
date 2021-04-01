@@ -137,7 +137,7 @@
 								<height>80</height>
 								<align>right</align>
 								<font>titlelist</font>
-								<font></font>
+								<font/>
 								<label>$INFO[ListItem.Artist]</label>
 								<shadowcolor>black</shadowcolor>
 							</control>

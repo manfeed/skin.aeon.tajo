@@ -43,6 +43,26 @@
 			<scrollout>false</scrollout>
 			<resetonlabelchange>true</resetonlabelchange>
 		</control>
+		<control type="list" id="5763">
+			<visible>Container.Content(artists) + Skin.HasSetting(PlayPreviewM)</visible>
+			<scrolltime>300</scrolltime>
+			<autoscroll>true</autoscroll>
+			<itemlayout>
+			</itemlayout>
+			<focusedlayout>
+			</focusedlayout>
+			<content target="music" sortby="track" sortorder="ascending">$INFO[Container.ListItem.DBID,musicdb://artists/,/*]</content>
+		</control>
+		<control type="list" id="5764">
+			<visible>Container.Content(albums) + Skin.HasSetting(PlayPreviewM)</visible>
+			<scrolltime>300</scrolltime>
+			<autoscroll>true</autoscroll>
+			<itemlayout>
+			</itemlayout>
+			<focusedlayout>
+			</focusedlayout>
+			<content target="music" sortby="track" sortorder="ascending">$INFO[Container.ListItem.DBID,musicdb://albums/,/]</content>
+		</control>
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>WindowOpenCloseAnimation</include>
@@ -200,7 +220,7 @@
 			<top>80</top>
 			<left>70</left>
 			<control type="grouplist">
-			<animation effect="slide" end="1820,0" time="0" condition="Control.IsVisible(585)">Conditional</animation>
+				<animation effect="slide" end="1820,0" time="0" condition="Control.IsVisible(585)">Conditional</animation>
 				<visible>!Skin.HasSetting(noshow_Time)</visible>
 				<left>-52</left>
 				<top>-80</top>
@@ -282,7 +302,7 @@
 				</control>
 			</control>
 		</control>
-				<control type="group">
+		<control type="group">
 			<visible>System.IdleTime(120)</visible>
 			<visible>Skin.HasSetting(ScreensaverNetflix)</visible>
 			<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>

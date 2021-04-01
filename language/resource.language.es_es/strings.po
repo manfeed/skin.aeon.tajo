@@ -752,7 +752,7 @@ msgstr "Oculta el número de elementos en vistas multimedia"
 # empty strings from id 31184 to 31199
 msgctxt "#31200"
 msgid "Is used to choose among different Kodi resource image pack to weather artwork and icons."
-msgstr ""
+msgstr "Se usa para escoger entre diferentes packs de imágenes de iconos y de la meteorología."
 
 msgctxt "#31205"
 msgid "Lyrics Source"
@@ -936,7 +936,7 @@ msgstr "Add-on de recursos de imagen para mostrar los iconos blancos de sello di
 
 msgctxt "#31432"
 msgid "Provides numerous Widget options and extended cast and crew metadata."
-msgstr ""
+msgstr "Provee numerosas opciones para los Widgets y metadatos extendidos del reparto y equipo."
 
 msgctxt "#31433"
 msgid "Skin Info Service is used to display movie set information throughout the skin."
@@ -968,11 +968,11 @@ msgstr "Play Trailer permite reproducir trailers de películas a través del men
 
 msgctxt "#31476"
 msgid "Allows the use of Youtube to play trailers and other videos."
-msgstr ""
+msgstr "Permite el uso de Youtube para reproducir trailers y otros vídeos."
 
 msgctxt "#31477"
 msgid "Provides some cast actress images to be shown in video views."
-msgstr ""
+msgstr "Provee imágenes de algunas actrices del reparto para mostrarse en vistas de vídeo."
 
 msgctxt "#31478"
 msgid "Artist Slideshow is used to display artist fanart for both the home screen and during fullscreen music playback."
@@ -1418,18 +1418,10 @@ msgctxt "#32009"
 msgid "Info view 1"
 msgstr "Vista info 1"
 
-#~ msgctxt "#31200"
-#~ msgid "The Image Resource Select Add-on is used to choose a Kodi resource image pack similiar to weather artwork and icons."
-#~ msgstr "Se usa para escoger entre diferentes packs de imágenes de iconos y de la meteorología."
+msgctxt "#32010"
+msgid "Play automatically songs while browsing music"
+msgstr "Reproducir automáticamente canciones al navegar en música"
 
-#~ msgctxt "#31432"
-#~ msgid "Extended Info provides numerous Widget options from different sources (Trakt, TMDb) and extended cast and crew metadata."
-#~ msgstr "Provee numerosas opciones para los Widgets y metadatos extendidos del reparto y equipo."
-
-#~ msgctxt "#31476"
-#~ msgid "TV - Show Next Aired provides information of previous and next to air episodes in your library. It also provides a TV Guide for the next week or two."
-#~ msgstr "Permite el uso de Youtube para reproducir trailers y otros vídeos."
-
-#~ msgctxt "#31477"
-#~ msgid "Actor PNG's resource provides cast actor images to be shown in video views."
-#~ msgstr "Provee imágenes de algunas actrices del reparto para mostrarse en vistas de vídeo."
+msgctxt "#32011"
+msgid "Plays automatically songs belonging to the current artist or album when browsing through music views"
+msgstr "Reproduce automáticamente canciones del artista o del album mientras se navega en algunas vistas de música"
