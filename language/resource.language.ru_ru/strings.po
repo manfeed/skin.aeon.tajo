@@ -1427,6 +1427,14 @@ msgctxt "#32009"
 msgid "Info view 1"
 msgstr ""
 
+msgctxt "#32010"
+msgid "Play automatically songs while browsing music"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Plays automatically songs belonging to the current artist or album when browsing through music views"
+msgstr ""
+
 #~ msgctxt "#31200"
 #~ msgid "The Image Resource Select Add-on is used to choose a Kodi resource image pack similiar to weather artwork and icons."
 #~ msgstr "Дополнение Image Resource Select для выбора набора изображений для ресурсов подобно изображениям и иконкам для приложения \"погода\"."
