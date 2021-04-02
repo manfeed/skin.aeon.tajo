@@ -3,7 +3,7 @@
 	<onload>PlayMedia($INFO[Container(5763).ListItem.FileNameAndPath],1)</onload>
 	<onload>SetProperty(PlayingMusicPreview,True,home)</onload>
 	<visible>System.IdleTime(3)</visible>
-	<visible>Container.Content(artists)</visible>
+	<visible>Container.Content(artists) + !String.StartsWith(ListItem.Label,*)</visible>
 	<visible>!String.IsEqual(Container.Viewmode,$LOCALIZE[21888]) + !String.IsEqual(Container.Viewmode,Triple)</visible>
 	<visible>!Player.Playing</visible>
 	<visible>Skin.HasSetting(PlayPreviewM)</visible>

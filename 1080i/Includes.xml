@@ -1882,7 +1882,7 @@
 	</include>
 	<include name="IconsFlix">
 		<control type="group">
-		<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 			<visible>!ListItem.IsCollection</visible>
 			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
 			<left>770</left>
@@ -2668,7 +2668,7 @@
 			<label>$LOCALIZE[21888]</label>
 		</control>
 		<control type="image">
-			<visible>Container.Content(albums) + String.StartsWith(ListItem.Label,*)</visible>
+			<visible>[Container.Content(artists) | Container.Content(albums)] + String.StartsWith(ListItem.Label,*)</visible>
 			<left>-63</left>
 			<top>256</top>
 			<width>280</width>
@@ -2686,13 +2686,23 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<colordiffuse>88FFFFFF</colordiffuse>
 		</control>
+				<control type="image">
+			<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+			<left>-63</left>
+			<top>256</top>
+			<width>280</width>
+			<height>304</height>
+			<texture diffuse="tajo/shelf/diffuse_box.png" background="true">tajo/magazine/allartists.jpg</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<colordiffuse>88FFFFFF</colordiffuse>
+		</control>
 		<control type="textbox">
 			<visible>Container.Content(albums) + String.StartsWith(ListItem.Label,*)</visible>
 			<left>-64</left>
 			<top>255</top>
 			<width>280</width>
 			<height>304</height>
-			<font>titleshelf</font>
+			<font>titlewall</font>
 			<textcolor>black</textcolor>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -2704,12 +2714,37 @@
 			<top>256</top>
 			<width>280</width>
 			<height>304</height>
-			<font>titleshelf</font>
+			<font>titlewall</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<align>center</align>
 			<aligny>center</aligny>
 			<label>$LOCALIZE[358]</label>
+		</control>
+				<control type="textbox">
+			<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+			<left>-64</left>
+			<top>255</top>
+			<width>280</width>
+			<height>304</height>
+			<font>titlewall</font>
+			<textcolor>black</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[15103]</label>
+		</control>
+		<control type="textbox">
+			<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+			<left>-63</left>
+			<top>256</top>
+			<width>280</width>
+			<height>304</height>
+			<font>titlewall</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[15103]</label>
 		</control>
 		<control type="image">
 			<visible>Container.Content(artists)</visible>
@@ -2762,6 +2797,16 @@
 			<texture flipy="true" background="true">tajo/magazine/cmusiclandJ.png</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<colordiffuse>15FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+			<left>-63</left>
+			<top>564</top>
+			<width>280</width>
+			<height>308</height>
+			<texture flipy="true" background="true">tajo/magazine/allartists.jpg</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<colordiffuse>40FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
 			<visible>Container.Content(artists)</visible>
@@ -3112,7 +3157,7 @@
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 		<control type="image">
-			<visible>Container.Content(albums) + String.StartsWith(ListItem.Label,*)</visible>
+			<visible>[Container.Content(albums) | Container.Content(artists)] + String.StartsWith(ListItem.Label,*)</visible>
 			<left>-63</left>
 			<top>256</top>
 			<width>304</width>
@@ -3130,13 +3175,23 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<colordiffuse>88FFFFFF</colordiffuse>
 		</control>
+		<control type="image">
+			<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+			<left>-63</left>
+			<top>256</top>
+			<width>304</width>
+			<height>304</height>
+			<texture diffuse="tajo/mask_cover3.png" background="true">tajo/magazine/allartists.jpg</texture>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<colordiffuse>88FFFFFF</colordiffuse>
+		</control>
 		<control type="textbox">
 			<visible>Container.Content(albums) + String.StartsWith(ListItem.Label,*)</visible>
 			<left>-63</left>
 			<top>256</top>
 			<width>304</width>
 			<height>304</height>
-			<font>titleshelf</font>
+			<font>titlemus2</font>
 			<textcolor>black</textcolor>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -3148,12 +3203,37 @@
 			<top>256</top>
 			<width>304</width>
 			<height>304</height>
-			<font>titleshelf</font>
+			<font>titlemus2</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<align>center</align>
 			<aligny>center</aligny>
 			<label>$LOCALIZE[358]</label>
+		</control>
+		<control type="textbox">
+			<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+			<left>-63</left>
+			<top>256</top>
+			<width>304</width>
+			<height>304</height>
+			<font>titlemus2</font>
+			<textcolor>black</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[15103]</label>
+		</control>
+		<control type="textbox">
+			<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+			<left>-63</left>
+			<top>256</top>
+			<width>304</width>
+			<height>304</height>
+			<font>titlemus2</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[15103]</label>
 		</control>
 		<control type="image">
 			<visible>Container.Content(artists) | Container.Content(albums)</visible>
@@ -3209,6 +3289,16 @@
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="image">
+				<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+				<left>-63</left>
+				<top>564</top>
+				<width>304</width>
+				<height>304</height>
+				<texture flipy="true" background="true">tajo/magazine/allartists.jpg</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<colordiffuse>15FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
 				<visible>Container.Content(artists) + !String.IsEmpty(ListItem.Artist)</visible>
 				<left>-19</left>
 				<top>559</top>
@@ -3219,7 +3309,7 @@
 				<texture flipy="true" background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 			</control>
 			<control type="image">
-				<visible>Container.Content(artists)</visible>
+				<visible>Container.Content(artists) | Container.Content(albums)</visible>
 				<left>-63</left>
 				<top>564</top>
 				<width>304</width>
@@ -3237,6 +3327,15 @@
 			<width>326</width>
 			<height>436</height>
 			<texture diffuse="tajo/mask_cover3.png" background="true">$VAR[poster]</texture>
+			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+		</control>
+		<control type="image">
+			<visible>String.StartsWith(ListItem.Label,*)</visible>
+			<left>-99</left>
+			<top>126</top>
+			<width>326</width>
+			<height>436</height>
+			<texture diffuse="tajo/mask_cover3.png" background="true">tajo/magazine/allartists.jpg</texture>
 			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 		</control>
 		<control type="image">
@@ -3258,6 +3357,17 @@
 			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 		</control>
 		<control type="image">
+			<visible>String.StartsWith(ListItem.Label,*)</visible>
+			<!-- Poster reflejo  -->
+			<left>-99</left>
+			<top>562</top>
+			<width>326</width>
+			<height>436</height>
+			<colordiffuse>18FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="tajo/mask_cover3.png" background="true">tajo/magazine/allartists.jpg</texture>
+			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+		</control>
+		<control type="image">
 			<!-- Estuche -->
 			<left>-100</left>
 			<top>562</top>
@@ -3275,6 +3385,15 @@
 			<width>326</width>
 			<height>436</height>
 			<texture diffuse="tajo/mask_cover3.png" background="true">$VAR[poster]</texture>
+			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+		</control>
+		<control type="image">
+			<visible>String.StartsWith(ListItem.Label,*)</visible>
+			<left>-99</left>
+			<top>126</top>
+			<width>326</width>
+			<height>436</height>
+			<texture diffuse="tajo/mask_cover3.png" background="true">tajo/magazine/allartists.jpg</texture>
 			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 		</control>
 		<control type="image">
@@ -3302,6 +3421,17 @@
 			<height>436</height>
 			<colordiffuse>18FFFFFF</colordiffuse>
 			<texture flipy="true" diffuse="tajo/mask_cover3.png" background="true">$VAR[poster]</texture>
+			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+		</control>
+		<control type="image">
+			<visible>String.StartsWith(ListItem.Label,*)</visible>
+			<!-- Poster reflejo  -->
+			<left>-99</left>
+			<top>562</top>
+			<width>326</width>
+			<height>436</height>
+			<colordiffuse>18FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="tajo/mask_cover3.png" background="true">tajo/magazine/allartists.jpg</texture>
 			<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 		</control>
 		<control type="image">
