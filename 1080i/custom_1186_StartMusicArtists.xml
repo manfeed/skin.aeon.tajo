@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1186">
-	<onload>PlayMedia($INFO[Container(5763).ListItem.FileNameAndPath],1)</onload>
+	<onload>PlayMedia($ESCINFO[Container(5763).ListItem.FileNameAndPath],1)</onload>
 	<onload>SetProperty(PlayingMusicPreview,True,home)</onload>
 	<visible>System.IdleTime(3)</visible>
 	<visible>Container.Content(artists) + !String.StartsWith(ListItem.Label,*)</visible>

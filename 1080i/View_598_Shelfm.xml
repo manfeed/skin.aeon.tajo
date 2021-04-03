@@ -856,7 +856,7 @@
 									<texture flipy="true" background="true">$VAR[poster]</texture>
 									<aspectratio>scale</aspectratio>
 								</control>
-																<control type="image">
+								<control type="image">
 									<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
 									<left>-63</left>
 									<top>564</top>
@@ -893,7 +893,7 @@
 										<aligny>center</aligny>
 										<label>$LOCALIZE[358]</label>
 									</control>
-																		<control type="textbox">
+									<control type="textbox">
 										<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
 										<animation effect="rotatex" center="227,0" start="180" end="180" condition="true">Conditional</animation>
 										<animation effect="fade" end="20" condition="true">Conditional</animation>

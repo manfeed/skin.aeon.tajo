@@ -357,7 +357,7 @@
 						<top>-800</top>
 						<left>60</left>
 						<align>left</align>
-						<width>840</width>
+						<width>750</width>
 						<height>60</height>
 						<font>titletest</font>
 						<label>$VAR[value_title]</label>
@@ -379,12 +379,12 @@
 					<control type="textbox" id="6111">
 						<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
 						<visible>Container(6110).HasNext + !Container(6111).HasNext</visible>
-						<top>-24</top>
+						<top>-5</top>
 						<left>60</left>
 						<align>left</align>
 						<aligny>center</aligny>
 						<width>640</width>
-						<height>200</height>
+						<height>150</height>
 						<font>titlemove2</font>
 						<label>$VAR[value_title]</label>
 						<shadowcolor>black</shadowcolor>
