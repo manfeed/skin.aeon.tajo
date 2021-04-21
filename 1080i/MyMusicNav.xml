@@ -51,7 +51,8 @@
 			</itemlayout>
 			<focusedlayout>
 			</focusedlayout>
-			<content target="music" sortby="track" sortorder="ascending">$INFO[Container.ListItem.DBID,musicdb://artists/,/*]</content>
+			<content>musicdb://artists/$INFO[ListItem.DBID]/*</content>
+			<!-- <content target="music" sortby="track" sortorder="ascending">$INFO[Container.ListItem.DBID,musicdb://artists/,/*]</content> -->
 		</control>
 		<control type="list" id="5764">
 			<visible>Container.Content(albums) + Skin.HasSetting(PlayPreviewM)</visible>
@@ -61,7 +62,8 @@
 			</itemlayout>
 			<focusedlayout>
 			</focusedlayout>
-			<content target="music" sortby="track" sortorder="ascending">$INFO[Container.ListItem.DBID,musicdb://albums/,/]</content>
+			<content>musicdb://albums/$INFO[ListItem.DBID]/*</content>
+			<!-- <content target="music" sortby="track" sortorder="ascending">$INFO[Container.ListItem.DBID,musicdb://albums/,/]</content> -->
 		</control>
 		<include>CommonBackground</include>
 		<control type="group">
