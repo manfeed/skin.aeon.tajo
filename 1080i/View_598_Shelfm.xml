@@ -458,9 +458,9 @@
 								</control>
 							</control>
 							<control type="textbox">
-								<left>32</left>
+								<left>45</left>
 								<top>170</top>
-								<width>530</width>
+								<width>515</width>
 								<height>180</height>
 								<font>font28</font>
 								<align>justify</align>

@@ -125,34 +125,34 @@
 				<left>125</left>
 				<top>145</top>
 				<control type="group">
-				<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEqual(ListItem.FileExtension,strm)">Conditional</animation>
-				<control type="image">
-					<left>20</left>
-					<top>15</top>
-					<width>555</width>
-					<height>335</height>
-					<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
-				</control>
-				<control type="multiimage">
-					<left>20</left>
-					<top>15</top>
-					<width>555</width>
-					<height>335</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<fadetime>500</fadetime>
-					<visible>!String.IsEmpty(ListItem.Art(fanart1))</visible>
-					<imagepath background="true">$INFO[Control.GetLabel(4410)]</imagepath>
-				</control>
-				<control type="image">
-					<left>20</left>
-					<top>15</top>
-					<width>555</width>
-					<height>335</height>
-					<texture background="true">tajo/osd_black_bg.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
+					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEqual(ListItem.FileExtension,strm)">Conditional</animation>
+					<control type="image">
+						<left>20</left>
+						<top>15</top>
+						<width>555</width>
+						<height>335</height>
+						<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
+						<aspectratio aligny="top">scale</aspectratio>
+						<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					</control>
+					<control type="multiimage">
+						<left>20</left>
+						<top>15</top>
+						<width>555</width>
+						<height>335</height>
+						<aspectratio aligny="top">scale</aspectratio>
+						<fadetime>500</fadetime>
+						<visible>!String.IsEmpty(ListItem.Art(fanart1))</visible>
+						<imagepath background="true">$INFO[Control.GetLabel(4410)]</imagepath>
+					</control>
+					<control type="image">
+						<left>20</left>
+						<top>15</top>
+						<width>555</width>
+						<height>335</height>
+						<texture background="true">tajo/osd_black_bg.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
 				</control>
 				<control type="videowindow" id="3834">
 					<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
@@ -379,7 +379,7 @@
 						<textcolor>FFFFFFFF</textcolor>
 					</control>
 					<control type="image">
-					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEqual(ListItem.FileExtension,strm)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEqual(ListItem.FileExtension,strm)">Conditional</animation>
 						<left>300</left>
 						<top>170</top>
 						<width>250</width>
@@ -472,6 +472,108 @@
 			<!-- default group -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<include>ViewBack2</include>
+						<control type="group">
+				<left>90</left>
+				<top>90</top>
+				<control type="image">
+					<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
+					<left>-15</left>
+					<top>-8</top>
+					<width>650</width>
+					<height>365</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+				</control>
+				<control type="image">
+					<visible>String.IsEmpty(ListItem.Art(artist.fanart1))</visible>
+					<left>-15</left>
+					<top>-8</top>
+					<width>650</width>
+					<height>365</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(artist.fanart)]</texture>
+				</control>
+				<control type="multiimage">
+					<visible>!String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(artist.fanart1))</visible>
+					<left>-15</left>
+					<top>-8</top>
+					<width>650</width>
+					<height>365</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<fadetime>650</fadetime>
+					<imagepath background="true">$INFO[Control.GetLabel(5864)]</imagepath>
+				</control>
+				<control type="image">
+					<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">
+						<effect type="fade" delay="0" start="100" end="0" time="500"/>
+					</animation>
+					<left>-15</left>
+					<top>-8</top>
+					<width>650</width>
+					<height>365</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(landscape)]</texture>
+				</control>
+				<control type="image">
+					<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*) + String.IsEmpty(ListItem.Art(artist.clearlogo))</visible>
+					<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">
+						<effect type="fade" delay="0" start="100" end="0" time="500"/>
+					</animation>
+					<left>-15</left>
+					<top>-8</top>
+					<width>650</width>
+					<height>365</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(artist.landscape)]</texture>
+				</control>
+			</control>
+										<control type="group">
+								<left>-220</left>
+								<top>12</top>
+								<control type="image">
+									<left>930</left>
+									<top>70</top>
+									<width>360</width>
+									<height>1530</height>
+									<texture background="true">tajo/osd_black_bg2.png</texture>
+									<aspectratio>stretch</aspectratio>
+								</control>
+								<control type="image">
+									<animation effect="rotate" center="auto" start="180" end="180" time="0" condition="true">Conditional</animation>
+									<left>572</left>
+									<top>70</top>
+									<width>360</width>
+									<height>1530</height>
+									<texture background="true">tajo/osd_black_bg2.png</texture>
+									<aspectratio>stretch</aspectratio>
+								</control>
+								<control type="image">
+									<left>-100</left>
+									<top>76</top>
+									<width>2400</width>
+									<height>360</height>
+									<aspectratio>stretch</aspectratio>
+									<texture background="true">tajo/osd_black_bg.png</texture>
+								</control>
+								<control type="image">
+									<animation effect="rotate" center="auto" start="180" end="180" time="0" condition="true">Conditional</animation>
+									<left>-100</left>
+									<top>434</top>
+									<width>2400</width>
+									<height>360</height>
+									<aspectratio>stretch</aspectratio>
+									<texture background="true">tajo/osd_black_bg.png</texture>
+								</control>
+							</control>
+											<control type="image">
+					<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*)</visible>
+					<left>382</left>
+					<top>350</top>
+					<width>220</width>
+					<height>100</height>
+					<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
 			<!-- Fundo -->
 			<control type="group">
 				<animation effect="zoom" end="120" center="auto" condition="true">Conditional</animation>
@@ -585,27 +687,27 @@
 							<label>$LOCALIZE[358]</label>
 						</control>
 						<control type="image">
-								<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
-								<left>11</left>
-								<top>9</top>
-								<width>185</width>
-								<height>185</height>
-								<texture diffuse="tajo/mask_circle.png" background="true">tajo/magazine/allartists.jpg</texture>
-								<aspectratio scalediffuse="false">scale</aspectratio>
-							</control>
-							<control type="textbox">
-								<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
-								<left>4</left>
-								<top>9</top>
-								<width>200</width>
-								<height>190</height>
-								<font>titlesmall</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>black</shadowcolor>
-								<align>center</align>
-								<aligny>center</aligny>
-								<label>$LOCALIZE[15103]</label>
-							</control>
+							<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+							<left>11</left>
+							<top>9</top>
+							<width>185</width>
+							<height>185</height>
+							<texture diffuse="tajo/mask_circle.png" background="true">tajo/magazine/allartists.jpg</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<visible>Container.Content(artists) + String.StartsWith(ListItem.Label,*)</visible>
+							<left>4</left>
+							<top>9</top>
+							<width>200</width>
+							<height>190</height>
+							<font>titlesmall</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[15103]</label>
+						</control>
 						<control type="textbox">
 							<visible>Container.Content(artists) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<left>1</left>
@@ -729,76 +831,6 @@
 				<visible>Control.IsVisible(597) + [Container.Content(albums) | Container.Content(artists)]</visible>
 				<left>90</left>
 				<top>90</top>
-				<control type="image">
-					<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
-					<left>15</left>
-					<top>63</top>
-					<width>532</width>
-					<height>300</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
-				</control>
-				<control type="image">
-					<visible>String.IsEmpty(ListItem.Art(artist.fanart1))</visible>
-					<left>15</left>
-					<top>63</top>
-					<width>532</width>
-					<height>300</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(artist.fanart)]</texture>
-				</control>
-				<control type="multiimage">
-					<visible>!String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(artist.fanart1))</visible>
-					<left>15</left>
-					<top>63</top>
-					<width>532</width>
-					<height>300</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<fadetime>650</fadetime>
-					<imagepath background="true">$INFO[Control.GetLabel(5864)]</imagepath>
-				</control>
-				<control type="image">
-					<visible>!String.IsEmpty(ListItem.Art(fanart)) | !String.IsEmpty(ListItem.Art(artist.fanart)) | !String.IsEmpty(ListItem.Art(fanart1)) | !String.IsEmpty(ListItem.Art(artist.fanart1))</visible>
-					<left>15</left>
-					<top>63</top>
-					<width>532</width>
-					<height>300</height>
-					<aspectratio>stretch</aspectratio>
-					<colordiffuse>aaFFFFFF</colordiffuse>
-					<texture background="true">tajo/osd_black_bg.png</texture>
-				</control>
-				<control type="image">
-					<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">
-						<effect type="fade" delay="0" start="100" end="0" time="500"/>
-					</animation>
-					<left>15</left>
-					<top>63</top>
-					<width>532</width>
-					<height>300</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(landscape)]</texture>
-				</control>
-				<control type="image">
-					<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*)</visible>
-					<left>302</left>
-					<top>255</top>
-					<width>220</width>
-					<height>100</height>
-					<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="image">
-					<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*)</visible>
-					<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">
-						<effect type="fade" delay="0" start="100" end="0" time="500"/>
-					</animation>
-					<left>15</left>
-					<top>63</top>
-					<width>532</width>
-					<height>300</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(artist.landscape)]</texture>
-				</control>
 				<control type="textbox" id="5011">
 					<visible>![Container.Content(albums) + String.StartsWith(ListItem.Label,*)]</visible>
 					<left>25</left>
