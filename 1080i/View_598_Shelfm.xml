@@ -81,15 +81,6 @@
 							</control>
 							<control type="image">
 								<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*)</visible>
-								<left>1590</left>
-								<top>420</top>
-								<width>200</width>
-								<height>100</height>
-								<aspectratio aligny="center">keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
-							</control>
-							<control type="image">
-								<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*)</visible>
 								<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">
 									<effect type="fade" delay="0" start="100" end="0" time="500"/>
 								</animation>
@@ -105,7 +96,7 @@
 								<control type="image">
 									<left>1000</left>
 									<top>70</top>
-									<width>930</width>
+									<width>430</width>
 									<height>1530</height>
 									<texture background="true">tajo/osd_black_bg2.png</texture>
 									<aspectratio>stretch</aspectratio>
@@ -121,9 +112,9 @@
 								</control>
 								<control type="image">
 									<left>-100</left>
-									<top>76</top>
+									<top>400</top>
 									<width>2300</width>
-									<height>524</height>
+									<height>200</height>
 									<aspectratio>stretch</aspectratio>
 									<texture background="true">tajo/osd_black_bg.png</texture>
 								</control>
@@ -135,6 +126,17 @@
 									<height>524</height>
 									<aspectratio>stretch</aspectratio>
 									<texture background="true">tajo/osd_black_bg.png</texture>
+								</control>
+								<control type="image">
+									<visible>![!System.IdleTime(3) + !String.IsEmpty(ListItem.Art(artist.landscape))]</visible>
+									<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*)</visible>
+									<include>VisibleFadeAnimation</include>
+									<left>1540</left>
+									<top>410</top>
+									<width>300</width>
+									<height>180</height>
+									<aspectratio aligny="center">keep</aspectratio>
+									<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
 								</control>
 							</control>
 						</control>

@@ -24,7 +24,7 @@
 					</control>
 					<control type="group">
 						<left>30</left>
-						<top>-2</top>
+						<top>-10</top>
 						<control type="image">
 							<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
 							<left>1020</left>
@@ -44,17 +44,6 @@
 							<fadetime>500</fadetime>
 							<imagepath background="true">$INFO[Control.GetLabel(5864)]</imagepath>
 						</control>
-						<control type="image">
-							<animation type="Conditional" condition="System.IdleTime(3)" reversible="false">
-								<effect type="fade" delay="0" start="100" end="0" time="500"/>
-							</animation>
-							<left>1020</left>
-							<top>150</top>
-							<width>900</width>
-							<height>500</height>
-							<aspectratio aligny="top">scale</aspectratio>
-							<texture background="true">$INFO[ListItem.Art(landscape)]</texture>
-						</control>
 					</control>
 					<control type="group">
 						<left>70</left>
@@ -62,7 +51,7 @@
 						<control type="image">
 							<left>1000</left>
 							<top>70</top>
-							<width>930</width>
+							<width>430</width>
 							<height>1530</height>
 							<texture background="true">tajo/osd_black_bg2.png</texture>
 							<aspectratio>stretch</aspectratio>

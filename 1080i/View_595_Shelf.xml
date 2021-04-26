@@ -22,11 +22,108 @@
 					<height>1277</height>
 					<texture diffuse="tajo/mask_cover3.png">tajo/darkgrey.png</texture>
 					<colordiffuse>themecolor</colordiffuse>
-					<animation effect="fade" end="90" condition="true">Conditional</animation>
+					<animation effect="fade" end="80" condition="true">Conditional</animation>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59631).NumItems,6)]</visible>
+					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
+					<top>-10</top>
+					<control type="image">
+						<left>1060</left>
+						<top>75</top>
+						<width>920</width>
+						<height>525</height>
+						<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
+						<aspectratio aligny="top">scale</aspectratio>
+						<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					</control>
+					<control type="multiimage">
+						<left>1060</left>
+						<top>75</top>
+						<width>920</width>
+						<height>525</height>
+						<aspectratio aligny="top">scale</aspectratio>
+						<fadetime>500</fadetime>
+						<visible>!String.IsEmpty(ListItem.Art(fanart1))</visible>
+						<imagepath diffuse="tajo/mask_cover3.png" background="true">$INFO[Control.GetLabel(4410)]</imagepath>
+					</control>
+					<control type="image">
+						<visible>[Skin.HasSetting(Sh2) + Skin.HasSetting(showCast)]</visible>
+						<left>1060</left>
+						<top>75</top>
+						<width>350</width>
+						<height>525</height>
+						<texture background="true">tajo/gradient_small2.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>[!String.IsEmpty(ListItem.Art(clearlogo)) + !String.IsEmpty(ListItem.Art(clearart))] | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+						<left>1060</left>
+						<top>75</top>
+						<width>920</width>
+						<height>525</height>
+						<texture background="true">tajo/osd_black_bg.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<animation effect="rotate" center="auto" start="180" end="180" time="0" condition="true">Conditional</animation>
+						<visible>!String.IsEmpty(ListItem.Art(characterart)) + !Container.Content(tvshows)</visible>
+						<left>1060</left>
+						<top>75</top>
+						<width>920</width>
+						<height>525</height>
+						<texture background="true">tajo/osd_black_bg2.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+				</control>
+				<control type="videowindow" id="2449">
+					<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
+					<left>1060</left>
+					<top>25</top>
+					<width>965</width>
+					<height>550</height>
+				</control>
+				<control type="group">
+					<top>-15</top>
+					<left>60</left>
+					<control type="image">
+						<left>1000</left>
+						<top>70</top>
+						<width>230</width>
+						<height>1530</height>
+						<texture background="true">tajo/osd_black_bg2.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<animation effect="rotate" center="auto" start="180" end="180" time="0" condition="true">Conditional</animation>
+						<left>100</left>
+						<top>70</top>
+						<width>902</width>
+						<height>1530</height>
+						<texture background="true">tajo/osd_black_bg2.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<left>-100</left>
+						<top>400</top>
+						<width>2300</width>
+						<height>200</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">tajo/osd_black_bg.png</texture>
+					</control>
+					<control type="image">
+						<animation effect="rotate" center="auto" start="180" end="180" time="0" condition="true">Conditional</animation>
+						<left>-100</left>
+						<top>595</top>
+						<width>2300</width>
+						<height>524</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">tajo/osd_black_bg.png</texture>
+					</control>
 				</control>
 				<control type="grouplist">
 					<animation effect="slide" end="0,-136" time="0" condition="String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + Skin.HasSetting(showCast) + Skin.HasSetting(Sh2)">Conditional</animation>
-					<animation effect="slide" end="482,0" time="0" condition="!Skin.HasSetting(Sh2) + Skin.HasSetting(showCast) + !Container.Content(seasons)">Conditional</animation>
+					<animation effect="slide" end="512,0" time="0" condition="!Skin.HasSetting(Sh2) + Skin.HasSetting(showCast) + !Container.Content(seasons)">Conditional</animation>
 					<visible>!ListItem.IsCollection</visible>
 					<left>45</left>
 					<top>372</top>
@@ -58,7 +155,7 @@
 				</control>
 				<control type="group">
 					<animation effect="slide" end="0,-136" time="0" condition="String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + Skin.HasSetting(showCast) + Skin.HasSetting(Sh2)">Conditional</animation>
-					<animation effect="slide" end="482,0" time="0" condition="!Skin.HasSetting(Sh2) + Skin.HasSetting(showCast) + !Container.Content(seasons)">Conditional</animation>
+					<animation effect="slide" end="512,0" time="0" condition="!Skin.HasSetting(Sh2) + Skin.HasSetting(showCast) + !Container.Content(seasons)">Conditional</animation>
 					<left>117</left>
 					<top>354</top>
 					<control type="grouplist">
@@ -126,7 +223,7 @@
 				</control>
 				<control type="group">
 					<animation effect="slide" end="0,-136" time="0" condition="String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + Skin.HasSetting(showCast) + Skin.HasSetting(Sh2)">Conditional</animation>
-					<animation effect="slide" end="482,0" time="0" condition="!Skin.HasSetting(Sh2) + Skin.HasSetting(showCast) + !Container.Content(seasons)">Conditional</animation>
+					<animation effect="slide" end="512,0" time="0" condition="!Skin.HasSetting(Sh2) + Skin.HasSetting(showCast) + !Container.Content(seasons)">Conditional</animation>
 					<left>330</left>
 					<top>354</top>
 					<control type="grouplist">
@@ -225,58 +322,6 @@
 					<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(back)]</texture>
 				</control>
 				<control type="group">
-					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59631).NumItems,6)]</visible>
-					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
-					<top>-10</top>
-					<control type="image">
-						<left>1060</left>
-						<top>75</top>
-						<width>920</width>
-						<height>525</height>
-						<visible>String.IsEmpty(ListItem.Art(fanart1))</visible>
-						<aspectratio aligny="top">scale</aspectratio>
-						<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
-					</control>
-					<control type="multiimage">
-						<left>1060</left>
-						<top>75</top>
-						<width>920</width>
-						<height>525</height>
-						<aspectratio aligny="top">scale</aspectratio>
-						<fadetime>500</fadetime>
-						<visible>!String.IsEmpty(ListItem.Art(fanart1))</visible>
-						<imagepath diffuse="tajo/mask_cover3.png" background="true">$INFO[Control.GetLabel(4410)]</imagepath>
-					</control>
-					<control type="image">
-						<visible>[Skin.HasSetting(Sh2) + Skin.HasSetting(showCast)]</visible>
-						<left>1060</left>
-						<top>75</top>
-						<width>920</width>
-						<height>525</height>
-						<texture background="true">tajo/osd_black_bg2.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<visible>[!String.IsEmpty(ListItem.Art(clearlogo)) + !String.IsEmpty(ListItem.Art(clearart))] | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-						<left>1060</left>
-						<top>75</top>
-						<width>920</width>
-						<height>525</height>
-						<texture background="true">tajo/osd_black_bg.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<animation effect="rotate" center="auto" start="180" end="180" time="0" condition="true">Conditional</animation>
-						<visible>!String.IsEmpty(ListItem.Art(characterart)) + !Container.Content(tvshows)</visible>
-						<left>1060</left>
-						<top>75</top>
-						<width>920</width>
-						<height>525</height>
-						<texture background="true">tajo/osd_black_bg2.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-				</control>
-				<control type="group">
 					<animation effect="fade" start="100" end="0" delay="300" time="500" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
 					<left>15</left>
 					<control type="textbox">
@@ -350,13 +395,6 @@
 					<fadetime>200</fadetime>
 					<aspectratio aligny="bottom" align="center">keep</aspectratio>
 					<texture background="true">$INFO[Container(5927).ListItem.Label]</texture>
-				</control>
-				<control type="videowindow" id="2449">
-					<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
-					<left>1060</left>
-					<top>25</top>
-					<width>965</width>
-					<height>550</height>
 				</control>
 				<control type="image">
 					<animation effect="slide" end="25,0" time="0" condition="Skin.HasSetting(Sh3D)">Conditional</animation>
@@ -927,7 +965,7 @@
 				<control type="group">
 					<animation effect="slide" end="0,65" time="0" condition="Container.Content(tvshows)">Conditional</animation>
 					<top>-30</top>
-					<left>465</left>
+					<left>495</left>
 					<control type="image">
 						<visible>System.IdleTime(4)</visible>
 						<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
@@ -1004,7 +1042,7 @@
 				<control type="group">
 					<animation effect="slide" end="0,65" time="0" condition="Container.Content(tvshows)">Conditional</animation>
 					<top>148</top>
-					<left>465</left>
+					<left>495</left>
 					<control type="textbox">
 						<visible>System.IdleTime(4)</visible>
 						<animation effect="fade" start="0" end="100" time="1000">Visible</animation>

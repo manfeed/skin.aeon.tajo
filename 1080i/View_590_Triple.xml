@@ -11,7 +11,7 @@
 				<top>-100</top>
 				<width>2200</width>
 				<height>1300</height>
-				<animation effect="fade" end="55" condition="true">Conditional</animation>
+				<animation effect="fade" end="65" condition="true">Conditional</animation>
 				<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
 				<aspectratio align="center">stretch</aspectratio>
 				<colordiffuse>black</colordiffuse>
@@ -51,8 +51,7 @@
 					<onleft condition="!Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]">5919</onleft>
 					<onleft>80</onleft>
 					<onright condition="Container.Content(tvshows) + Control.IsVisible(5903)">5903</onright>
-					<onright condition="Container.Content(movies) | Container.Content(sets)">SetProperty(MediaMenu,True,home)</onright>
-					<onright condition="Container.Content(movies) | Container.Content(sets)">SetFocus(9050)</onright>
+					<onright condition="Container.Content(movies) | Container.Content(sets)">590</onright>
 					<onup>590</onup>
 					<ondown>590</ondown>
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)</visible>
@@ -918,8 +917,7 @@
 					<top>60</top>
 					<left>989</left>
 					<preloaditems>2</preloaditems>
-					<onright>SetProperty(MediaMenu,True,home)</onright>
-					<onright>SetFocus(9050)</onright>
+					<onright>5904</onright>
 					<onleft>5903</onleft>
 					<onup>5904</onup>
 					<ondown>5904</ondown>
@@ -1448,7 +1446,8 @@
 				<left>-8</left>
 				<top>65</top>
 				<height>970</height>
-				<onleft>590</onleft>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>SetFocus(9050)</onleft>
 				<onright>590</onright>
 				<visible allowhiddenfocus="true">Control.IsVisible(590) + Control.HasFocus(80)</visible>
 			</control>
