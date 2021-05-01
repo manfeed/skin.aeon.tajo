@@ -265,7 +265,7 @@
 								<height>220</height>
 								<colordiffuse>ddFFFFFF</colordiffuse>
 								<aspectratio aligny="center">keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+								<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 							</control>
 							<control type="image">
 								<visible>Container.Content(artists) + !String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Art(clearart)) + !Integer.IsGreater(Container(5982).NumItems,5)</visible>
@@ -294,7 +294,7 @@
 								<height>240</height>
 								<colordiffuse>DDFFFFFF</colordiffuse>
 								<aspectratio aligny="center">keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Art(artist.clearart)]</texture>
+								<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(artist.clearart)]</texture>
 							</control>
 							<control type="image">
 								<visible>Container.Content(albums) + !String.StartsWith(ListItem.Label,*) + String.IsEmpty(ListItem.Art(artist.clearart))</visible>

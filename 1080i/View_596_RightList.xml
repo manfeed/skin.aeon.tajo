@@ -2790,7 +2790,7 @@
 					<height>200</height>
 					<colordiffuse>cdffffff</colordiffuse>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(artist.clearart)]</texture>
+					<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(artist.clearart)]</texture>
 				</control>
 				<control type="image">
 					<visible>Control.IsVisible(596) + [Container.Content(albums) | Container.Content(songs)] + String.IsEmpty(ListItem.Art(artist.clearart))</visible>
@@ -2809,7 +2809,7 @@
 					<height>200</height>
 					<colordiffuse>cdffffff</colordiffuse>
 					<aspectratio align="left" aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+					<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 				</control>
 			</control>
 			<control type="scrollbar" id="80">

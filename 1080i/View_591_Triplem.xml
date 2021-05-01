@@ -481,7 +481,7 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>BBffffff</colordiffuse>
 						<aspectratio aligny="bottom" align="left">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+						<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 					</control>
 					<control type="group">
 						<left>85</left>

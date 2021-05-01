@@ -969,7 +969,7 @@
 					<width>304</width>
 					<height>170</height>
 					<colordiffuse>ccffffff</colordiffuse>
-					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+					<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="group">

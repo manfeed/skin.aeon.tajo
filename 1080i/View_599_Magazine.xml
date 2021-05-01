@@ -99,7 +99,7 @@
 						<height>220</height>
 						<colordiffuse>ddFFFFFF</colordiffuse>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+						<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 					</control>
 					<control type="image">
 						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
