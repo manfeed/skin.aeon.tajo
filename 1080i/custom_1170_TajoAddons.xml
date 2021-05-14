@@ -165,7 +165,7 @@
 				</control>
 				<control type="grouplist" id="9002">
 					<left>487</left>
-					<top>36</top>
+					<top>-43</top>
 					<width>1401</width>
 					<height>810</height>
 					<pagecontrol>60</pagecontrol>
@@ -297,6 +297,19 @@
 						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
 						<onclick>InstallAddon(plugin.video.youtube)</onclick>
 						<visible>!System.HasAddon(plugin.video.youtube)</visible>
+					</control>
+					<control type="button" id="302">
+						<include>SettingsButtonCommonValues</include>
+						<label>$INFO[System.AddonTitle(plugin.program.autocompletion)]</label>
+						<label2>$INFO[System.AddonVersion(plugin.program.autocompletion),v, [COLOR themecolor]$LOCALIZE[31331][/COLOR]]</label2>
+						<visible>System.HasAddon(plugin.program.autocompletion)</visible>
+					</control>
+					<control type="button" id="303">
+						<include>SettingsButtonCommonValues</include>
+						<label>plugin.program.autocompletion</label>
+						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
+						<onclick>InstallAddon(plugin.program.autocompletion)</onclick>
+						<visible>!System.HasAddon(plugin.program.autocompletion)</visible>
 					</control>
 				</control>
 			</control>
