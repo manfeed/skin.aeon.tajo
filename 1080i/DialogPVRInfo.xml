@@ -160,14 +160,6 @@
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<bordersize>1</bordersize>
 						</control>
-						<control type="progress">
-							<width>310</width>
-							<height>11</height>
-							<info>ListItem.Progress</info>
-							<texturebg colordiffuse="FFa1a1a1" border="3">new_pvr/texturebg_border_white.png</texturebg>
-							<midtexture colordiffuse="blue" border="3">new_pvr/texturebg_white.png</midtexture>
-							<visible>ListItem.HasEpg</visible>
-						</control>
 						<control type="button" id="5">
 							<description>Switch to Channel</description>
 							<width>310</width>
