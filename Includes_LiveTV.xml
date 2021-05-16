@@ -226,7 +226,7 @@
 				<label>$INFO[VideoPlayer.NextEndTime]</label>
 				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
-			<!--<control type="progress" id="1">
+			<control type="progress" id="1">
 				<left>382</left>
 				<top>944</top>
 				<width>1170</width>
@@ -235,7 +235,7 @@
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<midtexture border="0" colordiffuse="themecolor">new_pvr/texturebg_white.png</midtexture>
 				<texturebg border="3,0,3,0" colordiffuse="red">new_pvr/texturebg_white.png</texturebg>
-			</control>-->
+			</control>
 		</control>
 		<!-- Bottom right Info (Stream status, SNR & Signal, Time-shift) -->
 		<control type="group" id="1">
