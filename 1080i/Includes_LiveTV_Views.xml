@@ -509,6 +509,14 @@
 							<visible>ListItem.IsRecording</visible>
 						</control>
 					</control>
+					<control type="image">
+						<left>2</left>
+						<top>2</top>
+						<width>8</width>
+						<height>9</height>
+						<texture>blue.jpg</texture>
+						<visible>ListItem.IsPlayable</visible>
+					</control>
 					<control type="label" id="1">
 						<width>120</width>
 						<height>55</height>
@@ -548,6 +556,14 @@
 							<label></label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
+					</control>
+					<control type="image">
+						<left>2</left>
+						<top>2</top>
+						<width>8</width>
+						<height>9</height>
+						<texture>blue.jpg</texture>
+						<visible>ListItem.IsPlayable</visible>
 					</control>
 					<control type="label" id="1">
 						<width>120</width>
