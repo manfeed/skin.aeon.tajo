@@ -141,7 +141,7 @@
 		</control>
 		<!-- Middle Info (Start\End times, Current\Next EPG, Progress-bar, Recording) -->
 		<control type="group" id="1">
-		    <top>-5</top>
+			<top>-5</top>
 			<visible>VideoPlayer.HasEpg</visible>
 			<control type="label" id="1">
 				<left>380</left>
@@ -255,9 +255,9 @@
 					<visible>Player.SeekEnabled</visible>
 				</control>
 				<control type="progress">
-					<left>380</left>
+					<left>379</left>
 					<top>44.5</top>
-					<width>1169</width>
+					<width>1168.4</width>
 					<height>11</height>
 					<info>PVR.TimeshiftProgressEpgEnd</info>
 					<info2>PVR.TimeshiftProgressPlayPos</info2>
@@ -269,26 +269,26 @@
 					<righttexture/>
 				</control>
 				<control type="progress">
-					<left>380</left>
+					<left>379</left>
 					<top>44.5</top>
-					<width>1168</width>
+					<width>1168.4</width>
 					<height>11</height>
 					<info>PVR.TimeshiftProgressPlayPos</info>
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
 					<texturebg border="-1" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture border="-1" colordiffuse="661B00FF">colors/white.png</midtexture>
 				</control>
-				<control type="slider">
-					<left>380</left>
-					<top>42.5</top>
+				<control type="slider" id="403">
+					<left>379</left>
+					<top>40</top>
 					<width>1170</width>
-					<height>16</height>
+					<height>22</height>
 					<visible>true</visible>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-					<textureslidernib colordiffuse="FF1B00FF">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernib colordiffuse="CF1B00FF">osd/progress/nub_bar.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="FF13bfbf">colors/white.png</textureslidernibfocus>
 					<info>PVR.TimeShiftSeekbar</info>
-					<visible>VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
+					<visible>VideoPlayer.Content(LiveTV) + [Player.SeekEnabled | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
 				</control>
 				<control type="label">
 					<top>55</top>
@@ -907,17 +907,17 @@
 					<texturebg border="-1" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture border="-1" colordiffuse="661B00FF">colors/white.png</midtexture>
 				</control>
-				<control type="slider">
+				<control type="slider" id="403">
 					<left>380</left>
-					<top>42.5</top>
+					<top>39</top>
 					<width>1225</width>
-					<height>16</height>
+					<height>22</height>
 					<visible>true</visible>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
 					<textureslidernib colordiffuse="FF1B00FF">osd/progress/nub_bar.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="FF13bfbf">colors/white.png</textureslidernibfocus>
 					<info>PVR.TimeShiftSeekbar</info>
-					<visible>VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
+					<visible>VideoPlayer.Content(LiveTV) + [Player.SeekEnabled | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
 				</control>
 				<control type="label">
 					<top>55</top>
