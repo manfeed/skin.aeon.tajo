@@ -3,7 +3,7 @@
 	<include name="FullScreenInfoBarLiveTV">
 		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-		<!-- Main background -->
+		<!-- Main background  -->
 		<control type="group">
 			<top>778</top>
 			<left>17</left>
@@ -28,12 +28,12 @@
 				<texture border="0" colordiffuse="white">new_pvr/osd_line_white.png</texture>
 			</control>
 		</control>
-		<!-- Channel logo -->
+		<!-- Channel logo  -->
 		<control type="group" id="1">
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 			<control type="image">
-				<!-- Logo background -->
+				<!-- Logo background  -->
 				<left>80</left>
 				<top>815</top>
 				<width>250</width>
@@ -141,6 +141,7 @@
 		</control>
 		<!-- Middle Info (Start\End times, Current\Next EPG, Progress-bar, Recording) -->
 		<control type="group" id="1">
+			<top>-5</top>
 			<visible>VideoPlayer.HasEpg</visible>
 			<control type="label" id="1">
 				<left>380</left>
@@ -203,6 +204,7 @@
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.NextStartTime]</label>
 				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
+				<animation effect="slide" start="0,0" end="0,14" time="30" condition="!Player.ChannelPreviewActive + Pvr.IsTimeShift">Conditional</animation>
 			</control>
 			<control type="label" id="1">
 				<left>520</left>
@@ -214,6 +216,7 @@
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.NextTitle]</label>
 				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
+				<animation effect="slide" start="0,0" end="0,14" time="30" condition="!Player.ChannelPreviewActive + Pvr.IsTimeShift">Conditional</animation>
 			</control>
 			<control type="label" id="1">
 				<left>1300</left>
@@ -225,16 +228,78 @@
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.NextEndTime]</label>
 				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
+				<animation effect="slide" start="0,0" end="0,14" time="30" condition="!Player.ChannelPreviewActive + Pvr.IsTimeShift">Conditional</animation>
 			</control>
-			<control type="progress" id="1">
-				<left>382</left>
-				<top>944</top>
-				<width>1170</width>
-				<height>12</height>
-				<info>Player.Progress</info>
-				<colordiffuse>88FFFFFF</colordiffuse>
-				<midtexture border="0" colordiffuse="themecolor">new_pvr/texturebg_white.png</midtexture>
-				<texturebg border="3,0,3,0" colordiffuse="red">new_pvr/texturebg_white.png</texturebg>
+			<control type="group">
+				<top>900</top>
+				<left>5</left>
+				<height>2</height>
+				<control type="ranges">
+					<left>378</left>
+					<top>39.5</top>
+					<width>1170</width>
+					<height>22</height>
+					<texturebg border="3" colordiffuse="FF6A6A6A">colors/white50.png</texturebg>
+					<righttexture border="3" colordiffuse="E60096FE">colors/white.png</righttexture>
+					<info>Player.Chapters</info>
+				</control>
+				<control type="progress">
+					<left>379</left>
+					<top>39.5</top>
+					<width>1170</width>
+					<height>22</height>
+					<info2>PVR.TimeshiftProgressBufferStart</info2>
+					<info>PVR.TimeshiftProgressBufferEnd</info>
+					<texturebg border="3" colordiffuse="60FFFFFF">colors/white.png</texturebg>
+					<midtexture border="3" colordiffuse="99FFA200">colors/white.png</midtexture>
+					<visible>Player.SeekEnabled</visible>
+				</control>
+				<control type="progress">
+					<left>379</left>
+					<top>44.5</top>
+					<width>1168.4</width>
+					<height>11</height>
+					<info>PVR.TimeshiftProgressEpgEnd</info>
+					<info2>PVR.TimeshiftProgressPlayPos</info2>
+					<texturebg border="0" colordiffuse="FF0110FA">colors/white50.png</texturebg>
+					<lefttexture>colors/white50.png</lefttexture>
+					<midtexture/>
+					<texturebg/>
+					<lefttexture/>
+					<righttexture/>
+				</control>
+				<control type="progress">
+					<left>379</left>
+					<top>44.5</top>
+					<width>1168.4</width>
+					<height>11</height>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+					<info2>PVR.TimeshiftProgressEpgStart</info2>
+					<texturebg border="-1" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
+					<midtexture border="-1" colordiffuse="661B00FF">colors/white.png</midtexture>
+				</control>
+				<control type="slider" id="403">
+					<left>379</left>
+					<top>40</top>
+					<width>1170</width>
+					<height>22</height>
+					<visible>true</visible>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
+					<textureslidernib colordiffuse="CF1B00FF">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="FF13bfbf">colors/white.png</textureslidernibfocus>
+					<info>PVR.TimeShiftSeekbar</info>
+					<visible>VideoPlayer.Content(LiveTV) + [Player.SeekEnabled | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="label">
+					<top>55</top>
+					<left>370</left>
+					<width>1170</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<textcolor>themecolor</textcolor>
+					<label>$INFO[PVR.TimeshiftCur, [B]Timeshift:[/B] [COLOR grey], [/COLOR]][B] $INFO[PVR.TimeshiftOffset, [COLOR grey](-,)[/COLOR]]$INFO[VideoPlayer.NextTitle,  [B]Next:[/B] [COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextStartTime, [COLOR grey](,]$INFO[VideoPlayer.NextEndTime, - ,)[/COLOR]]</label>
+					<visible>!Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
+				</control>
 			</control>
 		</control>
 		<!-- Bottom right Info (Stream status, SNR & Signal, Time-shift) -->
@@ -756,23 +821,24 @@
 					<height>38</height>
 					<font>font16</font>
 					<scroll>true</scroll>
-					<label>[B]$INFO[VideoPlayer.Title][/B]</label>
+					<label>[B]$INFO[VideoPlayer.][/B]</label>
 					<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 				</control>
 			</control>
 			<control type="label" id="1">
 				<left>380</left>
-				<top>70</top>
+				<top>75</top>
 				<width>150</width>
 				<height>38</height>
 				<font>font16</font>
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.NextStartTime]</label>
 				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
+				<animation effect="slide" start="0,0" end="0,17" time="30" condition="!Player.ChannelPreviewActive + Pvr.IsTimeShift">Conditional</animation>
 			</control>
 			<control type="label" id="1">
 				<left>535</left>
-				<top>70</top>
+				<top>75</top>
 				<width>880</width>
 				<height>38</height>
 				<font>font16</font>
@@ -780,10 +846,11 @@
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.NextTitle]</label>
 				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
+				<animation effect="slide" start="0,0" end="0,17" time="30" condition="!Player.ChannelPreviewActive + Pvr.IsTimeShift">Conditional</animation>
 			</control>
 			<control type="label" id="1">
 				<left>1450</left>
-				<top>70</top>
+				<top>75</top>
 				<width>150</width>
 				<height>38</height>
 				<font>font16</font>
@@ -791,6 +858,7 @@
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.NextEndTime]</label>
 				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
+				<animation effect="slide" start="0,0" end="0,17" time="30" condition="!Player.ChannelPreviewActive + Pvr.IsTimeShift">Conditional</animation>
 			</control>
 			<control type="group">
 				<top>7</top>
@@ -839,17 +907,28 @@
 					<texturebg border="-1" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 					<midtexture border="-1" colordiffuse="661B00FF">colors/white.png</midtexture>
 				</control>
-				<control type="slider">
+				<control type="slider" id="403">
 					<left>380</left>
-					<top>42.5</top>
+					<top>39</top>
 					<width>1225</width>
-					<height>16</height>
+					<height>22</height>
 					<visible>true</visible>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
 					<textureslidernib colordiffuse="FF1B00FF">osd/progress/nub_bar.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="FF13bfbf">colors/white.png</textureslidernibfocus>
 					<info>PVR.TimeShiftSeekbar</info>
-					<visible>VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
+					<visible>VideoPlayer.Content(LiveTV) + [Player.SeekEnabled | Player.DisplayAfterSeek] + !Player.ChannelPreviewActive</visible>
+				</control>
+				<control type="label">
+					<top>55</top>
+					<left>400</left>
+					<width>1215</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>center</align>
+					<textcolor>themecolor</textcolor>
+					<label>$INFO[PVR.TimeshiftCur, [B]Timeshift:[/B] [COLOR grey], [/COLOR]][B] $INFO[PVR.TimeshiftOffset, [COLOR grey](-,)[/COLOR]]$INFO[VideoPlayer.NextTitle,  [B]Next:[/B] [COLOR grey],[/COLOR]]$INFO[VideoPlayer.NextStartTime, [COLOR grey](,]$INFO[VideoPlayer.NextEndTime, - ,)[/COLOR]]</label>
+					<visible>!Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
 				</control>
 			</control>
 		</control>
