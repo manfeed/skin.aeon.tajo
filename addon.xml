@@ -11,6 +11,25 @@
 		<res aspect="16:9" default="true" folder="1080i" height="1080" width="1920"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum/>
+		<website>https://github.com/manfeed/skin.aeon.tajo</website>
+		<email/>
+		<source>https://github.com/manfeed/skin.aeon.tajo</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshot-08.jpg</screenshot>
+		</assets>
+		<news>Updated for Kodi v19 Matrix</news>
 		<summary lang="en_AU">Aeon Tajo</summary>
 		<summary lang="en_GB">Aeon Tajo</summary>
 		<summary lang="en_NZ">Aeon Tajo</summary>
@@ -41,24 +60,5 @@
 		<disclaimer lang="pt_BR">Compatível com controle por mouse, apesar de não ser recomendado. Pode não funcionar corretamente em todos os casos.</disclaimer>
 		<disclaimer lang="ru_RU">Поддерживается управление мышью, хотя и не рекомендуется. Это может работать некорректно во всех случаях.</disclaimer>
 		<disclaimer lang="sk_SK">Ovládanie myšou je podporované, aj keď sa neodporúča. Nemusí fungovať správne vo všetkých prípadoch.</disclaimer>
-		<platform>all</platform>
-		<license>CC BY-NC-SA 4.0</license>
-		<forum/>
-		<website>https://github.com/manfeed/skin.aeon.tajo</website>
-		<email/>
-		<source>https://github.com/manfeed/skin.aeon.tajo</source>
-		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
-		</assets>
-		<news>Updated for Kodi v19 Matrix</news>
 	</extension>
 </addon>

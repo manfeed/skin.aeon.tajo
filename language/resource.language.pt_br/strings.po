@@ -17,6 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
+msgctxt "Addon Summary"
+msgid "Aeon Tajo"
+msgstr "Aeon Tajo"
+
+msgctxt "Addon Description"
+msgid "Aeon Tajo: Changes everything so that nothing changes. Inspired on Aeon Nox 5 (thanks to BigNoid)."
+msgstr "Aeon Tajo: muda tudo, para que nada mude. Inspirado em Aeon Nox 5 (obrigado BigNoid)."
+
+msgctxt "Addon Disclaimer"
+msgid "Mouse control is supported, althoug not recommended. It may not work correctly in all cases."
+msgstr "Compatível com controle por mouse, apesar de não ser recomendado. Pode não funcionar corretamente em todos os casos."
+
 msgctxt "#31000"
 msgid "Directed by"
 msgstr "Dirigido por"
