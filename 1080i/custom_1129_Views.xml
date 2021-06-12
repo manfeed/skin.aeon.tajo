@@ -115,7 +115,6 @@
 					<onclick>Container.SetViewMode(584)</onclick>
 					<visible>Window.IsActive(music)</visible>
 					<visible>Container.Content(albums) | Container.Content(artists)</visible>
-					<visible>!Container.Content(musicvideos) + !String.StartsWith(container.folderpath,library://video/musicvideos/) + !String.StartsWith(container.folderpath,videodb://musicvideos)</visible>
 				</item>
 				<item>
 					<label>Magazine</label>
