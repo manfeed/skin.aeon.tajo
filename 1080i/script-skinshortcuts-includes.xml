@@ -995,6 +995,22 @@
 			<property name="group">x13</property>
 			<property name="isSubmenu">True</property>
 		</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">15</property>
+			<label>$ADDON[script.skinshortcuts 32108]</label>
+			<label2>Elemento de menú común</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<thumb />
+			<property name="labelID">32108</property>
+			<property name="defaultID">32108</property>
+			<onclick>PlayerControl(PartyMode(Video))</onclick>
+			<property name="path">PlayerControl(PartyMode(Video))</property>
+			<property name="list">PlayerControl(PartyMode(Video))</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x202)</visible>
+			<property name="group">x202</property>
+			<property name="isSubmenu">True</property>
+		</item>
 	</include>
 	<include name="skinshortcuts-group-x1">
 		<item id="1">
@@ -3047,10 +3063,40 @@
 		<description>No items</description>
 	</include>
 	<include name="skinshortcuts-group-x202">
-		<description>No items</description>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">15</property>
+			<label>$ADDON[script.skinshortcuts 32108]</label>
+			<label2>Elemento de menú común</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<thumb />
+			<property name="labelID">32108</property>
+			<property name="defaultID">32108</property>
+			<onclick>PlayerControl(PartyMode(Video))</onclick>
+			<property name="path">PlayerControl(PartyMode(Video))</property>
+			<property name="list">PlayerControl(PartyMode(Video))</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x202</property>
+			<property name="isSubmenu">True</property>
+		</item>
 	</include>
 	<include name="skinshortcuts-group-alt-x202">
-		<description>No items</description>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">15</property>
+			<label>$ADDON[script.skinshortcuts 32108]</label>
+			<label2>Elemento de menú común</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<thumb />
+			<property name="labelID">32108</property>
+			<property name="defaultID">32108</property>
+			<onclick>PlayerControl(PartyMode(Video))</onclick>
+			<property name="path">PlayerControl(PartyMode(Video))</property>
+			<property name="list">PlayerControl(PartyMode(Video))</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x202)</visible>
+			<property name="group">x202</property>
+			<property name="isSubmenu">True</property>
+		</item>
 	</include>
 	<include name="skinshortcuts-group-x303">
 		<description>No items</description>
