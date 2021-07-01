@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-18 21:29+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2021-07-01 10:29+0000\n"
+"Last-Translator: Lao Vansai <eduardpriutesa@gmail.com>\n"
 "Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/ru_ru/>\n"
 "Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7\n"
+"X-Generator: Weblate 4.7.1\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
-msgstr ""
+msgstr "Aeon Tajo"
 
 msgctxt "Addon Description"
 msgid "Aeon Tajo: Changes everything so that nothing changes. Inspired on Aeon Nox 5 (thanks to BigNoid)."
@@ -51,7 +51,7 @@ msgstr "Подождите"
 
 msgctxt "#31005"
 msgid "Fixed"
-msgstr "Зафиксированный"
+msgstr "Фиксированный"
 
 msgctxt "#31006"
 msgid "View Options"
@@ -125,15 +125,13 @@ msgctxt "#31023"
 msgid "Set single image background"
 msgstr "Одна фоновая картинка"
 
-#, fuzzy
 msgctxt "#31024"
 msgid "Page"
 msgstr "Страница"
 
-#, fuzzy
 msgctxt "#31025"
 msgid "Items"
-msgstr "объекты"
+msgstr "Объекты"
 
 msgctxt "#31026"
 msgid "Misc Options"
@@ -554,7 +552,7 @@ msgstr "Использование экранного меню канала в �
 
 msgctxt "#31131"
 msgid "EPG Timeline View"
-msgstr ""
+msgstr "Просмотр временной шкалы EPG"
 
 msgctxt "#31132"
 msgid "Tuner:"
