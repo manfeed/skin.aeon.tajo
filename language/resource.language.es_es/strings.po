@@ -1449,3 +1449,7 @@ msgstr "Volver a la carpeta predefinida"
 msgctxt "#32014"
 msgid "Play melodies while in Home Screen"
 msgstr "Reproducir melodias en el menú principal"
+
+msgctxt "#32015"
+msgid "Show only background"
+msgstr "Mostrar solo imagen de fondo"
