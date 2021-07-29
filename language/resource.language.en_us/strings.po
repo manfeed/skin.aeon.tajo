@@ -1449,6 +1449,10 @@ msgctxt "#32014"
 msgid "Play melodies while in Home Screen"
 msgstr ""
 
+msgctxt "#32015"
+msgid "Show only background"
+msgstr ""
+
 #~ msgctxt "#31180"
 #~ msgid "Play local theme.mp3 when browsing Movies and Tvshows"
 #~ msgstr "Play local theme.mp3 when browsing Movies and Tvshows"

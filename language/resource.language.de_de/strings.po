@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-18 21:29+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2021-07-27 11:29+0000\n"
+"Last-Translator: beatmasterRS <danysahne333@yahoo.de>\n"
 "Language-Team: German <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/de_de/>\n"
 "Language: de_de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7\n"
+"X-Generator: Weblate 4.7.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -23,7 +23,7 @@ msgstr ""
 
 msgctxt "Addon Description"
 msgid "Aeon Tajo: Changes everything so that nothing changes. Inspired on Aeon Nox 5 (thanks to BigNoid)."
-msgstr ""
+msgstr "Aeon Tajo: Ändert alles, so dass sich nichts ändert. Inspiriert von Aeon Nox 5 (Danke an BigNoid)."
 
 msgctxt "Addon Disclaimer"
 msgid "Mouse control is supported, althoug not recommended. It may not work correctly in all cases."
@@ -55,7 +55,7 @@ msgstr "Korrigiert"
 
 msgctxt "#31006"
 msgid "View Options"
-msgstr "Optionen anzeigen"
+msgstr "Ansicht Optionen"
 
 msgctxt "#31007"
 msgid "Setup home"
@@ -91,7 +91,7 @@ msgstr "Extras"
 
 msgctxt "#31015"
 msgid "Set path to video genre fanart folder"
-msgstr "Setze Pfad für Video Genre Fanart"
+msgstr "Pfad zum Video-Genre Fanart-Ordner festlegen"
 
 msgctxt "#31016"
 msgid "Poster"
@@ -99,7 +99,7 @@ msgstr "Poster"
 
 msgctxt "#31017"
 msgid "Set path to music genre fanart folder"
-msgstr "Setze Pfad für Musik Genre Fanart"
+msgstr "Pfad zum Musik-Genre Fanart-Ordner festlegen"
 
 msgctxt "#31018"
 msgid "InfoPanel"
@@ -827,7 +827,7 @@ msgstr "Übersicht"
 
 msgctxt "#31301"
 msgid "Last Updated"
-msgstr "Zuletzt aktualisiert"
+msgstr "Letzte Aktualisierung"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -1458,6 +1458,10 @@ msgstr ""
 
 msgctxt "#32014"
 msgid "Play melodies while in Home Screen"
+msgstr ""
+
+msgctxt "#32015"
+msgid "Show only background"
 msgstr ""
 
 #~ msgctxt "#31180"
