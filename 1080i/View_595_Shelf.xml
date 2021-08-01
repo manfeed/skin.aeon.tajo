@@ -24,6 +24,15 @@
 					<colordiffuse>themecolor</colordiffuse>
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
 				</control>
+				<control type="image">
+					<left>-30</left>
+					<top>815</top>
+					<width>2040</width>
+					<height>350</height>
+					<texture background="true">tajo/osd_black_bg.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>themecolor</colordiffuse>
+				</control>
 				<control type="group">
 					<visible>!ListItem.IsCollection | [ListItem.IsCollection + !Integer.IsGreater(Container(59631).NumItems,6)]</visible>
 					<animation effect="fade" start="100" end="0" time="1000" reversible="false" condition="Skin.HasSetting(playTrailer) + !String.IsEmpty(ListItem.Trailer) + !VideoPlayer.IsFullscreen + Player.Playing + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(Player.Filenameandpath,theme.mp3)">Conditional</animation>
@@ -855,6 +864,7 @@
 				<colordiffuse>black</colordiffuse>
 			</control>
 			<include>IconsShelf</include>
+			<include>RatingsShelf</include>
 			<control type="textbox">
 				<visible>ListItem.IsCollection</visible>
 				<left>25</left>
@@ -1516,7 +1526,10 @@
 			</control>
 			<control type="group">
 				<animation type="Focus" reversible="false">
-					<effect type="zoom" delay="400" center="-10,372" start="100" end="140" time="600" tween="cubic" easing="out"/>
+					<effect type="zoom" delay="400" center="-10,400" start="100" end="140" time="600" tween="cubic" easing="out"/>
+				</animation>
+				<animation type="Conditional" reversible="false" condition="Control.HasFocus(86) | Control.HasFocus(5929)">
+					<effect type="zoom" center="-10,400" end="140" time="0"/>
 				</animation>
 				<animation effect="zoom" end="100,105" center="auto" time="0" condition="true">Conditional</animation>
 				<visible>!Skin.HasSetting(Sh3D)</visible>

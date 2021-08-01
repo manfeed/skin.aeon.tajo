@@ -69,6 +69,28 @@
 		<value condition="!Skin.HasSetting(Li3D)">$LOCALIZE[31995]</value>
 		<value>$LOCALIZE[31997]</value>
 	</variable>
+	<variable name="Label_Oscars">
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),20 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">20</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),19 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">19</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),18 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">18</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),17 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">17</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),16 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">16</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),15 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">15</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),14 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">14</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),13 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">13</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),12 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">12</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),11 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">11</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),10 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">10</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),9 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">9</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),8 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">8</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),7 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">7</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),6 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">6</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),5 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">5</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),4 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">4</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),3 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">3</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),2 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">2</value>
+		<value condition="String.Contains(Window(Home).Property(TMDBHelper.ListItem.Awards),1 Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)">1</value>
+	</variable>
 	<variable name="GlobalBackgroundVar">
 		<value condition="Window.IsActive(music) + !Container.Content(artists) + [Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)]">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="!Window.IsActive(music) + !String.IsEmpty(ListItem.Art(fanart1)) + !Control.IsVisible(595) + !Control.IsVisible(590) + !Control.IsVisible(597) + !Control.IsVisible(594) + !Control.IsVisible(586) + !Control.IsVisible(589)">$INFO[Control.GetLabel(4410)]</value>

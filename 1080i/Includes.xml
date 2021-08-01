@@ -1886,14 +1886,368 @@
 		<colordiffuse>white</colordiffuse>
 		<fadetime>FanartCrossFadeTime</fadetime>
 	</include>
-	<include name="IconsShelf">
+	<include name="RatingsShelf">
 		<control type="group">
+			<animation effect="slide" end="0,20" time="0" condition="Skin.HasSetting(Sh2)">Conditional</animation>
+			<animation effect="slide" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
+			<!-- <animation effect="slide" end="697,0" condition="true">Conditional</animation> -->
+			<animation effect="slide" end="697,0" condition="Control.IsVisible(595)">Conditional</animation>
+			<animation effect="slide" end="340,-485" condition="Control.IsVisible(587)">Conditional</animation>
 			<visible>!ListItem.IsCollection</visible>
 			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
-			<left>-65</left>
-			<top>975</top>
+			<left>-87</left>
+			<top>972</top>
+			<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+			<!-- Rating -->
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<itemgap>7</itemgap>
+				<top>12</top>
+				<align>left</align>
+				<!-- Oscars -->
+				<control type="image">
+					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
+					<width>63</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/oscar.png</texture>
+					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+				</control>
+				<control type="label">
+					<width>80</width>
+					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$VAR[Label_Oscars,,]    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
+					<width>63</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/oscar.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstOscar)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<width>80</width>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstOscar)]    [/B][/COLOR]</label>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstOscar)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- Metacritic -->
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/metacritic.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating))</visible>
+				</control>
+				<control type="label">
+					<width>88</width>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)]%   [/B][/COLOR]</label>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating))</visible>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/metacritic.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)) + !String.IsEmpty(Window(Home).Property(FirstMetacritic)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<width>88</width>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstMetacritic)]%   [/B][/COLOR]</label>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)) + !String.IsEmpty(Window(Home).Property(FirstMetacritic)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- Trakt -->
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/trakt.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
+				</control>
+				<control type="label">
+					<width>88</width>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)]    [/B][/COLOR]</label>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/trakt.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTrakt)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<width>88</width>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstTrakt)]    [/B][/COLOR]</label>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTrakt)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- TMDB -->
+				<control type="image">
+					<width>60</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/tmdb.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating))</visible>
+				</control>
+				<control type="label">
+					<width>88</width>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)]    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<width>60</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/tmdb.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<width>88</width>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstTMDB)]    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- Tomatos -->
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aspectratio>keep</aspectratio>
+					<aligny>center</aligny>
+					<texture>logos/rottentomatoes/rotten.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),0) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/rotten.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)) + !String.IsEmpty(Window(Home).Property(FirstRottenR)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(FirstRottenR),0) + !Integer.IsGreater(Window(home).Property(FirstRottenR),59)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/fresh.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/fresh.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)) + !String.IsEmpty(Window(Home).Property(FirstRottenR)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(FirstRottenR),59) + !Integer.IsGreater(Window(home).Property(FirstRottenR),74)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/certified.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/certified.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)) + !String.IsEmpty(Window(Home).Property(FirstRottenR)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(FirstRottenR),74)</visible>
+				</control>
+				<control type="label">
+					<width>118</width>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)]%    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<width>118</width>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)) + !String.IsEmpty(Window(Home).Property(FirstRottenR)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstRottenR)]%    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- tomatosaudience -->
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/popcornfresh.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/popcornfresh.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + !String.IsEmpty(Window(Home).Property(FirstRottenU)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<visible>Integer.IsGreater(Window(home).Property(FirstRottenU),59)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/popcornrotten.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+					<visible>!Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/rottentomatoes/popcornrotten.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + !String.IsEmpty(Window(Home).Property(FirstRottenU)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<visible>!Integer.IsGreater(Window(home).Property(FirstRottenU),59)</visible>
+				</control>
+				<control type="label">
+					<width>118</width>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<aspectratio>keep</aspectratio>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)]%    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<width>118</width>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + !String.IsEmpty(Window(Home).Property(FirstRottenU)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstRottenU)]%    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- IMDB -->
+				<control type="image">
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/imdb2.png</texture>
+					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,][/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/imdb2.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(First250),#,][/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="IconsShelf">
+		<control type="group">
+			<animation effect="slide" end="0,20" time="0" condition="Skin.HasSetting(Sh2)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
+			<visible>!ListItem.IsCollection</visible>
+			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<left>-70</left>
+			<top>970</top>
 			<!-- Estudio -->
 			<control type="image" id="3738">
+				<animation type="Conditional" condition="Skin.HasSetting(Sh2)">
+					<effect type="zoom" center="auto" start="85" end="85" time="0"/>
+				</animation>
 				<visible>!Container(595).OnScrollNext + !Container(595).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<include>FlagImage</include>
@@ -1901,31 +2255,31 @@
 			</control>
 			<!-- Mpaa -->
 			<control type="image">
-				<left>176</left>
+				<left>154</left>
 				<include>FlagImage</include>
 				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
-				<left>352</left>
+				<left>308</left>
 				<include>FlagImage</include>
 				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
 			</control>
 			<!-- Resolucao -->
 			<control type="image">
-				<left>522</left>
+				<left>456</left>
 				<include>FlagImage</include>
 				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 			</control>
 			<!-- Aspecto -->
 			<control type="image">
-				<left>692</left>
+				<left>604</left>
 				<include>FlagImage</include>
 				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
 			<!-- Rating -->
 			<control type="group">
-				<left>890</left>
+				<left>780</left>
 				<width>450</width>
 				<height>50</height>
 				<top>12</top>
@@ -1935,7 +2289,7 @@
 					<left>32</left>
 					<width>190</width>
 					<height>50</height>
-					<texture fallback="$VAR[styleratingstars,,0.png]">$VAR[styleratingstars]$INFO[ListItem.Rating,,.png]</texture>
+					<!-- <texture fallback="$VAR[styleratingstars,,0.png]">$VAR[styleratingstars]$INFO[ListItem.Rating,,.png]</texture> -->
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
 					<colordiffuse>$VAR[colorratingstars]</colordiffuse>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
@@ -1948,7 +2302,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font15_bold</font>
-					<label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
+					<!-- <label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label> -->
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -2290,6 +2644,7 @@
 		<control type="image">
 			<!-- Poster reflejo -->
 			<visible>[!ListItem.IsCollection + !Skin.HasSetting(extraposters)] | [!ListItem.IsCollection + Skin.HasSetting(extraposters) + String.IsEmpty(ListItem.Art(poster1))]</visible>
+			<animation effect="fade" end="70" condition="true">Conditional</animation>
 			<left>-93.5</left>
 			<top>506</top>
 			<width>249</width>
