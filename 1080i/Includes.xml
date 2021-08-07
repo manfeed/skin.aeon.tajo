@@ -1906,6 +1906,7 @@
 				<align>left</align>
 				<!-- Oscars -->
 				<control type="image">
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
 					<width>63</width>
 					<height>40</height>
@@ -1916,6 +1917,7 @@
 					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
 				</control>
 				<control type="label">
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<width>80</width>
 					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
 					<align>left</align>
@@ -1926,6 +1928,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
 					<width>63</width>
 					<height>40</height>
@@ -1936,6 +1939,7 @@
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstOscar)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<width>80</width>
 					<align>left</align>
 					<aligny>bottom</aligny>
@@ -1953,6 +1957,7 @@
 					<aligny>center</aligny>
 					<aspectratio>keep</aspectratio>
 					<texture>logos/metacritic.png</texture>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating))</visible>
 				</control>
 				<control type="label">
@@ -1961,6 +1966,7 @@
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
 					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)]%   [/B][/COLOR]</label>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating))</visible>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -1972,6 +1978,7 @@
 					<aligny>center</aligny>
 					<aspectratio>keep</aspectratio>
 					<texture>logos/metacritic.png</texture>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)) + !String.IsEmpty(Window(Home).Property(FirstMetacritic)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
@@ -1980,6 +1987,7 @@
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
 					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstMetacritic)]%   [/B][/COLOR]</label>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)) + !String.IsEmpty(Window(Home).Property(FirstMetacritic)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -2064,6 +2072,7 @@
 				</control>
 				<!-- Tomatos -->
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2074,6 +2083,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),0) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2084,6 +2094,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(FirstRottenR),0) + !Integer.IsGreater(Window(home).Property(FirstRottenR),59)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2094,6 +2105,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),59) + !Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2104,6 +2116,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(FirstRottenR),59) + !Integer.IsGreater(Window(home).Property(FirstRottenR),74)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2114,6 +2127,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating),74)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2124,6 +2138,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(FirstRottenR),74)</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>118</width>
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating))</visible>
 					<align>left</align>
@@ -2134,6 +2149,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>118</width>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)) + !String.IsEmpty(Window(Home).Property(FirstRottenR)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<align>left</align>
@@ -2145,6 +2161,7 @@
 				</control>
 				<!-- tomatosaudience -->
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<aspectratio>keep</aspectratio>
@@ -2153,6 +2170,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<aspectratio>keep</aspectratio>
@@ -2161,6 +2179,7 @@
 					<visible>Integer.IsGreater(Window(home).Property(FirstRottenU),59)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<aspectratio>keep</aspectratio>
@@ -2169,6 +2188,7 @@
 					<visible>!Integer.IsGreater(Window(home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter),59)</visible>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<aspectratio>keep</aspectratio>
@@ -2177,6 +2197,7 @@
 					<visible>!Integer.IsGreater(Window(home).Property(FirstRottenU),59)</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>118</width>
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter))</visible>
 					<align>left</align>
@@ -2188,6 +2209,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>118</width>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)) + !String.IsEmpty(Window(Home).Property(FirstRottenU)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<align>left</align>
@@ -2199,6 +2221,7 @@
 				</control>
 				<!-- IMDB -->
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2206,6 +2229,7 @@
 					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>auto</width>
 					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
 					<align>left</align>
@@ -2216,6 +2240,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2223,6 +2248,7 @@
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>auto</width>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<align>left</align>
@@ -2279,6 +2305,7 @@
 			</control>
 			<!-- Rating -->
 			<control type="group">
+				<visible>!Skin.HasSetting(OnlineRating)</visible>
 				<left>780</left>
 				<width>450</width>
 				<height>50</height>
@@ -2289,7 +2316,7 @@
 					<left>32</left>
 					<width>190</width>
 					<height>50</height>
-					<!-- <texture fallback="$VAR[styleratingstars,,0.png]">$VAR[styleratingstars]$INFO[ListItem.Rating,,.png]</texture> -->
+					<texture fallback="$VAR[styleratingstars,,0.png]">$VAR[styleratingstars]$INFO[ListItem.Rating,,.png]</texture>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
 					<colordiffuse>$VAR[colorratingstars]</colordiffuse>
 					<visible>!String.IsEqual(ListItem.Label,..)</visible>
@@ -2302,7 +2329,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font15_bold</font>
-					<!-- <label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label> -->
+					<label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -2349,6 +2376,7 @@
 			</control>
 			<!-- Rating -->
 			<control type="group">
+				<visible>!Skin.HasSetting(OnlineRating)</visible>
 				<left>815</left>
 				<width>450</width>
 				<height>50</height>
@@ -2506,6 +2534,7 @@
 			</control>
 			<control type="group">
 				<visible>!ListItem.IsCollection</visible>
+				<visible>!Skin.HasSetting(OnlineRating)</visible>
 				<left>784</left>
 				<top>15</top>
 				<width>450</width>

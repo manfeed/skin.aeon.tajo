@@ -347,7 +347,7 @@
 					<control type="label">
 						<visible>!ListItem.IsCollection</visible>
 						<left>518</left>
-						<top>840</top>
+						<top>795</top>
 						<width>530</width>
 						<height>30</height>
 						<align>center</align>
@@ -361,7 +361,7 @@
 					<control type="group">
 						<visible>!ListItem.IsCollection</visible>
 						<left>524</left>
-						<top>840</top>
+						<top>820</top>
 						<control type="grouplist">
 							<left>10</left>
 							<top>50</top>
@@ -428,7 +428,7 @@
 					<control type="group">
 						<visible>!ListItem.IsCollection</visible>
 						<left>790</left>
-						<top>840</top>
+						<top>820</top>
 						<control type="grouplist">
 							<left>10</left>
 							<top>50</top>
@@ -494,10 +494,11 @@
 					</control>
 					<control type="group">
 						<visible>!ListItem.IsCollection</visible>
+						<visible>!Skin.HasSetting(OnlineRating)</visible>
 						<left>700</left>
 						<width>450</width>
 						<height>50</height>
-						<top>995</top>
+						<top>1000</top>
 						<control type="image">
 							<animation effect="fade" end="90" condition="true">Conditional</animation>
 							<top>2</top>
@@ -751,10 +752,14 @@
 						</control>
 						<control type="group">
 							<visible>!ListItem.IsCollection</visible>
+							<animation effect="zoom" end="85" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
+							<animation effect="slide" end="-580,-15" time="0" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
 							<left>1075</left>
 							<top>1000</top>
 							<!-- Estudio -->
 							<control type="image" id="3838">
+								<animation effect="zoom" end="130" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
+								<animation effect="slide" end="0,15" time="0" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
 								<visible>!Container(590).OnScrollNext + !Container(590).OnScrollPrevious</visible>
 								<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 								<include>FlagImage</include>
@@ -784,6 +789,12 @@
 								<include>FlagImage</include>
 								<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 							</control>
+						</control>
+						<control type="group">
+							<visible>Skin.HasSetting(OnlineRating)</visible>
+							<top>40</top>
+							<left>780</left>
+							<include>RatingsShelf</include>
 						</control>
 					</control>
 				</control>
@@ -1245,6 +1256,7 @@
 						<width>450</width>
 						<height>50</height>
 						<control type="label">
+							<visible>!Skin.HasSetting(OnlineRating)</visible>
 							<top>-10</top>
 							<width>70</width>
 							<visible>!String.IsEmpty(ListItem.Rating)</visible>
@@ -1255,6 +1267,7 @@
 							<textcolor>FFFFFAF0</textcolor>
 						</control>
 						<control type="image">
+							<visible>!Skin.HasSetting(OnlineRating)</visible>
 							<top>-8</top>
 							<left>53</left>
 							<width>175</width>
@@ -1263,6 +1276,96 @@
 							<aspectratio align="left" aligny="center">stretch</aspectratio>
 							<colordiffuse>$VAR[colorratingstars]</colordiffuse>
 							<visible>!String.IsEqual(ListItem.Label,..)</visible>
+						</control>
+						<control type="group">
+							<top>-2</top>
+							<left>56</left>
+							<!-- TMDB -->
+							<control type="image">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>-48</left>
+								<width>60</width>
+								<height>45</height>
+								<aspectratio>keep</aspectratio>
+								<texture>logos/tmdb.png</texture>
+								<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
+							</control>
+							<control type="label">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>12</left>
+								<width>70</width>
+								<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
+								<align>left</align>
+								<aligny>bottom</aligny>
+								<font>font13_bold</font>
+								<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.TMDb_Rating), ,]  [/B][/COLOR]</label>
+								<textcolor>FFFFFAF0</textcolor>
+								<shadowcolor>black</shadowcolor>
+							</control>
+							<control type="image">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>-48</left>
+								<width>60</width>
+								<height>45</height>
+								<aspectratio>keep</aspectratio>
+								<texture>logos/tmdb.png</texture>
+								<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+							</control>
+							<control type="label">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>12</left>
+								<width>70</width>
+								<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+								<align>left</align>
+								<aligny>bottom</aligny>
+								<font>font13_bold</font>
+								<label>[COLOR white][B]$INFO[Window(home).Property(FirstTMDB), ,]  [/B][/COLOR]</label>
+								<textcolor>FFFFFAF0</textcolor>
+								<shadowcolor>black</shadowcolor>
+							</control>
+							<!-- IMDB -->
+							<control type="image">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>92</left>
+								<width>60</width>
+								<height>60</height>
+								<aspectratio>keep</aspectratio>
+								<texture>logos/imdb2.png</texture>
+								<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+							</control>
+							<control type="label">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>152</left>
+								<width>150</width>
+								<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+								<align>left</align>
+								<aligny>bottom</aligny>
+								<font>font13_bold</font>
+								<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,][/B][/COLOR]</label>
+								<textcolor>FFFFFAF0</textcolor>
+								<shadowcolor>black</shadowcolor>
+							</control>
+							<control type="image">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>92</left>
+								<width>60</width>
+								<height>60</height>
+								<aspectratio>keep</aspectratio>
+								<texture>logos/imdb2.png</texture>
+								<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+							</control>
+							<control type="label">
+								<visible>Skin.HasSetting(OnlineRating)</visible>
+								<left>152</left>
+								<width>150</width>
+								<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+								<align>left</align>
+								<aligny>bottom</aligny>
+								<font>font13_bold</font>
+								<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(First250),#,][/B][/COLOR]</label>
+								<textcolor>FFFFFAF0</textcolor>
+								<shadowcolor>black</shadowcolor>
+							</control>
 						</control>
 					</control>
 					<control type="textbox">

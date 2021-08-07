@@ -354,6 +354,16 @@
 						<onclick>Skin.ToggleSetting(PlayPreviewM)</onclick>
 						<selected>Skin.HasSetting(PlayPreviewM)</selected>
 					</control>
+					<control type="radiobutton" id="247">
+						<visible>System.HasAddon(plugin.video.themoviedb.helper)</visible>
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32017</label>
+						<onclick>Skin.ToggleSetting(OnlineRating)</onclick>
+						<selected>Skin.HasSetting(OnlineRating)</selected>
+					</control>
 					<control type="radiobutton" id="229">
 						<width>1316</width>
 						<height>90</height>

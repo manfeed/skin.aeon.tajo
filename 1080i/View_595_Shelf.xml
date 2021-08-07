@@ -864,7 +864,7 @@
 				<colordiffuse>black</colordiffuse>
 			</control>
 			<include>IconsShelf</include>
-			<include>RatingsShelf</include>
+			<include condition="Skin.HasSetting(OnlineRating)">RatingsShelf</include>
 			<control type="textbox">
 				<visible>ListItem.IsCollection</visible>
 				<left>25</left>
