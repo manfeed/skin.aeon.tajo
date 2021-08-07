@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2021-08-04 22:29+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
@@ -1467,4 +1467,16 @@ msgstr ""
 
 msgctxt "#32015"
 msgid "Show only background"
+msgstr ""
+
+msgctxt "#32016"
+msgid "TheMovieDb Helper provides data to display online ratings for movies and tvshows"
+msgstr ""
+
+msgctxt "#32017"
+msgid "Show online ratings for movies and tvshows"
+msgstr ""
+
+msgctxt "#32018"
+msgid "You may have to restart Kodi. TMDb and Trakt should work out of the box. Metacritic and Rottentomatoes ratings require an OMDb API key. Get an OMDb API Key at http://www.omdbapi.com/apikey.aspx then input the OMDb API Key into the TheMovieDb Helper settings."
 msgstr ""
