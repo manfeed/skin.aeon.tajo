@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-07-27 11:29+0000\n"
+"PO-Revision-Date: 2021-08-04 22:29+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Danish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/da_dk/>\n"
 "Language: da_dk\n"
@@ -147,11 +147,11 @@ msgstr ""
 
 msgctxt "#31029"
 msgid "Recent movies"
-msgstr ""
+msgstr "Seneste film"
 
 msgctxt "#31030"
 msgid "Recent episodes"
-msgstr ""
+msgstr "Seneste afsnit"
 
 msgctxt "#31031"
 msgid "Random movies"
@@ -159,7 +159,7 @@ msgstr "Tilfældige film"
 
 msgctxt "#31032"
 msgid "Recommended movies"
-msgstr ""
+msgstr "Anbefalede film"
 
 msgctxt "#31033"
 msgid "Random episodes"
@@ -179,11 +179,11 @@ msgstr "Tilfældige albummer"
 
 msgctxt "#31037"
 msgid "Recent albums"
-msgstr ""
+msgstr "Seneste albummer"
 
 msgctxt "#31038"
 msgid "Recommended albums"
-msgstr ""
+msgstr "Anbefalede albummer"
 
 msgctxt "#31039"
 msgid "Actions"
@@ -271,7 +271,7 @@ msgstr ""
 
 msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
-msgstr "Denne fil er sammensat. Vælg den del du vil afspille fra."
+msgstr "Denne fil er kombineret. Vælg den del du vil afspille fra."
 
 msgctxt "#31061"
 msgid "Favourites statistics"
@@ -279,23 +279,23 @@ msgstr ""
 
 msgctxt "#31062"
 msgid "Random movie fanart"
-msgstr ""
+msgstr "Tilfældig filmfankunst"
 
 msgctxt "#31063"
 msgid "Random TV show fanart"
-msgstr ""
+msgstr "Tilfældig fankunst til tv-serie"
 
 msgctxt "#31064"
 msgid "Random video fanart"
-msgstr ""
+msgstr "Tilfældig videofankunst"
 
 msgctxt "#31065"
 msgid "Random music fanart"
-msgstr ""
+msgstr "Tilfældig musikfankunst"
 
 msgctxt "#31066"
 msgid "Random fanart"
-msgstr ""
+msgstr "Tilfældig fankunst"
 
 msgctxt "#31067"
 msgid "Update rating"
