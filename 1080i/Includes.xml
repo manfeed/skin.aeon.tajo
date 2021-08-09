@@ -2271,13 +2271,39 @@
 			<top>970</top>
 			<!-- Estudio -->
 			<control type="image" id="3738">
+				<visible>!Skin.HasSetting(Coloured.icons)</visible>
 				<animation type="Conditional" condition="Skin.HasSetting(Sh2)">
 					<effect type="zoom" center="auto" start="85" end="85" time="0"/>
 				</animation>
-				<visible>!Container(595).OnScrollNext + !Container(595).OnScrollPrevious</visible>
+				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<include>FlagImage</include>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
+			</control>
+			<control type="image" id="3739">
+				<visible>Skin.HasSetting(Coloured.icons)</visible>
+				<animation type="Conditional" condition="Skin.HasSetting(Sh2)">
+					<effect type="zoom" center="auto" start="85" end="85" time="0"/>
+				</animation>
+				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<include>FlagImage</include>
+				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<top>10</top>
+				<left>-10</left>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>font10t</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>[String.IsEmpty(Control.GetLabel(3738)) + !Skin.HasSetting(Coloured.icons)] | [String.IsEmpty(Control.GetLabel(3739)) + Skin.HasSetting(Coloured.icons)]</visible>
 			</control>
 			<!-- Mpaa -->
 			<control type="image">
@@ -2344,11 +2370,34 @@
 			<left>770</left>
 			<top>975</top>
 			<!-- Estudio -->
-			<control type="image" id="3738">
+			<control type="image" id="3755">
+				<visible>!Skin.HasSetting(Coloured.icons)</visible>
 				<visible>!Container(587).OnScrollNext + !Container(587).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<include>FlagImage</include>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
+			</control>
+			<control type="image" id="3756">
+				<visible>Skin.HasSetting(Coloured.icons)</visible>
+				<visible>!Container(587).OnScrollNext + !Container(587).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<include>FlagImage</include>
+				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<top>10</top>
+				<left>-10</left>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>font10t</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>[String.IsEmpty(Control.GetLabel(3755)) + !Skin.HasSetting(Coloured.icons)] | [String.IsEmpty(Control.GetLabel(3756)) + Skin.HasSetting(Coloured.icons)]</visible>
 			</control>
 			<!-- Mpaa -->
 			<control type="image">
@@ -2413,13 +2462,36 @@
 			<top>860</top>
 			<width>1840</width>
 			<height>90</height>
-			<control type="image">
+			<control type="image" id="4588">
+				<visible>!Skin.HasSetting(Coloured.icons)</visible>
 				<top>2</top>
 				<include>FlagImage2</include>
 				<visible>!Container(594).OnScrollNext + !Container(594).OnScrollPrevious + !Container(597).OnScrollNext + !Container(597).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
-				<visible>!String.IsEmpty(ListItem.Studio)</visible>
+			</control>
+			<control type="image" id="4589">
+				<visible>Skin.HasSetting(Coloured.icons)</visible>
+				<top>2</top>
+				<include>FlagImage2</include>
+				<visible>!Container(594).OnScrollNext + !Container(594).OnScrollPrevious + !Container(597).OnScrollNext + !Container(597).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<visible>!Container(594).OnScrollNext + !Container(594).OnScrollPrevious + !Container(597).OnScrollNext + !Container(597).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<top>4</top>
+				<left>-30</left>
+				<width>125</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>font10t</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>[!Integer.IsGreater(Container(6952).NumItems,0) + !Skin.HasSetting(Coloured.icons)] | [!Integer.IsGreater(Container(6953).NumItems,0) + Skin.HasSetting(Coloured.icons)]</visible>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -2441,13 +2513,38 @@
 			<top>875</top>
 			<width>1840</width>
 			<height>90</height>
-			<control type="image">
+			<control type="image" id="3774">
+				<visible>!Skin.HasSetting(Coloured.icons)</visible>
 				<top>2</top>
 				<include>FlagImage2</include>
 				<visible>!Container(594).OnScrollNext + !Container(594).OnScrollPrevious + !Container(597).OnScrollNext + !Container(597).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
-				<visible>!String.IsEmpty(ListItem.Studio)</visible>
+				<!-- <visible>!String.IsEmpty(ListItem.Studio)</visible> -->
+			</control>
+			<control type="image" id="3775">
+				<visible>Skin.HasSetting(Coloured.icons)</visible>
+				<top>2</top>
+				<include>FlagImage2</include>
+				<visible>!Container(594).OnScrollNext + !Container(594).OnScrollPrevious + !Container(597).OnScrollNext + !Container(597).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+				<!-- <visible>!String.IsEmpty(ListItem.Studio)</visible> -->
+			</control>
+			<control type="label">
+				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<top>10</top>
+				<left>-10</left>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>font10t</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>[String.IsEmpty(Control.GetLabel(3774)) + !Skin.HasSetting(Coloured.icons)] | [String.IsEmpty(Control.GetLabel(3775)) + Skin.HasSetting(Coloured.icons)]</visible>
 			</control>
 			<control type="image">
 				<left>120</left>
@@ -2464,10 +2561,33 @@
 			<top>970</top>
 			<!-- Estudio -->
 			<control type="image" id="3748">
+				<visible>!Skin.HasSetting(Coloured.icons)</visible>
 				<visible>!Container(589).OnScrollNext + !Container(589).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<include>FlagImage</include>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
+			</control>
+			<control type="image" id="3749">
+				<visible>Skin.HasSetting(Coloured.icons)</visible>
+				<visible>!Container(589).OnScrollNext + !Container(589).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<include>FlagImage</include>
+				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<top>10</top>
+				<left>-10</left>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>font10t</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>[String.IsEmpty(Control.GetLabel(3748)) + !Skin.HasSetting(Coloured.icons)] | [String.IsEmpty(Control.GetLabel(3749)) + Skin.HasSetting(Coloured.icons)]</visible>
 			</control>
 			<!-- Mpaa -->
 			<control type="image">
@@ -2502,11 +2622,34 @@
 			<left>52</left>
 			<top>970</top>
 			<!-- Estudio -->
-			<control type="image">
+			<control type="image" id="4744">
+				<visible>!Skin.HasSetting(Coloured.icons)</visible>
 				<include>FlagImage</include>
 				<visible>!Container(586).OnScrollNext + !Container(586).OnScrollPrevious + !Container(596).OnScrollNext + !Container(596).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
+			</control>
+			<control type="image" id="4745">
+				<visible>Skin.HasSetting(Coloured.icons)</visible>
+				<include>FlagImage</include>
+				<visible>!Container(586).OnScrollNext + !Container(586).OnScrollPrevious + !Container(596).OnScrollNext + !Container(596).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<top>10</top>
+				<left>-10</left>
+				<width>150</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>font10t</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>[String.IsEmpty(Control.GetLabel(4744)) + !Skin.HasSetting(Coloured.icons)] | [String.IsEmpty(Control.GetLabel(4745)) + Skin.HasSetting(Coloured.icons)]</visible>
 			</control>
 			<!-- Mpaa -->
 			<control type="image">
@@ -2570,10 +2713,33 @@
 			<top>970</top>
 			<!-- Estudio -->
 			<control type="image">
+				<visible>!Skin.HasSetting(Coloured.icons)</visible>
 				<include>FlagImage</include>
-				<visible>!Container(586).OnScrollNext + !Container(586).OnScrollPrevious + !Container(596).OnScrollNext + !Container(596).OnScrollPrevious</visible>
+				<visible>!Container(586).OnScrollNext + !Container(586).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
+			</control>
+			<control type="image">
+				<visible>Skin.HasSetting(Coloured.icons)</visible>
+				<include>FlagImage</include>
+				<visible>!Container(586).OnScrollNext + !Container(586).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+			</control>
+			<control type="label">
+				<visible>!Container(586).OnScrollNext + !Container(586).OnScrollPrevious</visible>
+				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+				<top>4</top>
+				<left>-5</left>
+				<width>125</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Studio]</label>
+				<font>font10t</font>
+				<textcolor>grey</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>[!Integer.IsGreater(Container(6952).NumItems,0) + !Skin.HasSetting(Coloured.icons)] | [!Integer.IsGreater(Container(6953).NumItems,0) + Skin.HasSetting(Coloured.icons)]</visible>
 			</control>
 			<!-- Mpaa -->
 			<control type="image">
@@ -2915,6 +3081,7 @@
 			<height>45</height>
 			<top>190</top>
 			<control type="image">
+				<visible>!Skin.HasSetting(OnlineRating)</visible>
 				<animation effect="fade" end="60" condition="true">Conditional</animation>
 				<top>-4</top>
 				<left>32</left>
@@ -2926,6 +3093,7 @@
 				<visible>!String.IsEqual(ListItem.Label,..)</visible>
 			</control>
 			<control type="label">
+				<visible>!Skin.HasSetting(OnlineRating)</visible>
 				<top>-17</top>
 				<left>-25</left>
 				<width>70</width>
@@ -2936,6 +3104,96 @@
 				<label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="group">
+				<left>-20</left>
+				<top>-5</top>
+				<!-- TMDB -->
+				<control type="image">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>-48</left>
+					<width>60</width>
+					<height>45</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/tmdb.png</texture>
+					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
+				</control>
+				<control type="label">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>12</left>
+					<width>70</width>
+					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.TMDb_Rating))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.TMDb_Rating), ,]  [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>-48</left>
+					<width>60</width>
+					<height>45</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/tmdb.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>12</left>
+					<width>70</width>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(home).Property(FirstTMDB), ,]  [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- IMDB -->
+				<control type="image">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>92</left>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/imdb2.png</texture>
+					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+				</control>
+				<control type="label">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>152</left>
+					<width>150</width>
+					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,][/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>92</left>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/imdb2.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<visible>Skin.HasSetting(OnlineRating)</visible>
+					<left>152</left>
+					<width>150</width>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(First250),#,][/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
 			</control>
 		</control>
 		<control type="image">

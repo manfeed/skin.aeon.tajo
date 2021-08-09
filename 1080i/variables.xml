@@ -214,6 +214,7 @@
 		<value condition="Control.HasFocus(216) | Control.HasFocus(217)">$LOCALIZE[31200]</value>
 		<value condition="Control.HasFocus(300) | Control.HasFocus(301)">$LOCALIZE[31476]</value>
 		<value condition="Control.HasFocus(302) | Control.HasFocus(303)">$LOCALIZE[31479]</value>
+		<value condition="Control.HasFocus(389) | Control.HasFocus(390)">$LOCALIZE[32019]</value>
 		<value/>
 	</variable>
 	<variable name="FallbackBackgroundOnClickVar">
@@ -1169,9 +1170,8 @@
 		<value>fffffaf0</value>
 	</variable>
 	<variable name="mediaicons_path">
-		<value condition="String.IsEmpty(skin.string(resource.images.mediaicons.path))">resources/</value>
-		<value condition="!String.IsEmpty(skin.string(resource.images.mediaicons.path)) + String.IsEqual(skin.string(resource.images.mediaicons.path),resource://resource.images.mediaicons.white/)">resources/</value>
-		<value condition="!String.IsEmpty(skin.string(resource.images.mediaicons.path)) + String.IsEqual(skin.string(resource.images.mediaicons.path),resource://resource.images.mediaicons.coloured/)">resource://resource.images.mediaicons.coloured/</value>
+		<value condition="!Skin.HasSetting(Coloured.icons)">resources/</value>
+		<value condition="Skin.HasSetting(Coloured.icons)">resources/coloured/</value>
 	</variable>
 	<variable name="audiochannelstajo1">
 		<value condition="Integer.IsEqual(ListItem.Property(AudioChannels.1),1)">[B]1.0[/B]</value>

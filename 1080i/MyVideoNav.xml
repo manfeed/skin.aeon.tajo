@@ -34,7 +34,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<control type="list" id="6952">
-			<visible>!ListItem.IsCollection</visible>
+			<visible>!ListItem.IsCollection + !Skin.HasSetting(Coloured.icons)</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
 			<itemlayout>
@@ -42,6 +42,16 @@
 			<focusedlayout>
 			</focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.white&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
+		</control>
+		<control type="list" id="6953">
+			<visible>!ListItem.IsCollection + Skin.HasSetting(Coloured.icons)</visible>
+			<scrolltime>3000</scrolltime>
+			<autoscroll>true</autoscroll>
+			<itemlayout>
+			</itemlayout>
+			<focusedlayout>
+			</focusedlayout>
+			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.coloured&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
 		</control>
 		<control type="list" id="59631">
 			<visible>ListItem.IsCollection</visible>

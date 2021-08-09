@@ -758,12 +758,37 @@
 							<top>1000</top>
 							<!-- Estudio -->
 							<control type="image" id="3838">
+								<visible>!Skin.HasSetting(Coloured.icons)</visible>
 								<animation effect="zoom" end="130" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
 								<animation effect="slide" end="0,15" time="0" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
 								<visible>!Container(590).OnScrollNext + !Container(590).OnScrollPrevious</visible>
 								<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 								<include>FlagImage</include>
 								<texture>$INFO[Container(6952).ListItem.Icon]</texture>
+							</control>
+							<control type="image" id="3839">
+								<visible>Skin.HasSetting(Coloured.icons)</visible>
+								<animation effect="zoom" end="130" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
+								<animation effect="slide" end="0,15" time="0" condition="Skin.HasSetting(OnlineRating)">Conditional</animation>
+								<visible>!Container(590).OnScrollNext + !Container(590).OnScrollPrevious</visible>
+								<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+								<include>FlagImage</include>
+								<texture>$INFO[Container(6953).ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<visible>!Container(590).OnScrollNext + !Container(590).OnScrollPrevious</visible>
+								<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
+								<top>13</top>
+								<left>-10</left>
+								<width>150</width>
+								<height>95</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Studio]</label>
+								<font>font10</font>
+								<textcolor>grey</textcolor>
+								<wrapmultiline>true</wrapmultiline>
+								<visible>[String.IsEmpty(Control.GetLabel(3838)) + !Skin.HasSetting(Coloured.icons)] | [String.IsEmpty(Control.GetLabel(3839)) + Skin.HasSetting(Coloured.icons)]</visible>
 							</control>
 							<!-- Mpaa -->
 							<control type="image">

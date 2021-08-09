@@ -130,7 +130,7 @@
 			<resetonlabelchange>true</resetonlabelchange>
 		</control>
 		<control type="list" id="6284">
-			<visible>!ListItem.IsCollection</visible>
+			<visible>!ListItem.IsCollection + !Skin.HasSetting(Coloured.icons)</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
 			<itemlayout>
@@ -138,6 +138,16 @@
 			<focusedlayout>
 			</focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.white&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
+		</control>
+		<control type="list" id="6285">
+			<visible>!ListItem.IsCollection + Skin.HasSetting(Coloured.icons)</visible>
+			<scrolltime>3000</scrolltime>
+			<autoscroll>true</autoscroll>
+			<itemlayout>
+			</itemlayout>
+			<focusedlayout>
+			</focusedlayout>
+			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.coloured&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
 		</control>
 		<control type="multiimage" id="7975">
 			<include>HiddenObject</include>
@@ -331,6 +341,7 @@
 						<control type="group">
 							<width>198</width>
 							<control type="image" id="800011">
+								<visible>!Skin.HasSetting(Coloured.icons)</visible>
 								<top>12</top>
 								<left>8</left>
 								<width>135</width>
@@ -340,6 +351,18 @@
 								<colordiffuse>white</colordiffuse>
 								<animation effect="fade" time="200">VisibleChange</animation>
 								<texture>$INFO[Container(6284).ListItem.Icon]</texture>
+							</control>
+							<control type="image" id="800021">
+								<visible>Skin.HasSetting(Coloured.icons)</visible>
+								<top>12</top>
+								<left>8</left>
+								<width>135</width>
+								<height>68</height>
+								<aspectratio align="center">keep</aspectratio>
+								<fadetime>250</fadetime>
+								<colordiffuse>white</colordiffuse>
+								<animation effect="fade" time="200">VisibleChange</animation>
+								<texture>$INFO[Container(6285).ListItem.Icon]</texture>
 							</control>
 							<control type="label">
 								<top>10</top>
@@ -351,7 +374,7 @@
 								<font>font10</font>
 								<textcolor>grey</textcolor>
 								<wrapmultiline>true</wrapmultiline>
-								<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
+								<visible>[String.IsEmpty(Control.GetLabel(800011)) + !Skin.HasSetting(Coloured.icons)] | [String.IsEmpty(Control.GetLabel(800021)) + Skin.HasSetting(Coloured.icons)]</visible>
 							</control>
 						</control>
 						<control type="image">
@@ -640,29 +663,29 @@
 						</content>
 					</control>
 				</control>
-					<control type="group">
-						<left>4</left>
-						<top>527</top>
-						<control type="button">
-							<width>36</width>
-							<height>15</height>
-							<colordiffuse>88ffffff</colordiffuse>
-							<texturefocus>tajo/arrow_h.gif</texturefocus>
-							<texturenofocus>tajo/arrow_h.gif</texturenofocus>
-							<visible>Container(300).HasPrevious</visible>
-							<include>VisibleFadeAnimation</include>
-						</control>
-						<control type="button">
-							<left>1160</left>
-							<width>36</width>
-							<height>15</height>
-							<colordiffuse>88ffffff</colordiffuse>
-							<texturefocus>tajo/arrow_hd.gif</texturefocus>
-							<texturenofocus>tajo/arrow_hd.gif</texturenofocus>
-							<visible>Container(300).HasNext</visible>
-							<include>VisibleFadeAnimation</include>
-						</control>
+				<control type="group">
+					<left>4</left>
+					<top>527</top>
+					<control type="button">
+						<width>36</width>
+						<height>15</height>
+						<colordiffuse>88ffffff</colordiffuse>
+						<texturefocus>tajo/arrow_h.gif</texturefocus>
+						<texturenofocus>tajo/arrow_h.gif</texturenofocus>
+						<visible>Container(300).HasPrevious</visible>
+						<include>VisibleFadeAnimation</include>
 					</control>
+					<control type="button">
+						<left>1160</left>
+						<width>36</width>
+						<height>15</height>
+						<colordiffuse>88ffffff</colordiffuse>
+						<texturefocus>tajo/arrow_hd.gif</texturefocus>
+						<texturenofocus>tajo/arrow_hd.gif</texturenofocus>
+						<visible>Container(300).HasNext</visible>
+						<include>VisibleFadeAnimation</include>
+					</control>
+				</control>
 				<!-- Buttons LABEL -->
 				<control type="group">
 					<left>-5</left>

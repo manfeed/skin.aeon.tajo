@@ -135,7 +135,7 @@
 								<top>-90</top>
 								<width>100</width>
 								<height>20</height>
-								<font>font10t</font>
+								<font>font10</font>
 								<align>left</align>
 								<textcolor>44FFFFFF</textcolor>
 								<label>$INFO[Window(Home).Property(culrc.source)]</label>
