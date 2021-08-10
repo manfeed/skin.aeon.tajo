@@ -1483,3 +1483,11 @@ msgstr ""
 msgctxt "#32018"
 msgid "You may have to restart Kodi. TMDb and Trakt should work out of the box. Metacritic and Rottentomatoes ratings require an OMDb API key. Get an OMDb API Key at http://www.omdbapi.com/apikey.aspx then input the OMDb API Key into the TheMovieDb Helper settings."
 msgstr ""
+
+msgctxt "#32019"
+msgid "Resource image addon for displaying coloured studio icons throughout the skin."
+msgstr ""
+
+msgctxt "#32020"
+msgid "Display coloured icons."
+msgstr ""
