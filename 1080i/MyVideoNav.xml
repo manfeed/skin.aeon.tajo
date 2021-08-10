@@ -16,6 +16,7 @@
 	<onload condition="String.Contains(Container.Viewmode,RightList) + !Integer.IsGreater(Container.CurrentItem,1) + String.IsEmpty(Window(home).Property(MediaMovie6))">Control.Move(596,2)</onload>
 	<onload condition="Container.Content(movies)">SetProperty(MediaMovie6,True,home)</onload>
 	<onunload condition="Skin.HasSetting(OnlineRating) + !String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))">SetProperty(FirstOscar,$VAR[Label_Oscars],home)</onunload>
+	<onunload condition="Skin.HasSetting(OnlineRating) + !String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))">SetProperty(FirstEmmy,$VAR[Label_Emmys],home)</onunload>
 	<onunload condition="Skin.HasSetting(OnlineRating) + !String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))">SetProperty(FirstMetacritic,$INFO[Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)],home)</onunload>
 	<onunload condition="Skin.HasSetting(OnlineRating) + !String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))">SetProperty(FirstTrakt,$INFO[Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)],home)</onunload>
 	<onunload condition="Skin.HasSetting(OnlineRating) + !String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))">SetProperty(FirstTMDB,$INFO[Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)],home)</onunload>

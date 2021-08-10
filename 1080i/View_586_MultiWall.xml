@@ -600,6 +600,11 @@
 							<label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
 							<textcolor>FFFFFAF0</textcolor>
 						</control>
+								<control type="group">
+			<left>-170</left>
+			<top>-386</top>
+						<include condition="Skin.HasSetting(OnlineRating)">Oscar_Emmy</include>
+						</control>
 						<!-- TMDB -->
 						<control type="image">
 							<visible>Skin.HasSetting(OnlineRating)</visible>
@@ -661,9 +666,19 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<font>font13_bold</font>
-							<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,][/B][/COLOR]</label>
+							<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]   $INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),,][/B][/COLOR]</label>
 							<textcolor>FFFFFAF0</textcolor>
 							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="image">
+							<visible>Skin.HasSetting(OnlineRating)</visible>
+							<left>210</left>
+							<top>-30</top>
+							<width>60</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>logos/imdb250.png</texture>
+							<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Top250))</visible>
 						</control>
 						<control type="image">
 							<visible>Skin.HasSetting(OnlineRating)</visible>
@@ -682,14 +697,24 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<font>font13_bold</font>
-							<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(First250),#,][/B][/COLOR]</label>
+							<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]   $INFO[Window(Home).Property(First250),,][/B][/COLOR]</label>
 							<textcolor>FFFFFAF0</textcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>
+						<control type="image">
+							<visible>Skin.HasSetting(OnlineRating)</visible>
+							<left>210</left>
+							<top>-30</top>
+							<width>60</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>logos/imdb250.png</texture>
+							<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Top250)) + !String.IsEmpty(Window(Home).Property(First250)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+						</control>
 						<control type="textbox">
 							<top>-13</top>
-							<left>-460</left>
-							<width>390</width>
+							<left>-420</left>
+							<width>360</width>
 							<height>76</height>
 							<align>center</align>
 							<aligny>center</aligny>

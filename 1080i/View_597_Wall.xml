@@ -396,6 +396,7 @@
 						<top>-143</top>
 						<left>352</left>
 						<include>RatingsShelf</include>
+						<include>Oscar_Emmy</include>
 					</control>
 					<control type="textbox">
 						<left>15</left>

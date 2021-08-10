@@ -1886,12 +1886,108 @@
 		<colordiffuse>white</colordiffuse>
 		<fadetime>FanartCrossFadeTime</fadetime>
 	</include>
+	<include name="Oscar_Emmy">
+		<control type="group">
+			<left>-280</left>
+			<top>394</top>
+			<!-- Oscars -->
+			<control type="image">
+				<visible>Container.Content(movies)</visible>
+				<animation effect="slide" end="-46,-4" condition="true">Conditional</animation>
+				<width>63</width>
+				<height>40</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<aspectratio>keep</aspectratio>
+				<texture>logos/oscar.png</texture>
+				<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+			</control>
+			<control type="label">
+				<visible>Container.Content(movies)</visible>
+				<width>80</width>
+				<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<font>font13_bold</font>
+				<label>[COLOR white][B]$VAR[Label_Oscars,,]    [/B][/COLOR]</label>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+				<visible>Container.Content(movies)</visible>
+				<animation effect="slide" end="-46,-4" condition="true">Conditional</animation>
+				<width>63</width>
+				<height>40</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<aspectratio>keep</aspectratio>
+				<texture>logos/oscar.png</texture>
+				<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstOscar)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+			</control>
+			<control type="label">
+				<visible>Container.Content(movies)</visible>
+				<width>80</width>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<font>font13_bold</font>
+				<label>[COLOR white][B]$INFO[Window(Home).Property(FirstOscar)]    [/B][/COLOR]</label>
+				<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstOscar)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<!-- Emmys -->
+			<control type="image">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="slide" end="-36,-4" condition="true">Conditional</animation>
+				<width>63</width>
+				<height>40</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<aspectratio>keep</aspectratio>
+				<texture>logos/emmys.png</texture>
+				<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Primetime) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+			</control>
+			<control type="label">
+				<visible>Container.Content(tvshows)</visible>
+				<width>80</width>
+				<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Primetime) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<font>font13_bold</font>
+				<label>[COLOR white][B]$VAR[Label_Emmys,,]    [/B][/COLOR]</label>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+				<visible>Container.Content(tvshows)</visible>
+				<animation effect="slide" end="-36,-4" condition="true">Conditional</animation>
+				<width>63</width>
+				<height>40</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<aspectratio>keep</aspectratio>
+				<texture>logos/emmys.png</texture>
+				<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstEmmy)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+			</control>
+			<control type="label">
+				<visible>Container.Content(tvshows)</visible>
+				<width>80</width>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<font>font13_bold</font>
+				<label>[COLOR white][B]$INFO[Window(Home).Property(FirstEmmy)]    [/B][/COLOR]</label>
+				<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstEmmy)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+	</include>
 	<include name="RatingsShelf">
 		<control type="group">
 			<animation effect="slide" end="0,20" time="0" condition="Skin.HasSetting(Sh2)">Conditional</animation>
 			<animation effect="slide" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
-			<!-- <animation effect="slide" end="697,0" condition="true">Conditional</animation> -->
 			<animation effect="slide" end="697,0" condition="Control.IsVisible(595)">Conditional</animation>
+			<animation effect="slide" end="820,-22" condition="Control.IsVisible(596)">Conditional</animation>
 			<animation effect="slide" end="340,-485" condition="Control.IsVisible(587)">Conditional</animation>
 			<visible>!ListItem.IsCollection</visible>
 			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
@@ -1906,6 +2002,7 @@
 				<align>left</align>
 				<!-- Oscars -->
 				<control type="image">
+					<visible>Container.Content(movies)</visible>
 					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
 					<width>63</width>
@@ -1917,6 +2014,7 @@
 					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
 				</control>
 				<control type="label">
+					<visible>Container.Content(movies)</visible>
 					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<width>80</width>
 					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Oscar) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
@@ -1928,6 +2026,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
+					<visible>Container.Content(movies)</visible>
 					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
 					<width>63</width>
@@ -1939,6 +2038,7 @@
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstOscar)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
+					<visible>Container.Content(movies)</visible>
 					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<width>80</width>
 					<align>left</align>
@@ -1946,6 +2046,55 @@
 					<font>font13_bold</font>
 					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstOscar)]    [/B][/COLOR]</label>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstOscar)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<!-- Emmys -->
+				<control type="image">
+					<visible>Container.Content(tvshows)</visible>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
+					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
+					<width>63</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/emmys.png</texture>
+					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Primetime) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+				</control>
+				<control type="label">
+					<visible>Container.Content(tvshows)</visible>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
+					<width>80</width>
+					<visible>String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Primetime) + String.Contains(Window(Home).Property(TMDbHelper.ListItem.Awards),Won)</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$VAR[Label_Emmys,,]    [/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<visible>Container.Content(tvshows)</visible>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
+					<animation effect="slide" end="27,-4" condition="true">Conditional</animation>
+					<width>63</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/emmys.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstEmmy)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
+				</control>
+				<control type="label">
+					<visible>Container.Content(tvshows)</visible>
+					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
+					<width>80</width>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstEmmy)]    [/B][/COLOR]</label>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Awards)) + !String.IsEmpty(Window(Home).Property(FirstEmmy)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -2221,7 +2370,7 @@
 				</control>
 				<!-- IMDB -->
 				<control type="image">
-					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2229,18 +2378,27 @@
 					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
 				</control>
 				<control type="label">
-					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>auto</width>
 					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,][/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]    $INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),,][/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
-					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-60,-30" condition="true">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/imdb250.png</texture>
+					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Top250))</visible>
+				</control>
+				<control type="image">
+					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2248,15 +2406,24 @@
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
-					<animation effect="slide" end="-514,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
 					<width>auto</width>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(First250),#,][/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]    $INFO[Window(Home).Property(First250),,][/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<animation effect="slide" end="-60,-30" condition="true">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>logos/imdb250.png</texture>
+					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Top250)) + !String.IsEmpty(Window(Home).Property(First250)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 			</control>
 		</control>
@@ -2520,7 +2687,6 @@
 				<visible>!Container(594).OnScrollNext + !Container(594).OnScrollPrevious + !Container(597).OnScrollNext + !Container(597).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<texture>$INFO[Container(6952).ListItem.Icon]</texture>
-				<!-- <visible>!String.IsEmpty(ListItem.Studio)</visible> -->
 			</control>
 			<control type="image" id="3775">
 				<visible>Skin.HasSetting(Coloured.icons)</visible>
@@ -2529,7 +2695,6 @@
 				<visible>!Container(594).OnScrollNext + !Container(594).OnScrollPrevious + !Container(597).OnScrollNext + !Container(597).OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
 				<texture>$INFO[Container(6953).ListItem.Icon]</texture>
-				<!-- <visible>!String.IsEmpty(ListItem.Studio)</visible> -->
 			</control>
 			<control type="label">
 				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
@@ -2556,9 +2721,8 @@
 	<include name="IconsMulti">
 		<control type="group">
 			<visible>!ListItem.IsCollection</visible>
-			<animation effect="rotatey" center="auto" start="7" end="7" time="0" condition="Control.IsVisible(596)">Conditional</animation>
 			<left>52</left>
-			<top>970</top>
+			<top>973</top>
 			<!-- Estudio -->
 			<control type="image" id="3748">
 				<visible>!Skin.HasSetting(Coloured.icons)</visible>
@@ -2618,7 +2782,6 @@
 	<include name="IconsRightList">
 		<control type="group">
 			<visible>!ListItem.IsCollection</visible>
-			<animation effect="rotatey" center="auto" start="7" end="7" time="0" condition="true">Conditional</animation>
 			<left>52</left>
 			<top>970</top>
 			<!-- Estudio -->
@@ -3169,7 +3332,7 @@
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.Top250),#,][/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(home).Property(TMDbHelper.ListItem.IMDb_Rating), ,]  [/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -3190,7 +3353,7 @@
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]  [/B][/COLOR][COLOR FFa6821e][B]$INFO[Window(Home).Property(First250),#,][/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(home).Property(FirstIMDB), ,]  [/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
