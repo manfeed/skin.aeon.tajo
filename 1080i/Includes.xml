@@ -2143,6 +2143,7 @@
 				</control>
 				<!-- Trakt -->
 				<control type="image">
+					<animation effect="slide" end="-110,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2152,6 +2153,7 @@
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating))</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-110,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>88</width>
 					<align>left</align>
 					<aligny>bottom</aligny>
@@ -2162,6 +2164,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-110,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>40</width>
 					<height>40</height>
 					<align>left</align>
@@ -2171,6 +2174,7 @@
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Trakt_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTrakt)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-110,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>88</width>
 					<align>left</align>
 					<aligny>bottom</aligny>
@@ -2182,6 +2186,7 @@
 				</control>
 				<!-- TMDB -->
 				<control type="image">
+					<animation effect="slide" end="-130,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>60</width>
 					<height>40</height>
 					<align>left</align>
@@ -2191,6 +2196,7 @@
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating))</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-130,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>88</width>
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating))</visible>
 					<align>left</align>
@@ -2201,6 +2207,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
+					<animation effect="slide" end="-130,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>60</width>
 					<height>40</height>
 					<align>left</align>
@@ -2210,6 +2217,7 @@
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
+					<animation effect="slide" end="-130,0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>88</width>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.TMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstTMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<align>left</align>
@@ -2370,7 +2378,8 @@
 				</control>
 				<!-- IMDB -->
 				<control type="image">
-					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + !Container.Content(tvshows)">Conditional</animation>
+					<animation effect="slide" end="-150,0" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2378,7 +2387,8 @@
 					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
 				</control>
 				<control type="label">
-					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + !Container.Content(tvshows)">Conditional</animation>
+					<animation effect="slide" end="-150,0" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>auto</width>
 					<visible>!String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.IMDb_Rating))</visible>
 					<align>left</align>
@@ -2390,7 +2400,8 @@
 				</control>
 				<control type="image">
 					<animation effect="slide" end="-60,-30" condition="true">Conditional</animation>
-					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + !Container.Content(tvshows)">Conditional</animation>
+					<animation effect="slide" end="-150,0" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2398,7 +2409,8 @@
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Top250))</visible>
 				</control>
 				<control type="image">
-					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + !Container.Content(tvshows)">Conditional</animation>
+					<animation effect="slide" end="-150,0" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2406,7 +2418,8 @@
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
 				<control type="label">
-					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + !Container.Content(tvshows)">Conditional</animation>
+					<animation effect="slide" end="-150,0" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>auto</width>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDB_Rating)) + !String.IsEmpty(Window(Home).Property(FirstIMDB)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<align>left</align>
@@ -2418,7 +2431,8 @@
 				</control>
 				<control type="image">
 					<animation effect="slide" end="-60,-30" condition="true">Conditional</animation>
-					<animation effect="slide" end="-544,56" time="0" condition="Control.IsVisible(597) | Control.IsVisible(594)">Conditional</animation>
+					<animation effect="slide" end="-544,56" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + !Container.Content(tvshows)">Conditional</animation>
+					<animation effect="slide" end="-150,0" time="0" condition="[Control.IsVisible(597) | Control.IsVisible(594)] + Container.Content(tvshows)">Conditional</animation>
 					<width>60</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
@@ -2676,7 +2690,7 @@
 	</include>
 	<include name="IconsTriple">
 		<control type="group">
-			<left>206</left>
+			<left>-46</left>
 			<top>875</top>
 			<width>1840</width>
 			<height>90</height>
