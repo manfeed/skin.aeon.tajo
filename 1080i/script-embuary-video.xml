@@ -135,14 +135,14 @@
 								<width>250</width>
 								<orientation>horizontal</orientation>
 								<usecontrolcoords>true</usecontrolcoords>
-								<itemgap>5</itemgap>
+								<itemgap>7</itemgap>
 								<control type="image">
 									<top>-4</top>
-									<width>150</width>
+									<width>70</width>
 									<height>100</height>
 									<aspectratio>keep</aspectratio>
 									<colordiffuse>grey</colordiffuse>
-									<texture>logos/tmdb-logo2.png</texture>
+									<texture>logos/tmdb.png</texture>
 								</control>
 								<control type="label">
 									<left>5</left>

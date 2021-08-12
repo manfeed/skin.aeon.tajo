@@ -321,7 +321,7 @@
 			<name>font14_bold</name>
 			<filename>Quicksand.ttf</filename>
 			<style>bold</style>
-			<size>30</size>
+			<size>28</size>
 		</font>
 		<font>
 			<name>font15t</name>
@@ -1179,7 +1179,7 @@
 			<name>font14_bold</name>
 			<filename>Arialuni.ttf</filename>
 			<style>bold</style>
-			<size>33</size>
+			<size>31</size>
 		</font>
 		<font>
 			<name>font15t</name>

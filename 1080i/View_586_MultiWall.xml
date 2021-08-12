@@ -600,10 +600,10 @@
 							<label>[COLOR white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
 							<textcolor>FFFFFAF0</textcolor>
 						</control>
-								<control type="group">
-			<left>-170</left>
-			<top>-386</top>
-						<include condition="Skin.HasSetting(OnlineRating)">Oscar_Emmy</include>
+						<control type="group">
+							<left>-172</left>
+							<top>-390</top>
+							<include condition="Skin.HasSetting(OnlineRating)">Oscar_Emmy</include>
 						</control>
 						<!-- TMDB -->
 						<control type="image">

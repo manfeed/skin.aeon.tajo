@@ -1105,7 +1105,7 @@
 									<visible>!String.IsEmpty(ListItem.Rating)</visible>
 									<align>left</align>
 									<aligny>center</aligny>
-									<font>font14_bold</font>
+									<font>font13_bold</font>
 									<label>[COLOR=white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
 									<textcolor>white</textcolor>
 									<shadowcolor>black</shadowcolor>
