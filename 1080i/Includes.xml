@@ -1984,7 +1984,6 @@
 	</include>
 	<include name="RatingsShelf">
 		<control type="group">
-			<animation effect="slide" end="0,20" time="0" condition="Skin.HasSetting(Sh2)">Conditional</animation>
 			<animation effect="slide" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 			<animation effect="slide" end="697,0" condition="Control.IsVisible(595)">Conditional</animation>
 			<animation effect="slide" end="820,-22" condition="Control.IsVisible(596)">Conditional</animation>
@@ -1992,7 +1991,7 @@
 			<visible>!ListItem.IsCollection</visible>
 			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
 			<left>-87</left>
-			<top>972</top>
+			<top>992</top>
 			<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 			<!-- Rating -->
 			<control type="grouplist">
@@ -2444,12 +2443,11 @@
 	</include>
 	<include name="IconsShelf">
 		<control type="group">
-			<animation effect="slide" end="0,20" time="0" condition="Skin.HasSetting(Sh2)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="inout" condition="Control.HasFocus(86) | Control.HasFocus(5929)">Conditional</animation>
 			<visible>!ListItem.IsCollection</visible>
 			<animation effect="zoom" delay="0" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
 			<left>-70</left>
-			<top>970</top>
+			<top>990</top>
 			<!-- Estudio -->
 			<control type="image" id="3738">
 				<visible>!Skin.HasSetting(Coloured.icons)</visible>
