@@ -794,25 +794,25 @@
 							<control type="image">
 								<left>176</left>
 								<include>FlagImage</include>
-								<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+								<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 							</control>
 							<!-- Codec de video -->
 							<control type="image">
 								<left>352</left>
 								<include>FlagImage</include>
-								<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+								<texture fallback="resources/flag_default.png">$VAR[videocodec]</texture>
 							</control>
 							<!-- Resolucao -->
 							<control type="image">
 								<left>522</left>
 								<include>FlagImage</include>
-								<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+								<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 							</control>
 							<!-- Aspecto -->
 							<control type="image">
 								<left>692</left>
 								<include>FlagImage</include>
-								<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+								<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 							</control>
 						</control>
 						<control type="group">

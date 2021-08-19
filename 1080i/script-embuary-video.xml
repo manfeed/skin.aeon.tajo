@@ -121,7 +121,7 @@
 							<width>130</width>
 							<colordiffuse>grey</colordiffuse>
 							<include>MediaFlagVars</include>
-							<texture fallback="flags/mpaa/NR.png">$VAR[mpaa_info]</texture>
+							<texture fallback="resources/mpaa/NR.png">$VAR[mpaa_info]</texture>
 						</control>
 						<!-- TheMovieDB/IMDb/RottenTomatoes/Metacritic Ratings -->
 						<control type="grouplist">

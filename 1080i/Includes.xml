@@ -2113,7 +2113,7 @@
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)]%   [/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)]%[/B][/COLOR]</label>
 					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating))</visible>
 					<textcolor>FFFFFAF0</textcolor>
@@ -2134,7 +2134,7 @@
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstMetacritic)]%   [/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstMetacritic)]%[/B][/COLOR]</label>
 					<visible>!Control.IsVisible(597) + !Control.IsVisible(594)</visible>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MetaCritic_Rating)) + !String.IsEmpty(Window(Home).Property(FirstMetacritic)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 					<textcolor>FFFFFAF0</textcolor>
@@ -2300,7 +2300,7 @@
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)]%    [/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_Rating)]%[/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -2311,7 +2311,7 @@
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstRottenR)]%    [/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstRottenR)]%[/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -2360,7 +2360,7 @@
 					<aligny>bottom</aligny>
 					<aspectratio>keep</aspectratio>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)]%    [/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(TMDbHelper.ListItem.RottenTomatoes_UserMeter)]%[/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -2371,7 +2371,7 @@
 					<align>left</align>
 					<aligny>bottom</aligny>
 					<font>font13_bold</font>
-					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstRottenU)]%    [/B][/COLOR]</label>
+					<label>[COLOR white][B]$INFO[Window(Home).Property(FirstRottenU)]%[/B][/COLOR]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -2488,25 +2488,25 @@
 			<control type="image">
 				<left>154</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
 				<left>308</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[videocodec]</texture>
 			</control>
 			<!-- Resolucao -->
 			<control type="image">
 				<left>456</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 			</control>
 			<!-- Aspecto -->
 			<control type="image">
 				<left>604</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
 			<!-- Rating -->
 			<control type="group">
@@ -2582,25 +2582,25 @@
 			<control type="image">
 				<left>161</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
 				<left>322</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[videocodec]</texture>
 			</control>
 			<!-- Resolucao -->
 			<control type="image">
 				<left>477</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 			</control>
 			<!-- Aspecto -->
 			<control type="image">
 				<left>632</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
 			<!-- Rating -->
 			<control type="group">
@@ -2675,13 +2675,13 @@
 			<control type="image">
 				<left>100</left>
 				<include>FlagImage2</include>
-				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 				<visible>!ListItem.IsParentFolder + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<left>200</left>
 				<include>FlagImage2</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 		</control>
@@ -2726,7 +2726,7 @@
 			<control type="image">
 				<left>120</left>
 				<include>FlagImage2</include>
-				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
 		</control>
 	</include>
@@ -2769,25 +2769,25 @@
 			<control type="image">
 				<left>156</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
 				<left>312</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[videocodec]</texture>
 			</control>
 			<!-- Resolucao -->
 			<control type="image">
 				<left>462</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 			</control>
 			<!-- Aspecto -->
 			<control type="image">
 				<left>612</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
 		</control>
 	</include>
@@ -2830,25 +2830,25 @@
 			<control type="image">
 				<left>156</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
 				<left>312</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[videocodec]</texture>
 			</control>
 			<!-- Resolucao -->
 			<control type="image">
 				<left>462</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 			</control>
 			<!-- Aspecto -->
 			<control type="image">
 				<left>612</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
 			<control type="group">
 				<visible>!ListItem.IsCollection</visible>
@@ -2920,25 +2920,25 @@
 			<control type="image">
 				<left>156</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/mpaa/NR.png">$VAR[mpaa]</texture>
+				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
 				<left>312</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[videocodec]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[videocodec]</texture>
 			</control>
 			<!-- Resolucao -->
 			<control type="image">
 				<left>462</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]videoresolution/$VAR[videoresHDR,,.png]</texture>
 			</control>
 			<!-- Aspecto -->
 			<control type="image">
 				<left>612</left>
 				<include>FlagImage</include>
-				<texture fallback="flags/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+				<texture fallback="resources/flag_default.png">$VAR[mediaicons_path]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
 		</control>
 	</include>
