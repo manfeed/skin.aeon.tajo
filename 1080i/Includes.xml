@@ -2490,6 +2490,18 @@
 				<include>FlagImage</include>
 				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 			</control>
+			<control type="label">
+				<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+				<left>154</left>
+				<width>160</width>
+				<height>66</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Mpaa]</label>
+				<font>font24_bold</font>
+				<textcolor>grey2</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
 			<!-- Codec de video -->
 			<control type="image">
 				<left>308</left>
@@ -2583,6 +2595,18 @@
 				<left>161</left>
 				<include>FlagImage</include>
 				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+				<left>161</left>
+				<width>160</width>
+				<height>66</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Mpaa]</label>
+				<font>font24_bold</font>
+				<textcolor>grey2</textcolor>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
@@ -2678,6 +2702,19 @@
 				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 				<visible>!ListItem.IsParentFolder + !ListItem.IsCollection</visible>
 			</control>
+			<control type="label">
+				<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+				<top>-7</top>
+				<left>110</left>
+				<width>100</width>
+				<height>66</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Mpaa]</label>
+				<font>font12_bold</font>
+				<textcolor>grey2</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
 			<control type="image">
 				<left>200</left>
 				<include>FlagImage2</include>
@@ -2711,9 +2748,9 @@
 			<control type="label">
 				<visible>!Container.OnScrollNext + !Container.OnScrollPrevious</visible>
 				<animation effect="fade" start="0" end="100" delay="900" time="100" reversible="false">Visible</animation>
-				<top>10</top>
+				<top>5</top>
 				<left>-10</left>
-				<width>150</width>
+				<width>135</width>
 				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -2727,6 +2764,19 @@
 				<left>120</left>
 				<include>FlagImage2</include>
 				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+				<top>-5</top>
+				<left>120</left>
+				<width>100</width>
+				<height>66</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Mpaa]</label>
+				<font>font12_bold</font>
+				<textcolor>grey2</textcolor>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 		</control>
 	</include>
@@ -2770,6 +2820,18 @@
 				<left>156</left>
 				<include>FlagImage</include>
 				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+				<left>156</left>
+				<width>160</width>
+				<height>66</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Mpaa]</label>
+				<font>font24_bold</font>
+				<textcolor>grey2</textcolor>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
@@ -2831,6 +2893,18 @@
 				<left>156</left>
 				<include>FlagImage</include>
 				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+				<left>156</left>
+				<width>160</width>
+				<height>66</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Mpaa]</label>
+				<font>font24_bold</font>
+				<textcolor>grey2</textcolor>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">
@@ -2921,6 +2995,18 @@
 				<left>156</left>
 				<include>FlagImage</include>
 				<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+				<left>156</left>
+				<width>160</width>
+				<height>66</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Mpaa]</label>
+				<font>font24_bold</font>
+				<textcolor>grey2</textcolor>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 			<!-- Codec de video -->
 			<control type="image">

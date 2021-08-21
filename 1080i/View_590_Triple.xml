@@ -796,6 +796,18 @@
 								<include>FlagImage</include>
 								<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
 							</control>
+							<control type="label">
+								<visible>String.IsEqual(Control.GetLabel(4685),resources/mpaa/NR.png)</visible>
+								<left>176</left>
+								<width>150</width>
+								<height>66</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Mpaa]</label>
+								<font>font24_bold</font>
+								<textcolor>grey2</textcolor>
+								<wrapmultiline>true</wrapmultiline>
+							</control>
 							<!-- Codec de video -->
 							<control type="image">
 								<left>352</left>

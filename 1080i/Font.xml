@@ -324,6 +324,12 @@
 			<size>28</size>
 		</font>
 		<font>
+			<name>font12_bold</name>
+			<filename>Quicksand.ttf</filename>
+			<style>bold</style>
+			<size>18</size>
+		</font>
+		<font>
 			<name>font15t</name>
 			<filename>Quicksand.ttf</filename>
 			<size>32</size>
@@ -1180,6 +1186,12 @@
 			<filename>Arialuni.ttf</filename>
 			<style>bold</style>
 			<size>31</size>
+		</font>
+		<font>
+			<name>font12_bold</name>
+			<filename>Arialuni.ttf</filename>
+			<style>bold</style>
+			<size>20</size>
 		</font>
 		<font>
 			<name>font15t</name>
