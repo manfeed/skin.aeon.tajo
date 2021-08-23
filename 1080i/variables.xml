@@ -256,7 +256,6 @@
 		<value>$INFO[ListItem.Overlay,overlays/list/]</value>
 	</variable>
 	<variable name="ListOverlayEpisodesVar">
-		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)">   99 +</value>
 		<value>$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
 	</variable>
 	<variable name="LibraryStatsVar">
@@ -645,7 +644,8 @@
 		<value>special://skin/extras/playlists/recentmovies.xsp</value>
 	</variable>
 	<variable name="StudioIconVar">
-		<value condition="!String.IsEmpty(ListItem.Studio)">$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</value>
+		<value condition="!String.IsEmpty(ListItem.Studio) + !Skin.HasSetting(Coloured.icons)">$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</value>
+		<value condition="!String.IsEmpty(ListItem.Studio) + Skin.HasSetting(Coloured.icons)">$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="!String.StartsWith(ListItem.Icon,Default)">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.Icon,views/list/]</value>
 	</variable>
