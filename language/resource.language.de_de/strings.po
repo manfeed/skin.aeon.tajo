@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-08-04 22:29+0000\n"
+"PO-Revision-Date: 2021-08-28 17:45+0000\n"
 "Last-Translator: Kai Sommerfeld <kai.sommerfeld@gmx.com>\n"
 "Language-Team: German <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/de_de/>\n"
 "Language: de_de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -918,7 +918,7 @@ msgstr "Abschnitt auswählen"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
-msgstr "Lokale Untertitel verfügbar"
+msgstr "Lokaler Untertitel verfügbar"
 
 msgctxt "#31414"
 msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]Configure video playback · Configure music playback · Configure picture slideshow[CR]Configure video language and subtitles"
@@ -930,7 +930,7 @@ msgstr "[B]MEDIA-EINSTELLUNGEN[/B][CR][CR]Definiere Standard-Aktion · Konfiguri
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Bitte Kodi-Benutzerprofil zum[CR]Anmelden und Fortfahren auswählen"
+msgstr "Bitte Kodi-Benutzerprofil auswählen[CR]um fortzufahren"
 
 # empty strings from id 31422 to 31426
 msgctxt "#31427"
@@ -1065,7 +1065,7 @@ msgstr "Niederschlagswahrscheinlichkeit"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
-msgstr "Lade Wetterbericht..."
+msgstr "Vorhersagedaten werden abgerufen ..."
 
 msgctxt "#31910"
 msgid "Map & Alerts"
@@ -1237,7 +1237,7 @@ msgstr "ANWENDUNGEN"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
-msgstr "DISC ABSPIELEN"
+msgstr "DISK WIEDERGEBEN"
 
 msgctxt "#31959"
 msgid "SYSTEM"
