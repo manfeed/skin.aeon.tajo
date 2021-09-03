@@ -39,7 +39,7 @@
 					<visible>VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="image">
-					<colordiffuse>$VAR[StudioFlagColorVar]</colordiffuse>
+					<colordiffuse>grey2</colordiffuse>
 					<width>260</width>
 					<include>MediaFlagVars</include>
 					<bordersize>2</bordersize>
