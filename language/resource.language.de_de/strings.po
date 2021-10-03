@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-09-26 14:30+0000\n"
-"Last-Translator: Chillbo <admin.weblate@contribute-osmc.com>\n"
+"PO-Revision-Date: 2021-10-03 13:41+0000\n"
+"Last-Translator: matchuek <hansi77@yandex.com>\n"
 "Language-Team: German <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/de_de/>\n"
 "Language: de_de\n"
 "MIME-Version: 1.0\n"
@@ -507,7 +507,7 @@ msgstr "Extrafanart herunterladen"
 
 msgctxt "#31119"
 msgid "Show the movies from this director in your library or view online information on this director on TMDb?"
-msgstr "Zeige Filme von diesem Regisseur in deiner Bibliothek oder zeige Online-Informationen zum Regisseur von TMDb?"
+msgstr "Die in der Datenbank vorhandenen Filme dieses Regisseurs oder Online-Informationen zu ihm auf TMDb anzeigen?"
 
 msgctxt "#31120"
 msgid "TMDb"
@@ -968,7 +968,7 @@ msgstr "Check MP3 Theme prüft, ob der Benutzer eine theme.mp3-Datei im zugehör
 # empty strings from id 31435 to 31449
 msgctxt "#31450"
 msgid "  •  Open Settings "
-msgstr "  •  Öffne Einstellungen "
+msgstr "  •   Einstellungen öffnen "
 
 msgctxt "#31451"
 msgid "  •  Click to Install"
