@@ -24,9 +24,8 @@
 					<width>1140</width>
 					<height>840</height>
 					<animation effect="slide" end="-15,0" time="250" condition="Control.HasFocus(5919) | Control.HasFocus(80)">Conditional</animation>
-					<onleft>SetProperty(MediaMenu,True,home)</onleft>
-					<onleft>SetFocus(9050)</onleft>
-					<onright condition="!Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]">5919</onright>
+					<onleft>8000</onleft>
+					<onright condition="!Container.Content(seasons) + !Container.Content(episodes) + [String.Contains(Container.SortMethod,$LOCALIZE[556]) | String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[551])]">5919</onright>
 					<onright>80</onright>
 					<onup>50</onup>
 					<ondown>50</ondown>
@@ -52,7 +51,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>790</width>
+							<width>740</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
@@ -62,7 +61,7 @@
 						<control type="label">
 							<left>135</left>
 							<top>55</top>
-							<width>790</width>
+							<width>740</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
@@ -80,7 +79,7 @@
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating) | String.IsEqual(ListItem.Label2,ListItem.Year)</visible>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font30</font>
 							<align>right</align>
@@ -91,7 +90,7 @@
 						</control>
 						<control type="label">
 							<left>5</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -127,7 +126,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>790</width>
+							<width>740</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>white</textcolor>
@@ -137,7 +136,7 @@
 						<control type="label">
 							<left>135</left>
 							<top>55</top>
-							<width>790</width>
+							<width>740</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>white</textcolor>
@@ -154,7 +153,7 @@
 							<visible>String.IsEqual(ListItem.Label2,ListItem.Rating) | String.IsEqual(ListItem.Label2,ListItem.Year)</visible>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font30</font>
 							<align>right</align>
@@ -165,7 +164,7 @@
 						</control>
 						<control type="label">
 							<left>5</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -212,7 +211,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>790</width>
+							<width>740</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
@@ -223,7 +222,7 @@
 						<control type="label">
 							<left>135</left>
 							<top>55</top>
-							<width>790</width>
+							<width>740</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
@@ -241,9 +240,9 @@
 							<visible>!String.EndsWith(Container.FolderName,$LOCALIZE[20387]) + String.IsEqual(ListItem.Label2,ListItem.Rating) + !Skin.HasSetting(Enable.HideRatings)</visible>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
-							<font>font30</font>
+							<font>font15</font>
 							<align>right</align>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -252,7 +251,7 @@
 						</control>
 						<control type="label">
 							<left>5</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -298,7 +297,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>790</width>
+							<width>740</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>white</textcolor>
@@ -309,7 +308,7 @@
 						<control type="label">
 							<left>135</left>
 							<top>55</top>
-							<width>790</width>
+							<width>740</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>white</textcolor>
@@ -326,9 +325,9 @@
 							<visible>!String.EndsWith(Container.FolderName,$LOCALIZE[20387]) + String.IsEqual(ListItem.Label2,ListItem.Rating) + !Skin.HasSetting(Enable.HideRatings)</visible>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
-							<font>font30</font>
+							<font>font15</font>
 							<align>right</align>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -337,7 +336,7 @@
 						</control>
 						<control type="label">
 							<left>5</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -374,7 +373,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>790</width>
+							<width>740</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>grey2</textcolor>
@@ -385,7 +384,7 @@
 						<control type="label">
 							<left>135</left>
 							<top>55</top>
-							<width>790</width>
+							<width>740</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>grey3</textcolor>
@@ -393,7 +392,7 @@
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -443,7 +442,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<width>790</width>
+							<width>740</width>
 							<height>70</height>
 							<font>font30</font>
 							<textcolor>white</textcolor>
@@ -454,7 +453,7 @@
 						<control type="label">
 							<left>135</left>
 							<top>55</top>
-							<width>790</width>
+							<width>740</width>
 							<height>60</height>
 							<font>font15</font>
 							<textcolor>white</textcolor>
@@ -462,7 +461,7 @@
 							<label>$VAR[VideoListLabel2Var]</label>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -531,7 +530,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -599,7 +598,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<width>1060</width>
+							<width>1075</width>
 							<height>116</height>
 							<font>font15</font>
 							<align>right</align>
@@ -680,7 +679,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
@@ -737,7 +736,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
@@ -1092,9 +1091,9 @@
 					<top>180</top>
 					<width>20</width>
 					<height>840</height>
-					<onleft>8000</onleft>
-					<onright>SetProperty(MediaMenu,True,home)</onright>
-					<onright>SetFocus(9050)</onright>
+					<onright>8000</onright>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>SetFocus(9050)</onleft>
 					<texturesliderbackground/>
 					<texturesliderbar colordiffuse="grey2" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="themecolor" border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
@@ -1107,8 +1106,9 @@
 					<top>180</top>
 					<width>506</width>
 					<height>840</height>
-					<onleft>50</onleft>
-					<onright>63</onright>
+					<onleft>SetProperty(MediaMenu,True,home)</onleft>
+					<onleft>SetFocus(9050)</onleft>
+					<onright>50</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>63</pagecontrol>
 					<orientation>vertical</orientation>
@@ -1301,7 +1301,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>70</height>
 							<font>font30</font>
 							<align>right</align>
@@ -1371,7 +1371,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>70</height>
 							<font>font30</font>
 							<align>right</align>
@@ -1430,7 +1430,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
@@ -1487,7 +1487,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
@@ -1892,15 +1892,6 @@
 	<!-- Addon List -->
 	<include name="AddonList">
 		<control type="group">
-			<!--control type="image">
-				<left>-680</left>
-				<top>-70</top>
-				<width>2040</width>
-				<height>1277</height>
-				<texture diffuse="tajo/mask_cover3.png">tajo/darkgrey.png</texture>
-				<colordiffuse>themecolor</colordiffuse>
-				<animation effect="fade" end="85" condition="true">Conditional</animation>
-			</control-->
 			<animation effect="slide" center="auto" end="610,-30" time="0" condition="true">Conditional</animation>
 			<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
 			<centerleft>ListCenterleft</centerleft>
@@ -1969,7 +1960,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
@@ -2026,7 +2017,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
@@ -2148,7 +2139,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
@@ -2205,7 +2196,7 @@
 						</control>
 						<control type="label">
 							<left>60</left>
-							<width>1060</width>
+							<width>1075</width>
 							<height>120</height>
 							<font>font15</font>
 							<align>right</align>
