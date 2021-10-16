@@ -4,6 +4,14 @@
 	<include name="VideoList">
 		<control type="group">
 			<control type="image">
+				<fadetime>200</fadetime>
+				<left>-625</left>
+				<top>15</top>
+				<width>1940</width>
+				<height>1092</height>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			</control>
+			<control type="image">
 				<left>-680</left>
 				<top>-70</top>
 				<width>2040</width>
