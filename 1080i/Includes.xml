@@ -2438,6 +2438,25 @@
 					<texture>logos/imdb250.png</texture>
 					<visible>String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Top250)) + !String.IsEmpty(Window(Home).Property(First250)) + String.IsEqual(Container.CurrentItem,Window(Home).Property(CurrPos))</visible>
 				</control>
+				<control type="image">
+					<animation effect="slide" end="20,6" condition="true">Conditional</animation>
+					<width>30</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="FF07aaf9">star.png</texture>
+					<visible>!String.IsEmpty(ListItem.UserRating) + Control.IsVisible(587)</visible>
+				</control>
+				<control type="label">
+					<animation effect="slide" end="24,0" condition="true">Conditional</animation>
+					<width>auto</width>
+					<visible>!String.IsEmpty(ListItem.UserRating) + Control.IsVisible(587)</visible>
+					<align>left</align>
+					<aligny>bottom</aligny>
+					<font>font13_bold</font>
+					<label>[COLOR white][B]$INFO[ListItem.UserRating][/B][/COLOR]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
 			</control>
 		</control>
 	</include>
