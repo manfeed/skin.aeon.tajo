@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-10-16 22:59+0000\n"
+"PO-Revision-Date: 2021-12-11 12:46+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Danish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/da_dk/>\n"
 "Language: da_dk\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.9.1\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -71,7 +71,7 @@ msgstr "Samlet varighed"
 
 msgctxt "#31010"
 msgid "Next episode"
-msgstr "Næste episode"
+msgstr "Næste afsnit"
 
 msgctxt "#31011"
 msgid "Latest episode"
@@ -135,7 +135,7 @@ msgstr "Emner"
 
 msgctxt "#31026"
 msgid "Misc Options"
-msgstr "Div. Indstillinger"
+msgstr "Diverse indstillinger"
 
 msgctxt "#31027"
 msgid "Set item background"
@@ -223,7 +223,7 @@ msgstr ""
 
 msgctxt "#31048"
 msgid "Visualisation Presets"
-msgstr "Visualiserings-forudindstillinger"
+msgstr "Forudindstillinger til visualisering"
 
 msgctxt "#31049"
 msgid "Select infoline"
@@ -544,7 +544,7 @@ msgstr ""
 
 msgctxt "#31129"
 msgid "Hide Fanart in full screen visualisation"
-msgstr "Skjul Fanart i fuldskærmsvisning"
+msgstr "Skjul fankunst i fuldskærmsvisning"
 
 msgctxt "#31130"
 msgid "Use \"Enigma2-style\" channel OSD"
@@ -769,7 +769,7 @@ msgstr ""
 
 msgctxt "#31205"
 msgid "Lyrics Source"
-msgstr "Kilde til Sangtekster"
+msgstr "Kilde til sangtekster"
 
 # empty strings from id 31206 to 31219
 msgctxt "#31220"
@@ -831,7 +831,7 @@ msgstr "Sidst opdateret"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
-msgstr "Skjul Fankunst"
+msgstr "Skjul fankunst"
 
 msgctxt "#31309"
 msgid "Memory Used:"
@@ -839,7 +839,7 @@ msgstr "Anvendt hukommelse:"
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
-msgstr "Vælg sti til Fankunst"
+msgstr "Vælg sti til fankunst"
 
 msgctxt "#31320"
 msgid "Last Logged In"
