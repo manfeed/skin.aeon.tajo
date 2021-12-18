@@ -1028,6 +1028,7 @@
 		<value>$VAR[mediaicons_path]videocodec/$INFO[ListItem.VideoCodec,,.png]</value>
 	</variable>
 	<variable name="videoresHDR">
+		<value condition="String.Contains(ListItem.Filename,HDR) + !String.Contains(ListItem.VideoResolution,4K)">HD_HDR</value>
 		<value condition="String.Contains(ListItem.Filename,HDR)">4k_HDR</value>
 		<value>$INFO[ListItem.VideoResolution]</value>
 	</variable>
@@ -1129,6 +1130,7 @@
 	<variable name="GlobalCaseVarTajo">
 		<value condition="ListItem.IsCollection">set.png</value>
 		<value condition="String.Contains(ListItem.Filename,3d) | String.Contains(ListItem.Filename,3dbd) | ListItem.IsStereoscopic">3d.png</value>
+		<value condition="String.Contains(ListItem.Filename,hdr) + !String.Contains(ListItem.VideoResolution,4K)">HD_HDR.png</value>
 		<value condition="String.Contains(ListItem.Filename,hdr)">4k_HDR.png</value>
 		<value condition="String.Contains(ListItem.Filename,4k) | String.Contains(ListItem.VideoResolution,4k)">4k.png</value>
 		<value condition="String.Contains(ListItem.Filename,hddvd)">hddvd.png</value>
