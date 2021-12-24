@@ -32,6 +32,11 @@
 		<value condition="Container.Content(movies)">videodb://movies/titles/</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">videodb://tvshows/titles/</value>
 	</variable>
+	<variable name="Extras_lookup">
+        <value condition="String.Contains(ListItem.Filenameandpath,VIDEO_TS)">$INFO[ListItem.Path,,VIDEO_TS\extras/]</value>
+        <value condition="String.Contains(ListItem.Filenameandpath,BDMV)">$INFO[ListItem.Path,,BDMV\extras/]</value>
+        <value>$INFO[ListItem.Path,,extras/]</value>
+    </variable>
 	<variable name="Option_Back">
 		<value condition="String.IsEqual(Skin.String(flat_back),1)">tajo/yellow.jpg</value>
 		<value condition="String.IsEqual(Skin.String(flat_back),2)">tajo/backani.gif</value>
@@ -244,6 +249,7 @@
 		<value condition="Control.HasFocus(210) | Control.HasFocus(211)">$LOCALIZE[31110]</value>
 		<value condition="Control.HasFocus(212) | Control.HasFocus(213)">$LOCALIZE[31475]</value>
 		<value condition="Control.HasFocus(214) | Control.HasFocus(215)">$LOCALIZE[31477]</value>
+		<value condition="Control.HasFocus(337) | Control.HasFocus(338)">$LOCALIZE[32022]</value>
 		<value condition="Control.HasFocus(216) | Control.HasFocus(217)">$LOCALIZE[31200]</value>
 		<value condition="Control.HasFocus(300) | Control.HasFocus(301)">$LOCALIZE[31476]</value>
 		<value condition="Control.HasFocus(302) | Control.HasFocus(303)">$LOCALIZE[31479]</value>

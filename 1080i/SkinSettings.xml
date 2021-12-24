@@ -284,6 +284,26 @@
 						<onclick>Skin.ToggleSetting(ScreensaverNetflix)</onclick>
 						<selected>Skin.HasSetting(ScreensaverNetflix)</selected>
 					</control>
+					<control type="radiobutton" id="237">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32010</label>
+						<onclick>Skin.ToggleSetting(PlayPreviewM)</onclick>
+						<selected>Skin.HasSetting(PlayPreviewM)</selected>
+					</control>
+					<control type="radiobutton" id="253">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32021</label>
+						<onclick>Skin.ToggleSetting(SearchExtras)</onclick>
+						<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
+						<onclick condition="!System.HasAddon(context.item.extras)">InstallAddon(context.item.extras)</onclick>
+						<selected>Skin.HasSetting(SearchExtras)</selected>
+					</control>
 					<control type="radiobutton" id="119">
 						<width>1316</width>
 						<height>90</height>
@@ -354,15 +374,6 @@
 						<visible>Skin.HasSetting(playTrailer)</visible>
 						<onclick>Skin.SetString(StartTrailer,10)</onclick>
 						<selected>String.IsEqual(Skin.String(StartTrailer),10)</selected>
-					</control>
-					<control type="radiobutton" id="237">
-						<width>1316</width>
-						<height>90</height>
-						<textoffsetx>30</textoffsetx>
-						<font>font15</font>
-						<label>32010</label>
-						<onclick>Skin.ToggleSetting(PlayPreviewM)</onclick>
-						<selected>Skin.HasSetting(PlayPreviewM)</selected>
 					</control>
 					<control type="radiobutton" id="247">
 						<visible>System.HasAddon(plugin.video.themoviedb.helper)</visible>

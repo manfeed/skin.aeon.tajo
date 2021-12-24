@@ -11,6 +11,7 @@
 	<!-- Intro -->
 	<onload condition="!Skin.HasSetting(Enable.StartupIntro)">ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onunload condition="Skin.HasSetting(Enable.StartupIntro)">PlayerControl(Stop)</onunload>
+	<onunload condition="Skin.HasSetting(Enable.StartupIntro)">Playlist.Clear</onunload>
 	<controls>
 		<control type="button" id="10">
 			<include>HiddenObject</include>

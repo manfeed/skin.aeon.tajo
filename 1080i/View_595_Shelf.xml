@@ -84,6 +84,15 @@
 						<texture background="true">tajo/osd_black_bg2.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
+					<control type="image">
+						<visible>!String.IsEmpty(Window(Home).Property(extras_yes))</visible>
+						<left>1870</left>
+						<top>90</top>
+						<width>60</width>
+						<height>60</height>
+						<texture background="true">tajo/extras.png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
 				</control>
 				<control type="videowindow" id="2449">
 					<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
@@ -1545,6 +1554,10 @@
 				<include>HiddenObject</include>
 				<visible>!String.IsEmpty(Window(Home).Property(FirstRow))</visible>
 				<onfocus condition="!String.IsEmpty(Window(Home).Property(FirstRow))">ClearProperty(FirstRow,home)</onfocus>
+			</control>
+			<control type="button" id="2899">
+				<include>HiddenObject</include>
+				<onfocus condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(SearchExtras)">RunScript(script.embuary.helper,action=lookforfile,file='"$VAR[Extras_lookup]"',prop=extras_yes)</onfocus>
 			</control>
 			<control type="group">
 				<animation type="Focus" reversible="false">
