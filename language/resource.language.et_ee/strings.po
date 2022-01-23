@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2021-09-19 19:30+0000\n"
 "Last-Translator: rimasx <riks_12@hot.ee>\n"
@@ -1483,4 +1483,12 @@ msgstr ""
 
 msgctxt "#32020"
 msgid "Display coloured icons."
+msgstr ""
+
+msgctxt "#32021"
+msgid "Show extra features for movies."
+msgstr ""
+
+msgctxt "#32022"
+msgid "Show in the context menu the extra features that exist in the movie's extra folder."
 msgstr ""
