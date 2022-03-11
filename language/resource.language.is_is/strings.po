@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-02-28 08:28+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2022-03-09 14:21+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/is_is/>\n"
 "Language: is_is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -43,7 +43,7 @@ msgstr "Þokukennd smámynd albúms"
 
 msgctxt "#31003"
 msgid "Power Options"
-msgstr "Orkukostir"
+msgstr "Aflstýring"
 
 msgctxt "#31004"
 msgid "Working"
@@ -55,7 +55,7 @@ msgstr "Fastur"
 
 msgctxt "#31006"
 msgid "View Options"
-msgstr "Stillingar sjónarhorns"
+msgstr "Valkostir skoðunar"
 
 msgctxt "#31007"
 msgid "Setup home"
@@ -223,7 +223,7 @@ msgstr "Velja tákn hlutar"
 
 msgctxt "#31048"
 msgid "Visualisation Presets"
-msgstr "Myndskreyting forstillingar"
+msgstr "Forstillingar sjónhrifa"
 
 msgctxt "#31049"
 msgid "Select infoline"
@@ -271,7 +271,7 @@ msgstr "Settu inn Artist Slideshow viðbótina til að virka þessa aðgerð"
 
 msgctxt "#31060"
 msgid "This file is stacked, select the part you want to play from."
-msgstr "Þessi skrá er hluti af stafla, veldu þann hluta sem þú vilt spila."
+msgstr "Þessi skrá er stöfluð, veldu þann part sem þú vilt byrja að spila úr."
 
 msgctxt "#31061"
 msgid "Favourites statistics"
@@ -527,11 +527,11 @@ msgstr "Umsagnir um plötu"
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
-msgstr "Sýna \"Í spilun\" myndband í bakgrunni"
+msgstr "Sýna \"Í spilun\" myndskeið í bakgrunni"
 
 msgctxt "#31125"
 msgid "Show Background \"Now Playing\" Visualisation"
-msgstr "Sýna \"Í spilun\" myndskreytingu í bakgrunni"
+msgstr "Sýna \"Í spilun\" sjónhrif í bakgrunni"
 
 # empty string with id 31126
 msgctxt "#31127"
@@ -544,7 +544,7 @@ msgstr ""
 
 msgctxt "#31129"
 msgid "Hide Fanart in full screen visualisation"
-msgstr "Fela"
+msgstr "Fela aðdáendamyndir í sjónhrifum í heilskjá"
 
 msgctxt "#31130"
 msgid "Use \"Enigma2-style\" channel OSD"
@@ -596,7 +596,7 @@ msgstr ""
 
 msgctxt "#31142"
 msgid "Settings level"
-msgstr "Stillingar"
+msgstr "Ítarleiki stillinga"
 
 msgctxt "#31143"
 msgid "Hide Recordings"
@@ -877,7 +877,7 @@ msgstr ""
 
 msgctxt "#31390"
 msgid "Skin default"
-msgstr "Sjálfgildi útlits"
+msgstr "Sjálfgefið í skinni"
 
 # empty strings from id 31391 to 31399
 msgctxt "#31400"
@@ -1017,11 +1017,11 @@ msgstr "Rás hópur"
 
 msgctxt "#31502"
 msgid "Live TV"
-msgstr "Sjónvarp bein útsending"
+msgstr "Bein sjónvarpsútsending"
 
 msgctxt "#31503"
 msgid "Add Group"
-msgstr "Bæta við hóp"
+msgstr "Bæta við hópi"
 
 msgctxt "#31504"
 msgid "Rename Group"
@@ -1029,11 +1029,11 @@ msgstr "Endurnefna hóp"
 
 msgctxt "#31505"
 msgid "Delete Group"
-msgstr "Eyða hóp"
+msgstr "Eyða hópi"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
-msgstr "Í boði[CR]Hópar"
+msgstr "Tiltækir[CR]hópar"
 
 msgctxt "#31511"
 msgid "Channel Options"
@@ -1049,7 +1049,7 @@ msgstr "36 klst veðurspá"
 
 msgctxt "#31902"
 msgid "Hourly Forecast"
-msgstr "Klukkustunda veðurspá"
+msgstr "Veðurspá fyrir klukkustundir"
 
 msgctxt "#31903"
 msgid "Weekend Forecast"
