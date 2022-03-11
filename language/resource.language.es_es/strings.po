@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-18 21:29+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2022-03-09 14:21+0000\n"
+"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7\n"
+"X-Generator: Weblate 4.11.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -367,7 +367,7 @@ msgstr "Activar información de Next Aired en la librería de videos"
 
 msgctxt "#31084"
 msgid "Conditional weather"
-msgstr "Clima condicional"
+msgstr "Meteorología condicional"
 
 msgctxt "#31085"
 msgid "Musicvideo library statistics"
@@ -447,7 +447,7 @@ msgstr "N/A"
 
 msgctxt "#31104"
 msgid "Similar artists"
-msgstr "Artistas similares"
+msgstr "Intérpretes similares"
 
 msgctxt "#31105"
 msgid "More albums from"
@@ -463,7 +463,7 @@ msgstr "Persistente"
 
 msgctxt "#31108"
 msgid "Enable artist information feed (if available)"
-msgstr "Habilitar información de artista (si está disponible)"
+msgstr "Activar información de intérprete (si está disponible)"
 
 msgctxt "#31109"
 msgid "Unwatched episode count"
@@ -671,7 +671,7 @@ msgstr "Mostrar nombre de fondo"
 
 msgctxt "#31161"
 msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
-msgstr "Mostrar el título de película/serie de tv/artista en la pantalla inicial si hay una presentación de fanarts como fondo de pantalla"
+msgstr "Mostrar el título de película/serie de tv/intérprete en la pantalla inicial si hay una presentación de fanarts como fondo de pantalla"
 
 msgctxt "#31162"
 msgid "min"
@@ -683,7 +683,7 @@ msgstr "TIMESHIFT"
 
 msgctxt "#31164"
 msgid "Change weather icons"
-msgstr "Cambiar iconos del tiempo"
+msgstr "Cambiar iconos meteorológicos"
 
 msgctxt "#31165"
 msgid "Layout"
@@ -764,7 +764,7 @@ msgstr "Oculta el número de elementos en vistas multimedia"
 # empty strings from id 31184 to 31199
 msgctxt "#31200"
 msgid "Is used to choose among different Kodi resource image pack to weather artwork and icons."
-msgstr "Se usa para escoger entre diferentes packs de imágenes de iconos y de la meteorología."
+msgstr "Se usa para escoger entre diferentes packs de imágenes y de iconos de meteorología."
 
 msgctxt "#31205"
 msgid "Lyrics Source"
@@ -776,7 +776,7 @@ msgstr "Mostrar calificación"
 
 msgctxt "#31221"
 msgid "Show artist clearart"
-msgstr "Mostrar clearart del artista"
+msgstr "Mostrar ClearArt del intérprete"
 
 msgctxt "#31222"
 msgid "Show CD"
@@ -1196,7 +1196,7 @@ msgstr "Esto cambia el diseño de la vista de lista. Por defecto es un diseño d
 
 msgctxt "#31950"
 msgid "WEATHER"
-msgstr "CLIMA"
+msgstr "METEOROLOGÍA"
 
 msgctxt "#31951"
 msgid "PICTURES"
@@ -1392,7 +1392,7 @@ msgstr "Salvapantallas estilo Netflix en vistas de música y vídeos"
 
 msgctxt "#32000"
 msgid "Displays a fullscreen slideshow of movies, tvshows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
-msgstr "Inicia una presentación a pantalla completa de fanarts de películas, series o artistas (dependiendo de la sección en que uno se encuentre) cuando transcurren 2 minutos dentro de una vista de medios sin que el usuario intervenga"
+msgstr "Inicia una presentación a pantalla completa de fanarts de películas, series o intérpretes (dependiendo de la sección en que uno se encuentre) cuando transcurren 2 minutos dentro de una vista de medios sin que el usuario intervenga"
 
 msgctxt "#32001"
 msgid "Play automatically movie trailers in video views"
@@ -1436,7 +1436,7 @@ msgstr "Reproducir automáticamente canciones al navegar en música"
 
 msgctxt "#32011"
 msgid "Plays automatically songs belonging to the current artist or album when browsing through music views"
-msgstr "Reproduce automáticamente canciones del artista o del album mientras se navega en algunas vistas de música"
+msgstr "Reproduce automáticamente canciones del intérprete o del album mientras se navega en algunas vistas de música"
 
 msgctxt "#32012"
 msgid "Set path to user's home music folder"
