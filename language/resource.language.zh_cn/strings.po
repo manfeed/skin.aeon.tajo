@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2022-01-09 02:13+0000\n"
 "Last-Translator: taxigps <taxigps@sina.com>\n"
@@ -747,8 +747,8 @@ msgid "Critics"
 msgstr "评论家"
 
 msgctxt "#31180"
-msgid "Play local 'theme.mp3' file when browsing Movies and Tvshows"
-msgstr "浏览电影和剧集时播放本地‘theme.mp3’文件"
+msgid "Play local 'theme.mp3' file when browsing Movies and TV shows"
+msgstr ""
 
 msgctxt "#31181"
 msgid "Display cast in video views"
@@ -964,8 +964,8 @@ msgid "Skin Info Service is used to display movie set information throughout the
 msgstr "皮肤信息服务用于在整个皮肤中显示电影集信息。"
 
 msgctxt "#31434"
-msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/tvshow folder to be played when browsing."
-msgstr "MP3 主题曲检测会检查用户是否已将 Theme.MP3 文件放入相应的电影/剧集文件夹中，以便在浏览时播放。"
+msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/TV show folder to be played when browsing."
+msgstr ""
 
 # empty strings from id 31435 to 31449
 msgctxt "#31450"
@@ -978,8 +978,8 @@ msgstr "  •  点击安装"
 
 # empty strings from id 31452 to 31472
 msgctxt "#31473"
-msgid "Embuary Helper provides the data to display the cast for movies and tvshows."
-msgstr "Embuary Helper 提供了显示电影和剧集演员的相关数据。"
+msgid "Embuary Helper provides the data to display the cast for movies and TV shows."
+msgstr ""
 
 msgctxt "#31474"
 msgid "CU LRC Lyrics is used to download, sync, and display lyrics during fullscreen music playback."
@@ -1010,8 +1010,8 @@ msgid "Library Editor Script uses JSON to directly edit your database informatio
 msgstr "资料库编辑器脚本使用 JSON 直接编辑数据库信息。"
 
 msgctxt "#31481"
-msgid "Global Search makes possible to search among all the items (movies, tvshows, music, actors, etc.) in your collection."
-msgstr "Global Search 使您可以从收藏中搜索所有项目（电影、剧集、音乐、演员等）。"
+msgid "Global Search makes possible to search among all the items (movies, TV shows, music, actors, etc.) in your collection."
+msgstr ""
 
 # empty strings from id 31482 to 31500
 msgctxt "#31501"
@@ -1286,8 +1286,8 @@ msgid "General options"
 msgstr "通用选项"
 
 msgctxt "#31970"
-msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/tvshows and other options."
-msgstr "旋律的设置，显示小部件的方式，电影/剧集的主题曲和演员以及其他选项。"
+msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/TV shows and other options."
+msgstr ""
 
 msgctxt "#31971"
 msgid "Color for items selected"
@@ -1306,8 +1306,8 @@ msgid "More movies featuring"
 msgstr "更多电影"
 
 msgctxt "#31975"
-msgid "More tv shows featuring"
-msgstr "更多剧集"
+msgid "More TV shows featuring"
+msgstr ""
 
 msgctxt "#31976"
 msgid "Image gallery"
@@ -1406,8 +1406,8 @@ msgid "Screensaver Netflix style in media views"
 msgstr "媒体视图中的屏幕保护程序使用 Netflix 样式"
 
 msgctxt "#32000"
-msgid "Displays a fullscreen slideshow of movies, tvshows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
-msgstr "在媒体视图中空闲2分钟时，显示电影、剧集或艺人同人画的全屏幻灯片（取决于用户正在浏览的部分）"
+msgid "Displays a fullscreen slideshow of movies, TV shows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
+msgstr ""
 
 msgctxt "#32001"
 msgid "Play automatically movie trailers in video views"
@@ -1470,12 +1470,12 @@ msgid "Show only background"
 msgstr "仅显示背景"
 
 msgctxt "#32016"
-msgid "TheMovieDb Helper provides data to display online ratings for movies and tvshows"
-msgstr "ThemovieDB Helper 提供数据以显示电影和剧集的在线评分"
+msgid "TheMovieDb Helper provides data to display online ratings for movies and TV shows"
+msgstr ""
 
 msgctxt "#32017"
-msgid "Show online ratings for movies and tvshows"
-msgstr "显示电影和剧集的在线评分"
+msgid "Show online ratings for movies and TV shows"
+msgstr ""
 
 msgctxt "#32018"
 msgid "You may have to restart Kodi. TMDb and Trakt should work out of the box. Metacritic and Rottentomatoes ratings require an OMDb API key. Get an OMDb API Key at http://www.omdbapi.com/apikey.aspx then input the OMDb API Key into the TheMovieDb Helper settings."
@@ -1486,13 +1486,154 @@ msgid "Resource image addon for displaying coloured studio icons throughout the 
 msgstr "资源图像插件用于在整个皮肤中显示彩色的工作室图标。"
 
 msgctxt "#32020"
-msgid "Display coloured icons."
-msgstr "显示彩色图标。"
+msgid "Display coloured icons"
+msgstr ""
 
 msgctxt "#32021"
-msgid "Show extra features for movies."
-msgstr "为电影显示附加功能。"
+msgid "Show extra features for movies and TV shows"
+msgstr ""
 
 msgctxt "#32022"
-msgid "Show in the context menu the extra features that exist in the movie's extra folder."
-msgstr "在上下文菜单中显示电影的附加文件夹中存在的附加功能。"
+msgid "Show the additional features that the user put in the movie (or TV show) 'extras' folder. Don't forget to adapt your advancedsetting.xml file accordingly."
+msgstr ""
+
+msgctxt "#32023"
+msgid "Show extras"
+msgstr ""
+
+msgctxt "#32024"
+msgid "Enable shifting colours in home screen"
+msgstr ""
+
+msgctxt "#32025"
+msgid "Enable shifting colours in home screen menu and in the default background."
+msgstr ""
+
+msgctxt "#32026"
+msgid "Name of user's additional features folder (if different to 'extras')"
+msgstr ""
+
+msgctxt "#32027"
+msgid "Select image to show as background instead of default"
+msgstr ""
+
+msgctxt "#32028"
+msgid "Browse for image"
+msgstr ""
+
+msgctxt "#32029"
+msgid "Show Music videos"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Show Albums"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Show Songs"
+msgstr ""
+
+msgctxt "#32032"
+msgid "Blurred album image as background"
+msgstr ""
+
+msgctxt "#32033"
+msgid "Browse for path"
+msgstr ""
+
+msgctxt "#32034"
+msgid "Show extra features for music albums"
+msgstr ""
+
+msgctxt "#32035"
+msgid "Show the additional features that the user put in the music album 'extras' folder. Don't forget to adapt your advancedsetting.xml file accordingly."
+msgstr ""
+
+msgctxt "#32036"
+msgid "When browsing movies (and TV shows), plays automatically the file 'theme.mp3' if it exists in the movie folder."
+msgstr ""
+
+msgctxt "#32037"
+msgid "Shows the normal poster (poster.jpg) in movies and TV shows views."
+msgstr ""
+
+msgctxt "#32038"
+msgid "Shows the animated poster (animatedposter.gif) in movies and TV shows views."
+msgstr ""
+
+msgctxt "#32039"
+msgid "Shows all the extra posters (poster1.jpg, poster2.jpg, poster3.jpg...) in movies and TV shows views."
+msgstr ""
+
+msgctxt "#32040"
+msgid "Thanks for using Aeon Tajo, I really hope you enjoy it! Creating and maintaining a skin for Kodi is quite hard and requires hundreds of hours of work (Aeon Tajo has over 60,000 lines of code and hundreds of images). Only a few can devote so much time; despite their earnest efforts, “real life”, that is, their family and their job, usually gets in their way. That is why many developers fail to finish their skins or can’t keep them up to date, so they stop working on the newest Kodi versions.[CR][CR]I think it would be a pity if Aeon Tajo disappeared too. If you want to help avoid it and let this skin keep improving, and if you would also like to enjoy some extra options, visit [B][COLOR=themecolor]patreon.com[/B][/COLOR] and search for the creator [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR], or go to [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR] to get more information. Thank you very much![CR][CR]Manuel"
+msgstr ""
+
+msgctxt "#32041"
+msgid "Blurred album image as background in music visualisation screen"
+msgstr ""
+
+msgctxt "#32042"
+msgid "Hide watched icon in video views"
+msgstr ""
+
+msgctxt "#32043"
+msgid "Disclaimer: Aeon Tajo does not provide any media content or sources. Users must provide their own content. Support will not be provided for any 'builds' nor online addons that offer copyrighted content."
+msgstr ""
+
+msgctxt "#32044"
+msgid "Change to "
+msgstr ""
+
+msgctxt "#32045"
+msgid "Remember that you should adapt your advancedsetting.xml file to reflect this change, so as to prevent your extras content to be added inadvertently to the Kodi library."
+msgstr ""
+
+#~ msgctxt "#31180"
+#~ msgid "Play local 'theme.mp3' file when browsing Movies and Tvshows"
+#~ msgstr "浏览电影和剧集时播放本地‘theme.mp3’文件"
+
+#~ msgctxt "#31434"
+#~ msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/tvshow folder to be played when browsing."
+#~ msgstr "MP3 主题曲检测会检查用户是否已将 Theme.MP3 文件放入相应的电影/剧集文件夹中，以便在浏览时播放。"
+
+# empty strings from id 31452 to 31472
+#~ msgctxt "#31473"
+#~ msgid "Embuary Helper provides the data to display the cast for movies and tvshows."
+#~ msgstr "Embuary Helper 提供了显示电影和剧集演员的相关数据。"
+
+#~ msgctxt "#31481"
+#~ msgid "Global Search makes possible to search among all the items (movies, tvshows, music, actors, etc.) in your collection."
+#~ msgstr "Global Search 使您可以从收藏中搜索所有项目（电影、剧集、音乐、演员等）。"
+
+#~ msgctxt "#31970"
+#~ msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/tvshows and other options."
+#~ msgstr "旋律的设置，显示小部件的方式，电影/剧集的主题曲和演员以及其他选项。"
+
+#~ msgctxt "#31975"
+#~ msgid "More tv shows featuring"
+#~ msgstr "更多剧集"
+
+#~ msgctxt "#32000"
+#~ msgid "Displays a fullscreen slideshow of movies, tvshows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
+#~ msgstr "在媒体视图中空闲2分钟时，显示电影、剧集或艺人同人画的全屏幻灯片（取决于用户正在浏览的部分）"
+
+#~ msgctxt "#32016"
+#~ msgid "TheMovieDb Helper provides data to display online ratings for movies and tvshows"
+#~ msgstr "ThemovieDB Helper 提供数据以显示电影和剧集的在线评分"
+
+#~ msgctxt "#32017"
+#~ msgid "Show online ratings for movies and tvshows"
+#~ msgstr "显示电影和剧集的在线评分"
+
+#~ msgctxt "#32020"
+#~ msgid "Display coloured icons."
+#~ msgstr "显示彩色图标。"
+
+#~ msgctxt "#32021"
+#~ msgid "Show extra features for movies."
+#~ msgstr "为电影显示附加功能。"
+
+#~ msgctxt "#32022"
+#~ msgid "Show in the context menu the extra features that exist in the movie's extra folder."
+#~ msgstr "在上下文菜单中显示电影的附加文件夹中存在的附加功能。"

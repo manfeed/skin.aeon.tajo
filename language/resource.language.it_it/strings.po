@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-04-26 20:14+0000\n"
+"PO-Revision-Date: 2022-05-26 12:14+0000\n"
 "Last-Translator: PAV <paolopavese100@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/it_it/>\n"
 "Language: it_it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12\n"
+"X-Generator: Weblate 4.12.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -167,7 +167,7 @@ msgstr "Episodi casuali"
 
 msgctxt "#31034"
 msgid "Recommended episodes"
-msgstr "Consigliato"
+msgstr "Episodi consigliati"
 
 msgctxt "#31035"
 msgid "Random songs"
@@ -199,7 +199,7 @@ msgstr "Seleziona widget"
 
 msgctxt "#31042"
 msgid "Show \"Now Playing\" information blended in the background"
-msgstr "Mostra informazioni \"In esecuzione\" direttamente nello sfondo"
+msgstr "Mostra informazioni sul video \"In Riproduzione\" direttamente sullo sfondo"
 
 msgctxt "#31043"
 msgid "Platform"
@@ -207,11 +207,11 @@ msgstr "Piattaforma"
 
 msgctxt "#31044"
 msgid "Views: Plot outline | Info dialog: Full plot"
-msgstr "Viste: Trama completa | Dialogo informazioni: Trama intera"
+msgstr "Viste: Trama completa | Finestra informazioni: Trama intera"
 
 msgctxt "#31045"
 msgid "Views: Full plot | Info dialog: Plot outline"
-msgstr "Viste: Trama intera | Dialogo informazioni: Trama completa"
+msgstr "Viste: Trama intera | Finestra informazioni: Trama completa"
 
 msgctxt "#31046"
 msgid "SEEKING"
@@ -359,11 +359,11 @@ msgstr "Abilità sottomenù personalizzati"
 
 msgctxt "#31082"
 msgid "Detach RSS feed from the main menu"
-msgstr "Stacca feed RSS dal menù principale"
+msgstr "Rimuovi i feed RSS dal menù principale"
 
 msgctxt "#31083"
 msgid "Enable Next Aired information in the videolibrary"
-msgstr "Abilita le informazioni dell'addon Next Aired nella libreria video"
+msgstr "Abilita le informazioni dell'add-on Next Aired nella libreria video"
 
 msgctxt "#31084"
 msgid "Conditional weather"
@@ -371,7 +371,7 @@ msgstr "Condizioni Meteo"
 
 msgctxt "#31085"
 msgid "Musicvideo library statistics"
-msgstr "Statistiche libreria video musiali"
+msgstr "Statistiche libreria video musicali"
 
 msgctxt "#31086"
 msgid "Icon"
@@ -415,7 +415,7 @@ msgstr "Lista ridotta"
 
 msgctxt "#31096"
 msgid "Concert locations"
-msgstr "Località dei concerti"
+msgstr "Posizione dei concerti"
 
 msgctxt "#31097"
 msgid "Movie playlist statistics"
@@ -455,7 +455,7 @@ msgstr "Altri album da"
 
 msgctxt "#31106"
 msgid "On info"
-msgstr "Nella schermata informazioni"
+msgstr "Nella finestra informazioni"
 
 msgctxt "#31107"
 msgid "Persistent"
@@ -495,7 +495,7 @@ msgstr "Serie TV simili"
 
 msgctxt "#31116"
 msgid "cycle fanart"
-msgstr "ciclo fanart"
+msgstr "alterna fanart"
 
 msgctxt "#31117"
 msgid "Fallback"
@@ -527,11 +527,11 @@ msgstr "Recensione Album"
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
-msgstr "Mostra nello Sfondo il nome del Video \"In Riproduzione\""
+msgstr "Mostra sullo Sfondo il video attualmente \"In Riproduzione\""
 
 msgctxt "#31125"
 msgid "Show Background \"Now Playing\" Visualisation"
-msgstr "Mostra vista \"In riproduzione\" nello sfondo"
+msgstr "Mostra un equalizzatore grafico durante la \"riproduzione\""
 
 # empty string with id 31126
 msgctxt "#31127"
@@ -560,11 +560,11 @@ msgstr "Tuner:"
 
 msgctxt "#31133"
 msgid "Timeline channels-type:"
-msgstr "Sequenza temporale del tipo di canali:"
+msgstr "Guida Programmi basata sui canali:"
 
 msgctxt "#31134"
 msgid "Timeline view-type:"
-msgstr "Sequenza temporale del tipo di vista:"
+msgstr "Guida programmi classica:"
 
 msgctxt "#31135"
 msgid "Infobar Options"
@@ -747,8 +747,8 @@ msgid "Critics"
 msgstr "Critica"
 
 msgctxt "#31180"
-msgid "Play local 'theme.mp3' file when browsing Movies and Tvshows"
-msgstr "Riproduci il file \\\"theme.mp3\\\" locale durante la navigazione di film e programmi TV"
+msgid "Play local 'theme.mp3' file when browsing Movies and TV shows"
+msgstr ""
 
 msgctxt "#31181"
 msgid "Display cast in video views"
@@ -826,7 +826,7 @@ msgstr "Panoramica"
 
 msgctxt "#31301"
 msgid "Last Updated"
-msgstr "Ultimo Aggiornamento"
+msgstr "Ultimo aggiornamento"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -846,7 +846,7 @@ msgstr "Ultimo Login"
 
 msgctxt "#31321"
 msgid "Karaoke Song Selector"
-msgstr "Karaoke Song Selector"
+msgstr "Selezionatore canzoni del Karaoke"
 
 msgctxt "#31328"
 msgid "Recently Added"
@@ -876,7 +876,7 @@ msgstr "Opzionale"
 
 msgctxt "#31390"
 msgid "Skin default"
-msgstr "Predefinito della Skin"
+msgstr "Predefinito della skin"
 
 # empty strings from id 31391 to 31399
 msgctxt "#31400"
@@ -913,11 +913,11 @@ msgstr "[B]CONFIGURA IMPOSTAZIONI DI RETE[/B][CR][CR]Imposta il controllo di Kod
 
 msgctxt "#31412"
 msgid "Select section"
-msgstr "Seleziona selezione"
+msgstr "Seleziona sezione"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
-msgstr "Sottotitolo locale disponibile"
+msgstr "Sottotitoli locali disponibili"
 
 msgctxt "#31414"
 msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]Configure video playback · Configure music playback · Configure picture slideshow[CR]Configure video language and subtitles"
@@ -958,11 +958,11 @@ msgstr "Fornisce numerose opzioni Widget e informazioni complete del cast e dell
 
 msgctxt "#31433"
 msgid "Skin Info Service is used to display movie set information throughout the skin."
-msgstr "Skin Info Service viene utilizzato per visualizzare le informazioni sui set cinematografici su tutta la skin."
+msgstr "Skin Info Service viene utilizzato per visualizzare le informazioni sui set cinematografici in tutte le sezioni della skin."
 
 msgctxt "#31434"
-msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/tvshow folder to be played when browsing."
-msgstr "Check MP3 Theme controlla se l'utente ha inserito un file theme.mp3 nella cartella film/programma televisivo corrispondente da riprodurre durante la navigazione."
+msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/TV show folder to be played when browsing."
+msgstr ""
 
 # empty strings from id 31435 to 31449
 msgctxt "#31450"
@@ -975,8 +975,8 @@ msgstr "  •  Fai clic per installare"
 
 # empty strings from id 31452 to 31472
 msgctxt "#31473"
-msgid "Embuary Helper provides the data to display the cast for movies and tvshows."
-msgstr "Embuary Helper fornisce i dati per visualizzare il cast di film e programmi TV."
+msgid "Embuary Helper provides the data to display the cast for movies and TV shows."
+msgstr ""
 
 msgctxt "#31474"
 msgid "CU LRC Lyrics is used to download, sync, and display lyrics during fullscreen music playback."
@@ -1007,8 +1007,8 @@ msgid "Library Editor Script uses JSON to directly edit your database informatio
 msgstr "Library Editor Script utilizza JSON per modificare direttamente le informazioni del database."
 
 msgctxt "#31481"
-msgid "Global Search makes possible to search among all the items (movies, tvshows, music, actors, etc.) in your collection."
-msgstr "Global Search rende possibile la ricerca tra tutti gli elementi (film, programmi TV, musica, attori, ecc.) nella tua raccolta."
+msgid "Global Search makes possible to search among all the items (movies, TV shows, music, actors, etc.) in your collection."
+msgstr ""
 
 msgctxt "#31501"
 msgid "Channel group"
@@ -1280,8 +1280,8 @@ msgid "General options"
 msgstr "Opzioni generali"
 
 msgctxt "#31970"
-msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/tvshows and other options."
-msgstr "Impostazione di melodie, il modo di mostrare widget, temi e cast per film/spettacoli televisivi e altre opzioni."
+msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/TV shows and other options."
+msgstr ""
 
 msgctxt "#31971"
 msgid "Color for items selected"
@@ -1300,8 +1300,8 @@ msgid "More movies featuring"
 msgstr "Altri film con"
 
 msgctxt "#31975"
-msgid "More tv shows featuring"
-msgstr "Altri programmi TV in primo piano"
+msgid "More TV shows featuring"
+msgstr ""
 
 msgctxt "#31976"
 msgid "Image gallery"
@@ -1400,8 +1400,8 @@ msgid "Screensaver Netflix style in media views"
 msgstr "Stile salvaschermo Netflix nella visualizzazione di media"
 
 msgctxt "#32000"
-msgid "Displays a fullscreen slideshow of movies, tvshows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
-msgstr "Mostra una presentazione a schermo intero di film, programmi TV o fanart di artisti (a seconda della sezione che l'utente sta navigando) quando passano 2 minuti in stato di inattività all'interno di una visualizzazione di media"
+msgid "Displays a fullscreen slideshow of movies, TV shows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
+msgstr ""
 
 msgctxt "#32001"
 msgid "Play automatically movie trailers in video views"
@@ -1464,11 +1464,11 @@ msgid "Show only background"
 msgstr ""
 
 msgctxt "#32016"
-msgid "TheMovieDb Helper provides data to display online ratings for movies and tvshows"
+msgid "TheMovieDb Helper provides data to display online ratings for movies and TV shows"
 msgstr ""
 
 msgctxt "#32017"
-msgid "Show online ratings for movies and tvshows"
+msgid "Show online ratings for movies and TV shows"
 msgstr ""
 
 msgctxt "#32018"
@@ -1480,13 +1480,134 @@ msgid "Resource image addon for displaying coloured studio icons throughout the 
 msgstr ""
 
 msgctxt "#32020"
-msgid "Display coloured icons."
+msgid "Display coloured icons"
 msgstr ""
 
 msgctxt "#32021"
-msgid "Show extra features for movies."
+msgid "Show extra features for movies and TV shows"
 msgstr ""
 
 msgctxt "#32022"
-msgid "Show in the context menu the extra features that exist in the movie's extra folder."
+msgid "Show the additional features that the user put in the movie (or TV show) 'extras' folder. Don't forget to adapt your advancedsetting.xml file accordingly."
 msgstr ""
+
+msgctxt "#32023"
+msgid "Show extras"
+msgstr ""
+
+msgctxt "#32024"
+msgid "Enable shifting colours in home screen"
+msgstr ""
+
+msgctxt "#32025"
+msgid "Enable shifting colours in home screen menu and in the default background."
+msgstr ""
+
+msgctxt "#32026"
+msgid "Name of user's additional features folder (if different to 'extras')"
+msgstr ""
+
+msgctxt "#32027"
+msgid "Select image to show as background instead of default"
+msgstr ""
+
+msgctxt "#32028"
+msgid "Browse for image"
+msgstr ""
+
+msgctxt "#32029"
+msgid "Show Music videos"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Show Albums"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Show Songs"
+msgstr ""
+
+msgctxt "#32032"
+msgid "Blurred album image as background"
+msgstr ""
+
+msgctxt "#32033"
+msgid "Browse for path"
+msgstr ""
+
+msgctxt "#32034"
+msgid "Show extra features for music albums"
+msgstr ""
+
+msgctxt "#32035"
+msgid "Show the additional features that the user put in the music album 'extras' folder. Don't forget to adapt your advancedsetting.xml file accordingly."
+msgstr ""
+
+msgctxt "#32036"
+msgid "When browsing movies (and TV shows), plays automatically the file 'theme.mp3' if it exists in the movie folder."
+msgstr ""
+
+msgctxt "#32037"
+msgid "Shows the normal poster (poster.jpg) in movies and TV shows views."
+msgstr ""
+
+msgctxt "#32038"
+msgid "Shows the animated poster (animatedposter.gif) in movies and TV shows views."
+msgstr ""
+
+msgctxt "#32039"
+msgid "Shows all the extra posters (poster1.jpg, poster2.jpg, poster3.jpg...) in movies and TV shows views."
+msgstr ""
+
+msgctxt "#32040"
+msgid "Thanks for using Aeon Tajo, I really hope you enjoy it! Creating and maintaining a skin for Kodi is quite hard and requires hundreds of hours of work (Aeon Tajo has over 60,000 lines of code and hundreds of images). Only a few can devote so much time; despite their earnest efforts, “real life”, that is, their family and their job, usually gets in their way. That is why many developers fail to finish their skins or can’t keep them up to date, so they stop working on the newest Kodi versions.[CR][CR]I think it would be a pity if Aeon Tajo disappeared too. If you want to help avoid it and let this skin keep improving, and if you would also like to enjoy some extra options, visit [B][COLOR=themecolor]patreon.com[/B][/COLOR] and search for the creator [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR], or go to [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR] to get more information. Thank you very much![CR][CR]Manuel"
+msgstr ""
+
+msgctxt "#32041"
+msgid "Blurred album image as background in music visualisation screen"
+msgstr ""
+
+msgctxt "#32042"
+msgid "Hide watched icon in video views"
+msgstr ""
+
+msgctxt "#32043"
+msgid "Disclaimer: Aeon Tajo does not provide any media content or sources. Users must provide their own content. Support will not be provided for any 'builds' nor online addons that offer copyrighted content."
+msgstr ""
+
+msgctxt "#32044"
+msgid "Change to "
+msgstr ""
+
+msgctxt "#32045"
+msgid "Remember that you should adapt your advancedsetting.xml file to reflect this change, so as to prevent your extras content to be added inadvertently to the Kodi library."
+msgstr ""
+
+#~ msgctxt "#31180"
+#~ msgid "Play local 'theme.mp3' file when browsing Movies and Tvshows"
+#~ msgstr "Riproduci il file \\\"theme.mp3\\\" locale durante la navigazione di film e programmi TV"
+
+#~ msgctxt "#31434"
+#~ msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/tvshow folder to be played when browsing."
+#~ msgstr "Check MP3 Theme controlla se l'utente ha inserito un file theme.mp3 nella cartella film/programma televisivo corrispondente da riprodurre durante la navigazione."
+
+# empty strings from id 31452 to 31472
+#~ msgctxt "#31473"
+#~ msgid "Embuary Helper provides the data to display the cast for movies and tvshows."
+#~ msgstr "Embuary Helper fornisce i dati per visualizzare il cast di film e programmi TV."
+
+#~ msgctxt "#31481"
+#~ msgid "Global Search makes possible to search among all the items (movies, tvshows, music, actors, etc.) in your collection."
+#~ msgstr "Global Search rende possibile la ricerca tra tutti gli elementi (film, programmi TV, musica, attori, ecc.) nella tua raccolta."
+
+#~ msgctxt "#31970"
+#~ msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/tvshows and other options."
+#~ msgstr "Impostazione di melodie, il modo di mostrare widget, temi e cast per film/spettacoli televisivi e altre opzioni."
+
+#~ msgctxt "#31975"
+#~ msgid "More tv shows featuring"
+#~ msgstr "Altri programmi TV in primo piano"
+
+#~ msgctxt "#32000"
+#~ msgid "Displays a fullscreen slideshow of movies, tvshows or artists' fanarts (depending on the section the user is browsing) when 2 minutes go by in idle state inside a media view"
+#~ msgstr "Mostra una presentazione a schermo intero di film, programmi TV o fanart di artisti (a seconda della sezione che l'utente sta navigando) quando passano 2 minuti in stato di inattività all'interno di una visualizzazione di media"
