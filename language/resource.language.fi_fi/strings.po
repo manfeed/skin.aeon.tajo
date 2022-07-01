@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-03-19 06:46+0000\n"
+"PO-Revision-Date: 2022-07-01 10:35+0000\n"
 "Last-Translator: Oskari Lavinto <olavinto@protonmail.com>\n"
 "Language-Team: Finnish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/fi_fi/>\n"
 "Language: fi_fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.13\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -39,7 +39,7 @@ msgstr "Käsikirjoitus"
 
 msgctxt "#31002"
 msgid "Blurred album thumb"
-msgstr "Sumennettu albumin näytekuva"
+msgstr "Sumennettu albumin pienoiskuva"
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -63,7 +63,7 @@ msgstr "Muokkaus"
 
 msgctxt "#31008"
 msgid "Full screen"
-msgstr "Kokoruutu"
+msgstr "Koko ruutu"
 
 msgctxt "#31009"
 msgid "Total Duration"
@@ -215,7 +215,7 @@ msgstr "Näkymät: Täysi juoni | Infoikkuna: Juonen pääpiirteet"
 
 msgctxt "#31046"
 msgid "SEEKING"
-msgstr "ETSITÄÄN"
+msgstr "SIIRRYTÄÄN"
 
 msgctxt "#31047"
 msgid "Set item icon"
@@ -231,11 +231,11 @@ msgstr "Valitse inforivi"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
-msgstr "Järjestä: Nousevasti"
+msgstr "Järjestys: nouseva"
 
 msgctxt "#31051"
 msgid "Sort: Descending"
-msgstr "Järjestä: Laskevasti"
+msgstr "Järjestys: laskeva"
 
 msgctxt "#31052"
 msgid "Movie library statistics"
@@ -843,7 +843,7 @@ msgstr "Aseta fanitaiteen polku"
 
 msgctxt "#31320"
 msgid "Last Logged In"
-msgstr "Viimeksi kirjauduttu"
+msgstr "Viimeksi kirjautunut"
 
 msgctxt "#31321"
 msgid "Karaoke Song Selector"
@@ -1161,7 +1161,7 @@ msgstr "Näytä juonen pääpiirteet kirjaston näkymissä ja täysi juoni video
 
 msgctxt "#31933"
 msgid "Select an item to display on the left top of the main menu"
-msgstr "Valitse nimike näytettäväksi päävalikon vasemmassa ylälaidassa."
+msgstr "Valitse päävalikossa ylävasemmalla näytettävä kohde"
 
 msgctxt "#31935"
 msgid "Switch places with another menu item. Opens a dialog with a list of menu items to choose from."
@@ -1318,11 +1318,11 @@ msgstr "Painamalla lisää"
 
 msgctxt "#31979"
 msgid "Left for more"
-msgstr "Vasemmalle lisää"
+msgstr "Vasemmalta lisää"
 
 msgctxt "#31980"
 msgid "Right for more"
-msgstr "Oikealle lisää"
+msgstr "Oikealta lisää"
 
 msgctxt "#31981"
 msgid "Premiered"
@@ -1530,7 +1530,7 @@ msgstr ""
 
 msgctxt "#32032"
 msgid "Blurred album image as background"
-msgstr ""
+msgstr "Sumennettu albumin kuva taustana"
 
 msgctxt "#32033"
 msgid "Browse for path"
@@ -1566,7 +1566,7 @@ msgstr ""
 
 msgctxt "#32041"
 msgid "Blurred album image as background in music visualisation screen"
-msgstr ""
+msgstr "Sumennettu albumin kuva musiikin visualisointinäytön taustana"
 
 msgctxt "#32042"
 msgid "Hide watched icon in video views"
