@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-05-11 19:42+0000\n"
+"PO-Revision-Date: 2022-08-04 12:14+0000\n"
 "Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/es_es/>\n"
 "Language: es_es\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12.1\n"
+"X-Generator: Weblate 4.13\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -407,7 +407,7 @@ msgstr "Interruptor LowList"
 
 msgctxt "#31094"
 msgid "List view layout"
-msgstr "Ver lista de diseño"
+msgstr "Disposición de vista Lista"
 
 msgctxt "#31095"
 msgid "Slim List"
@@ -687,7 +687,7 @@ msgstr "Cambiar iconos del tiempo"
 
 msgctxt "#31165"
 msgid "Layout"
-msgstr "Diseño"
+msgstr "Disposición"
 
 msgctxt "#31166"
 msgid "Wall"
@@ -1132,7 +1132,7 @@ msgstr "Restablecer todos los valores a sus valores predeterminados."
 
 msgctxt "#31928"
 msgid "Aeon Tajo main menu layout"
-msgstr "Diseño del menú principal de Aeon Tajo"
+msgstr "Disposición del menú principal de Aeon Tajo"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."
@@ -1192,7 +1192,7 @@ msgstr "Elegir que mostrar sobre la vista en miniatura en la vista de iconos. Te
 
 msgctxt "#31945"
 msgid "This toggles the layout of the List view. Default is a 7 item layout with extended info, \"Slim List\" is a 14 item, more basic layout"
-msgstr "Esto cambia el diseño de la vista de lista. Por defecto es un diseño de 7 elementos con información ampliada, \"Lista estrecha\" son 14 elementos, la disposición más básica"
+msgstr "Esto cambia la disposición de la vista Lista. Por defecto se disponen 7 elementos con información extendida, \"Lista Estrecha\" son 14 elementos, una disposición más básica"
 
 msgctxt "#31950"
 msgid "WEATHER"
