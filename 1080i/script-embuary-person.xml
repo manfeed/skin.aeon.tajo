@@ -87,7 +87,7 @@
 						<width>408</width>
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">logos/tmdb-logo2.png</texture>
+						<texture background="true">$VAR[ratings_path]tmdb-logo2.png</texture>
 					</control>
 				</control>
 				<!-- Details Panel -->
