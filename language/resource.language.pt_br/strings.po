@@ -1582,6 +1582,10 @@ msgctxt "#32046"
 msgid "Filmstrip"
 msgstr ""
 
+msgctxt "#32047"
+msgid "Select + Right Stick"
+msgstr ""
+
 #~ msgctxt "#31180"
 #~ msgid "Play local theme.mp3 when browsing Movies and Tvshows"
 #~ msgstr "Reproduzir o MP3 do tema local ao navegar por Filmes e Seriados"

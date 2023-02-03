@@ -1587,6 +1587,10 @@ msgctxt "#32046"
 msgid "Filmstrip"
 msgstr ""
 
+msgctxt "#32047"
+msgid "Select + Right Stick"
+msgstr ""
+
 #~ msgctxt "#32040"
 #~ msgid "Thanks for using Aeon Tajo, I really hope you enjoy it! Creating and maintaining a skin for Kodi is quite hard and requires hundreds of hours of work (Aeon Tajo has over 60,000 lines of code and hundreds of images). Only a few can devote so much time; despite their earnest efforts, “real life”, that is, their family and their job, usually gets in their way. That is why many developers fail to finish their skins or can’t keep them up to date, so they stop working on the newest Kodi versions.[CR][CR]I think it would be a pity if Aeon Tajo disappeared too. If you want to help avoid it and let this skin keep improving, and if you would also like to enjoy some extra options, visit [B][COLOR=themecolor]patreon.com[/B][/COLOR] and search for the creator [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR], or go to [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR] to get more information. Thank you very much![CR][CR]Manuel"
 #~ msgstr "Grazie per aver utilizzato Aeon Tajo, spero davvero che ti piaccia! Creare e mantenere una skin per Kodi è piuttosto difficile e richiede centinaia di ore di lavoro (Aeon Tajo ha oltre 60.000 righe di codice e centinaia di immagini). Solo pochi possono dedicare così tanto tempo; nonostante i loro seri sforzi, la \"vita reale\", cioè la loro famiglia e il loro lavoro, di solito si intromette. Ecco perché molti sviluppatori non riescono a finire le loro skin o non riescono a tenerle aggiornate, quindi smettono di lavorare sulle versioni più recenti di Kodi.[CR][CR]Penso che sarebbe un peccato se anche Aeon Tajo scomparisse. Se vuoi aiutare a evitarlo e lasciare che questa skin continui a migliorare, e se desideri anche goderti alcune opzioni extra, visita [B][COLOR=themecolor]patreon.com[/B][/COLOR] e cerca il creator [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR], oppure vai su [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR] per avere maggiori informazioni. Grazie mille![CR][CR]Manuel"
