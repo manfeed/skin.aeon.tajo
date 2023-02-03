@@ -470,8 +470,8 @@ msgid "Unwatched episode count"
 msgstr "Contador de episodio no visto"
 
 msgctxt "#31110"
-msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
-msgstr "Up next permite ver a continuación el siguiente episodo de una serie (al estilo de Netflix/Amazon Prime video)."
+msgid "Up next brings the option to watch right away the next episode of a tvshow (Netflix/Prime video style)."
+msgstr ""
 
 msgctxt "#31111"
 msgid "Similar movies"
@@ -670,8 +670,8 @@ msgid "Display background name"
 msgstr "Mostrar nombre de fondo"
 
 msgctxt "#31161"
-msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
-msgstr "Mostrar el título de película/serie de tv/artista en la pantalla inicial si hay una presentación de fanarts como fondo de pantalla"
+msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
+msgstr ""
 
 msgctxt "#31162"
 msgid "min"
@@ -1581,3 +1581,11 @@ msgstr "Carrete"
 msgctxt "#32047"
 msgid "Select + Right Stick"
 msgstr "Select + Mando Derecha"
+
+#~ msgctxt "#31110"
+#~ msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
+#~ msgstr "Up next permite ver a continuación el siguiente episodo de una serie (al estilo de Netflix/Amazon Prime video)."
+
+#~ msgctxt "#31161"
+#~ msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
+#~ msgstr "Mostrar el título de película/serie de tv/artista en la pantalla inicial si hay una presentación de fanarts como fondo de pantalla"
