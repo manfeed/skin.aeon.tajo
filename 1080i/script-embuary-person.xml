@@ -78,7 +78,7 @@
 							<aligny>top</aligny>
 							<font>font16</font>
 							<textcolor>themecolor</textcolor>
-							<label>$INFO[Container(10051).ListItem.Property(known_for_department),$LOCALIZE[31546] ]</label>
+							<label>$INFO[Container(10051).ListItem.Property(known_for_department)]</label>
 						</control>
 					</control>
 					<control type="image">

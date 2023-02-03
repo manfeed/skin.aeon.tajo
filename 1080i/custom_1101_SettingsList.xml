@@ -80,7 +80,7 @@
 						<height>80</height>
 						<font>font13</font>
 						<label>$LOCALIZE[13376]</label>
-						<label2>[COLOR grey]$LOCALIZE[50176][/COLOR]</label2>
+						<label2>[COLOR grey]$LOCALIZE[32047][/COLOR]</label2>
 						<onclick>ActivateWindow(GameVolume)</onclick>
 					</control>
 					<control type="button" id="14103">
