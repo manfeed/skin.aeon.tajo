@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-02-03 15:49+0000\n"
+"PO-Revision-Date: 2023-02-07 12:52+0000\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/it_it/>\n"
 "Language: it_it\n"
@@ -929,7 +929,7 @@ msgstr "[B]MEDIA SETTINGS[/B][CR][CRImposta azione predefinita · Configura opzi
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Selezionare il proprio profilo utente di Kodi[CR]per accedere e proseguire"
+msgstr "Seleziona il tuo profilo utente Kodi[CR]per accedere e continuare"
 
 # empty strings from id 31422 to 31426
 msgctxt "#31427"
@@ -946,11 +946,11 @@ msgstr "Library Data Provider è un servizio che viene eseguito in background pe
 
 msgctxt "#31430"
 msgid "Resource image addon for displaying the default white studio icons throughout the skin."
-msgstr "Resource image addon per la visualizzazione delle icone di studio bianche predefinite su tutta la skin."
+msgstr "Resource image add-on per la visualizzazione delle icone di studio bianche predefinite su tutta la skin."
 
 msgctxt "#31431"
 msgid "Resource image addon for displaying the default white recording label icons throughout the skin."
-msgstr "Resource image addon per la visualizzazione delle icone delle etichette di registrazione bianche predefinite in tutto lo skin."
+msgstr "Resource image add-on per la visualizzazione delle icone delle etichette di registrazione bianche predefinite in tutto lo skin."
 
 msgctxt "#31432"
 msgid "Provides numerous Widget options and extended cast and crew metadata."
@@ -1172,7 +1172,7 @@ msgstr "Mostra il feed RSS nella parte bassa o alta dello schermo, a seconda del
 
 msgctxt "#31938"
 msgid "Enables extra information in the TV show library, like TV show status, next / latest episode, etc. Depends on TV Show Next Aired add-on."
-msgstr "Abilita informazioni extra nella libreria di serie TV, come lo stato della serie, prossimo / ultimo episodio, etc. Dipende dall'addon TV Show Next Aired."
+msgstr "Abilita informazioni extra nella libreria di serie TV, come lo stato della serie, prossimo / ultimo episodio, etc. Dipende dall'add-on TV Show Next Aired."
 
 msgctxt "#31939"
 msgid "Hide Infopanel on scrolling"
@@ -1269,7 +1269,7 @@ msgstr "Personalizza il menu principale con widget, sfondi, sottomenu e statisti
 
 msgctxt "#31967"
 msgid "Skin addons"
-msgstr "Skin addons"
+msgstr "Skin add-on"
 
 msgctxt "#31968"
 msgid "Addons used to enhance Aeon Tajo."
@@ -1477,7 +1477,7 @@ msgstr "Potrebbe essere necessario riavviare Kodi. TMDb e Trakt dovrebbero funzi
 
 msgctxt "#32019"
 msgid "Resource image addon for displaying coloured studio icons throughout the skin."
-msgstr "Immagine dell'addon della risorsa per la visualizzazione di icone colorate dello studio su tutta la skin."
+msgstr "Immagine dell'add-on della risorsa per la visualizzazione di icone colorate dello studio su tutta la skin."
 
 msgctxt "#32020"
 msgid "Display coloured icons"
@@ -1573,7 +1573,7 @@ msgstr "Nascondi l'icona guardato nelle visualizzazioni video"
 
 msgctxt "#32043"
 msgid "Disclaimer: Aeon Tajo does not provide any media content or sources. Users must provide their own content. Support will not be provided for any 'builds' nor online addons that offer copyrighted content."
-msgstr "Dichiarazione di non responsabilità: Aeon Tajo non fornisce alcun contenuto multimediale o fonte. Gli utenti devono fornire i propri contenuti. Il supporto non verrà fornito per nessun \"build\" né addon online che offrono contenuti protetti da copyright."
+msgstr "Dichiarazione di non responsabilità: Aeon Tajo non fornisce alcun contenuto multimediale o fonte. Gli utenti devono fornire i propri contenuti. Il supporto non verrà fornito per nessun \"build\" né add-on online che offrono contenuti protetti da copyright."
 
 msgctxt "#32044"
 msgid "Change to "
