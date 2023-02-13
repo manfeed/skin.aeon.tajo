@@ -1579,10 +1579,6 @@ msgctxt "#32046"
 msgid "Filmstrip"
 msgstr ""
 
-msgctxt "#32047"
-msgid "Select + Right Stick"
-msgstr ""
-
 #~ msgctxt "#31434"
 #~ msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/tvshow folder to be played when browsing."
 #~ msgstr "MP3テーマ チェックは、ユーザーがブラウズしたときに再生される対応した movie/tvshow フォルダーにtheme.mp3ファイルがあるかどうかを確認します。"

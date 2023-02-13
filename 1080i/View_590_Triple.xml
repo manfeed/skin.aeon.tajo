@@ -952,7 +952,7 @@
 							</control>
 							<control type="image">
 								<top>1.5</top>
-								<visible>Control.HasFocus(5903) | Control.HasFocus(5904)</visible>
+								<visible>!Control.HasFocus(590) + !Control.HasFocus(5919) + !Control.HasFocus(80) + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
 								<visible>!Container(5903).OnNext + !Container(5903).OnPrevious</visible>
 								<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">Visible</animation>
 								<width>564</width>
@@ -1094,7 +1094,7 @@
 								<colordiffuse>50000000</colordiffuse>
 								<left>10</left>
 								<width>170</width>
-								<height>242</height>
+								<height>244</height>
 								<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
 								<aspectratio align="center">scale</aspectratio>
 							</control>
@@ -1169,7 +1169,7 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</itemlayout>
-					<focusedlayout height="270" condition="Container.Content(tvshows) + System.IdleTime(2) + Control.HasFocus(5904)">
+					<focusedlayout height="270" condition="Container.Content(tvshows) + System.IdleTime(2) + Control.HasFocus(5904) + !System.HasActiveModalDialog">
 						<control type="group">
 							<visible>System.IdleTime(2) + Control.HasFocus(5904)</visible>
 							<control type="image">
@@ -1422,7 +1422,7 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<focusedlayout height="67.5" condition="Container.Content(tvshows) + !System.IdleTime(2) + Control.HasFocus(5904)">
+					<focusedlayout height="67.5" condition="Container.Content(tvshows) + Control.HasFocus(5904) + !System.IdleTime(2) + !System.HasActiveModalDialog">
 						<control type="button" id="5466">
 							<include>HiddenObject</include>
 							<onfocus condition="Skin.HasSetting(playTheme) + String.Contains(Player.Filenameandpath,theme.mp3) + String.IsEmpty(Container(5904).ListItem.VideoCodec)">Stop</onfocus>
@@ -1478,7 +1478,7 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</focusedlayout>
-					<focusedlayout height="67.5" condition="!Control.HasFocus(5904)">
+					<focusedlayout height="67.5" condition="!Control.HasFocus(5904) | System.HasActiveModalDialog">
 						<control type="image">
 							<visible>!Control.HasFocus(5904)</visible>
 							<left>-80</left>
@@ -1488,8 +1488,17 @@
 							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
 						</control>
 						<control type="image">
+							<visible>!Control.HasFocus(590) + !Control.HasFocus(5903) + System.HasActiveModalDialog</visible>
+							<left>2</left>
+							<width>833</width>
+							<height>67</height>
+							<texture diffuse="tajo/recua1c.png">$VAR[Option_Back]</texture>
+							<aspectratio align="center">stretch</aspectratio>
+							<colordiffuse>ddffffff</colordiffuse>
+						</control>
+						<control type="image">
 							<visible>!Control.HasFocus(5904)</visible>
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<animation effect="fade" end="70" condition="!System.HasActiveModalDialog">Conditional</animation>
 							<top>1</top>
 							<left>790</left>
 							<width>43</width>
@@ -1498,7 +1507,7 @@
 							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 						<control type="label">
-							<visible>!Control.HasFocus(5904)</visible>
+							<visible>!Control.HasFocus(5904) + !System.HasActiveModalDialog</visible>
 							<top>1</top>
 							<left>25</left>
 							<height>58</height>
@@ -1508,6 +1517,20 @@
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.Label]  ($VAR[ItemDuration])</label>
 							<textcolor>ff696967</textcolor>
+							<selectedcolor>white</selectedcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<visible>!Control.HasFocus(5904) + System.HasActiveModalDialog</visible>
+							<top>1</top>
+							<left>25</left>
+							<height>58</height>
+							<width>770</width>
+							<align>left</align>
+							<font>fontmusic2</font>
+							<scroll>false</scroll>
+							<label>[B]$INFO[ListItem.Label]  ($VAR[ItemDuration])[/B]</label>
+							<textcolor>white</textcolor>
 							<selectedcolor>white</selectedcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>

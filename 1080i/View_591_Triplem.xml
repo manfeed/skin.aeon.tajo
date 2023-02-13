@@ -265,7 +265,7 @@
 							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
 						</control>
 						<control type="image">
-							<visible>Control.HasFocus(5910) | Control.HasFocus(5912)</visible>
+							<visible>!Control.HasFocus(591) + !Control.HasFocus(5919) + !Control.HasFocus(80) + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
 							<visible>!Container(5910).OnNext + !Container(5910).OnPrevious</visible>
 							<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">Visible</animation>
 							<top>1.5</top>
@@ -283,7 +283,7 @@
 								<left>0</left>
 								<width>234</width>
 								<height>234</height>
-								<texture fallback="tajo/defaultalbumcover.png" diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<texture fallback="tajo/defaultalbumcover.png" diffuse="tajo/mask_cover3.png" background="true">$VAR[poster]</texture>
 								<aspectratio align="center">scale</aspectratio>
 							</control>
 							<control type="textbox">
@@ -317,7 +317,7 @@
 								<left>0</left>
 								<width>234</width>
 								<height>234</height>
-								<texture fallback="tajo/defaultalbumcover.png" diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<texture fallback="tajo/defaultalbumcover.png" diffuse="tajo/mask_cover3.png" background="true">$VAR[poster]</texture>
 								<aspectratio align="center">scale</aspectratio>
 							</control>
 							<control type="textbox">
@@ -430,7 +430,7 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</itemlayout>
-					<focusedlayout height="135" condition="System.IdleTime(2) + Control.HasFocus(5912)">
+					<focusedlayout height="135" condition="System.IdleTime(2) + Control.HasFocus(5912) + !System.HasActiveModalDialog">
 						<control type="group">
 							<visible>System.IdleTime(2) + Control.HasFocus(5912)</visible>
 							<control type="image">
@@ -512,7 +512,7 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<focusedlayout height="67.5" condition="!System.IdleTime(2) + Control.HasFocus(5912)">
+					<focusedlayout height="67.5" condition="!System.IdleTime(2) + Control.HasFocus(5912) + !System.HasActiveModalDialog">
 						<control type="image">
 							<left>-80</left>
 							<top>65.5</top>
@@ -547,7 +547,7 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<focusedlayout height="67.5" condition="!Control.HasFocus(5912)">
+					<focusedlayout height="67.5" condition="!Control.HasFocus(5912) | System.HasActiveModalDialog">
 						<control type="image">
 							<left>-80</left>
 							<top>65.5</top>
@@ -555,8 +555,17 @@
 							<height>3</height>
 							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
 						</control>
+						<control type="image">
+							<visible>!Control.HasFocus(591) + !Control.HasFocus(5910) + System.HasActiveModalDialog</visible>
+							<left>2</left>
+							<width>833</width>
+							<height>67</height>
+							<texture diffuse="tajo/recua1c.png">$VAR[Option_Back]</texture>
+							<aspectratio align="center">stretch</aspectratio>
+							<colordiffuse>ddffffff</colordiffuse>
+						</control>
 						<control type="label">
-							<visible>!Control.HasFocus(5912)</visible>
+							<visible>!Control.HasFocus(5912) + !System.HasActiveModalDialog</visible>
 							<top>1</top>
 							<left>50</left>
 							<height>58</height>
@@ -565,6 +574,19 @@
 							<font>fontmusic2</font>
 							<textcolor>ff696967</textcolor>
 							<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label] $INFO[ListItem.Duration,(,)]</label>
+							<selectedcolor>themecolor</selectedcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<visible>!Control.HasFocus(5912) + System.HasActiveModalDialog</visible>
+							<top>1</top>
+							<left>50</left>
+							<height>58</height>
+							<width>784</width>
+							<align>left</align>
+							<font>fontmusic2</font>
+							<textcolor>white</textcolor>
+							<label>[B]$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label] $INFO[ListItem.Duration,(,)][/B]</label>
 							<selectedcolor>themecolor</selectedcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>

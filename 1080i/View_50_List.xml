@@ -1051,7 +1051,7 @@
 					<label>$LOCALIZE[552]:</label>
 					<label2>$INFO[ListItem.Date]</label2>
 					<enable>no</enable>
-					<visible>Container.Content(videos)</visible>
+					<visible>Container.Content(videos) + !String.IsEmpty(ListItem.Date)</visible>
 				</control>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar]</label>
@@ -1627,7 +1627,7 @@
 							<label>$INFO[ListItem.Artist]$INFO[ListItem.Album,  •  , ]$INFO[ListItem.Year,(,)]</label>
 						</control>
 					</focusedlayout>
-					<itemlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) | Container.Content(addons)]">
+					<itemlayout height="120" width="1140" condition="Container.Content(artists)">
 						<control type="image">
 							<left>-200</left>
 							<top>0</top>
@@ -1660,22 +1660,10 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>grey2</colordiffuse>
-							<visible>!Container.Content(artists) | [Container.Content(artists) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(fanart))]</visible>
+							<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="label">
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>!Container.Content(artists)</visible>
-							<left>135</left>
-							<width>1005</width>
-							<height>120</height>
-							<font>font30</font>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label] $INFO[ListItem.Duration,(,)]</label>
-						</control>
-						<control type="label">
-							<visible>!ListItem.IsParentFolder</visible>
-							<visible>Container.Content(artists)</visible>
 							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 							<left>180</left>
 							<width>950</width>
@@ -1687,7 +1675,6 @@
 						</control>
 						<control type="label">
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>Container.Content(artists)</visible>
 							<left>180</left>
 							<top>60</top>
 							<width>950</width>
@@ -1697,19 +1684,8 @@
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Genre]</label>
 						</control>
-						<control type="label">
-							<visible>!Container.Content(artists)</visible>
-							<left>60</left>
-							<width>1005</width>
-							<height>120</height>
-							<font>font15</font>
-							<align>right</align>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
 					</itemlayout>
-					<focusedlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) | Container.Content(addons)]">
+					<focusedlayout height="120" width="1140" condition="Container.Content(artists)">
 						<control type="image">
 							<width>1140</width>
 							<height>120</height>
@@ -1742,22 +1718,10 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
 							<colordiffuse>white</colordiffuse>
-							<visible>!Container.Content(artists) | [Container.Content(artists) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(fanart))]</visible>
+							<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="label">
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>!Container.Content(artists)</visible>
-							<left>135</left>
-							<width>1005</width>
-							<height>120</height>
-							<font>font30</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Label] $INFO[ListItem.Duration,(,)]</label>
-						</control>
-						<control type="label">
-							<visible>!ListItem.IsParentFolder</visible>
-							<visible>Container.Content(artists)</visible>
 							<animation effect="slide" start="0,0" end="0,20" time="0" condition="String.IsEmpty(ListItem.Genre)">Conditional</animation>
 							<left>180</left>
 							<width>950</width>
@@ -1768,7 +1732,6 @@
 						</control>
 						<control type="label">
 							<visible>!ListItem.IsParentFolder</visible>
-							<visible>Container.Content(artists)</visible>
 							<left>180</left>
 							<top>60</top>
 							<width>950</width>
@@ -1777,8 +1740,92 @@
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Genre]</label>
 						</control>
+					</focusedlayout>
+					<itemlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(addons)]">
+						<control type="image">
+							<left>-200</left>
+							<top>0</top>
+							<width>1400</width>
+							<height>3</height>
+							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>105</width>
+							<height>105</height>
+							<aspectratio>keep</aspectratio>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<colordiffuse>grey2</colordiffuse>
+							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>105</width>
+							<height>105</height>
+							<aspectratio>keep</aspectratio>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
+							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
 						<control type="label">
-							<visible>!Container.Content(artists)</visible>
+							<visible>!ListItem.IsParentFolder</visible>
+							<left>135</left>
+							<width>1005</width>
+							<height>120</height>
+							<font>font30</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>60</left>
+							<width>1005</width>
+							<height>120</height>
+							<font>font15</font>
+							<align>right</align>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="120" width="1140" condition="![Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(addons)]">
+						<control type="image">
+							<width>1140</width>
+							<height>120</height>
+							<texture diffuse="tajo/mask_cover3.png">listselect_fo.png</texture>
+							<visible>Control.HasFocus(50)</visible>
+							<include>VisibleFadeAnimation</include>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>105</width>
+							<height>105</height>
+							<aspectratio>keep</aspectratio>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon,views/list/]</texture>
+							<visible>String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>105</width>
+							<height>105</height>
+							<aspectratio>keep</aspectratio>
+							<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Icon]</texture>
+							<visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+						</control>
+						<control type="label">
+							<visible>!ListItem.IsParentFolder</visible>
+							<left>135</left>
+							<width>1005</width>
+							<height>120</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
 							<left>60</left>
 							<width>1005</width>
 							<height>120</height>

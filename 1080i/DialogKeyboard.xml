@@ -325,6 +325,13 @@
 						<altlabel>[COLOR=themecolor]$LOCALIZE[20178][/COLOR]</altlabel>
 						<onup>303</onup>
 						<ondown>300</ondown>
+						<width>160</width>
+						<include>Objects_DoubleKeyOff</include>
+					</control>
+					<control type="button" id="310">
+						<onup>303</onup>
+						<ondown>300</ondown>
+						<width>160</width>
 						<include>Objects_DoubleKeyOff</include>
 					</control>
 					<control type="button" id="160">
@@ -409,6 +416,15 @@
 						<onup>302</onup>
 						<ondown condition="!Control.IsVisible(5000)">107</ondown>
 						<ondown condition="Control.IsVisible(5000)">5000</ondown>
+						<width>160</width>
+						<include>Objects_DoubleKeyOff</include>
+					</control>
+					<control type="button" id="301">
+						<label>$LOCALIZE[222]</label>
+						<onup>302</onup>
+						<ondown condition="!Control.IsVisible(5000)">107</ondown>
+						<ondown condition="Control.IsVisible(5000)">5000</ondown>
+						<width>160</width>
 						<include>Objects_DoubleKeyOff</include>
 					</control>
 					<control type="button" id="32">

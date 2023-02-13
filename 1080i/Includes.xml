@@ -1778,7 +1778,7 @@
 	<include name="Screensaver_Netflix">
 		<control type="group">
 			<visible>!ListItem.IsCollection + System.IdleTime(120)</visible>
-			<visible>!Player.Playing</visible>
+			<visible>!Player.Playing | [Player.Playing + String.Contains(Player.Filenameandpath,theme.mp3)]</visible>
 			<visible>Skin.HasSetting(ScreensaverNetflix)</visible>
 			<visible>Container.Content(movies) | Container.Content(sets)</visible>
 			<control type="list" id="5335">
@@ -3458,7 +3458,7 @@
 				<onleft>9050</onleft>
 				<onright>ClearProperty(MediaMenu,Home)</onright>
 				<onright condition="!Window.IsVisible(tvguide)">50</onright>
-				<onright condition="Window.IsVisible(tvguide)">10</onright>
+				<onright condition="Window.IsVisible(tvguide)">68</onright>
 				<onup>9050</onup>
 				<ondown>9050</ondown>
 				<onback>50</onback>
@@ -3703,19 +3703,6 @@
 		</control>
 	</include>
 	<!-- Extras -->
-	<include name="PlayListStatsList">
-		<control type="list" id="43260">
-			<visible>String.IsEqual(Container(9000).ListItem.Property(InfoLine),9) | String.IsEqual(Container(9000).ListItem.Property(InfoLine),10) | String.IsEqual(Container(9000).ListItem.Property(InfoLine),11)</visible>
-			<visible>!ControlGroup(9004).HasFocus()</visible>
-			<left>0</left>
-			<top>0</top>
-			<width>1</width>
-			<height>1</height>
-			<focusedlayout/>
-			<itemlayout/>
-			<content>$VAR[PlaylistStatsContentVar]</content>
-		</control>
-	</include>
 	<include name="HomeSearchButton">
 		<control type="label">
 			<visible>Control.HasFocus(9027)</visible>

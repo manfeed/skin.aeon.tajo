@@ -1,8 +1,7 @@
-<addon id="skin.aeon.tajo" name="Aeon Tajo" provider-name="manfeed" version="5.4.0">
+<addon id="skin.aeon.tajo" name="Aeon Tajo" provider-name="manfeed" version="5.9.0">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="0.4.5"/>
-		<import addon="service.library.data.provider" version="0.0.7"/>
 		<import addon="script.embuary.helper" version="2.0.6"/>
 	</requires>
 	<extension debugging="false" effectslowdown="0.75" point="xbmc.gui.skin">

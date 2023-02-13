@@ -642,13 +642,13 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="WidgetListContent">
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),2)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),5)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),6)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),7)">plugin://service.library.data.provider?type=randomsongs&amp;reload=$INFO[Window.Property(randomsongs)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),8)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),9)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),10)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),2)">special://skin/extras/playlists/random_movies.xsp</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),5)">special://skin/extras/playlists/random_episodes.xsp</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),6)">special://skin/extras/playlists/recent_unwatched_episodes.xsp</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),7)">special://skin/extras/playlists/random_songs.xsp</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),8)">special://skin/extras/playlists/random_albums.xsp</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),9)">special://skin/extras/playlists/recentalbums.xsp</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(Widget),10)">special://skin/extras/playlists/mostplayed_albums.xsp</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(Widget))">$INFO[Container(9000).ListItem.Property(Widget)]</value>
 	</variable>
 	<variable name="WidgetLabelVar">
@@ -886,12 +886,6 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(WidgetType),4)">programs</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(WidgetType),5)">pictures</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(WidgetType),12)">live tv</value>
-	</variable>
-	<variable name="PlaylistStatsContentVar">
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),9)">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Container(9000).ListItem.Property(Path)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),10)">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Container(9000).ListItem.Property(Path)]</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(InfoLine),11)">plugin://service.library.data.provider?type=playliststats&amp;id=$INFO[Container(9000).ListItem.Property(Path)]</value>
-		<value>special://skin/colors/extras</value>
 	</variable>
 	<variable name="StudioIconVar">
 		<value condition="!String.IsEmpty(ListItem.Studio) + !Skin.HasSetting(Coloured.icons)">$INFO[Control.GetLabel(4186)]</value>
@@ -1563,11 +1557,6 @@
 		<value condition="Container.Content(directors)">$LOCALIZE[20348]</value>
 		<value condition="Container.Content(seasons)">$LOCALIZE[33054]</value>
 	</variable>
-	<variable name="videoresHDR">
-		<value condition="String.Contains(ListItem.Filename,HDR) + !String.Contains(ListItem.VideoResolution,4K)">HD_HDR</value>
-		<value condition="String.Contains(ListItem.Filename,HDR)">4k_HDR</value>
-		<value>$INFO[ListItem.VideoResolution]</value>
-	</variable>
 	<variable name="value_ground17_label">
 		<value condition="Container.Content(tvshows)">$LOCALIZE[33054]</value>
 		<value condition="!String.StartsWith(ListItem.Path,videodb://movies/sets)">[COLOR=themecolor]$LOCALIZE[345][/COLOR]</value>
@@ -1661,11 +1650,20 @@
 		<value condition="String.Contains(MusicPlayer.Codec,mp3float)">mp3</value>
 		<value>$INFO[MusicPlayer.Codec]</value>
 	</variable>
+	<variable name="videoresHDR">
+		<value condition="String.Contains(ListItem.HdrType,hlg) + !String.Contains(ListItem.VideoResolution,4K)">HD_HLG</value>
+		<value condition="String.Contains(ListItem.HdrType,hdr10) + !String.Contains(ListItem.VideoResolution,4K)">HD_HDR10</value>
+		<value condition="String.Contains(ListItem.HdrType,dolby) + !String.Contains(ListItem.VideoResolution,4K)">HD_Dolby</value>
+		<value condition="String.Contains(ListItem.HdrType,hlg)">4k_HLG</value>
+		<value condition="String.Contains(ListItem.HdrType,hdr10)">4k_HDR10</value>
+		<value condition="String.Contains(ListItem.HdrType,dolby)">4k_Dolby</value>
+		<value>$INFO[ListItem.VideoResolution]</value>
+	</variable>
 	<variable name="GlobalCaseVarTajo">
 		<value condition="ListItem.IsCollection">set.png</value>
 		<value condition="String.Contains(ListItem.Filename,3d) | String.Contains(ListItem.Filename,3dbd) | ListItem.IsStereoscopic">3d.png</value>
-		<value condition="String.Contains(ListItem.Filename,hdr) + !String.Contains(ListItem.VideoResolution,4K)">HD_HDR.png</value>
-		<value condition="String.Contains(ListItem.Filename,hdr)">4k_HDR.png</value>
+		<value condition="!String.IsEmpty(ListItem.HdrType) + !String.Contains(ListItem.VideoResolution,4K)">HD_HDR.png</value>
+		<value condition="!String.IsEmpty(ListItem.HdrType)">4k_HDR.png</value>
 		<value condition="String.Contains(ListItem.Filename,4k) | String.Contains(ListItem.VideoResolution,4k)">4k.png</value>
 		<value condition="String.Contains(ListItem.Filename,hddvd)">hddvd.png</value>
 		<value condition="String.Contains(ListItem.Filename,bluray)">1080p.png</value>

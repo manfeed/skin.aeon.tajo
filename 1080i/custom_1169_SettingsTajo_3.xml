@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1169" type="dialog">
 	<defaultcontrol always="true">90000</defaultcontrol>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=x1|x2|x3|x4|x5|x6|x7|x8|x9|x10|x11|x12|x13|x101|x202|x303|x404|x505|x606)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=x1|x2|x3|x4|x5|x6|x7|x8|x9|x10|x11|x12|x13|x101|x202|x303|x404|x505|x606|x707|x808|x909)</onunload>
 	<controls>
 		<include content="CommonBackground">
 			<param name="windowOpen" value="!Window.Previous(SettingsCategory.xml)"/>
@@ -82,8 +82,11 @@
 					<include>CustomMainMenuItem4</include>
 					<include>CustomMainMenuItem5</include>
 					<include>CustomMainMenuItem6</include>
+					<include condition="Skin.HasSetting(SettingCommon)">CustomMainMenuItem7</include>
+					<include condition="Skin.HasSetting(SettingCommon)">CustomMainMenuItem8</include>
+					<include condition="Skin.HasSetting(SettingCommon)">CustomMainMenuItem9</include>
 					<include>VideosMainMenu</include>
-					<include condition="System.GetBool(gamesgeneral.enable)">GamesMainMenu</include>
+					<include>GamesMainMenu</include>
 					<include>ProgramsMainMenu</include>
 					<include>SettingsMainMenu</include>
 					<include>ShutdownMainMenu</include>

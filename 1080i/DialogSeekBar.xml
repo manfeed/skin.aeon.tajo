@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
-	<visible>[Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsVisible(MusicOSD) + [VideoPlayer.IsFullscreen | [Player.HasVideo + Window.IsActive(movieinformation) + Window.IsActive(videoosd)] | [Player.HasVideo + Window.IsActive(musicinformation) + Window.IsActive(videoosd)] | [Player.HasVideo + Window.IsActive(songinformation) + Window.IsActive(videoosd)]]</visible>
+	<visible>[Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Player.ShowInfo | Player.Seeking | Player.HasPerformedSeek(3) | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsVisible(MusicOSD) + [VideoPlayer.IsFullscreen | [Player.HasVideo + Window.IsActive(movieinformation) + Window.IsActive(videoosd)] | [Player.HasVideo + Window.IsActive(musicinformation) + Window.IsActive(videoosd)] | [Player.HasVideo + Window.IsActive(songinformation) + Window.IsActive(videoosd)]]</visible>
 	<visible>!Window.IsActive(gameosd)</visible>
 	<zorder>1</zorder>
 	<controls>
