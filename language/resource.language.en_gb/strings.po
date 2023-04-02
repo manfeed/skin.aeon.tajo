@@ -1703,3 +1703,15 @@ msgstr ""
 msgctxt "#32047"
 msgid "Select + Right Stick"
 msgstr ""
+
+msgctxt "#32048"
+msgid "Vertical Main Menu"
+msgstr ""
+
+msgctxt "#32049"
+msgid "Eject disc"
+msgstr ""
+
+msgctxt "#32050"
+msgid "Play with PreShow"
+msgstr ""
