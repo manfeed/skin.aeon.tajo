@@ -5,6 +5,7 @@
 	<onload condition="!String.IsEqual(ListItem.DBTYPE,set)">SetFocus(90003)</onload>
 	<onload condition="![Window.IsActive(home) + String.IsEqual(ListItem.DBTYPE,tvshow)]">SetFocus(8)</onload>
 	<onload condition="Window.IsActive(home) + String.IsEqual(ListItem.DBTYPE,tvshow)">SetFocus(808)</onload>
+	<onload condition="System.HasAddon(script.preshowexperience) + System.AddonIsEnabled(script.preshowexperience) + String.IsEqual(ListItem.DBTYPE,movie)">SetFocus(283)</onload>
 	<onload condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEqual(ListItem.DBTYPE,episode)">Skin.SetString(TitleSeason,$INFO[ListItem.Label])</onload>
 	<onload condition="String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(SearchExtras) + Skin.HasSetting(SettingCommon)">RunScript(script.embuary.helper,action=lookforfile,file='"$INFO[ListItem.FolderPath]$VAR[Extras_path]/"',prop=extras_yes)</onload>
 	<onload condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(SearchExtras) + Skin.HasSetting(SettingCommon)">RunScript(script.embuary.helper,action=lookforfile,file='"$INFO[ListItem.Path]$VAR[Extras_path]/"',prop=extras_yes)</onload>
@@ -171,7 +172,7 @@
 			<left>-1000</left>
 			<width>1</width>
 			<height>1</height>
-			<texture fallback="resources/mpaa/NR.png">$VAR[mpaa]</texture>
+			<texture>$VAR[mpaa]</texture>
 		</control>
 		<control type="list" id="6284">
 			<visible>!ListItem.IsCollection + !Skin.HasSetting(Coloured.icons)</visible>
@@ -208,7 +209,7 @@
 			</control>
 			<control type="multiimage">
 				<aspectratio>scale</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
+				<fadetime>400</fadetime>
 				<imagepath background="true">$VAR[VideoInfoPosterVar]</imagepath>
 			</control>
 		</control>
@@ -244,7 +245,7 @@
 					<control type="image">
 						<aspectratio align="center">scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>400</fadetime>
 					</control>
 					<control type="image">
 						<texture colordiffuse="efffffff" border="4">dialogs/info/info_rightpaneltop.png</texture>
@@ -773,7 +774,7 @@
 							<item>
 								<label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Status)]</label>
 								<label2>$LOCALIZE[126]:</label2>
-								<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status) + [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
+								<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status)) + [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
 							</item>
 							<item>
 								<label>$INFO[ListItem.Country]</label>
@@ -868,30 +869,28 @@
 				</control>
 				<!-- Buttons LABEL -->
 				<control type="group">
-					<left>-5</left>
+					<left>55</left>
 					<top>542</top>
 					<control type="button">
 						<top>-2</top>
-						<width>620</width>
+						<width>480</width>
 						<texturenofocus/>
 						<disabledcolor>grey</disabledcolor>
-						<font>font15_bold</font>
+						<font>font15</font>
 						<align>right</align>
-						<textoffsetx>16</textoffsetx>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$VAR[VideoInfoButtonLabelVar] </label>
+						<label>[B]$VAR[VideoInfoButtonLabelVar][/B]</label>
 						<enable>no</enable>
 						<visible>!ControlGroup(90001).HasFocus | ControlGroup(90001).HasFocus(90003)</visible>
 					</control>
 					<control type="button">
-						<width>620</width>
+						<width>480</width>
 						<texturenofocus/>
 						<disabledcolor>grey</disabledcolor>
-						<font>font15_bold</font>
+						<font>font15</font>
 						<align>right</align>
-						<textoffsetx>16</textoffsetx>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$VAR[DialogInfoDetailsLabelVar]</label>
+						<label>[B]$VAR[DialogInfoDetailsLabelVar][/B]</label>
 						<enable>no</enable>
 						<visible>ControlGroup(90001).HasFocus + !Control(90003).HasFocus</visible>
 					</control>
@@ -900,7 +899,7 @@
 				<control type="grouplist" id="9000">
 					<right>0</right>
 					<top>544</top>
-					<width>585</width>
+					<width>650</width>
 					<height>60</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
@@ -936,6 +935,16 @@
 						<onclick>SetProperty(Extras_info,True,home)</onclick>
 						<onclick>SetFocus(8545)</onclick>
 						<label></label>
+					</control>
+					<control type="button" id="283">
+						<description>PreShow Button</description>
+						<visible>System.HasAddon(script.preshowexperience) + System.AddonIsEnabled(script.preshowexperience) + String.IsEqual(ListItem.DBTYPE,movie)</visible>
+						<font>IconMediumMD</font>
+						<width>65</width>
+						<texturenofocus/>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<onclick>RunScript(script.preshowexperience,dbtype=$INFO[ListItem.DBTYPE],dbid=$INFO[ListItem.DBID])</onclick>
 					</control>
 					<control type="togglebutton" id="8">
 						<description>Play/browse to Show</description>
@@ -1116,7 +1125,7 @@
 							<width>375</width>
 							<height>375</height>
 							<aspectratio>keep</aspectratio>
-							<fadetime>IconCrossfadeTime</fadetime>
+							<fadetime>400</fadetime>
 							<imagepath colordiffuse="bbffffff" background="true">$INFO[Control.GetLabel(6927)]</imagepath>
 							<visible>!String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart)) | !String.IsEmpty(ListItem.Art(clearart)) | !String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(discart)) | !String.IsEmpty(ListItem.Art(tvshow.clearart)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 							<visible>!String.IsEqual(ListItem.DBTYPE,set) | [Integer.IsLess(Container(300).NumItems,7) + String.IsEqual(ListItem.DBTYPE,set)]</visible>

@@ -262,6 +262,7 @@
 		<value condition="Control.HasFocus(8) + [String.IsEqual(ListItem.DBTYPE,set) | Control.HasFocus(808)]">$LOCALIZE[19326]</value>
 		<value condition="Control.HasFocus(895)">$LOCALIZE[31149]</value>
 		<value condition="Control.HasFocus(8)">$LOCALIZE[208]</value>
+		<value condition="Control.HasFocus(283)">$LOCALIZE[32050]</value>																   
 		<value condition="Control.HasFocus(910)">$LOCALIZE[206]</value>
 		<value condition="Control.HasFocus(11)">$LOCALIZE[20410]</value>
 		<value condition="Control.HasFocus(911)">$LOCALIZE[31972]</value>

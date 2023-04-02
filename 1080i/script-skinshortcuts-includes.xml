@@ -583,9 +583,9 @@
 			<thumb />
 			<property name="labelID">16101</property>
 			<property name="defaultID">16101</property>
-			<onclick>ActivateWindow(Videos,special://skin/extras/Unwatched.xsp,return)</onclick>
-			<property name="path">ActivateWindow(Videos,special://skin/extras/Unwatched.xsp,return)</property>
-			<property name="list">special://skin/extras/Unwatched.xsp</property>
+			<onclick>ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp,return)</onclick>
+			<property name="path">ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp,return)</property>
+			<property name="list">C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 			<property name="group">x10</property>
 			<property name="isSubmenu">True</property>
@@ -599,9 +599,9 @@
 			<thumb />
 			<property name="labelID">575</property>
 			<property name="defaultID">575</property>
-			<onclick>ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</onclick>
-			<property name="path">ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</property>
-			<property name="list">special://skin/extras/InProgress.xsp</property>
+			<onclick>ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp,return)</onclick>
+			<property name="path">ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp,return)</property>
+			<property name="list">C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 			<property name="group">x10</property>
 			<property name="isSubmenu">True</property>
@@ -1091,6 +1091,134 @@
 			<property name="list">special://skin/extras/playlists/random_musicvideos.xsp</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
 			<property name="group">x13</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">16</property>
+			<label>181.fm - 80's Country</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/cd/d7/128576/1/c175.png</thumb>
+			<property name="labelID">181-fm-80scountry</property>
+			<property name="defaultID">181-fm-80scountry</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/128576")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/128576")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/128576)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">16</property>
+			<label>CADENA 100</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/58/3c/4337/c175.png</thumb>
+			<property name="labelID">cadena100</property>
+			<property name="defaultID">cadena100</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4337")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4337")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4337)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">16</property>
+			<label>Los 40 Principales España</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/4c/ce/10732/1/c175.png</thumb>
+			<property name="labelID">los40principalesespana</property>
+			<property name="defaultID">los40principalesespana</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10732")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10732")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10732)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">16</property>
+			<label>RNE 1 Radio Nacional</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/b4/3a/4941/c175.png</thumb>
+			<property name="labelID">rne1radionacional</property>
+			<property name="defaultID">rne1radionacional</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4941")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4941")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4941)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">16</property>
+			<label>esRadio</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/3a/1f/10995/2/c175.png</thumb>
+			<property name="labelID">esradio</property>
+			<property name="defaultID">esradio</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10995")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10995")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10995)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">16</property>
+			<label>Top Radio 97.2 FM</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/e1/ee/21864/c175.png</thumb>
+			<property name="labelID">topradio97-2fm</property>
+			<property name="defaultID">topradio97-2fm</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/21864")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/21864")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/21864)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">16</property>
+			<label>Hit FM</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/72/86/10178/2/c175.png</thumb>
+			<property name="labelID">hitfm</property>
+			<property name="defaultID">hitfm</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10178")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10178")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10178)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">16</property>
+			<label>RNE Radio 5 </label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/3e/44/4944/c175.png</thumb>
+			<property name="labelID">rneradio5</property>
+			<property name="defaultID">rneradio5</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4944")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4944")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4944)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
 			<property name="isSubmenu">True</property>
 			</item>
 		<item id="1">
@@ -2316,9 +2444,9 @@
 			<thumb />
 			<property name="labelID">16101</property>
 			<property name="defaultID">16101</property>
-			<onclick>ActivateWindow(Videos,special://skin/extras/Unwatched.xsp,return)</onclick>
-			<property name="path">ActivateWindow(Videos,special://skin/extras/Unwatched.xsp,return)</property>
-			<property name="list">special://skin/extras/Unwatched.xsp</property>
+			<onclick>ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp,return)</onclick>
+			<property name="path">ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp,return)</property>
+			<property name="list">C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">x10</property>
 			<property name="isSubmenu">True</property>
@@ -2332,9 +2460,9 @@
 			<thumb />
 			<property name="labelID">575</property>
 			<property name="defaultID">575</property>
-			<onclick>ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</onclick>
-			<property name="path">ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</property>
-			<property name="list">special://skin/extras/InProgress.xsp</property>
+			<onclick>ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp,return)</onclick>
+			<property name="path">ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp,return)</property>
+			<property name="list">C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">x10</property>
 			<property name="isSubmenu">True</property>
@@ -2500,9 +2628,9 @@
 			<thumb />
 			<property name="labelID">16101</property>
 			<property name="defaultID">16101</property>
-			<onclick>ActivateWindow(Videos,special://skin/extras/Unwatched.xsp,return)</onclick>
-			<property name="path">ActivateWindow(Videos,special://skin/extras/Unwatched.xsp,return)</property>
-			<property name="list">special://skin/extras/Unwatched.xsp</property>
+			<onclick>ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp,return)</onclick>
+			<property name="path">ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp,return)</property>
+			<property name="list">C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/Unwatched.xsp</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x10)</visible>
 			<property name="group">x10</property>
 			<property name="isSubmenu">True</property>
@@ -2516,9 +2644,9 @@
 			<thumb />
 			<property name="labelID">575</property>
 			<property name="defaultID">575</property>
-			<onclick>ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</onclick>
-			<property name="path">ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</property>
-			<property name="list">special://skin/extras/InProgress.xsp</property>
+			<onclick>ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp,return)</onclick>
+			<property name="path">ActivateWindow(Videos,C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp,return)</property>
+			<property name="list">C:\Nexus\portable_data\addons\skin.aeon.tajo\extras/InProgress.xsp</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x10)</visible>
 			<property name="group">x10</property>
 			<property name="isSubmenu">True</property>
@@ -3373,10 +3501,264 @@
 		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-x303">
-		<description>No items</description>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">16</property>
+			<label>181.fm - 80's Country</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/cd/d7/128576/1/c175.png</thumb>
+			<property name="labelID">181-fm-80scountry</property>
+			<property name="defaultID">181-fm-80scountry</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/128576")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/128576")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/128576)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">16</property>
+			<label>CADENA 100</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/58/3c/4337/c175.png</thumb>
+			<property name="labelID">cadena100</property>
+			<property name="defaultID">cadena100</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4337")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4337")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4337)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">16</property>
+			<label>Los 40 Principales España</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/4c/ce/10732/1/c175.png</thumb>
+			<property name="labelID">los40principalesespana</property>
+			<property name="defaultID">los40principalesespana</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10732")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10732")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10732)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">16</property>
+			<label>RNE 1 Radio Nacional</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/b4/3a/4941/c175.png</thumb>
+			<property name="labelID">rne1radionacional</property>
+			<property name="defaultID">rne1radionacional</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4941")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4941")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4941)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">16</property>
+			<label>esRadio</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/3a/1f/10995/2/c175.png</thumb>
+			<property name="labelID">esradio</property>
+			<property name="defaultID">esradio</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10995")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10995")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10995)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">16</property>
+			<label>Top Radio 97.2 FM</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/e1/ee/21864/c175.png</thumb>
+			<property name="labelID">topradio97-2fm</property>
+			<property name="defaultID">topradio97-2fm</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/21864")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/21864")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/21864)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">16</property>
+			<label>Hit FM</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/72/86/10178/2/c175.png</thumb>
+			<property name="labelID">hitfm</property>
+			<property name="defaultID">hitfm</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10178")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10178")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10178)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">16</property>
+			<label>RNE Radio 5 </label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/3e/44/4944/c175.png</thumb>
+			<property name="labelID">rneradio5</property>
+			<property name="defaultID">rneradio5</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4944")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4944")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4944)</property>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
 		</include>
 	<include name="skinshortcuts-group-alt-x303">
-		<description>No items</description>
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">16</property>
+			<label>181.fm - 80's Country</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/cd/d7/128576/1/c175.png</thumb>
+			<property name="labelID">181-fm-80scountry</property>
+			<property name="defaultID">181-fm-80scountry</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/128576")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/128576")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/128576)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">16</property>
+			<label>CADENA 100</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/58/3c/4337/c175.png</thumb>
+			<property name="labelID">cadena100</property>
+			<property name="defaultID">cadena100</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4337")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4337")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4337)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">16</property>
+			<label>Los 40 Principales España</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/4c/ce/10732/1/c175.png</thumb>
+			<property name="labelID">los40principalesespana</property>
+			<property name="defaultID">los40principalesespana</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10732")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10732")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10732)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">16</property>
+			<label>RNE 1 Radio Nacional</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/b4/3a/4941/c175.png</thumb>
+			<property name="labelID">rne1radionacional</property>
+			<property name="defaultID">rne1radionacional</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4941")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4941")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4941)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">16</property>
+			<label>esRadio</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/3a/1f/10995/2/c175.png</thumb>
+			<property name="labelID">esradio</property>
+			<property name="defaultID">esradio</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10995")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10995")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10995)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<property name="mainmenuid">16</property>
+			<label>Top Radio 97.2 FM</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/e1/ee/21864/c175.png</thumb>
+			<property name="labelID">topradio97-2fm</property>
+			<property name="defaultID">topradio97-2fm</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/21864")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/21864")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/21864)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<property name="mainmenuid">16</property>
+			<label>Hit FM</label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/72/86/10178/2/c175.png</thumb>
+			<property name="labelID">hitfm</property>
+			<property name="defaultID">hitfm</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/10178")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/10178")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/10178)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<property name="mainmenuid">16</property>
+			<label>RNE Radio 5 </label>
+			<label2>Favorito</label2>
+			<icon>DefaultFolder.png</icon>
+			<thumb>https://static.radio.es/images/broadcasts/3e/44/4944/c175.png</thumb>
+			<property name="labelID">rneradio5</property>
+			<property name="defaultID">rneradio5</property>
+			<onclick>PlayMedia("plugin://plugin.audio.radio_de/station/4944")</onclick>
+			<property name="path">PlayMedia("plugin://plugin.audio.radio_de/station/4944")</property>
+			<property name="list">PlayMedia(plugin://plugin.audio.radio_de/station/4944)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),x303)</visible>
+			<property name="group">x303</property>
+			<property name="isSubmenu">True</property>
+			</item>
 		</include>
 	<include name="skinshortcuts-group-x404">
 		<description>No items</description>
