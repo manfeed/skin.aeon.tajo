@@ -5,9 +5,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-10-31 07:15+0000\n"
+"PO-Revision-Date: 2023-03-25 19:16+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Finnish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/fi_fi/>\n"
 "Language: fi_fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -351,11 +351,11 @@ msgstr "Vaihto"
 
 msgctxt "#31080"
 msgid "Manage submenu"
-msgstr "Muokkaa alivalikkoa"
+msgstr "Hallitse alivalikkoa"
 
 msgctxt "#31081"
 msgid "Enable custom submenus"
-msgstr "Käytä mukautettuja alivalikkoja"
+msgstr "Käytä mukautettuja alivalikoita"
 
 msgctxt "#31082"
 msgid "Detach RSS feed from the main menu"
@@ -1109,11 +1109,11 @@ msgstr "Näyttää toistettavan musiikin visualisoinnin taustana, paneelien taka
 
 msgctxt "#31920"
 msgid "Displays a widget on the Home screen with media information when music is playing."
-msgstr "Näyttää päävalikossa widgetin toistettavan musiikin tiedoilla."
+msgstr "Näyttää aloitusnäytössä widgetin toistettavan musiikin tiedoilla."
 
 msgctxt "#31921"
 msgid "Displays a widget on the Home screen with media information when a movie or episode is playing."
-msgstr "Näyttää päävalikossa widgetin toistettavan elokuvan tai jakson tiedoilla."
+msgstr "Näyttää aloitusnäytössä widgetin toistettavan elokuvan tai jakson tiedoilla."
 
 msgctxt "#31922"
 msgid "This enables custom genre backgrounds when browsing through the videolibrary's genre node. Filenames should match the genre label. Extension must be .jpg."
@@ -1149,7 +1149,7 @@ msgstr "Tämä asetus määrittää kuinka monta nimikettä on yhtäaikaa näkyv
 
 msgctxt "#31930"
 msgid "Choose a widget to display on the Home screen to have easy access to content from the library."
-msgstr "Valitse widgetti näytettäväksi kotiruudussa. Se mahdollistaa helpon pääsyn kirjaston sisältöihin."
+msgstr "Valitse aloitusnäytössä näytettävä widgetti tavoittaaksesi kirjastosi sisällön helposti."
 
 msgctxt "#31931"
 msgid "Video plot preference"
@@ -1169,7 +1169,7 @@ msgstr "Vaihda paikkaa toisen päävalikon nimikkeen kanssa. Avaa ikkunan jossa 
 
 msgctxt "#31937"
 msgid "Show the RSS feed on the bottom or top of the screen, depending on main menu position. Enabling this setting makes the submenu permanently visible."
-msgstr "Näytä RSS-syöte ruudun alalaidassa, riippuen päävalikon sijainnista. Ottamalla tämän käyttöön, alivalikot tulevat olemaan pysyvästi näkyvissä."
+msgstr "Näytä RSS-syöte ruudun alalaidassa päävalikon sijainnista riippuen. Tämä tekee alivalikosta pysyvästi näkyvän."
 
 msgctxt "#31938"
 msgid "Enables extra information in the TV show library, like TV show status, next / latest episode, etc. Depends on TV Show Next Aired add-on."
@@ -1498,11 +1498,11 @@ msgstr ""
 
 msgctxt "#32024"
 msgid "Enable shifting colours in home screen"
-msgstr "Käytä vaihtuvia värejä kotivalikkossa"
+msgstr "Käytä aloitusnäytössä vaihtuvia värejä"
 
 msgctxt "#32025"
 msgid "Enable shifting colours in home screen menu and in the default background."
-msgstr "Käytä vaihtuvia värejä kotivalikkossa ja oletustaustassa."
+msgstr "Käytä vaihtuvia värejä aloitusnäytössä ja oletustaustassa."
 
 msgctxt "#32026"
 msgid "Name of user's additional features folder (if different to 'extras')"
