@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-03-15 09:38+0000\n"
+"PO-Revision-Date: 2023-04-30 23:16+0000\n"
 "Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/es_es/>\n"
 "Language: es_es\n"
@@ -977,11 +977,11 @@ msgstr "CU LRC Lyrics se usa para descargar, sincronizar y mostrar las letras mi
 
 msgctxt "#31475"
 msgid "Play Trailer makes possible to play movie trailers through a context menu. "
-msgstr "Play Trailer permite reproducir trailers de películas a través del menú de opciones. "
+msgstr "Play Trailer permite reproducir tráilers de películas a través del menú de opciones. "
 
 msgctxt "#31476"
 msgid "Allows the use of Youtube to play trailers and other videos."
-msgstr "Permite el uso de Youtube para reproducir trailers y otros vídeos."
+msgstr "Permite el uso de Youtube para reproducir tráilers y otros vídeos."
 
 msgctxt "#31477"
 msgid "Provides some cast actress images to be shown in video views."
@@ -1397,11 +1397,11 @@ msgstr "Inicia una presentación a pantalla completa de fanarts de películas, s
 
 msgctxt "#32001"
 msgid "Play automatically movie trailers in video views"
-msgstr "Reproducir automáticamente trailers de películas en vistas de vídeo"
+msgstr "Reproducir automáticamente tráilers de películas en vistas de vídeo"
 
 msgctxt "#32002"
 msgid "Plays the movie trailer automatically in a window after some seconds when browsing through movie views"
-msgstr "Al navegar en las vistas de películas reproduce en una ventana el trailer de la película automáticamente al transcurrir unos segundos"
+msgstr "Al navegar en las vistas de películas reproduce en una ventana el tráiler de la película automáticamente al transcurrir unos segundos"
 
 msgctxt "#32003"
 msgid "All devices"
