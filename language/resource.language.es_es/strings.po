@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-03-15 09:38+0000\n"
-"Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
+"PO-Revision-Date: 2023-07-30 13:11+0000\n"
+"Last-Translator: roliverosc <roliverosc@hotmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -91,7 +91,7 @@ msgstr "Extras"
 
 msgctxt "#31015"
 msgid "Set path to video genre fanart folder"
-msgstr "Establecer ruta de la carpeta fanart de género de vídeo"
+msgstr "Establecer ruta a la carpeta fanart del género de vídeo"
 
 msgctxt "#31016"
 msgid "Poster"
@@ -99,7 +99,7 @@ msgstr "Carátula"
 
 msgctxt "#31017"
 msgid "Set path to music genre fanart folder"
-msgstr "Establecer ruta de la carpeta fanart de género musical"
+msgstr "Establecer ruta a la carpeta fanart de género musical"
 
 msgctxt "#31018"
 msgid "InfoPanel"
@@ -155,7 +155,7 @@ msgstr "Episodios recientes"
 
 msgctxt "#31031"
 msgid "Random movies"
-msgstr "Peliculas al azar"
+msgstr "Peliculas aleatorías"
 
 msgctxt "#31032"
 msgid "Recommended movies"
@@ -163,7 +163,7 @@ msgstr "Películas recomendadas"
 
 msgctxt "#31033"
 msgid "Random episodes"
-msgstr "Episodios al azar"
+msgstr "Episodios aleatorios"
 
 msgctxt "#31034"
 msgid "Recommended episodes"
@@ -171,11 +171,11 @@ msgstr "Episodios recomendados"
 
 msgctxt "#31035"
 msgid "Random songs"
-msgstr "Canciones al azar"
+msgstr "Canciones aleatorias"
 
 msgctxt "#31036"
 msgid "Random albums"
-msgstr "Álbumes al azar"
+msgstr "Álbumes aleatorios"
 
 msgctxt "#31037"
 msgid "Recent albums"
@@ -239,11 +239,11 @@ msgstr "Ordenar: Descendente"
 
 msgctxt "#31052"
 msgid "Movie library statistics"
-msgstr "Estadísticas de la librería de películas"
+msgstr "Estadísticas de la colección de películas"
 
 msgctxt "#31053"
 msgid "TV Show library statistics"
-msgstr "Estadísticas de la librería de series"
+msgstr "Estadísticas de la colección de series"
 
 msgctxt "#31054"
 msgid "Music library statistics"
@@ -363,7 +363,7 @@ msgstr "Separar información RSS del menú principal"
 
 msgctxt "#31083"
 msgid "Enable Next Aired information in the videolibrary"
-msgstr "Activar información de Next Aired en la librería de videos"
+msgstr "Activar información de Next Aired en la colección de videos"
 
 msgctxt "#31084"
 msgid "Conditional weather"
@@ -371,7 +371,7 @@ msgstr "Clima condicional"
 
 msgctxt "#31085"
 msgid "Musicvideo library statistics"
-msgstr "Estadísticas de la librería de videos musicales"
+msgstr "Estadísticas de la colección de videos musicales"
 
 msgctxt "#31086"
 msgid "Icon"
@@ -419,15 +419,15 @@ msgstr "Salas de concierto"
 
 msgctxt "#31097"
 msgid "Movie playlist statistics"
-msgstr "Estadísticas de la librería de películas"
+msgstr "Estadísticas de la colección de películas"
 
 msgctxt "#31098"
 msgid "TV Show playlist statistics"
-msgstr "Estadísticas de la librería de series"
+msgstr "Estadísticas de la colección de series"
 
 msgctxt "#31099"
 msgid "Musicvideo playlist statistics"
-msgstr "Estadísticas de la librería de videos musicales"
+msgstr "Estadísticas de la colección de videos musicales"
 
 msgctxt "#31100"
 msgid "View:"
@@ -622,8 +622,8 @@ msgid "List local library items"
 msgstr "Listar elementos de la colección local"
 
 msgctxt "#31149"
-msgid "Online information from TMDb"
-msgstr "Información en línea de TMDb"
+msgid "Online info from TMDb"
+msgstr "Info online de TMDb"
 
 msgctxt "#31150"
 msgid "Select studio logo artwork"
@@ -976,11 +976,11 @@ msgstr "CU LRC Lyrics se usa para descargar, sincronizar y mostrar las letras mi
 
 msgctxt "#31475"
 msgid "Play Trailer makes possible to play movie trailers through a context menu. "
-msgstr "Play Trailer permite reproducir trailers de películas a través del menú de opciones. "
+msgstr "Play Tráiler permite reproducir trailers de películas a través del menú de opciones. "
 
 msgctxt "#31476"
 msgid "Allows the use of Youtube to play trailers and other videos."
-msgstr "Permite el uso de Youtube para reproducir trailers y otros vídeos."
+msgstr "Permite el uso de Youtube para reproducir tráilers y otros vídeos."
 
 msgctxt "#31477"
 msgid "Provides some cast actress images to be shown in video views."
@@ -1176,7 +1176,7 @@ msgstr "Ocultar el panel de información para vistas Carátula y Paisaje (si est
 
 msgctxt "#31941"
 msgid "Kiosk mode"
-msgstr "Modo Kiosko"
+msgstr "Modo quiosco"
 
 msgctxt "#31942"
 msgid "Disables the slide out menu (media menu) in the library as well as certain buttons in the media information dialogs. (Requires restart to take effect)"
@@ -1275,7 +1275,7 @@ msgid "Setup of melodies, the way of showing widgets, themes and cast for movies
 msgstr "Establece el uso de melodías para el menú principal, bandas sonoras (deben ser añadidas por el usuario) y del reparto de actores para películas y series, además de otras opciones."
 
 msgctxt "#31971"
-msgid "Color for items selected"
+msgid "Color for selected items"
 msgstr "Color de los elementos seleccionados"
 
 msgctxt "#31972"
@@ -1396,11 +1396,11 @@ msgstr "Inicia una presentación a pantalla completa de fanarts de películas, s
 
 msgctxt "#32001"
 msgid "Play automatically movie trailers in video views"
-msgstr "Reproducir automáticamente trailers de películas en vistas de vídeo"
+msgstr "Reproducir automáticamente tráilers de películas en vistas de vídeo"
 
 msgctxt "#32002"
 msgid "Plays the movie trailer automatically in a window after some seconds when browsing through movie views"
-msgstr "Al navegar en las vistas de películas reproduce en una ventana el trailer de la película automáticamente al transcurrir unos segundos"
+msgstr "Al navegar en las vistas de películas reproduce en una ventana el tráiler de la película automáticamente al transcurrir unos segundos"
 
 msgctxt "#32003"
 msgid "All devices"
@@ -1593,3 +1593,83 @@ msgstr "Expulsar disco"
 msgctxt "#32050"
 msgid "Play with PreShow"
 msgstr "Reproducir con PreShow"
+
+msgctxt "#32051"
+msgid "Highlighted text color"
+msgstr "Color del texto destacado"
+
+msgctxt "#32052"
+msgid "Watched mark color"
+msgstr "Color de la marca de visto"
+
+msgctxt "#32053"
+msgid "Current"
+msgstr "Actual"
+
+msgctxt "#32054"
+msgid "Selected"
+msgstr "Seleccionado"
+
+msgctxt "#32055"
+msgid "Watched mark shape"
+msgstr "Tipo de la marca de visto"
+
+msgctxt "#32056"
+msgid "Sliding fanarts"
+msgstr "Fanarts deslizantes"
+
+msgctxt "#32057"
+msgid "Kodi add-ons settings"
+msgstr "Ajustes add-ons de Kodi"
+
+msgctxt "#32058"
+msgid "Install and Update add-ons"
+msgstr "Obtener y actualizar add-ons"
+
+msgctxt "#32059"
+msgid "Download add-ons"
+msgstr "Descargar add-ons"
+
+msgctxt "#32060"
+msgid "Show Browser"
+msgstr "Mostrar navegador"
+
+msgctxt "#32061"
+msgid "Hide Browser"
+msgstr "Ocultar navegador"
+
+msgctxt "#32062"
+msgid "Narrow view"
+msgstr "Vista estrecha"
+
+msgctxt "#32063"
+msgid "Wide view"
+msgstr "Vista ancha"
+
+msgctxt "#32064"
+msgid "Actors in other movies and TV shows"
+msgstr "Actores en otras películas y series"
+
+msgctxt "#32065"
+msgid "Show similar movies/TV shows and artists/albums"
+msgstr "Mostrar películas/series y artistas/albums similares"
+
+msgctxt "#32066"
+msgid "Option to open a window in some video/music views showing movies/TV shows or artists/albums related"
+msgstr "Opción de abrir una pantalla en algunas vistas de video/música mostrando películas/series o artistas/álbumes relacionados"
+
+msgctxt "#32067"
+msgid "Show similar"
+msgstr "Mostrar similares"
+
+msgctxt "#32068"
+msgid "Classic"
+msgstr "Clásica"
+
+msgctxt "#32069"
+msgid "Similar albums"
+msgstr "Álbumes similares"
+
+msgctxt "#32070"
+msgid "No similar found"
+msgstr "No se han encontrado similares"
