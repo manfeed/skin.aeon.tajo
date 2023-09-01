@@ -1,4 +1,4 @@
-<addon id="skin.aeon.tajo" name="Aeon Tajo" provider-name="manfeed" version="5.9.1">
+<addon id="skin.aeon.tajo" name="Aeon Tajo" provider-name="manfeed" version="6.7.0">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 		<import addon="script.skinshortcuts" version="0.4.5"/>
@@ -28,7 +28,7 @@
 			<screenshot>resources/screenshot-09.jpg</screenshot>
 			<screenshot>resources/screenshot-10.jpg</screenshot>
 		</assets>
-		<news>Updated for Kodi v19 Matrix</news>
+		<news>Updated for Kodi v20 Nexus</news>
 		<summary lang="en_AU">Aeon Tajo</summary>
 		<summary lang="en_GB">Aeon Tajo</summary>
 		<summary lang="en_NZ">Aeon Tajo</summary>

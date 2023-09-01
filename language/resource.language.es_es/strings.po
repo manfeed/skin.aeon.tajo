@@ -155,7 +155,7 @@ msgstr "Episodios recientes"
 
 msgctxt "#31031"
 msgid "Random movies"
-msgstr "Peliculas al azar"
+msgstr "Peliculas aleatorías"
 
 msgctxt "#31032"
 msgid "Recommended movies"
@@ -163,7 +163,7 @@ msgstr "Películas recomendadas"
 
 msgctxt "#31033"
 msgid "Random episodes"
-msgstr "Episodios al azar"
+msgstr "Episodios aleatorios"
 
 msgctxt "#31034"
 msgid "Recommended episodes"
@@ -171,7 +171,7 @@ msgstr "Episodios recomendados"
 
 msgctxt "#31035"
 msgid "Random songs"
-msgstr "Canciones al azar"
+msgstr "Canciones aleatorias"
 
 msgctxt "#31036"
 msgid "Random albums"
@@ -243,11 +243,11 @@ msgstr "Estadísticas de la colección de películas"
 
 msgctxt "#31053"
 msgid "TV Show library statistics"
-msgstr "Estadísticas de la librería de series"
+msgstr "Estadísticas de la colección de series"
 
 msgctxt "#31054"
 msgid "Music library statistics"
-msgstr "Estadísticas de la librería de música"
+msgstr "Estadísticas de la colección de música"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -363,7 +363,7 @@ msgstr "Separar información RSS del menú principal"
 
 msgctxt "#31083"
 msgid "Enable Next Aired information in the videolibrary"
-msgstr "Activar información de Next Aired en la librería de videos"
+msgstr "Activar información de Next Aired en la colección de videos"
 
 msgctxt "#31084"
 msgid "Conditional weather"
@@ -371,7 +371,7 @@ msgstr "Clima condicional"
 
 msgctxt "#31085"
 msgid "Musicvideo library statistics"
-msgstr "Estadísticas de la librería de videos musicales"
+msgstr "Estadísticas de la colección de videos musicales"
 
 msgctxt "#31086"
 msgid "Icon"
@@ -419,15 +419,15 @@ msgstr "Salas de concierto"
 
 msgctxt "#31097"
 msgid "Movie playlist statistics"
-msgstr "Estadísticas de la librería de películas"
+msgstr "Estadísticas de la colección de películas"
 
 msgctxt "#31098"
 msgid "TV Show playlist statistics"
-msgstr "Estadísticas de la librería de series"
+msgstr "Estadísticas de la colección de series"
 
 msgctxt "#31099"
 msgid "Musicvideo playlist statistics"
-msgstr "Estadísticas de la librería de videos musicales"
+msgstr "Estadísticas de la colección de videos musicales"
 
 msgctxt "#31100"
 msgid "View:"
@@ -470,7 +470,7 @@ msgid "Unwatched episode count"
 msgstr "Contador de episodio no visto"
 
 msgctxt "#31110"
-msgid "Up next brings the option to watch right away the next episode of a tvshow (Netflix/Prime video style)."
+msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
 msgstr "Up next permite ver a continuación el siguiente episodo de una serie (al estilo de Netflix/Amazon Prime video)."
 
 msgctxt "#31111"
@@ -622,8 +622,8 @@ msgid "List local library items"
 msgstr "Listar elementos de la colección local"
 
 msgctxt "#31149"
-msgid "Online information from TMDb"
-msgstr "Información en línea de TMDb"
+msgid "Online info from TMDb"
+msgstr "Info online de TMDb"
 
 msgctxt "#31150"
 msgid "Select studio logo artwork"
@@ -669,9 +669,8 @@ msgctxt "#31160"
 msgid "Display background name"
 msgstr "Mostrar nombre de fondo"
 
-#: /1080i/variables.xml:395
 msgctxt "#31161"
-msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
+msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
 msgstr "Mostrar el título de película/serie de tv/artista en la pantalla inicial si hay una presentación de fanarts como fondo de pantalla"
 
 msgctxt "#31162"
@@ -961,7 +960,7 @@ msgstr "Check MP3 Theme comprueba si el usuario ha puesto un archivo theme.mp3 e
 
 msgctxt "#31450"
 msgid "  •  Open Settings "
-msgstr "  •  Abrir configuración "
+msgstr "  • Abrir configuración "
 
 msgctxt "#31451"
 msgid "  •  Click to Install"
@@ -977,7 +976,7 @@ msgstr "CU LRC Lyrics se usa para descargar, sincronizar y mostrar las letras mi
 
 msgctxt "#31475"
 msgid "Play Trailer makes possible to play movie trailers through a context menu. "
-msgstr "Play Trailer permite reproducir tráilers de películas a través del menú de opciones. "
+msgstr "Play Tráiler permite reproducir trailers de películas a través del menú de opciones. "
 
 msgctxt "#31476"
 msgid "Allows the use of Youtube to play trailers and other videos."
@@ -1276,7 +1275,7 @@ msgid "Setup of melodies, the way of showing widgets, themes and cast for movies
 msgstr "Establece el uso de melodías para el menú principal, bandas sonoras (deben ser añadidas por el usuario) y del reparto de actores para películas y series, además de otras opciones."
 
 msgctxt "#31971"
-msgid "Color for items selected"
+msgid "Color for selected items"
 msgstr "Color de los elementos seleccionados"
 
 msgctxt "#31972"
@@ -1545,7 +1544,7 @@ msgstr "Muestra el cartel normal (poster.jpg) en las vistas de películas y seri
 
 msgctxt "#32038"
 msgid "Shows the animated poster (animatedposter.gif) in movies and TV shows views."
-msgstr "Muestra el cartel animado (animatedposter.gif) en las vistas de películas y series de TV."
+msgstr "Muestra la carátula animada (animatedposter.gif) en películas y series"
 
 msgctxt "#32039"
 msgid "Shows all the extra posters (poster1.jpg, poster2.jpg, poster3.jpg...) in movies and TV shows views."
@@ -1553,7 +1552,7 @@ msgstr "Muestra las carátulas extras (poster1.jpg, poster2.jpg, poster3.jpg...)
 
 msgctxt "#32040"
 msgid "Thanks for using Aeon Tajo, I really hope you enjoy it! Creating and maintaining a skin for Kodi is very hard and requires hundreds of hours of work. If you like Aeon Tajo and you’re willing to support it, you’ll get:[CR][CR] [B]***[/B] Exclusive access to hidden Aeon Tajo’s features, such as browsing and playing of the user’s extra content directly from media views, and some more. [CR] [B]***[/B] Frequent updates of Aeon Tajo, containing new features and bug fixes. [CR] [B]***[/B] Videos, media packs and articles with detailed instructions to take advantage of the many features of Aeon Tajo to the full. [CR][CR]For more information, visit [B][COLOR=themecolor]patreon.com[/B][/COLOR] and search for the creator [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR], or go to [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR]. Thanks!"
-msgstr "Gracias por usar Aeon Tajo, ¡realmente espero que lo disfrutes! Crear y mantener una skin para Kodi es muy duro y requiere cientos de horas de trabajo. Si te gusta Aeon Tajo y estás dispuesto a apoyarlo, obtendrás:[CR][CR] [B]***[/B] Acceso exclusivo a las características ocultas de Aeon Tajo, como la navegación y reproducción del contenido extra del usuario directamente desde las vistas multimedia, y algunas más. [CR] [B]***[/B] Actualizaciones frecuentes de Aeon Tajo, con nuevas funciones y correcciones de errores. [CR] [B]***[/B] Vídeos, paquetes multimedia y artículos con instrucciones detalladas para aprovechar al máximo las numerosas funciones de Aeon Tajo. [CR][CR]Para más información, visita [B][COLOR=themecolor]patreon.com[/B][/COLOR] y busca al creador [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR], o entra en [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR]. ¡Gracias!"
+msgstr "¡Muchas gracias por usar Aeon Tajo, deseo que lo disfrutes! Crear y mantener una piel para Kodi es muy, muy difícil y requiere cientos de horas de trabajo. Si te gusta Aeon Tajo y deseas apoyarlo, obtendrás:[CR][CR] [B]***[/B] Acceso exclusivo a opciones ocultas de Aeon Tajo, tales como la integración automática, navegación y reproducción de tus contenidos extras para películas y música directamente desde las vistas multimedia, y otras más. [CR] [B]***[/B] Actualizaciones frecuentes de Aeon Tajo, con nuevas funciones y correcciones de errores. [CR] [B]***[/B] Vídeos, paquetes multimedia y artículos con instrucciones detalladas para aprovechar al máximo las numerosas funciones de Aeon Tajo. [CR][CR]Para más información, visita [B][COLOR=themecolor]patreon.com[/B][/COLOR] y busca al creador [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR] o entra en [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR]. ¡Muchas gracias!"
 
 msgctxt "#32041"
 msgid "Blurred album image as background in music visualisation screen"
@@ -1582,3 +1581,95 @@ msgstr "Carrete"
 msgctxt "#32047"
 msgid "Select + Right Stick"
 msgstr "Select + Mando Derecha"
+
+msgctxt "#32048"
+msgid "Vertical Main Menu"
+msgstr "Menú principal en vertical"
+
+msgctxt "#32049"
+msgid "Eject disc"
+msgstr "Expulsar disco"
+
+msgctxt "#32050"
+msgid "Play with PreShow"
+msgstr "Reproducir con PreShow"
+
+msgctxt "#32051"
+msgid "Highlighted text color"
+msgstr "Color del texto destacado"
+
+msgctxt "#32052"
+msgid "Watched mark color"
+msgstr "Color de la marca de visto"
+
+msgctxt "#32053"
+msgid "Current"
+msgstr "Actual"
+
+msgctxt "#32054"
+msgid "Selected"
+msgstr "Seleccionado"
+
+msgctxt "#32055"
+msgid "Watched mark shape"
+msgstr "Tipo de la marca de visto"
+
+msgctxt "#32056"
+msgid "Sliding fanarts"
+msgstr "Fanarts deslizantes"
+
+msgctxt "#32057"
+msgid "Kodi add-ons settings"
+msgstr "Ajustes add-ons de Kodi"
+
+msgctxt "#32058"
+msgid "Install and Update add-ons"
+msgstr "Obtener y actualizar add-ons"
+
+msgctxt "#32059"
+msgid "Download add-ons"
+msgstr "Descargar add-ons"
+
+msgctxt "#32060"
+msgid "Show Browser"
+msgstr "Mostrar navegador"
+
+msgctxt "#32061"
+msgid "Hide Browser"
+msgstr "Ocultar navegador"
+
+msgctxt "#32062"
+msgid "Narrow view"
+msgstr "Vista estrecha"
+
+msgctxt "#32063"
+msgid "Wide view"
+msgstr "Vista ancha"
+
+msgctxt "#32064"
+msgid "Actors in other movies and TV shows"
+msgstr "Actores en otras películas y series"
+
+msgctxt "#32065"
+msgid "Show similar movies/TV shows and artists/albums"
+msgstr "Mostrar películas/series y artistas/albums similares"
+
+msgctxt "#32066"
+msgid "Option to open a window in some video/music views showing movies/TV shows or artists/albums related"
+msgstr "Opción de abrir una pantalla en algunas vistas de video/música mostrando películas/series o artistas/álbumes relacionados"
+
+msgctxt "#32067"
+msgid "Show similar"
+msgstr "Mostrar similares"
+
+msgctxt "#32068"
+msgid "Classic"
+msgstr "Clásica"
+
+msgctxt "#32069"
+msgid "Similar albums"
+msgstr "Álbumes similares"
+
+msgctxt "#32070"
+msgid "No similar found"
+msgstr "No se han encontrado similares"
