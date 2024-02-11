@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-08-05 21:11+0000\n"
-"Last-Translator: Konon-cat <konon@spark-mail.ru>\n"
+"PO-Revision-Date: 2024-01-12 08:13+0000\n"
+"Last-Translator: Alexey <signfinder@gmail.com>\n"
 "Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/ru_ru/>\n"
 "Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.18.2\n"
+"X-Generator: Weblate 5.3\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -620,7 +620,7 @@ msgstr "Изменить рейтинг"
 
 msgctxt "#31148"
 msgid "List local library items"
-msgstr "Список элементов локальной библиотеки"
+msgstr "Список элементов локальной медиатеки"
 
 msgctxt "#31149"
 msgid "Online information from TMDb"
@@ -1124,7 +1124,7 @@ msgstr "Установите действие по умолчанию для в�
 
 msgctxt "#31924"
 msgid "This enables custom genre backgrounds when browsing through the musiclibrary's genre node. Filenames should match the genre label. Extension must be .jpg."
-msgstr "Включает пользовательский фон жанра при просмотре через пункт \"жанр\" музыкальной библиотеки. Имена файлов должны соответствовать названию жанра. Расширение должно быть .jpg."
+msgstr "Включает пользовательский фон жанра при просмотре через пункт \"жанр\" музыкальной медиатеки. Имена файлов должны соответствовать названию жанра. Расширение должно быть .jpg."
 
 msgctxt "#31925"
 msgid "Pick one of the preset backgrounds or set your own images as the menu items background."
@@ -1156,7 +1156,7 @@ msgstr "Предпочтительное описание сюжета"
 
 msgctxt "#31932"
 msgid "Show plot outline in the library views and full plot in the video information dialog or vice versa. Falls back to full plot if no outline is available."
-msgstr "Показывать краткую аннотацию в библиотеке видео и полное описание в диалоговом окне информации о видео или наоборот. При отсутствии краткой аннотации показывается полное описание сюжета."
+msgstr "Показывать краткую аннотацию в медиатеке видео и полное описание в диалоговом окне информации о видео или наоборот. При отсутствии краткой аннотации показывается полное описание сюжета."
 
 msgctxt "#31933"
 msgid "Select an item to display on the left top of the main menu"
@@ -1172,7 +1172,7 @@ msgstr "Показывать RSS-канал в нижней или верхне�
 
 msgctxt "#31938"
 msgid "Enables extra information in the TV show library, like TV show status, next / latest episode, etc. Depends on TV Show Next Aired add-on."
-msgstr "Позволяет получать дополнительную информацию в библиотеке сериалов, например, статус сериала, следующий / последний эпизод и т.д. Зависит от дополнения TV Show Next Aired."
+msgstr "Позволяет получать дополнительную информацию в медиатеке сериалов, например, статус сериала, следующий / последний эпизод и т.д. Зависит от дополнения TV Show Next Aired."
 
 msgctxt "#31939"
 msgid "Hide Infopanel on scrolling"
