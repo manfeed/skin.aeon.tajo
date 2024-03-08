@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-04-11 08:16+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2024-02-11 21:13+0000\n"
+"Last-Translator: icarok99 <icarok00@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/pt_br/>\n"
 "Language: pt_br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.3\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -39,7 +39,7 @@ msgstr "Escrito por"
 
 msgctxt "#31002"
 msgid "Blurred album thumb"
-msgstr "Miniatura de álbum borrada"
+msgstr "Miniatura de álbum borrado"
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -51,7 +51,7 @@ msgstr "Trabalhando"
 
 msgctxt "#31005"
 msgid "Fixed"
-msgstr "Fixos"
+msgstr "Fixo"
 
 msgctxt "#31006"
 msgid "View Options"
@@ -59,7 +59,7 @@ msgstr "Opções de visualização"
 
 msgctxt "#31007"
 msgid "Setup home"
-msgstr "Configurar Página Inicial"
+msgstr "Configurar página inicial"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -75,7 +75,7 @@ msgstr "Próximo episódio"
 
 msgctxt "#31011"
 msgid "Latest episode"
-msgstr "Episódio Mais Recente"
+msgstr "Episódio mais recente"
 
 msgctxt "#31012"
 msgid "Airs"
@@ -99,7 +99,7 @@ msgstr "Pôster"
 
 msgctxt "#31017"
 msgid "Set path to music genre fanart folder"
-msgstr "Definir caminho para pasta de fanart de gênero para música"
+msgstr "Definir caminho para pasta de fanart de gênero musical"
 
 msgctxt "#31018"
 msgid "InfoPanel"
@@ -199,7 +199,7 @@ msgstr "Selecione widget"
 
 msgctxt "#31042"
 msgid "Show \"Now Playing\" information blended in the background"
-msgstr "Exibir informações de \"Reproduzindo agora\" misturadas à imagem de plano de fundo"
+msgstr "Exibir informações de \"Reproduzindo Agora\" combinadas em segundo plano"
 
 msgctxt "#31043"
 msgid "Platform"
@@ -243,7 +243,7 @@ msgstr "Estatísticas da coleção de filmes"
 
 msgctxt "#31053"
 msgid "TV Show library statistics"
-msgstr "Estatísticas de coleção de seriados"
+msgstr "Estatísticas da coleção de Seriados"
 
 msgctxt "#31054"
 msgid "Music library statistics"
@@ -323,7 +323,7 @@ msgstr "Ao abrir informações do vídeo"
 
 msgctxt "#31073"
 msgid "Move menu item"
-msgstr "Mover item de menu"
+msgstr "Mover item do menu"
 
 msgctxt "#31074"
 msgid "Choose item to swap places with"
@@ -363,7 +363,7 @@ msgstr "Separar feed RSS do menu principal"
 
 msgctxt "#31083"
 msgid "Enable Next Aired information in the videolibrary"
-msgstr "Ativar informação de Próximo episódio na coleção de vídeo"
+msgstr "Ativar Informação do próximo episódio na biblioteca de vídeos"
 
 msgctxt "#31084"
 msgid "Conditional weather"
@@ -371,7 +371,7 @@ msgstr "Condições climáticas"
 
 msgctxt "#31085"
 msgid "Musicvideo library statistics"
-msgstr "Estatísticas da coleção de vídeos musicais"
+msgstr "Estatísticas da biblioteca de videoclipes"
 
 msgctxt "#31086"
 msgid "Icon"
@@ -407,7 +407,7 @@ msgstr "Alternar lista inferior"
 
 msgctxt "#31094"
 msgid "List view layout"
-msgstr "Layout de lista"
+msgstr "Layout de visualização de lista"
 
 msgctxt "#31095"
 msgid "Slim List"
@@ -427,7 +427,7 @@ msgstr "Estatísticas da lista de reprodução de seriados"
 
 msgctxt "#31099"
 msgid "Musicvideo playlist statistics"
-msgstr "Estatísticas da lista de reprodução de vídeos musicais"
+msgstr "Estatísticas da lista de reprodução de videoclipes"
 
 msgctxt "#31100"
 msgid "View:"
@@ -439,7 +439,7 @@ msgstr "Escolher visualização"
 
 msgctxt "#31102"
 msgid "Background"
-msgstr "Imagem de plano de fundo"
+msgstr "Plano de fundo"
 
 msgctxt "#31103"
 msgid "N/A"
@@ -463,7 +463,7 @@ msgstr "Persistente"
 
 msgctxt "#31108"
 msgid "Enable artist information feed (if available)"
-msgstr "Ativar feed de informações do artista (se disponível)"
+msgstr "Ativar Feed de Informação do Artista (se disponível)"
 
 msgctxt "#31109"
 msgid "Unwatched episode count"
@@ -539,7 +539,7 @@ msgstr "Configurações do LiveTV Mod"
 
 msgctxt "#31128"
 msgid "Channels View"
-msgstr "Visualização de canais"
+msgstr "Visualizar canais"
 
 msgctxt "#31129"
 msgid "Hide Fanart in full screen visualisation"
@@ -623,7 +623,7 @@ msgstr "Listar itens da biblioteca local"
 
 msgctxt "#31149"
 msgid "Online information from TMDb"
-msgstr "Informações online do TMDb"
+msgstr "Informações on-line do TMDb"
 
 msgctxt "#31150"
 msgid "Select studio logo artwork"
@@ -848,7 +848,7 @@ msgstr "Seletor de Músicas Karaokê"
 
 msgctxt "#31328"
 msgid "Recently Added"
-msgstr "Recém Adicionado"
+msgstr "Adicionado recentemente"
 
 msgctxt "#31331"
 msgid "Installed"
@@ -933,11 +933,11 @@ msgstr ""
 
 msgctxt "#31428"
 msgid "The Grab Fanart script provides the random fanart slideshows for the main menu."
-msgstr ""
+msgstr "O script Grab Fanart fornece as apresentações de slides de fanart aleatórias para o menu principal."
 
 msgctxt "#31429"
 msgid "Library Data Provider is a service that runs in the background to provide library data for widgets and live backgrounds as well as playlist statistics for infolines."
-msgstr ""
+msgstr "O Library Data Provider é um serviço executado em segundo plano para fornecer dados de biblioteca para widgets e planos de fundo dinâmicos, bem como estatísticas de lista de reprodução para linhas de informações."
 
 msgctxt "#31430"
 msgid "Resource image addon for displaying the default white studio icons throughout the skin."
@@ -953,7 +953,7 @@ msgstr ""
 
 msgctxt "#31433"
 msgid "Skin Info Service is used to display movie set information throughout the skin."
-msgstr ""
+msgstr "O Skin Info Service é usado para exibir informações da coleção de filmes em toda a skin."
 
 msgctxt "#31434"
 msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/TV show folder to be played when browsing."
@@ -975,7 +975,7 @@ msgstr ""
 
 msgctxt "#31474"
 msgid "CU LRC Lyrics is used to download, sync, and display lyrics during fullscreen music playback."
-msgstr ""
+msgstr "O CU LRC Lyrics é usado para fazer download, sincronizar e exibir letras de música durante a reprodução de música em tela cheia."
 
 msgctxt "#31475"
 msgid "Play Trailer makes possible to play movie trailers through a context menu. "
@@ -991,7 +991,7 @@ msgstr ""
 
 msgctxt "#31478"
 msgid "Artist Slideshow is used to display artist fanart for both the home screen and during fullscreen music playback."
-msgstr ""
+msgstr "O Artist Slideshow é usado para exibir fanart de artistas na tela inicial e durante a reprodução de música em tela cheia."
 
 msgctxt "#31479"
 msgid "AutoCompletion provides suggestions to be selected while using the virtual keyboard."
