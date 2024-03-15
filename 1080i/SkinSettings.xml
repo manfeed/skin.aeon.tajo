@@ -8,10 +8,8 @@
 			<visible>Skin.HasSetting(melodyForHome)</visible>
 			<scrolltime>350</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>$INFO[Skin.String(melodyPlaylist)]</content>
 		</control>
 		<control type="image">
@@ -36,7 +34,7 @@
 				<onup>9007</onup>
 				<ondown>9007</ondown>
 				<orientation>vertical</orientation>
-				<pagecontrol/>
+				<pagecontrol />
 				<scrolltime tween="quadratic" easing="out">200</scrolltime>
 				<visible>!Window.IsActive(1121)</visible>
 				<include>SettingsFadeAnimation</include>
@@ -76,17 +74,17 @@
 					<item id="1">
 						<label>32003</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 					</item>
 					<item id="2">
 						<label>32004</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 					</item>
 					<item id="3">
 						<label>32005</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 					</item>
 					<include condition="!Skin.HasSetting(SettingCommon)">Button_4</include>
 				</content>
@@ -115,7 +113,7 @@
 				<left>552</left>
 				<top>775</top>
 				<width>1256</width>
-				<height>125</height>
+				<height>130</height>
 				<font>fontmusic</font>
 				<textcolor>Skin.String(theme_text)</textcolor>
 				<label>[B]$VAR[SkinSettingsDescriptionVar][/B]</label>
@@ -199,6 +197,15 @@
 						<label>32048</label>
 						<onclick>Skin.ToggleSetting(VerticalMenu)</onclick>
 						<selected>Skin.HasSetting(VerticalMenu)</selected>
+					</control>
+					<control type="radiobutton" id="327">
+						<width>1316</width>
+						<height>70</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32093</label>
+						<onclick>Skin.ToggleSetting(ColorCode)</onclick>
+						<selected>Skin.HasSetting(ColorCode)</selected>
 					</control>
 					<control type="radiobutton" id="102">
 						<width>1316</width>
@@ -493,7 +500,6 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>32021</label>
-						<textcolor>Skin.String(theme_text)</textcolor>
 						<onclick>Skin.ToggleSetting(SearchExtras)</onclick>
 						<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
 						<selected>Skin.HasSetting(SearchExtras)</selected>
@@ -505,7 +511,6 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>32034</label>
-						<textcolor>Skin.String(theme_text)</textcolor>
 						<onclick>Skin.ToggleSetting(SearchExtrasMusic)</onclick>
 						<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
 						<selected>Skin.HasSetting(SearchExtrasMusic)</selected>
@@ -517,7 +522,6 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>-- $LOCALIZE[32026]</label>
-						<textcolor>Skin.String(theme_text)</textcolor>
 						<visible>Skin.HasSetting(SearchExtras) | Skin.HasSetting(SearchExtrasMusic)</visible>
 						<label2>[COLOR $INFO[Skin.String(theme_text)]]$INFO[Skin.String(extras_folder)][/COLOR]</label2>
 						<onclick>Skin.SetString(extras_folder)</onclick>
@@ -539,7 +543,6 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>32065</label>
-						<textcolor>Skin.String(theme_text)</textcolor>
 						<onclick>Skin.ToggleSetting(similars)</onclick>
 						<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
 						<selected>Skin.HasSetting(similars)</selected>
@@ -549,7 +552,7 @@
 						<height>70</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>31225</label>
+						<label>$LOCALIZE[3] - $LOCALIZE[31225]</label>
 						<onclick>Skin.Reset(animatedposters)</onclick>
 						<onclick>Skin.Reset(extraposters)</onclick>
 						<selected>!Skin.HasSetting(animatedposters) + !Skin.HasSetting(extraposters)</selected>
@@ -559,7 +562,7 @@
 						<height>70</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>31224</label>
+						<label>$LOCALIZE[3] - $LOCALIZE[31224]</label>
 						<onclick>Skin.SetBool(animatedposters)</onclick>
 						<onclick>Skin.Reset(extraposters)</onclick>
 						<selected>Skin.HasSetting(animatedposters) + !Skin.HasSetting(extraposters)</selected>
@@ -569,10 +572,28 @@
 						<height>70</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>31226</label>
+						<label>$LOCALIZE[3] - $LOCALIZE[31226]</label>
 						<onclick>Skin.SetBool(extraposters)</onclick>
 						<onclick>Skin.Reset(animatedposters)</onclick>
 						<selected>!Skin.HasSetting(animatedposters) + Skin.HasSetting(extraposters)</selected>
+					</control>
+					<control type="radiobutton" id="291">
+						<width>1316</width>
+						<height>70</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[2] - $LOCALIZE[31225]</label>
+						<onclick>Skin.Reset(animatedpostersmusic)</onclick>
+						<selected>!Skin.HasSetting(animatedpostersmusic)</selected>
+					</control>
+					<control type="radiobutton" id="292">
+						<width>1316</width>
+						<height>70</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[2] - $LOCALIZE[31224]</label>
+						<onclick>Skin.SetBool(animatedpostersmusic)</onclick>
+						<selected>Skin.HasSetting(animatedpostersmusic)</selected>
 					</control>
 				</control>
 				<control type="group">
@@ -582,8 +603,8 @@
 						<top>-50</top>
 						<left>600</left>
 						<width>1200</width>
-						<height>850</height>
-						<font>font15_textbox</font>
+						<height>800</height>
+						<font>font15info</font>
 						<textcolor>grey2</textcolor>
 						<autoscroll time="4000" delay="5000" repeat="6000">true</autoscroll>
 						<align>left</align>
@@ -591,7 +612,7 @@
 						<label>$LOCALIZE[32040]</label>
 					</control>
 					<control type="textbox">
-						<top>750</top>
+						<top>780</top>
 						<left>600</left>
 						<width>1200</width>
 						<height>300</height>
@@ -606,10 +627,10 @@
 				<control type="group">
 					<control type="textbox">
 						<visible>Control.HasFocus(9007)</visible>
-						<top>12</top>
+						<top>-15</top>
 						<left>600</left>
 						<width>1200</width>
-						<height>850</height>
+						<height>840</height>
 						<font>font15_textbox</font>
 						<textcolor>grey2</textcolor>
 						<autoscroll time="4000" delay="5000" repeat="6000">true</autoscroll>

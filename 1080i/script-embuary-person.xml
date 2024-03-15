@@ -174,7 +174,7 @@
 					<top>542</top>
 					<control type="button">
 						<width>1160</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<disabledcolor>grey</disabledcolor>
 						<font>font15_bold</font>
 						<align>left</align>
@@ -185,7 +185,7 @@
 					</control>
 					<control type="button">
 						<width>1160</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<disabledcolor>grey</disabledcolor>
 						<font>font15_bold</font>
 						<align>left</align>

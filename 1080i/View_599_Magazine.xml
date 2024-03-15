@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<!--##################################################################################   VISTA Magazine music - ID 599   #############################################################################-->
 	<include name="ViewMagazine">
@@ -47,7 +48,7 @@
 						</control>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(ListItem.Art(clearart))</visible>
+						<visible>!String.IsEmpty(ListItem.Art(clearart)) | Integer.IsGreaterOrEqual(Container(5985).NumItems,4)</visible>
 						<left>1555</left>
 						<top>526</top>
 						<width>280</width>
@@ -56,20 +57,21 @@
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					</control>
 					<control type="image">
+						<visible>!Integer.IsGreaterOrEqual(Container(5985).NumItems,4)</visible>
 						<left>200</left>
-						<top>310</top>
+						<top>350</top>
 						<width>400</width>
-						<height>180</height>
+						<height>150</height>
 						<colordiffuse>ddFFFFFF</colordiffuse>
 						<aspectratio align="right" aligny="top">keep</aspectratio>
 						<texture background="true" diffuse="tajo/osd_black_bg3.png">$INFO[ListItem.Art(clearart)]</texture>
 					</control>
 					<control type="image">
-						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
+						<visible>String.IsEmpty(ListItem.Art(clearart)) + !Integer.IsGreaterOrEqual(Container(5985).NumItems,4)</visible>
 						<left>215</left>
-						<top>350</top>
+						<top>370</top>
 						<width>400</width>
-						<height>120</height>
+						<height>110</height>
 						<colordiffuse>ddFFFFFF</colordiffuse>
 						<aspectratio align="right" aligny="top">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -127,13 +129,13 @@
 							<height>319</height>
 							<font>font28</font>
 							<align>center</align>
-							<label>[COLOR $INFO[Skin.String(theme_text)]][B]$VAR[value_style][/B][/COLOR][COLOR=FFFFFAF0]$VAR[value_style2][/COLOR][COLOR $INFO[Skin.String(theme_text)]][B]$VAR[value_genre][/B][/COLOR][COLOR=FFFFFAF0]$VAR[value_genre2][/COLOR]$INFO[ListItem.Property(Artist_Description)]</label>
+							<label>[COLOR $INFO[Skin.String(theme_text)]][B]$VAR[value_style][/B][/COLOR][COLOR=FFFFFAF0]$VAR[value_style2][/COLOR][COLOR $INFO[Skin.String(theme_text)]][B]$VAR[value_genre,  [COLOR=grey]•[/COLOR]  ,][/B][/COLOR][COLOR=FFFFFAF0]$VAR[value_genre2][/COLOR]$INFO[ListItem.Property(Artist_Description)]</label>
 							<autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 						</control>
 						<control type="textbox">
 							<visible>String.IsEmpty(ListItem.Property(Artist_Description))</visible>
-							<top>125</top>
-							<left>620</left>
+							<top>122</top>
+							<left>649</left>
 							<height>40</height>
 							<aligny>top</aligny>
 							<include>ShelfmLabel_Fanart</include>
@@ -143,7 +145,7 @@
 							<visible>String.IsEmpty(ListItem.Property(Artist_Description))</visible>
 							<width>530</width>
 							<height>273</height>
-							<left>620</left>
+							<left>610</left>
 							<top>162</top>
 							<orientation>vertical</orientation>
 							<scrolltime>1500</scrolltime>
@@ -151,7 +153,20 @@
 							<viewtype label="8">list</viewtype>
 							<itemlayout width="490" height="30">
 								<control type="label">
+									<visible>!String.IsEmpty(ListItem.SongVideoURL)</visible>
+									<align>center</align>
+									<aligny>center</aligny>
+									<font>IconMediumSMX</font>
+									<textcolor>grey</textcolor>
+									<selectedcolor>Skin.String(theme_text)</selectedcolor>
+									<left>-16</left>
+									<width>65</width>
+									<height>34</height>
+									<label></label>
+								</control>
+								<control type="label">
 									<scroll>false</scroll>
+									<left>38</left>
 									<height>30</height>
 									<aligny>center</aligny>
 									<font>Font_plot</font>
@@ -160,7 +175,20 @@
 							</itemlayout>
 							<focusedlayout width="490" height="30">
 								<control type="label">
+									<visible>!String.IsEmpty(ListItem.SongVideoURL)</visible>
+									<align>center</align>
+									<aligny>center</aligny>
+									<font>IconMediumSMX</font>
+									<textcolor>grey</textcolor>
+									<selectedcolor>Skin.String(theme_text)</selectedcolor>
+									<left>-16</left>
+									<width>65</width>
+									<height>34</height>
+									<label></label>
+								</control>
+								<control type="label">
 									<scroll>false</scroll>
+									<left>38</left>
 									<height>30</height>
 									<aligny>center</aligny>
 									<font>Font_plot</font>
@@ -176,39 +204,25 @@
 					<visible>Container.Content(artists) + Control.IsVisible(599)</visible>
 					<visible>!ListItem.IsParentFolder</visible>
 					<top>-110</top>
-					<control type="textbox" id="15010">
-						<top>-800</top>
-						<left>60</left>
-						<align>right</align>
-						<width>940</width>
-						<height>60</height>
-						<font>titlemus</font>
-						<label>12345 12345 1234 $INFO[ListItem.Label]</label>
-						<textcolor>00ffffff</textcolor>
-					</control>
-					<control type="textbox">
-						<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
-						<visible>!Container(15010).HasNext</visible>
-						<top>485</top>
-						<width>940</width>
-						<height>80</height>
-						<align>right</align>
-						<font>titlelist</font>
-						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="textbox">
-						<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-						<visible>Container(15010).HasNext</visible>
-						<top>465</top>
-						<align>right</align>
-						<aligny>center</aligny>
-						<width>940</width>
-						<height>140</height>
-						<font>titlemove2</font>
-						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>black</shadowcolor>
-					</control>
+					<include content="BigTitle">
+						<param name="Big1">15010</param>
+						<param name="AlignTitle">right</param>
+						<param name="WidthTitle">910</param>
+						<param name="TopBig1">485</param>
+						<param name="LeftBig1">30</param>
+						<param name="HeightBig1">100</param>
+						<param name="FontBig1">titlelist</param>
+						<param name="LabelTitle">$INFO[ListItem.Label]</param>
+						<param name="Big2">15011</param>
+						<param name="TopBig2">490</param>
+						<param name="HeightBig2">70</param>
+						<param name="AlignyBig2">center</param>
+						<param name="FontBig2">titlemove</param>
+						<param name="TopBig3">470</param>
+						<param name="AlignyBig3">center</param>
+						<param name="HeightBig3">110</param>
+						<param name="FontBig3">titleshelf</param>
+					</include>
 				</control>
 				<control type="group">
 					<control type="fixedlist" id="599">
@@ -255,7 +269,7 @@
 								<visible>Control.HasFocus(599) + [!Integer.IsGreaterOrEqual(Container(5985).NumItems,1) | String.StartsWith(ListItem.Label,*)]</visible>
 								<visible>!ListItem.IsParentFolder</visible>
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" delay="400" center="188,550" start="100" end="135" time="600" tween="cubic" easing="out"/>
+									<effect type="zoom" delay="400" center="188,550" start="100" end="135" time="600" tween="cubic" easing="out" />
 								</animation>
 								<left>150</left>
 								<top>20</top>
@@ -266,10 +280,10 @@
 								<visible>Control.HasFocus(599) + Integer.IsGreaterOrEqual(Container(5985).NumItems,1) + !String.StartsWith(ListItem.Label,*)</visible>
 								<visible>!ListItem.IsParentFolder</visible>
 								<animation type="Conditional" condition="System.IdleTime(4) + Skin.HasSetting(Mag3D)" reversible="false">
-									<effect type="slide" delay="0" end="850,0" time="1300" tween="sine" easing="inout"/>
+									<effect type="slide" delay="0" end="850,0" time="1300" tween="sine" easing="inout" />
 								</animation>
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" delay="400" center="188,550" start="100" end="135" time="600" tween="cubic" easing="out"/>
+									<effect type="zoom" delay="400" center="188,550" start="100" end="135" time="600" tween="cubic" easing="out" />
 								</animation>
 								<left>150</left>
 								<top>20</top>
@@ -280,9 +294,9 @@
 								<visible>System.IdleTime(11) + Control.HasFocus(599) + Integer.IsGreaterOrEqual(Container(5985).NumItems,1) + Skin.HasSetting(Mag3D) + !String.StartsWith(ListItem.Label,*)</visible>
 								<visible>!ListItem.IsParentFolder</visible>
 								<animation type="Visible" reversible="false">
-									<effect type="zoom" center="188,550" start="135" end="135" time="0" tween="cubic" easing="out"/>
-									<effect type="rotatey" center="225" start="180" end="0" time="1600" tween="quadratic" easing="out"/>
-									<effect type="fade" delay="400" start="0" end="100" time="50"/>
+									<effect type="zoom" center="188,550" start="135" end="135" time="0" tween="cubic" easing="out" />
+									<effect type="rotatey" center="225" start="180" end="0" time="1600" tween="quadratic" easing="out" />
+									<effect type="fade" delay="400" start="0" end="100" time="50" />
 								</animation>
 								<left>150</left>
 								<top>20</top>
@@ -299,7 +313,7 @@
 							<control type="group">
 								<visible>ListItem.IsParentFolder + Control.HasFocus(599)</visible>
 								<animation type="Focus" reversible="false">
-									<effect type="zoom" delay="400" center="188,550" start="100" end="135" time="600" tween="cubic" easing="out"/>
+									<effect type="zoom" delay="400" center="188,550" start="100" end="135" time="600" tween="cubic" easing="out" />
 								</animation>
 								<left>150</left>
 								<top>20</top>
@@ -329,11 +343,11 @@
 				<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
 				<visible>System.IdleTime(4) + !System.IdleTime(12) + Control.HasFocus(599) + Integer.IsGreaterOrEqual(Container(5985).NumItems,1)</visible>
 				<animation type="Visible" reversible="false">
-					<effect type="slide" delay="1600" start="800,0" end="0,0" time="1300" tween="sine" easing="inout"/>
+					<effect type="slide" delay="1600" start="800,0" end="0,0" time="1300" tween="sine" easing="inout" />
 				</animation>
 				<animation type="Conditional" condition="System.IdleTime(11)" reversible="false">
-					<effect type="rotatey" center="1212" start="0" end="-180" time="1600" tween="quadratic" easing="out"/>
-					<effect type="fade" delay="400" start="100" end="0" time="50"/>
+					<effect type="rotatey" center="1212" start="0" end="-180" time="1600" tween="quadratic" easing="out" />
+					<effect type="fade" delay="400" start="100" end="0" time="50" />
 				</animation>
 				<control type="group">
 					<left>150</left>
@@ -685,11 +699,11 @@
 				<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
 				<visible>System.IdleTime(4) + !System.IdleTime(12) + Control.HasFocus(599) + Integer.IsGreaterOrEqual(Container(5985).NumItems,1)</visible>
 				<animation type="Visible" reversible="false">
-					<effect type="slide" delay="1600" start="800,0" end="0,0" time="1300" tween="sine" easing="inout"/>
+					<effect type="slide" delay="1600" start="800,0" end="0,0" time="1300" tween="sine" easing="inout" />
 				</animation>
 				<animation type="Conditional" condition="System.IdleTime(11)" reversible="false">
-					<effect type="rotatey" center="1212" start="0" end="-180" time="1600" tween="quadratic" easing="out"/>
-					<effect type="fade" delay="400" start="100" end="0" time="50"/>
+					<effect type="rotatey" center="1212" start="0" end="-180" time="1600" tween="quadratic" easing="out" />
+					<effect type="fade" delay="400" start="100" end="0" time="50" />
 				</animation>
 				<control type="group">
 					<left>98</left>

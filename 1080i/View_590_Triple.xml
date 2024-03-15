@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<!--#############################################################################   VISTA TRIPLE - ID 590   #############################################################################-->
 	<include name="ViewTriple">
@@ -32,6 +33,17 @@
 				<width>1062</width>
 				<height>3</height>
 				<texture>tajo/line.png</texture>
+			</control>
+			<control type="image">
+				<visible>[Integer.IsGreater(Player.Time,0) | [System.IdleTime(5) + !System.IdleTime(30) + !String.IsEqual(Skin.String(StartTrailer),10)] | [System.IdleTime(11) + !System.IdleTime(30) + String.IsEqual(Skin.String(StartTrailer),10)]] + Skin.HasSetting(playTrailer) + !String.Contains(Player.Filenameandpath,theme.mp3) + !String.IsEmpty(ListItem.Trailer)</visible>
+				<visible>Control.HasFocus(590)</visible>
+				<animation effect="fade" start="100" end="0" time="900">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
+				<left>890</left>
+				<top>-75</top>
+				<width>1280</width>
+				<height>715</height>
+				<texture background="true">blackk.jpg</texture>
 			</control>
 			<control type="videowindow" id="3499">
 				<visible>Integer.IsGreater(Player.Time,0) + Skin.HasSetting(playTrailer)</visible>
@@ -106,7 +118,7 @@
 					<onleft>59060</onleft>
 					<onright condition="Container.Content(tvshows) + Control.IsVisible(5903)">5903</onright>
 					<onright condition="[Container.Content(movies) | Container.Content(sets)] + [!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras) + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3)">Stop</onright>
-					<onright condition="[Container.Content(movies) | Container.Content(sets)] + [!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras) + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3)">SetFocus(8541)</onright>
+					<onright condition="[Container.Content(movies) | Container.Content(sets)] + [!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras) + Player.Playing + !String.Contains(Player.Filenameandpath,theme.mp3)">SetFocus(8544)</onright>
 					<onright condition="[Container.Content(movies) | Container.Content(sets)] + [!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)">8544</onright>
 					<onup>590</onup>
 					<ondown>590</ondown>
@@ -206,12 +218,14 @@
 						</control>
 						<control type="group">
 							<visible>!ListItem.IsParentFolder</visible>
+							<visible>!Control.HasFocus(59060) + !Control.HasFocus(5919)</visible>
 							<left>-35</left>
 							<top>-10</top>
 							<control type="image">
 								<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
-								<visible>!System.IdleTime(6) + !Control.HasFocus(8544)</visible>
-								<animation effect="fade" start="40" end="0" time="1000" pulse="true" condition="true">Conditional</animation>
+								<visible>!System.IdleTime(7) + !Control.HasFocus(8544)</visible>
+								<animation effect="slide" start="0,0" end="-65,0" time="0" condition="ListItem.HasVideoVersions + !Control.HasFocus(8544)">Conditional</animation>
+								<animation effect="fade" start="100" end="0" time="1000" pulse="true" condition="true">Conditional</animation>
 								<animation effect="fade" start="0" end="100" delay="600" time="200">Visible</animation>
 								<animation effect="rotate" center="auto" end="-90" time="0" condition="true">Conditional</animation>
 								<left>1850</left>
@@ -219,7 +233,7 @@
 								<width>32</width>
 								<height>32</height>
 								<aspectratio aligny="bottom" align="left">keep</aspectratio>
-								<texture background="true">arrow_up.png</texture>
+								<texture colordiffuse="grey" background="true">arrow_up.png</texture>
 							</control>
 							<control type="grouplist">
 								<left>1464</left>
@@ -253,37 +267,52 @@
 							</control>
 							<control type="image">
 								<animation effect="fade" start="0" end="100" delay="600" time="200">Visible</animation>
-								<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
+								<animation effect="slide" start="0,0" end="-65,0" time="0" condition="ListItem.HasVideoVersions + !Control.HasFocus(8544)">Conditional</animation>
+								<visible>[[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)] | ListItem.HasVideoExtras</visible>
 								<left>1870</left>
 								<top>97</top>
 								<width>60</width>
 								<height>60</height>
 								<colordiffuse>bbffffff</colordiffuse>
-								<texture background="true">tajo/extras.png</texture>
+								<texture background="true">$VAR[mediaicons_path]extras.png</texture>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
 								<animation effect="fade" start="0" end="100" delay="600" time="200">Visible</animation>
-								<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
+								<animation effect="slide" start="0,0" end="-65,0" time="0" condition="ListItem.HasVideoVersions + !Control.HasFocus(8544)">Conditional</animation>
+								<visible>[[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)] | ListItem.HasVideoExtras</visible>
 								<align>left</align>
 								<left>1874</left>
 								<top>123</top>
 								<width min="20" max="300">auto</width>
 								<height>34</height>
+								<include condition="!Skin.HasSetting(Coloured.icons)">TextGrey2</include>
 								<textcolor>ffdadada</textcolor>
 								<shadowcolor>black</shadowcolor>
 								<font>font_Extras</font>
 								<label>$LOCALIZE[31014]</label>
+							</control>
+							<control type="image">
+								<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+								<visible>!Control.HasFocus(8544)</visible>
+								<visible>ListItem.HasVideoVersions</visible>
+								<left>1875</left>
+								<top>100</top>
+								<width>50</width>
+								<height>47</height>
+								<colordiffuse>bbffffff</colordiffuse>
+								<texture background="true">$VAR[mediaicons_path]versions.png</texture>
+								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="group">
 								<visible>!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)</visible>
 								<top>153</top>
 								<left>1354</left>
 								<include condition="Skin.HasSetting(SearchExtras)" content="Extras_view">
-									<param name="View_n" value="590"/>
-									<param name="HeightList" value="419"/>
-									<param name="Num_control" value="8544"/>
-									<param name="Num_movement" value="10"/>
+									<param name="View_n" value="590" />
+									<param name="HeightList" value="419" />
+									<param name="Num_control" value="8544" />
+									<param name="Num_movement" value="10" />
 								</include>
 							</control>
 						</control>
@@ -512,92 +541,24 @@
 							<control type="group">
 								<top>-10</top>
 								<left>15</left>
-								<control type="textbox" id="2110">
-									<top>-800</top>
-									<left>58</left>
-									<align>center</align>
-									<width>840</width>
-									<height>60</height>
-									<font>titletest</font>
-									<label>12345 12345 $INFO[ListItem.Label]</label>
-									<textcolor>00ffffff</textcolor>
-								</control>
-								<control type="textbox">
-									<visible>!Container(2110).HasNext</visible>
-									<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-									<top>-16</top>
-									<left>58</left>
-									<align>center</align>
-									<width>840</width>
-									<height>100</height>
-									<font>titlelist</font>
-									<label>$INFO[ListItem.Label]</label>
-									<textcolor>black</textcolor>
-								</control>
-								<control type="textbox">
-									<visible>!Container(2110).HasNext</visible>
-									<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
-									<top>-15</top>
-									<left>59</left>
-									<align>center</align>
-									<width>840</width>
-									<height>100</height>
-									<font>titlelist</font>
-									<label>$INFO[ListItem.Label]</label>
-									<shadowcolor>black</shadowcolor>
-								</control>
-								<control type="textbox" id="2111">
-									<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-									<visible>Container(2110).HasNext + !Container(2111).HasNext</visible>
-									<top>-8</top>
-									<left>59</left>
-									<align>center</align>
-									<width>840</width>
-									<height>70</height>
-									<font>titlemove</font>
-									<label>$INFO[ListItem.Label]</label>
-									<textcolor>black</textcolor>
-								</control>
-								<control type="textbox">
-									<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
-									<visible>Container(2110).HasNext + !Container(2111).HasNext</visible>
-									<top>-7</top>
-									<left>60</left>
-									<align>center</align>
-									<width>840</width>
-									<height>70</height>
-									<font>titlemove</font>
-									<label>$INFO[ListItem.Label]</label>
-									<shadowcolor>black</shadowcolor>
-								</control>
-								<control type="textbox">
-									<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-									<visible>Container(2111).HasNext</visible>
-									<top>-19</top>
-									<left>58</left>
-									<align>center</align>
-									<aligny>center</aligny>
-									<width>840</width>
-									<height>102</height>
-									<font>titleshelf</font>
-									<autoscroll delay="2000" time="2000" repeat="2000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-									<label>$INFO[ListItem.Label]</label>
-									<textcolor>black</textcolor>
-								</control>
-								<control type="textbox">
-									<animation effect="fade" start="0" end="100" time="200" tween="sine">Visible</animation>
-									<visible>Container(2111).HasNext</visible>
-									<top>-18</top>
-									<left>59</left>
-									<align>center</align>
-									<aligny>center</aligny>
-									<width>840</width>
-									<height>102</height>
-									<font>titleshelf</font>
-									<autoscroll delay="2000" time="2000" repeat="2000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-									<label>$INFO[ListItem.Label]</label>
-									<shadowcolor>black</shadowcolor>
-								</control>
+								<include content="BigTitle">
+									<param name="Big1">2110</param>
+									<param name="AlignTitle">center</param>
+									<param name="WidthTitle">840</param>
+									<param name="TopBig1">-16</param>
+									<param name="LeftBig1">58</param>
+									<param name="HeightBig1">100</param>
+									<param name="FontBig1">titlelist</param>
+									<param name="LabelTitle">$INFO[ListItem.Label]</param>
+									<param name="Big2">2111</param>
+									<param name="TopBig2">-8</param>
+									<param name="HeightBig2">70</param>
+									<param name="FontBig2">titlemove</param>
+									<param name="TopBig3">-19</param>
+									<param name="AlignyBig3">center</param>
+									<param name="HeightBig3">102</param>
+									<param name="FontBig3">titleshelf</param>
+								</include>
 							</control>
 						</control>
 						<control type="textbox">
@@ -617,68 +578,19 @@
 							<visible>!ListItem.IsParentFolder</visible>
 							<left>1070</left>
 							<top>650</top>
-							<width>570</width>
+							<width>552</width>
 							<height>324</height>
 							<font>font28</font>
 							<align>center</align>
 							<label>[B][COLOR $INFO[Skin.String(theme_text)]]$VAR[value_ground17_label]:[/COLOR][/B] [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR][B][COLOR $INFO[Skin.String(theme_text)]]    [CAPITALIZE]$VAR[value_ground11_label]:[/B][/COLOR] [/CAPITALIZE][COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR][CR][COLOR $INFO[Skin.String(theme_text)]][B]$VAR[value_ground12_label]:[/B][/COLOR] [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR][B][COLOR $INFO[Skin.String(theme_text)]]    $VAR[value_ground14_label]:[/B][/COLOR] [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]$VAR[Original][CR][B][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[207]:[/B][/COLOR] $VAR[value_plot]</label>
 							<autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 						</control>
-						<control type="textbox">
-							<visible>[!System.IdleTime(3) | Integer.IsLess(Container(5952).NumItems,2)] + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-							<visible>Integer.IsGreater(Container(524).NumItems,0)</visible>
-							<font>Font_plotc</font>
-							<align>center</align>
-							<left>1660</left>
-							<top>650</top>
-							<width>230</width>
-							<height>331</height>
-							<label>[B][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[206]:[/COLOR][/B][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(1).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(2).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(3).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(4).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(5).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(6).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(7).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(8).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(9).Label,• ,][/COLOR]</label>
-						</control>
-						<control type="image">
-							<visible>Integer.IsGreater(Container(5952).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-							<include>HiddenObject</include>
-							<texture background="true">$INFO[Container(5952).ListItem.Icon]</texture>
-						</control>
 						<control type="group">
-							<left>22</left>
-							<control type="textbox">
-								<visible>System.IdleTime(3) + Integer.IsGreater(Container(5952).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-								<visible>!String.IsEqual(Container(5952).ListItem.Label2,Cast)</visible>
-								<textcolor>Skin.String(theme_text)</textcolor>
-								<font>Font_plotc</font>
-								<align>center</align>
-								<aligny>top</aligny>
-								<left>1635</left>
-								<top>940</top>
-								<width>230</width>
-								<height>90</height>
-								<label>[B]$INFO[Container(5952).ListItem.Label][/B]</label>
-							</control>
-							<control type="textbox">
-								<visible>System.IdleTime(3) + Integer.IsGreater(Container(5952).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-								<visible>String.IsEqual(Container(5952).ListItem.Label2,Cast)</visible>
-								<textcolor>Skin.String(theme_text)</textcolor>
-								<font>Font_plotc</font>
-								<align>center</align>
-								<aligny>top</aligny>
-								<left>1638</left>
-								<top>650</top>
-								<width>230</width>
-								<height>331</height>
-								<label>$INFO[Container(5952).ListItem.Label]</label>
-							</control>
-							<control type="image">
-								<visible>System.IdleTime(3) + Integer.IsGreater(Container(5952).NumItems,1) + !ListItem.IsCollection + Skin.HasSetting(showCast)</visible>
-								<left>1660</left>
-								<top>650</top>
-								<width>195</width>
-								<height>280</height>
-								<colordiffuse>DFffffff</colordiffuse>
-								<aspectratio align="center" aligny="bottom">keep</aspectratio>
-								<fadetime>200</fadetime>
-								<texture background="true">$INFO[Container(5952).ListItem.Icon]</texture>
-							</control>
+							<left>585</left>
+							<top>654</top>
+							<include content="ViewCast" condition="Skin.HasSetting(showCast)">
+								<param name="list_id">3489</param>
+							</include>
 						</control>
 						<control type="textbox">
 							<visible>ListItem.IsCollection</visible>
@@ -879,7 +791,7 @@
 							</control>
 							<control type="image">
 								<top>3</top>
-								<left>42</left>
+								<left>40</left>
 								<width>30</width>
 								<height>30</height>
 								<texture colordiffuse="$INFO[Skin.String(mark_color)]">$VAR[watched_style]</texture>
@@ -887,12 +799,12 @@
 							</control>
 							<control type="group">
 								<animation type="Conditional" condition="true" reversible="false">
-									<effect type="zoom" end="75" time="0"/>
-									<effect type="slide" end="21,1" time="0"/>
+									<effect type="zoom" end="75" time="0" />
+									<effect type="slide" end="21,1" time="0" />
 								</animation>
 								<control type="image">
-									<left>20</left>
-									<top>2</top>
+									<left>18</left>
+									<top>3</top>
 									<width>55</width>
 									<height>55</height>
 									<texture background="true">tajo/shelf/corner3.png</texture>
@@ -901,8 +813,8 @@
 								</control>
 								<control type="label">
 									<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
-									<left>12</left>
-									<top>-14</top>
+									<left>10</left>
+									<top>-12</top>
 									<font>titlesmall3</font>
 									<textcolor>white</textcolor>
 									<shadowcolor>black</shadowcolor>
@@ -943,6 +855,15 @@
 								<width>170</width>
 								<height>242</height>
 								<texture diffuse="tajo/mask_cover3.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+								<aspectratio align="center">scale</aspectratio>
+							</control>
+							<control type="image">
+								<top>-1</top>
+								<colordiffuse>50000000</colordiffuse>
+								<left>10</left>
+								<width>170</width>
+								<height>244</height>
+								<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
 								<aspectratio align="center">scale</aspectratio>
 							</control>
 							<control type="image">
@@ -1001,15 +922,6 @@
 								<label>$INFO[ListItem.Label] $INFO[ListItem.Year,(,)]</label>
 								<shadowcolor>black</shadowcolor>
 							</control>
-							<control type="image">
-								<top>-1</top>
-								<colordiffuse>50000000</colordiffuse>
-								<left>10</left>
-								<width>170</width>
-								<height>244</height>
-								<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
-								<aspectratio align="center">scale</aspectratio>
-							</control>
 						</control>
 					</itemlayout>
 					<itemlayout height="135" condition="Skin.HasSetting(BannerTriple)">
@@ -1032,8 +944,17 @@
 								<aspectratio align="center">scale</aspectratio>
 							</control>
 							<control type="image">
+								<colordiffuse>50000000</colordiffuse>
 								<top>3</top>
-								<left>42</left>
+								<left>-5</left>
+								<width>75</width>
+								<height>109</height>
+								<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
+								<aspectratio align="center">scale</aspectratio>
+							</control>
+							<control type="image">
+								<top>3</top>
+								<left>40</left>
 								<width>30</width>
 								<height>30</height>
 								<texture colordiffuse="$INFO[Skin.String(mark_color)]">$VAR[watched_style]</texture>
@@ -1041,12 +962,12 @@
 							</control>
 							<control type="group">
 								<animation type="Conditional" condition="true" reversible="false">
-									<effect type="zoom" end="75" time="0"/>
-									<effect type="slide" end="21,1" time="0"/>
+									<effect type="zoom" end="75" time="0" />
+									<effect type="slide" end="21,1" time="0" />
 								</animation>
 								<control type="image">
-									<left>20</left>
-									<top>2</top>
+									<left>18</left>
+									<top>3</top>
 									<width>55</width>
 									<height>55</height>
 									<texture background="true">tajo/shelf/corner3.png</texture>
@@ -1055,8 +976,8 @@
 								</control>
 								<control type="label">
 									<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
-									<left>12</left>
-									<top>-14</top>
+									<left>10</left>
+									<top>-12</top>
 									<font>titlesmall3</font>
 									<textcolor>white</textcolor>
 									<shadowcolor>black</shadowcolor>
@@ -1093,15 +1014,6 @@
 								<label>$INFO[ListItem.Label] $INFO[ListItem.Year,(,)]</label>
 								<shadowcolor>black</shadowcolor>
 							</control>
-							<control type="image">
-								<colordiffuse>50000000</colordiffuse>
-								<top>3</top>
-								<left>-5</left>
-								<width>75</width>
-								<height>109</height>
-								<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
-								<aspectratio align="center">scale</aspectratio>
-							</control>
 						</control>
 					</itemlayout>
 					<content target="video" sortby="year" sortorder="ascending">$INFO[Container(590).ListItem.FolderPath]</content>
@@ -1126,48 +1038,64 @@
 					<ondown>5904</ondown>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>vertical</orientation>
-					<movement>15</movement>
-					<focusposition>0</focusposition>
+					<movement>6</movement>
 					<viewtype label="Triple">list</viewtype>
-					<itemlayout height="67.5" condition="Container.Content(tvshows)">
+					<itemlayout height="135" condition="Container.Content(tvshows)">
 						<control type="image">
 							<left>-80</left>
-							<top>65.5</top>
+							<top>133</top>
 							<width>915</width>
 							<height>3</height>
 							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
 						</control>
 						<control type="image">
-							<animation effect="fade" end="70" condition="true">Conditional</animation>
-							<animation effect="slide" end="-11,10" time="0" condition="!String.IsEmpty(skin.string(mark_type))">Conditional</animation>
-							<top>1</top>
-							<left>790</left>
-							<width>43</width>
-							<height>43</height>
+							<top>20</top>
+							<left>25</left>
+							<width>168</width>
+							<height>95</height>
+							<texture diffuse="tajo/mask_cover3.png" fallback="tajo/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<top>20</top>
+							<left>25</left>
+							<width>168</width>
+							<height>95</height>
+							<colordiffuse>50000000</colordiffuse>
+							<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<top>20</top>
+							<left>163</left>
+							<width>30</width>
+							<height>30</height>
 							<texture colordiffuse="$INFO[Skin.String(mark_color)]">$VAR[watched_style]</texture>
 							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
-						<control type="label">
+						<control type="textbox">
 							<visible>Control.HasFocus(5904)</visible>
 							<top>1</top>
-							<left>25</left>
-							<height>58</height>
-							<width>755</width>
+							<left>220</left>
+							<height>120</height>
+							<width>558</width>
 							<align>left</align>
-							<font>font15t</font>
+							<aligny>center</aligny>
+							<font>fontmusic2</font>
 							<textcolor>white</textcolor>
 							<label>$INFO[ListItem.Label]  ($VAR[ItemDuration])</label>
 							<selectedcolor>white</selectedcolor>
 							<shadowcolor>black</shadowcolor>
 						</control>
-						<control type="label">
+						<control type="textbox">
 							<visible>!Control.HasFocus(5904)</visible>
 							<top>1</top>
-							<left>25</left>
-							<height>58</height>
-							<width>755</width>
+							<left>220</left>
+							<height>120</height>
+							<width>558</width>
 							<align>left</align>
-							<font>font15t</font>
+							<aligny>center</aligny>
+							<font>fontmusic2</font>
 							<textcolor>grey2</textcolor>
 							<label>$INFO[ListItem.Label]  ($VAR[ItemDuration])</label>
 							<selectedcolor>white</selectedcolor>
@@ -1186,16 +1114,6 @@
 								<texture diffuse="tajo/recua1b.png">tajo/white.jpg</texture>
 								<aspectratio align="center">stretch</aspectratio>
 								<colordiffuse>Skin.String(flat_back)</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>Control.IsVisible(5904)</visible>
-								<animation effect="fade" end="90" condition="true">Conditional</animation>
-								<top>11</top>
-								<left>779</left>
-								<width>43</width>
-								<height>43</height>
-								<texture colordiffuse="$INFO[Skin.String(mark_color)]">$VAR[watched_style]</texture>
-								<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 							</control>
 						</control>
 						<control type="label">
@@ -1223,6 +1141,15 @@
 								<height>170</height>
 								<texture diffuse="tajo/mask_cover3.png" fallback="tajo/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center">scale</aspectratio>
+							</control>
+							<control type="image">
+								<animation effect="fade" end="90" condition="true">Conditional</animation>
+								<top>43.5</top>
+								<left>264</left>
+								<width>38</width>
+								<height>38</height>
+								<texture colordiffuse="$INFO[Skin.String(mark_color)]">$VAR[watched_style]</texture>
+								<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 							</control>
 							<control type="label">
 								<top>19</top>
@@ -1428,24 +1355,25 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<focusedlayout height="67.5" condition="Container.Content(tvshows) + Control.HasFocus(5904) + !System.IdleTime(2) + !System.HasActiveModalDialog">
+					<focusedlayout height="135" condition="Container.Content(tvshows) + Control.HasFocus(5904) + !System.IdleTime(2) + !System.HasActiveModalDialog">
 						<control type="button" id="5466">
 							<include>HiddenObject</include>
 							<onfocus condition="Skin.HasSetting(playTheme) + String.Contains(Player.Filenameandpath,theme.mp3) + String.IsEmpty(Container(5904).ListItem.VideoCodec)">Stop</onfocus>
 						</control>
 						<control type="image">
 							<left>-80</left>
-							<top>65.5</top>
+							<top>133</top>
 							<width>915</width>
 							<height>3</height>
 							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
 						</control>
 						<control type="image">
-							<top>-500</top>
-							<left>-500</left>
-							<width>100</width>
-							<height>100</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<top>20</top>
+							<left>25</left>
+							<width>168</width>
+							<height>95</height>
+							<texture diffuse="tajo/mask_cover3.png" fallback="tajo/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio align="center">scale</aspectratio>
 						</control>
 						<control type="group">
 							<visible>!System.IdleTime(2) + Control.HasFocus(5904)</visible>
@@ -1455,29 +1383,29 @@
 								<top>-1</top>
 								<left>3</left>
 								<width>832</width>
-								<height>68</height>
-								<texture diffuse="tajo/recua1e.png">tajo/white.jpg</texture>
+								<height>135</height>
+								<texture diffuse="tajo/recua2.png">tajo/white.jpg</texture>
 								<aspectratio align="center">stretch</aspectratio>
 								<colordiffuse>Skin.String(flat_back)</colordiffuse>
 							</control>
 							<control type="image">
-								<animation effect="fade" end="90" condition="true">Conditional</animation>
-								<top>11</top>
-								<left>779</left>
-								<width>43</width>
-								<height>43</height>
+								<top>20</top>
+								<left>163</left>
+								<width>30</width>
+								<height>30</height>
 								<texture colordiffuse="$INFO[Skin.String(mark_color)]">$VAR[watched_style]</texture>
 								<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 							</control>
 						</control>
-						<control type="label">
+						<control type="textbox">
 							<visible>!System.IdleTime(2) + Control.HasFocus(5904)</visible>
 							<top>1</top>
-							<left>25</left>
-							<height>58</height>
-							<width>765</width>
+							<left>220</left>
+							<height>120</height>
+							<width>558</width>
 							<align>left</align>
-							<font>fontmusic</font>
+							<aligny>center</aligny>
+							<font>fontmusic2</font>
 							<scroll>false</scroll>
 							<label>[B]$INFO[ListItem.Label][/B]  ($VAR[ItemDuration])</label>
 							<textcolor>white</textcolor>
@@ -1485,45 +1413,61 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</focusedlayout>
-					<focusedlayout height="67.5" condition="!Control.HasFocus(5904) | System.HasActiveModalDialog">
+					<focusedlayout height="135" condition="!Control.HasFocus(5904) | System.HasActiveModalDialog">
 						<control type="image">
 							<visible>!Control.HasFocus(5904)</visible>
 							<left>-80</left>
-							<top>65.5</top>
+							<top>133</top>
 							<width>915</width>
 							<height>3</height>
 							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
 						</control>
 						<control type="image">
+							<top>20</top>
+							<left>25</left>
+							<width>168</width>
+							<height>95</height>
+							<texture diffuse="tajo/mask_cover3.png" fallback="tajo/DefaultExtraThumbs.png" background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<top>20</top>
+							<left>25</left>
+							<width>168</width>
+							<height>95</height>
+							<colordiffuse>50000000</colordiffuse>
+							<texture diffuse="tajo/mask_cover3.png">tajo/solid_bg.png</texture>
+							<aspectratio align="center">scale</aspectratio>
+						</control>
+						<control type="image">
 							<visible>!Control.HasFocus(590) + !Control.HasFocus(5903) + System.HasActiveModalDialog + !Control.HasFocus(9000)</visible>
 							<animation effect="fade" start="100" end="40" time="0" condition="true">Conditional</animation>
 							<top>-1</top>
-							<left>2</left>
-							<width>833</width>
-							<height>68</height>
-							<texture diffuse="tajo/recua1e.png">tajo/white.jpg</texture>
+							<left>3</left>
+							<width>832</width>
+							<height>135</height>
+							<texture diffuse="tajo/recua2.png">tajo/white.jpg</texture>
 							<aspectratio align="center">stretch</aspectratio>
 							<colordiffuse>Skin.String(flat_back)</colordiffuse>
 						</control>
 						<control type="image">
 							<visible>!Control.HasFocus(5904)</visible>
-							<animation effect="fade" end="70" condition="!System.HasActiveModalDialog | Control.HasFocus(9000)">Conditional</animation>
-							<animation effect="slide" end="-11,10" time="0" condition="!String.IsEmpty(skin.string(mark_type)) | System.HasActiveModalDialog">Conditional</animation>
-							<top>1</top>
-							<left>790</left>
-							<width>43</width>
-							<height>43</height>
+							<top>20</top>
+							<left>163</left>
+							<width>30</width>
+							<height>30</height>
 							<texture colordiffuse="$INFO[Skin.String(mark_color)]">$VAR[watched_style]</texture>
 							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
-						<control type="label">
+						<control type="textbox">
 							<visible>[!Control.HasFocus(5904) + !System.HasActiveModalDialog] | Control.HasFocus(9000)</visible>
 							<top>1</top>
-							<left>25</left>
-							<height>58</height>
-							<width>765</width>
+							<left>220</left>
+							<height>120</height>
+							<width>558</width>
 							<align>left</align>
-							<font>font15t</font>
+							<aligny>center</aligny>
+							<font>fontmusic2</font>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.Label]  ($VAR[ItemDuration])</label>
 							<textcolor>grey2</textcolor>
@@ -1533,11 +1477,12 @@
 						<control type="label">
 							<visible>!Control.HasFocus(5904) + System.HasActiveModalDialog + !Control.HasFocus(9000)</visible>
 							<top>1</top>
-							<left>25</left>
-							<height>58</height>
-							<width>765</width>
+							<left>220</left>
+							<height>120</height>
+							<width>558</width>
 							<align>left</align>
-							<font>font15t</font>
+							<aligny>center</aligny>
+							<font>fontmusic2</font>
 							<scroll>false</scroll>
 							<label>[B]$INFO[ListItem.Label]  ($VAR[ItemDuration])[/B]</label>
 							<textcolor>white</textcolor>
@@ -1564,30 +1509,6 @@
 				<visible>Container.Content(tvshows) + !Control.HasFocus(5903) + !Control.HasFocus(5904) + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
 				<left>1175</left>
 				<top>125</top>
-				<control type="image">
-					<animation effect="fade" start="0" end="100" delay="100" time="200">Visible</animation>
-					<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
-					<left>-65</left>
-					<top>537</top>
-					<width>60</width>
-					<height>60</height>
-					<colordiffuse>bbffffff</colordiffuse>
-					<texture background="true">tajo/extras.png</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<animation effect="fade" start="0" end="100" delay="100" time="200">Visible</animation>
-					<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
-					<align>left</align>
-					<left>-60</left>
-					<top>564</top>
-					<width min="20" max="300">auto</width>
-					<height>34</height>
-					<textcolor>ffdadada</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<font>font_Extras</font>
-					<label>$LOCALIZE[31014]</label>
-				</control>
 				<control type="textbox">
 					<visible>!Skin.HasSetting(showCast) | !System.HasAddon(script.embuary.helper)</visible>
 					<left>-41</left>
@@ -1625,46 +1546,26 @@
 					<control type="group">
 						<left>85</left>
 						<top>-300</top>
-						<control type="textbox" id="23411">
-							<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-							<visible>!Container(23411).HasNext</visible>
-							<left>15</left>
-							<top>670</top>
-							<width>570</width>
-							<height>130</height>
-							<aligny>center</aligny>
-							<align>right</align>
-							<font>titlemove2</font>
-							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>black</shadowcolor>
-						</control>
-						<control type="textbox" id="23413">
-							<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-							<visible>Container(23411).HasNext + !Container(23413).HasNext</visible>
-							<left>15</left>
-							<top>670</top>
-							<width>570</width>
-							<height>130</height>
-							<aligny>center</aligny>
-							<align>right</align>
-							<font>titleshelf</font>
-							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>black</shadowcolor>
-						</control>
-						<control type="textbox">
-							<animation effect="fade" start="0" end="100" time="250" tween="sine">Visible</animation>
-							<visible>Container(23411).HasNext + Container(23413).HasNext</visible>
-							<left>15</left>
-							<top>670</top>
-							<width>570</width>
-							<height>130</height>
-							<aligny>center</aligny>
-							<align>right</align>
-							<font>titlewall</font>
-							<label>$INFO[ListItem.Label]</label>
-							<autoscroll delay="1500" time="2000" repeat="2000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-							<shadowcolor>black</shadowcolor>
-						</control>
+						<include content="BigTitle">
+							<param name="Big1">23411</param>
+							<param name="AlignTitle">right</param>
+							<param name="WidthTitle">570</param>
+							<param name="TopBig1">670</param>
+							<param name="LeftBig1">15</param>
+							<param name="HeightBig1">130</param>
+							<param name="AlignyBig1">center</param>
+							<param name="FontBig1">titlemove2</param>
+							<param name="LabelTitle">$INFO[ListItem.Label]</param>
+							<param name="Big2">23413</param>
+							<param name="TopBig2">670</param>
+							<param name="HeightBig2">130</param>
+							<param name="AlignyBig2">center</param>
+							<param name="FontBig2">titleshelf</param>
+							<param name="TopBig3">670</param>
+							<param name="AlignyBig3">center</param>
+							<param name="HeightBig3">130</param>
+							<param name="FontBig3">titlewall</param>
+						</include>
 					</control>
 					<control type="group">
 						<animation effect="slide" end="-38,0" condition="String.IsEmpty(ListItem.UserRating) + Container.Content(tvshows)">Conditional</animation>
@@ -1728,62 +1629,37 @@
 					</control>
 					<include>IconsTriple</include>
 				</control>
-				<control type="textbox">
-					<visible>[!System.IdleTime(3) | Integer.IsLess(Container(5952).NumItems,2)] + Skin.HasSetting(showCast)</visible>
-					<visible>Integer.IsGreater(Container(524).NumItems,0)</visible>
-					<font>Font_plot4</font>
-					<align>center</align>
-					<left>490</left>
-					<top>600</top>
-					<width>200</width>
-					<height>307</height>
-					<label>[B][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[206]:[/COLOR][/B][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(1).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(2).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(3).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(4).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(5).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(6).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(7).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(8).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(9).Label,• ,][/COLOR]</label>
+				<control type="group">
+					<left>-580</left>
+					<top>610</top>
+					<include content="ViewCastMedium" condition="Skin.HasSetting(showCast)">
+						<param name="list_id">3869</param>
+					</include>
 				</control>
 				<control type="image">
-					<visible>Integer.IsGreater(Container(5952).NumItems,1) + Skin.HasSetting(showCast)</visible>
-					<include>HiddenObject</include>
-					<texture background="true">$INFO[Container(5952).ListItem.Icon]</texture>
+					<animation effect="fade" start="0" end="100" delay="100" time="200">Visible</animation>
+					<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
+					<left>-65</left>
+					<top>537</top>
+					<width>60</width>
+					<height>60</height>
+					<colordiffuse>bbffffff</colordiffuse>
+					<texture background="true">$VAR[mediaicons_path]extras.png</texture>
+					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="group">
-					<top>228</top>
-					<left>470</left>
-					<control type="textbox">
-						<visible>System.IdleTime(3) + Integer.IsGreater(Container(5952).NumItems,1) + Skin.HasSetting(showCast)</visible>
-						<visible>!String.IsEqual(Container(5952).ListItem.Label2,Cast)</visible>
-						<textcolor>Skin.String(theme_text)</textcolor>
-						<font>Font_plot4</font>
-						<align>center</align>
-						<aligny>top</aligny>
-						<left>10</left>
-						<top>610</top>
-						<width>200</width>
-						<height>70</height>
-						<label>[B]$INFO[Container(5952).ListItem.Label][/B]</label>
-					</control>
-					<control type="textbox">
-						<visible>System.IdleTime(3) + Integer.IsGreater(Container(5952).NumItems,1) + Skin.HasSetting(showCast)</visible>
-						<visible>String.IsEqual(Container(5952).ListItem.Label2,Cast)</visible>
-						<textcolor>Skin.String(theme_text)</textcolor>
-						<font>Font_plot4</font>
-						<align>center</align>
-						<aligny>top</aligny>
-						<left>20</left>
-						<top>372</top>
-						<width>200</width>
-						<height>307</height>
-						<label>[B]$INFO[Container(5952).ListItem.Label][/B]</label>
-					</control>
-					<control type="image">
-						<visible>System.IdleTime(3) + Integer.IsGreater(Container(5952).NumItems,1) + Skin.HasSetting(showCast)</visible>
-						<left>30</left>
-						<top>385</top>
-						<width>170</width>
-						<height>220</height>
-						<colordiffuse>DFffffff</colordiffuse>
-						<aspectratio align="center" aligny="bottom">keep</aspectratio>
-						<fadetime>200</fadetime>
-						<texture background="true">$INFO[Container(5952).ListItem.Icon]</texture>
-					</control>
+				<control type="label">
+					<animation effect="fade" start="0" end="100" delay="100" time="200">Visible</animation>
+					<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
+					<align>left</align>
+					<left>-60</left>
+					<top>564</top>
+					<width min="20" max="300">auto</width>
+					<height>34</height>
+					<include condition="!Skin.HasSetting(Coloured.icons)">TextGrey2</include>
+					<textcolor>ffdadada</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font_Extras</font>
+					<label>$LOCALIZE[31014]</label>
 				</control>
 			</control>
 			<control type="group">

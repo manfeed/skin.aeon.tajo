@@ -184,10 +184,10 @@
 				<left>813</left>
 				<top>100</top>
 				<include content="ChannelManagerList">
-					<param name="lista_id" value="11"/>
-					<param name="scrollbar_id" value="71"/>
-					<param name="onright" value="12"/>
-					<param name="onleft" value="13"/>
+					<param name="lista_id" value="11" />
+					<param name="scrollbar_id" value="71" />
+					<param name="onright" value="12" />
+					<param name="onleft" value="13" />
 				</include>
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
@@ -217,10 +217,10 @@
 				<left>1316</left>
 				<top>100</top>
 				<include content="ChannelManagerList">
-					<param name="lista_id" value="12"/>
-					<param name="scrollbar_id" value="72"/>
-					<param name="onright" value="9000"/>
-					<param name="onleft" value="11"/>
+					<param name="lista_id" value="12" />
+					<param name="scrollbar_id" value="72" />
+					<param name="onright" value="9000" />
+					<param name="onleft" value="11" />
 				</include>
 				<control type="grouplist">
 					<orientation>horizontal</orientation>

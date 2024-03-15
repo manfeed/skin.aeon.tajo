@@ -11,7 +11,7 @@
 	<onunload>ClearProperty(RowArtist,Home)</onunload>
 	<onunload>ClearProperty(RowYearm,Home)</onunload>
 	<onunload>ClearProperty(Extras_info_music,Home)</onunload>
-	<views>50,581,584,585,588,591,593,596,597,598,599</views>
+	<views>50,580,581,584,585,588,591,593,596,597,598,599</views>
 	<menucontrol>9051</menucontrol>
 	<controls>
 		<control type="fadelabel" id="5864">
@@ -28,7 +28,6 @@
 			<info>ListItem.Art(fanart7)</info>
 			<info>ListItem.Art(fanart8)</info>
 			<info>ListItem.Art(fanart9)</info>
-			<info>ListItem.Art(artist.fanart)</info>
 			<info>ListItem.Art(artist.fanart1)</info>
 			<info>ListItem.Art(artist.fanart2)</info>
 			<info>ListItem.Art(artist.fanart3)</info>
@@ -47,14 +46,14 @@
 		<control type="list" id="6983">
 			<visible>Skin.HasSetting(SearchExtrasMusic) + !String.IsEmpty(Window(Home).Property(extras_music_yes)) + System.IdleTime(1)</visible>
 			<visible>!Window.IsActive(musicinformation) + !Window.IsActive(songinformation)</visible>
-			<itemlayout/>
-			<focusedlayout/>
+			<itemlayout />
+			<focusedlayout />
 			<content>$VAR[Extras_lookup]</content>
 		</control>
 		<control type="list" id="6989">
 			<visible>Skin.HasSetting(SearchExtrasMusic) + Container.Content(albums)</visible>
-			<itemlayout/>
-			<focusedlayout/>
+			<itemlayout />
+			<focusedlayout />
 			<content>$INFO[Container.ListItem.DBID,musicdb://albums/,/*]</content>
 		</control>
 		<include condition="Skin.HasSetting(PlayPreviewM)">PlayPreviewMusic</include>
@@ -64,10 +63,8 @@
 			<visible>!String.IsEqual(Container.Viewmode,$LOCALIZE[21888])</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.recordlabels.white&amp;string='$ESCINFO[ListItem.Property(Album_Label)]'</content>
 		</control>
 		<control type="list" id="6774">
@@ -75,14 +72,11 @@
 			<visible>!String.Contains(Container(5850).ListItem.Label2,singer) + [Control.HasFocus(5850) | Control.HasFocus(5852)]</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.recordlabels.white&amp;string='$ESCINFO[Container(5850).ListItem.Property(Album_Label)]'</content>
 		</control>
 		<control type="group">
-			<include>WindowOpenAnimation</include>
 			<include>MusicList</include>
 			<!-- view id = 50 -->
 			<include>ViewDiscog</include>
@@ -99,6 +93,8 @@
 			<!-- view id = 597 -->
 			<include>ViewBannerm</include>
 			<!-- view id = 581 -->
+			<include>ViewWideWallm</include>
+			<!-- view id = 580 -->
 			<include>ViewShelfm</include>
 			<!-- view id = 598 -->
 			<include>ViewMusicFlix</include>
@@ -134,6 +130,19 @@
 					<onclick>ActivateWindow(music)</onclick>
 					<onclick>ClearProperty(ChangeLayout,Home)</onclick>
 					<visible>Control.IsVisible(599)</visible>
+				</control>
+				<control type="togglebutton" id="6069">
+					<description>Narrow Toggle</description>
+					<textwidth>400</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>$VAR[Label_NarrowM]</label>
+					<onclick>SetProperty(ChangeLayout,True,home)</onclick>
+					<onclick>Skin.ToggleSetting(NarrowListM)</onclick>
+					<onclick>ReplaceWindow(home)</onclick>
+					<onclick>ActivateWindow(music)</onclick>
+					<onclick>ClearProperty(ChangeLayout,Home)</onclick>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>[Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)] + !Container.Content(genres) + !Container.Content(years) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(tags)</visible>
 				</control>
 				<control type="togglebutton" id="6037">
 					<description>3D Toggle</description>
@@ -195,10 +204,11 @@
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
-				<control type="radiobutton" id="16">
+				<control type="button" id="16">
 					<visible>!Container.Content(musicvideos) + !String.StartsWith(container.folderpath,library://video/musicvideos/) + !String.StartsWith(container.folderpath,videodb://musicvideos)</visible>
 					<description>PartyMode</description>
-					<label>589</label>
+					<label>32085</label>
+					<textwidth>365</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="285">
@@ -248,8 +258,9 @@
 				</control>
 				<control type="button" id="612">
 					<description>Go to playlist</description>
-					<include>ButtonCommonValues</include>
 					<label>13350</label>
+					<textwidth>365</textwidth>
+					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(musicplaylist)</onclick>
 					<visible>!String.IsEqual(Playlist.Length(music),0)</visible>
 				</control>
@@ -280,6 +291,7 @@
 				<visible>![Control.HasFocus(8546) + Player.HasVideo]</visible>
 				<visible>![Control.HasFocus(8547) + Player.HasVideo]</visible>
 				<visible>![Control.HasFocus(8549) + Player.HasVideo]</visible>
+				<visible>![Control.HasFocus(8550) + Player.HasVideo]</visible>
 				<left>-52</left>
 				<top>-80</top>
 				<width>400</width>
@@ -306,9 +318,10 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(noshow_numItems) + !Control.IsVisible(585) + !Control.IsVisible(593) + !Control.IsVisible(596) + !Control.IsVisible(50)</visible>
+				<visible>!Skin.HasSetting(noshow_numItems) + !Control.IsVisible(580) + !Control.IsVisible(585) + !Control.IsVisible(593) + !Control.IsVisible(596) + !Control.IsVisible(50)</visible>
 				<visible>![Control.HasFocus(8546) + Player.HasVideo]</visible>
 				<visible>![Control.HasFocus(8547) + Player.HasVideo]</visible>
+				<visible>![Control.HasFocus(8550) + Player.HasVideo]</visible>
 				<left>-52</left>
 				<top>952</top>
 				<width>400</width>
@@ -335,7 +348,7 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(noshow_numItems) + ![Control.IsVisible(585) + Player.Playing] + !Control.IsVisible(597) + !Control.IsVisible(581) + !Control.IsVisible(598) + !Control.IsVisible(584) + !Control.IsVisible(599) + !Control.IsVisible(588)</visible>
+				<visible>!Skin.HasSetting(noshow_numItems) + ![Control.IsVisible(585) + Player.Playing] + !Control.IsVisible(597) + !Control.IsVisible(581) + !Control.IsVisible(501) + !Control.IsVisible(598) + !Control.IsVisible(584) + !Control.IsVisible(599) + !Control.IsVisible(588)</visible>
 				<visible>![Control.HasFocus(8549) + Player.HasVideo]</visible>
 				<left>1440</left>
 				<top>952</top>
@@ -365,7 +378,7 @@
 		</control>
 		<include condition="Skin.HasSetting(ScreensaverNetflix)">Screensaver_Netflix_Music</include>
 		<control type="group">
-			<visible>Control.IsVisible(591) | Control.IsVisible(597) | Control.IsVisible(596) | Control.IsVisible(50) | Control.IsVisible(588) | Control.IsVisible(585) | Control.IsVisible(581)</visible>
+			<visible>Control.IsVisible(580) | Control.IsVisible(501) | Control.IsVisible(591) | Control.IsVisible(597) | Control.IsVisible(596) | Control.IsVisible(50) | Control.IsVisible(588) | Control.IsVisible(585) | Control.IsVisible(581)</visible>
 			<visible allowhiddenfocus="true">Control.HasFocus(5919)</visible>
 			<animation effect="fade" start="0" end="90" time="1200" reversible="false">Visible</animation>
 			<animation effect="slide" end="0,-55" time="0" condition="Control.IsVisible(591)">Conditional</animation>
@@ -373,14 +386,15 @@
 			<animation effect="slide" end="0,305" time="0" condition="Control.IsVisible(588)">Conditional</animation>
 			<animation effect="slide" end="573,0" time="0" condition="Control.IsVisible(588) + String.IsEqual(Container.SortMethod,$LOCALIZE[557])">Conditional</animation>
 			<animation effect="slide" end="1025,0" time="0" condition="Control.IsVisible(588) + String.IsEqual(Container.SortMethod,$LOCALIZE[558])">Conditional</animation>
-			<animation effect="slide" end="1868,20" time="0" condition="Control.IsVisible(597) | Control.IsVisible(581)">Conditional</animation>
+			<animation effect="slide" end="1868,20" time="0" condition="Control.IsVisible(580) | Control.IsVisible(597) | Control.IsVisible(581)">Conditional</animation>
 			<animation effect="slide" end="1850,5" time="0" condition="Control.IsVisible(50)">Conditional</animation>
 			<animation effect="slide" end="1864,0" time="0" condition="Control.IsVisible(596)">Conditional</animation>
+			<animation effect="slide" end="1850,-90" time="0" condition="Control.IsVisible(501)">Conditional</animation>
 			<left>-5</left>
 			<top>470</top>
 			<control type="button" id="5919">
 				<include>HiddenObject</include>
-				<onleft condition="Control.IsVisible(50) | Control.IsVisible(596) | Control.IsVisible(597) | Control.IsVisible(581)">50</onleft>
+				<onleft condition="Control.IsVisible(50) | Control.IsVisible(580) | Control.IsVisible(596) | Control.IsVisible(597) | Control.IsVisible(581) | Control.IsVisible(501)">50</onleft>
 				<onleft condition="Control.IsVisible(585)">58560</onleft>
 				<onleft condition="Control.IsVisible(588)">58860</onleft>
 				<onleft condition="Control.IsVisible(591)">59160</onleft>
@@ -389,7 +403,9 @@
 				<onright condition="Control.IsVisible(588) | Control.IsVisible(591)">50</onright>
 				<onright condition="Control.IsVisible(596)">59660</onright>
 				<onright condition="Control.IsVisible(597)">59760</onright>
+				<onright condition="Control.IsVisible(580)">58060</onright>
 				<onright condition="Control.IsVisible(581)">58160</onright>
+				<onright condition="Control.IsVisible(501)">50160</onright>
 				<onup>SetFocus(50)</onup>
 				<onup>Action(prevletter)</onup>
 				<onup>SetFocus(5919)</onup>
@@ -401,6 +417,7 @@
 			</control>
 			<control type="image">
 				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<animation effect="slide" end="15,0" time="0" condition="Control.IsVisible(501)">Conditional</animation>
 				<left>-7</left>
 				<top>-64</top>
 				<width>65</width>
@@ -410,6 +427,7 @@
 			</control>
 			<control type="image">
 				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<animation effect="slide" end="15,0" time="0" condition="Control.IsVisible(501)">Conditional</animation>
 				<left>-7</left>
 				<top>110</top>
 				<width>65</width>
@@ -418,7 +436,7 @@
 				<texture background="true">tajo/arrow_vd.gif</texture>
 			</control>
 			<control type="image">
-				<animation effect="slide" end="-15,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+				<animation effect="slide" end="-15,0" time="0" condition="Control.IsVisible(580) | Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
 				<animation effect="slide" end="-8,0" time="0" condition="Control.IsVisible(591)">Conditional</animation>
 				<top>5</top>
 				<left>1</left>
@@ -428,7 +446,7 @@
 			</control>
 			<control type="label">
 				<visible>!String.StartsWith(ListItem.Label,*)</visible>
-				<animation effect="slide" end="-10,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+				<animation effect="slide" end="-10,0" time="0" condition="Control.IsVisible(580) | Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
 				<top>-5</top>
 				<left>-5</left>
 				<width>80</width>
@@ -440,7 +458,7 @@
 			</control>
 			<control type="label">
 				<visible>String.StartsWith(ListItem.Label,*)</visible>
-				<animation effect="slide" end="-10,0" time="0" condition="Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
+				<animation effect="slide" end="-10,0" time="0" condition="Control.IsVisible(580) | Control.IsVisible(597) | Control.IsVisible(596)">Conditional</animation>
 				<top>-5</top>
 				<left>-5</left>
 				<width>80</width>

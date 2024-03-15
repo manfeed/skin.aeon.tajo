@@ -8,6 +8,6 @@
 	<visible>Window.IsActive(music) + Skin.HasSetting(SearchExtrasMusic) + Skin.HasSetting(SettingCommon)</visible>
 	<visible>Window.IsActive(musicinformation)</visible>
 	<visible>String.IsEmpty(Window(Home).Property(extras_music_yes))</visible>
-	<visible>!Container.Content(musicvideos) + !String.StartsWith(container.folderpath,library://video/musicvideos/) + !String.StartsWith(container.folderpath,videodb://musicvideos)</visible>
-	<controls/>
+	<visible>!Container.Content(musicvideos) + !String.StartsWith(container.folderpath,library://video/musicvideos/) + !String.StartsWith(container.folderpath,videodb://musicvideos) + !String.StartsWith(ListItem.FolderPath,musicdb)</visible>
+	<controls />
 </window>

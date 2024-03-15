@@ -478,11 +478,11 @@
 					<description>progress control</description>
 					<width>1</width>
 					<height>1</height>
-					<texturebg/>
-					<lefttexture/>
-					<midtexture/>
-					<righttexture/>
-					<overlaytexture/>
+					<texturebg />
+					<lefttexture />
+					<midtexture />
+					<righttexture />
+					<overlaytexture />
 				</control>
 				<control type="group">
 					<include>DialogOpenCloseAnimation</include>

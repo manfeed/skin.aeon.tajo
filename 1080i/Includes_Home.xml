@@ -14,7 +14,7 @@
 			<onup condition="Control.IsVisible(9003) + ![System.HasMediaDVD | System.HasAddon(script.globalsearch)]">9003</onup>
 			<onup condition="System.HasMediaDVD | System.HasAddon(script.globalsearch) | !Skin.HasSetting(showWidget)">9020</onup>
 			<ondown>9001</ondown>
-			<pagecontrol/>
+			<pagecontrol />
 			<scrolltime tween="sine" easing="out">400</scrolltime>
 			<focusposition>2</focusposition>
 			<orientation>Horizontal</orientation>
@@ -24,7 +24,7 @@
 					<animation effect="zoom" end="90" time="0" condition="true">Conditional</animation>
 					<visible>!Control.HasFocus(9010)</visible>
 					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="250"/>
+						<effect type="fade" start="0" end="100" time="250" />
 					</animation>
 					<left>50</left>
 					<width>590</width>
@@ -53,11 +53,11 @@
 				<control type="label">
 					<animation effect="zoom" center="325,40" start="100" end="110" time="300" delay="225" tween="quadratic" easing="out">Focus</animation>
 					<animation type="UnFocus" reversible="false">
-						<effect type="zoom" center="325,40" start="100" end="110" time="100" tween="quadratic" easing="in"/>
-						<effect type="fade" start="100" end="0" time="100"/>
+						<effect type="zoom" center="325,40" start="100" end="110" time="100" tween="quadratic" easing="in" />
+						<effect type="fade" start="100" end="0" time="100" />
 					</animation>
 					<animation type="Visible">
-						<effect type="zoom" start="70" end="100" center="auto" tween="sine" easing="inout" time="300"/>
+						<effect type="zoom" start="70" end="100" center="auto" tween="sine" easing="inout" time="300" />
 					</animation>
 					<scroll>false</scroll>
 					<left>50</left>
@@ -91,7 +91,7 @@
 				<onleft condition="Control.IsVisible(9004)">9004</onleft>
 				<onleft condition="System.HasMediaDVD | System.HasAddon(script.globalsearch) | !Skin.HasSetting(showWidget)">9020</onleft>
 				<onright>9001</onright>
-				<pagecontrol/>
+				<pagecontrol />
 				<scrolltime tween="sine" easing="out">300</scrolltime>
 				<focusposition>1</focusposition>
 				<orientation>Vertical</orientation>
@@ -124,7 +124,7 @@
 					</control>
 					<control type="label">
 						<animation type="Visible" reversible="false">
-							<effect type="zoom" center="46,50" start="80" end="100" time="300" tween="quadratic" easing="in"/>
+							<effect type="zoom" center="46,50" start="80" end="100" time="300" tween="quadratic" easing="in" />
 						</animation>
 						<animation effect="zoom" center="46,50" start="100" end="125" condition="true">Conditional</animation>
 						<scroll>false</scroll>
@@ -153,7 +153,7 @@
 				<top>170</top>
 				<animation effect="slide" start="1870,0" end="0,0" delay="300" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
 				<animation effect="slide" start="1870,0" end="0,0" delay="200" time="480" condition="Window.Previous(startup)">WindowOpen</animation>
-				<control type="wraplist" id="9010">
+				<control type="fixedlist" id="9010">
 					<left>5</left>
 					<width>1910</width>
 					<top>8</top>
@@ -161,21 +161,21 @@
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<onback>9000</onback>
-					<pagecontrol/>
+					<pagecontrol />
 					<scrolltime tween="quadratic" easing="out">500</scrolltime>
 					<focusposition>2</focusposition>
-					<movement>0</movement>
+					<movement>2</movement>
 					<orientation>Horizontal</orientation>
 					<itemlayout height="87" width="385">
 						<control type="label">
 							<animation type="Visible">
-								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="400"/>
-								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out"/>
+								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="400" />
+								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out" />
 							</animation>
 							<visible>Control.HasFocus(9010)</visible>
 							<width>385</width>
 							<height>41</height>
-							<font>font35</font>
+							<font>font15t</font>
 							<textcolor>grey2</textcolor>
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
@@ -184,14 +184,14 @@
 					<focusedlayout height="87" width="385">
 						<control type="label">
 							<animation type="Visible">
-								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="400"/>
-								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out"/>
+								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="400" />
+								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out" />
 							</animation>
 							<visible>Control.HasFocus(9010)</visible>
 							<width>385</width>
 							<height>41</height>
 							<textcolor>white</textcolor>
-							<font>font35</font>
+							<font>font15t</font>
 							<align>center</align>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
@@ -203,8 +203,11 @@
 			<control type="image">
 				<visible>Control.HasFocus(9010)</visible>
 				<animation type="Visible">
-					<effect type="fade" start="0" end="100" tween="sine" easing="in" time="400"/>
-					<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out"/>
+					<effect type="fade" start="0" end="100" tween="sine" easing="out" time="400" />
+					<effect type="slide" start="0,-70" end="0,0" time="400" tween="sine" easing="out" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" tween="sine" easing="in" time="400" />
 				</animation>
 				<left>35</left>
 				<top>165</top>
@@ -234,7 +237,7 @@
 					<onright>9000</onright>
 					<onleft>9000</onleft>
 					<onback>9000</onback>
-					<pagecontrol/>
+					<pagecontrol />
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<focusposition>0</focusposition>
 					<movement>8</movement>
@@ -242,8 +245,8 @@
 					<itemlayout height="41" width="885">
 						<control type="label">
 							<animation type="Visible">
-								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="450"/>
-								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out"/>
+								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="450" />
+								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out" />
 							</animation>
 							<visible>Control.HasFocus(9010)</visible>
 							<width>875</width>
@@ -257,8 +260,8 @@
 					<focusedlayout height="41" width="885">
 						<control type="label">
 							<animation type="Visible">
-								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="450"/>
-								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out"/>
+								<effect type="fade" start="0" end="100" tween="sine" easing="in" time="450" />
+								<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out" />
 							</animation>
 							<visible>Control.HasFocus(9010)</visible>
 							<width>875</width>
@@ -277,8 +280,8 @@
 				<visible>Control.HasFocus(9010)</visible>
 				<visible>!System.HasActiveModalDialog</visible>
 				<animation type="Visible">
-					<effect type="fade" start="0" end="100" tween="sine" easing="in" time="400"/>
-					<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out"/>
+					<effect type="fade" start="0" end="100" tween="sine" easing="in" time="400" />
+					<effect type="slide" start="0,-70" end="0,0" time="400" tween="circle" easing="out" />
 				</animation>
 				<left>70</left>
 				<top>-146</top>
@@ -908,43 +911,43 @@
 		<item>
 			<label>342</label>
 			<onclick>ActivateWindow(Videos,Movies,root)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>Library.HasContent(Movies) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
 		</item>
 		<item>
 			<label>20343</label>
 			<onclick>ActivateWindow(Videos,TvShows,root)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>Library.HasContent(TVShows) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
 		</item>
 		<item>
 			<label>24001</label>
 			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
 		</item>
 		<item>
 			<label>744</label>
 			<onclick>ActivateWindow(Videos,Files,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
 		</item>
 		<item>
 			<label>136</label>
 			<onclick>ActivateWindow(Videos,Playlists,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
 		</item>
 		<item>
 			<label>14022</label>
 			<onclick>ActivateWindow(Videos,Root)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>Library.HasContent(Video) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
 		</item>
 	</include>
@@ -952,57 +955,57 @@
 		<item>
 			<label>16101</label>
 			<onclick>ActivateWindow(Videos,special://skin/extras/Unwatched.xsp,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 		<item>
 			<label>575</label>
 			<onclick>ActivateWindow(Videos,special://skin/extras/InProgress.xsp,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 		<item>
 			<label>31328</label>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 		<item>
 			<label>20434</label>
 			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>Library.HasContent(MovieSets) + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 		<item>
 			<label>135</label>
 			<onclick>ActivateWindow(Videos,MovieGenres,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 		<item>
 			<label>652</label>
 			<onclick>ActivateWindow(Videos,MovieYears,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 		<item>
 			<label>344</label>
 			<onclick>ActivateWindow(Videos,MovieActors,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 		<item>
 			<label>20459</label>
 			<onclick>ActivateWindow(Videos,MovieTags,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x10)</visible>
 		</item>
 	</include>
@@ -1010,36 +1013,36 @@
 		<item>
 			<label>575</label>
 			<onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
 		</item>
 		<item>
 			<label>31328</label>
 			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
 		</item>
 		<item>
 			<label>135</label>
 			<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
 		</item>
 		<item>
 			<label>652</label>
 			<onclick>ActivateWindow(Videos,TvShowYears,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
 		</item>
 		<item>
 			<label>344</label>
 			<onclick>ActivateWindow(Videos,TvShowActors,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x11)</visible>
 		</item>
 	</include>
@@ -1047,43 +1050,43 @@
 		<item>
 			<label>133</label>
 			<onclick>ActivateWindow(Music,Artists,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
 		</item>
 		<item>
 			<label>132</label>
 			<onclick>ActivateWindow(Music,Albums,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
 		</item>
 		<item>
 			<label>134</label>
 			<onclick>ActivateWindow(Music,Songs,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
 		</item>
 		<item>
 			<label>744</label>
 			<onclick>ActivateWindow(Music,Files,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
 		</item>
 		<item>
 			<label>14022</label>
 			<onclick>ActivateWindow(Music,root)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
 		</item>
 		<item>
 			<label>24001</label>
 			<onclick>ActivateWindow(Music,Addons,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x3)</visible>
 		</item>
 	</include>
@@ -1091,37 +1094,37 @@
 		<item>
 			<label>20244</label>
 			<onclick>ActivateWindow(Programs)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1) + System.Platform(Android)</visible>
 		</item>
 		<item>
 			<label>15016</label>
 			<onclick>SetProperty(Progams.Games,True,home)</onclick>
 			<onclick>RunAddon(plugin.program.advanced.launcher)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1) + System.HasAddon(plugin.program.advanced.launcher)</visible>
 		</item>
 		<item>
 			<label>1037</label>
 			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
 		</item>
 		<item>
 			<label>1038</label>
 			<onclick>ActivateWindow(Music,Addons,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
 		</item>
 		<item>
 			<label>1039</label>
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x1)</visible>
 		</item>
 	</include>
@@ -1129,36 +1132,36 @@
 		<item>
 			<label>24001</label>
 			<onclick>ActivateWindow(AddonBrowser)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
 		</item>
 		<item>
 			<label>20077</label>
 			<onclick>ActivateWindow(SkinSettings)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
 		</item>
 		<item>
 			<label>7</label>
 			<onclick>ActivateWindow(FileManager)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
 		</item>
 		<item>
 			<label>13200</label>
 			<onclick>ActivateWindow(Profiles)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
 		</item>
 		<item>
 			<label>130</label>
 			<onclick>ActivateWindow(SystemInfo)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x5)</visible>
 		</item>
 	</include>
@@ -1211,8 +1214,8 @@
 		<item>
 			<label>24001</label>
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x4)</visible>
 		</item>
 	</include>
@@ -1220,36 +1223,36 @@
 		<item>
 			<label>19023</label>
 			<onclick>ActivateWindow(TVChannels)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
 		</item>
 		<item>
 			<label>19024</label>
 			<onclick>ActivateWindow(RadioChannels)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
 		</item>
 		<item>
 			<label>19069</label>
 			<onclick>ActivateWindow(TVGuide)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
 		</item>
 		<item>
 			<label>19163</label>
 			<onclick>ActivateWindow(TVRecordings)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
 		</item>
 		<item>
 			<label>19040</label>
 			<onclick>ActivateWindow(TVTimers)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x12)</visible>
 		</item>
 	</include>
@@ -1257,36 +1260,36 @@
 		<item>
 			<label>133</label>
 			<onclick>ActivateWindow(Videos,MusicVideoArtists,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
 		</item>
 		<item>
 			<label>135</label>
 			<onclick>ActivateWindow(Videos,MusicVideoGenres,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
 		</item>
 		<item>
 			<label>31328</label>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMusicVideos,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
 		</item>
 		<item>
 			<label>652</label>
 			<onclick>ActivateWindow(Videos,MusicVideoYears,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
 		</item>
 		<item>
 			<label>20459</label>
 			<onclick>ActivateWindow(Videos,MusicVideoTags,return)</onclick>
-			<icon/>
-			<thumb/>
+			<icon />
+			<thumb />
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),x13)</visible>
 		</item>
 	</include>

@@ -969,8 +969,8 @@
 				<focusedcolor>Skin.String(theme_text)</focusedcolor>
 				<onclick>ClearProperty(MediaMenu,Home)</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<texturefocus/>
-				<texturenofocus/>
+				<texturefocus />
+				<texturenofocus />
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="image">

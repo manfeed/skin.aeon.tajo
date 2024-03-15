@@ -39,11 +39,11 @@
 			<top>-100</top>
 			<width>100</width>
 			<height>100</height>
-			<itemlayout height="100" width="100"/>
-			<focusedlayout height="100" width="100"/>
+			<itemlayout height="100" width="100" />
+			<focusedlayout height="100" width="100" />
 			<content>
 				<item>
-					<label/>
+					<label />
 					<onclick>noop</onclick>
 					<property name="Path">SetFocus(90101)</property>
 				</item>

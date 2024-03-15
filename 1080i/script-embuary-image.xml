@@ -11,8 +11,8 @@
 			<orientation>horizontal</orientation>
 			<scrolltime>0</scrolltime>
 			<pagecontrol>2</pagecontrol>
-			<itemlayout/>
-			<focusedlayout width="1920" height="1080"/>
+			<itemlayout />
+			<focusedlayout width="1920" height="1080" />
 		</control>
 		<control type="image">
 			<width>1920</width>

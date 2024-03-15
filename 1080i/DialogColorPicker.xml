@@ -18,7 +18,7 @@
 				<height>80</height>
 				<align>right</align>
 				<font>font40_bold</font>
-				<label/>
+				<label />
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
@@ -86,7 +86,7 @@
 					<align>center</align>
 					<width>250</width>
 					<height>60</height>
-					<label/>
+					<label />
 					<onup>6</onup>
 					<ondown>Control.SetFocus(6)</ondown>
 				</control>

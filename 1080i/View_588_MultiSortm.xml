@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<!--#############################################################################   VISTA MULTISORTm - ID 588   #############################################################################-->
 	<include name="ViewMultiSortm">
 		<control type="group">
+			<animation effect="slide" start="0,0" end="30,0" time="200" condition="Control.HasFocus(58860) | Control.HasFocus(5919)">Conditional</animation>
 			<top>-2</top>
 			<visible>Control.IsVisible(588)</visible>
 			<visible>!Container.Content(musicvideos) + !String.StartsWith(container.folderpath,library://video/musicvideos/) + !String.StartsWith(container.folderpath,videodb://musicvideos)</visible>
@@ -62,6 +64,7 @@
 					<movement>2</movement>
 					<focusposition>5</focusposition>
 					<preloaditems>2</preloaditems>
+					<onleft condition="!String.IsEmpty(ListItem.SongVideoURL) + !String.IsEmpty(Window(Home).Property(RowTitlem))">5689</onleft>
 					<onleft condition="!String.IsEmpty(Window(Home).Property(RowTitlem)) + !ListItem.IsParentFolder + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[558]) | String.Contains(Container.SortMethod,$LOCALIZE[557])]">5919</onleft>
 					<onright condition="!String.IsEmpty(Window(Home).Property(RowTitlem))">SetProperty(RowArtist,True,home)</onright>
 					<onright condition="!String.IsEmpty(Window(Home).Property(RowTitlem))">ClearProperty(RowTitlem,Home)</onright>
@@ -98,10 +101,23 @@
 							<height>3</height>
 							<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
 						</control>
+						<control type="label">
+							<animation effect="zoom" end="60" time="0" condition="true">Conditional</animation>
+							<visible>!String.IsEmpty(ListItem.SongVideoURL)</visible>
+							<left>5</left>
+							<top>4</top>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>IconMediumMD</font>
+							<textcolor>grey2</textcolor>
+							<width>65</width>
+							<height>65</height>
+							<label></label>
+						</control>
 						<control type="textbox">
 							<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[369])</visible>
-							<width>540</width>
-							<left>10</left>
+							<width>505</width>
+							<left>45</left>
 							<top>6</top>
 							<height>53</height>
 							<align>right</align>
@@ -114,8 +130,8 @@
 						<control type="textbox">
 							<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[369])</visible>
 							<top>6</top>
-							<left>10</left>
-							<width>540</width>
+							<left>45</left>
+							<width>505</width>
 							<height>53</height>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -268,9 +284,8 @@
 							<shadowcolor>black</shadowcolor>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919) + !ListItem.IsParentFolder" height="325">
-					</focusedlayout>
-					<focusedlayout condition="!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919) | ListItem.IsParentFolder" height="190">
+					<focusedlayout condition="System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919) + !ListItem.IsParentFolder" height="325"></focusedlayout>
+					<focusedlayout condition="!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919) | ListItem.IsParentFolder" height="190">
 						<control type="button" id="1858">
 							<include>HiddenObject</include>
 							<visible>String.IsEmpty(Window(Home).Property(RowTitlem)) + String.IsEmpty(Window(Home).Property(RowYearm)) + String.IsEmpty(Window(Home).Property(RowArtist)) + String.IsEmpty(Window(Home).Property(RowDurationm)) + String.IsEmpty(Window(Home).Property(RowTrack)) + String.IsEmpty(Window(Home).Property(RowAlbum))</visible>
@@ -278,6 +293,25 @@
 							<onfocus condition="String.IsEmpty(Window(Home).Property(FirstRowm))">SetProperty(FirstRowm,True,home)</onfocus>
 						</control>
 					</focusedlayout>
+				</control>
+				<control type="button" id="5689">
+					<visible>!String.IsEmpty(ListItem.SongVideoURL)</visible>
+					<top>105</top>
+					<left>896</left>
+					<width>42</width>
+					<height>37</height>
+					<font>font15d</font>
+					<align>center</align>
+					<texturefocus />
+					<onup>588</onup>
+					<onup>Control.Move(588,-1)</onup>
+					<ondown>588</ondown>
+					<ondown>Control.Move(588,1)</ondown>
+					<onright>588</onright>
+					<onleft condition="!ListItem.IsParentFolder + [String.Contains(Container.SortMethod,$LOCALIZE[369]) | String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[558])]">5919</onleft>
+					<onright>59660</onright>
+					<onclick condition="Player.Playing">Stop</onclick>
+					<onclick>PlayMedia($ESCINFO[ListItem.SongVideoURL])</onclick>
 				</control>
 				<control type="group">
 					<top>-3</top>
@@ -342,7 +376,7 @@
 					</control>
 				</control>
 				<control type="image">
-					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919)</visible>
+					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)</visible>
 					<visible>!ListItem.IsParentFolder</visible>
 					<left>-50</left>
 					<top>-50</top>
@@ -353,7 +387,7 @@
 					<animation effect="fade" start="0" end="50" time="500">Visible</animation>
 				</control>
 				<control type="group">
-					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919) + !ListItem.IsParentFolder</visible>
+					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919) + !ListItem.IsParentFolder</visible>
 					<left>-20</left>
 					<control type="image">
 						<left>-2</left>
@@ -367,7 +401,7 @@
 					<control type="image">
 						<left>-2</left>
 						<top>368</top>
-						<width>1940</width>
+						<width>1960</width>
 						<height>323</height>
 						<texture>black.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
@@ -375,15 +409,43 @@
 				</control>
 				<control type="group">
 					<top>381</top>
-					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919)</visible>
+					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)</visible>
 					<visible>!ListItem.IsParentFolder</visible>
-					<animation effect="fade" start="0" end="100" time="400" condition="System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919)">Conditional</animation>
+					<animation effect="fade" start="0" end="100" time="400" condition="System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)">Conditional</animation>
 					<include>MultiSortm</include>
 				</control>
 				<control type="group">
-					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919)</visible>
+					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)</visible>
 					<visible>!ListItem.IsParentFolder</visible>
 					<animation effect="fade" start="0" end="100" time="500">Visible</animation>
+					<control type="label">
+						<animation effect="zoom" end="60" time="0" condition="true">Conditional</animation>
+						<visible>!String.IsEmpty(ListItem.SongVideoURL) + !Control.HasFocus(5689)</visible>
+						<left>6</left>
+						<top>368</top>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>IconMediumMD</font>
+						<textcolor>grey2</textcolor>
+						<width>65</width>
+						<height>65</height>
+						<label></label>
+					</control>
+					<control type="label">
+						<animation effect="zoom" end="75" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="1000" pulse="true" condition="true">Conditional</animation>
+						<animation effect="slide" end="-2,-3" time="0" condition="true">Conditional</animation>
+						<visible>!String.IsEmpty(ListItem.SongVideoURL) + Control.HasFocus(5689)</visible>
+						<left>6</left>
+						<top>368</top>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>IconMediumMD</font>
+						<textcolor>Skin.String(theme_text)</textcolor>
+						<width>65</width>
+						<height>65</height>
+						<label></label>
+					</control>
 					<control type="image">
 						<left>630</left>
 						<top>430</top>
@@ -414,7 +476,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919)</visible>
+					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)</visible>
 					<visible>!ListItem.IsParentFolder</visible>
 					<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 					<left>-54</left>
@@ -564,27 +626,27 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5919)</visible>
+					<visible>System.IdleTime(6) + !Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)</visible>
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<left>22</left>
 					<top>495</top>
 				</control>
 				<control type="group">
 					<left>-20</left>
-					<visible>!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)</visible>
+					<visible>!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)</visible>
 					<control type="image">
-						<left>-2</left>
+						<left>-32</left>
 						<top>366</top>
-						<width>1940</width>
+						<width>1990</width>
 						<height>191</height>
 						<texture border="4">listselect_fo.png</texture>
 						<colordiffuse>Skin.String(flat_back)</colordiffuse>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
-						<left>-2</left>
+						<left>-33</left>
 						<top>368</top>
-						<width>1940</width>
+						<width>2020</width>
 						<height>187
 						</height>
 						<texture border="4">black.png</texture>
@@ -594,28 +656,28 @@
 				<control type="group">
 					<control type="image">
 						<visible>!String.IsEmpty(Window(Home).Property(RowTitlem)) + !System.IdleTime(6)</visible>
-						<visible>!Control.HasFocus(58860) + !Control.HasFocus(5919)</visible>
+						<visible>!Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)</visible>
 						<top>365</top>
-						<left>-2</left>
-						<width>577</width>
-						<height>192</height>
+						<left>-32</left>
+						<width>607</width>
+						<height>187</height>
 						<texture diffuse="tajo/mask_cover3.png">back.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
 					<control type="image">
 						<visible>[Control.HasFocus(58860) | Control.HasFocus(5919)] + String.IsEqual(Container.SortMethod,$LOCALIZE[369])</visible>
-						<top>365</top>
-						<left>-2</left>
-						<width>577</width>
-						<height>192</height>
+						<top>368</top>
+						<left>-32</left>
+						<width>607</width>
+						<height>187</height>
 						<texture diffuse="tajo/mask_cover3.png">back.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
 					<control type="image">
 						<visible>!String.IsEmpty(Window(Home).Property(RowTitlem)) + !System.IdleTime(6)</visible>
-						<visible>!Control.HasFocus(58860) + !Control.HasFocus(5919)</visible>
+						<visible>!Control.HasFocus(58860) + !Control.HasFocus(5689) + !Control.HasFocus(5919)</visible>
 						<left>-2</left>
 						<top>365</top>
 						<width>577</width>
@@ -625,7 +687,7 @@
 						<colordiffuse>Skin.String(flat_back)</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowArtist)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowArtist)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>570</left>
 						<width>450</width>
@@ -645,7 +707,7 @@
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowArtist)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowArtist)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>570</left>
 						<width>450</width>
@@ -655,7 +717,7 @@
 						<colordiffuse>Skin.String(flat_back)</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowAlbum)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowAlbum)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1020</left>
 						<width>500</width>
@@ -675,7 +737,7 @@
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowAlbum)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowAlbum)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1020</left>
 						<width>500</width>
@@ -685,7 +747,7 @@
 						<colordiffuse>Skin.String(flat_back)</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowTrack)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowTrack)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1520</left>
 						<width>100</width>
@@ -695,7 +757,7 @@
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowTrack)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowTrack)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1520</left>
 						<width>100</width>
@@ -705,7 +767,7 @@
 						<colordiffuse>Skin.String(flat_back)</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowDurationm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowDurationm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1620</left>
 						<width>170</width>
@@ -715,7 +777,7 @@
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowDurationm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowDurationm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1620</left>
 						<width>170</width>
@@ -725,7 +787,7 @@
 						<colordiffuse>Skin.String(flat_back)</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowYearm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowYearm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1790</left>
 						<width>130</width>
@@ -735,7 +797,7 @@
 						<colordiffuse>ddffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<visible>!String.IsEmpty(Window(Home).Property(RowYearm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)]</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(RowYearm)) + [!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)]</visible>
 						<top>365</top>
 						<left>1790</left>
 						<width>130</width>
@@ -747,7 +809,7 @@
 				</control>
 				<control type="group">
 					<top>370</top>
-					<visible>!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)</visible>
+					<visible>!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)</visible>
 					<control type="label">
 						<font>font13_title</font>
 						<align>right</align>
@@ -809,8 +871,36 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5919)</visible>
+					<visible>!System.IdleTime(6) | Control.HasFocus(58860) | Control.HasFocus(5689) | Control.HasFocus(5919)</visible>
 					<top>376</top>
+					<control type="label">
+						<animation effect="zoom" end="60" time="0" condition="true">Conditional</animation>
+						<visible>!String.IsEmpty(ListItem.SongVideoURL) + !Control.HasFocus(5689)</visible>
+						<left>6</left>
+						<top>-8</top>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>IconMediumMD</font>
+						<textcolor>grey2</textcolor>
+						<width>65</width>
+						<height>65</height>
+						<label></label>
+					</control>
+					<control type="label">
+						<animation effect="zoom" end="75" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="1000" pulse="true" condition="true">Conditional</animation>
+						<animation effect="slide" end="-2,-3" time="0" condition="true">Conditional</animation>
+						<visible>!String.IsEmpty(ListItem.SongVideoURL) + Control.HasFocus(5689)</visible>
+						<left>6</left>
+						<top>-8</top>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>IconMediumMD</font>
+						<textcolor>Skin.String(theme_text)</textcolor>
+						<width>65</width>
+						<height>65</height>
+						<label></label>
+					</control>
 					<control type="textbox">
 						<visible>String.IsEmpty(Window(Home).Property(RowTitlem))</visible>
 						<visible>![Container.OnNext | Container.OnPrevious]</visible>
@@ -997,7 +1087,7 @@
 				<control type="image">
 					<left>-2</left>
 					<top>368</top>
-					<width>1940</width>
+					<width>1960</width>
 					<height>187
 					</height>
 					<texture border="4">black.png</texture>
@@ -1012,14 +1102,22 @@
 					<aspectratio align="center">keep</aspectratio>
 				</control>
 			</control>
+			<control type="image">
+				<visible>Control.HasFocus(58860)</visible>
+				<left>-38</left>
+				<top>47</top>
+				<width>43</width>
+				<height>980</height>
+				<texture>black.png</texture>
+			</control>
 			<control type="scrollbar" id="58860">
 				<animation effect="fade" start="0" end="100" time="500">Visible</animation>
 				<animation effect="slide" end="573,0" time="0" condition="Control.IsVisible(588) + String.IsEqual(Container.SortMethod,$LOCALIZE[557])">Conditional</animation>
 				<animation effect="slide" end="1023,0" time="0" condition="Control.IsVisible(588) + String.IsEqual(Container.SortMethod,$LOCALIZE[558])">Conditional</animation>
 				<include>ScrollBar_Vertical</include>
-				<left>-13</left>
-				<top>40</top>
-				<height>1040</height>
+				<left>-36</left>
+				<top>47</top>
+				<height>980</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>SetFocus(9050)</onleft>
 				<onright>588</onright>

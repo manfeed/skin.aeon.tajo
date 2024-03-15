@@ -27,7 +27,6 @@
 				<height>2</height>
 				<texture border="0" colordiffuse="white">new_pvr/osd_line_white.png</texture>
 			</control>
-			<!-- </control> -->
 			<control type="group" id="2">
 				<control type="image" id="3">
 					<left>92</left>
@@ -249,8 +248,8 @@
 						<info2>PVR.TimeshiftProgressPlayPos</info2>
 						<texturebg border="0" colordiffuse="FF0110FA">colors/white50.png</texturebg>
 						<lefttexture>colors/white50.png</lefttexture>
-						<midtexture/>
-						<righttexture/>
+						<midtexture />
+						<righttexture />
 					</control>
 					<control type="progress">
 						<left>380</left>
@@ -859,8 +858,8 @@
 					<info2>PVR.TimeshiftProgressPlayPos</info2>
 					<texturebg border="0" colordiffuse="FF0110FA">colors/white50.png</texturebg>
 					<lefttexture>colors/white50.png</lefttexture>
-					<midtexture/>
-					<righttexture/>
+					<midtexture />
+					<righttexture />
 				</control>
 				<control type="progress">
 					<left>380</left>

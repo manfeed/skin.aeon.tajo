@@ -475,7 +475,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Thumb,9)">special://skin/extras/playlists/random_songs.xsp</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Thumb,10)">special://skin/extras/playlists/random_albums.xsp</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(BGType),5) | String.IsEqual(Container(9000).ListItem.Property(BGType),7)">$INFO[Container(9000).ListItem.Thumb]</value>
-		<value>special://skin/colors/extras</value>
+		<value>special://skin/colors/extras2</value>
 	</variable>
 	<!-- Cases Background Vars-->
 	<variable name="Case1Var">

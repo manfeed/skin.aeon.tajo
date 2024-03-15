@@ -1623,7 +1623,7 @@ msgid "Kodi add-ons settings"
 msgstr "Ajustes add-ons de Kodi"
 
 msgctxt "#32058"
-msgid "Install and Update add-ons"
+msgid "Install and update add-ons"
 msgstr "Obtener y actualizar add-ons"
 
 msgctxt "#32059"
@@ -1673,3 +1673,99 @@ msgstr "Álbumes similares"
 msgctxt "#32070"
 msgid "No similar found"
 msgstr "No se han encontrado similares"
+
+msgctxt "#32071"
+msgid "Wikipedia"
+msgstr "Wikipedia"
+
+msgctxt "#32072"
+msgid "Click to select and open article's links"
+msgstr "Hacer clic para seleccionar y abrir los enlaces del artículo"
+
+msgctxt "#32073"
+msgid "Click to search..."
+msgstr "Hacer clic para buscar..."
+
+msgctxt "#32074"
+msgid "Fetch music video links"
+msgstr "Buscar enlaces videoclips"
+
+msgctxt "#32075"
+msgid "[B]CONFIGURE GAME SETTINGS[/B][CR][CR]Change gameplay options[CR]Keyboard settings · Configure rewind settings"
+msgstr "[B]CONFIGURAR AJUSTES DE JUEGOS[/B][CR][CR]Configurar opciones de juegos[CR]Ajustar teclado · Configurar rebobinado"
+
+msgctxt "#32076"
+msgid "Narrow list"
+msgstr "lista estrecha"
+
+msgctxt "#32077"
+msgid "Wide list"
+msgstr "lista ancha"
+
+msgctxt "#32078"
+msgid "Update videolinks"
+msgstr "Actualizar videolinks"
+
+msgctxt "#32079"
+msgid "Play all music videos"
+msgstr "Reproducir todos los videoclips"
+
+msgctxt "#32080"
+msgid "No bookmarks created yet"
+msgstr "No se han creado marcadores aún"
+
+msgctxt "#32081"
+msgid "Choose where to start"
+msgstr "Elija desde donde empezar"
+
+msgctxt "#32082"
+msgid "Browse the list and click"
+msgstr "Busque en la lista y haga click"
+
+msgctxt "#32083"
+msgid "Show OSD controls"
+msgstr "Mostrar controles de reproducción"
+
+msgctxt "#32084"
+msgid "Preparing list of music videos. Please wait..."
+msgstr "Preparando la lista de videoclips, espere por favor..."
+
+msgctxt "#32085"
+msgid "Songs party mode"
+msgstr "Modo fiesta canciones"
+
+msgctxt "#32086"
+msgid "Videolinks party mode"
+msgstr "Modo fiesta videolinks"
+
+msgctxt "#32087"
+msgid "No videolinks found"
+msgstr "No se han encontrado videolinks"
+
+msgctxt "#32088"
+msgid "Click or arrow keys while playing to show the OSD"
+msgstr "Durante la reproducción haga click o pulse una tecla de dirección para mostrar el OSD"
+
+msgctxt "#32089"
+msgid "While playing..."
+msgstr "Durante la reproducción..."
+
+msgctxt "#32090"
+msgid "Click or arrow keys to show the OSD"
+msgstr "Haga click o pulse una tecla de dirección para mostrar el OSD"
+
+msgctxt "#32091"
+msgid "Shows the normal thumb (folder.jpg) in artists and albums music views."
+msgstr "Muestra la miniatura normal (folder.jpg) en las vistas de artistas y álbumes musicales."
+
+msgctxt "#32092"
+msgid "Shows the animated thumb (animatedthumb.gif) in artists and albums music views."
+msgstr "Muestra la miniatura animada (animatedthumb.gif) en las vistas de artistas y álbumes musicales."
+
+msgctxt "#32093"
+msgid "Show a color strip code in video views"
+msgstr "Mostrar franjas de colores en vistas de video"
+
+msgctxt "#32094"
+msgid "Allows to quickly identify video file quality using a color strip code when browsing movies and episodes in video views"
+msgstr "Permite identificar rápidamente la calidad del archivo de video usando un código de franjas de colores al explorar películas y episodios en vistas de video."

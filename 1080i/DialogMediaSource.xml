@@ -9,6 +9,12 @@
 	<include>DialogOpenCloseAnimation</include>
 	<controls>
 		<control type="image">
+			<left>-211</left>
+			<top>-300</top>
+			<include>FullscreenDimensions</include>
+			<texture background="true">blackk.jpg</texture>
+		</control>
+		<control type="image">
 			<description>background image</description>
 			<width>1498</width>
 			<height>480</height>
@@ -162,7 +168,7 @@
 				<width>1114</width>
 				<height>60</height>
 				<align>center</align>
-				<label/>
+				<label />
 				<font>font14</font>
 				<onup>10</onup>
 				<onleft>12</onleft>

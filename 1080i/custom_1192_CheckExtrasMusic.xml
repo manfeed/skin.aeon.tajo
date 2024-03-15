@@ -10,5 +10,5 @@
 	<visible>!Window.IsActive(songinformation)</visible>
 	<visible>String.IsEmpty(Window(Home).Property(extras_music_yes))</visible>
 	<visible>!Container.Content(musicvideos) + !String.StartsWith(container.folderpath,library://video/musicvideos/) + !String.StartsWith(container.folderpath,videodb://musicvideos)</visible>
-	<controls/>
+	<controls />
 </window>

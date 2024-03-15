@@ -9,6 +9,12 @@
 	<include>DialogOpenCloseAnimation</include>
 	<controls>
 		<control type="image">
+			<include>FullscreenDimensions</include>
+			<left>-122</left>
+			<top>-254</top>
+			<texture background="true">blackk.jpg</texture>
+		</control>
+		<control type="image">
 			<description>background image</description>
 			<width>1674</width>
 			<height>600</height>
@@ -48,14 +54,14 @@
 				<description>control area</description>
 				<width>960</width>
 				<height>480</height>
-				<pagecontrol>30</pagecontrol>
+				<pagecontrol>630</pagecontrol>
 				<onleft>3</onleft>
-				<onright>30</onright>
+				<onright>630</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 			</control>
-			<control type="scrollbar" id="30">
+			<control type="scrollbar" id="630">
 				<include>ScrollBar_Vertical2</include>
 				<left>960</left>
 				<height>480</height>
@@ -127,7 +133,7 @@
 			<width>960</width>
 			<height>60</height>
 			<font>font14_title</font>
-			<label/>
+			<label />
 			<textcolor>Skin.String(theme_text)</textcolor>
 			<textoffsetx>15</textoffsetx>
 		</control>
@@ -135,7 +141,7 @@
 			<width>960</width>
 			<height>60</height>
 			<font>font14_title</font>
-			<label/>
+			<label />
 			<textoffsetx>15</textoffsetx>
 		</control>
 		<control type="image" id="11">

@@ -52,8 +52,8 @@
 				<hinttext>$LOCALIZE[137]...</hinttext>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturefocus/>
-				<texturenofocus/>
+				<texturefocus />
+				<texturenofocus />
 			</control>
 			<control type="textbox">
 				<description>Search help</description>

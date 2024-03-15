@@ -55,7 +55,7 @@
 					<height>60</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturenofocus/>
+					<texturenofocus />
 				</control>
 			</control>
 			<control type="gamecontroller" id="31">
@@ -101,7 +101,7 @@
 					<right>20</right>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturenofocus/>
+					<texturenofocus />
 				</control>
 				<control type="label" id="8">
 					<description>Feature group title</description>
@@ -173,7 +173,7 @@
 				<shadowcolor>black</shadowcolor>
 				<textcolor>grey</textcolor>
 				<font>font15_title</font>
-				<label/>
+				<label />
 			</control>
 			<control type="group">
 				<description>Content area</description>
@@ -255,11 +255,11 @@
 					<include>ScrollBar_Vertical2</include>
 				</control>
 				<control type="grouplist" id="9001">
-					<top>110</top>
-					<right>40</right>
+					<top>12</top>
+					<right>30</right>
 					<width>300</width>
 					<onleft>3</onleft>
-					<itemgap>0</itemgap>
+					<itemgap>5</itemgap>
 					<control type="button" id="18">
 						<width>280</width>
 						<label>186</label>
@@ -270,6 +270,160 @@
 					</control>
 				</control>
 			</control>
+		</control>
+	</include>
+	<include name="GameDialogAgents">
+		<control type="group">
+			<centertop>48%</centertop>
+			<centerleft>51%</centerleft>
+			<width>1920</width>
+			<height>870</height>
+			<control type="label" id="2">
+				<description>header label</description>
+				<left>10</left>
+				<top>10</top>
+				<width>1900</width>
+				<height>40</height>
+				<textoffsetx>15</textoffsetx>
+				<align>center</align>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>grey</textcolor>
+				<font>font15_title</font>
+				<label>35172</label>
+			</control>
+			<control type="group">
+				<description>Content area</description>
+				<top>100</top>
+				<bottom>30</bottom>
+				<left>30</left>
+				<right>30</right>
+				<control type="group">
+					<description>Area of the dialog for ports</description>
+					<height>96</height>
+					<control type="button" id="3">
+						<description>Ports button</description>
+						<top>0</top>
+						<left>1</left>
+						<width>1756</width>
+						<height>96</height>
+						<ondown>7</ondown>
+						<label>$LOCALIZE[35110]</label>
+						<font>font35</font>
+						<textoffsetx>18</textoffsetx>
+						<align>left</align>
+						<aligny>center</aligny>
+						<texturefocus colordiffuse="$INFO[Skin.String(flat_back)]" border="4">listselect_fo.png</texturefocus>
+						<onclick>ActivateWindow(GamePorts)</onclick>
+					</control>
+					<control type="gamecontrollerlist" id="4">
+						<description>Active port list. Length should fit 13 listitems (12 controllers and one "controller disconnected" indicator).</description>
+						<right>121</right>
+						<width>1248</width>
+						<orientation>horizontal</orientation>
+						<align>right</align>
+						<enable>false</enable>
+						<itemlayout width="96" height="96">
+							<control type="gamecontroller">
+								<texture>$INFO[ListItem.Icon]</texture>
+								<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+								<controlleraddress>$INFO[ListItem.FilenameAndPath]</controlleraddress>
+								<controllerdiffuse>$INFO[Skin.String(flat_back)]</controllerdiffuse>
+							</control>
+						</itemlayout>
+						<focusedlayout width="96" height="96">
+							<control type="gamecontroller">
+								<texture>$INFO[ListItem.Icon]</texture>
+								<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+								<controlleraddress>$INFO[ListItem.FilenameAndPath]</controlleraddress>
+								<controllerdiffuse>$INFO[Skin.String(flat_back)]</controllerdiffuse>
+							</control>
+						</focusedlayout>
+					</control>
+				</control>
+				<control type="group">
+					<description>Area of the dialog for player controllers</description>
+					<top>136</top>
+					<height>576</height>
+					<control type="list" id="7">
+						<description>Controller list</description>
+						<onup>3</onup>
+						<ondown>10</ondown>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime tween="sine">200</scrolltime>
+						<orientation>vertical</orientation>
+						<itemlayout width="1740" height="96">
+							<include>AgentControllerList</include>
+						</itemlayout>
+						<focusedlayout width="1740" height="96">
+							<control type="image">
+								<top>0</top>
+								<bottom>0</bottom>
+								<left>-20</left>
+								<right>-20</right>
+								<texture colordiffuse="$INFO[Skin.String(flat_back)]" border="4">listselect_fo.png</texture>
+								<visible>Control.HasFocus(7)</visible>
+							</control>
+							<include>AgentControllerList</include>
+						</focusedlayout>
+					</control>
+				</control>
+				<control type="scrollbar" id="61">
+					<description>Controller list scroll bar</description>
+					<top>136</top>
+					<height>576</height>
+					<left>1780</left>
+					<include>ScrollBar_Vertical</include>
+				</control>
+				<control type="grouplist" id="10">
+					<description>Action buttons</description>
+					<left>90</left>
+					<right>-20</right>
+					<top>740</top>
+					<height>100</height>
+					<onup>7</onup>
+					<orientation>horizontal</orientation>
+					<itemgap>0</itemgap>
+					<control type="button" id="18">
+						<width>280</width>
+						<label>186</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="AgentControllerList">
+		<control type="label">
+			<description>Controller name as reported by the driver</description>
+			<top>0</top>
+			<left>20</left>
+			<label>$INFO[ListItem.Label]</label>
+			<font>font35</font>
+			<shadowcolor>black</shadowcolor>
+			<align>left</align>
+		</control>
+		<control type="gamecontrollerlist">
+			<description>Controller list which indicates the port a player's controller is connected to. Length should fit 13 listitems (12 controller items and one "input disabled" item).</description>
+			<right>0</right>
+			<width>1248</width>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<enable>false</enable>
+			<itemlayout width="96" height="96">
+				<control type="gamecontroller">
+					<texture>$INFO[ListItem.Icon]</texture>
+					<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+					<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+					<controllerdiffuse>$INFO[Skin.String(flat_back)]</controllerdiffuse>
+				</control>
+			</itemlayout>
+			<focusedlayout width="96" height="96">
+				<control type="gamecontroller">
+					<texture>$INFO[ListItem.Icon]</texture>
+					<controllerid>$INFO[ListItem.Property(game.controllerid)]</controllerid>
+					<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+					<controllerdiffuse>$INFO[Skin.String(flat_back)]</controllerdiffuse>
+				</control>
+			</focusedlayout>
 		</control>
 	</include>
 	<include name="GameDialogSelectSaveInGameLayout">
@@ -294,8 +448,8 @@
 			<top>0</top>
 			<width>100%</width>
 			<bottom>540</bottom>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
@@ -682,8 +836,8 @@
 			<top>0</top>
 			<width>100%</width>
 			<bottom>540</bottom>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">

@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include file="defaults.xml"/>
-	<include file="Includes_2.xml"/>
-	<include file="Includes_CommonValues.xml"/>
-	<include file="Includes_Animations.xml"/>
-	<include file="Includes_Home.xml"/>
-	<include file="Includes_Games.xml"/>
-	<include file="Includes_LiveBG.xml"/>
-	<include file="Includes_LiveTV.xml"/>
-	<include file="Includes_LiveTV_Views.xml"/>
-	<include file="Includes_Backgrounds.xml"/>
-	<include file="Includes_Widgets.xml"/>
-	<include file="Includes_VideoLyrics.xml"/>
-	<include file="Includes_ViewShelf_595.xml"/>
-	<include file="View_50_List.xml"/>
-	<include file="View_583_WallGames.xml"/>
-	<include file="View_581_Bannerm.xml"/>
-	<include file="View_582_Pictures.xml"/>
-	<include file="View_585_Discog.xml"/>
-	<include file="View_592_Wall.xml"/>
-	<include file="View_591_Triplem.xml"/>
-	<include file="View_595_Shelf.xml"/>
-	<include file="View_587_Flix.xml"/>
-	<include file="View_598_Shelfm.xml"/>
-	<include file="View_584_MusicFlix.xml"/>
-	<include file="View_599_Magazine.xml"/>
-	<include file="View_597_Wall.xml"/>
-	<include file="View_594_Banner.xml"/>
-	<include file="View_596_RightList.xml"/>
-	<include file="View_590_Triple.xml"/>
-	<include file="View_589_MultiSort.xml"/>
-	<include file="View_588_MultiSortm.xml"/>
-	<include file="View_586_MultiWall.xml"/>
-	<include file="View_593_Fanart.xml"/>
-	<include file="variables.xml"/>
-	<include file="script-skinshortcuts-includes.xml"/>
+	<include file="defaults.xml" />
+	<include file="Includes_2.xml" />
+	<include file="Includes_CommonValues.xml" />
+	<include file="Includes_Animations.xml" />
+	<include file="Includes_Home.xml" />
+	<include file="Includes_Games.xml" />
+	<include file="Includes_LiveBG.xml" />
+	<include file="Includes_LiveTV.xml" />
+	<include file="Includes_LiveTV_Views.xml" />
+	<include file="Includes_Backgrounds.xml" />
+	<include file="Includes_Widgets.xml" />
+	<include file="Includes_VideoLyrics.xml" />
+	<include file="Includes_ViewShelf_595.xml" />
+	<include file="View_50_List.xml" />
+	<include file="View_501_CenterList.xml" />
+	<include file="View_580_WideWall.xml" />
+	<include file="View_583_WallGames.xml" />
+	<include file="View_581_Bannerm.xml" />
+	<include file="View_582_Pictures.xml" />
+	<include file="View_585_Discog.xml" />
+	<include file="View_592_Wall.xml" />
+	<include file="View_591_Triplem.xml" />
+	<include file="View_595_Shelf.xml" />
+	<include file="View_587_Flix.xml" />
+	<include file="View_598_Shelfm.xml" />
+	<include file="View_584_MusicFlix.xml" />
+	<include file="View_599_Magazine.xml" />
+	<include file="View_597_Wall.xml" />
+	<include file="View_594_Banner.xml" />
+	<include file="View_596_RightList.xml" />
+	<include file="View_590_Triple.xml" />
+	<include file="View_589_MultiSort.xml" />
+	<include file="View_588_MultiSortm.xml" />
+	<include file="View_586_MultiWall.xml" />
+	<include file="View_593_Fanart.xml" />
+	<include file="variables.xml" />
+	<include file="script-skinshortcuts-includes.xml" />
 	<include name="ScrollBar_Horizontal">
 		<height>62</height>
 		<texturesliderbackground border="14,0,14,0">scrollbar_h.png</texturesliderbackground>
@@ -282,7 +284,7 @@
 		</control>
 	</include>
 	<include name="Filter_files">
-		<param name="id"/>
+		<param name="id" />
 		<definition>
 			<item>
 				<label>$INFO[Container(6983).ListItemAbsolute($PARAM[id]).FileNameAndPath]</label>
@@ -293,7 +295,7 @@
 		</definition>
 	</include>
 	<include name="Filter_files_music">
-		<param name="id"/>
+		<param name="id" />
 		<definition>
 			<item>
 				<label>$INFO[Container(6983).ListItemAbsolute($PARAM[id]).FileNameAndPath]</label>
@@ -309,10 +311,8 @@
 			<visible>!String.IsEqual(Container.Viewmode,$LOCALIZE[21888]) + !String.IsEqual(Container.Viewmode,Triple)</visible>
 			<scrolltime>300</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content target="music" sortby="track">$INFO[ListItem.DBID,musicdb://artists/,/-1/*]</content>
 		</control>
 		<control type="list" id="5764">
@@ -321,10 +321,8 @@
 			<visible>!String.IsEqual(Container.Viewmode,$LOCALIZE[21888]) + !String.IsEqual(Container.Viewmode,Triple)</visible>
 			<scrolltime>300</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content target="music" sortby="track">$VAR[Source_Preview]</content>
 		</control>
 	</include>
@@ -335,32 +333,35 @@
 		<width>530</width>
 	</include>
 	<include name="Extras_view">
-		<param name="View_n"/>
-		<param name="HeightList"/>
-		<param name="Num_control"/>
-		<param name="Num_movement"/>
+		<param name="View_n" />
+		<param name="HeightList" />
+		<param name="Num_control" />
+		<param name="Num_movement" />
 		<definition>
 			<control type="fixedlist" id="$PARAM[Num_control]">
-				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control])</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control]) | Window.IsVisible(1196) | Window.IsVisible(videoosd)</visible>
 				<animation effect="fade" start="0" end="100" time="750" tween="sine">Visible</animation>
 				<focusposition>2</focusposition>
 				<movement>$PARAM[Num_movement]</movement>
 				<onup condition="Player.Playing + !Player.HasVideo + !String.Contains(Player.Filenameandpath,theme.mp3)">Stop</onup>
-				<onup condition="!Control.HasFocus(8544) + !Player.HasVideo">SetProperty(MediaMenu,True,home)</onup>
-				<onup condition="!Control.HasFocus(8544) + !Player.HasVideo">SetFocus(9050)</onup>
-				<onup condition="Control.HasFocus(8544) + !Player.HasVideo">$PARAM[View_n]</onup>
+				<onup condition="!Control.HasFocus(8544) + !Control.HasFocus(8551) + !Player.HasVideo">SetProperty(MediaMenu,True,home)</onup>
+				<onup condition="!Control.HasFocus(8544) + !Control.HasFocus(8551) + !Player.HasVideo">SetFocus(9050)</onup>
+				<onup condition="[Control.HasFocus(8544) | Control.HasFocus(8551)] + !Player.HasVideo">$PARAM[Num_control]</onup>
 				<ondown condition="Player.Playing + !Player.HasVideo + !String.Contains(Player.Filenameandpath,theme.mp3)">Stop</ondown>
-				<ondown condition="!Player.HasVideo">$PARAM[View_n]</ondown>
+				<ondown condition="!Control.HasFocus(8544) + !Control.HasFocus(8551) + !Player.HasVideo">$PARAM[View_n]</ondown>
+				<ondown condition="[Control.HasFocus(8544) | Control.HasFocus(8551)] + !Player.HasVideo">$PARAM[Num_control]</ondown>
 				<onleft condition="Player.HasAudio + !String.Contains(Player.Filenameandpath,theme.mp3)">ActivateWindow(1196)</onleft>
 				<onleft condition="Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3)">$PARAM[View_n]</onleft>
-				<onleft condition="Player.HasVideo">Fullscreen</onleft>
 				<onleft condition="Player.HasVideo">ActivateWindow(videoosd)</onleft>
-				<onleft condition="!Player.HasAudio + !Player.HasVideo">$PARAM[View_n]</onleft>
+				<onleft condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">$PARAM[View_n]</onleft>
 				<onright condition="Player.HasAudio + !String.Contains(Player.Filenameandpath,theme.mp3)">ActivateWindow(1196)</onright>
-				<onright condition="Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3)">$PARAM[View_n]</onright>
-				<onright condition="Player.HasVideo">Fullscreen</onright>
+				<onright condition="!Control.HasFocus(8551) + Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3)">$PARAM[View_n]</onright>
+				<onright condition="Control.HasFocus(8551) + Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3) + [String.Contains(Container(501).SortMethod,$LOCALIZE[556]) | String.Contains(Container(501).SortMethod,$LOCALIZE[369])]">5919</onright>
+				<onright condition="Control.HasFocus(8551) + Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3) + !String.Contains(Container(501).SortMethod,$LOCALIZE[556]) + !String.Contains(Container(501).SortMethod,$LOCALIZE[369])">50160</onright>
 				<onright condition="Player.HasVideo">ActivateWindow(videoosd)</onright>
-				<onright condition="!Player.HasAudio + !Player.HasVideo">$PARAM[View_n]</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + !Control.HasFocus(8551) + String.IsEmpty(Window(Home).Property(Stay_extras))">$PARAM[View_n]</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + Control.HasFocus(8551) + [String.Contains(Container(501).SortMethod,$LOCALIZE[556]) | String.Contains(Container(501).SortMethod,$LOCALIZE[369])] + String.IsEmpty(Window(Home).Property(Stay_extras))">5919</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + Control.HasFocus(8551) + !String.Contains(Container(501).SortMethod,$LOCALIZE[556]) + !String.Contains(Container(501).SortMethod,$LOCALIZE[369]) + String.IsEmpty(Window(Home).Property(Stay_extras))">50160</onright>
 				<width>570</width>
 				<height>$PARAM[HeightList]</height>
 				<orientation>vertical</orientation>
@@ -411,8 +412,8 @@
 						<animation effect="fade" start="0" end="100" time="600">Visible</animation>
 						<font>Font_plot</font>
 						<scroll>false</scroll>
-						<left>1</left>
-						<width>530</width>
+						<left>21</left>
+						<width>510</width>
 						<height>30</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -423,8 +424,8 @@
 						<animation effect="fade" start="0" end="100" time="600">Visible</animation>
 						<font>Font_plot</font>
 						<scroll>false</scroll>
-						<left>1</left>
-						<width>530</width>
+						<left>21</left>
+						<width>510</width>
 						<height>30</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -484,9 +485,9 @@
 						<textcolor>Skin.String(theme_text)</textcolor>
 						<font>Font_plot</font>
 						<scroll>true</scroll>
-						<left>1</left>
+						<left>21</left>
 						<height>30</height>
-						<width>530</width>
+						<width>510</width>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>[LOWERCASE][CAPITALIZE][B]$INFO[ListItem.Label2][/CAPITALIZE][/LOWERCASE][/B]</label>
@@ -497,9 +498,9 @@
 						<textcolor>Skin.String(theme_text)</textcolor>
 						<font>Font_plot</font>
 						<scroll>true</scroll>
-						<left>1</left>
+						<left>21</left>
 						<height>30</height>
-						<width>530</width>
+						<width>510</width>
 						<align>right</align>
 						<aligny>center</aligny>
 						<selectedcolor>Skin.String(theme_text)</selectedcolor>
@@ -508,124 +509,124 @@
 				</focusedlayout>
 				<content>
 					<include content="Filter_files">
-						<param name="id" value="0"/>
+						<param name="id" value="0" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="1"/>
+						<param name="id" value="1" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="2"/>
+						<param name="id" value="2" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="3"/>
+						<param name="id" value="3" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="4"/>
+						<param name="id" value="4" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="5"/>
+						<param name="id" value="5" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="6"/>
+						<param name="id" value="6" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="7"/>
+						<param name="id" value="7" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="8"/>
+						<param name="id" value="8" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="9"/>
+						<param name="id" value="9" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="10"/>
+						<param name="id" value="10" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="11"/>
+						<param name="id" value="11" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="12"/>
+						<param name="id" value="12" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="13"/>
+						<param name="id" value="13" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="14"/>
+						<param name="id" value="14" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="15"/>
+						<param name="id" value="15" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="16"/>
+						<param name="id" value="16" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="17"/>
+						<param name="id" value="17" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="18"/>
+						<param name="id" value="18" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="19"/>
+						<param name="id" value="19" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="20"/>
+						<param name="id" value="20" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="21"/>
+						<param name="id" value="21" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="22"/>
+						<param name="id" value="22" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="23"/>
+						<param name="id" value="23" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="24"/>
+						<param name="id" value="24" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="25"/>
+						<param name="id" value="25" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="26"/>
+						<param name="id" value="26" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="27"/>
+						<param name="id" value="27" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="28"/>
+						<param name="id" value="28" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="29"/>
+						<param name="id" value="29" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="30"/>
+						<param name="id" value="30" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="31"/>
+						<param name="id" value="31" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="32"/>
+						<param name="id" value="32" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="33"/>
+						<param name="id" value="33" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="34"/>
+						<param name="id" value="34" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="35"/>
+						<param name="id" value="35" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="36"/>
+						<param name="id" value="36" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="37"/>
+						<param name="id" value="37" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="38"/>
+						<param name="id" value="38" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="39"/>
+						<param name="id" value="39" />
 					</include>
 				</content>
 				<content>musicdb://songs/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Title]%22%5D%7D%2C%7B%22field%22%3A%22year%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Year]%22%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D</content>
@@ -634,32 +635,28 @@
 		</definition>
 	</include>
 	<include name="Extras_view2">
-		<param name="View_n"/>
-		<param name="HeightList"/>
-		<param name="Num_control"/>
-		<param name="Num_movement"/>
+		<param name="View_n" />
+		<param name="HeightList" />
+		<param name="Num_control" />
+		<param name="Num_movement" />
 		<definition>
 			<control type="fixedlist" id="$PARAM[Num_control]">
-				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control])</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control]) | Window.IsVisible(1196) | Window.IsVisible(videoosd)</visible>
 				<animation effect="fade" start="0" end="100" time="750" tween="sine">Visible</animation>
 				<focusposition>2</focusposition>
 				<movement>$PARAM[Num_movement]</movement>
-				<onup condition="Player.Playing + !Player.HasVideo + !String.Contains(Player.Filenameandpath,theme.mp3)">Stop</onup>
-				<onup condition="!Player.HasVideo">$PARAM[View_n]</onup>
-				<ondown condition="Player.Playing + !Player.HasVideo + !String.Contains(Player.Filenameandpath,theme.mp3)">Stop</ondown>
-				<ondown condition="!Player.HasVideo">$PARAM[View_n]</ondown>
+				<onup>$PARAM[Num_control]</onup>
+				<ondown>$PARAM[Num_control]</ondown>
 				<onleft condition="Player.HasAudio + !String.Contains(Player.Filenameandpath,theme.mp3)">ActivateWindow(1196)</onleft>
-				<onleft condition="Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3)">SetProperty(MediaMenu,True,home)</onleft>
-				<onleft condition="Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3)">SetFocus(9050)</onleft>
-				<onleft condition="Player.HasVideo">Fullscreen</onleft>
+				<onleft condition="Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3) + String.IsEmpty(Window(Home).Property(Stay_extras))">SetProperty(MediaMenu,True,home)</onleft>
+				<onleft condition="Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3) + String.IsEmpty(Window(Home).Property(Stay_extras))">SetFocus(9050)</onleft>
 				<onleft condition="Player.HasVideo">ActivateWindow(videoosd)</onleft>
 				<onleft condition="!Player.HasAudio + !Player.HasVideo">SetProperty(MediaMenu,True,home)</onleft>
 				<onleft condition="!Player.HasAudio + !Player.HasVideo">SetFocus(9050)</onleft>
 				<onright condition="Player.HasAudio + !String.Contains(Player.Filenameandpath,theme.mp3)">ActivateWindow(1196)</onright>
 				<onright condition="Player.HasAudio + String.Contains(Player.Filenameandpath,theme.mp3)">$PARAM[View_n]</onright>
-				<onright condition="Player.HasVideo">Fullscreen</onright>
 				<onright condition="Player.HasVideo">ActivateWindow(videoosd)</onright>
-				<onright condition="!Player.HasAudio + !Player.HasVideo">$PARAM[View_n]</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">$PARAM[View_n]</onright>
 				<width>570</width>
 				<height>$PARAM[HeightList]</height>
 				<orientation>vertical</orientation>
@@ -807,124 +804,124 @@
 				</focusedlayout>
 				<content>
 					<include content="Filter_files">
-						<param name="id" value="0"/>
+						<param name="id" value="0" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="1"/>
+						<param name="id" value="1" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="2"/>
+						<param name="id" value="2" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="3"/>
+						<param name="id" value="3" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="4"/>
+						<param name="id" value="4" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="5"/>
+						<param name="id" value="5" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="6"/>
+						<param name="id" value="6" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="7"/>
+						<param name="id" value="7" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="8"/>
+						<param name="id" value="8" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="9"/>
+						<param name="id" value="9" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="10"/>
+						<param name="id" value="10" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="11"/>
+						<param name="id" value="11" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="12"/>
+						<param name="id" value="12" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="13"/>
+						<param name="id" value="13" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="14"/>
+						<param name="id" value="14" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="15"/>
+						<param name="id" value="15" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="16"/>
+						<param name="id" value="16" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="17"/>
+						<param name="id" value="17" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="18"/>
+						<param name="id" value="18" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="19"/>
+						<param name="id" value="19" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="20"/>
+						<param name="id" value="20" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="21"/>
+						<param name="id" value="21" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="22"/>
+						<param name="id" value="22" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="23"/>
+						<param name="id" value="23" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="24"/>
+						<param name="id" value="24" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="25"/>
+						<param name="id" value="25" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="26"/>
+						<param name="id" value="26" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="27"/>
+						<param name="id" value="27" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="28"/>
+						<param name="id" value="28" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="29"/>
+						<param name="id" value="29" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="30"/>
+						<param name="id" value="30" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="31"/>
+						<param name="id" value="31" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="32"/>
+						<param name="id" value="32" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="33"/>
+						<param name="id" value="33" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="34"/>
+						<param name="id" value="34" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="35"/>
+						<param name="id" value="35" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="36"/>
+						<param name="id" value="36" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="37"/>
+						<param name="id" value="37" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="38"/>
+						<param name="id" value="38" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="39"/>
+						<param name="id" value="39" />
 					</include>
 				</content>
 				<content>musicdb://songs/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Title]%22%5D%7D%2C%7B%22field%22%3A%22year%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Year]%22%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D</content>
@@ -933,13 +930,13 @@
 		</definition>
 	</include>
 	<include name="Extras_view_m">
-		<param name="View_n"/>
-		<param name="HeightList"/>
-		<param name="Num_control"/>
-		<param name="Num_movement"/>
+		<param name="View_n" />
+		<param name="HeightList" />
+		<param name="Num_control" />
+		<param name="Num_movement" />
 		<definition>
 			<control type="fixedlist" id="$PARAM[Num_control]">
-				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control])</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control]) | Window.IsVisible(1196) | Window.IsVisible(videoosd)</visible>
 				<animation effect="fade" start="0" end="100" time="750" tween="sine">Visible</animation>
 				<focusposition>2</focusposition>
 				<movement>$PARAM[Num_movement]</movement>
@@ -949,13 +946,11 @@
 				<ondown condition="Player.Playing + !Player.HasVideo">Stop</ondown>
 				<ondown condition="!Player.HasVideo">$PARAM[View_n]</ondown>
 				<onleft condition="Player.HasAudio">ActivateWindow(1196)</onleft>
-				<onleft condition="Player.HasVideo">Fullscreen</onleft>
 				<onleft condition="Player.HasVideo">ActivateWindow(videoosd)</onleft>
-				<onleft condition="!Player.HasAudio + !Player.HasVideo">$PARAM[View_n]</onleft>
+				<onleft condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">$PARAM[View_n]</onleft>
 				<onright condition="Player.HasAudio">ActivateWindow(1196)</onright>
-				<onright condition="Player.HasVideo">Fullscreen</onright>
 				<onright condition="Player.HasVideo">ActivateWindow(videoosd)</onright>
-				<onright condition="!Player.HasAudio + !Player.HasVideo">$PARAM[View_n]</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">$PARAM[View_n]</onright>
 				<width>570</width>
 				<height>$PARAM[HeightList]</height>
 				<orientation>vertical</orientation>
@@ -1103,153 +1098,149 @@
 				</focusedlayout>
 				<content>
 					<include content="Filter_files_music">
-						<param name="id" value="0"/>
+						<param name="id" value="0" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="1"/>
+						<param name="id" value="1" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="2"/>
+						<param name="id" value="2" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="3"/>
+						<param name="id" value="3" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="4"/>
+						<param name="id" value="4" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="5"/>
+						<param name="id" value="5" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="6"/>
+						<param name="id" value="6" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="7"/>
+						<param name="id" value="7" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="8"/>
+						<param name="id" value="8" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="9"/>
+						<param name="id" value="9" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="10"/>
+						<param name="id" value="10" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="11"/>
+						<param name="id" value="11" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="12"/>
+						<param name="id" value="12" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="13"/>
+						<param name="id" value="13" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="14"/>
+						<param name="id" value="14" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="15"/>
+						<param name="id" value="15" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="16"/>
+						<param name="id" value="16" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="17"/>
+						<param name="id" value="17" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="18"/>
+						<param name="id" value="18" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="19"/>
+						<param name="id" value="19" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="20"/>
+						<param name="id" value="20" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="21"/>
+						<param name="id" value="21" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="22"/>
+						<param name="id" value="22" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="23"/>
+						<param name="id" value="23" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="24"/>
+						<param name="id" value="24" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="25"/>
+						<param name="id" value="25" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="26"/>
+						<param name="id" value="26" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="27"/>
+						<param name="id" value="27" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="28"/>
+						<param name="id" value="28" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="29"/>
+						<param name="id" value="29" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="30"/>
+						<param name="id" value="30" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="31"/>
+						<param name="id" value="31" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="32"/>
+						<param name="id" value="32" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="33"/>
+						<param name="id" value="33" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="34"/>
+						<param name="id" value="34" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="35"/>
+						<param name="id" value="35" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="36"/>
+						<param name="id" value="36" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="37"/>
+						<param name="id" value="37" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="38"/>
+						<param name="id" value="38" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="39"/>
+						<param name="id" value="39" />
 					</include>
 				</content>
 			</control>
 		</definition>
 	</include>
 	<include name="Extras_view_m2">
-		<param name="View_n"/>
-		<param name="HeightList"/>
-		<param name="Num_control"/>
-		<param name="Num_movement"/>
+		<param name="View_n" />
+		<param name="HeightList" />
+		<param name="Num_control" />
+		<param name="Num_movement" />
 		<definition>
 			<control type="fixedlist" id="$PARAM[Num_control]">
-				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control])</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control]) | Window.IsVisible(1196) | Window.IsVisible(videoosd)</visible>
 				<animation effect="fade" start="0" end="100" time="750" tween="sine">Visible</animation>
 				<focusposition>2</focusposition>
 				<movement>$PARAM[Num_movement]</movement>
-				<onup condition="Player.Playing + !Player.HasVideo">Stop</onup>
-				<onup condition="!Player.HasVideo">$PARAM[View_n]</onup>
-				<ondown condition="Player.Playing + !Player.HasVideo">Stop</ondown>
-				<ondown condition="!Player.HasVideo">$PARAM[View_n]</ondown>
+				<onup>$PARAM[Num_control]</onup>
+				<ondown>$PARAM[Num_control]</ondown>
 				<onleft condition="Player.HasAudio">ActivateWindow(1196)</onleft>
-				<onleft condition="Player.HasVideo">Fullscreen</onleft>
 				<onleft condition="Player.HasVideo">ActivateWindow(videoosd)</onleft>
-				<onleft condition="!Player.HasAudio + !Player.HasVideo">SetProperty(MediaMenu,True,home)</onleft>
-				<onleft condition="!Player.HasAudio + !Player.HasVideo">SetFocus(9050)</onleft>
+				<onleft condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">SetProperty(MediaMenu,True,home)</onleft>
+				<onleft condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">SetFocus(9050)</onleft>
 				<onright condition="Player.HasAudio">ActivateWindow(1196)</onright>
-				<onright condition="Player.HasVideo">Fullscreen</onright>
 				<onright condition="Player.HasVideo">ActivateWindow(videoosd)</onright>
-				<onright condition="!Player.HasAudio + !Player.HasVideo">$PARAM[View_n]</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">$PARAM[View_n]</onright>
 				<width>570</width>
 				<height>$PARAM[HeightList]</height>
 				<orientation>vertical</orientation>
@@ -1397,124 +1388,414 @@
 				</focusedlayout>
 				<content>
 					<include content="Filter_files_music">
-						<param name="id" value="0"/>
+						<param name="id" value="0" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="1"/>
+						<param name="id" value="1" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="2"/>
+						<param name="id" value="2" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="3"/>
+						<param name="id" value="3" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="4"/>
+						<param name="id" value="4" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="5"/>
+						<param name="id" value="5" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="6"/>
+						<param name="id" value="6" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="7"/>
+						<param name="id" value="7" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="8"/>
+						<param name="id" value="8" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="9"/>
+						<param name="id" value="9" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="10"/>
+						<param name="id" value="10" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="11"/>
+						<param name="id" value="11" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="12"/>
+						<param name="id" value="12" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="13"/>
+						<param name="id" value="13" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="14"/>
+						<param name="id" value="14" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="15"/>
+						<param name="id" value="15" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="16"/>
+						<param name="id" value="16" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="17"/>
+						<param name="id" value="17" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="18"/>
+						<param name="id" value="18" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="19"/>
+						<param name="id" value="19" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="20"/>
+						<param name="id" value="20" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="21"/>
+						<param name="id" value="21" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="22"/>
+						<param name="id" value="22" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="23"/>
+						<param name="id" value="23" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="24"/>
+						<param name="id" value="24" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="25"/>
+						<param name="id" value="25" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="26"/>
+						<param name="id" value="26" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="27"/>
+						<param name="id" value="27" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="28"/>
+						<param name="id" value="28" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="29"/>
+						<param name="id" value="29" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="30"/>
+						<param name="id" value="30" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="31"/>
+						<param name="id" value="31" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="32"/>
+						<param name="id" value="32" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="33"/>
+						<param name="id" value="33" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="34"/>
+						<param name="id" value="34" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="35"/>
+						<param name="id" value="35" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="36"/>
+						<param name="id" value="36" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="37"/>
+						<param name="id" value="37" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="38"/>
+						<param name="id" value="38" />
 					</include>
 					<include content="Filter_files_music">
-						<param name="id" value="39"/>
+						<param name="id" value="39" />
+					</include>
+				</content>
+			</control>
+		</definition>
+	</include>
+	<include name="Extras_view_m3">
+		<param name="View_n" />
+		<param name="HeightList" />
+		<param name="Num_control" />
+		<param name="Num_movement" />
+		<definition>
+			<control type="fixedlist" id="$PARAM[Num_control]">
+				<visible allowhiddenfocus="true">Control.HasFocus($PARAM[Num_control]) | Window.IsVisible(1196) | Window.IsVisible(videoosd)</visible>
+				<animation effect="fade" start="0" end="100" time="750" tween="sine">Visible</animation>
+				<focusposition>2</focusposition>
+				<movement>$PARAM[Num_movement]</movement>
+				<onup>$PARAM[Num_control]</onup>
+				<ondown>$PARAM[Num_control]</ondown>
+				<onleft condition="Player.HasAudio">ActivateWindow(1196)</onleft>
+				<onleft condition="Player.HasVideo">ActivateWindow(videoosd)</onleft>
+				<onleft condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">$PARAM[View_n]</onleft>
+				<onright condition="Player.HasAudio">ActivateWindow(1196)</onright>
+				<onright condition="Player.HasVideo">ActivateWindow(videoosd)</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras)) + [String.Contains(Container.SortMethod,$LOCALIZE[557]) | String.Contains(Container.SortMethod,$LOCALIZE[558])]">5919</onright>
+				<onright condition="!Player.HasAudio + !Player.HasVideo + String.IsEmpty(Window(Home).Property(Stay_extras))">50160</onright>
+				<width>570</width>
+				<height>$PARAM[HeightList]</height>
+				<orientation>vertical</orientation>
+				<include>Action_extras</include>
+				<viewtype>list</viewtype>
+				<itemlayout width="530" height="32">
+					<control type="image">
+						<include>ExtrasIconMovie</include>
+						<left>532</left>
+						<top>-4</top>
+						<width>45</width>
+						<height>45</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconStrm</include>
+						<left>532</left>
+						<top>-4</top>
+						<width>45</width>
+						<height>45</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconPlaylist</include>
+						<left>532</left>
+						<top>-2</top>
+						<width>43</width>
+						<height>43</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconAudio</include>
+						<left>532</left>
+						<width>37</width>
+						<height>37</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconOST</include>
+						<left>532</left>
+						<width>37</width>
+						<height>37</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconPicture</include>
+						<left>533</left>
+						<width>38</width>
+						<height>38</height>
+					</control>
+					<control type="label">
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
+						<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+						<font>Font_plot</font>
+						<scroll>false</scroll>
+						<left>1</left>
+						<width>530</width>
+						<height>30</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>[LOWERCASE][CAPITALIZE]$INFO[ListItem.Label2][/CAPITALIZE][/LOWERCASE]</label>
+					</control>
+					<control type="label">
+						<visible>String.IsEmpty(ListItem.Label2)</visible>
+						<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+						<font>Font_plot</font>
+						<scroll>false</scroll>
+						<left>1</left>
+						<width>530</width>
+						<height>30</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<selectedcolor>Skin.String(theme_text)</selectedcolor>
+						<label>[LOWERCASE][CAPITALIZE]$INFO[ListItem.Label][/CAPITALIZE][/LOWERCASE]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="530" height="32">
+					<control type="image">
+						<include>ExtrasIconMovie</include>
+						<colordiffuse>Skin.String(flat_back)</colordiffuse>
+						<left>532</left>
+						<top>-4</top>
+						<width>45</width>
+						<height>45</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconStrm</include>
+						<colordiffuse>Skin.String(flat_back)</colordiffuse>
+						<left>532</left>
+						<top>-4</top>
+						<width>45</width>
+						<height>45</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconPlaylist</include>
+						<colordiffuse>Skin.String(flat_back)</colordiffuse>
+						<left>532</left>
+						<top>-2</top>
+						<width>43</width>
+						<height>43</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconAudio</include>
+						<colordiffuse>Skin.String(flat_back)</colordiffuse>
+						<left>532</left>
+						<width>37</width>
+						<height>37</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconOST</include>
+						<colordiffuse>Skin.String(flat_back)</colordiffuse>
+						<left>532</left>
+						<width>37</width>
+						<height>37</height>
+					</control>
+					<control type="image">
+						<include>ExtrasIconPicture</include>
+						<colordiffuse>Skin.String(flat_back)</colordiffuse>
+						<left>533</left>
+						<width>38</width>
+						<height>38</height>
+					</control>
+					<control type="label">
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
+						<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+						<textcolor>Skin.String(theme_text)</textcolor>
+						<font>Font_plot</font>
+						<scroll>true</scroll>
+						<left>1</left>
+						<height>30</height>
+						<width>530</width>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>[LOWERCASE][CAPITALIZE][B]$INFO[ListItem.Label2][/CAPITALIZE][/LOWERCASE][/B]</label>
+					</control>
+					<control type="label">
+						<visible>String.IsEmpty(ListItem.Label2)</visible>
+						<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+						<textcolor>Skin.String(theme_text)</textcolor>
+						<font>Font_plot</font>
+						<scroll>true</scroll>
+						<left>1</left>
+						<height>30</height>
+						<width>530</width>
+						<align>right</align>
+						<aligny>center</aligny>
+						<selectedcolor>Skin.String(theme_text)</selectedcolor>
+						<label>[LOWERCASE][CAPITALIZE][B]$INFO[ListItem.Label][/CAPITALIZE][/LOWERCASE][/B]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<include content="Filter_files_music">
+						<param name="id" value="0" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="1" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="2" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="3" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="4" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="5" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="6" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="7" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="8" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="9" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="10" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="11" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="12" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="13" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="14" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="15" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="16" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="17" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="18" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="19" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="20" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="21" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="22" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="23" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="24" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="25" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="26" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="27" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="28" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="29" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="30" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="31" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="32" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="33" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="34" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="35" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="36" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="37" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="38" />
+					</include>
+					<include content="Filter_files_music">
+						<param name="id" value="39" />
 					</include>
 				</content>
 			</control>
@@ -1679,20 +1960,19 @@
 		</control>
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.Art(poster1)) + String.IsEmpty(ListItem.Art(poster2))</visible>
-			<include content="Para_poster">
-			</include>
+			<include content="Para_poster"></include>
 		</control>
 	</include>
 	<include name="Para_poster">
-		<param name="Charpos1" default="poster1"/>
-		<param name="Charpos2" default="poster1"/>
-		<param name="Charpos3" default="poster1"/>
-		<param name="Charpos4" default="poster1"/>
-		<param name="Charpos5" default="poster1"/>
-		<param name="Charpos6" default="poster1"/>
-		<param name="Charpos7" default="poster1"/>
-		<param name="Charpos8" default="poster1"/>
-		<param name="Charpos9" default="poster1"/>
+		<param name="Charpos1" default="poster1" />
+		<param name="Charpos2" default="poster1" />
+		<param name="Charpos3" default="poster1" />
+		<param name="Charpos4" default="poster1" />
+		<param name="Charpos5" default="poster1" />
+		<param name="Charpos6" default="poster1" />
+		<param name="Charpos7" default="poster1" />
+		<param name="Charpos8" default="poster1" />
+		<param name="Charpos9" default="poster1" />
 		<definition>
 			<control type="group">
 				<visible>Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(587)</visible>
@@ -1908,8 +2188,8 @@
 		<aspectratio align="center">stretch</aspectratio>
 	</include>
 	<include name="Res_brow">
-		<param name="left_res" default="0"/>
-		<param name="width_res" default="0"/>
+		<param name="left_res" default="0" />
+		<param name="width_res" default="0" />
 		<definition>
 			<control type="image">
 				<animation effect="slide" start="0,0" end="20,0" time="200" easing="inout" tween="cubic" condition="[Control.HasFocus(58960) | Control.HasFocus(5919)] + Control.IsVisible(589)">Conditional</animation>
@@ -1990,17 +2270,17 @@
 		<onright condition="!String.IsEmpty(Window(home).Property(SpGenrem.0)) + !String.IsEmpty(Window(home).Property(EncodedTitlem)) + [String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album)]">ReplaceWindow(1199)</onright>
 	</include>
 	<include name="Sim_actor">
-		<param name="left_actor" default="120"/>
-		<param name="container_actor" default="6740"/>
-		<param name="container_content" default=""/>
-		<param name="onleft_actor" default=""/>
-		<param name="onright_actor" default=""/>
-		<param name="onright1_actor" default=""/>
-		<param name="onright2_actor" default=""/>
-		<param name="scrollbar_actor" default=""/>
-		<param name="scrollbar_left" default=""/>
-		<param name="order_actor" default="$INFO[Window(Home).Property(Actor1)]"/>
-		<param name="im_order_actor" default="$INFO[Window(Home).Property(Im_Actor1)]"/>
+		<param name="left_actor" default="120" />
+		<param name="container_actor" default="6740" />
+		<param name="container_content" default="" />
+		<param name="onleft_actor" default="" />
+		<param name="onright_actor" default="" />
+		<param name="onright1_actor" default="" />
+		<param name="onright2_actor" default="" />
+		<param name="scrollbar_actor" default="" />
+		<param name="scrollbar_left" default="" />
+		<param name="order_actor" default="$INFO[Window(Home).Property(Actor1)]" />
+		<param name="im_order_actor" default="$INFO[Window(Home).Property(Im_Actor1)]" />
 		<definition>
 			<control type="group">
 				<left>1400</left>
@@ -2103,9 +2383,9 @@
 		</definition>
 	</include>
 	<include name="Sim_info">
-		<param name="visible_actor" default=""/>
-		<param name="title1_actor" default=""/>
-		<param name="title2_actor" default=""/>
+		<param name="visible_actor" default="" />
+		<param name="title1_actor" default="" />
+		<param name="title2_actor" default="" />
 		<definition>
 			<control type="group">
 				<visible>Control.HasFocus($PARAM[visible_actor])</visible>
@@ -2319,10 +2599,8 @@
 			<visible>!ListItem.IsCollection + !Container.Content(seasons)</visible>
 			<visible>!ListItem.IsParentFolder</visible>
 			<visible>!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content target="video">plugin://script.embuary.helper?info=getcast&amp;type=$VAR[Para2_getDBIDcontent2]&amp;dbid=$VAR[Para1_getDBIDcontent2]</content>
 		</control>
 	</include>
@@ -2331,43 +2609,33 @@
 			<visible>System.IdleTime(1) + !ListItem.IsCollection + !Container.Content(seasons)</visible>
 			<visible>!ListItem.IsParentFolder</visible>
 			<visible>!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)]</visible>
-			<visible>!Control.IsVisible(587) + !Control.IsVisible(593) + !Control.IsVisible(50)</visible>
+			<visible>!Control.IsVisible(593) + !Control.IsVisible(50)</visible>
 			<control type="list" id="5951">
-				<itemlayout/>
-				<focusedlayout/>
+				<itemlayout />
+				<focusedlayout />
 				<content>plugin://script.embuary.helper/?info=getbydbid&amp;dbid=$VAR[Para1_getDBIDcontent]&amp;type=$VAR[Para2_getDBIDcontent]</content>
 			</control>
 			<control type="list" id="5952">
 				<scrolltime>5000</scrolltime>
 				<autoscroll>true</autoscroll>
-				<itemlayout>
-				</itemlayout>
-				<focusedlayout>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>[B][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[206]:[/B][/COLOR][CR][COLOR white]$INFO[Container(524).ListItemAbsolute(0).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(1).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(2).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(3).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(4).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(5).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(6).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(7).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(8).Label,• ,][CR]$INFO[Container(524).ListItemAbsolute(9).Label,• ,][/COLOR]</label>
-						<label2>Cast</label2>
-						<visible>!Control.IsVisible(596) + !Control.IsVisible(589)</visible>
-					</item>
-				</content>
+				<itemlayout></itemlayout>
+				<focusedlayout></focusedlayout>
 				<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.actorart&amp;string='$ESCINFO[Container(5951).ListItem.Cast]'</content>
 			</control>
 		</control>
 	</include>
 	<include name="Screensaver_Netflix">
 		<control type="group">
-			<visible>!ListItem.IsCollection + System.IdleTime(120)</visible>
+			<visible>[System.IdleTime(120) + !Skin.HasSetting(playTrailer)] | [System.IdleTime(240) + Skin.HasSetting(playTrailer)]</visible>
 			<visible>!Player.Playing | [Player.Playing + String.Contains(Player.Filenameandpath,theme.mp3)]</visible>
 			<visible>Skin.HasSetting(ScreensaverNetflix)</visible>
+			<visible>!ListItem.IsCollection</visible>
 			<visible>Container.Content(movies) | Container.Content(sets)</visible>
 			<control type="list" id="5335">
 				<scrolltime>15000</scrolltime>
 				<autoscroll>true</autoscroll>
-				<itemlayout>
-				</itemlayout>
-				<focusedlayout>
-				</focusedlayout>
+				<itemlayout></itemlayout>
+				<focusedlayout></focusedlayout>
 				<content sortby="random">videodb://movies/titles/</content>
 			</control>
 			<control type="image">
@@ -2384,7 +2652,7 @@
 					<visible>!ListItem.IsCollection + System.IdleTime(122) + [Integer.IsEven(Container(5335).CurrentItem) | String.IsEqual(Container(5335).Currentitem,0)]</visible>
 					<animation effect="slide" end="-125,0" time="26000" condition="Integer.IsEven(Container(5335).CurrentItem) | String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="800" time="500"/>
+						<effect type="fade" start="0" end="100" delay="800" time="500" />
 					</animation>
 					<left>2</left>
 					<top>-35</top>
@@ -2397,7 +2665,7 @@
 					<visible>!ListItem.IsCollection + System.IdleTime(122) + !Integer.IsEven(Container(5335).CurrentItem) + !String.IsEqual(Container(5335).Currentitem,0)</visible>
 					<animation effect="slide" end="125,0" time="26000" condition="!Integer.IsEven(Container(5335).CurrentItem) + !String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="800" time="500"/>
+						<effect type="fade" start="0" end="100" delay="800" time="500" />
 					</animation>
 					<left>-130</left>
 					<top>-35</top>
@@ -2419,7 +2687,7 @@
 					<visible>!ListItem.IsCollection + System.IdleTime(122) + !Integer.IsEven(Container(5335).CurrentItem) + !String.IsEqual(Container(5335).Currentitem,0)</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(5335).CurrentItem) + !String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>1249</left>
 					<top>737</top>
@@ -2433,7 +2701,7 @@
 					<visible>!ListItem.IsCollection + System.IdleTime(122) + !Integer.IsEven(Container(5335).CurrentItem) + !String.IsEqual(Container(5335).Currentitem,0)</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(5335).CurrentItem) + !String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>1250</left>
 					<top>740</top>
@@ -2446,7 +2714,7 @@
 					<visible>!ListItem.IsCollection + System.IdleTime(122) + [Integer.IsEven(Container(5335).CurrentItem) | String.IsEqual(Container(5335).Currentitem,0)]</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(5335).CurrentItem) | String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>99</left>
 					<top>737</top>
@@ -2460,7 +2728,7 @@
 					<visible>!ListItem.IsCollection + System.IdleTime(122) + [Integer.IsEven(Container(5335).CurrentItem) | String.IsEqual(Container(5335).Currentitem,0)]</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(5335).CurrentItem) | String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>100</left>
 					<top>740</top>
@@ -2474,7 +2742,7 @@
 					<visible>String.IsEmpty(Container(5335).ListItem.Art(clearlogo))</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(5335).CurrentItem) | String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<top>735</top>
 					<left>41</left>
@@ -2515,7 +2783,7 @@
 					<visible>String.IsEmpty(Container(5335).ListItem.Art(clearlogo))</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(5335).CurrentItem) + !String.IsEqual(Container(5335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<top>735</top>
 					<left>875</left>
@@ -2560,10 +2828,8 @@
 			<control type="list" id="6335">
 				<scrolltime>15000</scrolltime>
 				<autoscroll>true</autoscroll>
-				<itemlayout>
-				</itemlayout>
-				<focusedlayout>
-				</focusedlayout>
+				<itemlayout></itemlayout>
+				<focusedlayout></focusedlayout>
 				<content sortby="random">videodb://tvshows/titles/</content>
 			</control>
 			<control type="image">
@@ -2580,7 +2846,7 @@
 					<visible>System.IdleTime(122) + [Integer.IsEven(Container(6335).CurrentItem) | String.IsEqual(Container(6335).Currentitem,0)]</visible>
 					<animation effect="slide" end="-125,0" time="26000" condition="Integer.IsEven(Container(6335).CurrentItem) | String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="800" time="500"/>
+						<effect type="fade" start="0" end="100" delay="800" time="500" />
 					</animation>
 					<left>2</left>
 					<top>-35</top>
@@ -2593,7 +2859,7 @@
 					<visible>System.IdleTime(122) + !Integer.IsEven(Container(6335).CurrentItem) + !String.IsEqual(Container(6335).Currentitem,0)</visible>
 					<animation effect="slide" end="125,0" time="26000" condition="!Integer.IsEven(Container(6335).CurrentItem) + !String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="800" time="500"/>
+						<effect type="fade" start="0" end="100" delay="800" time="500" />
 					</animation>
 					<left>-130</left>
 					<top>-35</top>
@@ -2615,7 +2881,7 @@
 					<visible>System.IdleTime(122) + !Integer.IsEven(Container(6335).CurrentItem) + !String.IsEqual(Container(6335).Currentitem,0)</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(6335).CurrentItem) + !String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>1249</left>
 					<top>737</top>
@@ -2629,7 +2895,7 @@
 					<visible>System.IdleTime(122) + !Integer.IsEven(Container(6335).CurrentItem) + !String.IsEqual(Container(6335).Currentitem,0)</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(6335).CurrentItem) + !String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>1250</left>
 					<top>740</top>
@@ -2642,7 +2908,7 @@
 					<visible>System.IdleTime(122) + [Integer.IsEven(Container(6335).CurrentItem) | String.IsEqual(Container(6335).Currentitem,0)]</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(6335).CurrentItem) | String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>99</left>
 					<top>737</top>
@@ -2656,7 +2922,7 @@
 					<visible>System.IdleTime(122) + [Integer.IsEven(Container(6335).CurrentItem) | String.IsEqual(Container(6335).Currentitem,0)]</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(6335).CurrentItem) | String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>100</left>
 					<top>740</top>
@@ -2670,7 +2936,7 @@
 					<visible>String.IsEmpty(Container(6335).ListItem.Art(clearlogo))</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(6335).CurrentItem) | String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<top>735</top>
 					<left>41</left>
@@ -2711,7 +2977,7 @@
 					<visible>String.IsEmpty(Container(6335).ListItem.Art(clearlogo))</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(6335).CurrentItem) + !String.IsEqual(Container(6335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<top>735</top>
 					<left>875</left>
@@ -2758,10 +3024,8 @@
 			<control type="list" id="7335">
 				<scrolltime>15000</scrolltime>
 				<autoscroll>true</autoscroll>
-				<itemlayout>
-				</itemlayout>
-				<focusedlayout>
-				</focusedlayout>
+				<itemlayout></itemlayout>
+				<focusedlayout></focusedlayout>
 				<content sortby="random">musicdb://artists/</content>
 			</control>
 			<control type="image">
@@ -2778,7 +3042,7 @@
 					<visible>System.IdleTime(122) + [Integer.IsEven(Container(7335).CurrentItem) | String.IsEqual(Container(7335).Currentitem,0)]</visible>
 					<animation effect="slide" end="-125,0" time="26000" condition="Integer.IsEven(Container(7335).CurrentItem) | String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="800" time="500"/>
+						<effect type="fade" start="0" end="100" delay="800" time="500" />
 					</animation>
 					<left>2</left>
 					<top>-35</top>
@@ -2791,7 +3055,7 @@
 					<visible>System.IdleTime(122) + !Integer.IsEven(Container(7335).CurrentItem) + !String.IsEqual(Container(7335).Currentitem,0)</visible>
 					<animation effect="slide" end="125,0" time="26000" condition="!Integer.IsEven(Container(7335).CurrentItem) + !String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="800" time="500"/>
+						<effect type="fade" start="0" end="100" delay="800" time="500" />
 					</animation>
 					<left>-130</left>
 					<top>-35</top>
@@ -2813,7 +3077,7 @@
 					<visible>System.IdleTime(122) + !Integer.IsEven(Container(7335).CurrentItem) + !String.IsEqual(Container(7335).Currentitem,0)</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(7335).CurrentItem) + !String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>1249</left>
 					<top>737</top>
@@ -2827,7 +3091,7 @@
 					<visible>System.IdleTime(122) + !Integer.IsEven(Container(7335).CurrentItem) + !String.IsEqual(Container(7335).Currentitem,0)</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(7335).CurrentItem) + !String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>1250</left>
 					<top>740</top>
@@ -2840,7 +3104,7 @@
 					<visible>System.IdleTime(122) + [Integer.IsEven(Container(7335).CurrentItem) | String.IsEqual(Container(7335).Currentitem,0)]</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(7335).CurrentItem) | String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>99</left>
 					<top>737</top>
@@ -2854,7 +3118,7 @@
 					<visible>System.IdleTime(122) + [Integer.IsEven(Container(7335).CurrentItem) | String.IsEqual(Container(7335).Currentitem,0)]</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(7335).CurrentItem) | String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<left>100</left>
 					<top>740</top>
@@ -2868,7 +3132,7 @@
 					<visible>String.IsEmpty(Container(7335).ListItem.Art(clearlogo))</visible>
 					<animation effect="slide" end="175,0" time="26000" condition="Integer.IsEven(Container(7335).CurrentItem) | String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<top>735</top>
 					<left>41</left>
@@ -2909,7 +3173,7 @@
 					<visible>String.IsEmpty(Container(7335).ListItem.Art(clearlogo))</visible>
 					<animation effect="slide" end="-175,0" time="26000" condition="!Integer.IsEven(Container(7335).CurrentItem) + !String.IsEqual(Container(7335).Currentitem,0)">Conditional</animation>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" delay="1300" time="500"/>
+						<effect type="fade" start="0" end="100" delay="1300" time="500" />
 					</animation>
 					<top>735</top>
 					<left>875</left>
@@ -2951,30 +3215,28 @@
 	<include name="DisplayChar">
 		<control type="group">
 			<visible>!ListItem.IsCollection</visible>
-			<visible>Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597)</visible>
+			<visible>Control.IsVisible(501) | Control.IsVisible(589) | Control.IsVisible(590) | Control.IsVisible(594) | Control.IsVisible(595) | Control.IsVisible(596) | Control.IsVisible(597) | Control.IsVisible(580)</visible>
 			<control type="list" id="5927">
 				<scrolltime>4000</scrolltime>
 				<autoscroll>true</autoscroll>
-				<itemlayout>
-				</itemlayout>
-				<focusedlayout>
-				</focusedlayout>
+				<itemlayout></itemlayout>
+				<focusedlayout></focusedlayout>
 				<content>
 					<item>
 						<label>$INFO[ListItem.Art(clearart)]</label>
-						<visible>!String.IsEmpty(ListItem.Art(clearart)) + Control.IsVisible(595) + Container.Content(tvshows)</visible>
+						<visible>!String.IsEmpty(ListItem.Art(clearart)) + [Control.IsVisible(595) | Control.IsVisible(501)] + Container.Content(tvshows)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Art(tvshow.clearart)]</label>
-						<visible>!String.IsEmpty(ListItem.Art(tvshow.clearart)) + Control.IsVisible(595) + Container.Content(seasons)</visible>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.clearart)) + [Control.IsVisible(595) | Control.IsVisible(501)] + Container.Content(seasons)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Art(clearlogo)]</label>
-						<visible>!String.IsEmpty(ListItem.Art(clearlogo)) + !Control.IsVisible(594) + !Control.IsVisible(597) + !Control.IsVisible(590) + !Control.IsVisible(596) + !Control.IsVisible(595) + [!String.IsEmpty(ListItem.Art(characterart)) | Container.Content(tvshows)]</visible>
+						<visible>!String.IsEmpty(ListItem.Art(clearlogo)) + !Control.IsVisible(501) + !Control.IsVisible(594) + !Control.IsVisible(597) + !Control.IsVisible(590) + !Control.IsVisible(596) + !Control.IsVisible(595) + !Control.IsVisible(580) + [!String.IsEmpty(ListItem.Art(characterart)) | Container.Content(tvshows)]</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Art(tvshow.clearlogo)]</label>
-						<visible>!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + !Control.IsVisible(594) + !Control.IsVisible(597) + !Control.IsVisible(590) + !Control.IsVisible(596) + !Control.IsVisible(595) + Container.Content(seasons)</visible>
+						<visible>!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + !Control.IsVisible(501) + !Control.IsVisible(594) + !Control.IsVisible(597) + !Control.IsVisible(590) + !Control.IsVisible(596) + !Control.IsVisible(595) + !Control.IsVisible(580) + Container.Content(seasons)</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Art(characterart)]</label>
@@ -3091,8 +3353,8 @@
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
 			<onclick>ClearProperty(MediaMenu,Home)</onclick>
 			<onclick>SetFocus(50)</onclick>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
 		<control type="image">
@@ -3176,9 +3438,9 @@
 	<include name="ExtendedInfoMovieLists">
 		<control type="panel" id="90011">
 			<visible allowhiddenfocus="true">Integer.IsGreater(Container(90011).NumItems,0)</visible>
-			<onclick>noop</onclick>
 			<include content="ExtendedInfoListLayout">
 				<param name="PanelID">90011</param>
+				<param name="Num_wiki">90011</param>
 				<param name="content">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(SpGenre.0)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(SpGenre.1)]%22%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22$INFO[Window(Home).Property(EncodedTitle)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</param>
 				<param name="limit">12</param>
 			</include>
@@ -3188,12 +3450,13 @@
 			<onclick>noop</onclick>
 			<include content="ExtendedInfoListLayout">
 				<param name="PanelID">90012</param>
+				<param name="Num_wiki">90012</param>
 				<param name="content">plugin://script.embuary.helper/?info=getdirectedby&amp;dbid=$INFO[ListItem.DBID]</param>
 			</include>
 		</control>
 	</include>
 	<include name="VideoCastItem">
-		<param name="CastListItemID"/>
+		<param name="CastListItemID" />
 		<definition>
 			<item>
 				<label>$INFO[Container(50).ListItemAbsolute($PARAM[CastListItemID]).Label]</label>
@@ -3741,6 +4004,7 @@
 			<visible allowhiddenfocus="true">Integer.IsGreater(Container(90014).NumItems,0)</visible>
 			<include content="ExtendedInfoListLayout">
 				<param name="PanelID">90014</param>
+				<param name="Num_wiki">90014</param>
 				<param name="content">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(SpGenre.0)]%22%5D%7D%2C%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Window(home).Property(SpGenre.1)]%22%5D%7D%2C%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22isnot%22%2C%22value%22%3A%5B%22$INFO[Window(Home).Property(EncodedTitle)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</param>
 				<param name="limit">12</param>
 			</include>
@@ -3761,8 +4025,8 @@
 		<control type="list" id="6983">
 			<visible>Skin.HasSetting(SearchExtras) + !String.IsEmpty(Window(Home).Property(extras_yes))</visible>
 			<visible>Window.IsActive(movieinformation)</visible>
-			<itemlayout/>
-			<focusedlayout/>
+			<itemlayout />
+			<focusedlayout />
 			<content>$VAR[Extras_lookup]</content>
 		</control>
 	</include>
@@ -3770,8 +4034,8 @@
 		<control type="list" id="6983">
 			<visible>Skin.HasSetting(SearchExtrasMusic) + !String.IsEmpty(Window(Home).Property(extras_music_yes))</visible>
 			<visible>Window.IsActive(musicinformation)</visible>
-			<itemlayout/>
-			<focusedlayout/>
+			<itemlayout />
+			<focusedlayout />
 			<content>$VAR[Extras_lookup]</content>
 		</control>
 	</include>
@@ -3813,10 +4077,8 @@
 			<visible>!ListItem.IsCollection + !Skin.HasSetting(Coloured.icons)</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.white&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
 		</control>
 	</include>
@@ -3825,10 +4087,8 @@
 			<visible>!ListItem.IsCollection + Skin.HasSetting(Coloured.icons)</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.coloured&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
 		</control>
 	</include>
@@ -3836,16 +4096,14 @@
 		<control type="list" id="6873">
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.recordlabels.white&amp;string='$ESCINFO[ListItem.Property(Album_Label)]'</content>
 		</control>
 	</include>
 	<include name="Extra_posters">
 		<control type="fadelabel" id="5905">
-			<visible>Skin.HasSetting(extraposters) + [Control.IsVisible(590) | Control.IsVisible(596)]</visible>
+			<visible>Skin.HasSetting(extraposters) + [Control.IsVisible(501) | Control.IsVisible(590) | Control.IsVisible(596)]</visible>
 			<top>-1000</top>
 			<width>2560</width>
 			<height>0</height>
@@ -3907,12 +4165,12 @@
 			<ondown>SetFocus(9000,0)</ondown>
 			<onleft>SetFocus(9000,0)</onleft>
 			<onright>8102</onright>
-			<label/>
+			<label />
 			<font>CloseButton</font>
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 		</control>
 		<control type="button" id="8102">
 			<visible>!Skin.HasSetting(SettingCommon)</visible>
@@ -3927,12 +4185,12 @@
 			<onleft>SetFocus(8101)</onleft>
 			<onleft>SetFocus(9000,0)</onleft>
 			<onright>8103</onright>
-			<label/>
+			<label />
 			<font>CloseButton</font>
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 		</control>
 		<control type="button" id="8103">
 			<visible>!Skin.HasSetting(SettingCommon)</visible>
@@ -3947,12 +4205,12 @@
 			<onleft>SetFocus(8101)</onleft>
 			<onleft>SetFocus(9000,0)</onleft>
 			<onright>8104</onright>
-			<label/>
+			<label />
 			<font>CloseButton</font>
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 		</control>
 		<control type="button" id="8104">
 			<visible>!Skin.HasSetting(SettingCommon)</visible>
@@ -3967,12 +4225,12 @@
 			<onleft>SetFocus(9000,0)</onleft>
 			<onright>SetFocus(8101)</onright>
 			<onright>SetFocus(9000,0)</onright>
-			<label/>
+			<label />
 			<font>CloseButton</font>
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 		</control>
 		<control type="button" id="8105">
 			<visible>!Skin.HasSetting(SettingCommon)</visible>
@@ -3987,12 +4245,12 @@
 			<onleft>SetFocus(9000,0)</onleft>
 			<onright>SetFocus(8101)</onright>
 			<onright>SetFocus(9000,0)</onright>
-			<label/>
+			<label />
 			<font>CloseButton</font>
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 		</control>
 		<control type="button" id="8106">
 			<visible>!Skin.HasSetting(SettingCommon)</visible>
@@ -4007,12 +4265,12 @@
 			<onleft>SetFocus(9000,0)</onleft>
 			<onright>SetFocus(8101)</onright>
 			<onright>SetFocus(9000,0)</onright>
-			<label/>
+			<label />
 			<font>CloseButton</font>
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 		</control>
 		<control type="button" id="8107">
 			<visible>!Skin.HasSetting(SettingCommon)</visible>
@@ -4022,19 +4280,19 @@
 			<height>1</height>
 			<onfocus>Skin.SetBool(SettingCommon)</onfocus>
 			<onfocus>SetFocus(9000,0)</onfocus>
-			<label/>
+			<label />
 			<font>CloseButton</font>
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 		</control>
 	</include>
 	<include name="Button_4">
 		<item id="4">
 			<label>$LOCALIZE[19033]</label>
 			<onclick>noop</onclick>
-			<icon/>
+			<icon />
 		</item>
 	</include>
 	<include name="PVRMediaMenu">
@@ -4066,7 +4324,7 @@
 					<description>Channel Groups</description>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
-					<label/>
+					<label />
 					<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml)</visible>
 				</control>
 				<control type="button" id="2">
@@ -4304,6 +4562,15 @@
 			<label>$LOCALIZE[137] </label>
 		</control>
 		<control type="label">
+			<visible>Control.HasFocus(9028)</visible>
+			<width>384</width>
+			<height>38</height>
+			<align>right</align>
+			<font>font14</font>
+			<shadowcolor>shadow</shadowcolor>
+			<label>$LOCALIZE[32071] </label>
+		</control>
+		<control type="label">
 			<visible>Control.HasFocus(9021)</visible>
 			<width>384</width>
 			<height>38</height>
@@ -4322,26 +4589,53 @@
 			<label>$LOCALIZE[341] </label>
 		</control>
 		<control type="button" id="9027">
+			<visible>System.HasAddon(script.globalsearch)</visible>
 			<texturefocus colordiffuse="00ffffff">black.png</texturefocus>
-			<animation effect="fade" start="100" end="50" time="320" condition="Control.HasFocus(9022) | Control.HasFocus(9021)">Conditional</animation>
-			<label></label>
+			<animation effect="fade" start="100" end="50" time="320" condition="Control.HasFocus(9022) | Control.HasFocus(9021) | Control.HasFocus(9028)">Conditional</animation>
+			<label></label>
 			<textoffsetx>0</textoffsetx>
-			<width>50</width>
-			<height>41</height>
+			<width>45</width>
+			<height>45</height>
 			<align>center</align>
-			<font>IconTiny</font>
-			<textcolor>white</textcolor>
+			<aligny>center</aligny>
+			<font>IconMediumSM</font>
+			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(flat_back)</focusedcolor>
 			<shadowcolor>shadow</shadowcolor>
 			<onclick>RunAddon(script.globalsearch)</onclick>
 			<animation effect="zoom" center="auto" start="100" end="115" time="500" tween="sine" easing="out" pulse="true" condition="Control.HasFocus(9027)">Conditional</animation>
 			<animation type="Visible">
-				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300"/>
-				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300"/>
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
 			</animation>
 			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300"/>
-				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300"/>
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+		</control>
+		<control type="button" id="9028">
+			<visible>System.HasAddon(script.wikipedia)</visible>
+			<texturefocus colordiffuse="00ffffff">black.png</texturefocus>
+			<animation effect="fade" start="100" end="50" time="320" condition="Control.HasFocus(9022) | Control.HasFocus(9021) | Control.HasFocus(9027)">Conditional</animation>
+			<label></label>
+			<textoffsetx>0</textoffsetx>
+			<width>45</width>
+			<height>45</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>IconMediumSM</font>
+			<textcolor>grey</textcolor>
+			<focusedcolor>Skin.String(flat_back)</focusedcolor>
+			<shadowcolor>shadow</shadowcolor>
+			<onclick>ActivateWindow(1104)</onclick>
+			<animation effect="zoom" center="auto" start="100" end="115" time="500" tween="sine" easing="out" pulse="true" condition="Control.HasFocus(9028)">Conditional</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+				<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
 			</animation>
 		</control>
 	</include>
@@ -4416,23 +4710,23 @@
 		</control>
 	</include>
 	<include name="ForMWall">
-		<param name="MWLeft"/>
-		<param name="MWTop"/>
-		<param name="MWLeftSt"/>
-		<param name="MWTopSt"/>
-		<param name="MWPos"/>
-		<param name="MWTim"/>
-		<param name="MWFade" default="500"/>
+		<param name="MWLeft" />
+		<param name="MWTop" />
+		<param name="MWLeftSt" />
+		<param name="MWTopSt" />
+		<param name="MWPos" />
+		<param name="MWTim" />
+		<param name="MWFade" default="500" />
 		<definition>
 			<control type="group">
 				<animation type="WindowOpen" reversible="false">
-					<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout"/>
-					<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250"/>
+					<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout" />
+					<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250" />
 				</animation>
 				<control type="image">
 					<animation type="Visible" reversible="false">
-						<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout"/>
-						<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250"/>
+						<effect type="slide" start="$PARAM[MWLeftSt],$PARAM[MWTopSt]" end="0,0" delay="1000" time="$PARAM[MWTim]" tween="cubic" easing="inout" />
+						<effect type="fade" start="1" end="100" delay="$PARAM[MWFade]" time="250" />
 					</animation>
 					<visible>String.IsEmpty(Window(Home).Property(AnimWall2)) + String.IsEmpty(Window(Home).Property(MediaMenu)) + String.IsEmpty(Window(Home).Property(HideWall))</visible>
 					<include>Animation_NewWallFloat_23D</include>
@@ -4447,13 +4741,14 @@
 		</definition>
 	</include>
 	<include name="ExtendedInfoListLayout">
-		<param name="PanelID"/>
-		<param name="label1" default="$INFO[ListItem.Label]"/>
-		<param name="label2" default="$INFO[ListItem.Year]"/>
-		<param name="texture" default="$VAR[PosterVar]"/>
-		<param name="content"/>
-		<param name="sortby"/>
-		<param name="limit"/>
+		<param name="PanelID" />
+		<param name="label1" default="$INFO[ListItem.Label]" />
+		<param name="label2" default="$INFO[ListItem.Year]" />
+		<param name="texture" default="$VAR[PosterVar]" />
+		<param name="Num_wiki" />
+		<param name="content" />
+		<param name="sortby" />
+		<param name="limit" />
 		<definition>
 			<left>15</left>
 			<width>1196</width>
@@ -4461,10 +4756,16 @@
 			<orientation>horizontal</orientation>
 			<preloaditems>2</preloaditems>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
+			<onclick condition="Control.HasFocus($PARAM[Num_wiki])">SetProperty(Wiki_yes,True,home)</onclick>
+			<onclick condition="Control.HasFocus($PARAM[Num_wiki])">SetProperty(Wiki1,$VAR[Title_LangW],home)</onclick>
 			<onclick condition="Container.ListItem.IsResumable">setproperty(resumable,yes)</onclick>
-			<onclick condition="String.IsEqual(Container.ListItem.DBTYPE,movie)">setproperty(action,show_informations_movie)</onclick>
-			<onclick condition="!String.IsEqual(Container.ListItem.DBTYPE,movie)">setproperty(action,show_informations_tv)</onclick>
 			<onclick>Action(ContextMenu)</onclick>
+			<onclick condition="[String.IsEqual(ListItem.DBTYPE,season) + ControlGroup(90001).HasFocus(90016)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90014)]">Dialog.Close(All,true)</onclick>
+			<onclick condition="![[String.IsEqual(ListItem.DBTYPE,season) + ControlGroup(90001).HasFocus(90016)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90014)]]">Action(Up)</onclick>
+			<onclick condition="![[String.IsEqual(ListItem.DBTYPE,season) + ControlGroup(90001).HasFocus(90016)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90014)]]">Action(Up)</onclick>
+			<onclick condition="![[String.IsEqual(ListItem.DBTYPE,season) + ControlGroup(90001).HasFocus(90016)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90014)]]">Action(Up)</onclick>
+			<onclick condition="![[String.IsEqual(ListItem.DBTYPE,season) + ControlGroup(90001).HasFocus(90016)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90014)]]">Action(Up)</onclick>
+			<onclick condition="![[String.IsEqual(ListItem.DBTYPE,season) + ControlGroup(90001).HasFocus(90016)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + ControlGroup(90001).HasFocus(90014)]]">SetFocus(8)</onclick>
 			<itemlayout height="500" width="299">
 				<control type="image">
 					<left>-15</left>
@@ -4488,12 +4789,6 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="500" width="299">
-				<control type="button" id="4378">
-					<include>HiddenObject</include>
-					<onfocus condition="!String.IsEmpty(Window(Home).Property(GoBackFocus))">Action(Up)</onfocus>
-					<onfocus condition="!String.IsEmpty(Window(Home).Property(GoBackFocus))">Action(Up)</onfocus>
-					<onfocus condition="!String.IsEmpty(Window(Home).Property(GoBackFocus))">ClearProperty(GoBackFocus,home)</onfocus>
-				</control>
 				<control type="group">
 					<animation effect="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto">Focus</animation>
 					<control type="image">
@@ -4529,7 +4824,6 @@
 						<scrollspeed>100</scrollspeed>
 						<scrollsuffix>  •  </scrollsuffix>
 						<label>[B]$PARAM[label1] ($PARAM[label2])[/B]</label>
-						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[PanelID])">Conditional</animation>
 					</control>
 				</control>
 			</focusedlayout>
@@ -4611,8 +4905,8 @@
 		</control>
 	</include>
 	<include name="Music_vis4">
-		<param name="orderr"/>
-		<param name="leftr"/>
+		<param name="orderr" />
+		<param name="leftr" />
 		<definition>
 			<control type="image">
 				<width>75</width>
@@ -5011,5 +5305,112 @@
 				</control>
 			</control>
 		</control>
+	</include>
+	<include name="BigTitle">
+		<param name="Big1" default="" />
+		<param name="AlignTitle" default="right" />
+		<param name="WidthTitle" default="" />
+		<param name="TopBig1" default="" />
+		<param name="LeftBig1" default="" />
+		<param name="HeightBig1" default="" />
+		<param name="FontBig1" default="titlelist" />
+		<param name="LabelTitle" default="$INFO[ListItem.Label]" />
+		<param name="Big2" default="" />
+		<param name="TopBig2" default="" />
+		<param name="HeightBig2" default="" />
+		<param name="FontBig2" default="titlemove" />
+		<param name="TopBig3" default="" />
+		<param name="AlignyBig1" default="" />
+		<param name="AlignyBig2" default="" />
+		<param name="AlignyBig3" default="" />
+		<param name="HeightBig3" default="" />
+		<param name="FontBig3" default="titleshelf" />
+		<definition>
+			<control type="textbox" id="$PARAM[Big1]">
+				<top>-1600</top>
+				<left>-1600</left>
+				<align>$PARAM[AlignTitle]</align>
+				<aligny>$PARAM[AlignyBig1]</aligny>
+				<width>$PARAM[WidthTitle]</width>
+				<height>$PARAM[HeightBig1]</height>
+				<font>$PARAM[FontBig1]</font>
+				<label>$PARAM[LabelTitle]</label>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox" id="$PARAM[Big2]">
+				<top>-1600</top>
+				<left>-1600</left>
+				<align>$PARAM[AlignTitle]</align>
+				<aligny>$PARAM[AlignyBig2]</aligny>
+				<width>$PARAM[WidthTitle]</width>
+				<height>$PARAM[HeightBig2]</height>
+				<font>$PARAM[FontBig2]</font>
+				<label>$PARAM[LabelTitle]</label>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<visible>!Container($PARAM[Big1]).HasNext</visible>
+				<top>$PARAM[TopBig1]</top>
+				<left>$PARAM[LeftBig1]</left>
+				<align>$PARAM[AlignTitle]</align>
+				<aligny>$PARAM[AlignyBig1]</aligny>
+				<width>$PARAM[WidthTitle]</width>
+				<height>$PARAM[HeightBig1]</height>
+				<font>$PARAM[FontBig1]</font>
+				<label>$PARAM[LabelTitle]</label>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<visible>Container($PARAM[Big1]).HasNext + !Container($PARAM[Big2]).HasNext</visible>
+				<top>$PARAM[TopBig2]</top>
+				<left>$PARAM[LeftBig1]</left>
+				<align>$PARAM[AlignTitle]</align>
+				<aligny>$PARAM[AlignyBig2]</aligny>
+				<width>$PARAM[WidthTitle]</width>
+				<height>$PARAM[HeightBig2]</height>
+				<font>$PARAM[FontBig2]</font>
+				<label>$PARAM[LabelTitle]</label>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<visible>Container($PARAM[Big2]).HasNext</visible>
+				<autoscroll delay="2000" time="2000" repeat="2000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+				<top>$PARAM[TopBig3]</top>
+				<left>$PARAM[LeftBig1]</left>
+				<align>$PARAM[AlignTitle]</align>
+				<aligny>$PARAM[AlignyBig3]</aligny>
+				<width>$PARAM[WidthTitle]</width>
+				<height>$PARAM[HeightBig3]</height>
+				<font>$PARAM[FontBig3]</font>
+				<label>$PARAM[LabelTitle]</label>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Thumb_actor">
+		<param name="order" default="" />
+		<param name="top" default="" />
+		<definition>
+			<control type="image">
+				<visible>!String.IsEmpty(Container(524).ListItemAbsolute($PARAM[order]).Label)</visible>
+				<top>$PARAM[top]</top>
+				<left>52</left>
+				<width>48</width>
+				<height>60</height>
+				<texture fallback="tajo/DefaultActor.png" diffuse="tajo/mask_cover3.png" background="true">$INFO[Container(524).ListItemAbsolute($PARAM[order]).Thumb]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="textbox">
+				<animation effect="slide" end="3,-6" condition="true">Conditional</animation>
+				<font>Font_plot5</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<top>$PARAM[top]</top>
+				<left>110</left>
+				<width>165</width>
+				<height>63</height>
+				<label>$INFO[Container(524).ListItemAbsolute($PARAM[order]).Label]</label>
+			</control>
+		</definition>
 	</include>
 </includes>

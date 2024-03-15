@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<default type="image">
-		<texture/>
+		<texture />
 	</default>
 	<default type="multiimage">
 		<aspectratio align="center">scale</aspectratio>
@@ -14,7 +14,7 @@
 		<top>0</top>
 		<align>left</align>
 		<aligny>center</aligny>
-		<label/>
+		<label />
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<selectedcolor>Skin.String(theme_text)</selectedcolor>
@@ -53,7 +53,7 @@
 		<colordiffuse>Skin.String(flat_back)</colordiffuse>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey4</disabledcolor>
-		<label/>
+		<label />
 		<aligny>center</aligny>
 		<font>font14</font>
 		<pulseonselect>false</pulseonselect>
@@ -68,11 +68,11 @@
 		<left>0</left>
 		<top>0</top>
 		<texturebg border="1">osd/texturebg_cache.png</texturebg>
-		<lefttexture/>
+		<lefttexture />
 		<midtexture border="2">osd/midtexture.png</midtexture>
 		<colordiffuse>Skin.String(flat_back)</colordiffuse>
-		<righttexture/>
-		<overlaytexture/>
+		<righttexture />
+		<overlaytexture />
 	</default>
 	<default type="spincontrol">
 		<left>0</left>
@@ -145,11 +145,11 @@
 		<top>0</top>
 		<width>450</width>
 		<height>60</height>
-		<label/>
+		<label />
 		<font>font14</font>
-		<texturefocus/>
-		<texturenofocus/>
-		<texturebg/>
+		<texturefocus />
+		<texturenofocus />
+		<texturebg />
 		<textureleft>scroll-left.png</textureleft>
 		<textureleftfocus colordiffuse="$INFO[Skin.String(flat_back)]">scroll-left.png</textureleftfocus>
 		<textureright>scroll-right.png</textureright>
@@ -209,8 +209,7 @@
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
 	</default>
-	<default type="group">
-	</default>
+	<default type="group"></default>
 	<default type="grouplist">
 		<top>0</top>
 		<itemgap>0</itemgap>

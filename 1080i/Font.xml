@@ -308,6 +308,16 @@
 			<size>50</size>
 		</font>
 		<font>
+			<name>IconMediumSM</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>IconMediumSMX</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
 			<name>font9t</name>
 			<filename>Text.ttf</filename>
 			<size>14</size>
@@ -356,6 +366,12 @@
 			<name>font35</name>
 			<filename>Text.ttf</filename>
 			<size>35</size>
+		</font>
+		<font>
+			<name>font30s</name>
+			<filename>Text.ttf</filename>
+			<linespacing>0.82</linespacing>
+			<size>41</size>
 		</font>
 		<font>
 			<name>font30t</name>
@@ -411,10 +427,30 @@
 			<size>26.5</size>
 		</font>
 		<font>
+			<name>Font_plot5</name>
+			<filename>Text.ttf</filename>
+			<linespacing>.8</linespacing>
+			<size>26</size>
+		</font>
+		<font>
 			<name>titleartist</name>
 			<filename>Titles.ttf</filename>
 			<style>uppercase</style>
 			<size>17</size>
+		</font>
+		<font>
+			<name>titleartist2</name>
+			<filename>Titles.ttf</filename>
+			<linespacing>0.85</linespacing>
+			<style>uppercase</style>
+			<size>17</size>
+		</font>
+		<font>
+			<name>titleartist3</name>
+			<filename>Titles.ttf</filename>
+			<linespacing>0.85</linespacing>
+			<style>uppercase</style>
+			<size>14</size>
 		</font>
 		<font>
 			<name>titlesmall3</name>
@@ -445,6 +481,13 @@
 		<font>
 			<name>titlewall</name>
 			<filename>Titles.ttf</filename>
+			<style>uppercase</style>
+			<size>31</size>
+		</font>
+		<font>
+			<name>titlewall2</name>
+			<filename>Titles.ttf</filename>
+			<linespacing>1.4</linespacing>
 			<style>uppercase</style>
 			<size>31</size>
 		</font>
@@ -532,6 +575,13 @@
 		<font>
 			<name>titletest</name>
 			<filename>Titles.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>titletest2</name>
+			<filename>Titles.ttf</filename>
+			<linespacing>1.1</linespacing>
 			<style>uppercase</style>
 			<size>48</size>
 		</font>
@@ -1212,6 +1262,16 @@
 			<size>50</size>
 		</font>
 		<font>
+			<name>IconMediumSM</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>IconMediumSMX</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
 			<name>font9t</name>
 			<filename>Quicksand.ttf</filename>
 			<size>14</size>
@@ -1260,6 +1320,12 @@
 			<name>font35</name>
 			<filename>Quicksand.ttf</filename>
 			<size>35</size>
+		</font>
+		<font>
+			<name>font30s</name>
+			<filename>Quicksand.ttf</filename>
+			<linespacing>0.82</linespacing>
+			<size>41</size>
 		</font>
 		<font>
 			<name>font30t</name>
@@ -1315,10 +1381,30 @@
 			<size>26.5</size>
 		</font>
 		<font>
+			<name>Font_plot5</name>
+			<filename>Quicksand.ttf</filename>
+			<linespacing>.7</linespacing>
+			<size>26</size>
+		</font>
+		<font>
 			<name>titleartist</name>
 			<filename>Montserrat.ttf</filename>
 			<style>uppercase</style>
 			<size>17</size>
+		</font>
+		<font>
+			<name>titleartist2</name>
+			<filename>Montserrat.ttf</filename>
+			<linespacing>0.85</linespacing>
+			<style>uppercase</style>
+			<size>17</size>
+		</font>
+		<font>
+			<name>titleartist3</name>
+			<filename>Montserrat.ttf</filename>
+			<linespacing>0.85</linespacing>
+			<style>uppercase</style>
+			<size>14</size>
 		</font>
 		<font>
 			<name>titlesmall3</name>
@@ -1436,6 +1522,13 @@
 		<font>
 			<name>titletest</name>
 			<filename>Montserrat.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>titletest2</name>
+			<filename>Montserrat.ttf</filename>
+			<linespacing>1.1</linespacing>
 			<style>uppercase</style>
 			<size>48</size>
 		</font>
@@ -2091,6 +2184,16 @@
 			<size>50</size>
 		</font>
 		<font>
+			<name>IconMediumSM</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>IconMediumSMX</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
 			<name>font13_title_sel</name>
 			<filename>Arialuni.ttf</filename>
 			<style>bold</style>
@@ -2147,6 +2250,12 @@
 			<size>35</size>
 		</font>
 		<font>
+			<name>font30s</name>
+			<filename>Arialuni.ttf</filename>
+			<linespacing>0.82</linespacing>
+			<size>45</size>
+		</font>
+		<font>
 			<name>font30t</name>
 			<filename>Arialuni.ttf</filename>
 			<size>45</size>
@@ -2182,10 +2291,28 @@
 			<size>28</size>
 		</font>
 		<font>
+			<name>Font_plot5</name>
+			<filename>Arialuni.ttf</filename>
+			<linespacing>.75</linespacing>
+			<size>27</size>
+		</font>
+		<font>
 			<name>titleartist</name>
 			<filename>Arialuni.ttf</filename>
 			<linespacing>0.70</linespacing>
 			<size>20</size>
+		</font>
+		<font>
+			<name>titleartist2</name>
+			<filename>Arialuni.ttf</filename>
+			<linespacing>0.65</linespacing>
+			<size>20</size>
+		</font>
+		<font>
+			<name>titleartist3</name>
+			<filename>Arialuni.ttf</filename>
+			<linespacing>0.65</linespacing>
+			<size>17</size>
 		</font>
 		<font>
 			<name>titlesmall3</name>
@@ -2293,6 +2420,13 @@
 		<font>
 			<name>titletest</name>
 			<style>uppercase</style>
+			<filename>Arialuni.ttf</filename>
+			<size>44</size>
+		</font>
+		<font>
+			<name>titletest2</name>
+			<style>uppercase</style>
+			<linespacing>1.1</linespacing>
 			<filename>Arialuni.ttf</filename>
 			<size>44</size>
 		</font>

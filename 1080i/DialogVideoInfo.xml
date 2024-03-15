@@ -3,14 +3,14 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(Home).Property(extras_yes))">ClearProperty(extras_yes,home)</onload>
 	<onload condition="!String.IsEqual(ListItem.DBTYPE,set)">SetFocus(90003)</onload>
-	<onload condition="![Window.IsActive(home) + String.IsEqual(ListItem.DBTYPE,tvshow)]">SetFocus(8)</onload>
+	<onload condition="![Window.IsActive(home) + String.IsEqual(ListItem.DBTYPE,tvshow)]">SetFocus(9000)</onload>
 	<onload condition="Window.IsActive(home) + String.IsEqual(ListItem.DBTYPE,tvshow)">SetFocus(808)</onload>
 	<onload condition="System.HasAddon(script.preshowexperience) + System.AddonIsEnabled(script.preshowexperience) + String.IsEqual(ListItem.DBTYPE,movie)">SetFocus(283)</onload>
 	<onload condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEqual(ListItem.DBTYPE,episode)">Skin.SetString(TitleSeason,$INFO[ListItem.Label])</onload>
-	<onload condition="String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(SearchExtras) + Skin.HasSetting(SettingCommon)">RunScript(script.embuary.helper,action=lookforfile,file='"$INFO[ListItem.FolderPath]$VAR[Extras_path]/"',prop=extras_yes)</onload>
-	<onload condition="String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(SearchExtras) + Skin.HasSetting(SettingCommon)">RunScript(script.embuary.helper,action=lookforfile,file='"$INFO[ListItem.Path]$VAR[Extras_path]/"',prop=extras_yes)</onload>
+	<onload condition="[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)] + Skin.HasSetting(SearchExtras) + Skin.HasSetting(SettingCommon) + !String.IsEqual(ListItem.FileExtension,strm) + !String.Contains(ListItem.Path,http) + !String.Contains(ListItem.Path,plugin) + !String.Contains(ListItem.Path,videodb)">RunScript(script.embuary.helper,action=lookforfile,file='"$INFO[ListItem.Path]$VAR[Extras_path]/"',prop=extras_yes)</onload>
 	<onload condition="Skin.HasSetting(similars) + !String.IsEmpty(ListItem.Genre) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">RunScript(plugin.video.themoviedb.helper,split_value=$INFO[ListItem.Genre],property=SpGenre)</onload>
 	<onload condition="Skin.HasSetting(similars) + !String.IsEmpty(ListItem.Genre) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]">RunScript(script.embuary.helper,action=encode,string='$INFO[ListItem.Title]',prop=EncodedTitle)</onload>
+	<onload condition="!String.IsEmpty(ListItem.Art(fanart))">SetProperty(FSFanart,$INFO[ListItem.Art(fanart)],movieinformation)</onload>
 	<onunload condition="!String.IsEmpty(Window(movieinformation).Property(FSFanart))">ClearProperty(FSFanart,movieinformation)</onunload>
 	<onunload condition="!String.IsEmpty(Window(movieinformation).Property(FSFanart1))">ClearProperty(FSFanart1,movieinformation)</onunload>
 	<onunload condition="!String.IsEmpty(Window(movieinformation).Property(FSFanart2))">ClearProperty(FSFanart2,movieinformation)</onunload>
@@ -41,8 +41,8 @@
 			<visible>[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)] + Skin.HasSetting(SearchExtras) + Skin.HasSetting(SettingCommon)</visible>
 			<content>musicdb://songs/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Title]%22%5D%7D%2C%7B%22field%22%3A%22year%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Year]%22%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D</content>
 			<content>$VAR[Title_xsp]</content>
-			<itemlayout/>
-			<focusedlayout/>
+			<itemlayout />
+			<focusedlayout />
 		</control>
 		<control type="fadelabel" id="4510">
 			<top>-100</top>
@@ -119,6 +119,8 @@
 			<info>ListItem.Art(discart)</info>
 			<info>ListItem.Art(banner)</info>
 			<info>ListItem.Art(landscape)</info>
+			<info>ListItem.Art(back)</info>
+			<info>ListItem.Art(spine)</info>
 			<info>ListItem.Art(tvshow.landscape)</info>
 			<info>ListItem.Art(tvshow.banner)</info>
 			<info>ListItem.Art(tvshow.clearart)</info>
@@ -180,20 +182,16 @@
 			<visible>!ListItem.IsCollection + !Skin.HasSetting(Coloured.icons)</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.white&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
 		</control>
 		<control type="list" id="6285">
 			<visible>!ListItem.IsCollection + Skin.HasSetting(Coloured.icons)</visible>
 			<scrolltime>3000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>plugin://script.embuary.helper/?info=getresourceimages&amp;addon=resource.images.studios.coloured&amp;separator='" / "'&amp;string='$ESCINFO[ListItem.Studio]'</content>
 		</control>
 		<control type="multiimage" id="7975">
@@ -258,8 +256,8 @@
 					<texture colordiffuse="DFffffff" border="4">dialogs/info/info_rightpaneltop.png</texture>
 				</control>
 				<control type="image">
-					<top>543</top>
-					<height>62</height>
+					<top>496</top>
+					<height>110</height>
 					<texture colordiffuse="DFffffff" border="4">dialogs/info/info_rightpaneltop.png</texture>
 				</control>
 				<control type="group">
@@ -362,33 +360,49 @@
 					<control type="image">
 						<visible>!Control.HasFocus(8545)</visible>
 						<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="inout">Hidden</animation>
-						<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
+						<animation effect="slide" start="0,0" end="0,33" time="0" condition="ListItem.HasVideoVersions">Conditional</animation>
+						<visible>[[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)] | ListItem.HasVideoExtras</visible>
 						<left>-11</left>
-						<top>546</top>
+						<top>119</top>
 						<width>60</width>
 						<height>60</height>
 						<colordiffuse>ddffffff</colordiffuse>
-						<texture background="true">tajo/extras.png</texture>
+						<texture background="true">$VAR[mediaicons_path]extras.png</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
 						<visible>!Control.HasFocus(8545)</visible>
 						<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="inout">Hidden</animation>
-						<visible>[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)</visible>
+						<animation effect="slide" start="0,0" end="0,33" time="0" condition="ListItem.HasVideoVersions">Conditional</animation>
+						<visible>[[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)] | ListItem.HasVideoExtras</visible>
 						<align>left</align>
 						<left>-5</left>
-						<top>572</top>
+						<top>145</top>
 						<width min="20" max="300">auto</width>
 						<height>34</height>
+						<include condition="!Skin.HasSetting(Coloured.icons)">TextGrey2</include>
 						<textcolor>ffdadada</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<font>font_Extras</font>
 						<label>$LOCALIZE[31014]</label>
 					</control>
+					<control type="image">
+						<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+						<animation effect="slide" start="0,0" end="0,-15" time="0" condition="[[!String.IsEmpty(Window(Home).Property(extras_yes)) | Integer.IsGreater(Container(3322).NumItems,0)] + Skin.HasSetting(SearchExtras)] | ListItem.HasVideoExtras">Conditional</animation>
+						<visible>ListItem.HasVideoVersions</visible>
+						<left>-3</left>
+						<top>122</top>
+						<width>48</width>
+						<height>45</height>
+						<colordiffuse>bbffffff</colordiffuse>
+						<texture background="true">$VAR[mediaicons_path]versions.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
 					<control type="grouplist">
+						<animation effect="zoom" end="90" time="0" condition="true">Conditional</animation>
 						<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
-						<top>102</top>
-						<right>0</right>
+						<top>112</top>
+						<right>-110</right>
 						<height>90</height>
 						<itemgap>10</itemgap>
 						<orientation>horizontal</orientation>
@@ -406,6 +420,7 @@
 								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
+								<visible>!String.IsEmpty(ListItem.Duration)</visible>
 								<top>46</top>
 								<width>320</width>
 								<height>30</height>
@@ -665,27 +680,42 @@
 					<left>3</left>
 					<top>116</top>
 					<control type="textbox">
-						<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
-						<visible>!String.StartsWith(ListItem.FolderPath,http)</visible>
+						<visible>!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.DBTYPE,tvshow)</visible>
+						<visible>!String.StartsWith(ListItem.Path,http) + !String.StartsWith(ListItem.Path,plugin) + !String.StartsWith(ListItem.Path,videodb)</visible>
+						<visible>!String.IsEmpty(ListItem.FileNameAndPath)</visible>
 						<left>10</left>
-						<top>77</top>
+						<top>80</top>
 						<width>1170</width>
-						<height>80</height>
-						<aligny>top</aligny>
+						<height>44</height>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
 						<font>font15d</font>
 						<scrolltime>200</scrolltime>
-						<autoscroll delay="3000" time="2000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-						<label>[B][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[573]:[/COLOR][/B] $INFO[ListItem.FolderPath]</label>
+						<autoscroll delay="1500" time="1500" repeat="1000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+						<label>[B][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[573]:[/COLOR][/B] $INFO[ListItem.FileNameAndPath]</label>
+					</control>
+					<control type="textbox">
+						<visible>String.IsEqual(ListItem.DBTYPE,tvshow)</visible>
+						<visible>!String.StartsWith(ListItem.Path,http) + !String.StartsWith(ListItem.Path,plugin) + !String.StartsWith(ListItem.Path,videodb)</visible>
+						<left>10</left>
+						<top>80</top>
+						<width>1170</width>
+						<height>44</height>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<font>font15d</font>
+						<scrolltime>200</scrolltime>
+						<autoscroll delay="1500" time="1500" repeat="1000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+						<label>[B][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[573]:[/COLOR][/B] $INFO[ListItem.Path]</label>
 					</control>
 					<control type="panel" id="300">
-						<top>158</top>
+						<top>130</top>
 						<width>1198</width>
 						<height>250</height>
 						<ondown>9000</ondown>
 						<orientation>horizontal</orientation>
 						<visible allowhiddenfocus="true">!Control.HasFocus(64)</visible>
 						<include>VisibleFadeAnimation</include>
-						<animation effect="slide" start="0,0" end="0,-45" time="0" condition="[!String.IsEqual(ListItem.DBTYPE,set) + String.IsEmpty(ListItem.FolderPath)] | String.StartsWith(ListItem.FolderPath,http)">Conditional</animation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
 						<itemlayout height="82" width="1198" condition="Integer.IsLess(Container(300).NumItems,4)">
 							<control type="textbox">
@@ -750,6 +780,11 @@
 							</control>
 						</focusedlayout>
 						<content>
+							<item>
+								<label>$INFO[ListItem.OriginalTitle]</label>
+								<label2>$LOCALIZE[20376]:</label2>
+								<visible>!String.IsEmpty(ListItem.OriginalTitle) + !String.IsEqual(ListItem.OriginalTitle,ListItem.Title)</visible>
+							</item>
 							<item>
 								<label>$INFO[ListItem.Director]</label>
 								<label2>$LOCALIZE[20339]:</label2>
@@ -830,7 +865,7 @@
 				</control>
 				<control type="group">
 					<left>4</left>
-					<top>527</top>
+					<top>182</top>
 					<control type="button">
 						<width>36</width>
 						<height>15</height>
@@ -841,7 +876,7 @@
 						<include>VisibleFadeAnimation</include>
 					</control>
 					<control type="button">
-						<left>1160</left>
+						<left>1154</left>
 						<width>36</width>
 						<height>15</height>
 						<colordiffuse>88ffffff</colordiffuse>
@@ -852,49 +887,56 @@
 					</control>
 				</control>
 				<control type="group">
-					<left>55</left>
+					<left>10</left>
 					<top>542</top>
-					<control type="button">
-						<top>-2</top>
-						<width>415</width>
-						<texturenofocus/>
-						<disabledcolor>grey</disabledcolor>
-						<font>font15</font>
-						<align>right</align>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>[B]$VAR[VideoInfoButtonLabelVar][/B]</label>
-						<enable>no</enable>
+					<control type="label">
 						<visible>!ControlGroup(90001).HasFocus | ControlGroup(90001).HasFocus(90003)</visible>
-					</control>
-					<control type="button">
-						<width>415</width>
-						<texturenofocus/>
-						<disabledcolor>grey</disabledcolor>
+						<top>6</top>
+						<width>1170</width>
 						<font>font15</font>
-						<align>right</align>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>[B]$VAR[DialogInfoDetailsLabelVar][/B]</label>
-						<enable>no</enable>
+						<align>center</align>
+						<scroll>true</scroll>
+						<scrollspeed>100</scrollspeed>
+						<scrollsuffix> • </scrollsuffix>
+						<left>6</left>
+						<height>60</height>
+						<font>font15</font>
+						<aligny>center</aligny>
+						<label>[B]$VAR[VideoInfoButtonLabelVar][/B]</label>
+					</control>
+					<control type="label">
 						<visible>ControlGroup(90001).HasFocus + !Control(90003).HasFocus</visible>
+						<top>6</top>
+						<width>1170</width>
+						<font>font15</font>
+						<align>center</align>
+						<scroll>true</scroll>
+						<scrollspeed>100</scrollspeed>
+						<scrollsuffix> • </scrollsuffix>
+						<left>10</left>
+						<height>60</height>
+						<font>font15</font>
+						<aligny>center</aligny>
+						<label>[B]$VAR[DialogInfoDetailsLabelVar][/B]</label>
 					</control>
 				</control>
 				<control type="grouplist" id="9000">
 					<right>0</right>
-					<top>544</top>
-					<width>715</width>
+					<top>497</top>
+					<width>1200</width>
 					<height>60</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<onup condition="!String.IsEqual(ListItem.DBTYPE,set)">300</onup>
+					<onup condition="!Window.IsActive(home) + !String.IsEqual(ListItem.DBTYPE,set)">300</onup>
 					<ondown condition="String.IsEqual(ListItem.DBTYPE,set)">50</ondown>
 					<ondown condition="!String.IsEqual(ListItem.DBTYPE,set)">90001</ondown>
-					<align>left</align>
+					<align>center</align>
 					<orientation>horizontal</orientation>
 					<control type="button" id="895">
 						<description>EmbuaryInfo</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<onclick condition="!Window.IsActive(Home) + String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.IMDBNumber)">RunScript(script.embuary.info,call=movie,external_id=$INFO[ListItem.IMDBNumber])</onclick>
@@ -904,6 +946,7 @@
 						<onclick condition="Window.IsActive(Home) + String.IsEqual(Window(Home).Property(EmbuaryInfoSearchType),movie) + String.IsEmpty(Window(Home).Property(EmbuaryInfoSearchStringIMDB))">RunScript(script.embuary.info,call=movie,query='"$INFO[Window(Home).Property(EmbuaryInfoSearchStringTitle)]"',year=$INFO[Window(Home).Property(EmbuaryInfoSearchStringYear)])</onclick>
 						<onclick condition="Window.IsActive(Home) + String.IsEqual(Window(Home).Property(EmbuaryInfoSearchType),tvshow)">RunScript(script.embuary.info,call=tv,query='"$INFO[Window(Home).Property(EmbuaryInfoSearchStringTitle)]"',year=$INFO[Window(Home).Property(EmbuaryInfoSearchStringYear)])</onclick>
 						<onclick>Dialog.Close(movieinformation)</onclick>
+						<visible>!Window.IsActive(home)</visible>
 						<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
 						<visible>System.HasAddon(script.embuary.info) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)] | !String.IsEmpty(Window(Home).Property(EmbuaryInfoSearchType))</visible>
 					</control>
@@ -912,33 +955,59 @@
 						<description>Extras</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<onclick>SetProperty(Extras_info,True,home)</onclick>
 						<onclick>SetFocus(8545)</onclick>
-						<label></label>
+						<label></label>
+					</control>
+					<control type="button" id="656">
+						<visible>Player.HasAudio</visible>
+						<description>OSD</description>
+						<font>IconMediumMD</font>
+						<width>65</width>
+						<texturenofocus />
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<onclick>ActivateWindow(1196)</onclick>
 					</control>
 					<control type="button" id="283">
 						<description>PreShow Button</description>
 						<visible>System.HasAddon(script.preshowexperience) + System.AddonIsEnabled(script.preshowexperience) + String.IsEqual(ListItem.DBTYPE,movie)</visible>
+						<visible>!Window.IsActive(home)</visible>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
+						<onclick condition="Window.IsActive(1198)">Dialog.Close(1198,true)</onclick>
 						<onclick>RunScript(script.preshowexperience,dbtype=$INFO[ListItem.DBTYPE],dbid=$INFO[ListItem.DBID])</onclick>
 					</control>
 					<control type="togglebutton" id="8">
 						<description>Play/browse to Show</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<altlabel></altlabel>
+						<onclick condition="Window.IsActive(1198)">Dialog.Close(1198,true)</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie)">Dialog.Close(all,true)</onclick>
-						<usealttexture>String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow)</usealttexture>
+						<usealttexture>String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)</usealttexture>
 						<visible>![Window.IsActive(home) + String.IsEqual(ListItem.DBTYPE,tvshow)]</visible>
+						<visible>!Window.IsActive(home)</visible>
+						<visible>!String.StartsWith(ListItem.Path,videodb)</visible>
+					</control>
+					<control type="button" id="14">
+						<description>Versions</description>
+						<font>IconMediumMD</font>
+						<width>65</width>
+						<texturenofocus />
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>String.IsEqual(ListItem.DBTYPE,movie)</visible>
+						<visible>!Window.IsActive(home)</visible>
+						<visible>!String.StartsWith(ListItem.Path,videodb)</visible>
 					</control>
 					<control type="button" id="6071">
 						<description>Show similar</description>
@@ -946,6 +1015,7 @@
 						<visible>Skin.HasSetting(similars)</visible>
 						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						<visible>String.IsEmpty(Window(Home).Property(No_dialog))</visible>
+						<visible>!Window.IsActive(Home)</visible>
 						<font>IconMediumMD</font>
 						<width>65</width>
 						<include>ButtonInfoDialogsCommonValues</include>
@@ -990,7 +1060,7 @@
 						<description>Browse to Item</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<onclick>Dialog.Close(movieinformation)</onclick>
@@ -998,12 +1068,23 @@
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.SetID)">ActivateWindow(Videos,videodb://movies/sets/$INFO[ListItem.SetId]/?setid=$INFO[ListItem.SetId],return)</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.DBID],return)</onclick>
 						<visible>Window.IsActive(home) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow)]</visible>
+						<visible>!Window.IsActive(home)</visible>
+					</control>
+					<control type="button" id="985">
+						<description>Wikipedia</description>
+						<font>IconMediumMD</font>
+						<width>65</width>
+						<texturenofocus />
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<onclick>RunScript(script.wikipedia,wikipedia=$VAR[Title_LangW],language=$INFO[skin.string(Wiki_lang)])</onclick>
+						<visible>System.HasAddon(script.wikipedia) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
 					</control>
 					<control type="button" id="910">
 						<description>Cast</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<onclick condition="!System.HasAddon(script.embuary.info)">SetFocus(50)</onclick>
@@ -1011,10 +1092,11 @@
 						<visible>!String.IsEmpty(ListItem.Cast)</visible>
 					</control>
 					<control type="button" id="11">
+						<onclick condition="Window.IsActive(1198)">Dialog.Close(1198,true)</onclick>
 						<description>Play Trailer</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]</visible>
@@ -1023,11 +1105,12 @@
 						<description>Search Trailer</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<onclick>Action(close)</onclick>
-						<onclick>RunScript(script.embuary.helper,action=goto,path='"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Title]&amp;search_type=videos"',target=videos)</onclick>
+						<onclick condition="!Window.IsVisible(MyVideoNav.xml)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Title]&amp;search_type=videos,return)</onclick>
+						<onclick condition="Window.IsVisible(MyVideoNav.xml)">Container.Update(plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Title]&amp;search_type=videos)</onclick>
 						<visible>System.HasAddon(plugin.video.youtube) + String.IsEqual(ListItem.DBType,movie) + !Control.IsVisible(11)</visible>
 					</control>
 					<control type="togglebutton" id="7">
@@ -1035,18 +1118,19 @@
 						<font>IconMediumMD</font>
 						<width>65</width>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<texturenofocus/>
-						<alttexturenofocus/>
+						<texturenofocus />
+						<alttexturenofocus />
 						<label></label>
 						<altlabel></altlabel>
 						<usealttexture>!String.IsEmpty(ListItem.UserRating)</usealttexture>
 						<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
+						<visible>!Window.IsActive(home)</visible>
 					</control>
 					<control type="button" id="10">
 						<description>Get Thumb</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 					</control>
@@ -1054,38 +1138,51 @@
 						<description>Refresh</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
+						<visible>!Window.IsActive(home)</visible>
+					</control>
+					<control type="button" id="15">
+						<description>Kodi extras</description>
+						<font>IconMediumMD</font>
+						<width>65</width>
+						<texturenofocus />
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label></label>
+						<visible>String.IsEqual(ListItem.DBTYPE,movie)</visible>
+						<visible>!Window.IsActive(home)</visible>
+						<visible>!String.StartsWith(ListItem.Path,videodb)</visible>
 					</control>
 					<control type="button" id="208">
 						<description>FS Fanart button</description>
+						<visible>!String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart)">SetProperty(FSFanart,$INFO[ListItem.Art(fanart)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart1)">SetProperty(FSFanart1,$INFO[ListItem.Art(fanart1)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart2)">SetProperty(FSFanart2,$INFO[ListItem.Art(fanart2)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart3)">SetProperty(FSFanart3,$INFO[ListItem.Art(fanart3)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart4)">SetProperty(FSFanart4,$INFO[ListItem.Art(fanart4)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart5)">SetProperty(FSFanart5,$INFO[ListItem.Art(fanart5)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart6)">SetProperty(FSFanart6,$INFO[ListItem.Art(fanart6)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart7)">SetProperty(FSFanart7,$INFO[ListItem.Art(fanart7)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart8)">SetProperty(FSFanart8,$INFO[ListItem.Art(fanart8)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart9)">SetProperty(FSFanart9,$INFO[ListItem.Art(fanart9)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart10)">SetProperty(FSFanart10,$INFO[ListItem.Art(fanart10)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart11)">SetProperty(FSFanart11,$INFO[ListItem.Art(fanart11)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart12)">SetProperty(FSFanart12,$INFO[ListItem.Art(fanart12)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart13)">SetProperty(FSFanart13,$INFO[ListItem.Art(fanart13)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart14)">SetProperty(FSFanart14,$INFO[ListItem.Art(fanart14)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart15)">SetProperty(FSFanart15,$INFO[ListItem.Art(fanart15)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart16)">SetProperty(FSFanart16,$INFO[ListItem.Art(fanart16)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart17)">SetProperty(FSFanart17,$INFO[ListItem.Art(fanart17)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart18)">SetProperty(FSFanart18,$INFO[ListItem.Art(fanart18)],movieinformation)</onclick>
-						<onclick condition="!String.IsEmpty(ListItem.Art(fanart19)">SetProperty(FSFanart19,$INFO[ListItem.Art(fanart19)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart))">SetProperty(FSFanart,$INFO[ListItem.Art(fanart)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart1))">SetProperty(FSFanart1,$INFO[ListItem.Art(fanart1)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart2))">SetProperty(FSFanart2,$INFO[ListItem.Art(fanart2)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart3))">SetProperty(FSFanart3,$INFO[ListItem.Art(fanart3)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart4))">SetProperty(FSFanart4,$INFO[ListItem.Art(fanart4)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart5))">SetProperty(FSFanart5,$INFO[ListItem.Art(fanart5)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart6))">SetProperty(FSFanart6,$INFO[ListItem.Art(fanart6)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart7))">SetProperty(FSFanart7,$INFO[ListItem.Art(fanart7)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart8))">SetProperty(FSFanart8,$INFO[ListItem.Art(fanart8)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart9))">SetProperty(FSFanart9,$INFO[ListItem.Art(fanart9)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart10))">SetProperty(FSFanart10,$INFO[ListItem.Art(fanart10)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart11))">SetProperty(FSFanart11,$INFO[ListItem.Art(fanart11)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart12))">SetProperty(FSFanart12,$INFO[ListItem.Art(fanart12)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart13))">SetProperty(FSFanart13,$INFO[ListItem.Art(fanart13)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart14))">SetProperty(FSFanart14,$INFO[ListItem.Art(fanart14)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart15))">SetProperty(FSFanart15,$INFO[ListItem.Art(fanart15)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart16))">SetProperty(FSFanart16,$INFO[ListItem.Art(fanart16)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart17))">SetProperty(FSFanart17,$INFO[ListItem.Art(fanart17)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart18))">SetProperty(FSFanart18,$INFO[ListItem.Art(fanart18)],movieinformation)</onclick>
+						<onclick condition="!String.IsEmpty(ListItem.Art(fanart19))">SetProperty(FSFanart19,$INFO[ListItem.Art(fanart19)],movieinformation)</onclick>
 						<onclick>ActivateWindow(1113)</onclick>
 					</control>
 				</control>
@@ -1104,12 +1201,12 @@
 						<control type="button" id="90003">
 							<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
 							<left>10</left>
-							<top>-2</top>
+							<top>0</top>
 							<width>1200</width>
-							<height>500</height>
+							<height>498</height>
 							<onup>9000</onup>
-							<ondown condition="String.IsEqual(ListItem.DBTYPE,set) | !System.HasAddon(script.embuary.info)">50</ondown>
-							<ondown condition="!String.IsEqual(ListItem.DBTYPE,set) + System.HasAddon(script.embuary.info)">90050</ondown>
+							<ondown condition="!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBTYPE,set) | !System.HasAddon(script.embuary.info)]">50</ondown>
+							<ondown condition="!String.IsEmpty(ListItem.DBID) + !String.IsEqual(ListItem.DBTYPE,set) + System.HasAddon(script.embuary.info)">90050</ondown>
 							<include>ButtonInfoDialogsCommonValues</include>
 							<onclick>SetProperty(TextViewerHeader,$VAR[Title_Diag,[B],[/B]],Home)</onclick>
 							<onclick>SetProperty(TextViewerContent,[CR]$ESCINFO[ListItem.Plot],Home)</onclick>
@@ -1120,12 +1217,12 @@
 						<control type="group">
 							<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
 							<left>26</left>
-							<top>20</top>
+							<top>24</top>
 							<control type="textbox" id="400">
 								<width>740</width>
-								<height>358</height>
+								<height>343</height>
 								<align>center</align>
-								<font>font15info</font>
+								<font>font15t</font>
 								<label>$INFO[ListItem.Plot]</label>
 								<autoscroll time="3000" delay="4000" repeat="2000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 								<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
@@ -1134,9 +1231,9 @@
 							</control>
 							<control type="textbox" id="401">
 								<width>1162</width>
-								<height>358</height>
+								<height>343</height>
 								<label>$INFO[ListItem.Plot]</label>
-								<font>font15info</font>
+								<font>font15t</font>
 								<align>center</align>
 								<autoscroll time="3000" delay="4000" repeat="2000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 								<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90003)">Conditional</animation>
@@ -1146,9 +1243,9 @@
 						<control type="multiimage">
 							<animation effect="slide" end="-50,-475" time="0" condition="Integer.IsLess(Container(300).NumItems,7) + String.IsEqual(ListItem.DBTYPE,set)">Conditional</animation>
 							<left>805</left>
-							<top>10</top>
-							<width>375</width>
-							<height>375</height>
+							<top>30</top>
+							<width>365</width>
+							<height>332</height>
 							<aspectratio>keep</aspectratio>
 							<fadetime>400</fadetime>
 							<imagepath colordiffuse="bbffffff" background="true">$INFO[Control.GetLabel(6927)]</imagepath>
@@ -1323,7 +1420,7 @@
 				<width>60</width>
 				<height>60</height>
 				<colordiffuse>bbffffff</colordiffuse>
-				<texture background="true">tajo/extras.png</texture>
+				<texture background="true">$VAR[mediaicons_path]extras.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
@@ -1335,6 +1432,7 @@
 				<top>43</top>
 				<width min="20" max="300">auto</width>
 				<height>34</height>
+				<include condition="!Skin.HasSetting(Coloured.icons)">TextGrey2</include>
 				<textcolor>ffdadada</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<font>font_Extras</font>
@@ -1512,124 +1610,124 @@
 				</focusedlayout>
 				<content>
 					<include content="Filter_files">
-						<param name="id" value="0"/>
+						<param name="id" value="0" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="1"/>
+						<param name="id" value="1" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="2"/>
+						<param name="id" value="2" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="3"/>
+						<param name="id" value="3" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="4"/>
+						<param name="id" value="4" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="5"/>
+						<param name="id" value="5" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="6"/>
+						<param name="id" value="6" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="7"/>
+						<param name="id" value="7" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="8"/>
+						<param name="id" value="8" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="9"/>
+						<param name="id" value="9" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="10"/>
+						<param name="id" value="10" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="11"/>
+						<param name="id" value="11" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="12"/>
+						<param name="id" value="12" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="13"/>
+						<param name="id" value="13" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="14"/>
+						<param name="id" value="14" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="15"/>
+						<param name="id" value="15" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="16"/>
+						<param name="id" value="16" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="17"/>
+						<param name="id" value="17" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="18"/>
+						<param name="id" value="18" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="19"/>
+						<param name="id" value="19" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="20"/>
+						<param name="id" value="20" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="21"/>
+						<param name="id" value="21" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="22"/>
+						<param name="id" value="22" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="23"/>
+						<param name="id" value="23" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="24"/>
+						<param name="id" value="24" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="25"/>
+						<param name="id" value="25" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="26"/>
+						<param name="id" value="26" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="27"/>
+						<param name="id" value="27" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="28"/>
+						<param name="id" value="28" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="29"/>
+						<param name="id" value="29" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="30"/>
+						<param name="id" value="30" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="31"/>
+						<param name="id" value="31" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="32"/>
+						<param name="id" value="32" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="33"/>
+						<param name="id" value="33" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="34"/>
+						<param name="id" value="34" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="35"/>
+						<param name="id" value="35" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="36"/>
+						<param name="id" value="36" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="37"/>
+						<param name="id" value="37" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="38"/>
+						<param name="id" value="38" />
 					</include>
 					<include content="Filter_files">
-						<param name="id" value="39"/>
+						<param name="id" value="39" />
 					</include>
 				</content>
 				<content>musicdb://songs/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22album%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Title]%22%5D%7D%2C%7B%22field%22%3A%22year%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22$INFO[ListItem.Year]%22%5D%7D%5D%7D%2C%22type%22%3A%22songs%22%7D</content>

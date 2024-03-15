@@ -4,5 +4,5 @@
 	<visible>Integer.IsGreater(MusicPlayer.Time,1)</visible>
 	<visible>Window.IsActive(visualisation)</visible>
 	<visible>Skin.HasSetting(BlurredAlbum)</visible>
-	<controls/>
+	<controls />
 </window>

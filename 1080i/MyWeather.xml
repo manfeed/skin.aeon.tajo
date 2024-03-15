@@ -57,60 +57,60 @@
 					<item id="1">
 						<label>31300</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 					</item>
 					<item id="2">
 						<label>31904</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item id="3">
 						<label>31901</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
 					<item id="4">
 						<label>31903</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 					</item>
 					<item id="5">
 						<label>31902</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item id="6">
 						<label fallback="1448">$INFO[Window.Property(Map.1.Heading)]</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Map.1.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item id="7">
 						<label fallback="387">$INFO[Window.Property(Map.2.Heading)]</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Map.2.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item id="8">
 						<label fallback="1375">$INFO[Window.Property(Map.3.Heading)]</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Map.3.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item id="9">
 						<label fallback="404">$INFO[Window.Property(Map.4.Heading)]</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Map.4.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item id="10">
 						<label fallback="1376">$INFO[Window.Property(Map.5.Heading)]</label>
 						<onclick>noop</onclick>
-						<icon/>
+						<icon />
 						<visible>!String.IsEmpty(Window.Property(Map.5.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 				</content>
@@ -156,13 +156,14 @@
 					<control type="image">
 						<left>105</left>
 						<width>540</width>
-						<height>135</height>
+						<height>95</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
 					</control>
 					<control type="multiimage">
 						<description>current weather icon</description>
-						<left>920</left>
+						<top>-132</top>
+						<left>970</left>
 						<width>320</width>
 						<height>320</height>
 						<imagepath>$VAR[WeatherIconsPathVar]$INFO[Window.Property(Current.FanartCode)]$VAR[WeatherIconsExtVar]</imagepath>
@@ -174,7 +175,7 @@
 					<control type="label">
 						<description>weather location label</description>
 						<top>150</top>
-						<width>690</width>
+						<width>1290</width>
 						<height>45</height>
 						<font>font15_title</font>
 						<textoffsetx>15</textoffsetx>
@@ -184,7 +185,7 @@
 					<control type="label">
 						<description>update label</description>
 						<top>190</top>
-						<width>690</width>
+						<width>1290</width>
 						<height>45</height>
 						<font>font13_title</font>
 						<textoffsetx>15</textoffsetx>
@@ -193,7 +194,8 @@
 					</control>
 					<control type="label">
 						<description>current temp Value</description>
-						<left>530</left>
+						<top>-132</top>
+						<left>580</left>
 						<width>270</width>
 						<height>345</height>
 						<font>WeatherTemp</font>
@@ -203,7 +205,8 @@
 					</control>
 					<control type="label">
 						<description>current temp Value Units</description>
-						<left>800</left>
+						<top>-132</top>
+						<left>850</left>
 						<width>150</width>
 						<height>290</height>
 						<font>font16</font>
@@ -212,50 +215,50 @@
 					</control>
 					<control type="label">
 						<description>current condition label</description>
-						<top>280</top>
-						<width>1316</width>
+						<top>255</top>
+						<width>1216</width>
 						<height>45</height>
-						<info>Window.Property(Current.Condition)</info>
-						<wrapmultiline>true</wrapmultiline>
-						<font>font15</font>
+						<label>[B]$INFO[Window.Property(Current.Condition)][/B]</label>
+						<align>center</align>
+						<font>font48</font>
 						<textoffsetx>15</textoffsetx>
-						<textcolor>grey</textcolor>
+						<textcolor>$INFO[Skin.String(theme_text)]</textcolor>
 					</control>
 					<control type="grouplist">
-						<top>350</top>
-						<width>438</width>
+						<top>325</top>
+						<width>360</width>
 						<itemgap>10</itemgap>
 						<control type="button">
-							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[402]: [/COLOR]$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[402]: [/COLOR][CR]$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
 							<textoffsety>10</textoffsety>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 						<control type="button">
-							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[405]: [/COLOR]$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[405]: [/COLOR][CR]$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
 							<textoffsety>10</textoffsety>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 					</control>
 					<control type="grouplist">
-						<left>438</left>
-						<top>350</top>
-						<width>438</width>
+						<left>360</left>
+						<top>325</top>
+						<width>380</width>
 						<itemgap>10</itemgap>
 						<control type="button">
-							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[406]: [/COLOR]$INFO[Window.Property(Current.Humidity)]</label>
+							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[406]: [/COLOR][CR]$INFO[Window.Property(Current.Humidity)]</label>
 							<textoffsety>10</textoffsety>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 						<control type="button">
-							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[403]: [/COLOR]$INFO[Window.Property(Current.UVIndex)]</label>
+							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[403]: [/COLOR][CR]$INFO[Window.Property(Current.UVIndex)]</label>
 							<textoffsety>10</textoffsety>
 							<include>SettingsPanelButtonsValues</include>
 						</control>
 					</control>
 					<control type="grouplist">
-						<left>876</left>
-						<top>350</top>
-						<width>438</width>
+						<left>720</left>
+						<top>340</top>
+						<width>900</width>
 						<itemgap>10</itemgap>
 						<control type="button">
 							<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[404]:[/COLOR][CR]$INFO[Window.Property(Current.Wind)]</label>
@@ -267,9 +270,9 @@
 								<include>SettingsPanelButtonsValues</include>
 							</control>
 							<control type="button">
-								<left>219</left>
+								<left>325</left>
 								<label>[COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[33028]:[/COLOR][CR]$INFO[Window.Property(Today.Sunset)]</label>
-								<texturenofocus/>
+								<texturenofocus />
 								<include>SettingsPanelButtonsValues</include>
 							</control>
 						</control>
@@ -381,7 +384,7 @@
 						<content>
 							<item>
 								<label>$LOCALIZE[31909]</label>
-								<icon/>
+								<icon />
 								<onclick>noop</onclick>
 								<visible>!Weather.IsFetched</visible>
 							</item>
@@ -605,7 +608,7 @@
 						<content>
 							<item>
 								<label>$LOCALIZE[31909]</label>
-								<icon/>
+								<icon />
 								<onclick>noop</onclick>
 								<visible>String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 							</item>
@@ -819,7 +822,7 @@
 						<content>
 							<item>
 								<label>$LOCALIZE[31909]</label>
-								<icon/>
+								<icon />
 								<onclick>noop</onclick>
 								<visible>String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 							</item>
@@ -1040,7 +1043,7 @@
 						<content>
 							<item>
 								<label>$LOCALIZE[31909]</label>
-								<icon/>
+								<icon />
 								<onclick>noop</onclick>
 								<visible>String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 							</item>
@@ -1238,7 +1241,7 @@
 						<content>
 							<item>
 								<label>$LOCALIZE[31909]</label>
-								<icon/>
+								<icon />
 								<onclick>noop</onclick>
 								<visible>String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 							</item>
@@ -1912,7 +1915,7 @@
 				</control>
 				<control type="spincontrolex" id="3">
 					<description>change location button</description>
-					<font/>
+					<font />
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="label" id="203">

@@ -128,7 +128,7 @@
 				<left>552</left>
 				<top>775</top>
 				<width>1256</width>
-				<height>125</height>
+				<height>130</height>
 				<font>fontmusic</font>
 				<textcolor>Skin.String(theme_text)</textcolor>
 				<label>$VAR[SkinSettingsDescriptionVar]</label>

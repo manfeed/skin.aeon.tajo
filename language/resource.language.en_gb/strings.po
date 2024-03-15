@@ -1745,7 +1745,7 @@ msgid "Kodi add-ons settings"
 msgstr ""
 
 msgctxt "#32058"
-msgid "Install and Update add-ons"
+msgid "Install and update add-ons"
 msgstr ""
 
 msgctxt "#32059"
@@ -1794,4 +1794,100 @@ msgstr ""
 
 msgctxt "#32070"
 msgid "No similar found"
+msgstr ""
+
+msgctxt "#32071"
+msgid "Wikipedia"
+msgstr ""
+
+msgctxt "#32072"
+msgid "Click to select and open article's links"
+msgstr ""
+
+msgctxt "#32073"
+msgid "Click to search..."
+msgstr ""
+
+msgctxt "#32074"
+msgid "Fetch music video links"
+msgstr ""
+
+msgctxt "#32075"
+msgid "[B]CONFIGURE GAME SETTINGS[/B][CR][CR]Change gameplay options[CR]Keyboard settings · Configure rewind settings"
+msgstr ""
+
+msgctxt "#32076"
+msgid "Narrow list"
+msgstr ""
+
+msgctxt "#32077"
+msgid "Wide list"
+msgstr ""
+
+msgctxt "#32078"
+msgid "Update videolinks"
+msgstr ""
+
+msgctxt "#32079"
+msgid "Play all music videos"
+msgstr ""
+
+msgctxt "#32080"
+msgid "No bookmarks created yet"
+msgstr ""
+
+msgctxt "#32081"
+msgid "Choose where to start"
+msgstr ""
+
+msgctxt "#32082"
+msgid "Browse the list and click"
+msgstr ""
+
+msgctxt "#32083"
+msgid "Show OSD controls"
+msgstr ""
+
+msgctxt "#32084"
+msgid "Preparing list of music videos, please wait..."
+msgstr ""
+
+msgctxt "#32085"
+msgid "Songs party mode"
+msgstr ""
+
+msgctxt "#32086"
+msgid "Videolinks party mode"
+msgstr ""
+
+msgctxt "#32087"
+msgid "No videolinks found"
+msgstr ""
+
+msgctxt "#32088"
+msgid "Click or arrow keys while playing to show the OSD"
+msgstr ""
+
+msgctxt "#32089"
+msgid "While playing..."
+msgstr ""
+
+msgctxt "#32090"
+msgid "Click or arrow keys to show the OSD"
+msgstr ""
+
+msgctxt "#32091"
+msgid "Shows the normal thumb (folder.jpg) in artists and albums music views."
+msgstr ""
+
+msgctxt "#32092"
+msgid "Shows the animated thumb (animatedthumb.gif) in artists and albums music views."
+msgstr ""
+
+msgctxt "#32093"
+msgid "Show a color strip code in video views"
+msgstr ""
+
+msgctxt "#32094"
+msgid "Allows to quickly identify video file quality using a color strip code when browsing movies and episodes in video views"
 msgstr ""

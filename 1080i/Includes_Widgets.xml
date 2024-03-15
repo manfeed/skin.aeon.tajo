@@ -35,102 +35,102 @@
 				<visible>[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] | [[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] + System.HasActiveModalDialog]</visible>
 			</control>
 			<include content="HomeWidgetItem">
-				<param name="visible" value="String.IsEmpty(Window(Home).Property(HomeWidget))"/>
-				<param name="animationStart" value="180"/>
-				<param name="wTitle" value="$LOCALIZE[31328]"/>
-				<param name="listId" value="8005"/>
-				<param name="onUp1" value="8001"/>
-				<param name="onUp2" value="SetProperty(HomeWidget,1,Home)"/>
-				<param name="onUp3" value=""/>
-				<param name="onUp4" value="9000"/>
-				<param name="onDown1" value="9000"/>
-				<param name="onDown2" value="ClearProperty(HomeWidget,Home)"/>
-				<param name="contentTarget" value="videos"/>
-				<param name="contentPath" value="special://skin/extras/playlists/recentmovies.xsp"/>
+				<param name="visible" value="String.IsEmpty(Window(Home).Property(HomeWidget))" />
+				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31328]" />
+				<param name="listId" value="8005" />
+				<param name="onUp1" value="8001" />
+				<param name="onUp2" value="SetProperty(HomeWidget,1,Home)" />
+				<param name="onUp3" value="" />
+				<param name="onUp4" value="9000" />
+				<param name="onDown1" value="9000" />
+				<param name="onDown2" value="ClearProperty(HomeWidget,Home)" />
+				<param name="contentTarget" value="videos" />
+				<param name="contentPath" value="special://skin/extras/playlists/recentmovies.xsp" />
 			</include>
 			<include content="HomeWidgetItem">
-				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),1)"/>
-				<param name="animationStart" value="-180"/>
-				<param name="wTitle" value="$LOCALIZE[31031]"/>
-				<param name="listId" value="8001"/>
-				<param name="onUp1" value="8002"/>
-				<param name="onUp2" value="SetProperty(HomeWidget,2,Home)"/>
-				<param name="onUp3" value=""/>
-				<param name="onUp4" value="9000"/>
-				<param name="onDown1" value="8005"/>
-				<param name="onDown2" value="ClearProperty(HomeWidget,Home)"/>
-				<param name="contentTarget" value="videos"/>
-				<param name="contentPath" value="special://skin/extras/playlists/random_movies.xsp"/>
+				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),1)" />
+				<param name="animationStart" value="-180" />
+				<param name="wTitle" value="$LOCALIZE[31031]" />
+				<param name="listId" value="8001" />
+				<param name="onUp1" value="8002" />
+				<param name="onUp2" value="SetProperty(HomeWidget,2,Home)" />
+				<param name="onUp3" value="" />
+				<param name="onUp4" value="9000" />
+				<param name="onDown1" value="8005" />
+				<param name="onDown2" value="ClearProperty(HomeWidget,Home)" />
+				<param name="contentTarget" value="videos" />
+				<param name="contentPath" value="special://skin/extras/playlists/random_movies.xsp" />
 			</include>
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
-				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),2)"/>
-				<param name="animationStart" value="180"/>
-				<param name="wTitle" value="$LOCALIZE[31987]"/>
-				<param name="listId" value="8002"/>
-				<param name="onUp1" value="8003"/>
-				<param name="onUp2" value="SetProperty(HomeWidget,3,Home)"/>
-				<param name="onUp3" value=""/>
-				<param name="onUp4" value="9000"/>
-				<param name="onDown1" value="8001"/>
-				<param name="onDown2" value="SetProperty(HomeWidget,1,Home)"/>
-				<param name="contentTarget" value=""/>
-				<param name="contentPath" value="plugin://script.embuary.info/movie/now_playing"/>
+				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),2)" />
+				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31987]" />
+				<param name="listId" value="8002" />
+				<param name="onUp1" value="8003" />
+				<param name="onUp2" value="SetProperty(HomeWidget,3,Home)" />
+				<param name="onUp3" value="" />
+				<param name="onUp4" value="9000" />
+				<param name="onDown1" value="8001" />
+				<param name="onDown2" value="SetProperty(HomeWidget,1,Home)" />
+				<param name="contentTarget" value="" />
+				<param name="contentPath" value="plugin://script.embuary.info/movie/now_playing" />
 			</include>
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
-				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),3)"/>
-				<param name="animationStart" value="-180"/>
-				<param name="wTitle" value="$LOCALIZE[31989]"/>
-				<param name="listId" value="8003"/>
-				<param name="onUp1" value="8004"/>
-				<param name="onUp2" value="SetProperty(HomeWidget,4,Home)"/>
-				<param name="onUp3" value=""/>
-				<param name="onUp4" value="9000"/>
-				<param name="onDown1" value="8002"/>
-				<param name="onDown2" value="SetProperty(HomeWidget,2,Home)"/>
-				<param name="contentTarget" value=""/>
-				<param name="contentPath" value="plugin://script.embuary.info/movie/popular"/>
+				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),3)" />
+				<param name="animationStart" value="-180" />
+				<param name="wTitle" value="$LOCALIZE[31989]" />
+				<param name="listId" value="8003" />
+				<param name="onUp1" value="8004" />
+				<param name="onUp2" value="SetProperty(HomeWidget,4,Home)" />
+				<param name="onUp3" value="" />
+				<param name="onUp4" value="9000" />
+				<param name="onDown1" value="8002" />
+				<param name="onDown2" value="SetProperty(HomeWidget,2,Home)" />
+				<param name="contentTarget" value="" />
+				<param name="contentPath" value="plugin://script.embuary.info/movie/popular" />
 			</include>
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
-				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),4)"/>
-				<param name="animationStart" value="180"/>
-				<param name="wTitle" value="$LOCALIZE[31988]"/>
-				<param name="listId" value="8004"/>
-				<param name="onUp1" value="8006"/>
-				<param name="onUp2" value="SetProperty(HomeWidget,5,Home)"/>
-				<param name="onUp3" value=""/>
-				<param name="onUp4" value="9000"/>
-				<param name="onDown1" value="8003"/>
-				<param name="onDown2" value="SetProperty(HomeWidget,3,Home)"/>
-				<param name="contentTarget" value=""/>
-				<param name="contentPath" value="plugin://script.embuary.info/movie/top_rated"/>
+				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),4)" />
+				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31988]" />
+				<param name="listId" value="8004" />
+				<param name="onUp1" value="8006" />
+				<param name="onUp2" value="SetProperty(HomeWidget,5,Home)" />
+				<param name="onUp3" value="" />
+				<param name="onUp4" value="9000" />
+				<param name="onDown1" value="8003" />
+				<param name="onDown2" value="SetProperty(HomeWidget,3,Home)" />
+				<param name="contentTarget" value="" />
+				<param name="contentPath" value="plugin://script.embuary.info/movie/top_rated" />
 			</include>
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
-				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),5)"/>
-				<param name="animationStart" value="-180"/>
-				<param name="wTitle" value="$LOCALIZE[31985]"/>
-				<param name="listId" value="8006"/>
-				<param name="onUp1" value="8007"/>
-				<param name="onUp2" value="SetProperty(HomeWidget,6,Home)"/>
-				<param name="onUp3" value=""/>
-				<param name="onUp4" value="9000"/>
-				<param name="onDown1" value="8004"/>
-				<param name="onDown2" value="SetProperty(HomeWidget,4,Home)"/>
-				<param name="contentTarget" value=""/>
-				<param name="contentPath" value="plugin://script.embuary.info/movie/trending"/>
+				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),5)" />
+				<param name="animationStart" value="-180" />
+				<param name="wTitle" value="$LOCALIZE[31985]" />
+				<param name="listId" value="8006" />
+				<param name="onUp1" value="8007" />
+				<param name="onUp2" value="SetProperty(HomeWidget,6,Home)" />
+				<param name="onUp3" value="" />
+				<param name="onUp4" value="9000" />
+				<param name="onDown1" value="8004" />
+				<param name="onDown2" value="SetProperty(HomeWidget,4,Home)" />
+				<param name="contentTarget" value="" />
+				<param name="contentPath" value="plugin://script.embuary.info/movie/trending" />
 			</include>
 			<include content="HomeWidgetItem" condition="System.HasAddon(script.embuary.info)">
-				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),6)"/>
-				<param name="animationStart" value="180"/>
-				<param name="wTitle" value="$LOCALIZE[31986]"/>
-				<param name="listId" value="8007"/>
-				<param name="onUp1" value=""/>
-				<param name="onUp2" value=""/>
-				<param name="onUp3" value="9020"/>
-				<param name="onUp4" value="9000"/>
-				<param name="onDown1" value="8006"/>
-				<param name="onDown2" value="SetProperty(HomeWidget,5,Home)"/>
-				<param name="contentTarget" value=""/>
-				<param name="contentPath" value="plugin://script.embuary.info/movie/upcoming"/>
+				<param name="visible" value="String.IsEqual(Window(Home).Property(HomeWidget),6)" />
+				<param name="animationStart" value="180" />
+				<param name="wTitle" value="$LOCALIZE[31986]" />
+				<param name="listId" value="8007" />
+				<param name="onUp1" value="" />
+				<param name="onUp2" value="" />
+				<param name="onUp3" value="9020" />
+				<param name="onUp4" value="9000" />
+				<param name="onDown1" value="8006" />
+				<param name="onDown2" value="SetProperty(HomeWidget,5,Home)" />
+				<param name="contentTarget" value="" />
+				<param name="contentPath" value="plugin://script.embuary.info/movie/upcoming" />
 			</include>
 		</control>
 	</include>
@@ -143,12 +143,12 @@
 			<visible allowhiddenfocus="true">$PARAM[visible]</visible>
 			<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<animation type="Visible">
-				<effect type="rotatex" end="0" start="$PARAM[animationStart]" center="250,0" time="400" tween="sine" easing="inout"/>
-				<effect type="fade" end="100" start="0" time="10" delay="200"/>
+				<effect type="rotatex" end="0" start="$PARAM[animationStart]" center="250,0" time="400" tween="sine" easing="inout" />
+				<effect type="fade" end="100" start="0" time="10" delay="200" />
 			</animation>
 			<animation type="Hidden">
-				<effect type="rotatex" start="0" end="$PARAM[animationStart]" center="250,0" time="400" tween="sine" easing="inout"/>
-				<effect type="fade" start="100" end="0" time="10" delay="200"/>
+				<effect type="rotatex" start="0" end="$PARAM[animationStart]" center="250,0" time="400" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="10" delay="200" />
 			</animation>
 			<control type="image">
 				<description>background image</description>
@@ -199,7 +199,7 @@
 				<onback>9000</onback>
 				<focusposition>5</focusposition>
 				<viewtype label="535">list</viewtype>
-				<pagecontrol/>
+				<pagecontrol />
 				<orientation>horizontal</orientation>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout width="244" height="370">
@@ -269,10 +269,10 @@
 			<visible allowhiddenfocus="true">$PARAM[visible]</visible>
 			<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<animation type="Visible">
-				<effect type="fade" end="100" start="0" time="200" delay="500"/>
+				<effect type="fade" end="100" start="0" time="200" delay="500" />
 			</animation>
 			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="200" delay="500"/>
+				<effect type="fade" start="100" end="0" time="200" delay="500" />
 			</animation>
 			<control type="textbox">
 				<visible>Control.HasFocus($PARAM[listId])</visible>
@@ -461,7 +461,7 @@
 					</control>
 					<control type="label">
 						<height>2</height>
-						<label/>
+						<label />
 					</control>
 					<control type="label">
 						<width>900</width>
@@ -542,7 +542,7 @@
 					</control>
 					<control type="label">
 						<height>2</height>
-						<label/>
+						<label />
 					</control>
 					<control type="textbox">
 						<animation effect="slide" end="0,-40" condition="!String.IsEmpty(Container(8000).ListItem.Rating) + String.IsEmpty(Container(8000).ListItem.Artist)">Conditional</animation>
@@ -584,7 +584,7 @@
 					</control>
 					<control type="label">
 						<height>2</height>
-						<label/>
+						<label />
 					</control>
 					<control type="label">
 						<width>900</width>
@@ -596,7 +596,7 @@
 					</control>
 					<control type="label">
 						<height>2</height>
-						<label/>
+						<label />
 					</control>
 					<control type="textbox">
 						<description>Plot</description>
@@ -620,8 +620,8 @@
 					<visible>!Container(8000).IsUpdating</visible>
 					<visible>![Container(9000).OnNext | Container(9000).OnPrevious]</visible>
 					<animation type="Conditional" condition="Control.HasFocus(8000)">
-						<effect type="slide" start="0,0" end="500,0" time="400" tween="sine" easing="inout"/>
-						<effect type="fade" start="100" end="0" time="10" delay="200"/>
+						<effect type="slide" start="0,0" end="500,0" time="400" tween="sine" easing="inout" />
+						<effect type="fade" start="100" end="0" time="10" delay="200" />
 					</animation>
 					<animation effect="fade" start="0" end="100" delay="200" time="300" reversible="false">Visible</animation>
 					<control type="image">
@@ -670,8 +670,8 @@
 					<animation effect="zoom" end="92" time="0" condition="Skin.HasSetting(VerticalMenu)">Conditional</animation>
 					<animation effect="zoom" end="90" time="0" condition="!Skin.HasSetting(VerticalMenu)">Conditional</animation>
 					<animation type="Conditional" condition="Control.HasFocus(8000)">
-						<effect type="slide" start="600,0" end="0,0" time="400" tween="sine" easing="inout"/>
-						<effect type="fade" start="0" end="100" time="10" delay="200"/>
+						<effect type="slide" start="600,0" end="0,0" time="400" tween="sine" easing="inout" />
+						<effect type="fade" start="0" end="100" time="10" delay="200" />
 					</animation>
 					<control type="wraplist" id="8000">
 						<animation effect="slide" end="0,40" time="0" condition="Skin.HasSetting(VerticalMenu)">Conditional</animation>
@@ -688,7 +688,7 @@
 						<onback>9000</onback>
 						<viewtype label="535">list</viewtype>
 						<focusposition>2</focusposition>
-						<pagecontrol/>
+						<pagecontrol />
 						<orientation>vertical</orientation>
 						<onclick condition="String.IsEqual(Container(9000).ListItem.Property(WidgetType),13)">$INFO[ListItem.FileNameAndPath]</onclick>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
@@ -716,7 +716,7 @@
 								<label>[B]• $INFO[ListItem.Label][/B]</label>
 							</control>
 						</focusedlayout>
-						<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
+						<content target="$VAR[WidgetListTargetVar]" browse="never">$VAR[WidgetListContent]</content>
 					</control>
 				</control>
 				<control type="label">
@@ -968,7 +968,7 @@
 				</control>
 				<control type="label">
 					<height>2</height>
-					<label/>
+					<label />
 				</control>
 				<control type="label">
 					<left>90</left>
@@ -1010,7 +1010,7 @@
 				</control>
 				<control type="label">
 					<height>2</height>
-					<label/>
+					<label />
 				</control>
 				<control type="label">
 					<description>Time Label</description>
@@ -1304,7 +1304,7 @@
 				<content>
 					<item>
 						<label>$LOCALIZE[31909]</label>
-						<icon/>
+						<icon />
 						<onclick>noop</onclick>
 						<visible>!Weather.IsFetched</visible>
 					</item>
@@ -1368,7 +1368,7 @@
 			<visible>[!Control.HasFocus(9000) + !Control.HasFocus(9004) + !Control.HasFocus(9003) + !Control.HasFocus(9010)] | Skin.HasSetting(showWidget)</visible>
 			<visible>![Container(9000).OnNext | Container(9000).OnPrevious]</visible>
 			<include>VisibleFadeAnimation</include>
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favouritesbrowser)">conditional</animation>
 			<animation effect="slide" end="0,-75" time="0" condition="Skin.HasSetting(VerticalMenu)">Conditional</animation>
 			<animation effect="slide" end="0,250" time="0" condition="!Skin.HasSetting(VerticalMenu)">Conditional</animation>
 			<animation effect="fade" start="0" end="100" delay="200" time="300">Visible</animation>

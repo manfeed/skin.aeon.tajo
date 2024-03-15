@@ -6,5 +6,5 @@
 	<visible>!Window.IsActive(movieinformation)</visible>
 	<visible>ListItem.IsCollection + !System.HasActiveModalDialog</visible>
 	<visible>Window.IsActive(videos) + Skin.HasSetting(playTheme)</visible>
-	<controls/>
+	<controls />
 </window>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>SetFocus(90000)</onload>
+	<onload>SetFocus(9000)</onload>
 	<controls>
 		<control type="list" id="10051">
 			<include>HiddenList</include>
@@ -318,7 +318,7 @@
 					<top>542</top>
 					<control type="button">
 						<width>615</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<disabledcolor>grey</disabledcolor>
 						<font>font15_bold</font>
 						<align>right</align>
@@ -329,7 +329,7 @@
 					</control>
 					<control type="button">
 						<width>615</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<disabledcolor>grey</disabledcolor>
 						<font>font15_bold</font>
 						<align>right</align>
@@ -353,12 +353,13 @@
 						<description>Play/browse to Show</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<altlabel></altlabel>
 						<usealttexture>String.IsEqual(Container(10051).ListItem.Property(call),tv)</usealttexture>
-						<onclick condition="String.IsEqual(Container(10051).ListItem.Property(call),tv)">RunScript(script.embuary.helper,action=goto,path='"videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/"',target=videos)</onclick>
+						<onclick>Dialog.Close(all,force)</onclick>
+						<onclick condition="String.IsEqual(Container(10051).ListItem.Property(call),tv)">ActivateWindow(videos,videodb://tvshows/titles/$INFO[Container(10051).ListItem.DBID]/,return)</onclick>
 						<onclick condition="!String.IsEqual(Container(10051).ListItem.Property(call),tv)">RunScript(script.embuary.helper,action=playitem,dbid=$INFO[Container(10051).ListItem.DBID])</onclick>
 						<visible>!String.IsEmpty(Container(10051).ListItem.DBID)</visible>
 					</control>
@@ -366,7 +367,7 @@
 						<description>Cast</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<onclick>SetFocus(10052)</onclick>
@@ -376,17 +377,19 @@
 						<description>Search Trailer</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
-						<onclick>RunScript(script.embuary.helper,action=goto,path='"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[Container(10051).ListItem.Title]&amp;search_type=videos"',target=videos)</onclick>
+						<onclick>Dialog.Close(all,force)</onclick>
+						<onclick condition="!Window.IsVisible(MyVideoNav.xml)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[Container(10051).ListItem.Title]&amp;search_type=videos,return)</onclick>
+						<onclick condition="Window.IsVisible(MyVideoNav.xml)">Container.Update(plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[Container(10051).ListItem.Title]&amp;search_type=videos)</onclick>
 						<visible>System.HasAddon(plugin.video.youtube)</visible>
 					</control>
 					<control type="button" id="903">
 						<description>Extras</description>
 						<font>IconMediumMD</font>
 						<width>65</width>
-						<texturenofocus/>
+						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<onclick>Addon.OpenSettings(script.embuary.info)</onclick>
@@ -785,7 +788,7 @@
 									<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 								<control type="textbox">
-									<autoscroll delay="1000" time="1000" repeat="1000"/>
+									<autoscroll delay="1000" time="1000" repeat="1000" />
 									<left>13</left>
 									<top>340</top>
 									<width>354</width>

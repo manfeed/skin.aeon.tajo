@@ -34,10 +34,8 @@
 		<control type="list" id="5321">
 			<scrolltime>4000</scrolltime>
 			<autoscroll>true</autoscroll>
-			<itemlayout>
-			</itemlayout>
-			<focusedlayout>
-			</focusedlayout>
+			<itemlayout></itemlayout>
+			<focusedlayout></focusedlayout>
 			<content>
 				<item>
 					<label>$INFO[Window(musicinformation).Property(FSFanart)]</label>

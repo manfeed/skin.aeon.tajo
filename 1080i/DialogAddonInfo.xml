@@ -2,6 +2,10 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">blackk.jpg</texture>
+		</control>
 		<control type="panel" id="50">
 			<include>HiddenList</include>
 		</control>

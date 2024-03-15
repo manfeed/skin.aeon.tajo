@@ -549,7 +549,7 @@
 					<align>center</align>
 					<textcolor>grey2</textcolor>
 					<font>font48</font>
-					<info/>
+					<info />
 					<visible>String.IsEqual(Container(1000).ListItem.Property(listTyp), 1300) + String.IsEqual(Container(1300).NumItems, 0)</visible>
 				</control>
 				<control type="list" id="1300">
@@ -748,11 +748,8 @@
 							<left>40</left>
 							<top>21</top>
 							<width>48</width>
-							<height>48</height>>
-							<aspectratio>keep</aspectratio>
-							<visible>String.IsEqual(ListItem.Property(Icon), default)</visible>
-							<texture>libreelec/icons/bt.png</texture>
-						</control>
+							<height>48</height>&gt;
+							<aspectratio>keep</aspectratio><visible>String.IsEqual(ListItem.Property(Icon), default)</visible><texture>libreelec/icons/bt.png</texture></control>
 						<!-- modem -->
 						<control type="image">
 							<left>40</left>
@@ -977,8 +974,8 @@
 							<label2>$INFO[Window.Property(Distri)] ($INFO[Window.Property(build)])</label2>
 							<font>font15</font>
 							<shadowcolor>shadow</shadowcolor>
-							<texturefocus/>
-							<texturenofocus/>
+							<texturefocus />
+							<texturenofocus />
 						</control>
 						<control type="button">
 							<description>Label 2</description>
@@ -989,8 +986,8 @@
 							<label2>$INFO[Window.Property(Version)]</label2>
 							<font>font15</font>
 							<shadowcolor>shadow</shadowcolor>
-							<texturefocus/>
-							<texturenofocus/>
+							<texturefocus />
+							<texturenofocus />
 						</control>
 						<control type="button">
 							<description>Label 3</description>
@@ -1001,8 +998,8 @@
 							<label2>$INFO[Window.Property(Arch)]</label2>
 							<font>font15</font>
 							<shadowcolor>shadow</shadowcolor>
-							<texturefocus/>
-							<texturenofocus/>
+							<texturefocus />
+							<texturenofocus />
 						</control>
 						<control type="textbox">
 							<left>30</left>
@@ -1132,20 +1129,20 @@
 					<width>500</width>
 					<height>37</height>
 					<texturebg border="2">osd/texturebg.png</texturebg>
-					<lefttexture/>
+					<lefttexture />
 					<midtexture border="2">osd/midtexture_cache.png</midtexture>
-					<righttexture/>
-					<overlaytexture/>
+					<righttexture />
+					<overlaytexture />
 					<info>Player.ProgressCache</info>
 				</control>
 				<control type="progress">
 					<width>500</width>
 					<height>35</height>
 					<texturebg border="1">osd/texturebg_cache.png</texturebg>
-					<lefttexture/>
+					<lefttexture />
 					<midtexture border="2">osd/midtexture2.png</midtexture>
-					<righttexture/>
-					<overlaytexture/>
+					<righttexture />
+					<overlaytexture />
 					<info>Player.Progress</info>
 				</control>
 				<control type="fadelabel">

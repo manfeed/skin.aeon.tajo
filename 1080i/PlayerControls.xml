@@ -22,117 +22,101 @@
 				<onleft>202</onleft>
 				<onright>202</onright>
 				<control type="button" id="700">
-					<textoffsety>60</textoffsety>
-					<texturefocus>osd/buttons/OSDPlaylistFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPlaylistNF.png</texturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label></label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
-					<font />
 					<onclick condition="Player.HasAudio">ActivateWindow(MusicPlaylist)</onclick>
 					<onclick condition="Player.HasVideo">ActivateWindow(VideoPlaylist)</onclick>
 				</control>
 				<control type="button" id="600">
-					<texturefocus>osd/buttons/OSDPrevTrackFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPrevTrackNF.png</texturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label></label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
-					<font />
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 				<control type="button" id="601">
-					<texturefocus>osd/buttons/OSDRewindFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDRewindNF.png</texturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label></label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
-					<font />
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control>
 				<control type="togglebutton" id="602">
-					<texturefocus>osd/buttons/OSDPauseFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPauseNF.png</texturenofocus>
-					<alttexturefocus>osd/buttons/OSDPlayFO.png</alttexturefocus>
-					<alttexturenofocus>osd/buttons/OSDPlayNF.png</alttexturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
-					<altlabel>208</altlabel>
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<alttexturefocus>tajo/recua4.png</alttexturefocus>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
+					<label></label>
+					<altlabel></altlabel>
 					<width>100</width>
 					<height>100</height>
-					<font />
+					<font>IconMediumMD</font>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<control type="button" id="603">
-					<texturefocus>osd/buttons/OSDStopFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDStopNF.png</texturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label></label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
-					<font />
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
 				<control type="button" id="604">
-					<texturefocus>osd/buttons/OSDForwardFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDForwardNF.png</texturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label></label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
-					<font />
 					<onclick>PlayerControl(Forward)</onclick>
 				</control>
 				<control type="button" id="605">
-					<texturefocus>osd/buttons/OSDNextTrackFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDNextTrackNF.png</texturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label></label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
-					<font />
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
 				<control type="togglebutton" id="704">
-					<texturefocus>osd/buttons/OSDRandomOffFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDRandomOffNF.png</texturenofocus>
-					<alttexturefocus>osd/buttons/OSDRandomOnFO.png</alttexturefocus>
-					<alttexturenofocus>osd/buttons/OSDRandomOnNF.png</alttexturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<alttexturefocus>tajo/recua4.png</alttexturefocus>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
+					<label></label>
+					<altlabel></altlabel>
 					<width>100</width>
 					<height>100</height>
-					<font />
+					<font>IconMediumMD</font>
 					<usealttexture>Playlist.IsRandom</usealttexture>
 					<onclick>PlayerControl(Random)</onclick>
 				</control>
 				<control type="button" id="707">
-					<width>0.1</width>
-					<height>0.1</height>
-					<texturefocus />
-					<texturenofocus />
-					<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
-					<font />
-					<onclick>PlayerControl(Repeat)</onclick>
-				</control>
-				<control type="image" id="708">
-					<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
-					<colordiffuse></colordiffuse>
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label>$VAR[MusicOSDRepeatButtonVar]</label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
+					<onclick>PlayerControl(Repeat)</onclick>
+					<visible>!MusicPartyMode.Enabled</visible>
 				</control>
 				<control type="button" id="606">
-					<texturefocus>osd/buttons/OSDChannelListFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDChannelListNF.png</texturenofocus>
-					<colordiffuse></colordiffuse>
-					<label />
+					<texturefocus>tajo/recua4.png</texturefocus>
+					<font>IconMediumMD</font>
+					<label></label>
+					<focusedcolor>Skin.String(theme_text)</focusedcolor>
 					<width>100</width>
 					<height>100</height>
-					<font />
 					<onclick>Dialog.Close(All,true)</onclick>
 					<onclick>Fullscreen</onclick>
 				</control>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<defaultcontrol></defaultcontrol>
 	<controls>
 		<!-- codec info -->
 		<control type="group" id="0">
 			<animation effect="fade" time="200">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
-			<control type="grouplist" id="0">
+			<control type="group" id="0">
 				<left>30</left>
 				<width>100%</width>
 				<height>300</height>
@@ -41,6 +42,7 @@
 		</control>
 		<control type="label" id="1">
 			<description>seek label</description>
+			<visible>!Window.IsActive(fullscreengame)</visible>
 			<width>100%</width>
 			<height>100%</height>
 			<align>center</align>

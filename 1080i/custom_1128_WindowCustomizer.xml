@@ -15,8 +15,8 @@
 				<textcolor>grey</textcolor>
 				<focusedcolor>Skin.String(theme_text)</focusedcolor>
 				<onclick>Dialog.Close(1128)</onclick>
-				<texturefocus/>
-				<texturenofocus/>
+				<texturefocus />
+				<texturenofocus />
 				<onleft>2</onleft>
 				<onright>13</onright>
 				<onup>13</onup>

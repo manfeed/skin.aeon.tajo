@@ -7,6 +7,5 @@
 	<onload condition="!Control.IsVisible(58860) + !Control.HasFocus(5919) + Control.IsVisible(588) + !String.IsEmpty(Window(Home).Property(RowArtist)) + !String.IsEqual(Container.SortMethod,$LOCALIZE[557])">Container.SetSortMethod(10)</onload>
 	<onload condition="!Control.IsVisible(58860) + !Control.HasFocus(5919) + Control.IsVisible(588) + !String.IsEmpty(Window(Home).Property(RowYearm)) + !String.IsEqual(Container.SortMethod,$LOCALIZE[345])">Container.SetSortMethod(16)</onload>
 	<visible>Window.IsActive(music) + System.IdleTime(3) + String.IsEmpty(Window(Home).Property(MediaMenu))</visible>
-	<controls>
-	</controls>
+	<controls></controls>
 </window>

@@ -7,14 +7,6 @@
 	<menucontrol>9051</menucontrol>
 	<controls>
 		<include>CommonBackground</include>
-		<control type="image">
-			<left>-30</left>
-			<top>-30</top>
-			<width>2040</width>
-			<height>1277</height>
-			<texture background="true">black.png</texture>
-			<animation effect="fade" end="85" condition="true">Conditional</animation>
-		</control>
 		<control type="group">
 			<include>AddonList</include>
 			<!-- view id = 50 -->

@@ -43,7 +43,7 @@
 				<onright>9010</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<pagecontrol/>
+				<pagecontrol />
 				<scrolltime tween="quadratic" easing="out">200</scrolltime>
 				<include>SettingsFadeAnimation</include>
 				<itemlayout height="90" width="356">
@@ -81,15 +81,15 @@
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[31334]</label>
-						<icon/>
+						<icon />
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31335]</label>
-						<icon/>
+						<icon />
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[31336]</label>
-						<icon/>
+						<icon />
 					</item>
 				</content>
 			</control>
@@ -98,7 +98,7 @@
 				<left>552</left>
 				<top>797</top>
 				<width>1256</width>
-				<height>125</height>
+				<height>130</height>
 				<font>fontmusic</font>
 				<textcolor>Skin.String(theme_text)</textcolor>
 				<label>$VAR[AddonStatusDescriptionVar]</label>
@@ -216,19 +216,6 @@
 						<onclick>InstallAddon(plugin.video.themoviedb.helper)</onclick>
 						<visible>!System.HasAddon(plugin.video.themoviedb.helper)</visible>
 					</control>
-					<control type="button" id="216">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(script.image.resource.select)]</label>
-						<label2>$INFO[System.AddonVersion(script.image.resource.select),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
-						<visible>System.HasAddon(script.image.resource.select)</visible>
-					</control>
-					<control type="button" id="217">
-						<include>SettingsButtonCommonValues</include>
-						<label>script.image.resource.select</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(script.image.resource.select)</onclick>
-						<visible>!System.HasAddon(script.image.resource.select)</visible>
-					</control>
 					<control type="button" id="300">
 						<include>SettingsButtonCommonValues</include>
 						<label>$INFO[System.AddonTitle(plugin.video.youtube)]</label>
@@ -243,44 +230,18 @@
 						<onclick>InstallAddon(plugin.video.youtube)</onclick>
 						<visible>!System.HasAddon(plugin.video.youtube)</visible>
 					</control>
-					<control type="button" id="106">
+					<control type="button" id="216">
 						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(resource.images.studios.white)]</label>
-						<label2>$INFO[System.AddonVersion(resource.images.studios.white),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
-						<visible>System.HasAddon(resource.images.studios.white)</visible>
+						<label>$INFO[System.AddonTitle(script.image.resource.select)]</label>
+						<label2>$INFO[System.AddonVersion(script.image.resource.select),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
+						<visible>System.HasAddon(script.image.resource.select)</visible>
 					</control>
-					<control type="button" id="107">
+					<control type="button" id="217">
 						<include>SettingsButtonCommonValues</include>
-						<label>resource.images.studios.white</label>
+						<label>script.image.resource.select</label>
 						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(resource.images.studios.white)</onclick>
-						<visible>!System.HasAddon(resource.images.studios.white)</visible>
-					</control>
-					<control type="button" id="389">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(resource.images.studios.coloured)]</label>
-						<label2>$INFO[System.AddonVersion(resource.images.studios.coloured),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
-						<visible>System.HasAddon(resource.images.studios.coloured)</visible>
-					</control>
-					<control type="button" id="390">
-						<include>SettingsButtonCommonValues</include>
-						<label>resource.images.studios.coloured</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(resource.images.studios.coloured)</onclick>
-						<visible>!System.HasAddon(resource.images.studios.coloured)</visible>
-					</control>
-					<control type="button" id="108">
-						<include>SettingsButtonCommonValues</include>
-						<label>$INFO[System.AddonTitle(resource.images.recordlabels.white)]</label>
-						<label2>$INFO[System.AddonVersion(resource.images.recordlabels.white),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
-						<visible>System.HasAddon(resource.images.recordlabels.white)</visible>
-					</control>
-					<control type="button" id="109">
-						<include>SettingsButtonCommonValues</include>
-						<label>resource.images.recordlabels.white</label>
-						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
-						<onclick>InstallAddon(resource.images.recordlabels.white)</onclick>
-						<visible>!System.HasAddon(resource.images.recordlabels.white)</visible>
+						<onclick>InstallAddon(script.image.resource.select)</onclick>
+						<visible>!System.HasAddon(script.image.resource.select)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="9053">
@@ -294,6 +255,22 @@
 					<onup>9053</onup>
 					<ondown>9053</ondown>
 					<visible>Container(9000).HasFocus(3)</visible>
+					<control type="button" id="337">
+						<include>SettingsButtonCommonValues</include>
+						<label>$INFO[System.AddonTitle(script.wikipedia)]</label>
+						<label2>$INFO[System.AddonVersion(script.wikipedia),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]$LOCALIZE[31450]</label2>
+						<onclick>Addon.OpenSettings(script.wikipedia)</onclick>
+						<visible>System.HasAddon(script.wikipedia)</visible>
+					</control>
+					<control type="button" id="338">
+						<include>SettingsButtonCommonValues</include>
+						<label>script.wikipedia</label>
+						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
+						<onclick>InstallAddon(script.wikipedia)</onclick>
+						<onclick>Skin.SetString(Wikipedia.Format.Link,[COLOR $INFO[Skin.String(theme_text)]]{}[/COLOR])</onclick>
+						<onclick>Skin.SetString(Wikipedia.Format.Emphasis,[B][I]{} [/B][/I])</onclick>
+						<visible>!System.HasAddon(script.wikipedia)</visible>
+					</control>
 					<control type="button" id="208">
 						<include>SettingsButtonCommonValues</include>
 						<label>$INFO[System.AddonTitle(script.globalsearch)]</label>
@@ -334,6 +311,45 @@
 						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
 						<onclick>InstallAddon(resource.images.actorart)</onclick>
 						<visible>!System.HasAddon(resource.images.actorart)</visible>
+					</control>
+					<control type="button" id="106">
+						<include>SettingsButtonCommonValues</include>
+						<label>$INFO[System.AddonTitle(resource.images.studios.white)]</label>
+						<label2>$INFO[System.AddonVersion(resource.images.studios.white),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
+						<visible>System.HasAddon(resource.images.studios.white)</visible>
+					</control>
+					<control type="button" id="107">
+						<include>SettingsButtonCommonValues</include>
+						<label>resource.images.studios.white</label>
+						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
+						<onclick>InstallAddon(resource.images.studios.white)</onclick>
+						<visible>!System.HasAddon(resource.images.studios.white)</visible>
+					</control>
+					<control type="button" id="389">
+						<include>SettingsButtonCommonValues</include>
+						<label>$INFO[System.AddonTitle(resource.images.studios.coloured)]</label>
+						<label2>$INFO[System.AddonVersion(resource.images.studios.coloured),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
+						<visible>System.HasAddon(resource.images.studios.coloured)</visible>
+					</control>
+					<control type="button" id="390">
+						<include>SettingsButtonCommonValues</include>
+						<label>resource.images.studios.coloured</label>
+						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
+						<onclick>InstallAddon(resource.images.studios.coloured)</onclick>
+						<visible>!System.HasAddon(resource.images.studios.coloured)</visible>
+					</control>
+					<control type="button" id="108">
+						<include>SettingsButtonCommonValues</include>
+						<label>$INFO[System.AddonTitle(resource.images.recordlabels.white)]</label>
+						<label2>$INFO[System.AddonVersion(resource.images.recordlabels.white),v, ][COLOR $INFO[Skin.String(theme_text)]]$LOCALIZE[31331][/COLOR]</label2>
+						<visible>System.HasAddon(resource.images.recordlabels.white)</visible>
+					</control>
+					<control type="button" id="109">
+						<include>SettingsButtonCommonValues</include>
+						<label>resource.images.recordlabels.white</label>
+						<label2>[COLOR invalid]$LOCALIZE[31332][/COLOR]$LOCALIZE[31451]</label2>
+						<onclick>InstallAddon(resource.images.recordlabels.white)</onclick>
+						<visible>!System.HasAddon(resource.images.recordlabels.white)</visible>
 					</control>
 				</control>
 			</control>

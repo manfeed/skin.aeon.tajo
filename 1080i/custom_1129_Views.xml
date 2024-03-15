@@ -13,8 +13,8 @@
 			<textcolor>grey</textcolor>
 			<focusedcolor>Skin.String(theme_text)</focusedcolor>
 			<onclick>Dialog.Close(1129)</onclick>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 			<visible>system.getbool(input.enablemouse)</visible>
 		</control>
 		<control type="label">
@@ -140,6 +140,31 @@
 				<item>
 					<label>Wall</label>
 					<onclick>Container.SetViewMode(597)</onclick>
+					<visible>Window.IsActive(music)</visible>
+					<visible>[Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)] + !Container.Content(genres) + !Container.Content(years) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(tags)</visible>
+				</item>
+				<item>
+					<label>CenterList</label>
+					<onclick>Container.SetViewMode(501)</onclick>
+					<visible>Window.IsActive(videos)</visible>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)</visible>
+				</item>
+				<item>
+					<label>WideWall</label>
+					<onclick>Container.SetViewMode(580)</onclick>
+					<visible>Window.IsActive(videos)</visible>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)</visible>
+				</item>
+				<item>
+					<label>WideWall</label>
+					<onclick>Container.SetViewMode(580)</onclick>
+					<visible>Window.IsActive(music)</visible>
+					<visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + !Container.Content(genres) + !Container.Content(years) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(tags)</visible>
+					<visible>!Container.Content(musicvideos) + !String.StartsWith(container.folderpath,library://video/musicvideos/) + !String.StartsWith(container.folderpath,videodb://musicvideos)</visible>
+				</item>
+				<item>
+					<label>WideWall</label>
+					<onclick>Container.SetViewMode(580)</onclick>
 					<visible>Window.IsActive(music)</visible>
 					<visible>[Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)] + !Container.Content(genres) + !Container.Content(years) + !Container.Content(directors) + !Container.Content(studios) + !Container.Content(tags)</visible>
 				</item>

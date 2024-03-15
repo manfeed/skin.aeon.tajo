@@ -46,7 +46,7 @@
 					<top>148</top>
 					<width>1138</width>
 					<height>60</height>
-					<label/>
+					<label />
 					<onup>22</onup>
 					<onleft>9001</onleft>
 					<onright>9001</onright>
@@ -63,7 +63,7 @@
 					<textoffsetx>15</textoffsetx>
 					<disabledcolor>Skin.String(theme_text)</disabledcolor>
 					<enable>no</enable>
-					<texturefocus/>
+					<texturefocus />
 				</control>
 				<control type="panel" id="10">
 					<description>Rules List Control</description>

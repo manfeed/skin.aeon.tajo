@@ -3,14 +3,18 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<include>DialogOpenCloseAnimation</include>
 	<controls>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">blackk.jpg</texture>
+		</control>
 		<control type="group">
-			<width>1570</width>
-			<height>662</height>
+			<width>1870</width>
+			<height>762</height>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
 			<control type="image">
-				<width>1570</width>
-				<height>662</height>
+				<width>1870</width>
+				<height>762</height>
 				<texture border="40">dialogs/default/bg.png</texture>
 			</control>
 			<control type="label" id="411">
@@ -50,7 +54,7 @@
 					<left>1</left>
 					<top>1</top>
 					<width>960</width>
-					<height>540</height>
+					<height>600</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<onup>450</onup>
@@ -187,10 +191,10 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="60">
-					<include>ScrollBar_Vertical2</include>
+					<include>ScrollBar_Vertical</include>
 					<left>961</left>
-					<top>1</top>
-					<height>540</height>
+					<top>-5</top>
+					<height>610</height>
 					<onleft>450</onleft>
 					<onright>9000</onright>
 				</control>
@@ -217,7 +221,7 @@
 					<visible>String.Contains(Control.GetLabel(416),*)</visible>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>1</left>
+					<left>40</left>
 					<top>316</top>
 					<width>534</width>
 					<height>240</height>

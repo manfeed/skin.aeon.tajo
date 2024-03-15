@@ -7,6 +7,12 @@
 			<texture>black-back.png</texture>
 			<visible>Pvr.IsPlayingTv</visible>
 		</control>
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<texture>black-back.png</texture>
+			<visible>Pvr.IsPlayingTv</visible>
+		</control>
 		<control type="group">
 			<description>TV Guide Timeline</description>
 			<include>VisibleFadeAnimation</include>
@@ -587,7 +593,7 @@
 				<control type="textbox" id="81">
 					<top>73</top>
 					<width>360</width>
-					<height>223</height>
+					<height>233</height>
 					<font>font13b</font>
 					<textcolor>grey</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>

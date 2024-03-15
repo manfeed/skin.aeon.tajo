@@ -41,12 +41,12 @@
 				<control type="panel" id="50">
 					<top>180</top>
 					<width>810</width>
-					<height>840</height>
+					<height>480</height>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
 					<onright>60</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onup>3879</onup>
+					<ondown>3877</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
@@ -155,45 +155,144 @@
 							<onclick>ActivateWindow(Programs,return)</onclick>
 							<visible>System.Platform.Android</visible>
 						</item>
-						<item id="6">
-							<label>$LOCALIZE[32058]</label>
-							<icon>views/list/DefaultAddon.png</icon>
-							<property name="AppsTarget"/>
-							<property name="AppsContent">addons://noop/</property>
-							<property name="AppsSortBy"/>
-							<onclick>ActivateWindow(AddonBrowser,return)</onclick>
-						</item>
-						<item id="7">
-							<label>$LOCALIZE[32059]</label>
-							<label2>sub</label2>
-							<icon>views/list/DefaultNetwork.png</icon>
-							<property name="AppsTarget"/>
-							<property name="AppsContent">addons://noop/</property>
-							<property name="AppsSortBy"/>
-							<onclick>ActivateWindow(addonbrowser,addons://all/,return)</onclick>
-						</item>
-						<item id="8">
-							<label>$LOCALIZE[32057]</label>
-							<icon>views/list/DefaultAddonVfs.png</icon>
-							<property name="AppsTarget"/>
-							<property name="AppsContent">addons://noop/</property>
-							<property name="AppsSortBy"/>
-							<onclick>ActivateWindow(systemsettings,addons)</onclick>
-						</item>
 					</content>
 				</control>
 				<control type="scrollbar" id="60">
 					<include>ScrollBar_Vertical</include>
 					<left>830</left>
 					<top>180</top>
-					<height>836</height>
+					<height>476</height>
 					<onup>60</onup>
 					<ondown>60</ondown>
 					<onleft>50</onleft>
 					<onright>51</onright>
 				</control>
+				<control type="image">
+					<left>-60</left>
+					<top>660</top>
+					<width>880</width>
+					<height>3</height>
+					<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+				</control>
+				<control type="image">
+					<left>-60</left>
+					<top>780</top>
+					<width>880</width>
+					<height>3</height>
+					<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+				</control>
+				<control type="image">
+					<left>-60</left>
+					<top>900</top>
+					<width>880</width>
+					<height>3</height>
+					<texture diffuse="tajo/shadow_mask_v5.png">tajo/line.png</texture>
+				</control>
+				<control type="image">
+					<visible>!Control.HasFocus(3877)</visible>
+					<left>15</left>
+					<top>670</top>
+					<width>105</width>
+					<height>105</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">views/list/DefaultAddon.png</texture>
+					<colordiffuse>grey2</colordiffuse>
+				</control>
+				<control type="image">
+					<visible>Control.HasFocus(3877)</visible>
+					<left>15</left>
+					<top>670</top>
+					<width>105</width>
+					<height>105</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">views/list/DefaultAddon.png</texture>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="image">
+					<visible>!Control.HasFocus(3878)</visible>
+					<left>15</left>
+					<top>790</top>
+					<width>105</width>
+					<height>105</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">views/list/DefaultNetwork.png</texture>
+					<colordiffuse>grey2</colordiffuse>
+				</control>
+				<control type="image">
+					<visible>Control.HasFocus(3878)</visible>
+					<left>15</left>
+					<top>790</top>
+					<width>105</width>
+					<height>105</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">views/list/DefaultNetwork.png</texture>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="image">
+					<visible>!Control.HasFocus(3879)</visible>
+					<left>15</left>
+					<top>910</top>
+					<width>105</width>
+					<height>105</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">views/list/DefaultAddonVfs.png</texture>
+					<colordiffuse>grey2</colordiffuse>
+				</control>
+				<control type="image">
+					<visible>Control.HasFocus(3879)</visible>
+					<left>15</left>
+					<top>910</top>
+					<width>105</width>
+					<height>105</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">views/list/DefaultAddonVfs.png</texture>
+					<colordiffuse>white</colordiffuse>
+				</control>
+				<control type="button" id="3877">
+					<label>              $LOCALIZE[32058]</label>
+					<width>810</width>
+					<height>120</height>
+					<font>font30</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>Skin.String(theme_text)</selectedcolor>
+					<left>0</left>
+					<top>660</top>
+					<onup>SetFocus(50,6)</onup>
+					<ondown>3878</ondown>
+					<onclick>ActivateWindow(AddonBrowser,return)</onclick>
+				</control>
+				<control type="button" id="3878">
+					<label>              $LOCALIZE[32059]</label>
+					<width>810</width>
+					<height>120</height>
+					<font>font30</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>Skin.String(theme_text)</selectedcolor>
+					<left>0</left>
+					<top>780</top>
+					<onup>3877</onup>
+					<ondown>3879</ondown>
+					<onclick>ActivateWindow(addonbrowser,addons://all/,return)</onclick>
+				</control>
+				<control type="button" id="3879">
+					<label>              $LOCALIZE[32057]</label>
+					<width>810</width>
+					<height>120</height>
+					<font>font30</font>
+					<textcolor>grey2</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<selectedcolor>Skin.String(theme_text)</selectedcolor>
+					<left>0</left>
+					<top>900</top>
+					<onup>3878</onup>
+					<ondown>SetFocus(50,0)</ondown>
+					<onclick>ActivateWindow(systemsettings,addons)</onclick>
+				</control>
 			</control>
 			<control type="group">
+				<visible>!Control.HasFocus(3877) + !Control.HasFocus(3878) + !Control.HasFocus(3879)</visible>
 				<left>984</left>
 				<top>-40</top>
 				<control type="fixedlist" id="51">
