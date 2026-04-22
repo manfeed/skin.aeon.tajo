@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Persian (Afghanistan) (http://www.transifex.com/projects/p/kodi-skins/language/fa_AF/)\n"
-"Language: fa_AF\n"
+"PO-Revision-Date: 2026-01-19 01:45+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dari <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/prs/>\n"
+"Language: fa_af\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -469,7 +470,7 @@ msgid "Unwatched episode count"
 msgstr ""
 
 msgctxt "#31110"
-msgid "Up next brings the option to watch right away the next episode of a tvshow (Netflix/Prime video style)."
+msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
 msgstr ""
 
 msgctxt "#31111"
@@ -674,7 +675,7 @@ msgid "Display background name"
 msgstr ""
 
 msgctxt "#31161"
-msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
+msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
 msgstr ""
 
 msgctxt "#31162"
@@ -996,6 +997,22 @@ msgctxt "#31240"
 msgid "Moderate"
 msgstr ""
 
+msgctxt "#31241"
+msgid "Pixel format"
+msgstr ""
+
+msgctxt "#31242"
+msgid "System rendering speed"
+msgstr ""
+
+msgctxt "#31243"
+msgid "Hide actor's thumbnails"
+msgstr ""
+
+msgctxt "#31244"
+msgid "Show only a list of the actors' names, instead of also including their thumbnails."
+msgstr ""
+
 # empty strings from id 31227 to 31249
 msgctxt "#31250"
 msgid "Automatic Full Screen when playing music"
@@ -1038,6 +1055,10 @@ msgstr ""
 # empty string with id 31308
 msgctxt "#31309"
 msgid "Memory Used:"
+msgstr ""
+
+msgctxt "#31310"
+msgid "Available audio tracks"
 msgstr ""
 
 # empty strings from id 31310 to 31316
@@ -1622,7 +1643,7 @@ msgid "When in idle state for two minutes within a media view, a fullscreen slid
 msgstr ""
 
 msgctxt "#32001"
-msgid "Play automatically movie trailers in video views"
+msgid "Play automatically trailers in video views"
 msgstr ""
 
 msgctxt "#32002"
@@ -1762,7 +1783,7 @@ msgid "Display the additional features (media files) placed by the user in the '
 msgstr ""
 
 msgctxt "#32036"
-msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically plays in the background. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
+msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically sounds. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
 msgstr ""
 
 msgctxt "#32037"
@@ -1826,7 +1847,7 @@ msgid "Highlighted text colour"
 msgstr ""
 
 msgctxt "#32052"
-msgid "Watched mark colour"
+msgid "Marks colour"
 msgstr ""
 
 msgctxt "#32053"
@@ -2099,4 +2120,44 @@ msgstr ""
 
 msgctxt "#32120"
 msgid "Adjust lyrics"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Hide resumable mark in video views"
+msgstr ""
+
+msgctxt "#32122"
+msgid "Hide unwatched mark in video views"
+msgstr ""
+
+msgctxt "#32123"
+msgid "Hide episodes unwatched mark in video views"
+msgstr ""
+
+msgctxt "#32124"
+msgid "Same director"
+msgstr ""
+
+msgctxt "#32125"
+msgid "'Down' to show similars"
+msgstr ""
+
+msgctxt "#32126"
+msgid "'Right' to show similars"
+msgstr ""
+
+msgctxt "#32127"
+msgid "Show logos"
+msgstr ""
+
+msgctxt "#32128"
+msgid "Show only titles"
+msgstr ""
+
+msgctxt "#32129"
+msgid "Play automatically video links in song views"
+msgstr ""
+
+msgctxt "#32130"
+msgid "When you browse song views and stop for a few seconds, the video link for that song will play automatically (if available)."
 msgstr ""

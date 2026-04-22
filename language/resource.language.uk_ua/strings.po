@@ -5,21 +5,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-05-11 19:42+0000\n"
-"Last-Translator: A. <artem+weblate@molotov.work>\n"
+"PO-Revision-Date: 2026-04-22 06:48+0000\n"
+"Last-Translator: Pavlo Marianov <acid@jack.kyiv.ua>\n"
 "Language-Team: Ukrainian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/uk_ua/>\n"
 "Language: uk_ua\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12.1\n"
+"X-Generator: Weblate 5.17\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
-msgstr ""
+msgstr "Aeon Tajo"
 
 msgctxt "Addon Description"
 msgid "Aeon Tajo: Changes everything so that nothing changes. Inspired on Aeon Nox 5 (thanks to BigNoid)."
@@ -35,7 +35,7 @@ msgstr "Режисер"
 
 msgctxt "#31001"
 msgid "Written by"
-msgstr ""
+msgstr "Автор:"
 
 msgctxt "#31002"
 msgid "Blurred album thumb"
@@ -47,7 +47,7 @@ msgstr "Налаштування живлення"
 
 msgctxt "#31004"
 msgid "Working"
-msgstr ""
+msgstr "Працює"
 
 msgctxt "#31005"
 msgid "Fixed"
@@ -155,7 +155,7 @@ msgstr ""
 
 msgctxt "#31031"
 msgid "Random Movies"
-msgstr ""
+msgstr "Випадкові фільми"
 
 msgctxt "#31032"
 msgid "Recommended Movies"
@@ -163,7 +163,7 @@ msgstr ""
 
 msgctxt "#31033"
 msgid "Random Episodes"
-msgstr ""
+msgstr "Випадкові серії"
 
 msgctxt "#31034"
 msgid "Recommended Episodes"
@@ -175,7 +175,7 @@ msgstr ""
 
 msgctxt "#31036"
 msgid "Random Albums"
-msgstr ""
+msgstr "Випадкові альбоми"
 
 msgctxt "#31037"
 msgid "Recent Albums"
@@ -195,7 +195,7 @@ msgstr "Зараз відтворюється"
 
 msgctxt "#31041"
 msgid "Select widget"
-msgstr ""
+msgstr "Вибрати віджет"
 
 msgctxt "#31042"
 msgid "Show \"Now Playing\" information blended in the background"
@@ -331,7 +331,7 @@ msgstr ""
 
 msgctxt "#31075"
 msgid "No extra features available"
-msgstr ""
+msgstr "Додаткові функції недоступні"
 
 msgctxt "#31076"
 msgid "Landscape"
@@ -431,11 +431,11 @@ msgstr ""
 
 msgctxt "#31100"
 msgid "View:"
-msgstr ""
+msgstr "Подання:"
 
 msgctxt "#31101"
 msgid "Choose view"
-msgstr ""
+msgstr "Виберіть подання"
 
 msgctxt "#31102"
 msgid "Background"
@@ -470,7 +470,7 @@ msgid "Unwatched episode count"
 msgstr ""
 
 msgctxt "#31110"
-msgid "Up next brings the option to watch right away the next episode of a tvshow (Netflix/Prime video style)."
+msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
 msgstr ""
 
 msgctxt "#31111"
@@ -479,11 +479,11 @@ msgstr ""
 
 msgctxt "#31112"
 msgid "Movies directed by"
-msgstr ""
+msgstr "Режисер фільмів"
 
 msgctxt "#31113"
 msgid "Movies written by"
-msgstr ""
+msgstr "Сценарист фільмів"
 
 msgctxt "#31114"
 msgid "More movies from"
@@ -656,7 +656,7 @@ msgstr ""
 
 msgctxt "#31156"
 msgid "Upcoming movies"
-msgstr ""
+msgstr "Майбутні фільми"
 
 msgctxt "#31157"
 msgid "Multi movie widget"
@@ -675,7 +675,7 @@ msgid "Display background name"
 msgstr ""
 
 msgctxt "#31161"
-msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
+msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
 msgstr ""
 
 msgctxt "#31162"
@@ -692,7 +692,7 @@ msgstr ""
 
 msgctxt "#31165"
 msgid "Layout"
-msgstr ""
+msgstr "Вигляд"
 
 msgctxt "#31166"
 msgid "Wall"
@@ -704,11 +704,11 @@ msgstr ""
 
 msgctxt "#31168"
 msgid "h"
-msgstr ""
+msgstr "г"
 
 msgctxt "#31169"
 msgid "m"
-msgstr ""
+msgstr "хв"
 
 msgctxt "#31170"
 msgid "Enable Netflix style pause screen"
@@ -792,15 +792,15 @@ msgstr ""
 
 msgctxt "#31190"
 msgid "In cinemas"
-msgstr ""
+msgstr "В кінотеатрах"
 
 msgctxt "#31191"
 msgid "In cinemas soon"
-msgstr ""
+msgstr "Скоро в кінотеатрах"
 
 msgctxt "#31192"
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 msgctxt "#31193"
 msgid "Show images of the best-known actresses"
@@ -861,7 +861,7 @@ msgstr ""
 
 msgctxt "#31207"
 msgid "Views"
-msgstr ""
+msgstr "Подання"
 
 msgctxt "#31208"
 msgid "Home screen"
@@ -869,7 +869,7 @@ msgstr ""
 
 msgctxt "#31209"
 msgid "Options"
-msgstr ""
+msgstr "Параметри"
 
 msgctxt "#31210"
 msgid "Select another image as default background"
@@ -930,7 +930,7 @@ msgstr ""
 
 msgctxt "#31224"
 msgid "Animated posters"
-msgstr ""
+msgstr "Анімовані постери"
 
 msgctxt "#31225"
 msgid "Normal posters"
@@ -986,14 +986,30 @@ msgstr ""
 
 msgctxt "#31238"
 msgid "Very small"
-msgstr ""
+msgstr "Дуже малий"
 
 msgctxt "#31239"
 msgid "Small"
-msgstr ""
+msgstr "Малий"
 
 msgctxt "#31240"
 msgid "Moderate"
+msgstr "Помірний"
+
+msgctxt "#31241"
+msgid "Pixel format"
+msgstr "Формат пікселів"
+
+msgctxt "#31242"
+msgid "System rendering speed"
+msgstr "Швидкість візуалізації системи"
+
+msgctxt "#31243"
+msgid "Hide actor's thumbnails"
+msgstr ""
+
+msgctxt "#31244"
+msgid "Show only a list of the actors' names, instead of also including their thumbnails."
 msgstr ""
 
 # empty strings from id 31227 to 31249
@@ -1020,7 +1036,7 @@ msgstr ""
 # empty strings from id 31255 to 31299
 msgctxt "#31300"
 msgid "Overview"
-msgstr ""
+msgstr "Огляд"
 
 msgctxt "#31301"
 msgid "Last Updated"
@@ -1032,11 +1048,15 @@ msgstr "Приховати фанарт"
 
 msgctxt "#31308"
 msgid "Next aired"
-msgstr ""
+msgstr "Наступний ефір"
 
 msgctxt "#31309"
 msgid "Memory Used:"
 msgstr "Використано пам'яті:"
+
+msgctxt "#31310"
+msgid "Available audio tracks"
+msgstr ""
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
@@ -1250,7 +1270,7 @@ msgstr ""
 
 msgctxt "#31901"
 msgid "36 Hour Forecast"
-msgstr "Прогноз на 36 г."
+msgstr "Прогноз на 36 годин"
 
 msgctxt "#31902"
 msgid "Hourly Forecast"
@@ -1497,7 +1517,7 @@ msgstr ""
 
 msgctxt "#31972"
 msgid "Youtube"
-msgstr ""
+msgstr "Youtube"
 
 msgctxt "#31973"
 msgid "Down for more"
@@ -1545,7 +1565,7 @@ msgstr ""
 
 msgctxt "#31984"
 msgid "Awards"
-msgstr ""
+msgstr "Нагороди"
 
 msgctxt "#31985"
 msgid "Trending Movies"
@@ -1561,7 +1581,7 @@ msgstr ""
 
 msgctxt "#31988"
 msgid "Top Rated Movies"
-msgstr ""
+msgstr "Найкращі фільми"
 
 msgctxt "#31989"
 msgid "Popular Movies"
@@ -1612,7 +1632,7 @@ msgid "When in idle state for two minutes within a media view, a fullscreen slid
 msgstr ""
 
 msgctxt "#32001"
-msgid "Play automatically movie trailers in video views"
+msgid "Play automatically trailers in video views"
 msgstr ""
 
 msgctxt "#32002"
@@ -1752,7 +1772,7 @@ msgid "Display the additional features (media files) placed by the user in the '
 msgstr ""
 
 msgctxt "#32036"
-msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically plays in the background. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
+msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically sounds. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
 msgstr ""
 
 msgctxt "#32037"
@@ -1797,7 +1817,7 @@ msgstr ""
 
 msgctxt "#32047"
 msgid "Select + Right Stick"
-msgstr ""
+msgstr "Select + правий стік"
 
 msgctxt "#32048"
 msgid "Vertical Home menu"
@@ -1816,12 +1836,12 @@ msgid "Highlighted text colour"
 msgstr ""
 
 msgctxt "#32052"
-msgid "Watched mark colour"
+msgid "Marks colour"
 msgstr ""
 
 msgctxt "#32053"
 msgid "Current"
-msgstr ""
+msgstr "Поточний"
 
 msgctxt "#32054"
 msgid "Selected"
@@ -1885,7 +1905,7 @@ msgstr ""
 
 msgctxt "#32069"
 msgid "Similar albums"
-msgstr ""
+msgstr "Подібні альбоми"
 
 msgctxt "#32070"
 msgid "No similar found"
@@ -1993,7 +2013,7 @@ msgstr ""
 
 msgctxt "#32096"
 msgid "TheMovieDB"
-msgstr ""
+msgstr "TheMovieDB"
 
 msgctxt "#32097"
 msgid "Most Voted Movies"
@@ -2013,7 +2033,7 @@ msgstr ""
 
 msgctxt "#32101"
 msgid "Random Artists"
-msgstr ""
+msgstr "Випадкові виконавці"
 
 msgctxt "#32102"
 msgid "Online info from TheMovieDB.org for videos"
@@ -2049,11 +2069,11 @@ msgstr ""
 
 msgctxt "#32110"
 msgid "Rewind"
-msgstr ""
+msgstr "Перемотка назад"
 
 msgctxt "#32111"
 msgid "Fast forward"
-msgstr ""
+msgstr "Перемотка вперед"
 
 msgctxt "#32112"
 msgid "Step back"
@@ -2089,6 +2109,46 @@ msgstr ""
 
 msgctxt "#32120"
 msgid "Adjust lyrics"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Hide resumable mark in video views"
+msgstr ""
+
+msgctxt "#32122"
+msgid "Hide unwatched mark in video views"
+msgstr ""
+
+msgctxt "#32123"
+msgid "Hide episodes unwatched mark in video views"
+msgstr ""
+
+msgctxt "#32124"
+msgid "Same director"
+msgstr "Той же режисер"
+
+msgctxt "#32125"
+msgid "'Down' to show similars"
+msgstr ""
+
+msgctxt "#32126"
+msgid "'Right' to show similars"
+msgstr ""
+
+msgctxt "#32127"
+msgid "Show logos"
+msgstr ""
+
+msgctxt "#32128"
+msgid "Show only titles"
+msgstr ""
+
+msgctxt "#32129"
+msgid "Play automatically video links in song views"
+msgstr ""
+
+msgctxt "#32130"
+msgid "When you browse song views and stop for a few seconds, the video link for that song will play automatically (if available)."
 msgstr ""
 
 #~ msgctxt "#31029"

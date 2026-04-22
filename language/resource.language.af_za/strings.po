@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-03-09 14:20+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2026-01-22 06:05+0000\n"
+"Last-Translator: Heiko Berner <berner.h@gmail.com>\n"
 "Language-Team: Afrikaans (South Africa) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/af_za/>\n"
 "Language: af_za\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -175,7 +175,7 @@ msgstr ""
 
 msgctxt "#31036"
 msgid "Random Albums"
-msgstr ""
+msgstr "Lukraak Albums"
 
 msgctxt "#31037"
 msgid "Recent Albums"
@@ -470,7 +470,7 @@ msgid "Unwatched episode count"
 msgstr ""
 
 msgctxt "#31110"
-msgid "Up next brings the option to watch right away the next episode of a tvshow (Netflix/Prime video style)."
+msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
 msgstr ""
 
 msgctxt "#31111"
@@ -675,7 +675,7 @@ msgid "Display background name"
 msgstr ""
 
 msgctxt "#31161"
-msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
+msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
 msgstr ""
 
 msgctxt "#31162"
@@ -792,11 +792,11 @@ msgstr ""
 
 msgctxt "#31190"
 msgid "In cinemas"
-msgstr ""
+msgstr "In teaters"
 
 msgctxt "#31191"
 msgid "In cinemas soon"
-msgstr ""
+msgstr "Binnekort in teaters"
 
 msgctxt "#31192"
 msgid "Spotify"
@@ -869,7 +869,7 @@ msgstr ""
 
 msgctxt "#31209"
 msgid "Options"
-msgstr ""
+msgstr "Opsies"
 
 msgctxt "#31210"
 msgid "Select another image as default background"
@@ -990,10 +990,26 @@ msgstr ""
 
 msgctxt "#31239"
 msgid "Small"
-msgstr ""
+msgstr "Klein"
 
 msgctxt "#31240"
 msgid "Moderate"
+msgstr ""
+
+msgctxt "#31241"
+msgid "Pixel format"
+msgstr "Pieksel formaat"
+
+msgctxt "#31242"
+msgid "System rendering speed"
+msgstr "Stelsel teken spoed"
+
+msgctxt "#31243"
+msgid "Hide actor's thumbnails"
+msgstr ""
+
+msgctxt "#31244"
+msgid "Show only a list of the actors' names, instead of also including their thumbnails."
 msgstr ""
 
 # empty strings from id 31227 to 31249
@@ -1032,11 +1048,15 @@ msgstr "Versteek Ondersteunerkuns"
 
 msgctxt "#31308"
 msgid "Next aired"
-msgstr ""
+msgstr "Volgende gelug"
 
 msgctxt "#31309"
 msgid "Memory Used:"
 msgstr "Geheue Gebruik:"
+
+msgctxt "#31310"
+msgid "Available audio tracks"
+msgstr ""
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
@@ -1612,7 +1632,7 @@ msgid "When in idle state for two minutes within a media view, a fullscreen slid
 msgstr ""
 
 msgctxt "#32001"
-msgid "Play automatically movie trailers in video views"
+msgid "Play automatically trailers in video views"
 msgstr ""
 
 msgctxt "#32002"
@@ -1752,7 +1772,7 @@ msgid "Display the additional features (media files) placed by the user in the '
 msgstr ""
 
 msgctxt "#32036"
-msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically plays in the background. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
+msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically sounds. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
 msgstr ""
 
 msgctxt "#32037"
@@ -1797,7 +1817,7 @@ msgstr ""
 
 msgctxt "#32047"
 msgid "Select + Right Stick"
-msgstr ""
+msgstr "Kies + Regter Stok"
 
 msgctxt "#32048"
 msgid "Vertical Home menu"
@@ -1816,12 +1836,12 @@ msgid "Highlighted text colour"
 msgstr ""
 
 msgctxt "#32052"
-msgid "Watched mark colour"
+msgid "Marks colour"
 msgstr ""
 
 msgctxt "#32053"
 msgid "Current"
-msgstr ""
+msgstr "Huidige"
 
 msgctxt "#32054"
 msgid "Selected"
@@ -2049,11 +2069,11 @@ msgstr ""
 
 msgctxt "#32110"
 msgid "Rewind"
-msgstr ""
+msgstr "Speel Agteruit"
 
 msgctxt "#32111"
 msgid "Fast forward"
-msgstr ""
+msgstr "Vinnig vorentoe"
 
 msgctxt "#32112"
 msgid "Step back"
@@ -2089,6 +2109,46 @@ msgstr ""
 
 msgctxt "#32120"
 msgid "Adjust lyrics"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Hide resumable mark in video views"
+msgstr ""
+
+msgctxt "#32122"
+msgid "Hide unwatched mark in video views"
+msgstr ""
+
+msgctxt "#32123"
+msgid "Hide episodes unwatched mark in video views"
+msgstr ""
+
+msgctxt "#32124"
+msgid "Same director"
+msgstr "Selfde direkteur"
+
+msgctxt "#32125"
+msgid "'Down' to show similars"
+msgstr ""
+
+msgctxt "#32126"
+msgid "'Right' to show similars"
+msgstr ""
+
+msgctxt "#32127"
+msgid "Show logos"
+msgstr ""
+
+msgctxt "#32128"
+msgid "Show only titles"
+msgstr ""
+
+msgctxt "#32129"
+msgid "Play automatically video links in song views"
+msgstr ""
+
+msgctxt "#32130"
+msgid "When you browse song views and stop for a few seconds, the video link for that song will play automatically (if available)."
 msgstr ""
 
 #~ msgctxt "#31029"

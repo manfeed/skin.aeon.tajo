@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2024-06-02 23:42+0000\n"
-"Last-Translator: manfeed <manfuen@gmail.com>\n"
+"PO-Revision-Date: 2026-04-04 09:13+0000\n"
+"Last-Translator: Alfonso Cachero <alfonso.cachero@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/es_es/>\n"
 "Language: es_es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.4\n"
+"X-Generator: Weblate 5.16.2\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -147,15 +147,15 @@ msgstr "Cajas DVD de conciertos"
 
 msgctxt "#31029"
 msgid "Recent Movies"
-msgstr "Películas Recientes"
+msgstr "Películas recientes"
 
 msgctxt "#31030"
 msgid "Recent Episodes"
-msgstr "Episodios Recientes"
+msgstr "Episodios recientes"
 
 msgctxt "#31031"
 msgid "Random Movies"
-msgstr "Películas Aleatorias"
+msgstr "Películas aleatorias"
 
 msgctxt "#31032"
 msgid "Recommended Movies"
@@ -163,15 +163,15 @@ msgstr "Películas recomendadas"
 
 msgctxt "#31033"
 msgid "Random Episodes"
-msgstr "Episodios Aleatorios"
+msgstr "Episodios aleatorios"
 
 msgctxt "#31034"
 msgid "Recommended Episodes"
-msgstr "Episodios Recomendados"
+msgstr "Episodios recomendados"
 
 msgctxt "#31035"
 msgid "Random Songs"
-msgstr "Canciones Aleatorias"
+msgstr "Canciones aleatorias"
 
 msgctxt "#31036"
 msgid "Random Albums"
@@ -179,11 +179,11 @@ msgstr "Álbumes aleatorios"
 
 msgctxt "#31037"
 msgid "Recent Albums"
-msgstr "Álbumes Recientes"
+msgstr "Álbumes recientes"
 
 msgctxt "#31038"
 msgid "Recommended Albums"
-msgstr "Álbunes recomendados"
+msgstr "Álbumes recomendados"
 
 msgctxt "#31039"
 msgid "Actions"
@@ -243,7 +243,7 @@ msgstr "Estadísticas de la colección de películas"
 
 msgctxt "#31053"
 msgid "TV Show library statistics"
-msgstr "Estadísticas de la colección de series"
+msgstr "Estadísticas de la colección de Programas de TV"
 
 msgctxt "#31054"
 msgid "Music library statistics"
@@ -283,7 +283,7 @@ msgstr "Fanart de películas aleatorio"
 
 msgctxt "#31063"
 msgid "Random TV show fanart"
-msgstr "Fanart de series aleatorio"
+msgstr "Fanart de programas de TV aleatorio"
 
 msgctxt "#31064"
 msgid "Random video fanart"
@@ -423,7 +423,7 @@ msgstr "Estadísticas de la biblioteca de películas"
 
 msgctxt "#31098"
 msgid "TV Show playlist statistics"
-msgstr "Estadísticas de la colección de series"
+msgstr "Estadísticas de la lista de Programas de TV"
 
 msgctxt "#31099"
 msgid "Musicvideo playlist statistics"
@@ -470,8 +470,8 @@ msgid "Unwatched episode count"
 msgstr "Contador de episodio no visto"
 
 msgctxt "#31110"
-msgid "Up next brings the option to watch right away the next episode of a tvshow (Netflix/Prime video style)."
-msgstr "Up Next da la opción de ver a continuación el siguiente episodio de una serie (Como Netflix/Prime video)."
+msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
+msgstr "Up next permite ver a continuación el siguiente episodo de un programa de TV (al estilo de Netflix/Amazon Prime video)."
 
 msgctxt "#31111"
 msgid "Similar movies"
@@ -491,7 +491,7 @@ msgstr "Más películas de"
 
 msgctxt "#31115"
 msgid "Similar TV shows"
-msgstr "Series similares"
+msgstr "Programas de TV similares"
 
 msgctxt "#31116"
 msgid "cycle fanart"
@@ -674,8 +674,8 @@ msgid "Display background name"
 msgstr "Mostrar nombre de fondo"
 
 msgctxt "#31161"
-msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
-msgstr "Muestra el título de la película, programa de televisión o artista en la pantalla de inicio cuando el fondo muestra una presentación de fanarts"
+msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
+msgstr "Mostrar el título de película/programa de TV/intérprete en la pantalla inicial si hay una presentación de fanarts como fondo de pantalla"
 
 msgctxt "#31162"
 msgid "min"
@@ -751,7 +751,7 @@ msgstr "Críticas"
 
 msgctxt "#31180"
 msgid "Play main theme when browsing movies and TV shows"
-msgstr "Reproducir tema principal de una pelicula o serie al navegar"
+msgstr "Reproducir sintonía de una pelicula o programa de TV al navegar"
 
 msgctxt "#31181"
 msgid "Display cast in video views"
@@ -807,7 +807,7 @@ msgstr "Mostrar imágenes de actrices principales"
 
 msgctxt "#31194"
 msgid "Search the Red Carpet add-on for images of the best-known actresses from the movie/TV show and display them alongside the cast."
-msgstr "Buscar en el addon Red Carpet imágenes de las actrices más conocidas de la película o serie y mostrarlas junto al reparto."
+msgstr "Buscar en el addon Red Carpet imágenes de las actrices más conocidas de la película o programa de TV y mostrarlas junto al reparto."
 
 msgctxt "#31195"
 msgid "Show logos of film studios in video views"
@@ -899,11 +899,11 @@ msgstr "Muestra imágenes de fondo y fanarts con un ligero efecto de movimiento 
 
 msgctxt "#31217"
 msgid "Displays a list in the video views featuring thumbnail images of the main actors from the movie or TV show's cast."
-msgstr "Muestra una lista en las vistas de video con imágenes en miniatura de los actores principales del reparto de la película o serie."
+msgstr "Muestra una lista en las vistas de video con imágenes en miniatura de los actores principales del reparto de la película o programa de TV."
 
 msgctxt "#31218"
 msgid "Search the Studio Icons add-on for logo images of the film studios of the movie/TV show, and if found, display them while browsing the video views."
-msgstr "Busca en el add-on Studio Icons los logos de los estudios cinematográficos de la película/serie y, si los encuentra, los muestra al navegar por las vistas de vídeo."
+msgstr "Busca en el add-on Studio Icons los logos de los estudios cinematográficos de la película/programa y, si los encuentra, los muestra al navegar por las vistas de vídeo."
 
 msgctxt "#31219"
 msgid "Search for the album's record label logo using the RecordLabel Icons addon, and if found, display it when browsing the music album views."
@@ -994,8 +994,8 @@ msgid "Moderate"
 msgstr "Moderado"
 
 msgctxt "#31241"
-msgid "Formato del pixel"
-msgstr ""
+msgid "Pixel format"
+msgstr "Formato de píxel"
 
 msgctxt "#31242"
 msgid "System rendering speed"
@@ -1175,7 +1175,7 @@ msgstr "Skin Info Service se utiliza para mostrar información de la colección 
 
 msgctxt "#31434"
 msgid "Check MP3 Theme checks whether the user has put a theme.mp3 file in the corresponding movie/TV show folder to be played when browsing."
-msgstr "Check MP3 Theme comprueba si el usuario ha puesto un archivo theme.mp3 en la carpeta donde está la película o serie, a fin de que se reproduzca cuando se navega."
+msgstr "Check MP3 Theme comprueba si el usuario ha puesto un archivo theme.mp3 en la carpeta donde está la película o programa de TV, a fin de que se reproduzca cuando se navega."
 
 msgctxt "#31450"
 msgid "  •  Open Settings "
@@ -1187,7 +1187,7 @@ msgstr "  • Pulsar para Instalar"
 
 msgctxt "#31473"
 msgid "Embuary Helper provides the data to display the cast for movies and TV shows."
-msgstr "Provee los datos necesarios para mostrar el reparto de actores en películas y series."
+msgstr "Provee los datos necesarios para mostrar el reparto de actores en películas y programas de TV."
 
 msgctxt "#31474"
 msgid "CU LRC Lyrics is used to download, sync, and display lyrics during fullscreen music playback."
@@ -1219,7 +1219,7 @@ msgstr "Library Editor Script usa JSON para editar directamente la información 
 
 msgctxt "#31481"
 msgid "Global Search makes possible to search among all the items (movies, TV shows, music, actors, etc.) in your collection."
-msgstr "Global Search posibilita hacer búsquedas entre los diversos elementos (películas, series, música, actores, etc.) de su colección."
+msgstr "Global Search posibilita hacer búsquedas entre los diversos elementos (películas, programas, música, actores, etc.) de su colección."
 
 msgctxt "#31501"
 msgid "Channel group"
@@ -1383,7 +1383,7 @@ msgstr "Mostrar la fuente RSS en la parte inferior o superior de la pantalla, de
 
 msgctxt "#31938"
 msgid "Enables extra information in the TV show library, like TV show status, next / latest episode, etc. Depends on TV Show Next Aired add-on."
-msgstr "Activar información extra en la biblioteca de series de TV, como el estado de serie, siguiente / último episodio, etc. Depende del complemento TV Show Next Aired."
+msgstr "Activar información extra en la colección de programas de TV, como el estado del programa, siguiente / último episodio, etc. Depende del complemento TV Show Next Aired."
 
 msgctxt "#31939"
 msgid "Hide Infopanel on scrolling"
@@ -1435,7 +1435,7 @@ msgstr "PELÍCULAS"
 
 msgctxt "#31955"
 msgid "TV SHOWS"
-msgstr "SERIES"
+msgstr "PROGRAMAS DE TV"
 
 msgctxt "#31956"
 msgid "MUSIC"
@@ -1491,7 +1491,7 @@ msgstr "Opciones del skin"
 
 msgctxt "#31970"
 msgid "Setup of melodies, the way of showing widgets, themes and cast for movies/TV shows and other options."
-msgstr "Establece el uso de melodías para el menú principal, bandas sonoras (deben ser añadidas por el usuario) y del reparto de actores para películas y series, además de otras opciones."
+msgstr "Establece el uso de melodías para el menú principal, bandas sonoras (deben ser añadidas por el usuario) y del reparto de actores para películas y programas, además de otras opciones."
 
 msgctxt "#31971"
 msgid "Colour of selected items"
@@ -1511,7 +1511,7 @@ msgstr "Mas películas de"
 
 msgctxt "#31975"
 msgid "More TV shows featuring"
-msgstr "Mas series de"
+msgstr "Más programas de TV con"
 
 msgctxt "#31976"
 msgid "Image gallery"
@@ -1575,19 +1575,19 @@ msgstr "Películas por descubrir"
 
 msgctxt "#31991"
 msgid "Trending Shows"
-msgstr "Series de moda"
+msgstr "Programas de TV en tendencia"
 
 msgctxt "#31992"
 msgid "Top Rated Shows"
-msgstr "Series mas valoradas"
+msgstr "Programas más valorados"
 
 msgctxt "#31993"
 msgid "Popular Shows"
-msgstr "Series populares"
+msgstr "Programas populares"
 
 msgctxt "#31994"
 msgid "Discover Shows"
-msgstr "Series por descubrir"
+msgstr "Programas por descubrir"
 
 msgctxt "#31995"
 msgid "3D view"
@@ -1611,7 +1611,7 @@ msgstr "Salvapantallas estilo Netflix en vistas de música y vídeos"
 
 msgctxt "#32000"
 msgid "When in idle state for two minutes within a media view, a fullscreen slideshow of movies, TV shows, or artists' fanarts will be displayed, according to the section being browsed."
-msgstr "Cuando esté en estado inactivo durante dos minutos dentro de una vista multimedia, se mostrará una presentación a pantalla completa de fanarts de películas, programas de televisión o artistas, según la sección en que se esté navegando."
+msgstr "Cuando esté en estado inactivo durante dos minutos dentro de una vista multimedia, se mostrará una presentación a pantalla completa de fanarts de películas, programas de televisión o intérpretes, según la sección en que se esté navegando."
 
 msgctxt "#32001"
 msgid "Play automatically trailers in video views"
@@ -1619,7 +1619,7 @@ msgstr "Reproducir automáticamente tráilers en vistas de vídeo"
 
 msgctxt "#32002"
 msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the trailer automatically plays in a window."
-msgstr "Al navegar por las vistas de video y detenerse en una película o serie durante unos segundos reproduce el trailer automáticamente en una ventana."
+msgstr "Al navegar por las vistas de vídeo y detenerse en una película o programa durante unos segundos reproduce el tráiler automáticamente en una ventana."
 
 msgctxt "#32003"
 msgid "All devices"
@@ -1675,11 +1675,11 @@ msgstr "Mostrar solo imagen de fondo"
 
 msgctxt "#32016"
 msgid "TheMovieDb Helper provides data to display online ratings and additional information for movies and TV shows"
-msgstr "TheMovieDb Helper hace posible mostrar calificaciones online e información adicional en películas y series"
+msgstr "TheMovieDb Helper hace posible mostrar calificaciones online e información adicional en películas y programas de TV"
 
 msgctxt "#32017"
 msgid "Show online ratings for movies and TV shows"
-msgstr "Mostrar calificaciones online en películas y series"
+msgstr "Mostrar calificaciones online en películas y programas de TV"
 
 msgctxt "#32018"
 msgid "You have to restart Kodi for this option to take effect once the option has been activated. TMDb and Trakt should work out of the box. Metacritic and Rottentomatoes ratings require an OMDb API key. Get an OMDb API Key at http://www.omdbapi.com/apikey.aspx and afterward input the OMDb API Key into the TheMovieDb Helper settings."
@@ -1695,11 +1695,11 @@ msgstr "Mostrar iconos en color de información de audio/video"
 
 msgctxt "#32021"
 msgid "Show extra features for movies and TV shows"
-msgstr "Mostrar los contenidos extra en películas y series"
+msgstr "Mostrar los contenidos extra en películas y programas de TV"
 
 msgctxt "#32022"
 msgid "Display the additional features (media files) placed by the user in the 'extras' folder for a movie or TV show. Remember to modify your advancedsettings.xml file if needed."
-msgstr "Muestra los contenidos adicionales (archivos multimedia) colocados por el usuario en la carpeta 'extras' de una película o serie. Recuerde modificar su archivo advancedsettings.xml si es necesario."
+msgstr "Muestra los contenidos adicionales (archivos multimedia) colocados por el usuario en la carpeta 'extras' de una película o programas de TV. Recuerde modificar su archivo advancedsettings.xml si es necesario."
 
 msgctxt "#32023"
 msgid "Show extras"
@@ -1754,12 +1754,12 @@ msgid "Display the additional features (media files) placed by the user in the '
 msgstr "Muestra los contenidos adicionales (archivos multimedia) colocados por el usuario en la carpeta 'extras' de un álbum musical. Recuerde modificar su archivo advancedsettings.xml si es necesario."
 
 msgctxt "#32036"
-msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically plays in the background. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
-msgstr "Al navegar por las vistas de vídeo y detenerse en una película o serie por unos instantes, el tema principal comienza a sonar automáticamente de fondo. Para que esta opción funcione, es necesario que el usuario añada un archivo mp3 con el tema musical en la carpeta principal de la película o serie, el cual debe nombrarse theme.mp3."
+msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically sounds. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
+msgstr "Al navegar por una vista de vídeo y hacer una pausa en una película o programa de televisión durante unos segundos, la sintonía principal suena automáticamente. Esta función requiere que el usuario coloque un archivo mp3 con el tema en la carpeta raíz de la película o programa. Este archivo debe llamarse theme.mp3."
 
 msgctxt "#32037"
 msgid "Shows the normal poster (poster.jpg) in movies and TV shows views."
-msgstr "Muestra el cartel normal (poster.jpg) en las vistas de películas y series de TV."
+msgstr "Muestra el cartel normal (poster.jpg) en las vistas de películas y programas de TV."
 
 msgctxt "#32038"
 msgid "Shows the animated poster (animatedposter.gif) in movies and TV shows views."
@@ -1767,7 +1767,7 @@ msgstr "Muestra el cartel animado (animatedposter.gif) en las vistas de películ
 
 msgctxt "#32039"
 msgid "Shows the available extra posters (poster1.jpg, poster2.jpg, poster3.jpg...) in movies and TV shows views."
-msgstr "Muestra las carátulas extras disponibles (poster1.jpg, poster2.jpg, poster3.jpg...) en películas y series."
+msgstr "Muestra las carátulas extras disponibles (poster1.jpg, poster2.jpg, poster3.jpg...) en películas y programas de tv."
 
 msgctxt "#32040"
 msgid "Thanks for using Aeon Tajo, I really hope you enjoy it! Creating and maintaining a skin for Kodi is very hard and requires hundreds of hours of work. If you like Aeon Tajo and you’re willing to support it, you’ll get:[CR][CR] [B]***[/B] Exclusive access to hidden Aeon Tajo’s features, such as browsing and playing of the user’s extra content directly from media views, and some more. [CR] [B]***[/B] Frequent updates of Aeon Tajo, containing new features and bug fixes. [CR] [B]***[/B] Videos, media packs and articles with detailed instructions to take advantage of the many features of Aeon Tajo to the full. [CR][CR]For more information, visit [B][COLOR=themecolor]patreon.com[/B][/COLOR] and search for the creator [COLOR=themecolor][B]Aeon Tajo[/B][/COLOR], or go to [COLOR=themecolor][B]patreon.com/aeontajo[/B][/COLOR]. Thanks!"
@@ -1867,15 +1867,15 @@ msgstr "Vista ancha"
 
 msgctxt "#32064"
 msgid "Actors in other movies and TV shows"
-msgstr "Actores en otras películas y series"
+msgstr "Actores en otras películas y programas de TV"
 
 msgctxt "#32065"
 msgid "Show similar movies/TV shows and artists/albums"
-msgstr "Mostrar películas/series y artistas/albums similares"
+msgstr "Mostrar películas/programas e intérpretes/albums similares"
 
 msgctxt "#32066"
 msgid "Opens a new window in some video/music views showing other movies/TV shows or artists/albums similar or related to the current item."
-msgstr "Abre una nueva ventana en algunas vistas de video/música que muestra otras películas/series o artistas/álbumes similares o relacionados con el elemento actual."
+msgstr "Abre una nueva ventana en algunas vistas de video/música que muestra otras películas/programas o intérpretes/álbumes similares o relacionados con el elemento actual."
 
 msgctxt "#32067"
 msgid "Show similar"
@@ -2007,11 +2007,11 @@ msgstr "Equipo"
 
 msgctxt "#32099"
 msgid "Most Voted Shows"
-msgstr "Series más votadas"
+msgstr "Programas más votados"
 
 msgctxt "#32100"
 msgid "Random Shows"
-msgstr "Series aleatorias"
+msgstr "Programas aleatorios"
 
 msgctxt "#32101"
 msgid "Random Artists"
@@ -2023,7 +2023,7 @@ msgstr "Información online de TheMovieDB.org para videos"
 
 msgctxt "#32103"
 msgid "Get online info from TheMovieDB.org in movie and TVshow's info screen and widgets"
-msgstr "Obtener información online de TheMovieDB.org en la pantalla de información de películas y series y en los widgets"
+msgstr "Obtener información online de TheMovieDB.org en la pantalla de información de películas y programas de TV y en los widgets"
 
 msgctxt "#32104"
 msgid "Snow effect - Off"
@@ -2133,6 +2133,18 @@ msgctxt "#32130"
 msgid "When you browse song views and stop for a few seconds, the video link for that song will play automatically (if available)."
 msgstr "Al navegar por las vistas de canciones y detenerse durante unos segundos, el enlace del videoclip se reproducirá automáticamente (si está disponible)."
 
+#~ msgctxt "#31110"
+#~ msgid "Up next brings the option to watch right away the next episode of a tvshow (Netflix/Prime video style)."
+#~ msgstr "Up Next da la opción de ver a continuación el siguiente episodio de una serie (Como Netflix/Prime video)."
+
+#~ msgctxt "#31161"
+#~ msgid "Display title of movie/tvshow/artist on home screen if the background has a fanart slideshow as background"
+#~ msgstr "Muestra el título de la película, programa de televisión o artista en la pantalla de inicio cuando el fondo muestra una presentación de fanarts"
+
+#~ msgctxt "#32036"
+#~ msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically plays in the background. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
+#~ msgstr "Al navegar por las vistas de vídeo y detenerse en una película o serie por unos instantes, el tema principal comienza a sonar automáticamente de fondo. Para que esta opción funcione, es necesario que el usuario añada un archivo mp3 con el tema musical en la carpeta principal de la película o serie, el cual debe nombrarse theme.mp3."
+
 #~ msgctxt "#31029"
 #~ msgid "Recent movies"
 #~ msgstr "Películas recientes"
@@ -2172,15 +2184,3 @@ msgstr "Al navegar por las vistas de canciones y detenerse durante unos segundos
 #~ msgctxt "#31038"
 #~ msgid "Recommended albums"
 #~ msgstr "Álbumes recomendados"
-
-#~ msgctxt "#31110"
-#~ msgid "Up next brings the option to watch right away the next episode of a TV show (Netflix/Prime video style)."
-#~ msgstr "Up next permite ver a continuación el siguiente episodo de una serie (al estilo de Netflix/Amazon Prime video)."
-
-#~ msgctxt "#31161"
-#~ msgid "Display title of movie/TV show/artist on home screen if the background has a fanart slideshow as background"
-#~ msgstr "Mostrar el título de película/serie de tv/artista en la pantalla inicial si hay una presentación de fanarts como fondo de pantalla"
-
-#~ msgctxt "#32036"
-#~ msgid "When you browse the video views and pause on a movie or TV show for a few seconds, the main theme automatically sounds. This feature requires the user to place an mp3 file with the theme in the root folder of the movie or TV show. This file must be named theme.mp3."
-#~ msgstr "Al navegar por una vista de video y hacer una pausa en una película o programa de televisión durante unos segundos, el tema principal suena automáticamente. Esta función requiere que el usuario coloque un archivo mp3 con el tema en la carpeta raíz de la película o serie. Este archivo debe llamarse theme.mp3."
