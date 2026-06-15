@@ -5,17 +5,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2026-01-19 01:45+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2026-06-11 03:16+0000\n"
+"Last-Translator: Oskari Lavinto <olavinto@protonmail.com>\n"
 "Language-Team: Finnish <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-tajo/fi_fi/>\n"
 "Language: fi_fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon Tajo"
@@ -87,11 +87,11 @@ msgstr "Tilastot"
 
 msgctxt "#31014"
 msgid "Extras"
-msgstr "Lisäosat"
+msgstr "Lisämateriaalit"
 
 msgctxt "#31015"
 msgid "Set path to video genre fanart folder"
-msgstr "Aseta videogenre fanitaiteen polku"
+msgstr "Määritä videolajityyppien fanart-kansion sijainti"
 
 msgctxt "#31016"
 msgid "Poster"
@@ -99,7 +99,7 @@ msgstr "Juliste"
 
 msgctxt "#31017"
 msgid "Set path to music genre fanart folder"
-msgstr "Aseta musiikkigenre fanitaiteen polku"
+msgstr "Määritä musiikkilajityyppien fanart-kansion sijainti"
 
 msgctxt "#31018"
 msgid "InfoPanel"
@@ -111,7 +111,7 @@ msgstr "Verkko"
 
 msgctxt "#31020"
 msgid "Extra-fanart"
-msgstr "Lisä-fanitaide"
+msgstr "Extrafanart"
 
 msgctxt "#31021"
 msgid "Stage curtains"
@@ -155,7 +155,7 @@ msgstr ""
 
 msgctxt "#31031"
 msgid "Random Movies"
-msgstr ""
+msgstr "Satunnaiset elokuvat"
 
 msgctxt "#31032"
 msgid "Recommended Movies"
@@ -163,19 +163,19 @@ msgstr ""
 
 msgctxt "#31033"
 msgid "Random Episodes"
-msgstr ""
+msgstr "Satunnaiset jaksot"
 
 msgctxt "#31034"
 msgid "Recommended Episodes"
-msgstr ""
+msgstr "Jaksosuositukset"
 
 msgctxt "#31035"
 msgid "Random Songs"
-msgstr ""
+msgstr "Satunnaiset kappaleet"
 
 msgctxt "#31036"
 msgid "Random Albums"
-msgstr ""
+msgstr "Satunnaiset albumit"
 
 msgctxt "#31037"
 msgid "Recent Albums"
@@ -279,23 +279,23 @@ msgstr ""
 
 msgctxt "#31062"
 msgid "Random movie fanart"
-msgstr "Satunnainen elokuvafanitaide"
+msgstr "Satunnainen elokuva-fanart"
 
 msgctxt "#31063"
 msgid "Random TV show fanart"
-msgstr "Satunnainen sarjojen fanitaide"
+msgstr "Satunnainen sarja-fanart"
 
 msgctxt "#31064"
 msgid "Random video fanart"
-msgstr "Satunnainen videofanitaide"
+msgstr "Satunnainen video-fanart"
 
 msgctxt "#31065"
 msgid "Random music fanart"
-msgstr "Satunnainen musiikkifanitaide"
+msgstr "Satunnainen musiikki-fanart"
 
 msgctxt "#31066"
 msgid "Random fanart"
-msgstr "Satunnainen fanitaide"
+msgstr "Satunnainen fanart"
 
 msgctxt "#31067"
 msgid "Update rating"
@@ -399,7 +399,7 @@ msgstr "Valitse nimikkeet"
 
 msgctxt "#31092"
 msgid "Fullscreen fanart"
-msgstr "Kokoruudun fanitaide"
+msgstr "Koko näytön fanart"
 
 msgctxt "#31093"
 msgid "LowList toggle"
@@ -495,7 +495,7 @@ msgstr "Samankaltaisia sarjoja"
 
 msgctxt "#31116"
 msgid "cycle fanart"
-msgstr "kierrätä fanitaide"
+msgstr "kierrätä fanart"
 
 msgctxt "#31117"
 msgid "Fallback"
@@ -503,7 +503,7 @@ msgstr "Varmistus"
 
 msgctxt "#31118"
 msgid "Download extrafanart"
-msgstr "Lataa lisäfanitaidetta"
+msgstr "Lataa extra fanart -kuvia"
 
 msgctxt "#31119"
 msgid "Show the movies from this director in your library or view online information on this director on TMDb?"
@@ -548,7 +548,7 @@ msgstr "Kanavanäkymä"
 
 msgctxt "#31129"
 msgid "Hide Fanart in full screen visualisation"
-msgstr "Piilota fanitaide kokoruudun visualisoinnissa"
+msgstr "Piilota fanart, kun visualisointi toistetaan koko näytössä"
 
 msgctxt "#31130"
 msgid "Use \"Enigma2-style\" channel OSD"
@@ -784,7 +784,7 @@ msgstr ""
 
 msgctxt "#31188"
 msgid "Kiosk mode"
-msgstr ""
+msgstr "Kioskitila"
 
 msgctxt "#31189"
 msgid "Disables the side media menu in views and most options to change Kodi, so as to prevent unwanted modifications."
@@ -792,11 +792,11 @@ msgstr ""
 
 msgctxt "#31190"
 msgid "In cinemas"
-msgstr ""
+msgstr "Teattereissa"
 
 msgctxt "#31191"
 msgid "In cinemas soon"
-msgstr ""
+msgstr "Tulossa teattereihin"
 
 msgctxt "#31192"
 msgid "Spotify"
@@ -857,11 +857,11 @@ msgstr "Sanoituslähde"
 
 msgctxt "#31206"
 msgid "Customization"
-msgstr ""
+msgstr "Mukautus"
 
 msgctxt "#31207"
 msgid "Views"
-msgstr ""
+msgstr "Näkymät"
 
 msgctxt "#31208"
 msgid "Home screen"
@@ -869,7 +869,7 @@ msgstr ""
 
 msgctxt "#31209"
 msgid "Options"
-msgstr ""
+msgstr "Asetukset"
 
 msgctxt "#31210"
 msgid "Select another image as default background"
@@ -990,7 +990,7 @@ msgstr ""
 
 msgctxt "#31239"
 msgid "Small"
-msgstr ""
+msgstr "Pieni"
 
 msgctxt "#31240"
 msgid "Moderate"
@@ -998,11 +998,11 @@ msgstr ""
 
 msgctxt "#31241"
 msgid "Pixel format"
-msgstr ""
+msgstr "Pikselimuoto"
 
 msgctxt "#31242"
 msgid "System rendering speed"
-msgstr ""
+msgstr "Järjestelmän renderöintinopeus"
 
 msgctxt "#31243"
 msgid "Hide actor's thumbnails"
@@ -1043,11 +1043,11 @@ msgstr "Viimeksi päivitetty"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
-msgstr "Piilota fanitaide"
+msgstr "Piilota fanart"
 
 msgctxt "#31308"
 msgid "Next aired"
-msgstr ""
+msgstr "Seuraava esitys"
 
 msgctxt "#31309"
 msgid "Memory Used:"
@@ -1059,7 +1059,7 @@ msgstr ""
 
 msgctxt "#31317"
 msgid "Set Fanart Path"
-msgstr "Aseta fanitaiteen polku"
+msgstr "Määritä fanart-kansion sijainti"
 
 msgctxt "#31320"
 msgid "Last Logged In"
@@ -1818,7 +1818,7 @@ msgstr ""
 
 msgctxt "#32049"
 msgid "Eject disc"
-msgstr ""
+msgstr "Poista levy"
 
 msgctxt "#32050"
 msgid "Play with PreShow"
@@ -1834,7 +1834,7 @@ msgstr ""
 
 msgctxt "#32053"
 msgid "Current"
-msgstr ""
+msgstr "Nykyinen"
 
 msgctxt "#32054"
 msgid "Selected"
@@ -1894,7 +1894,7 @@ msgstr ""
 
 msgctxt "#32068"
 msgid "Classic"
-msgstr ""
+msgstr "Perinteinen"
 
 msgctxt "#32069"
 msgid "Similar albums"
@@ -2006,7 +2006,7 @@ msgstr ""
 
 msgctxt "#32096"
 msgid "TheMovieDB"
-msgstr ""
+msgstr "TheMovieDB"
 
 msgctxt "#32097"
 msgid "Most Voted Movies"
@@ -2014,7 +2014,7 @@ msgstr ""
 
 msgctxt "#32098"
 msgid "Crew"
-msgstr ""
+msgstr "Henkilöstö"
 
 msgctxt "#32099"
 msgid "Most Voted Shows"
@@ -2026,7 +2026,7 @@ msgstr ""
 
 msgctxt "#32101"
 msgid "Random Artists"
-msgstr ""
+msgstr "Satunnaiset esittäjät"
 
 msgctxt "#32102"
 msgid "Online info from TheMovieDB.org for videos"
@@ -2062,11 +2062,11 @@ msgstr ""
 
 msgctxt "#32110"
 msgid "Rewind"
-msgstr ""
+msgstr "Taaksepäin"
 
 msgctxt "#32111"
 msgid "Fast forward"
-msgstr ""
+msgstr "Eteenpäin"
 
 msgctxt "#32112"
 msgid "Step back"
@@ -2118,7 +2118,7 @@ msgstr ""
 
 msgctxt "#32124"
 msgid "Same director"
-msgstr ""
+msgstr "Sama ohjaaja"
 
 msgctxt "#32125"
 msgid "'Down' to show similars"
